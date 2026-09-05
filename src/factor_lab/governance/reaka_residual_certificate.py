@@ -1,6 +1,7 @@
 """Inference residual evidence validation without neural-runtime dependencies.
 
-This certificate verifies provenance, numeric summaries and comparison identity.
+This certificate verifies declared provenance, numeric summaries and identities.
+It does not read checkpoint files or establish their declared provenance.
 It never establishes predictive improvement, financial success or permission to
 train.  Historical teacher-forced outputs remain diagnostic only.
 """
@@ -15,8 +16,11 @@ from dataclasses import dataclass
 from typing import Final, cast
 
 STAGE6_FORMAL_CROSS_ARM_SCHEMA_ID: Final = (
-    "factorlab.reaka_stage6_formal_cross_arm_residual_certificate@1.1"
+    "factorlab.reaka_stage6_formal_cross_arm_residual_certificate@1.2"
 )
+FORMAL_ARM_BINDING_KEYS: Final = frozenset({
+    "model_state_digest", "checkpoint_digest", "health_certificate_digest",
+})
 STAGE6_FORMAL_ARM_SCHEMA_ID: Final = "factorlab.reaka_stage6_formal_arm_residual_evidence@1.1"
 LEGACY_FORMAL_ARM_SCHEMA_ID: Final = "factorlab.reaka_stage6_formal_arm_residual_evidence@1.0"
 
@@ -295,9 +299,11 @@ def build_formal_cross_arm_residual_certificate(
             "diffusion": arm_payloads.get("reaka", {}).get("estimated_residual"),
         },
         "latent_coordinate_policy": "within_arm_only_unless_explicit_alignment",
-        "acceptance_scope": "evidence_identity_and_numeric_validity_only",
+        "acceptance_scope": "declared_numeric_and_metadata_consistency_only",
+        "scientific_acceptance_authority": False,
+        "checkpoint_file_bytes_verified": False,
         "financial_success_claimed": False,
-        "authority": "formal_cross_arm_acceptance_authority" if not blockers else "none",
+        "authority": "declared_evidence_consistency_only" if not blockers else "none",
         "production_authority": False,
     }
     payload["canonical_digest"] = canonical_digest(payload)
@@ -308,12 +314,17 @@ def formal_cross_arm_residual_certificate_valid(
     payload: object,
     *,
     expected_comparison_identity: dict[str, object] | None = None,
+    expected_arm_bindings: dict[str, dict[str, str]] | None = None,
 ) -> bool:
     """Validate internal evidence and, when supplied, the caller's current identity.
 
-    A consumer must construct the expected identity from its own frozen task,
-    configuration and support, not copy it from the artifact being checked.
-    Omitting it performs only a structural check, never current-run binding.
+    A consumer must construct both expectations from its own frozen registry,
+    not copy them from the artifact being checked.  Every required arm must
+    independently bind its model state, checkpoint and health certificate
+    digests as well as the shared task/configuration/support.  Supplying only
+    one expectation or a partial map fails closed.  Omitting both performs
+    only a structural check, never current-run binding.  Matching declarations
+    still do not verify physical checkpoint bytes or actual PIT provenance.
     """
 
     if not isinstance(payload, dict) or payload.get("schema_id") != STAGE6_FORMAL_CROSS_ARM_SCHEMA_ID:
@@ -329,11 +340,24 @@ def formal_cross_arm_residual_certificate_valid(
                 return False
             evidences.append(Stage6FormalArmResidualEvidence.from_dict(arm_payload))
         rebuilt = build_formal_cross_arm_residual_certificate(tuple(evidences))
-        if expected_comparison_identity is not None and (
-            not isinstance(expected_comparison_identity, dict)
-            or canonical_digest(expected_comparison_identity) != canonical_digest(rebuilt["comparison_identity"])
-        ):
-            return False
+        if expected_comparison_identity is not None or expected_arm_bindings is not None:
+            if (
+                not isinstance(expected_comparison_identity, dict)
+                or canonical_digest(expected_comparison_identity) != canonical_digest(rebuilt["comparison_identity"])
+                or not isinstance(expected_arm_bindings, dict)
+                or set(expected_arm_bindings) != set(FORMAL_CROSS_ARM_IDS)
+            ):
+                return False
+            for evidence in evidences:
+                expected = expected_arm_bindings[evidence.arm_id]
+                if not isinstance(expected, dict) or set(expected) != FORMAL_ARM_BINDING_KEYS:
+                    return False
+                if any(
+                    not _formal_residual_digest_valid(expected[key])
+                    or expected[key] != getattr(evidence, key)
+                    for key in FORMAL_ARM_BINDING_KEYS
+                ):
+                    return False
         actual_digest = canonical_digest({key: value for key, value in payload.items() if key != "canonical_digest"})
         return (
             rebuilt["status"] == "passed"

@@ -155,4 +155,5 @@ def test_ci_keeps_strict_foundation_gate_independent_from_dataset_gate() -> None
     assert "continue-on-error" not in workflow
     assert "python scripts/validate_theme_package.py" not in foundation
     assert "python scripts/validate_theme_package.py" in dataset
+    assert "if: github.event_name == 'workflow_dispatch'" in dataset
     assert "needs:" not in foundation

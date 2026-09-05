@@ -178,7 +178,16 @@ def _current_identity() -> dict[str, object]:
     }
 
 
-def _formal_certificate(**changes: object) -> dict[str, object]:
+def _current_arm_bindings() -> dict[str, dict[str, str]]:
+    # Frozen independently of the certificate received by the consumer.
+    return {arm_id: {
+        "model_state_digest": "sha256:" + "b" * 64,
+        "checkpoint_digest": "sha256:" + "c" * 64,
+        "health_certificate_digest": "sha256:" + "d" * 64,
+    } for arm_id in FORMAL_CROSS_ARM_IDS}
+
+
+def _formal_certificate(*, checkpoint_digest: str = "sha256:" + "c" * 64, **changes: object) -> dict[str, object]:
     identity = {**_current_identity(), **changes}
     identity["train_years"] = tuple(identity["train_years"])
     positive = {"energy": 1.0, "median_abs": 0.5, "q95_abs": 2.0, "tail_ratio": 4.0}
@@ -187,7 +196,7 @@ def _formal_certificate(**changes: object) -> dict[str, object]:
         Stage6FormalArmResidualEvidence(
             arm_id=arm_id, **identity,
             model_state_digest="sha256:" + "b" * 64,
-            checkpoint_digest="sha256:" + "c" * 64,
+            checkpoint_digest=checkpoint_digest,
             health_certificate_digest="sha256:" + "d" * 64,
             health_certificate_status="passed",
             true_residual=positive,
@@ -209,6 +218,7 @@ def _bound_health_certificate(
         fit_label="current_run", health=health or _health(), operator_count=1,
         residual_mode="none", require_four_residual=True,
         formal_cross_arm_certificate=artifact, expected_comparison_identity=current,
+        expected_arm_bindings=_current_arm_bindings(),
     )
 
 
@@ -232,6 +242,25 @@ def test_cross_task_support_and_operator_count_transplants_are_blocked() -> None
         assert _bound_health_certificate(artifact, _current_identity()).status == "blocked"
 
 
+def test_same_task_and_support_from_another_checkpoint_is_blocked() -> None:
+    artifact = _formal_certificate(checkpoint_digest="sha256:" + "e" * 64)
+    assert artifact["status"] == "passed"
+    result = _bound_health_certificate(artifact, _current_identity())
+    assert result.status == "blocked"
+    assert result.per_gate["formal_cross_arm_residual_certificate"]["reason"] == "formal_cross_arm_certificate_missing_blocked_or_binding_mismatch"
+
+
+def test_health_consumer_cannot_use_certificate_as_its_own_checkpoint_registry() -> None:
+    result = evaluate_stage6_health_certificate(
+        fit_label="current_run", health=_health(), operator_count=1,
+        residual_mode="none", require_four_residual=True,
+        formal_cross_arm_certificate=_formal_certificate(),
+        expected_comparison_identity=_current_identity(),
+    )
+    assert result.status == "blocked"
+    assert result.per_gate["formal_cross_arm_residual_certificate"]["reason"] == "formal_cross_arm_expected_arm_bindings_missing"
+
+
 def test_claimed_context_must_match_health_support_and_explicit_operator_count() -> None:
     for changes in ({"operator_count": 2}, {"support_digest": "sha256:" + "e" * 64}):
         artifact = _formal_certificate(**changes)
@@ -247,6 +276,7 @@ def test_valid_cross_arm_summary_cannot_close_missing_conditional_distribution_v
         operator_count=1, residual_mode="diffusion", require_four_residual=True,
         formal_cross_arm_certificate=_formal_certificate(),
         expected_comparison_identity=_current_identity(),
+        expected_arm_bindings=_current_arm_bindings(),
     )
     assert result.per_gate["formal_cross_arm_residual_certificate"]["pass"] is True
     assert result.per_gate["conditional_distribution_validation"]["blocked"] is True

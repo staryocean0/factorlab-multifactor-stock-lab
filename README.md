@@ -20,6 +20,7 @@ pytest -q tests/unit
 ```
 
 `python scripts/validate_theme_package.py` 另行严格核验数据清单；上传未完成时失败应保留。
+默认 push/PR 不启动数据检查；收到用户通知后可运行上述命令或手动触发 CI 的数据任务。
 `python scripts/audit_reaka_foundation.py` 专门审计历史 current@1.2 的证据，已知缺口不能冒充现行代码错误，也不能被代码检查通过消除。
 
 旧 current@1.0—1.2、旧白皮书、旧注册表及旧工作流保留作历史材料。

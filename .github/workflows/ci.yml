@@ -3,6 +3,7 @@ name: bounded-theme-validation
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -42,6 +43,7 @@ jobs:
 
   dataset-integrity:
     name: Dataset integrity (separate upload readiness)
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

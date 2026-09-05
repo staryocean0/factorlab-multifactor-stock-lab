@@ -51,7 +51,8 @@
     "residual_mean": "history-only conditional-mean errors and incremental predictive utility; no required amplitude match to realized residual",
     "residual_distribution": "history-only conditional distribution calibration and sampler terminal-prior compatibility; denoising fit/amplitude ratios alone insufficient",
     "capacity": "preregistered candidate family, comparator, objective, multiplicity and stop rule; lower-capacity failure does not mathematically close higher capacity",
-    "financial_acceptance": "separate hard validity, evidence readiness and economic usefulness; an honest zero/negative or inconclusive result is permitted"
+    "financial_acceptance": "separate hard validity, evidence readiness and economic usefulness; an honest zero/negative or inconclusive result is permitted",
+    "residual_certificate_identity": "Consumer independently supplies full comparison identity plus per-arm model-state, checkpoint and health-certificate digests. Check verifies declared metadata, not physical checkpoint bytes or external PIT lineage; no scientific acceptance authority."
   },
   "allowed_actions": [
     "foundation_read",
@@ -86,5 +87,5 @@
     ]
   },
   "historical_policy_scope": "Earlier ontology, admission policies, annual workflow skill and current@1.0/@1.1/@1.2 remain historical records; their stage status and stronger residual/capacity claims are not current authority.",
-  "canonical_digest": "sha256:b410fb27fb0b786876c33fe1117606138254205ad9add757549ba529239c22e5"
+  "canonical_digest": "sha256:74f62f21f1b9716a89b58cbb3bcbfbf51a59751814dd1ae162a9b7d9073dcfa0"
 }

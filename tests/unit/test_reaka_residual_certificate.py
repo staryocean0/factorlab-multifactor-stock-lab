@@ -47,6 +47,23 @@ def _arms() -> tuple[Stage6FormalArmResidualEvidence, ...]:
     return tuple(_evidence(arm_id) for arm_id in FORMAL_CROSS_ARM_IDS)
 
 
+def _current_identity() -> dict[str, object]:
+    return {
+        "task_id": "synthetic_h20", "sequence_length": 10, "latent_dim": 8,
+        "operator_count": 2, "seed": 11, "train_years": [2010, 2011],
+        "validation_year": 2012, "support_digest": "sha256:" + "a" * 64,
+    }
+
+
+def _current_arm_bindings() -> dict[str, dict[str, str]]:
+    # Independent fixture registry, never copied from the received certificate.
+    return {arm_id: {
+        "model_state_digest": "sha256:" + "b" * 64,
+        "checkpoint_digest": "sha256:" + "c" * 64,
+        "health_certificate_digest": "sha256:" + "d" * 64,
+    } for arm_id in FORMAL_CROSS_ARM_IDS}
+
+
 def _replace_last(**changes: object) -> tuple[Stage6FormalArmResidualEvidence, ...]:
     arms = _arms()
     return (*arms[:-1], replace(arms[-1], **changes))
@@ -61,7 +78,10 @@ def test_valid_history_only_evidence_passes_identity_check_without_financial_cla
     assert result["status"] == "passed"
     assert formal_cross_arm_residual_certificate_valid(result)
     assert result["financial_success_claimed"] is False
-    assert result["acceptance_scope"] == "evidence_identity_and_numeric_validity_only"
+    assert result["acceptance_scope"] == "declared_numeric_and_metadata_consistency_only"
+    assert result["scientific_acceptance_authority"] is False
+    assert result["checkpoint_file_bytes_verified"] is False
+    assert result["authority"] == "declared_evidence_consistency_only"
     assert result["latent_coordinate_policy"] == "within_arm_only_unless_explicit_alignment"
 
 
@@ -187,21 +207,49 @@ def test_consumer_binds_arm_keys_and_rejects_noncurrent_schema() -> None:
     ("seed", 29),
 ])
 def test_valid_certificate_cannot_be_transplanted_to_another_current_identity(field: str, bad: object) -> None:
-    current_identity = {
-        "task_id": "synthetic_h20", "sequence_length": 10, "latent_dim": 8,
-        "operator_count": 2, "seed": 11, "train_years": [2010, 2011],
-        "validation_year": 2012, "support_digest": "sha256:" + "a" * 64,
-    }
+    current_identity = _current_identity()
     certificate = build_formal_cross_arm_residual_certificate(_arms())
-    assert formal_cross_arm_residual_certificate_valid(certificate, expected_comparison_identity=current_identity)
+    assert formal_cross_arm_residual_certificate_valid(
+        certificate, expected_comparison_identity=current_identity, expected_arm_bindings=_current_arm_bindings(),
+    )
     current_identity[field] = bad
-    assert not formal_cross_arm_residual_certificate_valid(certificate, expected_comparison_identity=current_identity)
+    assert not formal_cross_arm_residual_certificate_valid(
+        certificate, expected_comparison_identity=current_identity, expected_arm_bindings=_current_arm_bindings(),
+    )
 
 
 def test_partial_comparison_identity_does_not_bind_a_current_run() -> None:
     certificate = build_formal_cross_arm_residual_certificate(_arms())
     assert not formal_cross_arm_residual_certificate_valid(
-        certificate, expected_comparison_identity={"operator_count": 2, "support_digest": "sha256:" + "a" * 64}
+        certificate, expected_comparison_identity={"operator_count": 2, "support_digest": "sha256:" + "a" * 64},
+        expected_arm_bindings=_current_arm_bindings(),
+    )
+
+
+@pytest.mark.parametrize("field", ["checkpoint_digest", "model_state_digest", "health_certificate_digest"])
+def test_same_task_and_support_with_different_arm_identity_is_not_current(field: str) -> None:
+    certificate = build_formal_cross_arm_residual_certificate(_replace_last(**{field: "sha256:" + "e" * 64}))
+    assert formal_cross_arm_residual_certificate_valid(certificate)  # Valid declared metadata for another arm.
+    assert not formal_cross_arm_residual_certificate_valid(
+        certificate, expected_comparison_identity=_current_identity(), expected_arm_bindings=_current_arm_bindings(),
+    )
+
+
+@pytest.mark.parametrize("missing", ["all_arms", "one_arm", "one_digest", "comparison"])
+def test_partial_independent_bindings_cannot_establish_current_run(missing: str) -> None:
+    certificate = build_formal_cross_arm_residual_certificate(_arms())
+    identity = _current_identity()
+    bindings = _current_arm_bindings()
+    if missing == "all_arms":
+        bindings = None
+    elif missing == "one_arm":
+        del bindings["reaka"]
+    elif missing == "one_digest":
+        del bindings["reaka"]["checkpoint_digest"]
+    else:
+        identity = None
+    assert not formal_cross_arm_residual_certificate_valid(
+        certificate, expected_comparison_identity=identity, expected_arm_bindings=bindings,
     )
 
 

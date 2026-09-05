@@ -1794,6 +1794,7 @@ def evaluate_stage6_health_certificate(
     require_four_residual: bool = True,
     formal_cross_arm_certificate: dict[str, object] | None = None,
     expected_comparison_identity: dict[str, object] | None = None,
+    expected_arm_bindings: dict[str, dict[str, str]] | None = None,
 ) -> Stage6HealthCertificate:
     """Adjudicate a health snapshot against the frozen hard sanity limits.
 
@@ -1824,6 +1825,8 @@ def evaluate_stage6_health_certificate(
     identity from its own frozen task/config/support.  The artifact cannot
     supply its own expected identity.  Its operator count and support are
     additionally checked against this call's operator_count and health.
+    Every arm also needs independently expected model/checkpoint/health
+    digests; matching these declarations does not verify physical file bytes.
 
     ``passed`` is confined to this historical health policy and explicitly
     grants no scientific or formal residual acceptance authority.  The
@@ -2044,12 +2047,14 @@ def evaluate_stage6_health_certificate(
         formal_passed = current_identity_matches and formal_cross_arm_residual_certificate_valid(
             formal_cross_arm_certificate,
             expected_comparison_identity=expected_comparison_identity,
+            expected_arm_bindings=expected_arm_bindings,
         )
         formal_reason = (
             None if formal_passed else (
                 "formal_cross_arm_current_identity_missing" if not current_identity_present else
                 "formal_cross_arm_current_identity_mismatch" if not current_identity_matches else
-                "formal_cross_arm_certificate_missing_blocked_or_identity_mismatch"
+                "formal_cross_arm_expected_arm_bindings_missing" if expected_arm_bindings is None else
+                "formal_cross_arm_certificate_missing_blocked_or_binding_mismatch"
             )
         )
         gates["formal_cross_arm_residual_certificate"] = {
@@ -2058,13 +2063,16 @@ def evaluate_stage6_health_certificate(
                 if isinstance(formal_cross_arm_certificate, dict)
                 else None
             ),
-            "limit": "passed_with_formal_cross_arm_acceptance_authority",
+            "limit": "declared_metadata_matches_independent_current_task_and_arm_bindings",
             "kind": "required_evidence",
             "pass": formal_passed,
             "blocked": not formal_passed,
             "reason": formal_reason,
             "detail": formal_cross_arm_certificate,
             "expected_comparison_identity": expected_comparison_identity,
+            "expected_arm_bindings": expected_arm_bindings,
+            "checkpoint_file_bytes_verified": False,
+            "scientific_acceptance_authority": False,
         }
     else:
         gates["formal_cross_arm_residual_certificate"] = {

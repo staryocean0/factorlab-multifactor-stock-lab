@@ -38,7 +38,7 @@
       },
       {
         "path": "README.md",
-        "file_digest": "sha256:a3b732b172c39d28f7bfe51e4ae8c064b1dce134761cea4fd5bc532d75c4fa9a"
+        "file_digest": "sha256:336d5e9e8f56d968dfb123ec46d19bc6e4d5df2e3fd35d7ef22984fe62317e39"
       },
       {
         "path": "ai-readme.md",
@@ -58,7 +58,7 @@
       },
       {
         "path": "docs/ops/reaka_foundation_semantics@1.1.json",
-        "file_digest": "sha256:9992be88813aad3e19662b8bf33b3a378e85c26ccbd31e6b1b72dbbd6f2f3aca"
+        "file_digest": "sha256:a600264be9389a9ad24877d7314418eb147fb826aef609c2dc0f5056dc295da0"
       },
       {
         "path": "docs/user/cloud_execution_prompt.md",
@@ -68,7 +68,7 @@
     "whitepaper": [
       {
         "path": "docs/ops/reaka_foundation_whitepaper_v1_3.md",
-        "file_digest": "sha256:46bde193d7bd6feb167ddcfd81523533ac60c4c4ad9b21ff515dcf4bc1d468d7"
+        "file_digest": "sha256:c273b1a131adb11590f747b5a577287461efc38dde9e367779821089602f0355"
       }
     ],
     "code": [
@@ -298,7 +298,7 @@
       },
       {
         "path": "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py",
-        "file_digest": "sha256:27bff8b394a6249470970b2af69d785281ae6565cc3125b859bb628580fe65c9"
+        "file_digest": "sha256:9669374bc15b5fcfa6a8f3b6a3924df33bf0f9cdf38ad308f74169964b2e5588"
       },
       {
         "path": "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py",
@@ -386,7 +386,7 @@
       },
       {
         "path": "src/factor_lab/governance/reaka_residual_certificate.py",
-        "file_digest": "sha256:903d839efa86b6406d0033a5026d60215771a8ae3bf91aee0185d757481cb621"
+        "file_digest": "sha256:74f896f7da69e79d615bc23e975fc91ccd590976682d2c30c70105371909f6bb"
       },
       {
         "path": "src/factor_lab/governance/run_snapshot.py",
@@ -492,7 +492,7 @@
       },
       {
         "path": "tests/unit/test_reaka_foundation_contract.py",
-        "file_digest": "sha256:f3522f3a229dac0718ff8a5ff62a8481a9a7c192a5a730390ae7b24e6bf19743"
+        "file_digest": "sha256:1d9d62c58f7f3740b1c9739f79b5b7bf42fd22ef622a2323dc2f01de4e7621ba"
       },
       {
         "path": "tests/unit/test_reaka_legacy_entrypoints.py",
@@ -508,11 +508,11 @@
       },
       {
         "path": "tests/unit/test_reaka_residual_certificate.py",
-        "file_digest": "sha256:4c05fa3b3248265b566d13aa04de1cef7fb0a09b3dc1eed7afb0efcc33e692aa"
+        "file_digest": "sha256:8a71e777d603bb6f946b2ba3415ae7218fdef3d36aa75ffe935145157a34cb2a"
       },
       {
         "path": "tests/unit/test_reaka_stage6_health_estimand.py",
-        "file_digest": "sha256:f4b64553c56828f16b130872e7730797bcb6595da782baf2d49dda1749208f8b"
+        "file_digest": "sha256:667765bb5b1b354ff9ee08aace0c7a6f566832ad4ce2e50f356ccb797944f166"
       },
       {
         "path": "tests/unit/test_reaka_v2_stage4_observable_factor_pairing_v1.py",
@@ -522,7 +522,7 @@
     "workflow": [
       {
         "path": ".github/workflows/ci.yml",
-        "file_digest": "sha256:f36be6d4fc89bf5abe6234b7b199674aa5c106a3ede4a19cd26c8cb91313b80c"
+        "file_digest": "sha256:6ecbd460c30ba8184e082fccac6aef4042f1d02d5c070f728d634d003d3a70d1"
       },
       {
         "path": ".github/workflows/foundation-audit.yml",
@@ -530,7 +530,7 @@
       },
       {
         "path": "docs/user/reaka_multifactor_current_workflow_v1_3.md",
-        "file_digest": "sha256:edd1ddef6008438ebed23eb2bf63be2940b5700d25b4c9645dd5b8bfdb8663ab"
+        "file_digest": "sha256:067262345d6e23a1f295932624e17e4779795cbd2109d03eb7b7c15488bbb66d"
       },
       {
         "path": "pyproject.toml",
@@ -641,5 +641,5 @@
     "old_occupancy_gate_energy_thresholds": "historical health diagnostics, not current financial admission or mathematical identities",
     "legacy_mutating_entrypoints": "runtime rejected before side effects; old source retained in Git parent history"
   },
-  "canonical_digest": "sha256:967c882dbd2e0762aed1bb69570cfa56e9dcdf8a370c1170eeab4a3d5ed6e3a4"
+  "canonical_digest": "sha256:099853e547b9ec0fa54a00fab4770ea702ebb7d6b8e7f6b5f22fb2ec415fb652"
 }
