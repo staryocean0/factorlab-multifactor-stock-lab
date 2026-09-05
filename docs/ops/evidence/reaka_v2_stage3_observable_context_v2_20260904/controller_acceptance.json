@@ -1,0 +1,15 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_observable_context_controller_acceptance@2.0",
+  "status": "accepted_stage3_observable_context_waiting_user_stage4_checkpoint",
+  "validation_digest": "sha256:3a4636200021ff28d365cad8c798d2d912883c58c1929aaf65612a925b6c03f0",
+  "contract_digest": "sha256:7d10af936b33e0af0cc81f26b381dceb6300be1e77fcc05513de67faa44e653e",
+  "result_digest": "sha256:297a9a2bcbadcd8ae378407dcfb61b1fd6fcfbb26db034878e4de24f13d1d45c",
+  "certificate_digest": "sha256:42fcfdaf2ffebb9fc41724a5b8c4513a8c400a1280d788d8cf347624f963dd0e",
+  "operator_decision_out_of_scope": true,
+  "next_legal_action": "user_review_then_freeze_stage4_contract",
+  "stage4_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:ebf64cc4257babfdc484646c02222dcdb80b45a73d0ace006ce8b63e4057553d"
+}

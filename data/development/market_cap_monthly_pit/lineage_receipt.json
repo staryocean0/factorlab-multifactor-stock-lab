@@ -1,0 +1,26 @@
+{
+  "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+  "decision_period": {
+    "end": "2025-12",
+    "start": "2009-01"
+  },
+  "formula": "last_raw_close_in_month * latest_visible_total_shares",
+  "interpolation_allowed": false,
+  "latest_fallback_allowed": false,
+  "parents": {
+    "bars": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1d_raw_canonical_may18_merged_20260519/bars.parquet",
+      "sha256": "620c5bd5ba8c3d7089f9f3ee474a1a88dea2ec7720721e1112fe734564662bda"
+    },
+    "share_capital": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/stock_share_capital_change/dataset_version=stock_share_capital_cn_a_event_pit_research_sina_repair_v4_20260630/share_capital_changes.parquet",
+      "sha256": "f6850cc64d3006980029fc16fd2df6ced701abb214b52e9905b41d76a5f2e39d"
+    }
+  },
+  "schema_version": "datahub.stock_market_cap_monthly_pit.lineage.v1",
+  "visibility_predicate": "effective_date <= price_day and share_available_at < decision_as_of",
+  "warmup_period": {
+    "end": "2008-12",
+    "start": "2008-12"
+  }
+}

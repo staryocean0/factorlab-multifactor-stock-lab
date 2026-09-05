@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "macro_regime_dual_strategy_reaka_paper_v1_diagnostic@1.0",
+  "title": "Formula-faithful REAKA V1 consumed-history implementation diagnostic",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "trial_id",
+    "status",
+    "strategy_id",
+    "arm_id",
+    "spec_digest",
+    "complete_validation_years",
+    "fold_results",
+    "strategy_metrics",
+    "paper_architecture_conformance",
+    "scientific_classification",
+    "input_receipts",
+    "config",
+    "authority",
+    "canonical_digest"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "macro_regime_dual_strategy_reaka_paper_v1_diagnostic@1.0"
+    },
+    "trial_id": {
+      "const": "macro_regime_reaka_paper_v1_consumed_round3a_diagnostic_2021_2025"
+    },
+    "status": {
+      "const": "completed"
+    },
+    "strategy_id": {
+      "const": "reaka_paper_formula_faithful_v1"
+    },
+    "arm_id": {
+      "const": "dual_lstm_gate_aks_conditional_ddpm_joint_v1"
+    },
+    "spec_digest": {
+      "$ref": "#/$defs/digest"
+    },
+    "complete_validation_years": {
+      "const": [2021, 2022, 2023, 2024, 2025]
+    },
+    "fold_results": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object"
+      }
+    },
+    "strategy_metrics": {
+      "type": "object"
+    },
+    "paper_architecture_conformance": {
+      "type": "object",
+      "required": [
+        "status",
+        "formula_graph_complete",
+        "paper_numeric_replication_claimed",
+        "paper_dataset_replication_claimed",
+        "factorlab_input_adapter"
+      ],
+      "properties": {
+        "status": {
+          "const": "paper_architecture_complete_with_frozen_assumptions"
+        },
+        "formula_graph_complete": {
+          "const": true
+        },
+        "paper_numeric_replication_claimed": {
+          "const": false
+        },
+        "paper_dataset_replication_claimed": {
+          "const": false
+        },
+        "factorlab_input_adapter": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "scientific_classification": {
+      "type": "object",
+      "required": [
+        "historical_scope_previously_consumed",
+        "implementation_sanity",
+        "diagnostic_only",
+        "fresh_oos",
+        "scientific_vote_allowed",
+        "scientific_claim_count_delta",
+        "eligible_for_promotion_review",
+        "formal_replacement_allowed"
+      ],
+      "properties": {
+        "historical_scope_previously_consumed": {
+          "const": true
+        },
+        "implementation_sanity": {
+          "const": true
+        },
+        "diagnostic_only": {
+          "const": true
+        },
+        "fresh_oos": {
+          "const": false
+        },
+        "scientific_vote_allowed": {
+          "const": false
+        },
+        "scientific_claim_count_delta": {
+          "const": 0
+        },
+        "eligible_for_promotion_review": {
+          "const": false
+        },
+        "formal_replacement_allowed": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "input_receipts": {
+      "type": "object"
+    },
+    "config": {
+      "type": "object"
+    },
+    "authority": {
+      "$ref": "#/$defs/false_authority"
+    },
+    "canonical_digest": {
+      "$ref": "#/$defs/digest"
+    }
+  },
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "false_authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_selection_allowed",
+        "individual_stock_scoring_allowed",
+        "portfolio_construction_allowed",
+        "portfolio_execution",
+        "holdings_created",
+        "orders_created",
+        "production_authority"
+      ],
+      "properties": {
+        "asset_selection_allowed": {"const": false},
+        "individual_stock_scoring_allowed": {"const": false},
+        "portfolio_construction_allowed": {"const": false},
+        "portfolio_execution": {"const": false},
+        "holdings_created": {"const": false},
+        "orders_created": {"const": false},
+        "production_authority": {"const": false}
+      }
+    }
+  }
+}

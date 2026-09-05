@@ -1,0 +1,48 @@
+{
+  "schema_id": "factorlab.koopman_residual_admission@1.0",
+  "status": "project_level_k_then_residual_admission_frozen",
+  "question": "how_many_linear_operators_then_whether_leftover_residual_enters_trading_score",
+  "training_required_to_know": true,
+  "full_paper_stack_required_to_know": false,
+  "k3_closed_a_priori": false,
+  "maximum_operator_count_must_be_frozen_per_run": true,
+  "state_machine": {
+    "k1_pass": "ask_next_k_not_residual",
+    "k1_fail": "do_not_force_whole_residual_probe_split2",
+    "split2_impossible": "abandon_koopman_return_to_factor_or_state",
+    "split2_possible": "evaluate_k2",
+    "next_k_pass": "ask_further_k_not_residual",
+    "next_k_fail_with_qualified_k": "ask_residual_of_selected_k",
+    "next_k_fail_without_qualified_k": "abandon_koopman_return_to_factor_or_state",
+    "residual_admit": "trading_selected_k_plus_residual",
+    "residual_reject": "trading_selected_k_only"
+  },
+  "forbidden": [
+    "residual_before_k_chain_stops",
+    "residual_as_substitute_for_failed_k",
+    "a_priori_K3_close",
+    "try_full_paper_stack_then_drop_residual_after_seeing_rankic",
+    "A0_A7_before_trading_identity_and_SSA"
+  ],
+  "ssa_follows_trading_identity_freeze": true,
+  "rewrites_post_training_account_audit_1_1": false,
+  "authority": {
+    "account_execution_allowed": false,
+    "production_authority": false,
+    "pointer_change": false
+  },
+  "fresh_oos": false,
+  "production_authority": false,
+  "source_closure": {
+    "docs/ops/koopman_residual_admission_whitepaper.md": "sha256:99b7784694ff4e94d32de17bfb24f648bb7b320a3d392806ea952a6992d6d97b",
+    "docs/user/koopman_residual_admission_workflow.md": "sha256:cdcfe7316836d365a4a6844fcfc236d734ab8c2808928af49b92b1374f3b5fcc",
+    "src/factor_lab/factor_rotation/koopman_residual_admission_v1.py": "sha256:f68195d177e6571b80e144dbc6ccabf946ae456afacc0f59c919e4f6b800aafc",
+    "scripts/factor_rotation/run_koopman_residual_admission_v1.py": "sha256:4b2ba83743f019498b9eea6746b37be50795d779697340deefecbbd2c431e58e",
+    "scripts/factor_rotation/validate_koopman_residual_admission_v1.py": "sha256:3e8e59596cb0a24d1931d0cd1f3bb8661d7640e2f7feb0bab1488a0661114e5e",
+    "tests/unit/test_koopman_residual_admission_v1.py": "sha256:f9554299e082736e899efa1ddfe6e55d49a8bfd7959f198254c1867ad133adb3",
+    ".codex/skills/strategy-slice-rebuild/SKILL.md": "sha256:08badb5d6621aff6863cf9dc9fcac64922d4ef182b07b3ba66b44166bbd029a1",
+    ".codex/skills/strategy-slice-rebuild/references/project-contract.md": "sha256:4665e507b85792bb8365028b7880679aa9ae43cbfcb1532ca51e3c908307f138",
+    "docs/ops/post_training_strategy_science_acceptance@1.0.json": "sha256:0f8bc9a287a8b2e84294f218b1fe97d8c35405b4116615d3714bd799f98e2cf9"
+  },
+  "canonical_digest": "sha256:5cabb0acd46a82589d0cec6a2600528c04109f2a0deb8fb524d6c0177c2a4015"
+}

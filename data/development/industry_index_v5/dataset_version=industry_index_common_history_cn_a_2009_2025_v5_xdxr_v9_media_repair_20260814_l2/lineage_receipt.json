@@ -1,0 +1,74 @@
+{
+  "availability_mode": "consumed_history",
+  "bucket_policy_overrides": {
+    "media__advertising": {
+      "min_constituents": 3,
+      "size_hard_floor_cny": 1500000000.0
+    },
+    "media__culture_education_leisure": {
+      "min_constituents": 3,
+      "size_hard_floor_cny": 2500000000.0
+    },
+    "media__film_tv": {
+      "min_constituents": 3,
+      "size_hard_floor_cny": 2000000000.0
+    }
+  },
+  "canonical_digest": "84c80c01dca7dce16909136b18d00c4e232dccf68665774b1ff6150be48a4020",
+  "consumer_contract_id": "factorlab_custom_industry_common_history_2009.v1",
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l2",
+  "fresh_oos": false,
+  "generated_at": "2026-08-14T11:00:00Z",
+  "historical_pit_taxonomy_claim": false,
+  "old_versions_mutated_or_superseded": false,
+  "parents": {
+    "adjustment_factors": {
+      "dataset_version": "adjust_factors_cn_a_xdxr_v9_20260814",
+      "pit_mode": "consumed_history_return_measurement_only",
+      "sha256": "2fc1faeaff735b0251b8542e0d4ec3690a023469de044fadfc6fa246f7e53ee0"
+    },
+    "checks": {
+      "adjustment_hash": true,
+      "adjustment_version": true,
+      "consumed_version": true,
+      "market_cap_204_months": true,
+      "market_cap_hash": true,
+      "schedule_certified": true,
+      "schedule_hash": true,
+      "schedule_version": true,
+      "taxonomy_hash": true,
+      "taxonomy_static_not_pit": true,
+      "taxonomy_version": true
+    },
+    "consumed_history_bars_2008_2012_and_2021_2025": {
+      "dataset_version": "bars_cn_a_1d_raw_canonical_may18_merged_20260519",
+      "pit_mode": "consumed_history_not_historical_receipt_pit",
+      "sha256": "620c5bd5ba8c3d7089f9f3ee474a1a88dea2ec7720721e1112fe734564662bda"
+    },
+    "monthly_market_cap": {
+      "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+      "sha256": "2dbfd339ff65396ca14519ec3a5e1003b5073449334ea9e3d59b86e723d38e29"
+    },
+    "schedule_bound_bars_2013_2020": {
+      "dataset_version": "cn_a_stock_daily_bars_schedule_bound_history_2013_2020_v1_20260719",
+      "pit_mode": "PIT_SAFE_SCHEDULE_BOUND_HISTORY",
+      "sha256": "6b34c370689711634182401bcae6606a4ab204bca488a084f806ec4c3ebb1fc5"
+    },
+    "taxonomy": {
+      "available_at": "2026-08-12T07:00:00Z",
+      "dataset_version": "issuer_custom_industry_index_input.v1-market-wide-20260812-r1",
+      "historical_pit_authorized": false,
+      "sha256": "ae20aed3b398020175c387b2c0530acb27f526e9fd3af203554b578fb133336e",
+      "temporal_mode": "static_2026_snapshot"
+    }
+  },
+  "production_authority": false,
+  "publication_clock_at_validation": "2026-08-14T11:05:00Z",
+  "research_status": "diagnostic_only",
+  "schema_version": "datahub.industry_index_common_history.lineage.v1",
+  "scoring_allowed": false,
+  "single_stock_authorized": false,
+  "static_taxonomy_historical_backfill": true,
+  "strategy_effectiveness_claim": false,
+  "training_allowed": false
+}

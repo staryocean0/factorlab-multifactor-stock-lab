@@ -1,0 +1,21 @@
+{
+  "report_id": "quality_adjust_factors_cn_a_xdxr_v9_20260814",
+  "target_dataset_version": "adjust_factors_cn_a_xdxr_v9_20260814",
+  "duplicate_count": 0,
+  "merge_key": [
+    "symbol",
+    "trading_day",
+    "source_member",
+    "factor_type"
+  ],
+  "null_counts": {
+    "symbol": 0,
+    "trading_day": 0,
+    "price_multiplier": 0
+  },
+  "quality_score": 100.0,
+  "rule_summary": {
+    "rule_version": "v1"
+  },
+  "generated_at": "2026-08-17T00:00:00+00:00"
+}

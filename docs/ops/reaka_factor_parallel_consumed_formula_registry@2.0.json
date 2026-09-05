@@ -1,0 +1,550 @@
+{
+  "schema_id": "factorlab.reaka_factor_parallel_consumed_formula_registry@2.0",
+  "status": "round1_round2_36_attempts_complete",
+  "supersedes": "factorlab.reaka_factor_parallel_consumed_formula_registry@1.0",
+  "attempt_count": 36,
+  "formula_identity_count": 36,
+  "round_attempt_counts": {
+    "round1_v0_3": 18,
+    "round2_v0_4": 18
+  },
+  "rows": [
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d1_expansion",
+      "candidate_id": "proposal:d1_expansion:beta_accel_60_120_v1",
+      "formula": "beta_60d_lag1 - beta_120d_lag1",
+      "source_columns": [
+        "beta_60d_lag1",
+        "beta_120d_lag1"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:d01095f5da628de1cd8b730675b258acf2df70ff06682e87dcf4b3b94203e164"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d1_expansion",
+      "candidate_id": "proposal:d1_expansion:range_vol_expand_park_20_60_v1",
+      "formula": "parkinson_vol_60d_lag1 - parkinson_vol_20d_lag1",
+      "source_columns": [
+        "parkinson_vol_60d_lag1",
+        "parkinson_vol_20d_lag1"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:be7b6ede29987a89e84428326c98f2e6788f926892bcdfdade7b693ea9fbea08"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d1_expansion",
+      "candidate_id": "proposal:d1_expansion:pv_joint_breakout_loc60_volratio20_v1",
+      "formula": "close_location_60d_lag1 * volume_ratio_20d_lag1",
+      "source_columns": [
+        "close_location_60d_lag1",
+        "volume_ratio_20d_lag1"
+      ],
+      "operation": "product",
+      "formula_identity_digest": "sha256:1c4df6f7e6a1ef59c0c8033a700ce01476483a403195f21e7e092972effc9b18"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d2_growth_quality",
+      "candidate_id": "proposal:d2_growth_quality:efficient_earnings_vs_asset_growth_v1",
+      "formula": "net_profit_growth_yoy - assets_growth_yoy",
+      "source_columns": [
+        "net_profit_growth_yoy",
+        "assets_growth_yoy"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:44bb81ada2d98e4f76274793bb7c31a609c7120f16c9999d542455195620c0d6"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d2_growth_quality",
+      "candidate_id": "proposal:d2_growth_quality:deleveraging_equity_vs_asset_growth_v1",
+      "formula": "equity_growth_yoy - assets_growth_yoy",
+      "source_columns": [
+        "equity_growth_yoy",
+        "assets_growth_yoy"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:c5d4c8ae9c6cbb9012f51507d7c8f61cdc878006ebc77b65e30f57aab3f093f1"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d2_growth_quality",
+      "candidate_id": "proposal:d2_growth_quality:roe_improvement_earnings_vs_equity_growth_v1",
+      "formula": "net_profit_growth_yoy - equity_growth_yoy",
+      "source_columns": [
+        "net_profit_growth_yoy",
+        "equity_growth_yoy"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:b65c4c655dae0f59ea3a3b9b10335b1d814bf282f359c7e9d2b897287678c92b"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d3_complementarity",
+      "candidate_id": "d3_and_quality_illiquidity",
+      "formula": "min(cs_rankz(cash_flow_to_assets_lag1), cs_rankz(amihud_illiquidity_20d_lag1))",
+      "source_columns": [
+        "cash_flow_to_assets_lag1",
+        "amihud_illiquidity_20d_lag1"
+      ],
+      "operation": "rankz_min",
+      "formula_identity_digest": "sha256:5655cb11654d57524e4e8b89f5698a8721b686fa7de8181165e03cd361b29767"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d3_complementarity",
+      "candidate_id": "d3_prod_reversal_contained_dd",
+      "formula": "relu(cs_rankz(reversal_60d_lag1)) * relu(cs_rankz(max_drawdown_neg_120d_lag1))",
+      "source_columns": [
+        "reversal_60d_lag1",
+        "max_drawdown_neg_120d_lag1"
+      ],
+      "operation": "rankz_positive_product",
+      "formula_identity_digest": "sha256:0c800e2021e9f1b14b503e230507a078315dbc27694f63b4ebd0f9912604881e"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d3_complementarity",
+      "candidate_id": "d3_gate_macd_earnings_quality",
+      "formula": "cs_rankz(macd_neg_signal_12_26_lag1) * relu(cs_rankz(earnings_quality_lag1))",
+      "source_columns": [
+        "macd_neg_signal_12_26_lag1",
+        "earnings_quality_lag1"
+      ],
+      "operation": "rankz_quality_gate",
+      "formula_identity_digest": "sha256:f4522f4444adf04558b45ffb58ad6aea1ce0d7ea518f9b16b1029d47dcc74423"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d4_temporal",
+      "candidate_id": "proposal:d4_temporal:reversal_dual_horizon_signed_confirm_v1",
+      "formula": "sign_agree_geometric_mean(reversal_60d_lag1, reversal_120d_lag1); 0 if signs disagree",
+      "source_columns": [
+        "reversal_60d_lag1",
+        "reversal_120d_lag1"
+      ],
+      "operation": "signed_geometric_confirmation",
+      "formula_identity_digest": "sha256:5675b45f47e637b53d80e69a4673c03d2be282950b380eaf7e2632af9986bd2c"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d4_temporal",
+      "candidate_id": "proposal:d4_temporal:reversal_slow_minus_fast_v1",
+      "formula": "reversal_120d_lag1 - reversal_20d_lag1",
+      "source_columns": [
+        "reversal_120d_lag1",
+        "reversal_20d_lag1"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:43552c48558fb1aba3a238accef941633c9617cbc3cd79c13804a3472e0104e9"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "d4_temporal",
+      "candidate_id": "proposal:d4_temporal:vwap_dual_horizon_signed_confirm_v1",
+      "formula": "sign_agree_geometric_mean(vwap_deviation_60d_lag1, vwap_deviation_120d_lag1); 0 if signs disagree",
+      "source_columns": [
+        "vwap_deviation_60d_lag1",
+        "vwap_deviation_120d_lag1"
+      ],
+      "operation": "signed_geometric_confirmation",
+      "formula_identity_digest": "sha256:1cbfec631f4221957d526a05ba252fcbfc6b0ac452f3df08b4d8c4a0de45b100"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "o1_open",
+      "candidate_id": "proposal:o1_open:value_bp_cf_yield_v1",
+      "formula": "0.5*book_to_price_lag1 + 0.5*cash_flow_yield_lag1",
+      "source_columns": [
+        "book_to_price_lag1",
+        "cash_flow_yield_lag1"
+      ],
+      "operation": "weighted_sum",
+      "formula_identity_digest": "sha256:3087b99babf8d566a04c50031db5eca149502c58faa06d0e1b52c74d2645309a"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "o1_open",
+      "candidate_id": "proposal:o1_open:issuance_x_book_value_v1",
+      "formula": "share_change_60d_neg_lag1 * book_to_price_lag1",
+      "source_columns": [
+        "share_change_60d_neg_lag1",
+        "book_to_price_lag1"
+      ],
+      "operation": "product",
+      "formula_identity_digest": "sha256:2ec6f979aacdacf1fa2ea2d3c8f6d192202f671474fac5d193e17deadbdde965"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "o1_open",
+      "candidate_id": "proposal:o1_open:neglected_far_high_low_to_v1",
+      "formula": "pct_from_250d_high_neg_lag1 * low_float_turnover_20d_lag1",
+      "source_columns": [
+        "pct_from_250d_high_neg_lag1",
+        "low_float_turnover_20d_lag1"
+      ],
+      "operation": "product",
+      "formula_identity_digest": "sha256:2a63eac42bcdc949d2611565769908c9f5fb849fbe1447dc536b1a5d7533da52"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "o2_open",
+      "candidate_id": "proposal:o2_open:financing:share_accrual_v1",
+      "formula": "0.5*share_change_60d_neg_lag1 - 0.5*accruals_lag1",
+      "source_columns": [
+        "share_change_60d_neg_lag1",
+        "accruals_lag1"
+      ],
+      "operation": "weighted_sum",
+      "formula_identity_digest": "sha256:06b1d5c9504c355d2d99b0bc509a9ba4b5379c8d0f32f15f6b66630bb25a1719"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "o2_open",
+      "candidate_id": "proposal:o2_open:lottery:skew_kurtosis_v1",
+      "formula": "0.5*low_skewness_60d_lag1 + 0.5*low_kurtosis_20d_lag1",
+      "source_columns": [
+        "low_skewness_60d_lag1",
+        "low_kurtosis_20d_lag1"
+      ],
+      "operation": "weighted_sum",
+      "formula_identity_digest": "sha256:7655f4d2693784a99a07c19695de6a570051dac1e60a73f8ec86d7f4d0cf2b3e"
+    },
+    {
+      "round": 1,
+      "source_version": "v0_3",
+      "lane_id": "o2_open",
+      "candidate_id": "proposal:o2_open:overnight:quiet_night_active_day_v1",
+      "formula": "0.5*overnight_gap_vol_neg_20d_lag1 - 0.5*intraday_range_20d",
+      "source_columns": [
+        "overnight_gap_vol_neg_20d_lag1",
+        "intraday_range_20d"
+      ],
+      "operation": "weighted_sum",
+      "formula_identity_digest": "sha256:e0975a74ea264e0823884f1d1329488b148a13ee496512d54c0ee1d43b6c2f1d"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d1_expansion",
+      "candidate_id": "proposal:d1_expansion:beta_level_amount_shock_v1",
+      "formula": "beta_60d_lag1 * (-amount_abnormal_30d_lag1)",
+      "source_columns": [
+        "beta_60d_lag1",
+        "amount_abnormal_30d_lag1"
+      ],
+      "operation": "product_neg_right",
+      "formula_identity_digest": "sha256:671065d5695f3122b9bca906ca9e989fb30b6194172a43a2d7dc60219b8f1d92"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d1_expansion",
+      "candidate_id": "proposal:d1_expansion:overnight_gap_vol_expand_20_60_v1",
+      "formula": "overnight_gap_vol_neg_60d_lag1 - overnight_gap_vol_neg_20d_lag1",
+      "source_columns": [
+        "overnight_gap_vol_neg_60d_lag1",
+        "overnight_gap_vol_neg_20d_lag1"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:1080a762740045eac53b85a37fef79960603938c9d67a119c2a1848292203d75"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d1_expansion",
+      "candidate_id": "proposal:d1_expansion:pv_joint_loc120_amountratio20_v1",
+      "formula": "close_location_120d_lag1 * amount_ratio_20d_lag1",
+      "source_columns": [
+        "close_location_120d_lag1",
+        "amount_ratio_20d_lag1"
+      ],
+      "operation": "product",
+      "formula_identity_digest": "sha256:2252876b11f1b4c0750ad6db962c0eb03e88a31ec541efd0cf633e5ab9db412f"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d2_growth_quality",
+      "candidate_id": "proposal:d2_growth_quality:roic_vs_asset_growth_v1",
+      "formula": "roic_lag1 - assets_growth_yoy",
+      "source_columns": [
+        "roic_lag1",
+        "assets_growth_yoy"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:dac085250ae222bd53d96c9880c9198d090419dd76cf53594a96d250b129d901"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d2_growth_quality",
+      "candidate_id": "proposal:d2_growth_quality:turnover_vs_asset_growth_v1",
+      "formula": "asset_turnover_lag1 - assets_growth_yoy",
+      "source_columns": [
+        "asset_turnover_lag1",
+        "assets_growth_yoy"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:4af121ddbb6b55484fb810150b02d4f289636930b558dd7aae8f58960bde0bce"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d2_growth_quality",
+      "candidate_id": "proposal:d2_growth_quality:cash_coverage_vs_leverage_v1",
+      "formula": "cashflow_to_debt_lag1 - debt_to_asset_lag1",
+      "source_columns": [
+        "cashflow_to_debt_lag1",
+        "debt_to_asset_lag1"
+      ],
+      "operation": "difference",
+      "formula_identity_digest": "sha256:7fd470aa1c5f851d41e2ba4b3b14a85e05c104305cd47fcc52bc5989c4989a5a"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d3_complementarity",
+      "candidate_id": "d3_r2_residual_cfroe_amihud60",
+      "formula": "cs_ols_residual(cs_rankz(cash_flow_roe_lag1) ~ 1 + cs_rankz(amihud_illiquidity_60d_lag1))",
+      "source_columns": [
+        "cash_flow_roe_lag1",
+        "amihud_illiquidity_60d_lag1"
+      ],
+      "operation": "rankz_ols_residual",
+      "formula_identity_digest": "sha256:0bb6164a553c558357c5ebfc94eb640d94cdf52af3159083a91728bffd444bf2"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d3_complementarity",
+      "candidate_id": "d3_r2_union_vwap120_amihud10",
+      "formula": "max(cs_rankz(vwap_deviation_120d_lag1), cs_rankz(amihud_illiquidity_10d_lag1))",
+      "source_columns": [
+        "vwap_deviation_120d_lag1",
+        "amihud_illiquidity_10d_lag1"
+      ],
+      "operation": "rankz_max",
+      "formula_identity_digest": "sha256:08970caf8d30c35c6e8ce254d1d0b9c7facc0f6c07c1a56ad6a2c5b7031acbb3"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d3_complementarity",
+      "candidate_id": "d3_r2_harmonic_quality_volume",
+      "formula": "harmonic_mean(cs_rank_pct(fundamental_quality_lag1), cs_rank_pct(volume_ratio_20d_lag1))",
+      "source_columns": [
+        "fundamental_quality_lag1",
+        "volume_ratio_20d_lag1"
+      ],
+      "operation": "rank_pct_harmonic_mean",
+      "formula_identity_digest": "sha256:57ad59b566a40a885dc62df30f11611850170a519139e72bc4b48a495876d39f"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d4_temporal",
+      "candidate_id": "proposal:d4_temporal:reversal_120_gated_by_weekly_skip_stability_v1",
+      "formula": "reversal_120d_lag1 * (1 - min(1, abs(reversal_60d_lag1 - reversal_60d_skip5_lag1) / max(abs(reversal_60d_lag1) + abs(reversal_60d_skip5_lag1), 1e-12)))",
+      "source_columns": [
+        "reversal_120d_lag1",
+        "reversal_60d_lag1",
+        "reversal_60d_skip5_lag1"
+      ],
+      "operation": "amplitude_times_relative_agreement",
+      "formula_identity_digest": "sha256:2f1f94f94a2a4a3ba1d616908e9fe82d7b4dea8c150208597895de1d95d468b5"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d4_temporal",
+      "candidate_id": "proposal:d4_temporal:ma250_gated_by_nested_ma_agreement_v1",
+      "formula": "ma_reversion_250d_lag1 * (1 - min(1, abs(ma_reversion_60d_lag1 - ma_reversion_120d_lag1) / max(abs(ma_reversion_60d_lag1) + abs(ma_reversion_120d_lag1), 1e-12)))",
+      "source_columns": [
+        "ma_reversion_250d_lag1",
+        "ma_reversion_60d_lag1",
+        "ma_reversion_120d_lag1"
+      ],
+      "operation": "amplitude_times_relative_agreement",
+      "formula_identity_digest": "sha256:a367549254ca3bf6484535633ea7f70ba6febefea4681bebfa131f947942203f"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "d4_temporal",
+      "candidate_id": "proposal:d4_temporal:reversal_250_skip20_gated_by_weekly_skip_stability_v1",
+      "formula": "reversal_250d_skip20_lag1 * (1 - min(1, abs(reversal_60d_lag1 - reversal_60d_skip5_lag1) / max(abs(reversal_60d_lag1) + abs(reversal_60d_skip5_lag1), 1e-12)))",
+      "source_columns": [
+        "reversal_250d_skip20_lag1",
+        "reversal_60d_lag1",
+        "reversal_60d_skip5_lag1"
+      ],
+      "operation": "amplitude_times_relative_agreement",
+      "formula_identity_digest": "sha256:17c759ddb5d30ef9cc1251100982418e2b3a78872f0929441e46518f4ac65b8b"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "o1_open",
+      "candidate_id": "proposal:o1_open:tradable_small_cap_v1",
+      "formula": "small_total_cap_lag1 * float_ratio_lag1",
+      "source_columns": [
+        "small_total_cap_lag1",
+        "float_ratio_lag1"
+      ],
+      "operation": "product",
+      "formula_identity_digest": "sha256:c45c0dca6469a628a066a9c026740aaef03839520c46bbcbfa2aaf3e59b7184d"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "o1_open",
+      "candidate_id": "proposal:o1_open:operating_intensity_roic_v1",
+      "formula": "asset_turnover_lag1 * roic_lag1",
+      "source_columns": [
+        "asset_turnover_lag1",
+        "roic_lag1"
+      ],
+      "operation": "product",
+      "formula_identity_digest": "sha256:3ad68f32ff62851f2187e9697de1402408d855fe6e6a597022d7328035ffe316"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "o1_open",
+      "candidate_id": "proposal:o1_open:sales_yield_debt_service_v1",
+      "formula": "sales_to_price_lag1 * cashflow_to_debt_lag1",
+      "source_columns": [
+        "sales_to_price_lag1",
+        "cashflow_to_debt_lag1"
+      ],
+      "operation": "product",
+      "formula_identity_digest": "sha256:cb13c6a69ae5f4554b95c9071bdb827a8746e17d9ff78d1f727105d7978a7fe0"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "o2_open",
+      "candidate_id": "proposal:o2_open:neglected_continuation_volshrink_mom120_v1",
+      "formula": "0.5*low_volume_momentum_120d_lag1 + 0.5*momentum_120d_lag1",
+      "source_columns": [
+        "low_volume_momentum_120d_lag1",
+        "momentum_120d_lag1"
+      ],
+      "operation": "weighted_sum",
+      "formula_identity_digest": "sha256:7a305e3d10a5650be5c7cb1786cba86ac0e558cc3967bab0d99dfcb8a4aaf9ff"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "o2_open",
+      "candidate_id": "proposal:o2_open:cash_solvency_cfdebt_lowlev_v1",
+      "formula": "0.5*cashflow_to_debt_lag1 + 0.5*debt_to_asset_lag1",
+      "source_columns": [
+        "cashflow_to_debt_lag1",
+        "debt_to_asset_lag1"
+      ],
+      "operation": "weighted_sum",
+      "formula_identity_digest": "sha256:c9de13d580b09bac73202e6ee1e113427e360871de5695093f3b965d2a653f06"
+    },
+    {
+      "round": 2,
+      "source_version": "v0_4",
+      "lane_id": "o2_open",
+      "candidate_id": "proposal:o2_open:investable_small_size_float_v1",
+      "formula": "0.5*nonlinear_size_lag1 + 0.5*float_ratio_lag1",
+      "source_columns": [
+        "nonlinear_size_lag1",
+        "float_ratio_lag1"
+      ],
+      "operation": "weighted_sum",
+      "formula_identity_digest": "sha256:e5d9f5fe90b93508c1bf02e9dd9ff3c3e90120c2848742eb82523eac4cba32f9"
+    }
+  ],
+  "source_preregistrations": [
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_3/d1_expansion/candidate_preregistration.json",
+      "sha256": "sha256:0cbc3500f51cf0e236fd4f65b0339f066ea74d69e94880d8426328dc8fce608e",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_3/d2_growth_quality/candidate_preregistration.json",
+      "sha256": "sha256:928ab89310043a3dac0606f20d006d7b61d00c47347141bca27b04410ac52160",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_3/d3_complementarity/candidate_preregistration.json",
+      "sha256": "sha256:d3e79c0fcf1e16ab128fe2c2549e97a9f3e4eb215c69b8cc80f62f8f228ad249",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_3/d4_temporal/candidate_preregistration.json",
+      "sha256": "sha256:87e59fee0997f4a77bb078044a5e0cb50bf8f132fcc0d6b08ce34cb3926679ec",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_3/o1_open/candidate_preregistration.json",
+      "sha256": "sha256:4d9ef38d5c5e0413dc06ac5b73cde7a9f560033235430a95ada065d19f519293",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_3/o2_open/candidate_preregistration.json",
+      "sha256": "sha256:273331849b918a39dacb113f8ccf84fde6fd10422483d99e394fc4e667b19391",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_4/d1_expansion/candidate_preregistration.json",
+      "sha256": "sha256:523fa6e929d2739024cc87c9922b16ebd5f4e274f9a219f21e2890062f5d736c",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_4/d2_growth_quality/candidate_preregistration.json",
+      "sha256": "sha256:1fcc64f077d490392f7317d0261ba590d47a986b4f600941372e48383684258c",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_4/d3_complementarity/candidate_preregistration.json",
+      "sha256": "sha256:98017e3d135f9c68626d14b36210831f394d492f10939a6d541cd0d02e9e2d5b",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_4/d4_temporal/candidate_preregistration.json",
+      "sha256": "sha256:2d620cb9903264338e643cb3e9cc0e98152447d6274bbefee501a8d9ad28d2d4",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_4/o1_open/candidate_preregistration.json",
+      "sha256": "sha256:3b2c2d3ef8606fb4fc9d6b5a7f8f1149818cc5d0d60fef0856baf1e3a76ec4fd",
+      "candidate_count": 3
+    },
+    {
+      "path": "docs/ops/evidence/reaka_factor_parallel_campaign_v0_4/o2_open/candidate_preregistration.json",
+      "sha256": "sha256:8e50752b651cbeb9587339a8a8e9f3267b6aca9dd6bd17d07b01a68178f2b7dc",
+      "candidate_count": 3
+    }
+  ],
+  "performance_results_included": false,
+  "reuse_as_future_candidate_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:1dcde16c13d1213ed238cb6fd4e180b2fe4c55331b2a2f885279cf5fe5e906b8"
+}

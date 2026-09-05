@@ -1,0 +1,70 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_validation@1.0",
+  "status": "blocked",
+  "contract_digest": "sha256:9387492d384624484244e08404e0b0b1e17715eb9929600aacd2b72024b6864d",
+  "strategy_id": "REAKA_D5_H20_R5_CURRENT_GENERATION_V1",
+  "model_identity": "d8-h8-K1-r0_fit_prefix_successor_incumbent",
+  "formal_result_digest": "sha256:8939d42b75d60e13db8bf81ec3f587bf40f87f0f292d262ae5635ac6f8fc8d43",
+  "isolated_result_digest": "sha256:f6e0c0b0f2ea7b13bb33bc3093682615276410e26353e69bbc03bee5ea968a9a",
+  "formal_receipt_digest": "sha256:d90dd4f88bdc5cf98ff794b4179118b9f2e5fc6a5cb1796011e65f63cd36f0a5",
+  "isolated_receipt_digest": "sha256:b073531ff51811c860acef8b31ba52f7bbdd96d62b2d5a5dac3cb7964d4e75a0",
+  "scientific_byte_identical_pairs": 11,
+  "tree_diagnostics": {
+    "formal": {
+      "snapshot_manifest_digest": "sha256:b652b4c3ddeeef9c4999a5ea7d61af6082a2fe7fa1910d32f3c73fa33b2729ca",
+      "selection_opportunity": {
+        "row_count": 88796,
+        "decision_count": 1480,
+        "selected_row_count": 44400,
+        "hindsight_label_is_runtime_input": false
+      },
+      "factor_return_surface": {
+        "row_count": 145796,
+        "segment_count": 10414,
+        "factor_count": 14
+      },
+      "realized_pnl": {
+        "row_count": 1063844,
+        "account_day_count": 7438,
+        "maximum_simple_identity_error": 1.1232334506949826e-15,
+        "maximum_linked_log_identity_error": 1.1210650463500116e-15,
+        "component_count": 5
+      },
+      "elapsed_seconds": 506.7158396040031
+    },
+    "isolated": {
+      "snapshot_manifest_digest": "sha256:6ff3915c43849de9e04c216b4fecae107fdcb6c2006648684f5cae9623120c2d",
+      "selection_opportunity": {
+        "row_count": 88796,
+        "decision_count": 1480,
+        "selected_row_count": 44400,
+        "hindsight_label_is_runtime_input": false
+      },
+      "factor_return_surface": {
+        "row_count": 145796,
+        "segment_count": 10414,
+        "factor_count": 14
+      },
+      "realized_pnl": {
+        "row_count": 1063844,
+        "account_day_count": 7438,
+        "maximum_simple_identity_error": 1.1232334506949826e-15,
+        "maximum_linked_log_identity_error": 1.1210650463500116e-15,
+        "component_count": 5
+      },
+      "elapsed_seconds": 504.2200371030194
+    }
+  },
+  "old_d8_K2_opportunity_ledger_reused_as_current": false,
+  "old_sealed_ledgers_rewritten": false,
+  "result_backflow_allowed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "blockers": [
+    "source_closure_drift",
+    "formal_contract_binding_invalid",
+    "isolated_contract_binding_invalid",
+    "formal_isolated_bytes_differ:result.json"
+  ],
+  "canonical_digest": "sha256:9bf2d68e8b970f3a5a7aa54a8bb9d768297e38e6296c4ccd77ec2546725bb079"
+}

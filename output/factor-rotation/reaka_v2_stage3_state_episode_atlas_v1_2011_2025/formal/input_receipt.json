@@ -1,0 +1,31 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_input_receipt@1.0",
+  "cloudridge_index_id": "CN_A_CLOUDRIDGE_BETA_EQW",
+  "cloudridge_file_digest": "sha256:b837e24deb51e6e57b6b080e001133d20dfca0f5b2020c86c819d7ba8c744a97",
+  "state_atlas_contract_digest": "sha256:879f8f373d879f5b32db70e12bfb65758e38afffa42fa584c09c07a5534f5bb6",
+  "input_store_clocks": {
+    "1430": {
+      "manifest_digest": "sha256:142542315fee55b8da415128bcb71da3c24511316c70f14316df62cc8bde2708",
+      "calendar_digest": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+      "inference_rows_digest": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+      "inference_row_count": 853732,
+      "maximum_inference_year": 2020
+    },
+    "1445": {
+      "manifest_digest": "sha256:299fbbe5b7d77b79285e353e4101bf487edf340fdc404b4947fcece4719ba504",
+      "calendar_digest": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+      "inference_rows_digest": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+      "inference_row_count": 853732,
+      "maximum_inference_year": 2020
+    }
+  },
+  "decision_month_min": "2011-05",
+  "decision_month_max": "2025-12",
+  "maximum_decision_year": 2025,
+  "post_2025_decision_rows": 0,
+  "model_training_run": false,
+  "score_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:d06af66ab2eab9d4983c9bacef4ac8504d634342226d28347f6b80a8bd09f272"
+}

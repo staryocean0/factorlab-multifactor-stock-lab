@@ -1,0 +1,57 @@
+{
+  "schema_id": "factorlab.post_training_account_research_bundle@1.0",
+  "status": "materialized_immutable_account_snapshot",
+  "identity": {
+    "strategy_id": "REAKA_D5_H20_R5_CURRENT_GENERATION_V1",
+    "model_or_score_digest": "sha256:ea35bd38660a074fe70fc577d0e8de1501cd71dfa63471197a86673e32db173a",
+    "account_policy_family_digest": "sha256:89fc1bbcdabb291252182f2f938009e301b636516d9458e216705476154a0d60",
+    "market_data_digest": "sha256:34006c13cacda64cd8c57226deacdf87cbf9c0ec8007dff3b4ea4dca17b99077",
+    "adapter_digest": "sha256:484752d06d3be13af184ef6fd4889a255b9c78dddb19fc427026ebe5c7e43199",
+    "data_usage_digest": "sha256:55f859f16ddabff4192b260d0c8445d061f48ad3c33aa87439fbf7c34b10f9db",
+    "tree": "formal",
+    "execution_semantics": "next_tradable_after_bar_close_raw_PIT_then_HFQ_accounting"
+  },
+  "cache_key": "sha256:5c0bc4abec4a3631124192dfe4b84dc92b724d17f2cbfcfa7b18d03d243a514d",
+  "snapshot_profile": "complete_account",
+  "initial_nav": 1000000.0,
+  "artifact_digests": {
+    "portfolio_daily.parquet": "sha256:8f6be84836d7839642e3cf722639887be339fa3f660c274b16d7c0a2b56ae1a5",
+    "holdings.parquet": "sha256:1a0d6e52849fef50a94e6a204a498ea8379af6f837a866216fdb86539723ac01",
+    "trades.parquet": "sha256:514469964e34ec7346800f198dc680494b5a7152a97a63189417fdbc19e5d1a3",
+    "events.parquet": "sha256:0dedccf3ed4bb09ae3c10b6880c5308fc86dadae21373611173400c7ef6255d7"
+  },
+  "source_closure": {
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_3_pnl_segmentation_incident.json": "sha256:69a61bd42fa3d33d1922e009f0cde88e9a96d3136534fb8b0bb38c632fd58cd0",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_trade_cost_allocation_incident.json": "sha256:52087b9baf1ea401675aee52cb58741835384c3469b560db11e37b41eb3a4370",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_1_source_closure_incident.json": "sha256:73f10613e68933d3f025434321afd060192e2bab680184cad2e8215ad6c9be1f",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_2_trade_leg_identity_incident.json": "sha256:eee80d7dd52b37aa115a860b62fcc1b7cabcd0dedfacb6380b5e7ff6e7003a23",
+    "docs/ops/post_training_account_audit@1.1.json": "sha256:a533e16381aaafc720f7237473932075f1e50f04f60b923e7d3f0e359777f252",
+    "docs/ops/reaka_current_k1_account_ledgers@1.0.json": "sha256:3fadcd7f701c23b6a9f3897014b3419b8b86585bf9a1c88ff1c7ab65f2740e9c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.1.json": "sha256:061140a5c7f9aa463ff31a991f487094cd15479b7d83bf2bc9a734bdf9a8fc4c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.2.json": "sha256:dbe7675fea9a6dbf7617b4055b879fc9888e4ba42f3d7f1a60bbf8434aabdb5c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.3.json": "sha256:d661a764872cb4bd9cceab52e30f1185c53d1f42a978b23c23c07026cc2e1204",
+    "docs/ops/reaka_current_k1_account_ledgers_whitepaper.md": "sha256:723bda55bdda903303b6603cb749d7a9f1b4d2a9351d2df6add975364fc13fb7",
+    "docs/user/reaka_current_k1_account_ledgers_workflow.md": "sha256:4f91c4f5b596066b770dcc31a1c0e7817c6f63451d9058aacd8ae09f43c2b9a3",
+    "scripts/factor_rotation/run_reaka_current_k1_account_ledgers_v1.py": "sha256:2e7c7702114546cd37b3fd04a47d7869527b093af7dea772a5648f2de7344d5b",
+    "scripts/factor_rotation/validate_reaka_current_k1_account_ledgers_v1.py": "sha256:6bbdaf19a7cb9ea5207d4eb36dcaad3ea2db6076b939eda576cebccaeaa35df1",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py": "sha256:03d96028d7781eaa8be1532e2b53f20186bbf27a18637e54fbbe09513ec9a77b",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py": "sha256:80850973f75d2fda015f29dfb8b3e2e1f4c709eea4766c9db4f615963f7e5f73",
+    "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py": "sha256:484752d06d3be13af184ef6fd4889a255b9c78dddb19fc427026ebe5c7e43199",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v1.py": "sha256:ae4da76b15ebdf5748091520190fbb41aabcf21a05414130fbfcc8402c7e97ea",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v2.py": "sha256:7b1189a0b1a5d4da46e3620f7fb2463f6f22e34920bb76e295c0e89e57064802",
+    "src/factor_lab/factor_rotation/reaka_current_k1_post2020_annual_four_group_blackbox_v1.py": "sha256:500bbed57eb90c5315b646d37131406e0b7b4bd7151dc42a3dbb96392e7335e3",
+    "src/factor_lab/factor_rotation/reaka_current_k1_transaction_pnl_attribution_v1.py": "sha256:35db453e7163e852b75b63f5bd89a1e91c04e808ac40c881e5a0c96b9b9e3c78",
+    "src/factor_lab/portfolio/account_research_bundle.py": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+    "tests/unit/test_reaka_current_k1_account_ledgers_v1.py": "sha256:7fb2ffd8cd1217b2ae8d4cb92f4616569126c42aeb82c6ab2b69f1d1a6c89d62"
+  },
+  "diagnostics": {
+    "account_count": 4,
+    "daily_row_count": 7438,
+    "maximum_nav_return_identity_error": 0.0
+  },
+  "downstream_model_or_score_rebuild_required": false,
+  "account_parameter_selection_performed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:b652b4c3ddeeef9c4999a5ea7d61af6082a2fe7fa1910d32f3c73fa33b2729ca"
+}

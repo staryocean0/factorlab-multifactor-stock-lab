@@ -1,0 +1,9 @@
+{
+  "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+  "gap_logical_digest_first": "db8d7822a9f0650eca47e82f2e5a897205137552ba6d7d2ee8d594ef2a39102b",
+  "gap_logical_digest_replay": "db8d7822a9f0650eca47e82f2e5a897205137552ba6d7d2ee8d594ef2a39102b",
+  "passed": true,
+  "schema_version": "datahub.stock_market_cap_monthly_pit.replay.v1",
+  "surface_logical_digest_first": "13f9c81ae4ccb069888b17b18e194510e134517eef4e7fe494d1640fc83f25f6",
+  "surface_logical_digest_replay": "13f9c81ae4ccb069888b17b18e194510e134517eef4e7fe494d1640fc83f25f6"
+}

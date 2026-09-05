@@ -1,0 +1,96 @@
+{
+  "schema_id": "factorlab.reaka_operator_identifiability@1.0",
+  "status": "passed_governance_only",
+  "responsibility_layers": {
+    "user_financial_input": [
+      "target",
+      "horizon",
+      "cadence",
+      "universe",
+      "historical_returns",
+      "features_factors_states",
+      "execution_semantics"
+    ],
+    "paper_framework": [
+      "operator_codebook",
+      "selector_on_Z_and_Hy",
+      "soft_training_argmax_inference",
+      "koopman_consistency_loss"
+    ],
+    "controller_math_contract": [
+      "bounded_operator_count_candidates",
+      "episode_support_and_DOF_gates",
+      "multi_seed_and_perturbation_gates",
+      "preregistered_stop_rule"
+    ],
+    "model_and_data_learn": [
+      "operator_matrix_values",
+      "selector_parameters",
+      "sample_operator_assignments",
+      "effective_operator_count"
+    ]
+  },
+  "semantic_invariants": {
+    "operator_matrices_are_user_features": false,
+    "operator_matrices_are_AI_handwritten": false,
+    "operator_count_is_paper_disclosed": false,
+    "operator_count_is_independent_of_user_data": false,
+    "user_selects_operator_count_numeric_value": false,
+    "controller_must_allow_bounded_N_before_model_can_test_it": true,
+    "returns_or_features_must_contain_distinguishing_information": true,
+    "market_multistate_implies_current_information_observability": false,
+    "observable_state_equals_latent_operator_state": false,
+    "failed_K2_implies_market_has_one_state": false,
+    "occupancy_balance_may_force_K2": false
+  },
+  "identifiability_requirements": [
+    "market_dynamic_difference_at_current_target_horizon",
+    "distinguishing_information_in_Hy_or_Hx",
+    "independent_episode_support",
+    "n_k_eff_per_operator_DOF",
+    "representation_preserves_difference",
+    "objective_and_optimizer_cannot_ignore_difference",
+    "matrix_difference_and_soft_support",
+    "multi_seed_time_and_input_perturbation_stability",
+    "financial_ranking_nonharm"
+  ],
+  "incremental_capacity_rule": {
+    "order": [
+      1,
+      2,
+      3
+    ],
+    "K1_is_minimum_reference": true,
+    "K2_requires_result_free_support_preflight": true,
+    "K3_requires_K2_predecessor_pass": true,
+    "jump_over_failed_capacity_allowed": false,
+    "operator_count_is_permanent_project_constant": false
+  },
+  "terminal_statuses": [
+    "operator_count_N_selected_retrospective",
+    "no_incremental_operator_identified",
+    "information_not_observed",
+    "episode_or_support_insufficient",
+    "representation_gap",
+    "objective_or_optimizer_gap"
+  ],
+  "name_disambiguation": {
+    "portfolio_top_k": "number_of_stocks_held",
+    "operator_count_N": "number_of_Koopman_matrices",
+    "operator_matrix_K_i": "learned_latent_transition_matrix"
+  },
+  "authority": {
+    "model_training_allowed": false,
+    "score_materialization_allowed": false,
+    "account_execution_allowed": false,
+    "production_authority": false
+  },
+  "source_closure": {
+    "docs/ops/reaka_operator_identifiability_whitepaper.md": "sha256:f8f10cce441fc3ad50335a9462dc4db824548731603ab40b4cb29ea28df31171",
+    "docs/user/reaka_operator_identifiability_workflow.md": "sha256:8765fc6b574e066b50f04b2c3063e1cac5112b4c73f8e68f59af983be2878d7f",
+    "src/factor_lab/factor_rotation/reaka_operator_identifiability_v1.py": "sha256:2bcb4c0a472bbe7c00c01ff671f5c9bf984498847559e4b90c2853b780faaaab",
+    "scripts/factor_rotation/build_reaka_operator_identifiability_v1.py": "sha256:f42d05c5172bd80b8541546d9bf25f225e81c22d79acd4a976347987b7a14ad5",
+    "tests/unit/test_reaka_operator_identifiability_v1.py": "sha256:93ec5690c2dcc0b19741b3de6ed44a3be43ec6950acbc9b0595d7bcef37be340"
+  },
+  "canonical_digest": "sha256:0f4e6f1faa4c62f0a229439fe75724249f6ef183a323cf3a321d1f540ba8d620"
+}

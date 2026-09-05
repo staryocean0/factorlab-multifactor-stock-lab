@@ -1,0 +1,39 @@
+{
+  "schema_id": "factorlab.multifactor_stock_lab_package_scope@1.0",
+  "package_role": "temporary_private_cloud_research_repository",
+  "objective": "continue_REAKA_multifactor_stock_selection_research_with_paper_data_infrastructure_and_historical_results",
+  "source_project": "FactorLab",
+  "independent_of": [
+    "staryocean0/factorlab-two-wave-strategy-lab",
+    "staryocean0/factorlab-overnight-open-lab"
+  ],
+  "included": [
+    "current_multifactor_contracts_and_ontology",
+    "licensed_reaka_paper_pdf_and_summary",
+    "paper_faithful_python_and_multifactor_infrastructure_closure",
+    "strategy_research_governance",
+    "cn_a_qfq_daily_bars_2007_2025",
+    "nonfinancial_165_factor_monthly_surface_2009_2025",
+    "pit_market_cap_industry_macro_cloudridge_000985",
+    "historical_stage3_stage4_k1_and_opportunity_results"
+  ],
+  "excluded": [
+    "FactorLab_git_history",
+    "credentials_and_environment_secrets",
+    "beads_interaction_history",
+    "runtime_caches",
+    "DataHub_lake_and_2TiB_raw_store",
+    "timing_layer3_two_wave_theme",
+    "overnight_open_lab",
+    "option_and_futures_execution",
+    "year_2026_market_rows",
+    "industry_constituent_audit_sidecars"
+  ],
+  "authoritative_local_registry_mutation": false,
+  "cloud_result_import_requires_local_controller_review": true,
+  "private_repository_required": true,
+  "paper_redistribution_allowed": false,
+  "stage5_execution_allowed": false,
+  "model_training_allowed": false,
+  "production_authority": false
+}

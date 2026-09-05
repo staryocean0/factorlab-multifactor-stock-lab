@@ -1,0 +1,19 @@
+{
+  "canonical_digest": "sha256:9eae06ff1f419f2a00fce9f4558454e389bdeb9dc91f759fc8179bbd14c7303e",
+  "certified_condition_series": [
+    "industrial_value_added_yoy",
+    "m2_yoy",
+    "nominal_gdp_yoy",
+    "pmi_manufacturing",
+    "pmi_new_orders_index",
+    "ppi_yoy"
+  ],
+  "join_predicate": "source_available_at < decision_as_of",
+  "raw_parent_direct_state_vote_allowed": false,
+  "raw_parent_series": [
+    "m2_balance",
+    "nominal_gdp_amount",
+    "nominal_gdp_cumulative_amount"
+  ],
+  "schema_id": "factorlab.multifactor_macro_series_catalog.v1"
+}

@@ -1,0 +1,179 @@
+{
+  "schema_id": "factorlab.post_training_account_audit@1.1",
+  "status": "project_level_reusable_account_research_infrastructure_frozen",
+  "predecessor": {
+    "path": "docs/ops/post_training_account_audit@1.0.json",
+    "canonical_digest": "sha256:b7ac658bc4989cdb8367522458cd20f7f2e952d6926e09867dcd3acf31638413",
+    "file_sha256": "sha256:ff1223c7737b8f1f552b845cb23ced05d74802a28f80242cfeaac3e8e88ac77d",
+    "rewritten": false
+  },
+  "project_level_products": [
+    "AccountSnapshot",
+    "SelectionOpportunityLedger",
+    "FactorReturnSurface",
+    "RealizedPnlLedger",
+    "DerivedReports"
+  ],
+  "stage_extensions": {
+    "A0": "materialize_immutable_model_or_score_snapshot_once",
+    "A1": "freeze_complete_account_family_and_cost_scenarios_before_results",
+    "A2": "strategy_adapter_normalizes_account_and_ledger_core_columns",
+    "A3": "validate_exact_workload_backend_and_snapshot_cache_identity",
+    "A4": "blind_prior_policy_replays_once_then_materializes_complete_AccountSnapshot",
+    "A5": "complete_family_replays_each_registered_account_once_and_reuses_score_market_inputs",
+    "A6": "seal_account_snapshot_opportunity_ledger_factor_surface_and_realized_pnl_ledger_digests",
+    "A7": "derive_all_reports_from_snapshots_and_validate_outcome_neutrally"
+  },
+  "account_snapshot": {
+    "schema_id": "factorlab.post_training_account_research_bundle@1.0",
+    "profiles": {
+      "complete_account": {
+        "required_for_A7_closeout": true,
+        "required_files": [
+          "portfolio_daily.parquet",
+          "holdings.parquet",
+          "trades.parquet",
+          "events.parquet",
+          "snapshot_manifest.json"
+        ]
+      },
+      "account_daily_only": {
+        "required_for_A7_closeout": false,
+        "allowed_uses": [
+          "aggregate_derived_reports",
+          "runtime_benchmark"
+        ],
+        "may_claim_complete_trade_ledger": false
+      }
+    },
+    "identity_columns": [
+      "account_id",
+      "variant_id",
+      "policy_id",
+      "cost_scenario_id"
+    ],
+    "cache_key_inputs": [
+      "strategy_id",
+      "model_or_score_digest",
+      "account_policy_family_digest",
+      "market_data_digest",
+      "adapter_digest",
+      "data_usage_digest",
+      "formal_or_isolated_tree",
+      "execution_semantics"
+    ],
+    "in_place_overwrite_allowed": false,
+    "nav_daily_return_identity_required": true,
+    "formal_isolated_scientific_bytes_required": true
+  },
+  "selection_opportunity_ledger": {
+    "question": "did_the_frozen_score_and_policy_select_the_best_tradable_opportunities",
+    "score_available_at_or_before_decision_required": true,
+    "selected_asset_must_be_eligible": true,
+    "hindsight_label_starts_at_or_after_decision": true,
+    "hindsight_label_runtime_authority": false,
+    "strategy_adapter_owns_horizon_tradability_and_opportunity_definition": true
+  },
+  "factor_return_surface": {
+    "identity": [
+      "variant_id",
+      "segment_id",
+      "factor_id"
+    ],
+    "policy_independent": true,
+    "fit_once_per_variant_segment": true,
+    "repeat_fit_per_year_or_account_policy_allowed": false,
+    "exposure_available_at_or_before_segment_start_required": true
+  },
+  "realized_pnl_ledger": {
+    "question": "where_did_each_account_day_stock_trade_episode_and_component_return_come_from",
+    "component_ids_are_strategy_adapter_defined": true,
+    "daily_simple_contribution_identity": "sum(simple_contribution)=account_daily_return",
+    "daily_linked_log_identity": "sum(linked_log_contribution)=log1p(account_daily_return)",
+    "transaction_cost_must_be_additive_once": true,
+    "repeating_full_day_cost_on_each_trade_leg_allowed": false
+  },
+  "derived_reports": {
+    "inputs": [
+      "verified_AccountSnapshot.portfolio_daily",
+      "verified_benchmark_return_series"
+    ],
+    "outputs": [
+      "annual_relative_performance",
+      "quarterly_relative_performance",
+      "monthly_relative_performance"
+    ],
+    "model_read_count": 0,
+    "score_generation_count": 0,
+    "market_replay_count": 0,
+    "account_replay_count": 0,
+    "new_report_column_may_invalidate_account_snapshot": false
+  },
+  "performance_gates": {
+    "cache_hit_report_p95_seconds_max": 1.0,
+    "benchmark_minimum_rounds": 10,
+    "benchmark_must_include_snapshot_load": true,
+    "benchmark_must_include_annual_quarterly_monthly_reports": true,
+    "heavy_score_matrix_rolling_regression_and_neural_inference": "GPU_first_subject_to_exact_equivalence_and_runtime_policy",
+    "stable_ranking_sequential_account_and_small_report_tail": "CPU_allowed",
+    "first_model_score_or_account_build_may_be_reused": true,
+    "first_model_score_or_account_build_may_be_repeated_for_each_report": false
+  },
+  "strategy_adapter_boundary": {
+    "adapter_owns": [
+      "model_loading",
+      "score_generation",
+      "asset_universe",
+      "execution_clock",
+      "raw_PIT_fill",
+      "corporate_action_accounting",
+      "account_policy_identity",
+      "factor_component_semantics",
+      "opportunity_horizon"
+    ],
+    "project_core_owns": [
+      "snapshot_schema",
+      "cache_identity",
+      "artifact_digests",
+      "ledger_temporal_gates",
+      "account_conservation",
+      "period_report_math",
+      "formal_isolated_replay",
+      "authority_fail_closed"
+    ]
+  },
+  "migration": {
+    "sealed_strategy_results_rewritten": false,
+    "old_strategy_specific_generators_deleted": false,
+    "old_strategy_specific_generators_role": "historical_adapter_or_evidence",
+    "next_strategy_iteration_must_use_project_bundle": true,
+    "current_REAKA_model_account_or_result_changed": false
+  },
+  "source_closure": {
+    "docs/ops/backtest_cloudridge_relative_performance@1.0.json": "sha256:0739b783e98dd15bd680cee248ce47867fc7f96411db809d61aff59f31fb1eae",
+    "docs/ops/post_training_account_audit@1.0.json": "sha256:ff1223c7737b8f1f552b845cb23ced05d74802a28f80242cfeaac3e8e88ac77d",
+    "docs/ops/post_training_account_research_bundle_whitepaper.md": "sha256:6e087f523e2c44e26fb804ddca8201bde841d24249d769a03b11b6d865da5697",
+    "docs/user/post_training_account_research_bundle_workflow.md": "sha256:cdb23a247a353385857c922a88a45dd44cabcf8c7f8def0a221991cff0a1c13a",
+    "scripts/benchmark_post_training_account_research_bundle.py": "sha256:255c0911cc780d41b0025a37909e8e5d5b8f598ada67bbcf7ad7815f231083cb",
+    "scripts/derive_post_training_account_reports.py": "sha256:d90793047c5c2c0a788cb9a7e623ce2992b4bb22145e6a4853b22785be880d75",
+    "scripts/materialize_post_training_account_snapshot.py": "sha256:97a64a8f0b08ef9771d608306789fb569c8f42d789516ecd4d35bee59e96d1e5",
+    "scripts/validate_post_training_account_research_bundle.py": "sha256:c3d07df875898583af8770e599e694668bdb754f4a86221bd27e45287fca1985",
+    "src/factor_lab/portfolio/account_research_bundle.py": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+    "src/factor_lab/portfolio/post_training_account_audit.py": "sha256:53007de5fb1967e5026d29f5006fefc07fc976f23ff61aba3d1b134afdeefcb8",
+    "src/factor_lab/portfolio/relative_performance.py": "sha256:1b53dfb9ca96bda634eb5eac485c976d7032ea9c0a880cbd0b96b057dec2f166",
+    "tests/unit/test_account_research_bundle.py": "sha256:9a2a80fa814b8a20b5592b6bfec09bbce9e813765181095ad28b5efbf28df686",
+    "tests/unit/test_relative_performance.py": "sha256:26fbd30e4b8050e949b57f8d3d15d34280d76cd81cf54c34dbbd2303200e6152",
+    "tests/unit/test_strategy_progressive_development.py": "sha256:012a1138235fa53e6a388d22070fe3a9dfc32a9ef2b25064f9e5368da4cc24bd"
+  },
+  "authority": {
+    "model_or_score_mutation": false,
+    "account_parameter_selection": false,
+    "factor_admission": false,
+    "strategy_mutation": false,
+    "pointer_change": false,
+    "production_authority": false
+  },
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:60b7e06d67fe5e93660ded02672e6d2e10c9cd3628dd77e7195faacb7e5b27ce"
+}

@@ -1,0 +1,141 @@
+{
+  "artifacts": {
+    "L1_dir_signal_2009_2025.parquet": {
+      "path": "L1_dir_signal_2009_2025.parquet",
+      "sha256": "59089e59577e2c1b9fb8db0124da1c5ea378b57c23f803de53ba20625fbd3137"
+    },
+    "L1_equal_weight_2009_2025.parquet": {
+      "path": "L1_equal_weight_2009_2025.parquet",
+      "sha256": "9dc3176ea8c192214e3bb4eeca7f0ccf07bc2c94653a8af562b66009c674b099"
+    },
+    "L1_market_cap_2009_2025.parquet": {
+      "path": "L1_market_cap_2009_2025.parquet",
+      "sha256": "1a9d1bbc75975a4e91e61033d32eb58335011766110b1b866095b94605834ead"
+    },
+    "L1_vol_signal_2009_2025.parquet": {
+      "path": "L1_vol_signal_2009_2025.parquet",
+      "sha256": "cc5d29be6f30c5b7e1f8ae11753cfba200995f38a131e99911b6f1790195fd9f"
+    },
+    "attribution_report.json": {
+      "path": "attribution_report.json",
+      "sha256": "99a9e629acccfd35cba77fe6f5b174121cf7d181e8d9224028294423c0439ded"
+    },
+    "attribution_sidecar.parquet": {
+      "path": "attribution_sidecar.parquet",
+      "sha256": "d8fc6efa2861d0c40c59f93136d196d4fdf8d9c51bd8ffe5891ed580d4fbee66"
+    },
+    "certification_report.json": {
+      "path": "certification_report.json",
+      "sha256": "6e814e76a6d6224f254a26bb79331d1d2c57eb658d3c8231909a461f9d4bd774"
+    },
+    "constituent_audit_sidecar.parquet": {
+      "path": "constituent_audit_sidecar.parquet",
+      "sha256": "a7878231344f828eb05b7b37de572f72a1fc92151207fe9f925c8d434718e3dd"
+    },
+    "consumer_contract.json": {
+      "path": "consumer_contract.json",
+      "sha256": "4768807bd62a8a446ea945bab1ee49858846d765f42e370782980416fb479937"
+    },
+    "coordinate_sidecar.parquet": {
+      "path": "coordinate_sidecar.parquet",
+      "sha256": "b77dcbd45fe05c3969f4bb7e3c565211f7f76dfc48539b3ab3c5eb5d1d1fb4f8"
+    },
+    "coverage_report.json": {
+      "path": "coverage_report.json",
+      "sha256": "698c885005663d75f31d92268aca631def5531b9d818fd100421d18b3835bcbb"
+    },
+    "gap_ledger.json": {
+      "path": "gap_ledger.json",
+      "sha256": "a32709a13c714645564ecf5b1acd5248e053628421631c3b50874108ed88f7d3"
+    },
+    "lineage_receipt.json": {
+      "path": "lineage_receipt.json",
+      "sha256": "db750a8998d52a13ad3755ed199a28a0cd28461a1fbaa3c5f0d455796d93ea91"
+    },
+    "observations.parquet": {
+      "path": "observations.parquet",
+      "sha256": "e2fa059b5843879180238c2d1a8e6df094e8b56125e99a8cd8b1a2ee0164322b"
+    },
+    "prefix_invariance_report.json": {
+      "path": "prefix_invariance_report.json",
+      "sha256": "20ddc671e26dd10e995d400b4866909bc0625845fcb867a148dfb893eea20aa7"
+    },
+    "replay_validation_report.json": {
+      "path": "replay_validation_report.json",
+      "sha256": "f52d2d5a20b2d72d06ed8ceb9c6a50bca96c2fe3cad63929d4c43d9527dabfe9"
+    },
+    "signal_observations.parquet": {
+      "path": "signal_observations.parquet",
+      "sha256": "8b4c747fc70fcfc77d26b675ed03ce9421b34e456e9dc84b1a04d4dd81456e4a"
+    },
+    "signal_summary.json": {
+      "path": "signal_summary.json",
+      "sha256": "6462d524982e20ecdd86c70064614db56fe016d1757e8abe16ef70e54eba5832"
+    }
+  },
+  "availability_mode": "consumed_history",
+  "canonical_digest": "4d6c632b1ce69f41d61a058c3b2e33beeb2d9690771f53166ff83a00c336a8a8",
+  "dataset_kind": "industry_index_common_history",
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l1",
+  "fresh_oos": false,
+  "immutable": true,
+  "industry_bucket_count": 18,
+  "latest_alias_allowed": false,
+  "level": 1,
+  "parents": {
+    "adjustment_factors": {
+      "dataset_version": "adjust_factors_cn_a_xdxr_v9_20260814",
+      "pit_mode": "consumed_history_return_measurement_only",
+      "sha256": "2fc1faeaff735b0251b8542e0d4ec3690a023469de044fadfc6fa246f7e53ee0"
+    },
+    "checks": {
+      "adjustment_hash": true,
+      "adjustment_version": true,
+      "consumed_version": true,
+      "market_cap_204_months": true,
+      "market_cap_hash": true,
+      "schedule_certified": true,
+      "schedule_hash": true,
+      "schedule_version": true,
+      "taxonomy_hash": true,
+      "taxonomy_static_not_pit": true,
+      "taxonomy_version": true
+    },
+    "consumed_history_bars_2008_2012_and_2021_2025": {
+      "dataset_version": "bars_cn_a_1d_raw_canonical_may18_merged_20260519",
+      "pit_mode": "consumed_history_not_historical_receipt_pit",
+      "sha256": "620c5bd5ba8c3d7089f9f3ee474a1a88dea2ec7720721e1112fe734564662bda"
+    },
+    "monthly_market_cap": {
+      "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+      "sha256": "2dbfd339ff65396ca14519ec3a5e1003b5073449334ea9e3d59b86e723d38e29"
+    },
+    "schedule_bound_bars_2013_2020": {
+      "dataset_version": "cn_a_stock_daily_bars_schedule_bound_history_2013_2020_v1_20260719",
+      "pit_mode": "PIT_SAFE_SCHEDULE_BOUND_HISTORY",
+      "sha256": "6b34c370689711634182401bcae6606a4ab204bca488a084f806ec4c3ebb1fc5"
+    },
+    "taxonomy": {
+      "available_at": "2026-08-12T07:00:00Z",
+      "dataset_version": "issuer_custom_industry_index_input.v1-market-wide-20260812-r1",
+      "historical_pit_authorized": false,
+      "sha256": "ae20aed3b398020175c387b2c0530acb27f526e9fd3af203554b578fb133336e",
+      "temporal_mode": "static_2026_snapshot"
+    }
+  },
+  "period": {
+    "end": "2025-12-31",
+    "start": "2009-01-01"
+  },
+  "production_authority": false,
+  "record_count": 294144,
+  "research_status": "diagnostic_only",
+  "schema_version": "industry_index_common_history.v1",
+  "scientific_claim_increment": 0,
+  "scoring_allowed": false,
+  "single_stock_authorized": false,
+  "state": "READY",
+  "strategy_effectiveness_claim": false,
+  "strategy_runtime_changed": false,
+  "training_allowed": false
+}

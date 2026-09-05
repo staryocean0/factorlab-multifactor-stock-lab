@@ -1,0 +1,29 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_pre_acceptance_packaging_incident@1.0",
+  "status": "closed_by_packaging_only_contract_v1_5",
+  "failed_contract_digest": "sha256:55f859f16ddabff4192b260d0c8445d061f48ad3c33aa87439fbf7c34b10f9db",
+  "failed_validation_report_digest": "sha256:9bf2d68e8b970f3a5a7aa54a8bb9d768297e38e6296c4ccd77ec2546725bb079",
+  "failed_controller_acceptance_digest": "sha256:da48ee0564e282d0948f1bd7c207f3736c9d7250405bc8dca65f358a00a4f758",
+  "scientific_data_file_pair_count": 10,
+  "scientific_data_files_byte_identical": true,
+  "scientific_data_tree_digest": "sha256:7c260339176e4aa20b3c98d0d9719246b9fc5fb77f5bdba853d527e082a9b625",
+  "blockers": [
+    "validator_contract_path_still_pointed_to_v1_0",
+    "result_json_embedded_tree_specific_snapshot_manifest_digest",
+    "result_json_embedded_nondeterministic_elapsed_seconds_inside_factor_fit_diagnostics"
+  ],
+  "formal_result_archive": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_4_packaging/formal_result.json",
+  "formal_result_sha256": "sha256:7d435a5d153598f492e7678c44e48a21205327cfee561042b7ec5432e943d698",
+  "formal_execution_receipt_archive": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_4_packaging/formal_execution_receipt.json",
+  "formal_execution_receipt_sha256": "sha256:a8b3955bcffef45bf7fbb070481c63948414ff178400cc469e5314eb3b5e6ec9",
+  "isolated_result_archive": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_4_packaging/isolated_result.json",
+  "isolated_result_sha256": "sha256:a4e5f258d007044964c21b7502974dac084451666e5ca4132ac0146971ea0608",
+  "isolated_execution_receipt_archive": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_4_packaging/isolated_execution_receipt.json",
+  "isolated_execution_receipt_sha256": "sha256:9dcbfa545cf8875fa7b38ad18019894acf894f9a1d3bf369e9135c0d56a50ddd",
+  "authorized_repair": "rewrite_only_result_json_and_execution_receipt_under_v1_5;preserve_all_ten_scientific_data_files_and_both_tree_specific_snapshot_manifests_byte_for_byte",
+  "model_score_market_account_factor_fit_opportunity_or_pnl_recomputation_allowed": false,
+  "strategy_or_parameter_change": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:55027bd474a99e3884ac64f6dd333598566ff4815d6d43918067db53f380651b"
+}

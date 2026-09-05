@@ -1,0 +1,23 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_pre_acceptance_pnl_segmentation_incident@1.0",
+  "status": "closed_by_result_free_contract_v1_4",
+  "failed_contract_digest": "sha256:f8fd18330544e1deb7e6fe35a1ba67e125a4dbb0e0370797ec225c4c3a5f83a7",
+  "failed_phase": "formal_sealed_annual_four_group_replay_before_result_or_execution_receipt",
+  "observed_checks": {
+    "account_to_pnl_annual_log_max_abs_error": 7.882583474838611e-15,
+    "historical_four_group_max_abs_error": 2.0933849055881915e-05,
+    "post2020_four_group_max_abs_error": 1.3747639646288778e-05
+  },
+  "root_cause": "the_cost_ledger_correctly_used_only_authoritative_frozen_turnover_legs_but_the_PnL_segment_router_also_used_that_set;the_accepted_attribution_splits_any_stock_whose_actual_pre_and_post_execution_share_quantity_changes_even_when_that_change_is_not_a_costed_turnover_leg",
+  "correction": "keep_costed_trade_identity_equal_to_frozen_buy_sell_legs_but_define_PnL_reallocated_symbols_as_the_union_of_costed_trade_symbols_and_actual_share_quantity_changes",
+  "invalid_partial_output_path": "output/factor-rotation/reaka_current_k1_account_ledgers_v1_2011_2026/invalid_pre_result_v1_3_formal",
+  "invalid_partial_output_tree_digest": "sha256:8e8a7a4f19c43f7aa7494eba391f078b3b3ac4c2ac0ef058b9e4aba487f50052",
+  "invalid_partial_output_authority": false,
+  "result_json_written": false,
+  "execution_receipt_written": false,
+  "account_return_or_cost_changed": false,
+  "model_score_policy_clock_or_parameter_changed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:edfb9d16d8a83a1253e44f918e5991b26894ad5b05061b4bed5e6352cace8e17"
+}

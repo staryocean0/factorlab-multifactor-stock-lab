@@ -1,0 +1,1424 @@
+{
+  "schema_id": "factorlab.reaka_k1_only_factor_kline_selector_cells@1.0",
+  "selection_year_min": 2011,
+  "selection_year_max": 2016,
+  "next_bar_continuation_allowed": false,
+  "weight_overlay_applied": false,
+  "development_cells": [
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "trend",
+      "condition": "up",
+      "condition_label": "上涨",
+      "data_role": "development_selection",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 8,
+          "n_out": 60,
+          "mean_in": 0.157380442639,
+          "mean_out": -0.003868756503,
+          "lift": 0.161249199142,
+          "p_positive_in": 1.0,
+          "p_positive_out": 0.5,
+          "upweight_years": 4,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 8,
+          "n_out": 60,
+          "mean_in": 0.160907902605,
+          "mean_out": -0.003617254808,
+          "lift": 0.164525157413,
+          "p_positive_in": 1.0,
+          "p_positive_out": 0.5,
+          "upweight_years": 4,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "trend",
+      "condition": "sideways",
+      "condition_label": "横盘",
+      "data_role": "development_selection",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 50,
+          "n_out": 18,
+          "mean_in": 0.00973832341,
+          "mean_out": 0.030000110025,
+          "lift": -0.020261786615,
+          "p_positive_in": 0.58,
+          "p_positive_out": 0.5,
+          "upweight_years": 3,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 50,
+          "n_out": 18,
+          "mean_in": 0.011218378291,
+          "mean_out": 0.028294945435,
+          "lift": -0.017076567144,
+          "p_positive_in": 0.58,
+          "p_positive_out": 0.5,
+          "upweight_years": 3,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "trend",
+      "condition": "down",
+      "condition_label": "下跌",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 10,
+          "n_out": 58,
+          "mean_in": -0.071904156066,
+          "mean_out": 0.030102753648,
+          "lift": -0.102006909714,
+          "p_positive_in": 0.1,
+          "p_positive_out": 0.637931034483,
+          "upweight_years": 1,
+          "downweight_years": 4,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 10,
+          "n_out": 58,
+          "mean_in": -0.077795420301,
+          "mean_out": 0.031865209231,
+          "lift": -0.109660629532,
+          "p_positive_in": 0.1,
+          "p_positive_out": 0.637931034483,
+          "upweight_years": 0,
+          "downweight_years": 5,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "channel",
+      "condition": "lower",
+      "condition_label": "通道下轨",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.009342860679,
+          "mean_out": 0.031199399738,
+          "lift": -0.040542260417,
+          "p_positive_in": 0.444444444444,
+          "p_positive_out": 0.634146341463,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.00796546276,
+          "mean_out": 0.031348668949,
+          "lift": -0.039314131709,
+          "p_positive_in": 0.444444444444,
+          "p_positive_out": 0.634146341463,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "channel",
+      "condition": "middle",
+      "condition_label": "通道中轨",
+      "data_role": "development_selection",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 14,
+          "n_out": 54,
+          "mean_in": 0.023774804777,
+          "mean_out": 0.01285316452,
+          "lift": 0.010921640257,
+          "p_positive_in": 0.642857142857,
+          "p_positive_out": 0.537037037037,
+          "upweight_years": 3,
+          "downweight_years": 1,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 14,
+          "n_out": 54,
+          "mean_in": 0.025667089993,
+          "mean_out": 0.013164605046,
+          "lift": 0.012502484947,
+          "p_positive_in": 0.642857142857,
+          "p_positive_out": 0.537037037037,
+          "upweight_years": 3,
+          "downweight_years": 1,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "channel",
+      "condition": "upper",
+      "condition_label": "通道上轨",
+      "data_role": "development_selection",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": 0.035049189718,
+          "mean_out": 0.001965610453,
+          "lift": 0.033083579265,
+          "p_positive_in": 0.62962962963,
+          "p_positive_out": 0.512195121951,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": 0.034294672852,
+          "mean_out": 0.003518823546,
+          "lift": 0.030775849306,
+          "p_positive_in": 0.62962962963,
+          "p_positive_out": 0.512195121951,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "trend",
+      "condition": "up",
+      "condition_label": "上涨",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 8,
+          "n_out": 60,
+          "mean_in": -0.010406000665,
+          "mean_out": -0.004937236277,
+          "lift": -0.005468764387,
+          "p_positive_in": 0.125,
+          "p_positive_out": 0.45,
+          "upweight_years": 1,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 8,
+          "n_out": 60,
+          "mean_in": -0.010696462651,
+          "mean_out": -0.004596211101,
+          "lift": -0.00610025155,
+          "p_positive_in": 0.125,
+          "p_positive_out": 0.45,
+          "upweight_years": 1,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "trend",
+      "condition": "sideways",
+      "condition_label": "横盘",
+      "data_role": "development_selection",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 50,
+          "n_out": 18,
+          "mean_in": -0.000747400439,
+          "mean_out": -0.019006231111,
+          "lift": 0.018258830672,
+          "p_positive_in": 0.5,
+          "p_positive_out": 0.166666666667,
+          "upweight_years": 6,
+          "downweight_years": 0,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 50,
+          "n_out": 18,
+          "mean_in": -0.000959953874,
+          "mean_out": -0.017408148531,
+          "lift": 0.016448194657,
+          "p_positive_in": 0.5,
+          "p_positive_out": 0.166666666667,
+          "upweight_years": 6,
+          "downweight_years": 0,
+          "upweight_passed": false,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "trend",
+      "condition": "down",
+      "condition_label": "下跌",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 10,
+          "n_out": 58,
+          "mean_in": -0.025886415468,
+          "mean_out": -0.00207962116,
+          "lift": -0.023806794308,
+          "p_positive_in": 0.2,
+          "p_positive_out": 0.448275862069,
+          "upweight_years": 1,
+          "downweight_years": 4,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 10,
+          "n_out": 58,
+          "mean_in": -0.022777497235,
+          "mean_out": -0.002302920602,
+          "lift": -0.020474576633,
+          "p_positive_in": 0.2,
+          "p_positive_out": 0.448275862069,
+          "upweight_years": 1,
+          "downweight_years": 4,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "channel",
+      "condition": "lower",
+      "condition_label": "通道下轨",
+      "data_role": "development_selection",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.004853896309,
+          "mean_out": -0.006059194673,
+          "lift": 0.001205298364,
+          "p_positive_in": 0.37037037037,
+          "p_positive_out": 0.439024390244,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.005332223718,
+          "mean_out": -0.005301812851,
+          "lift": -3.0410867e-05,
+          "p_positive_in": 0.333333333333,
+          "p_positive_out": 0.463414634146,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "channel",
+      "condition": "middle",
+      "condition_label": "通道中轨",
+      "data_role": "development_selection",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 14,
+          "n_out": 54,
+          "mean_in": -0.003159768806,
+          "mean_out": -0.006208248494,
+          "lift": 0.003048479687,
+          "p_positive_in": 0.571428571429,
+          "p_positive_out": 0.37037037037,
+          "upweight_years": 3,
+          "downweight_years": 1,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 14,
+          "n_out": 54,
+          "mean_in": -0.002121683337,
+          "mean_out": -0.006141496306,
+          "lift": 0.004019812969,
+          "p_positive_in": 0.571428571429,
+          "p_positive_out": 0.37037037037,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "channel",
+      "condition": "upper",
+      "condition_label": "通道上轨",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.007562600679,
+          "mean_out": -0.004275413747,
+          "lift": -0.003287186931,
+          "p_positive_in": 0.37037037037,
+          "p_positive_out": 0.439024390244,
+          "upweight_years": 1,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.006950768894,
+          "mean_out": -0.004235941637,
+          "lift": -0.002714827258,
+          "p_positive_in": 0.407407407407,
+          "p_positive_out": 0.414634146341,
+          "upweight_years": 1,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "trend",
+      "condition": "up",
+      "condition_label": "上涨",
+      "data_role": "development_selection",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 8,
+          "n_out": 60,
+          "mean_in": 0.007744560725,
+          "mean_out": -0.0019888783,
+          "lift": 0.009733439025,
+          "p_positive_in": 0.75,
+          "p_positive_out": 0.483333333333,
+          "upweight_years": 4,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 8,
+          "n_out": 60,
+          "mean_in": 0.005846796799,
+          "mean_out": -0.001394787824,
+          "lift": 0.007241584623,
+          "p_positive_in": 0.625,
+          "p_positive_out": 0.516666666667,
+          "upweight_years": 4,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "trend",
+      "condition": "sideways",
+      "condition_label": "横盘",
+      "data_role": "development_selection",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 50,
+          "n_out": 18,
+          "mean_in": 0.000867983884,
+          "mean_out": -0.005598633689,
+          "lift": 0.006466617573,
+          "p_positive_in": 0.52,
+          "p_positive_out": 0.5,
+          "upweight_years": 4,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 50,
+          "n_out": 18,
+          "mean_in": 0.001302678199,
+          "mean_out": -0.005669266945,
+          "lift": 0.006971945144,
+          "p_positive_in": 0.54,
+          "p_positive_out": 0.5,
+          "upweight_years": 4,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "trend",
+      "condition": "down",
+      "condition_label": "下跌",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 10,
+          "n_out": 58,
+          "mean_in": -0.01627318922,
+          "mean_out": 0.001816477241,
+          "lift": -0.018089666461,
+          "p_positive_in": 0.3,
+          "p_positive_out": 0.551724137931,
+          "upweight_years": 0,
+          "downweight_years": 5,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 10,
+          "n_out": 58,
+          "mean_in": -0.01488211794,
+          "mean_out": 0.001929453178,
+          "lift": -0.016811571118,
+          "p_positive_in": 0.4,
+          "p_positive_out": 0.551724137931,
+          "upweight_years": 0,
+          "downweight_years": 5,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "channel",
+      "condition": "lower",
+      "condition_label": "通道下轨",
+      "data_role": "development_selection",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": 0.002946257756,
+          "mean_out": -0.003339638332,
+          "lift": 0.006285896089,
+          "p_positive_in": 0.592592592593,
+          "p_positive_out": 0.463414634146,
+          "upweight_years": 4,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": 0.003679576092,
+          "mean_out": -0.003323449989,
+          "lift": 0.00700302608,
+          "p_positive_in": 0.592592592593,
+          "p_positive_out": 0.487804878049,
+          "upweight_years": 4,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "channel",
+      "condition": "middle",
+      "condition_label": "通道中轨",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 14,
+          "n_out": 54,
+          "mean_in": -0.004002212618,
+          "mean_out": -2.491177e-05,
+          "lift": -0.003977300849,
+          "p_positive_in": 0.357142857143,
+          "p_positive_out": 0.555555555556,
+          "upweight_years": 1,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 14,
+          "n_out": 54,
+          "mean_in": -0.00364514963,
+          "mean_out": 0.000261466662,
+          "lift": -0.003906616292,
+          "p_positive_in": 0.428571428571,
+          "p_positive_out": 0.555555555556,
+          "upweight_years": 1,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "channel",
+      "condition": "upper",
+      "condition_label": "通道上轨",
+      "data_role": "development_selection",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.002996081295,
+          "mean_out": 0.000573609336,
+          "lift": -0.003569690631,
+          "p_positive_in": 0.518518518519,
+          "p_positive_out": 0.512195121951,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 27,
+          "n_out": 41,
+          "mean_in": -0.003156642767,
+          "mean_out": 0.001178450236,
+          "lift": -0.004335093003,
+          "p_positive_in": 0.518518518519,
+          "p_positive_out": 0.536585365854,
+          "upweight_years": 2,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    }
+  ],
+  "blackbox_cells": [
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "trend",
+      "condition": "up",
+      "condition_label": "上涨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 7,
+          "n_out": 91,
+          "mean_in": 0.098095454005,
+          "mean_out": -0.005188519126,
+          "lift": 0.103283973131,
+          "p_positive_in": 1.0,
+          "p_positive_out": 0.461538461538,
+          "upweight_years": 6,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 7,
+          "n_out": 91,
+          "mean_in": 0.100957222806,
+          "mean_out": -0.004434999547,
+          "lift": 0.105392222353,
+          "p_positive_in": 1.0,
+          "p_positive_out": 0.461538461538,
+          "upweight_years": 6,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "trend",
+      "condition": "sideways",
+      "condition_label": "横盘",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 85,
+          "n_out": 13,
+          "mean_in": 0.000481745775,
+          "mean_out": 0.013351118978,
+          "lift": -0.012869373203,
+          "p_positive_in": 0.494117647059,
+          "p_positive_out": 0.538461538462,
+          "upweight_years": 3,
+          "downweight_years": 4,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 85,
+          "n_out": 13,
+          "mean_in": 0.001220813388,
+          "mean_out": 0.015334343303,
+          "lift": -0.014113529916,
+          "p_positive_in": 0.494117647059,
+          "p_positive_out": 0.538461538462,
+          "upweight_years": 3,
+          "downweight_years": 4,
+          "upweight_passed": false,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "trend",
+      "condition": "down",
+      "condition_label": "下跌",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 6,
+          "n_out": 92,
+          "mean_in": -0.085517271888,
+          "mean_out": 0.007908875749,
+          "lift": -0.093426147636,
+          "p_positive_in": 0.0,
+          "p_positive_out": 0.532608695652,
+          "upweight_years": 0,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 6,
+          "n_out": 92,
+          "mean_in": -0.084559016116,
+          "mean_out": 0.008809453235,
+          "lift": -0.093368469351,
+          "p_positive_in": 0.0,
+          "p_positive_out": 0.532608695652,
+          "upweight_years": 0,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "channel",
+      "condition": "lower",
+      "condition_label": "通道下轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 22,
+          "n_out": 76,
+          "mean_in": 0.006537934008,
+          "mean_out": 0.000929978807,
+          "lift": 0.005607955201,
+          "p_positive_in": 0.409090909091,
+          "p_positive_out": 0.526315789474,
+          "upweight_years": 3,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 22,
+          "n_out": 76,
+          "mean_in": 0.007144673108,
+          "mean_out": 0.001920168322,
+          "lift": 0.005224504786,
+          "p_positive_in": 0.409090909091,
+          "p_positive_out": 0.526315789474,
+          "upweight_years": 3,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "channel",
+      "condition": "middle",
+      "condition_label": "通道中轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 28,
+          "n_out": 70,
+          "mean_in": -0.001483999441,
+          "mean_out": 0.003658070313,
+          "lift": -0.005142069754,
+          "p_positive_in": 0.5,
+          "p_positive_out": 0.5,
+          "upweight_years": 3,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 28,
+          "n_out": 70,
+          "mean_in": -0.001479966988,
+          "mean_out": 0.004922209665,
+          "lift": -0.006402176654,
+          "p_positive_in": 0.5,
+          "p_positive_out": 0.5,
+          "upweight_years": 3,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "condition_family": "channel",
+      "condition": "upper",
+      "condition_label": "通道上轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 48,
+          "n_out": 50,
+          "mean_in": 0.002338132786,
+          "mean_out": 0.002045651277,
+          "lift": 0.000292481509,
+          "p_positive_in": 0.541666666667,
+          "p_positive_out": 0.46,
+          "upweight_years": 2,
+          "downweight_years": 4,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 48,
+          "n_out": 50,
+          "mean_in": 0.003903580587,
+          "mean_out": 0.002314874654,
+          "lift": 0.001588705933,
+          "p_positive_in": 0.541666666667,
+          "p_positive_out": 0.46,
+          "upweight_years": 2,
+          "downweight_years": 4,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "trend",
+      "condition": "up",
+      "condition_label": "上涨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 7,
+          "n_out": 91,
+          "mean_in": 0.012614135933,
+          "mean_out": 0.00094879875,
+          "lift": 0.011665337183,
+          "p_positive_in": 0.857142857143,
+          "p_positive_out": 0.527472527473,
+          "upweight_years": 5,
+          "downweight_years": 1,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 7,
+          "n_out": 91,
+          "mean_in": 0.010602776143,
+          "mean_out": 0.000937246357,
+          "lift": 0.009665529786,
+          "p_positive_in": 0.857142857143,
+          "p_positive_out": 0.571428571429,
+          "upweight_years": 5,
+          "downweight_years": 1,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "trend",
+      "condition": "sideways",
+      "condition_label": "横盘",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 85,
+          "n_out": 13,
+          "mean_in": 0.000701666746,
+          "mean_out": 0.00884599726,
+          "lift": -0.008144330513,
+          "p_positive_in": 0.517647058824,
+          "p_positive_out": 0.769230769231,
+          "upweight_years": 1,
+          "downweight_years": 6,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 85,
+          "n_out": 13,
+          "mean_in": 0.000676546504,
+          "mean_out": 0.007846338357,
+          "lift": -0.007169791853,
+          "p_positive_in": 0.564705882353,
+          "p_positive_out": 0.769230769231,
+          "upweight_years": 1,
+          "downweight_years": 6,
+          "upweight_passed": false,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "trend",
+      "condition": "down",
+      "condition_label": "下跌",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 6,
+          "n_out": 92,
+          "mean_in": 0.004449835474,
+          "mean_out": 0.001608050272,
+          "lift": 0.002841785202,
+          "p_positive_in": 0.666666666667,
+          "p_positive_out": 0.54347826087,
+          "upweight_years": 2,
+          "downweight_years": 1,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 6,
+          "n_out": 92,
+          "mean_in": 0.004630494274,
+          "mean_out": 0.001431803107,
+          "lift": 0.003198691167,
+          "p_positive_in": 0.666666666667,
+          "p_positive_out": 0.586956521739,
+          "upweight_years": 3,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "channel",
+      "condition": "lower",
+      "condition_label": "通道下轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 22,
+          "n_out": 76,
+          "mean_in": 0.003264258763,
+          "mean_out": 0.001352972961,
+          "lift": 0.001911285802,
+          "p_positive_in": 0.590909090909,
+          "p_positive_out": 0.539473684211,
+          "upweight_years": 3,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 22,
+          "n_out": 76,
+          "mean_in": 0.001933640331,
+          "mean_out": 0.001539062687,
+          "lift": 0.000394577644,
+          "p_positive_in": 0.545454545455,
+          "p_positive_out": 0.605263157895,
+          "upweight_years": 3,
+          "downweight_years": 0,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "channel",
+      "condition": "middle",
+      "condition_label": "通道中轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 28,
+          "n_out": 70,
+          "mean_in": 0.003564754358,
+          "mean_out": 0.001068950226,
+          "lift": 0.002495804133,
+          "p_positive_in": 0.678571428571,
+          "p_positive_out": 0.5,
+          "upweight_years": 4,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 28,
+          "n_out": 70,
+          "mean_in": 0.004654034536,
+          "mean_out": 0.000417084064,
+          "lift": 0.004236950472,
+          "p_positive_in": 0.785714285714,
+          "p_positive_out": 0.514285714286,
+          "upweight_years": 5,
+          "downweight_years": 1,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "condition_family": "channel",
+      "condition": "upper",
+      "condition_label": "通道上轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 48,
+          "n_out": 50,
+          "mean_in": 6.2767146e-05,
+          "mean_out": 0.003432536296,
+          "lift": -0.003369769151,
+          "p_positive_in": 0.458333333333,
+          "p_positive_out": 0.64,
+          "upweight_years": 1,
+          "downweight_years": 5,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 48,
+          "n_out": 50,
+          "mean_in": -0.000278004225,
+          "mean_out": 0.003457061086,
+          "lift": -0.003735065311,
+          "p_positive_in": 0.5,
+          "p_positive_out": 0.68,
+          "upweight_years": 0,
+          "downweight_years": 6,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "trend",
+      "condition": "up",
+      "condition_label": "上涨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 7,
+          "n_out": 91,
+          "mean_in": 0.002040672013,
+          "mean_out": -0.000555776212,
+          "lift": 0.002596448225,
+          "p_positive_in": 0.714285714286,
+          "p_positive_out": 0.461538461538,
+          "upweight_years": 4,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 7,
+          "n_out": 91,
+          "mean_in": 0.001008943208,
+          "mean_out": -0.00148008251,
+          "lift": 0.002489025718,
+          "p_positive_in": 0.428571428571,
+          "p_positive_out": 0.450549450549,
+          "upweight_years": 3,
+          "downweight_years": 3,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "trend",
+      "condition": "sideways",
+      "condition_label": "横盘",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 85,
+          "n_out": 13,
+          "mean_in": -0.000100703458,
+          "mean_out": -0.002133164407,
+          "lift": 0.00203246095,
+          "p_positive_in": 0.482352941176,
+          "p_positive_out": 0.461538461538,
+          "upweight_years": 5,
+          "downweight_years": 2,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 85,
+          "n_out": 13,
+          "mean_in": -0.000970713462,
+          "mean_out": -0.00347032782,
+          "lift": 0.002499614358,
+          "p_positive_in": 0.458823529412,
+          "p_positive_out": 0.384615384615,
+          "upweight_years": 6,
+          "downweight_years": 1,
+          "upweight_passed": false,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "trend",
+      "condition": "down",
+      "condition_label": "下跌",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 6,
+          "n_out": 92,
+          "mean_in": -0.007002640231,
+          "mean_out": 6.2227284e-05,
+          "lift": -0.007064867515,
+          "p_positive_in": 0.166666666667,
+          "p_positive_out": 0.5,
+          "upweight_years": 0,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 6,
+          "n_out": 92,
+          "mean_in": -0.00869614402,
+          "mean_out": -0.000820087411,
+          "lift": -0.007876056608,
+          "p_positive_in": 0.333333333333,
+          "p_positive_out": 0.45652173913,
+          "upweight_years": 0,
+          "downweight_years": 3,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "channel",
+      "condition": "lower",
+      "condition_label": "通道下轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "no_selector",
+      "clocks": {
+        "14:30": {
+          "n_in": 22,
+          "n_out": 76,
+          "mean_in": -0.000268350867,
+          "mean_out": -0.000399831739,
+          "lift": 0.000131480872,
+          "p_positive_in": 0.454545454545,
+          "p_positive_out": 0.486842105263,
+          "upweight_years": 3,
+          "downweight_years": 0,
+          "upweight_passed": false,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 22,
+          "n_out": 76,
+          "mean_in": -0.000333138638,
+          "mean_out": -0.001582840209,
+          "lift": 0.001249701571,
+          "p_positive_in": 0.409090909091,
+          "p_positive_out": 0.460526315789,
+          "upweight_years": 3,
+          "downweight_years": 0,
+          "upweight_passed": false,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "channel",
+      "condition": "middle",
+      "condition_label": "通道中轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "upweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 28,
+          "n_out": 70,
+          "mean_in": 0.001800215131,
+          "mean_out": -0.001238527927,
+          "lift": 0.003038743058,
+          "p_positive_in": 0.535714285714,
+          "p_positive_out": 0.457142857143,
+          "upweight_years": 4,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        },
+        "14:45": {
+          "n_in": 28,
+          "n_out": 70,
+          "mean_in": 0.000432809262,
+          "mean_out": -0.001996336647,
+          "lift": 0.002429145908,
+          "p_positive_in": 0.607142857143,
+          "p_positive_out": 0.385714285714,
+          "upweight_years": 4,
+          "downweight_years": 2,
+          "upweight_passed": true,
+          "downweight_passed": false
+        }
+      }
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "condition_family": "channel",
+      "condition": "upper",
+      "condition_label": "通道上轨",
+      "data_role": "consumed_blackbox_diagnostic",
+      "verdict": "downweight_candidate",
+      "clocks": {
+        "14:30": {
+          "n_in": 48,
+          "n_out": 50,
+          "mean_in": -0.001683192413,
+          "mean_out": 0.000890046092,
+          "lift": -0.002573238505,
+          "p_positive_in": 0.458333333333,
+          "p_positive_out": 0.5,
+          "upweight_years": 1,
+          "downweight_years": 5,
+          "upweight_passed": false,
+          "downweight_passed": true
+        },
+        "14:45": {
+          "n_in": 48,
+          "n_out": 50,
+          "mean_in": -0.002758635734,
+          "mean_out": 9.5792186e-05,
+          "lift": -0.00285442792,
+          "p_positive_in": 0.375,
+          "p_positive_out": 0.52,
+          "upweight_years": 1,
+          "downweight_years": 5,
+          "upweight_passed": false,
+          "downweight_passed": true
+        }
+      }
+    }
+  ],
+  "upweight_candidates": [
+    "index:trend:up",
+    "index:channel:middle",
+    "index:channel:upper",
+    "industry:trend:up",
+    "industry:trend:sideways",
+    "industry:channel:lower"
+  ],
+  "downweight_candidates": [
+    "index:trend:down",
+    "index:channel:lower",
+    "size:trend:up",
+    "size:trend:down",
+    "size:channel:upper",
+    "industry:trend:down",
+    "industry:channel:middle",
+    "industry:channel:upper"
+  ],
+  "acf": [
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "decision_clock": "14:30",
+      "data_role": "development_selection",
+      "n_months": 68,
+      "lag_3": 0.126422914547,
+      "lag_6": -0.071512273177,
+      "lag_12": -0.026534076695
+    },
+    {
+      "factor": "index",
+      "factor_label": "指数",
+      "decision_clock": "14:45",
+      "data_role": "development_selection",
+      "n_months": 68,
+      "lag_3": 0.110932349242,
+      "lag_6": -0.08441675617,
+      "lag_12": -0.054127480002
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "decision_clock": "14:30",
+      "data_role": "development_selection",
+      "n_months": 68,
+      "lag_3": -0.029199994611,
+      "lag_6": -0.026264239994,
+      "lag_12": 0.037328327326
+    },
+    {
+      "factor": "size",
+      "factor_label": "规模",
+      "decision_clock": "14:45",
+      "data_role": "development_selection",
+      "n_months": 68,
+      "lag_3": -0.039916480587,
+      "lag_6": -0.009670334403,
+      "lag_12": 0.086546195382
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "decision_clock": "14:30",
+      "data_role": "development_selection",
+      "n_months": 68,
+      "lag_3": 0.076449672024,
+      "lag_6": 0.068498875017,
+      "lag_12": -0.044489296717
+    },
+    {
+      "factor": "industry",
+      "factor_label": "行业",
+      "decision_clock": "14:45",
+      "data_role": "development_selection",
+      "n_months": 68,
+      "lag_3": 0.063900984291,
+      "lag_6": 0.110756198891,
+      "lag_12": -0.010478023816
+    }
+  ],
+  "canonical_digest": "sha256:ba6641b44411e61629e42a7c8de6a88ccd70e1b89e1ecfc47aa554e7acbf21af"
+}

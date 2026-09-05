@@ -1,0 +1,22 @@
+{
+  "schema_id": "factorlab.reaka_strategy_authority_registry@113.0",
+  "status": "REAKA_V2_stage4_waiting_user_financial_review",
+  "supersedes": {
+    "path": "docs/ops/reaka_strategy_authority_registry@112.0.json",
+    "canonical_digest": "sha256:f50babb35339869b338024979a82e8178e13080708c83dab9341e34b3a10742b"
+  },
+  "round_registry": "docs/ops/reaka_strategy_round_registry@1.4.json",
+  "round_registry_digest": "sha256:16e4c1471ab5d4f34954c488673a9bf9d8af53e8c0cb925bec1460861e96201d",
+  "current_manifest": "docs/ops/reaka_multifactor_current_manifest@1.2.json",
+  "current_manifest_digest": "sha256:ea59b0de117d386ab413dd07c5b3de2e3710eb34f3e004aabcf2574363dd5ca4",
+  "controller_acceptance_digest": "sha256:37795a2b060ad5ac08087ab63a06bcefa9bfc793c1975245dbaf7cb1c0aa2323",
+  "next_legal_action": "user_financial_review_of_stage4_evidence",
+  "advisor_interpretation_receipt_present": false,
+  "stage5_execution_allowed": false,
+  "stage6_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "strategy_pointer_change_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:2ad89e3d1f848bc14c761e086d562fdcd2ab86fc33a5a521625a1fea44194b79"
+}

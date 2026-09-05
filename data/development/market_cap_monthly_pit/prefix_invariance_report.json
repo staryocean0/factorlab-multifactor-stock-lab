@@ -1,0 +1,8 @@
+{
+  "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+  "full_build_prefix_logical_digest": "677a7e0a50ddf16871881a3ce47dea286139145557239616afc1bdf9e73a8a68",
+  "passed": true,
+  "prefix_end_date": "2023-12-31",
+  "prefix_replay_logical_digest": "677a7e0a50ddf16871881a3ce47dea286139145557239616afc1bdf9e73a8a68",
+  "schema_version": "datahub.stock_market_cap_monthly_pit.prefix.v1"
+}

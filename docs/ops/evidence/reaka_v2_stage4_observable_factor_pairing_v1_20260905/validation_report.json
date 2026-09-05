@@ -1,0 +1,23 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage4_observable_factor_pairing_validation@1.0",
+  "status": "passed_machine_evidence_waiting_user_financial_review",
+  "contract_digest": "sha256:f7041b70a2220eea3083578df6ce2ef191ab1cb3f83cf588c502a46155085fdd",
+  "formal_result_digest": "sha256:102cbdd49f9beb3b8342e85b25b18ee63390e08674695a64fd633a6bb2b9a77b",
+  "isolated_result_digest": "sha256:102cbdd49f9beb3b8342e85b25b18ee63390e08674695a64fd633a6bb2b9a77b",
+  "formal_isolated_byte_identical_files": [
+    "pairing_panel.csv",
+    "annual_dispersion.csv",
+    "episode_dispersion.csv",
+    "hypothesis_summary.csv",
+    "advisor_interpretation_request.json",
+    "result.json"
+  ],
+  "review_request_digest": "sha256:76b12f4cb830992875d52e0da0c4a8bb8841db1909342ffddbe567f8f04029b0",
+  "hypothesis_count": 5,
+  "advisor_interpretation_receipt_present": false,
+  "stage5_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:e1eeb80dd646d5bf19082e46b9e407bc028b093ff1f8f00d9bd5d7b7f6fcba05"
+}

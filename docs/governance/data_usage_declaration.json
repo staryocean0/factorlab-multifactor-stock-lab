@@ -1,0 +1,61 @@
+{
+  "schema_id": "factorlab.multifactor_stock_lab_data_usage@1.0",
+  "declared_before_new_strategy_results": true,
+  "universe": "CN_A_shares_qfq_research_surface",
+  "shipped_intervals": [
+    {
+      "start": "2007-01-01",
+      "end": "2008-12-31",
+      "role": "warmup_only",
+      "allowed_uses": [
+        "feature_warmup",
+        "lineage_audit"
+      ],
+      "fresh_evidence": false
+    },
+    {
+      "start": "2009-01-01",
+      "end": "2016-12-31",
+      "role": "development_material",
+      "allowed_uses": [
+        "factor_research",
+        "stage_diagnostics",
+        "paper_mapping"
+      ],
+      "fresh_evidence": false
+    },
+    {
+      "start": "2017-01-01",
+      "end": "2017-12-31",
+      "role": "development_listing_not_pass_evidence",
+      "allowed_uses": [
+        "internal_review_listing"
+      ],
+      "fresh_evidence": false
+    },
+    {
+      "start": "2018-01-01",
+      "end": "2025-12-31",
+      "role": "consumed_repeat_comparison_no_retune",
+      "allowed_uses": [
+        "consumed_comparison",
+        "historical_account_query"
+      ],
+      "fresh_evidence": false
+    }
+  ],
+  "physically_withheld_intervals": [
+    {
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "role": "not_shipped_not_readable",
+      "reason": "preserve later causal challenge capacity and exclude incomplete live year"
+    }
+  ],
+  "data_identity": "DataHub xdxr_v9 QFQ bars plus FactorLab multifactor research surfaces",
+  "trade_fill_authority": false,
+  "fresh_oos": false,
+  "model_training_allowed": false,
+  "paper_trading_authority": false,
+  "production_authority": false
+}

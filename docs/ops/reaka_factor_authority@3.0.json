@@ -1,0 +1,109 @@
+{
+  "schema_id": "factorlab.reaka_factor_authority@3.0",
+  "issue_ref": "bd://fl-we85n",
+  "status": "step5_paper_core_baseline_rebuild_required",
+  "supersedes_current_authority": [
+    "factorlab.reaka_state_factor_pair_workflow@2.0",
+    "factorlab.reaka_neural_fidelity_successor@1.0",
+    "factorlab.reaka_step6_controller_first_run@2.0",
+    "factorlab.reaka_step6_controller_first_run@2.1",
+    "factorlab.reaka_step6_controller_first_run@2.2"
+  ],
+  "historical_evidence_remains_read_only": true,
+  "authority_correction_digest": "sha256:53351a79ea5f6ee55fc7a706fb8b4b8b5d1787e53781d2eb9cc66783eb2234ca",
+  "assembly": [
+    {
+      "stage": "step5_paper_core_baseline_freeze",
+      "purpose": "freeze_generic_paper_input_and_transparent_baseline_without_optional_context"
+    },
+    {
+      "stage": "step6_paper_core_neural_fidelity",
+      "purpose": "test_neural_carrier_against_paper_core_baseline_only"
+    },
+    {
+      "stage": "step7_koopman_capacity",
+      "purpose": "study_internal_latent_dynamics_after_core_carrier_passes"
+    },
+    {
+      "stage": "residual_simple_to_paper_drc",
+      "purpose": "open_only_after_operator_capacity_passes"
+    }
+  ],
+  "paper_core": {
+    "input_arm_id": "CORE_SPATIAL_H20",
+    "factor_identity_count": 48,
+    "transparent_teacher": "baseline_score",
+    "optional_context_read_allowed": false,
+    "status": "step5_rebuild_required",
+    "neural_fidelity_status": "not_started"
+  },
+  "step6_paper_core_fidelity_gate": {
+    "role": "engineering_carrier_fidelity_not_factor_effectiveness",
+    "primary_years": [
+      2019,
+      2020
+    ],
+    "fixed_seeds": [
+      11,
+      29,
+      47
+    ],
+    "minimum_daily_spearman_mean_per_seed": 0.95,
+    "minimum_top_jaccard_mean_per_seed": 0.75,
+    "minimum_bottom_jaccard_mean_per_seed": 0.75,
+    "maximum_gate_near_zero_fraction": 0.01,
+    "maximum_gate_near_one_fraction": 0.01,
+    "checkpoint_selection_allowed": false,
+    "factor_increment_or_context_preservation_required": false,
+    "scientific_claim_increment": 0
+  },
+  "optional_factor_candidates": [
+    {
+      "candidate_id": "transparent_context_v1",
+      "candidate_type": "state_conditioned_factor_interaction",
+      "status": "rejected_no_stable_incremental_transport",
+      "may_modify_paper_core_identity": false,
+      "may_block_paper_core": false,
+      "may_block_koopman_capacity": false,
+      "route_authority": false
+    }
+  ],
+  "rollback": {
+    "preserve_through": "step4_factor_identity_and_task_alignment",
+    "restart_at": "step5_paper_core_baseline_freeze",
+    "rerun_step0_to_step4": false,
+    "rerun_step5": true,
+    "rerun_step6": true,
+    "reason": "context_was_promoted_during_step5_input_assembly_not_during_data_or_factor_identity_construction",
+    "preserved_surfaces": [
+      "PIT_and_temporal_integrity",
+      "CORE_SPATIAL_H20_48_factor_identities",
+      "H20_task_alignment",
+      "parameter_governance",
+      "teacher_aligned_mmap_cache",
+      "accelerator_and_bundle_validation_infrastructure"
+    ],
+    "invalidated_surfaces": [
+      "mandatory_transparent_context_reference",
+      "context_increment_as_step6_pass_gate",
+      "context_failure_as_step7_blocker"
+    ]
+  },
+  "authority": {
+    "controller_execution_only": true,
+    "external_execution_authorized": false,
+    "step5_paper_core_baseline_rebuild_allowed": true,
+    "step6_paper_core_neural_fidelity_allowed": false,
+    "optional_context_rerun_allowed": false,
+    "step7_koopman_capacity_allowed": false,
+    "residual_allowed": false,
+    "production_authority": false
+  },
+  "data_boundary": {
+    "development_and_repeat_audit": "2009_2020_consumed_history",
+    "post_2020_rows_authorized": 0,
+    "fresh_oos": false
+  },
+  "production_authority": false,
+  "canonical_digest": "sha256:e0f9c3d2268b7f99d0c41a37dff4bbfbdb0eb7dfef8f08620f39825887be9465"
+}

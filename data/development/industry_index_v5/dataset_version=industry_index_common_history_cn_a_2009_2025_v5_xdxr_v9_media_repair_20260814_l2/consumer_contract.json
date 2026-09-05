@@ -1,0 +1,29 @@
+{
+  "authority": {
+    "availability_mode": "consumed_history",
+    "fresh_oos": false,
+    "production_authority": false,
+    "research_status": "diagnostic_only",
+    "scoring_allowed": false,
+    "single_stock_authorized": false,
+    "strategy_effectiveness_claim": false,
+    "training_allowed": false
+  },
+  "contract_id": "factorlab_custom_industry_common_history_2009.v1",
+  "dataset_kind": "industry_index_common_history",
+  "decision_period": {
+    "end": "2025-12-31",
+    "start": "2009-01-01"
+  },
+  "levels": [
+    1,
+    2,
+    3
+  ],
+  "methods": [
+    "equal_weight",
+    "market_cap",
+    "dir_signal",
+    "vol_signal"
+  ]
+}

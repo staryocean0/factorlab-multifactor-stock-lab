@@ -1,0 +1,88 @@
+{
+  "schema_id": "factorlab.post_training_strategy_science_acceptance@1.0",
+  "status": "project_level_ssa_frozen_before_A0_A7",
+  "predecessor": {
+    "path": "docs/ops/post_training_account_audit@1.1.json",
+    "canonical_digest": "sha256:60b7e06d67fe5e93660ded02672e6d2e10c9cd3628dd77e7195faacb7e5b27ce",
+    "rewritten": false
+  },
+  "position": "after_frozen_model_or_score_before_A0",
+  "rewrites_post_training_account_audit_1_1": false,
+  "a0_a7_requires_ssa_pass": true,
+  "stages": {
+    "S0": "bind_immutable_model_checkpoint_score_candidate_and_data_roles",
+    "S1": "materialize_one_diagnostic_opportunity_ledger_and_one_score_path_diagnostic_ledger",
+    "S2": "attribute_factor_representation_K_state_and_residual_on_the_same_coordinates",
+    "S3": "outcome_neutral_gate_no_signal_or_infrastructure_gap_or_account_contract_may_open"
+  },
+  "diagnostic_selector": {
+    "policy_id": "N30_equal_eligible_unconstrained",
+    "top_n": 30,
+    "weighting": "equal",
+    "family_search_allowed": false,
+    "cost_applied": false,
+    "identity_source": "historical_REAKA_N30_selector_identity_not_old_score_or_account_tree"
+  },
+  "ledgers": {
+    "selection_opportunity": {
+      "schema": "factorlab.selection_opportunity_ledger@1.0",
+      "hindsight_runtime_authority": false
+    },
+    "score_path_diagnostic": {
+      "schema": "factorlab.score_path_diagnostic_ledger@1.0",
+      "complete_realized_pnl": false,
+      "account_snapshot": false,
+      "cost_applied": false
+    },
+    "complete_realized_pnl_and_account_snapshot": "remain_A0_A7_products"
+  },
+  "attribution": {
+    "score_factor": "decoder_encoder_latent_no_operator_no_residual",
+    "score_k_state": "decoder_operator_latent_residual_zeroed",
+    "score_full": "official_unlabelled_forecast",
+    "residual_increment": "score_full_minus_score_k_state",
+    "signs_are_reports_not_vetoes": true
+  },
+  "gates": {
+    "mean_daily_rankic_strictly_positive": true,
+    "both_subperiods_rankic_strictly_positive": true,
+    "selected_median_opportunity_rank_strictly_better_than_eligible_midpoint": true,
+    "all_registered_clocks_must_pass": true,
+    "2017_as_pass_evidence": false,
+    "2018_plus_reads": false,
+    "scientific_wall_clock": false,
+    "k2_may_be_non_candidate": true,
+    "retrain_because_k2_unused": false,
+    "account_family_search": false
+  },
+  "outcomes": [
+    "diagnostic_signal_present_account_contract_may_open",
+    "no_signal",
+    "infrastructure_gap"
+  ],
+  "authority": {
+    "account_execution_allowed": false,
+    "account_parameter_selection": false,
+    "factor_admission": false,
+    "strategy_mutation": false,
+    "pointer_change": false,
+    "production_authority": false
+  },
+  "fresh_oos": false,
+  "production_authority": false,
+  "source_closure": {
+    "docs/ops/post_training_account_audit@1.1.json": "sha256:a533e16381aaafc720f7237473932075f1e50f04f60b923e7d3f0e359777f252",
+    "docs/ops/post_training_strategy_science_acceptance_whitepaper.md": "sha256:63c1cd09e45235918a556f4ae1922fade4cfafd14af2d89df63cea0c1e64d045",
+    "docs/user/post_training_strategy_science_acceptance_workflow.md": "sha256:3a596c6f0da0623f9e7ac229007f05ec92e25e5710fcd00bdfa16a413d2271b2",
+    "src/factor_lab/portfolio/post_training_strategy_science_acceptance.py": "sha256:64b832de9db9df6030f0ee57aa181a73d45bb54013c2218f8a39fbcfab767bfd",
+    "src/factor_lab/factor_rotation/reaka_intraday_joint_strategy_science_acceptance_v1.py": "sha256:12c099d4c6c53c52c1fe4508b104c44a460b43d6a50065b88c99e4bd425dc7c0",
+    "scripts/factor_rotation/run_reaka_intraday_joint_strategy_science_acceptance_v1.py": "sha256:0429837aa7a1e2185be86907fe8555f525e7744b278a7a30ea7e976ee91dfd9d",
+    "scripts/factor_rotation/validate_reaka_intraday_joint_strategy_science_acceptance_v1.py": "sha256:14c6a831b026916a0b4930a58960d95bf4c8b4c96d314adc616f0eb1303c98c0",
+    "tests/unit/test_post_training_strategy_science_acceptance.py": "sha256:9c324b32f4e1a4edf9ab2ce258efea9eed38d5e120eecdf4d07437cf4d4e28b4",
+    "tests/unit/test_reaka_intraday_joint_strategy_science_acceptance_v1.py": "sha256:e2e4994916f4d84664fdd5a0d659ef6c296bf38e40e87b494802760553c19422",
+    ".codex/skills/strategy-slice-rebuild/SKILL.md": "sha256:52ed906b8fbe59e8f6e03a5260b5097117ed33bfd6e485f332a3b37a64d5f2b4",
+    ".codex/skills/strategy-slice-rebuild/references/post-training-account-audit.md": "sha256:89639c5e667fe764d1056f60ceb170d922fab2b0cc4e836693280eec0a26ca36",
+    ".codex/skills/strategy-slice-rebuild/references/project-contract.md": "sha256:b3bf6528f1b68f1fe33d5dbda553c9fbedeb9ba0d1c06294d0b1a09990c0ff6a"
+  },
+  "canonical_digest": "sha256:b04445c84d2a70f7794cfb44374b8d58ae18806cbfc87d11cfe0bd3cf74d3361"
+}

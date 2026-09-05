@@ -1,0 +1,1681 @@
+{
+  "canonical_digest": "sha256:b8a4ca2bcced89dad8689700230e7a71ffa52b2a1ad0b67f29c291d0dc6687db",
+  "coordinate_receipt": {
+    "coordinate_without_bar_count": 6,
+    "coordinate_without_bar_policy": "preserve_coordinate_and_emit_missing_factor_cells",
+    "duplicate_coordinate_count": 0,
+    "first_month": "2009-01-01",
+    "global_interior_month_gap_count": 0,
+    "last_month": "2025-12-01",
+    "market_cap_visibility_violation_count": 0,
+    "minimum_total_market_cap_cny": 15000000000,
+    "month_count": 204,
+    "row_count": 125355,
+    "symbol_count": 2331
+  },
+  "dataset_version": "factorlab_multifactor_stock_nonfinancial_165f_2009_2025_v2_xdxr_v9_20260814",
+  "factor_count": 165,
+  "factor_ids": [
+    "amihud_illiquidity_10d_lag1",
+    "amihud_illiquidity_120d_lag1",
+    "amihud_illiquidity_20d_lag1",
+    "amihud_illiquidity_250d_lag1",
+    "amihud_illiquidity_60d_lag1",
+    "amount_abnormal_120d_lag1",
+    "amount_abnormal_20d_lag1",
+    "amount_abnormal_30d_lag1",
+    "amount_abnormal_5d_lag1",
+    "amount_abnormal_60d_lag1",
+    "amount_ma_cross_10_60_neg_lag1",
+    "amount_ma_cross_5_20_neg_lag1",
+    "amount_price_corr_10d_lag1",
+    "amount_price_corr_120d_lag1",
+    "amount_price_corr_20d_lag1",
+    "amount_price_corr_250d_lag1",
+    "amount_price_corr_30d_lag1",
+    "amount_price_corr_5d_lag1",
+    "amount_price_corr_60d_lag1",
+    "amount_price_rank_corr_neg_10d_lag1",
+    "amount_price_rank_corr_neg_20d_lag1",
+    "amount_price_rank_corr_neg_5d_lag1",
+    "amount_price_rank_corr_neg_60d_lag1",
+    "amount_ratio_20d_lag1",
+    "amount_weighted_ret_neg_20d_lag1",
+    "amount_weighted_ret_neg_60d_lag1",
+    "atr_neg_14_lag1",
+    "atr_neg_60_lag1",
+    "bb_neg_position_60_lag1",
+    "beta_20d_lag1",
+    "cap_drawdown_60d_lag1",
+    "cap_reversal_20d_lag1",
+    "cap_reversal_60d_lag1",
+    "cap_skewness_60d_lag1",
+    "cap_to_amount_ratio_lag1",
+    "close_location_120d_lag1",
+    "close_location_20d",
+    "close_location_60d_lag1",
+    "close_volume_rank_corr_neg_20d_lag1",
+    "cmf_neg_20_lag1",
+    "cmf_neg_60_lag1",
+    "composite_reversal_neg_20d_lag1",
+    "composite_reversal_neg_60d_lag1",
+    "composite_vol_neg_20d_lag1",
+    "float_ratio_lag1",
+    "gap_down_freq_neg_20d_lag1",
+    "gap_down_freq_neg_60d_lag1",
+    "high_volume_days_neg_20d_lag1",
+    "high_volume_days_neg_60d_lag1",
+    "idiovol_120d_lag1",
+    "idiovol_20d_lag1",
+    "idiovol_250d_lag1",
+    "idiovol_60d_lag1",
+    "idiovol_neg_60d_lag1",
+    "illiquidity_amount_120d_lag1",
+    "illiquidity_amount_20d_lag1",
+    "illiquidity_amount_60d_lag1",
+    "illiquidity_volume_120d_lag1",
+    "illiquidity_volume_20d_lag1",
+    "illiquidity_volume_250d_lag1",
+    "illiquidity_volume_60d_lag1",
+    "intraday_ret_skew_neg_20d_lag1",
+    "intraday_ret_skew_neg_60d_lag1",
+    "low_cap_volatility_20d_lag1",
+    "low_cap_volatility_60d_lag1",
+    "low_close_to_high_60d_lag1",
+    "low_close_to_low_20d_lag1",
+    "low_float_turnover_20d_lag1",
+    "low_kurtosis_20d_lag1",
+    "low_max_return_120d_lag1",
+    "low_max_return_20d_lag1",
+    "low_max_return_60d_lag1",
+    "low_range_volatility_20d_lag1",
+    "low_range_volatility_60d_lag1",
+    "low_skewness_120d_lag1",
+    "low_skewness_20d_lag1",
+    "low_skewness_250d_lag1",
+    "low_skewness_60d_lag1",
+    "low_volatility_120d_lag1",
+    "low_volatility_20d_lag1",
+    "low_volatility_250d_lag1",
+    "low_volatility_60d_lag1",
+    "low_volume_change_20d_lag1",
+    "low_volume_momentum_120d_lag1",
+    "low_volume_momentum_20d_lag1",
+    "low_volume_momentum_60d_lag1",
+    "ma_reversion_120d_lag1",
+    "ma_reversion_20d_lag1",
+    "ma_reversion_250d_lag1",
+    "ma_reversion_60d_lag1",
+    "macd_neg_signal_12_26_lag1",
+    "max_drawdown_neg_120d_lag1",
+    "max_drawdown_neg_60d_lag1",
+    "max_volume_ratio_neg_20d_lag1",
+    "max_volume_ratio_neg_60d_lag1",
+    "mfi_neg_14_lag1",
+    "mfi_neg_28_lag1",
+    "nonlinear_size_lag1",
+    "overnight_gap_vol_neg_20d_lag1",
+    "overnight_gap_vol_neg_60d_lag1",
+    "overnight_vol_neg_20d_lag1",
+    "overnight_vol_neg_60d_lag1",
+    "pct_from_250d_high_neg_lag1",
+    "pv_divergence_neg_20d_lag1",
+    "pv_divergence_neg_60d_lag1",
+    "pv_momentum_neg_20d_lag1",
+    "pv_momentum_neg_60d_lag1",
+    "reversal_120d_lag1",
+    "reversal_120d_skip5_lag1",
+    "reversal_1d_lag1",
+    "reversal_20d_lag1",
+    "reversal_250d_skip20_lag1",
+    "reversal_5d_lag1",
+    "reversal_60d_lag1",
+    "reversal_60d_skip5_lag1",
+    "reversal_strength_neg_20d_lag1",
+    "reversal_strength_neg_60d_lag1",
+    "rsi_neg_24_lag1",
+    "rsi_neg_6_lag1",
+    "share_change_60d_neg_lag1",
+    "small_float_cap_lag1",
+    "small_total_cap_lag1",
+    "smart_money_neg_20d_lag1",
+    "smart_money_neg_60d_lag1",
+    "up_vol_ratio_neg_20d_lag1",
+    "up_vol_ratio_neg_60d_lag1",
+    "vol_dist_skew_neg_20d_lag1",
+    "vol_of_vol_neg_120d_lag1",
+    "vol_of_vol_neg_60d_lag1",
+    "vol_up_down_diff_neg_20d_lag1",
+    "vol_up_down_diff_neg_60d_lag1",
+    "vol_weighted_ret_neg_20d_lag1",
+    "vol_weighted_ret_neg_60d_lag1",
+    "vol_weighted_reversal_neg_20d_lag1",
+    "vol_weighted_reversal_neg_60d_lag1",
+    "volume_abnormal_120d_lag1",
+    "volume_abnormal_20d_lag1",
+    "volume_abnormal_30d_lag1",
+    "volume_abnormal_5d_lag1",
+    "volume_abnormal_60d_lag1",
+    "volume_concentration_neg_20d_lag1",
+    "volume_concentration_neg_60d_lag1",
+    "volume_ma_cross_10_60_neg_lag1",
+    "volume_ma_cross_5_20_neg_lag1",
+    "volume_price_corr_10d_lag1",
+    "volume_price_corr_120d_lag1",
+    "volume_price_corr_20d_lag1",
+    "volume_price_corr_250d_lag1",
+    "volume_price_corr_30d_lag1",
+    "volume_price_corr_5d_lag1",
+    "volume_price_corr_60d_lag1",
+    "volume_price_rank_corr_neg_10d_lag1",
+    "volume_price_rank_corr_neg_20d_lag1",
+    "volume_price_rank_corr_neg_5d_lag1",
+    "volume_price_rank_corr_neg_60d_lag1",
+    "volume_ratio_20d_lag1",
+    "volume_ratio_5d_lag1",
+    "volume_ratio_60d_lag1",
+    "volume_skewness_20d_lag1",
+    "vp_asymmetry_neg_20d_lag1",
+    "vp_asymmetry_neg_60d_lag1",
+    "vwap_deviation_120d_lag1",
+    "vwap_deviation_20d",
+    "vwap_deviation_5d_lag1",
+    "vwap_deviation_60d_lag1"
+  ],
+  "factor_rows": [
+    {
+      "factor_id": "amihud_illiquidity_10d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124872,
+      "warmup_missing_row_count": 483
+    },
+    {
+      "factor_id": "amihud_illiquidity_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124292,
+      "warmup_missing_row_count": 1063
+    },
+    {
+      "factor_id": "amihud_illiquidity_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124494,
+      "warmup_missing_row_count": 861
+    },
+    {
+      "factor_id": "amihud_illiquidity_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 121576,
+      "warmup_missing_row_count": 3779
+    },
+    {
+      "factor_id": "amihud_illiquidity_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124664,
+      "warmup_missing_row_count": 691
+    },
+    {
+      "factor_id": "amount_abnormal_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122673,
+      "warmup_missing_row_count": 2682
+    },
+    {
+      "factor_id": "amount_abnormal_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124195,
+      "warmup_missing_row_count": 1160
+    },
+    {
+      "factor_id": "amount_abnormal_30d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124247,
+      "warmup_missing_row_count": 1108
+    },
+    {
+      "factor_id": "amount_abnormal_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124930,
+      "warmup_missing_row_count": 425
+    },
+    {
+      "factor_id": "amount_abnormal_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123790,
+      "warmup_missing_row_count": 1565
+    },
+    {
+      "factor_id": "amount_ma_cross_10_60_neg_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123673,
+      "warmup_missing_row_count": 1682
+    },
+    {
+      "factor_id": "amount_ma_cross_5_20_neg_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124618,
+      "warmup_missing_row_count": 737
+    },
+    {
+      "factor_id": "amount_price_corr_10d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124872,
+      "warmup_missing_row_count": 483
+    },
+    {
+      "factor_id": "amount_price_corr_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122913,
+      "warmup_missing_row_count": 2442
+    },
+    {
+      "factor_id": "amount_price_corr_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124672,
+      "warmup_missing_row_count": 683
+    },
+    {
+      "factor_id": "amount_price_corr_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 121576,
+      "warmup_missing_row_count": 3779
+    },
+    {
+      "factor_id": "amount_price_corr_30d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124470,
+      "warmup_missing_row_count": 885
+    },
+    {
+      "factor_id": "amount_price_corr_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125100,
+      "warmup_missing_row_count": 255
+    },
+    {
+      "factor_id": "amount_price_corr_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "amount_price_rank_corr_neg_10d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124530,
+      "warmup_missing_row_count": 825
+    },
+    {
+      "factor_id": "amount_price_rank_corr_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124134,
+      "warmup_missing_row_count": 1221
+    },
+    {
+      "factor_id": "amount_price_rank_corr_neg_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124611,
+      "warmup_missing_row_count": 744
+    },
+    {
+      "factor_id": "amount_price_rank_corr_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122520,
+      "warmup_missing_row_count": 2835
+    },
+    {
+      "factor_id": "amount_ratio_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124384,
+      "warmup_missing_row_count": 971
+    },
+    {
+      "factor_id": "amount_weighted_ret_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124672,
+      "warmup_missing_row_count": 683
+    },
+    {
+      "factor_id": "amount_weighted_ret_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "atr_neg_14_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124687,
+      "warmup_missing_row_count": 668
+    },
+    {
+      "factor_id": "atr_neg_60_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123806,
+      "warmup_missing_row_count": 1549
+    },
+    {
+      "factor_id": "bb_neg_position_60_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123622,
+      "warmup_missing_row_count": 1733
+    },
+    {
+      "factor_id": "beta_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124817,
+      "warmup_missing_row_count": 538
+    },
+    {
+      "factor_id": "cap_drawdown_60d_lag1",
+      "first_observed_month": "2009-04",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 201,
+      "observed_row_count": 123216,
+      "warmup_missing_row_count": 2139
+    },
+    {
+      "factor_id": "cap_reversal_20d_lag1",
+      "first_observed_month": "2009-02",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 203,
+      "observed_row_count": 123421,
+      "warmup_missing_row_count": 1934
+    },
+    {
+      "factor_id": "cap_reversal_60d_lag1",
+      "first_observed_month": "2009-04",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 201,
+      "observed_row_count": 121242,
+      "warmup_missing_row_count": 4113
+    },
+    {
+      "factor_id": "cap_skewness_60d_lag1",
+      "first_observed_month": "2009-04",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 201,
+      "observed_row_count": 122846,
+      "warmup_missing_row_count": 2509
+    },
+    {
+      "factor_id": "cap_to_amount_ratio_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124839,
+      "warmup_missing_row_count": 516
+    },
+    {
+      "factor_id": "close_location_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124037,
+      "warmup_missing_row_count": 1318
+    },
+    {
+      "factor_id": "close_location_20d",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124914,
+      "warmup_missing_row_count": 441
+    },
+    {
+      "factor_id": "close_location_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124428,
+      "warmup_missing_row_count": 927
+    },
+    {
+      "factor_id": "close_volume_rank_corr_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124134,
+      "warmup_missing_row_count": 1221
+    },
+    {
+      "factor_id": "cmf_neg_20_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124511,
+      "warmup_missing_row_count": 844
+    },
+    {
+      "factor_id": "cmf_neg_60_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123714,
+      "warmup_missing_row_count": 1641
+    },
+    {
+      "factor_id": "composite_reversal_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124672,
+      "warmup_missing_row_count": 683
+    },
+    {
+      "factor_id": "composite_reversal_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "composite_vol_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123591,
+      "warmup_missing_row_count": 1764
+    },
+    {
+      "factor_id": "float_ratio_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125326,
+      "warmup_missing_row_count": 29
+    },
+    {
+      "factor_id": "gap_down_freq_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125349,
+      "warmup_missing_row_count": 6
+    },
+    {
+      "factor_id": "gap_down_freq_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125349,
+      "warmup_missing_row_count": 6
+    },
+    {
+      "factor_id": "high_volume_days_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125349,
+      "warmup_missing_row_count": 6
+    },
+    {
+      "factor_id": "high_volume_days_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125349,
+      "warmup_missing_row_count": 6
+    },
+    {
+      "factor_id": "idiovol_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122661,
+      "warmup_missing_row_count": 2694
+    },
+    {
+      "factor_id": "idiovol_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124304,
+      "warmup_missing_row_count": 1051
+    },
+    {
+      "factor_id": "idiovol_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 120321,
+      "warmup_missing_row_count": 5034
+    },
+    {
+      "factor_id": "idiovol_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122231,
+      "warmup_missing_row_count": 3124
+    },
+    {
+      "factor_id": "idiovol_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "illiquidity_amount_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124315,
+      "warmup_missing_row_count": 1040
+    },
+    {
+      "factor_id": "illiquidity_amount_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124529,
+      "warmup_missing_row_count": 826
+    },
+    {
+      "factor_id": "illiquidity_amount_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123477,
+      "warmup_missing_row_count": 1878
+    },
+    {
+      "factor_id": "illiquidity_volume_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124315,
+      "warmup_missing_row_count": 1040
+    },
+    {
+      "factor_id": "illiquidity_volume_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124529,
+      "warmup_missing_row_count": 826
+    },
+    {
+      "factor_id": "illiquidity_volume_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123641,
+      "warmup_missing_row_count": 1714
+    },
+    {
+      "factor_id": "illiquidity_volume_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124692,
+      "warmup_missing_row_count": 663
+    },
+    {
+      "factor_id": "intraday_ret_skew_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "intraday_ret_skew_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123880,
+      "warmup_missing_row_count": 1475
+    },
+    {
+      "factor_id": "low_cap_volatility_20d_lag1",
+      "first_observed_month": "2009-02",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 203,
+      "observed_row_count": 124257,
+      "warmup_missing_row_count": 1098
+    },
+    {
+      "factor_id": "low_cap_volatility_60d_lag1",
+      "first_observed_month": "2009-04",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 201,
+      "observed_row_count": 122846,
+      "warmup_missing_row_count": 2509
+    },
+    {
+      "factor_id": "low_close_to_high_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124174,
+      "warmup_missing_row_count": 1181
+    },
+    {
+      "factor_id": "low_close_to_low_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124529,
+      "warmup_missing_row_count": 826
+    },
+    {
+      "factor_id": "low_float_turnover_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124821,
+      "warmup_missing_row_count": 534
+    },
+    {
+      "factor_id": "low_kurtosis_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124494,
+      "warmup_missing_row_count": 861
+    },
+    {
+      "factor_id": "low_max_return_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122913,
+      "warmup_missing_row_count": 2442
+    },
+    {
+      "factor_id": "low_max_return_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124494,
+      "warmup_missing_row_count": 861
+    },
+    {
+      "factor_id": "low_max_return_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124400,
+      "warmup_missing_row_count": 955
+    },
+    {
+      "factor_id": "low_range_volatility_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124529,
+      "warmup_missing_row_count": 826
+    },
+    {
+      "factor_id": "low_range_volatility_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123477,
+      "warmup_missing_row_count": 1878
+    },
+    {
+      "factor_id": "low_skewness_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124292,
+      "warmup_missing_row_count": 1063
+    },
+    {
+      "factor_id": "low_skewness_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124494,
+      "warmup_missing_row_count": 861
+    },
+    {
+      "factor_id": "low_skewness_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123681,
+      "warmup_missing_row_count": 1674
+    },
+    {
+      "factor_id": "low_skewness_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123456,
+      "warmup_missing_row_count": 1899
+    },
+    {
+      "factor_id": "low_volatility_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 121904,
+      "warmup_missing_row_count": 3451
+    },
+    {
+      "factor_id": "low_volatility_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124494,
+      "warmup_missing_row_count": 861
+    },
+    {
+      "factor_id": "low_volatility_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123681,
+      "warmup_missing_row_count": 1674
+    },
+    {
+      "factor_id": "low_volatility_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123456,
+      "warmup_missing_row_count": 1899
+    },
+    {
+      "factor_id": "low_volume_change_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124529,
+      "warmup_missing_row_count": 826
+    },
+    {
+      "factor_id": "low_volume_momentum_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 119555,
+      "warmup_missing_row_count": 5800
+    },
+    {
+      "factor_id": "low_volume_momentum_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124529,
+      "warmup_missing_row_count": 826
+    },
+    {
+      "factor_id": "low_volume_momentum_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124381,
+      "warmup_missing_row_count": 974
+    },
+    {
+      "factor_id": "ma_reversion_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 121924,
+      "warmup_missing_row_count": 3431
+    },
+    {
+      "factor_id": "ma_reversion_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124529,
+      "warmup_missing_row_count": 826
+    },
+    {
+      "factor_id": "ma_reversion_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123420,
+      "warmup_missing_row_count": 1935
+    },
+    {
+      "factor_id": "ma_reversion_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123477,
+      "warmup_missing_row_count": 1878
+    },
+    {
+      "factor_id": "macd_neg_signal_12_26_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125325,
+      "warmup_missing_row_count": 30
+    },
+    {
+      "factor_id": "max_drawdown_neg_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122673,
+      "warmup_missing_row_count": 2682
+    },
+    {
+      "factor_id": "max_drawdown_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123622,
+      "warmup_missing_row_count": 1733
+    },
+    {
+      "factor_id": "max_volume_ratio_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "max_volume_ratio_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123880,
+      "warmup_missing_row_count": 1475
+    },
+    {
+      "factor_id": "mfi_neg_14_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125006,
+      "warmup_missing_row_count": 349
+    },
+    {
+      "factor_id": "mfi_neg_28_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125082,
+      "warmup_missing_row_count": 273
+    },
+    {
+      "factor_id": "nonlinear_size_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125349,
+      "warmup_missing_row_count": 6
+    },
+    {
+      "factor_id": "overnight_gap_vol_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124542,
+      "warmup_missing_row_count": 813
+    },
+    {
+      "factor_id": "overnight_gap_vol_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123806,
+      "warmup_missing_row_count": 1549
+    },
+    {
+      "factor_id": "overnight_vol_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124542,
+      "warmup_missing_row_count": 813
+    },
+    {
+      "factor_id": "overnight_vol_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123806,
+      "warmup_missing_row_count": 1549
+    },
+    {
+      "factor_id": "pct_from_250d_high_neg_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123420,
+      "warmup_missing_row_count": 1935
+    },
+    {
+      "factor_id": "pv_divergence_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124542,
+      "warmup_missing_row_count": 813
+    },
+    {
+      "factor_id": "pv_divergence_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123806,
+      "warmup_missing_row_count": 1549
+    },
+    {
+      "factor_id": "pv_momentum_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124542,
+      "warmup_missing_row_count": 813
+    },
+    {
+      "factor_id": "pv_momentum_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123806,
+      "warmup_missing_row_count": 1549
+    },
+    {
+      "factor_id": "reversal_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 121904,
+      "warmup_missing_row_count": 3451
+    },
+    {
+      "factor_id": "reversal_120d_skip5_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 119456,
+      "warmup_missing_row_count": 5899
+    },
+    {
+      "factor_id": "reversal_1d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125001,
+      "warmup_missing_row_count": 354
+    },
+    {
+      "factor_id": "reversal_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124494,
+      "warmup_missing_row_count": 861
+    },
+    {
+      "factor_id": "reversal_250d_skip20_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 115478,
+      "warmup_missing_row_count": 9877
+    },
+    {
+      "factor_id": "reversal_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124893,
+      "warmup_missing_row_count": 462
+    },
+    {
+      "factor_id": "reversal_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123456,
+      "warmup_missing_row_count": 1899
+    },
+    {
+      "factor_id": "reversal_60d_skip5_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 121379,
+      "warmup_missing_row_count": 3976
+    },
+    {
+      "factor_id": "reversal_strength_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124672,
+      "warmup_missing_row_count": 683
+    },
+    {
+      "factor_id": "reversal_strength_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "rsi_neg_24_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125081,
+      "warmup_missing_row_count": 274
+    },
+    {
+      "factor_id": "rsi_neg_6_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123455,
+      "warmup_missing_row_count": 1900
+    },
+    {
+      "factor_id": "share_change_60d_neg_lag1",
+      "first_observed_month": "2009-03",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 202,
+      "observed_row_count": 123142,
+      "warmup_missing_row_count": 2213
+    },
+    {
+      "factor_id": "small_float_cap_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125326,
+      "warmup_missing_row_count": 29
+    },
+    {
+      "factor_id": "small_total_cap_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125349,
+      "warmup_missing_row_count": 6
+    },
+    {
+      "factor_id": "smart_money_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125087,
+      "warmup_missing_row_count": 268
+    },
+    {
+      "factor_id": "smart_money_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125137,
+      "warmup_missing_row_count": 218
+    },
+    {
+      "factor_id": "up_vol_ratio_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "up_vol_ratio_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123880,
+      "warmup_missing_row_count": 1475
+    },
+    {
+      "factor_id": "vol_dist_skew_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "vol_of_vol_neg_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122591,
+      "warmup_missing_row_count": 2764
+    },
+    {
+      "factor_id": "vol_of_vol_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123460,
+      "warmup_missing_row_count": 1895
+    },
+    {
+      "factor_id": "vol_up_down_diff_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "vol_up_down_diff_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123880,
+      "warmup_missing_row_count": 1475
+    },
+    {
+      "factor_id": "vol_weighted_ret_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124672,
+      "warmup_missing_row_count": 683
+    },
+    {
+      "factor_id": "vol_weighted_ret_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "vol_weighted_reversal_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124672,
+      "warmup_missing_row_count": 683
+    },
+    {
+      "factor_id": "vol_weighted_reversal_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "volume_abnormal_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122673,
+      "warmup_missing_row_count": 2682
+    },
+    {
+      "factor_id": "volume_abnormal_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124195,
+      "warmup_missing_row_count": 1160
+    },
+    {
+      "factor_id": "volume_abnormal_30d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124247,
+      "warmup_missing_row_count": 1108
+    },
+    {
+      "factor_id": "volume_abnormal_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124930,
+      "warmup_missing_row_count": 425
+    },
+    {
+      "factor_id": "volume_abnormal_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123790,
+      "warmup_missing_row_count": 1565
+    },
+    {
+      "factor_id": "volume_concentration_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "volume_concentration_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123880,
+      "warmup_missing_row_count": 1475
+    },
+    {
+      "factor_id": "volume_ma_cross_10_60_neg_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123673,
+      "warmup_missing_row_count": 1682
+    },
+    {
+      "factor_id": "volume_ma_cross_5_20_neg_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124618,
+      "warmup_missing_row_count": 737
+    },
+    {
+      "factor_id": "volume_price_corr_10d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124872,
+      "warmup_missing_row_count": 483
+    },
+    {
+      "factor_id": "volume_price_corr_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122913,
+      "warmup_missing_row_count": 2442
+    },
+    {
+      "factor_id": "volume_price_corr_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124672,
+      "warmup_missing_row_count": 683
+    },
+    {
+      "factor_id": "volume_price_corr_250d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 121576,
+      "warmup_missing_row_count": 3779
+    },
+    {
+      "factor_id": "volume_price_corr_30d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124470,
+      "warmup_missing_row_count": 885
+    },
+    {
+      "factor_id": "volume_price_corr_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125100,
+      "warmup_missing_row_count": 255
+    },
+    {
+      "factor_id": "volume_price_corr_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123857,
+      "warmup_missing_row_count": 1498
+    },
+    {
+      "factor_id": "volume_price_rank_corr_neg_10d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124533,
+      "warmup_missing_row_count": 822
+    },
+    {
+      "factor_id": "volume_price_rank_corr_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124134,
+      "warmup_missing_row_count": 1221
+    },
+    {
+      "factor_id": "volume_price_rank_corr_neg_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124661,
+      "warmup_missing_row_count": 694
+    },
+    {
+      "factor_id": "volume_price_rank_corr_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122520,
+      "warmup_missing_row_count": 2835
+    },
+    {
+      "factor_id": "volume_ratio_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124384,
+      "warmup_missing_row_count": 971
+    },
+    {
+      "factor_id": "volume_ratio_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124930,
+      "warmup_missing_row_count": 425
+    },
+    {
+      "factor_id": "volume_ratio_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123622,
+      "warmup_missing_row_count": 1733
+    },
+    {
+      "factor_id": "volume_skewness_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "vp_asymmetry_neg_20d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124706,
+      "warmup_missing_row_count": 649
+    },
+    {
+      "factor_id": "vp_asymmetry_neg_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 123880,
+      "warmup_missing_row_count": 1475
+    },
+    {
+      "factor_id": "vwap_deviation_120d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 122673,
+      "warmup_missing_row_count": 2682
+    },
+    {
+      "factor_id": "vwap_deviation_20d",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 125062,
+      "warmup_missing_row_count": 293
+    },
+    {
+      "factor_id": "vwap_deviation_5d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124930,
+      "warmup_missing_row_count": 425
+    },
+    {
+      "factor_id": "vwap_deviation_60d_lag1",
+      "first_observed_month": "2009-01",
+      "interior_or_required_tail_gap_count": 0,
+      "last_observed_month": "2025-12",
+      "observed_month_count": 204,
+      "observed_row_count": 124435,
+      "warmup_missing_row_count": 920
+    }
+  ],
+  "future_fill_count": 0,
+  "interior_or_required_tail_gap_count": 0,
+  "interpolation_count": 0,
+  "observed_cell_count": 20451419,
+  "production_authority": false,
+  "schema_id": "factorlab.common_history_stock_nonfinancial_coverage.v1",
+  "status": "passed",
+  "warmup_mask_cell_count": 232156,
+  "zero_fill_count": 0
+}

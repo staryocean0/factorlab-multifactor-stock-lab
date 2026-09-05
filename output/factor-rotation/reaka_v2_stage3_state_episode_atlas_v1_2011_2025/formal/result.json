@@ -1,0 +1,33 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_state_episode_atlas_result@1.0",
+  "status": "stage3_complete_waiting_user_checkpoint_before_stage4",
+  "contract_digest": "sha256:e58931b2aacaf395da46b8818b7a8114396cae838b944ec3b2039daa5ae88652",
+  "certificate_digest": "sha256:d83e2f37b09847fc1622ef24db626bacec1a31a636f24852a1c96a920eb2ae12",
+  "composite_learnability_route": "slow_context_low_rank_modulator",
+  "development_decision_months": 68,
+  "development_physical_transitions": 67,
+  "development_state_switches": 26,
+  "development_cross_sectional_rows": 361628,
+  "persistent_episode_count": {
+    "up": 1,
+    "sideways": 9,
+    "down": 1
+  },
+  "artifact_digests": {
+    "input_receipt.json": "sha256:a9a589c7158e79e55dcbc1f43e5c1baedf04ff0f9229946cc72f2d6046f5fa1b",
+    "state_months.csv": "sha256:e4aecf7f5d1567fc5e30ab3e22c0bf98b44223190234e3df53a72dc46ceef404",
+    "state_episodes.csv": "sha256:04cb9d232e5e993d42d7edff6c65abd360eb49a911f44f2d66ff71b4d25907d6",
+    "state_support.csv": "sha256:6a92f8aba64ade82b66741b9e4039f4c57ddd1e08cf3d6ad2e46f9a8a81941f0",
+    "transition_counts.csv": "sha256:808e6d4a987f13b66b1e06caf5ba57c8986fda02372d8cc988e0fca9d8d66028",
+    "state_learnability_certificate.json": "sha256:a5136f5ed993ab5460623497b933c95c1a4ceb443ad51f91147cf10f37634bc2",
+    "comparison_summary.json": "sha256:7057ee519d90c08dce946b494a076ed6701f2bb331a5eca57d08dbaf0fbfad71"
+  },
+  "stage4_execution_allowed": false,
+  "stage5_execution_allowed": false,
+  "model_training_executed": false,
+  "account_executed": false,
+  "post_2025_decision_rows": 0,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:2cfefab2bf7b13c981e6eff5a7fa8bc916d7574f9e939101cb5e60b8e24d0145"
+}

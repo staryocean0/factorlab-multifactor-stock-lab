@@ -1,0 +1,18 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_state_episode_atlas_controller_acceptance@1.0",
+  "status": "accepted_stage3_slow_context_route_waiting_user_stage4_checkpoint",
+  "validation_digest": "sha256:cf4714e0e406c000edb3405bffec7402fc30a257e826482adf546ccda0fb2628",
+  "result_digest": "sha256:2cfefab2bf7b13c981e6eff5a7fa8bc916d7574f9e939101cb5e60b8e24d0145",
+  "certificate_digest": "sha256:d83e2f37b09847fc1622ef24db626bacec1a31a636f24852a1c96a920eb2ae12",
+  "mathematical_verdict": "monthly state is observable but directional persistent episodes are insufficient for distinct discrete Koopman operators",
+  "financial_role_allowed_next": "stage4_pairing_candidate_only",
+  "composite_learnability_route": "slow_context_low_rank_modulator",
+  "stage4_execution_allowed": false,
+  "stage5_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "strategy_pointer_change_allowed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:f52fd81aefa0e11379e8ec722dd50be4d2864bc245318c45954f0f4d40417af3"
+}

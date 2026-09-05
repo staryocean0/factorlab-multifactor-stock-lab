@@ -1,0 +1,93 @@
+{
+  "schema_id": "factorlab.multifactor_research_data_contract.v1",
+  "contract_version": "1.0",
+  "research_period": {
+    "start": "2009-01",
+    "end": "2025-12"
+  },
+  "required_surfaces": {
+    "qfq_stock_bars": "bars_cn_a_1d_qfq_canonical_xdxr_v9_factorlab_2009_2025_20260814",
+    "adjustment_factors": "adjust_factors_cn_a_xdxr_v9_20260814",
+    "monthly_market_cap": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+    "strict_annual_financial": "cn_a_financial_pit_first_release_annual_largecap_2008_2025.v1.20260811",
+    "macro_pit": "macro_fundamental_timeseries_cn_v90_macro_regime_dual_strategy_annual_rolling_granted_20260810",
+    "custom_industry": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814",
+    "official_szse_industry": "szse_official_industry_index_panel_cn_a_2008_2026_pit_semantic_identity_v8_20260719",
+    "csrc_snapshot_sector": "sector_index_cn_a_csrc2012_snapshot_state_equal_weight_2013_2020_v1_20260719",
+    "factorlab_nonfinancial_surface": "factorlab_multifactor_stock_nonfinancial_165f_2009_2025_v2_xdxr_v9_20260814",
+    "factorlab_macro_context_surface": "factorlab_common_history_macro_context_2009_2025_v1_20260812",
+    "factorlab_macro_input_surface": "multifactor_macro_input_2009_2025_v1_20260814",
+    "cloudridge_market_index_package_id": "cloudridge_index-cloudridge-beta-index-v1-ede3d5f7b64f",
+    "broad_market_reference_id": "csindex_000985_daily_20090101_20260723_raw"
+  },
+  "required_local_index_files": {
+    "cloudridge_market_index": "../cloud_runtime/result-packages/current/cloudridge-index-series.json",
+    "broad_market_reference": "output/macro-micro-historical-replay/round001-kitchin-v1/input/source_snapshots/csindex_000985_daily_20090101_20260723_raw.csv"
+  },
+  "required_local_index_sha256": {
+    "cloudridge_market_index": "63d0b922ef60d93e191b0d74cd2e03358ab0d77da98862d999331902ab0b0219",
+    "broad_market_reference": "295e44316a2dca78bdc6f29ca5cd1f5a99eff81dd0908c791511d0174bcc9ba8"
+  },
+  "candidate_quarantine_surfaces": {
+    "legacy_macro_factor_pool": {
+      "path": "output/macro-factor-pool/fundamental_timeseries_20260710",
+      "source_dataset_version": "macro_cycle_proxy_nbs2_20260710",
+      "reason": "source product is no longer present in the current DataHub authority lake and coverage is highly uneven; retain as candidate inventory only"
+    }
+  },
+  "required_macro_series": [
+    "industrial_value_added_yoy",
+    "m2_balance",
+    "m2_yoy",
+    "nominal_gdp_amount",
+    "nominal_gdp_cumulative_amount",
+    "nominal_gdp_yoy",
+    "pmi_manufacturing",
+    "pmi_new_orders_index",
+    "ppi_yoy"
+  ],
+  "certified_macro_condition_series": [
+    "industrial_value_added_yoy",
+    "m2_yoy",
+    "nominal_gdp_yoy",
+    "pmi_manufacturing",
+    "pmi_new_orders_index",
+    "ppi_yoy"
+  ],
+  "macro_raw_parent_series": [
+    "m2_balance",
+    "nominal_gdp_amount",
+    "nominal_gdp_cumulative_amount"
+  ],
+  "authority_boundaries": {
+    "strict_annual_financial": "annual_only;minimum_total_market_cap_cny=15000000000;honest_gaps_preserved;no_half_year_reports;no_interpolation",
+    "custom_industry": "diagnostic_state_research_only;static_2026_taxonomy_not_historical_membership_pit;not_for_single_stock_scoring",
+    "qfq_stock_bars": "return_ratio_and_feature_research;absolute_qfq_level_not_vintage_pit;no_retired_factor_fallback",
+    "official_szse_industry": "independent_exchange_index_breadth_and_momentum_only",
+    "csrc_snapshot_sector": "2013_2020_snapshot_membership_equal_weight_state_research_only"
+    ,"cloudridge_market_index": "factorlab_derived_market_state_carrier;fixed_package_id_and_hash;research_rows_cut_at_2025_12_31"
+    ,"broad_market_reference": "official_csindex_snapshot;market_state_reference_only;research_rows_cut_at_2025_12_31"
+  },
+  "nonblocking_macro_enhancement_gaps": [
+    "cn_treasury_yield_1y_and_10y_with_release_clock",
+    "yield_curve_10y_minus_1y",
+    "core_cpi_yoy",
+    "social_financing_and_credit_impulse",
+    "pmi_finished_goods_and_raw_material_inventory",
+    "industrial_finished_goods_inventory_yoy",
+    "fund_flow_cycle_and_excess_liquidity_components"
+  ],
+  "forbidden_inputs": [
+    "adjust_factors_cn_a_xdxr_v8_20260808",
+    "bars_cn_a_1d_qfq_canonical_xdxr_v8_factorlab_2009_2025_20260813",
+    "bars_cn_a_1d_qfq_canonical_20260626_sina_auto",
+    "macro_fundamental_timeseries_cn_v52_risk_off_contract_shape_repaired_denied_20260718",
+    "market_wide_structured_financial_products_without_single_stock_pit_grant"
+  ],
+  "pairing_gate": {
+    "required_surface_failures_must_equal": 0,
+    "state_catalog_must_be_revalidated_on_xdxr_v9": true,
+    "fresh_oos": false,
+    "production_authority": false
+  }
+}

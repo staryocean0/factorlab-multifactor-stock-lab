@@ -1,0 +1,132 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage4_observable_factor_pairing@1.0",
+  "status": "result_free_stage4_pairing_contract_frozen",
+  "stage": "stage4_observable_context_factor_pairing",
+  "objects": [
+    "S_obs",
+    "index_component_contribution",
+    "industry_component_contribution"
+  ],
+  "factor_result_identity": "V1_selected_holdings_linked_log_component_attribution_consumed_history_only",
+  "legacy_same_month_trend_column_allowed": false,
+  "state_join": "decision_month_uses_previous_calendar_month_S_obs",
+  "hypotheses": [
+    {
+      "hypothesis_id": "H_INDEX_UP",
+      "factor": "index",
+      "condition": "up",
+      "expected_direction": "enhance",
+      "financial_mechanism": "uptrend strengthens market skeleton"
+    },
+    {
+      "hypothesis_id": "H_INDEX_DOWN",
+      "factor": "index",
+      "condition": "down",
+      "expected_direction": "weaken",
+      "financial_mechanism": "downtrend weakens market skeleton"
+    },
+    {
+      "hypothesis_id": "H_INDUSTRY_UP",
+      "factor": "industry",
+      "condition": "up",
+      "expected_direction": "enhance",
+      "financial_mechanism": "uptrend supports industry participation"
+    },
+    {
+      "hypothesis_id": "H_INDUSTRY_SIDEWAYS",
+      "factor": "industry",
+      "condition": "sideways",
+      "expected_direction": "enhance",
+      "financial_mechanism": "sideways regime supports industry opportunity"
+    },
+    {
+      "hypothesis_id": "H_INDUSTRY_DOWN",
+      "factor": "industry",
+      "condition": "down",
+      "expected_direction": "weaken",
+      "financial_mechanism": "downtrend weakens industry contribution"
+    }
+  ],
+  "excluded_factors": [
+    "size",
+    "other_residual"
+  ],
+  "multiplicity_family_size": 5,
+  "statistics": [
+    "condition_inside_outside_monthly_lift",
+    "factor_active_episode_count",
+    "episode_dispersion",
+    "annual_dispersion",
+    "two_clock_report"
+  ],
+  "data_usage": {
+    "2011_05_2016_12": "development_material_pairing",
+    "2017": "development_listing_not_pass_evidence",
+    "2018_2025": "consumed_repeat_comparison_no_retune",
+    "2026": "unread"
+  },
+  "financial_hypothesis_receipt": {
+    "status": "user_mechanism_declared_before_stage4_results",
+    "advisor_interpretation_of_results": "pending",
+    "AI_may_sign_financial_verdict": false
+  },
+  "upstream": {
+    "manifest_digest": "sha256:4e0499c89cd4ac6a46ce66aec001a027c84a6854605ed442ac92a155d3d64b2e",
+    "authority_digest": "sha256:f50babb35339869b338024979a82e8178e13080708c83dab9341e34b3a10742b",
+    "succession_digest": "sha256:7811e69e8a6359f3670edcf5c5e7c96755f4eb5ecf2b188cc3aac2d9770b6937",
+    "stage3_contract_digest": "sha256:7d10af936b33e0af0cc81f26b381dceb6300be1e77fcc05513de67faa44e653e",
+    "stage3_validation_digest": "sha256:3a4636200021ff28d365cad8c798d2d912883c58c1929aaf65612a925b6c03f0"
+  },
+  "input_digests": {
+    "formal": {
+      "state_months.csv": "sha256:e4aecf7f5d1567fc5e30ab3e22c0bf98b44223190234e3df53a72dc46ceef404",
+      "monthly_selector_panel.csv": "sha256:bfd8543a23086ca46c0b92fa29acb0d8ff22b351108ff492d9598da2df3e7e13"
+    },
+    "isolated": {
+      "state_months.csv": "sha256:e4aecf7f5d1567fc5e30ab3e22c0bf98b44223190234e3df53a72dc46ceef404",
+      "monthly_selector_panel.csv": "sha256:bfd8543a23086ca46c0b92fa29acb0d8ff22b351108ff492d9598da2df3e7e13"
+    }
+  },
+  "output_inventory": [
+    "pairing_panel.csv",
+    "annual_dispersion.csv",
+    "episode_dispersion.csv",
+    "hypothesis_summary.csv",
+    "advisor_interpretation_request.json",
+    "result.json"
+  ],
+  "formal_isolated_byte_identity_required": true,
+  "semantic_invariants": {
+    "observable_state_equals_latent_operator_state": false,
+    "user_supplies_operator_count": false,
+    "model_learns_operator_matrices": true,
+    "model_learns_operator_assignments": true,
+    "stage3_may_select_operator_count": false,
+    "effective_operator_count_is_post_training_evidence": true,
+    "portfolio_top_k_is_operator_count": false
+  },
+  "authority": {
+    "stage4_execution_allowed": true,
+    "stage5_execution_allowed": false,
+    "model_training_allowed": false,
+    "account_execution_allowed": false,
+    "production_authority": false
+  },
+  "fresh_oos": false,
+  "production_authority": false,
+  "source_closure": {
+    "docs/ops/reaka_multifactor_current_manifest@1.1.json": "sha256:4b7f031f3f576624d8a17cca627ee047c4896894f9dc912621fc8ddaf0f2a530",
+    "docs/ops/state_factor_research_state_machine@2.0.json": "sha256:d22737f4a4889cd9e538f7c0175089f10f9a99c9c2055d9f3621baf82a041cd1",
+    "docs/ops/reaka_v2_stage3_observable_context@2.0.json": "sha256:7b28b8f36bb3da04c9f40234167015335664bf6f5886368525581ca307a244cd",
+    "docs/ops/reaka_v2_stage4_observable_factor_pairing_whitepaper.md": "sha256:22e394ad2481bbaa09d64368c15a2cb25a1a224e27e8258432cc6f459184ddf3",
+    "docs/user/reaka_v2_stage4_observable_factor_pairing_workflow.md": "sha256:f90a3d7751b698f83d3a77d0439c9f9152f53c3d92198131b8ea316b7fe20046",
+    "docs/user/reaka_multifactor_current_workflow_v1_2.md": "sha256:ce94d58d7137f193dfac2fe669a696cac5eec6c0daf8697efae305f65cafe7fd",
+    "src/factor_lab/factor_rotation/reaka_v2_stage4_observable_factor_pairing_v1.py": "sha256:506010c630dae3b256681c9bb54ab0f59017f42a2b5234621bdcee496fc4af55",
+    "scripts/factor_rotation/build_reaka_v2_stage4_observable_factor_pairing_v1.py": "sha256:d6be32b22b7e6a8a7e18cce10cfe644a2078ae81bad246379bb0f4def8d80aad",
+    "scripts/factor_rotation/run_reaka_v2_stage4_observable_factor_pairing_v1.py": "sha256:2cf0080a41b1010f0883ee2761ce87d0cc2e572520523ee3d81fb85f4f556507",
+    "scripts/factor_rotation/validate_reaka_v2_stage4_observable_factor_pairing_v1.py": "sha256:464a72ba1061ff2d4980609b3f263cdbaa50232466aff21743983b907b30ab66",
+    "scripts/factor_rotation/close_reaka_v2_stage4_observable_factor_pairing_v1.py": "sha256:d281d25487d8134afb8fd7b0f54afcc42dae95ab4ee48f884555a2e66530b7e2",
+    "tests/unit/test_reaka_v2_stage4_observable_factor_pairing_v1.py": "sha256:beeaf7770000a5f269c8f5b82481e4ae09f46363f4657a2566f602dc06f12594"
+  },
+  "canonical_digest": "sha256:f7041b70a2220eea3083578df6ce2ef191ab1cb3f83cf588c502a46155085fdd"
+}

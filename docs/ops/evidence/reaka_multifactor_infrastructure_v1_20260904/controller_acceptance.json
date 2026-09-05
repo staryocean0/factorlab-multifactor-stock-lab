@@ -1,0 +1,22 @@
+{
+  "schema_id": "factorlab.reaka_multifactor_infrastructure_controller_acceptance@1.0",
+  "status": "accepted_current_normative_closure_waiting_user_stage4_checkpoint",
+  "validation_digest": "sha256:aea29d691c787d61902ae46a5ef6dda8951465088c1111508cae7453ccd391c0",
+  "manifest_digest": "sha256:347291c002cfd98797ca84d09201a216289de762e6edc7846b35119b154f9ea9",
+  "stage3_correction_digest": "sha256:e1ff1736423970fb49ff640ea134561ce8cb6ec92f908c73522478e697cc38f3",
+  "semantic_invariants": {
+    "observable_state_equals_latent_operator_state": false,
+    "user_supplies_operator_count": false,
+    "model_learns_operator_matrices": true,
+    "model_learns_operator_assignments": true,
+    "stage3_may_select_operator_count": false,
+    "effective_operator_count_is_post_training_evidence": true,
+    "portfolio_top_k_is_operator_count": false
+  },
+  "next_legal_action": "user_review_then_freeze_stage4_contract",
+  "stage4_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:e9f1177ce7f6beee0ec9ec6ebfdf7795d8a958a8b4c33dab0953eb879e582a7c"
+}

@@ -1,0 +1,24 @@
+{
+  "aggregate_signals_included_in_logical_digest": true,
+  "constituent_audit_included_in_logical_digest": true,
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l1",
+  "full_build_prefix_logical_digests": {
+    "attribution": "sha256:61abfabb6ef1d5da21acf3120cc0912acd6cc2cdb5649d9cc9ca18b07c1fa88f",
+    "constituent_audit": "sha256:0502a2cd675e2faa586d18a29f8d7e6cb9caf3bdc3d4bc59dca92ee2498234a2",
+    "coordinates": "sha256:9d35fd5c2d6a9326c31a1c4ad02d67e2b2cc165207f047ae08ad40f61dbb9e7c",
+    "observations": "sha256:6401eaa017454739bcc565c5081052df9bcd7162e413cca60fad066a9ea20f1d",
+    "signals": "sha256:e7d41b914f863aad2a68f6ba93a6c180de3adc9b45df4b502896d53d507c745d"
+  },
+  "passed": true,
+  "prefix_end_date": "2023-12-31",
+  "prefix_replay_logical_digests": {
+    "attribution": "sha256:61abfabb6ef1d5da21acf3120cc0912acd6cc2cdb5649d9cc9ca18b07c1fa88f",
+    "constituent_audit": "sha256:0502a2cd675e2faa586d18a29f8d7e6cb9caf3bdc3d4bc59dca92ee2498234a2",
+    "coordinates": "sha256:9d35fd5c2d6a9326c31a1c4ad02d67e2b2cc165207f047ae08ad40f61dbb9e7c",
+    "observations": "sha256:6401eaa017454739bcc565c5081052df9bcd7162e413cca60fad066a9ea20f1d",
+    "signals": "sha256:e7d41b914f863aad2a68f6ba93a6c180de3adc9b45df4b502896d53d507c745d"
+  },
+  "schema_version": "datahub.industry_index_attribution.prefix.v1",
+  "threshold_clock": "daily_t_by_bucket_visible_t_minus_1",
+  "whole_quarter_future_threshold_used": false
+}

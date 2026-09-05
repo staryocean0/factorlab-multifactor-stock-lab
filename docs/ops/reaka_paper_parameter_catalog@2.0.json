@@ -1,0 +1,19 @@
+{
+  "schema_id": "factorlab.reaka_paper_parameter_catalog@2.0",
+  "status": "successor_input_identity_requires_fresh_measurement",
+  "base_catalog_digest": "sha256:59bb74b1c0fc48b5b22bd96c32c79f9a416d39b97144bd37666dae5956511485",
+  "input_contract_digest": "sha256:b3c1767aa8a5f8e0944e1b3490ddacb24b8c58b949d967712f477e8f112a67e5",
+  "surface_parameter_count": 22,
+  "user_math_inputs_required": [],
+  "historical_values_are_authority": false,
+  "active_roots_before_measurement": [
+    "network.hidden_dimension"
+  ],
+  "conditional_roots": [
+    "selector.gumbel_temperature"
+  ],
+  "inactive_roots": [
+    "residual.denoiser_architecture"
+  ],
+  "canonical_digest": "sha256:00a6072c3b8cd79a62fc9858825908428f0e7938b4ddd03fc695c6a076cf5b95"
+}

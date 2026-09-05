@@ -1,0 +1,15 @@
+{
+  "decision_clock": "next_governed_cn_a_trading_day_0930_asia_shanghai",
+  "formula": "last_observed_raw_close_in_month * last_visible_total_shares",
+  "frequency": "monthly",
+  "instrument_type": "stock",
+  "interpolation_allowed": false,
+  "latest_fallback_allowed": false,
+  "market": "cn_a",
+  "missing_evidence_policy": "exclude_row_and_record_honest_gap",
+  "price_availability_method": "next_governed_cn_a_trading_day_0000_asia_shanghai",
+  "raw_ingestion_timestamp_used_as_historical_availability": false,
+  "schema_version": "datahub.stock_market_cap_monthly_pit.selection.v1",
+  "share_effective_predicate": "effective_date <= price_day",
+  "visibility_predicate": "max(price_available_at, share_available_at) < decision_as_of"
+}

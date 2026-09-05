@@ -1,0 +1,10 @@
+data_role,state_id,trend,temporal_month_count,prevalence,raw_independent_episode_count,persistent_independent_episode_count,median_raw_duration_months,median_persistent_duration_months,maximum_duration_months,cross_sectional_row_count
+development_material_state_certificate,cloudridge_trend_up,up,8,0.117647058824,6,1,1,3,3,40551
+development_material_state_certificate,cloudridge_trend_sideways,sideways,50,0.735294117647,13,9,3,4,14,274905
+development_material_state_certificate,cloudridge_trend_down,down,10,0.147058823529,8,1,1,3,3,46172
+development_listing_not_pass_evidence,cloudridge_trend_up,up,0,0,0,0,0,0,0,0
+development_listing_not_pass_evidence,cloudridge_trend_sideways,sideways,11,0.916666666667,2,2,5.5,5.5,6,75232
+development_listing_not_pass_evidence,cloudridge_trend_down,down,1,0.0833333333333,1,0,1,0,1,8426
+consumed_repeat_comparison_no_retune,cloudridge_trend_up,up,7,0.0729166666667,6,1,1,2,2,35073
+consumed_repeat_comparison_no_retune,cloudridge_trend_sideways,sideways,83,0.864583333333,12,11,5,6,15,352675
+consumed_repeat_comparison_no_retune,cloudridge_trend_down,down,6,0.0625,6,0,1,0,1,20698

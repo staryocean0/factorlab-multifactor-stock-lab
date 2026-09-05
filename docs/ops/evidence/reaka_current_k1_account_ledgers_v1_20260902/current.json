@@ -1,0 +1,23 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_current@1.0",
+  "status": "accepted_current_strategy_two_ledgers",
+  "strategy_id": "REAKA_D5_H20_R5_CURRENT_GENERATION_V1",
+  "model_identity": "d8-h8-K1-r0_fit_prefix_successor_incumbent",
+  "contract_path": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+  "contract_digest": "sha256:b2a7b1509fc64303ee7c72aac90db2b4f1e3a386b70b27f18c5a42e681c227b7",
+  "formal_output": "output/factor-rotation/reaka_current_k1_account_ledgers_v1_2011_2026/formal",
+  "isolated_output": "output/factor-rotation/reaka_current_k1_account_ledgers_v1_2011_2026/isolated",
+  "result_digest": "sha256:1ff96839b5ff849b53c984aa596fd9bbb75e7e8fa64a35cee532def0ad78aaee",
+  "validation_report_path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/validation_v1_5/validation_report.json",
+  "validation_report_digest": "sha256:369f1a39f2a33918744194ff21027a1f84fae5324058708661d39639f30ff666",
+  "controller_acceptance_path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/validation_v1_5/controller_acceptance.json",
+  "controller_acceptance_digest": "sha256:5a6d5541634502d741632e6dc24d68d859b5f75ed2ce0a170120f0634be766c1",
+  "selection_opportunity_ledger_is_current": true,
+  "realized_pnl_ledger_is_current": true,
+  "old_d8_K2_opportunity_ledger_remains_queryable_historical": true,
+  "old_2019_2020_current_K1_trade_ledger_remains_queryable_partial_predecessor": true,
+  "result_backflow_allowed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:beae12ad4f499fbad05ad8739e7e4cfd474f4d6a67f65401a67bddcf22362935"
+}

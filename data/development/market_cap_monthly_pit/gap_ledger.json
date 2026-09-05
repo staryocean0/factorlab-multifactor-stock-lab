@@ -1,0 +1,19 @@
+{
+  "blocking_admitted_scope_gap_count": 0,
+  "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+  "gap_rows_path": "market_cap_gaps.parquet",
+  "honest_non_admitted_gap_count": 682,
+  "interior_gap_symbol_count": 0,
+  "interior_month_gap_count": 0,
+  "interior_month_gaps": [],
+  "interior_symbol_month_gap_count": 0,
+  "interpolation_allowed": false,
+  "latest_fallback_allowed": false,
+  "never_admitted_symbol_count": 11,
+  "never_admitted_symbol_month_gap_count": 663,
+  "prefix_gap_symbol_count": 7,
+  "prefix_symbol_month_gap_count": 19,
+  "schema_version": "datahub.stock_market_cap_monthly_pit.gaps.v1",
+  "suffix_gap_symbol_count": 0,
+  "suffix_symbol_month_gap_count": 0
+}

@@ -1,0 +1,15 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage4_observable_factor_pairing_controller_acceptance@1.0",
+  "status": "machine_evidence_accepted_waiting_user_financial_review",
+  "validation_digest": "sha256:e1eeb80dd646d5bf19082e46b9e407bc028b093ff1f8f00d9bd5d7b7f6fcba05",
+  "contract_digest": "sha256:f7041b70a2220eea3083578df6ce2ef191ab1cb3f83cf588c502a46155085fdd",
+  "result_digest": "sha256:102cbdd49f9beb3b8342e85b25b18ee63390e08674695a64fd633a6bb2b9a77b",
+  "review_request_digest": "sha256:76b12f4cb830992875d52e0da0c4a8bb8841db1909342ffddbe567f8f04029b0",
+  "advisor_interpretation_receipt_present": false,
+  "next_legal_action": "user_financial_review_of_stage4_evidence",
+  "stage5_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:37795a2b060ad5ac08087ab63a06bcefa9bfc793c1975245dbaf7cb1c0aa2323"
+}

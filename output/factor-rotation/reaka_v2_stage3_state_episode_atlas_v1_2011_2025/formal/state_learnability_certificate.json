@@ -1,0 +1,375 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_state_learnability_certificate@1.0",
+  "status": "passed_slow_context_route_only_waiting_user_stage4_checkpoint",
+  "stage": "stage3_state_episode_atlas",
+  "version_id": "REAKA_STRATEGY_V2_STATE_WEIGHTED_ORTHOGONAL_14",
+  "state_identity": {
+    "scope": "global_market",
+    "carrier": "CN_A_CLOUDRIDGE_BETA_EQW",
+    "grain": "monthly",
+    "decision_state_source": "previous_calendar_month",
+    "trend_deadband": "one_prior_daily_sigma_times_sqrt_source_month_trading_days",
+    "states": [
+      "up",
+      "sideways",
+      "down"
+    ],
+    "volatility_role": "diagnostic_label_only_not_episode_split",
+    "minimum_persistent_segment_months": 2
+  },
+  "development_boundary": {
+    "decision_month_min": "2011-05",
+    "decision_month_max": "2016-12",
+    "temporal_month_count": 68,
+    "physical_transition_count": 67,
+    "state_switch_count": 26,
+    "cross_sectional_row_count": 361628,
+    "cross_sectional_rows_do_not_multiply_global_episode_count": true
+  },
+  "raw_monthly_state_certificates": {
+    "up": {
+      "schema_id": "factorlab.state_learnability_certificate@1.0",
+      "profile": {
+        "state_id": "cloudridge_trend_up",
+        "scope": "global_market",
+        "history_years": 5.666666666666667,
+        "prevalence": 0.11764705882352941,
+        "independent_episode_count": 6,
+        "effective_transition_count": 8.0,
+        "observed_transition_count": 8,
+        "state_switch_count": 12,
+        "factor_active_episode_count": 6,
+        "median_duration_steps": 1.0,
+        "cross_sectional_row_count": 361628,
+        "latent_dim": 8,
+        "proposed_operator_count": 2,
+        "operator_parameterization": "full",
+        "low_rank_rank": 1,
+        "financial_mechanism_approved": true,
+        "data_ready": true
+      },
+      "route": "continuous_context_shared_dynamics",
+      "frequency_class": "low_one_to_four_independent_episodes_per_year",
+      "discrete_operator_expert_allowed": false,
+      "unshrunk_full_matrix_allowed": false,
+      "standalone_rank_expert_allowed": false,
+      "allowed_parameterizations": [
+        "shared_base_operator",
+        "continuous_context_conditioning",
+        "diagonal_or_low_rank_deviation"
+      ],
+      "fusion_role": "continuous_context_modulates_fast_expert",
+      "blockers": [
+        "discrete_state_underidentified_use_continuous_context"
+      ],
+      "diagnostics": {
+        "episodes_per_year": 1.0588235294117647,
+        "independent_episode_count": 6,
+        "factor_active_episode_count": 6,
+        "effective_transition_count": 8.0,
+        "state_switch_count": 12,
+        "parameter_degrees_per_operator": 64,
+        "incremental_operator_degrees": 64,
+        "effective_transitions_per_degree": 0.125,
+        "cross_sectional_row_count": 361628
+      },
+      "cross_sectional_rows_do_not_multiply_global_episode_count": true,
+      "oversampling_does_not_increase_event_information": true,
+      "fresh_oos": false,
+      "production_authority": false,
+      "canonical_digest": "sha256:655fe4aaf961b5af72caa14dfbfcb31a209472cddb230127591f11eb20caca91"
+    },
+    "sideways": {
+      "schema_id": "factorlab.state_learnability_certificate@1.0",
+      "profile": {
+        "state_id": "cloudridge_trend_sideways",
+        "scope": "global_market",
+        "history_years": 5.666666666666667,
+        "prevalence": 0.7352941176470589,
+        "independent_episode_count": 13,
+        "effective_transition_count": 49.0,
+        "observed_transition_count": 49,
+        "state_switch_count": 24,
+        "factor_active_episode_count": 13,
+        "median_duration_steps": 3.0,
+        "cross_sectional_row_count": 361628,
+        "latent_dim": 8,
+        "proposed_operator_count": 2,
+        "operator_parameterization": "full",
+        "low_rank_rank": 1,
+        "financial_mechanism_approved": true,
+        "data_ready": true
+      },
+      "route": "continuous_context_shared_dynamics",
+      "frequency_class": "low_one_to_four_independent_episodes_per_year",
+      "discrete_operator_expert_allowed": false,
+      "unshrunk_full_matrix_allowed": false,
+      "standalone_rank_expert_allowed": false,
+      "allowed_parameterizations": [
+        "shared_base_operator",
+        "continuous_context_conditioning",
+        "diagonal_or_low_rank_deviation"
+      ],
+      "fusion_role": "continuous_context_modulates_fast_expert",
+      "blockers": [
+        "discrete_state_underidentified_use_continuous_context"
+      ],
+      "diagnostics": {
+        "episodes_per_year": 2.2941176470588234,
+        "independent_episode_count": 13,
+        "factor_active_episode_count": 13,
+        "effective_transition_count": 49.0,
+        "state_switch_count": 24,
+        "parameter_degrees_per_operator": 64,
+        "incremental_operator_degrees": 64,
+        "effective_transitions_per_degree": 0.765625,
+        "cross_sectional_row_count": 361628
+      },
+      "cross_sectional_rows_do_not_multiply_global_episode_count": true,
+      "oversampling_does_not_increase_event_information": true,
+      "fresh_oos": false,
+      "production_authority": false,
+      "canonical_digest": "sha256:296a9470ef77e5db465ce7115697b572c75f76d069944decbff490c0f33bc165"
+    },
+    "down": {
+      "schema_id": "factorlab.state_learnability_certificate@1.0",
+      "profile": {
+        "state_id": "cloudridge_trend_down",
+        "scope": "global_market",
+        "history_years": 5.666666666666667,
+        "prevalence": 0.14705882352941177,
+        "independent_episode_count": 8,
+        "effective_transition_count": 10.0,
+        "observed_transition_count": 10,
+        "state_switch_count": 16,
+        "factor_active_episode_count": 8,
+        "median_duration_steps": 1.0,
+        "cross_sectional_row_count": 361628,
+        "latent_dim": 8,
+        "proposed_operator_count": 2,
+        "operator_parameterization": "full",
+        "low_rank_rank": 1,
+        "financial_mechanism_approved": true,
+        "data_ready": true
+      },
+      "route": "continuous_context_shared_dynamics",
+      "frequency_class": "low_one_to_four_independent_episodes_per_year",
+      "discrete_operator_expert_allowed": false,
+      "unshrunk_full_matrix_allowed": false,
+      "standalone_rank_expert_allowed": false,
+      "allowed_parameterizations": [
+        "shared_base_operator",
+        "continuous_context_conditioning",
+        "diagonal_or_low_rank_deviation"
+      ],
+      "fusion_role": "continuous_context_modulates_fast_expert",
+      "blockers": [
+        "discrete_state_underidentified_use_continuous_context"
+      ],
+      "diagnostics": {
+        "episodes_per_year": 1.4117647058823528,
+        "independent_episode_count": 8,
+        "factor_active_episode_count": 8,
+        "effective_transition_count": 10.0,
+        "state_switch_count": 16,
+        "parameter_degrees_per_operator": 64,
+        "incremental_operator_degrees": 64,
+        "effective_transitions_per_degree": 0.15625,
+        "cross_sectional_row_count": 361628
+      },
+      "cross_sectional_rows_do_not_multiply_global_episode_count": true,
+      "oversampling_does_not_increase_event_information": true,
+      "fresh_oos": false,
+      "production_authority": false,
+      "canonical_digest": "sha256:c347296768224d2846c8441de1f007298976cf40ee6583e674d56bed559a8b9d"
+    }
+  },
+  "persistent_segment_state_certificates": {
+    "up": {
+      "schema_id": "factorlab.state_learnability_certificate@1.0",
+      "profile": {
+        "state_id": "cloudridge_trend_up",
+        "scope": "global_market",
+        "history_years": 5.666666666666667,
+        "prevalence": 0.04411764705882353,
+        "independent_episode_count": 1,
+        "effective_transition_count": 3.0,
+        "observed_transition_count": 3,
+        "state_switch_count": 2,
+        "factor_active_episode_count": 1,
+        "median_duration_steps": 3.0,
+        "cross_sectional_row_count": 361628,
+        "latent_dim": 8,
+        "proposed_operator_count": 2,
+        "operator_parameterization": "full",
+        "low_rank_rank": 1,
+        "financial_mechanism_approved": true,
+        "data_ready": true
+      },
+      "route": "diagnostic_only",
+      "frequency_class": "rare_less_than_one_independent_episode_per_year",
+      "discrete_operator_expert_allowed": false,
+      "unshrunk_full_matrix_allowed": false,
+      "standalone_rank_expert_allowed": false,
+      "allowed_parameterizations": [],
+      "fusion_role": "no_strategy_score_authority",
+      "blockers": [
+        "independent_episode_or_transition_support_absent"
+      ],
+      "diagnostics": {
+        "episodes_per_year": 0.1764705882352941,
+        "independent_episode_count": 1,
+        "factor_active_episode_count": 1,
+        "effective_transition_count": 3.0,
+        "state_switch_count": 2,
+        "parameter_degrees_per_operator": 64,
+        "incremental_operator_degrees": 64,
+        "effective_transitions_per_degree": 0.046875,
+        "cross_sectional_row_count": 361628
+      },
+      "cross_sectional_rows_do_not_multiply_global_episode_count": true,
+      "oversampling_does_not_increase_event_information": true,
+      "fresh_oos": false,
+      "production_authority": false,
+      "canonical_digest": "sha256:f0481cb9575699a4f4a962bfc1bdea837519623ba348ea373e1e6a625b623173"
+    },
+    "sideways": {
+      "schema_id": "factorlab.state_learnability_certificate@1.0",
+      "profile": {
+        "state_id": "cloudridge_trend_sideways",
+        "scope": "global_market",
+        "history_years": 5.666666666666667,
+        "prevalence": 0.6764705882352942,
+        "independent_episode_count": 9,
+        "effective_transition_count": 45.0,
+        "observed_transition_count": 45,
+        "state_switch_count": 17,
+        "factor_active_episode_count": 9,
+        "median_duration_steps": 4.0,
+        "cross_sectional_row_count": 361628,
+        "latent_dim": 8,
+        "proposed_operator_count": 2,
+        "operator_parameterization": "full",
+        "low_rank_rank": 1,
+        "financial_mechanism_approved": true,
+        "data_ready": true
+      },
+      "route": "continuous_context_shared_dynamics",
+      "frequency_class": "low_one_to_four_independent_episodes_per_year",
+      "discrete_operator_expert_allowed": false,
+      "unshrunk_full_matrix_allowed": false,
+      "standalone_rank_expert_allowed": false,
+      "allowed_parameterizations": [
+        "shared_base_operator",
+        "continuous_context_conditioning",
+        "diagonal_or_low_rank_deviation"
+      ],
+      "fusion_role": "continuous_context_modulates_fast_expert",
+      "blockers": [
+        "discrete_state_underidentified_use_continuous_context"
+      ],
+      "diagnostics": {
+        "episodes_per_year": 1.588235294117647,
+        "independent_episode_count": 9,
+        "factor_active_episode_count": 9,
+        "effective_transition_count": 45.0,
+        "state_switch_count": 17,
+        "parameter_degrees_per_operator": 64,
+        "incremental_operator_degrees": 64,
+        "effective_transitions_per_degree": 0.703125,
+        "cross_sectional_row_count": 361628
+      },
+      "cross_sectional_rows_do_not_multiply_global_episode_count": true,
+      "oversampling_does_not_increase_event_information": true,
+      "fresh_oos": false,
+      "production_authority": false,
+      "canonical_digest": "sha256:9ef4bb90df71dfdc4584b10bce46e7eabd44d976c3454f3edc15778276642f68"
+    },
+    "down": {
+      "schema_id": "factorlab.state_learnability_certificate@1.0",
+      "profile": {
+        "state_id": "cloudridge_trend_down",
+        "scope": "global_market",
+        "history_years": 5.666666666666667,
+        "prevalence": 0.04411764705882353,
+        "independent_episode_count": 1,
+        "effective_transition_count": 3.0,
+        "observed_transition_count": 3,
+        "state_switch_count": 2,
+        "factor_active_episode_count": 1,
+        "median_duration_steps": 3.0,
+        "cross_sectional_row_count": 361628,
+        "latent_dim": 8,
+        "proposed_operator_count": 2,
+        "operator_parameterization": "full",
+        "low_rank_rank": 1,
+        "financial_mechanism_approved": true,
+        "data_ready": true
+      },
+      "route": "diagnostic_only",
+      "frequency_class": "rare_less_than_one_independent_episode_per_year",
+      "discrete_operator_expert_allowed": false,
+      "unshrunk_full_matrix_allowed": false,
+      "standalone_rank_expert_allowed": false,
+      "allowed_parameterizations": [],
+      "fusion_role": "no_strategy_score_authority",
+      "blockers": [
+        "independent_episode_or_transition_support_absent"
+      ],
+      "diagnostics": {
+        "episodes_per_year": 0.1764705882352941,
+        "independent_episode_count": 1,
+        "factor_active_episode_count": 1,
+        "effective_transition_count": 3.0,
+        "state_switch_count": 2,
+        "parameter_degrees_per_operator": 64,
+        "incremental_operator_degrees": 64,
+        "effective_transitions_per_degree": 0.046875,
+        "cross_sectional_row_count": 361628
+      },
+      "cross_sectional_rows_do_not_multiply_global_episode_count": true,
+      "oversampling_does_not_increase_event_information": true,
+      "fresh_oos": false,
+      "production_authority": false,
+      "canonical_digest": "sha256:a5631c67e1e19a652946eccfa3e713a42733c9a88f9ee4e55fe9eee3b835eb62"
+    }
+  },
+  "persistent_independent_episode_count_by_state": {
+    "up": 1,
+    "sideways": 9,
+    "down": 1
+  },
+  "composite_learnability_route": "slow_context_low_rank_modulator",
+  "route_basis": "global monthly context with only one persistent up segment and one persistent down segment; distinct full Koopman operators are not identifiable",
+  "discrete_operator_expert_allowed": false,
+  "unshrunk_full_matrix_allowed": false,
+  "standalone_rank_expert_allowed": false,
+  "slow_context_direct_stock_rank_forbidden": true,
+  "stage4_pairing_required_before_fusion": true,
+  "stage5_parameter_and_fusion_freeze_required": true,
+  "stage6_training_allowed": false,
+  "required_stage3_items": {
+    "state_scope_global_sector_or_asset": true,
+    "independent_episode_count": true,
+    "transition_count": true,
+    "state_switch_count": true,
+    "duration_and_prevalence": true,
+    "temporal_vs_cross_sectional_support": true,
+    "state_learnability_certificate": true
+  },
+  "all_stage3_items_present": true,
+  "result_selection_reads": [
+    "2011-05/2016-12 development state structure"
+  ],
+  "result_selection_does_not_read": [
+    "2017 listing",
+    "2018-2025 consumed repeat comparison",
+    "factor returns",
+    "model scores",
+    "account returns",
+    "2026 decision rows"
+  ],
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:d83e2f37b09847fc1622ef24db626bacec1a31a636f24852a1c96a920eb2ae12"
+}

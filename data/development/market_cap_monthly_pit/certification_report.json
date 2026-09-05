@@ -1,0 +1,20 @@
+{
+  "all_checks_passed": true,
+  "capability_decision": "granted_for_fixed_version_factorlab_history",
+  "checks": {
+    "admitted_symbol_interior_gap_zero": true,
+    "decision_months_204_of_204": true,
+    "decision_period_exact": true,
+    "deterministic_replay_passed": true,
+    "duplicate_keys_zero": true,
+    "future_fill_forbidden": true,
+    "global_interior_month_gap_zero": true,
+    "honest_gaps_classified": true,
+    "latest_fallback_forbidden": true,
+    "prefix_invariance_passed": true,
+    "visibility_violations_zero": true
+  },
+  "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+  "production_authority": false,
+  "schema_version": "datahub.stock_market_cap_monthly_pit.certification.v1"
+}

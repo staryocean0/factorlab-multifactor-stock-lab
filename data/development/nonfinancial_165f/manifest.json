@@ -1,0 +1,48 @@
+{
+  "artifacts": {
+    "coordinates.parquet": "0899dbdd0514c1b37968697ff854158fc1f20026131dce666e23b60ce2e2fbaa",
+    "coverage_report.json": "c84397d432a05f924dffe4b9c260452ada5a17a7a5acba8edc996324fbcd4333",
+    "lineage_audit.json": "f0012f362240a983e352ccf5554bfa6cc566a3d0e28764d62ecda3472830c230",
+    "stock_nonfinancial_masks.parquet": "b1fe1e32a2b0b272a9edec0f517b1e70544b08ea3a5e154fd8e7fc62a3bbf63d",
+    "stock_nonfinancial_surface.parquet": "0072b61ceb12818715b5461e5abfbe4e8e2e55d2439d2cf7642a6bbd34d1b8fe"
+  },
+  "canonical_digest": "sha256:669ae1fdc79c3898dfecb76d89bba8392d86c1d765b788b7d8a614f42156c773",
+  "dataset_version": "factorlab_multifactor_stock_nonfinancial_165f_2009_2025_v2_xdxr_v9_20260814",
+  "decision_month_count": 204,
+  "decision_period": {
+    "end": "2025-12",
+    "start": "2009-01"
+  },
+  "factor_count": 165,
+  "fresh_oos": false,
+  "immutable": true,
+  "latest_alias_allowed": false,
+  "missing_policy": "honest_warmup_mask;never_zero_fill",
+  "parents": {
+    "market_cap_surface": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/stock_market_cap_monthly_pit/dataset_version=stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812/market_cap_surface.parquet",
+      "sha256": "2dbfd339ff65396ca14519ec3a5e1003b5073449334ea9e3d59b86e723d38e29"
+    },
+    "raw_bars": {
+      "authority": "xdxr_v9_fixed_qfq_return_and_feature_research",
+      "duplicate_coordinate_count": 0,
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1d_qfq_canonical_xdxr_v9_factorlab_2009_2025_20260814/instrument_type=stock",
+      "physical_end": "2025-12-31",
+      "physical_start": "2007-01-04",
+      "requested_warmup_start": "2007-01-01",
+      "row_count": 13643114,
+      "sha256": "87ab8717248785627aabf9c768bf6c7f5566598f56cb6e8e8a67ec88be1ee66f",
+      "symbol_count": 5448
+    },
+    "source_resolution": {
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/macro_regime_dual_strategy_round3_opaque_annual_rolling_inputs_v2_20260810/stock_source_resolution.json",
+      "sha256": "7a434830a938054ed95b0a731362bdac4418af19cd2e51b2d4695a358378f6e9"
+    }
+  },
+  "production_authority": false,
+  "record_count": 125355,
+  "schema_id": "factorlab.common_history_stock_nonfinancial_surface.v1",
+  "scientific_claim_increment": 0,
+  "state": "READY",
+  "strategy_runtime_changed": false
+}

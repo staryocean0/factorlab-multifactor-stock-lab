@@ -1,0 +1,21 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage4_observable_factor_pairing_result@1.0",
+  "status": "stage4_machine_evidence_complete_waiting_user_financial_review",
+  "contract_digest": "sha256:f7041b70a2220eea3083578df6ce2ef191ab1cb3f83cf588c502a46155085fdd",
+  "advisor_request_digest": "sha256:23a8bd88a0c66e1ee8547f42acf35a36cd1c8385bec3aa336a420c974fe3399d",
+  "output_digests": {
+    "pairing_panel.csv": "sha256:d8291b0a2966d90da62d77bca2f52357b9b970f5ec2231abaa9380665207064f",
+    "annual_dispersion.csv": "sha256:317ce3138aebd636f9dcd0a51c4cbb8c9542bf8de2d1b5e405c3be4aac2927e1",
+    "episode_dispersion.csv": "sha256:3c16539cb37c201b6639cc619844c4b0c88746ceb9b510031b70c3cb7ebe04fc",
+    "hypothesis_summary.csv": "sha256:6a41bd062455644ef8392db19e36ed1f158b226fc51830cab5dcedfd84f3acca",
+    "advisor_interpretation_request.json": "sha256:77f302be664cc833dbb8d9f0bdcd0e30af6d49c9188c7c50c3fe3ff707a64501"
+  },
+  "legacy_same_month_trend_used": false,
+  "hypothesis_count": 5,
+  "advisor_interpretation_receipt_present": false,
+  "stage5_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:102cbdd49f9beb3b8342e85b25b18ee63390e08674695a64fd633a6bb2b9a77b"
+}

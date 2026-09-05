@@ -1,0 +1,44 @@
+{
+  "artifacts": {
+    "macro_asof_lineage.parquet": "eb8a0bc04f38c8a05b1cbce7ad7c7fc60e0560b366ba8515fb3216cea813904c",
+    "macro_masks.parquet": "44e5cca68db28b84c50cac2da79339f1212c20aa5bd50f2d7ef0b089e601b61e",
+    "macro_values.parquet": "b7c9c0f9b4c3d1074cd85a64f9eaec0af7fe312d6a00940850aa5970a69afc0c",
+    "series_catalog.json": "f7febc04422f57038afc65b289b1d11283b2be66d5d0436a7517e765e2c54088"
+  },
+  "canonical_digest": "sha256:675df8bd93f04bb3966061b56360967f6acea89daccacbdd8db206ed2b2bf7ff",
+  "certified_condition_series_count": 6,
+  "dataset_version": "multifactor_macro_input_2009_2025_v1_20260814",
+  "decision_count": 204,
+  "forward_return_rows_read": 0,
+  "immutable": true,
+  "latest_alias_allowed": false,
+  "parents": {
+    "coordinates": {
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/factorlab_multifactor_stock_nonfinancial_165f_2009_2025_v2_xdxr_v9_20260814/coordinates.parquet",
+      "sha256": "0899dbdd0514c1b37968697ff854158fc1f20026131dce666e23b60ce2e2fbaa"
+    },
+    "macro_product": {
+      "certification_sha256": "0628ce771d3fc99dfb8c0d0908aa2d7d2223166059c16c7286a2f143d06a27cd",
+      "dataset_version": "macro_fundamental_timeseries_cn_v90_macro_regime_dual_strategy_annual_rolling_granted_20260810",
+      "manifest_sha256": "22267462a17e05518030f36ba192fe1792b1838c7bab3668222c9d6d992c99ca",
+      "observations_sha256": "44a25d7dabb35b8bd6c9829fbc1b6ce4a26cbea6a1f82f21ce2f4e1dcaa68856"
+    }
+  },
+  "production_authority": false,
+  "raw_parent_series_count": 3,
+  "schema_id": "factorlab.multifactor_macro_input_manifest.v1",
+  "series_count": 9,
+  "series_ids": [
+    "industrial_value_added_yoy",
+    "m2_balance",
+    "m2_yoy",
+    "nominal_gdp_amount",
+    "nominal_gdp_cumulative_amount",
+    "nominal_gdp_yoy",
+    "pmi_manufacturing",
+    "pmi_new_orders_index",
+    "ppi_yoy"
+  ],
+  "state": "READY_RESEARCH_INPUT",
+  "state_factor_pairing_started": false
+}

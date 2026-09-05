@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "macro_regime_dual_strategy_reaka_paper_v1_spec@1.0",
+  "title": "Formula-faithful REAKA V1 frozen implementation specification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "implementation_id",
+    "strategy_id",
+    "arm_id",
+    "paper_contract_digest",
+    "paper_contract",
+    "config",
+    "ancestor_consumed_scope",
+    "run_classification",
+    "search_policy",
+    "canonical_digest"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "macro_regime_dual_strategy_reaka_paper_v1_spec@1.0"
+    },
+    "implementation_id": {
+      "const": "reaka_paper_architecture_v1"
+    },
+    "strategy_id": {
+      "const": "reaka_paper_formula_faithful_v1"
+    },
+    "arm_id": {
+      "const": "dual_lstm_gate_aks_conditional_ddpm_joint_v1"
+    },
+    "paper_contract_digest": {
+      "$ref": "#/$defs/digest"
+    },
+    "paper_contract": {
+      "type": "object"
+    },
+    "config": {
+      "type": "object"
+    },
+    "ancestor_consumed_scope": {
+      "type": "object",
+      "required": [
+        "period",
+        "ancestor_evidence_digest",
+        "historical_scope_previously_consumed",
+        "derived_from_evidence_ref"
+      ],
+      "properties": {
+        "period": {
+          "const": "2021-2025"
+        },
+        "ancestor_evidence_digest": {
+          "$ref": "#/$defs/digest"
+        },
+        "historical_scope_previously_consumed": {
+          "const": true
+        },
+        "derived_from_evidence_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "run_classification": {
+      "$ref": "#/$defs/diagnostic_only"
+    },
+    "search_policy": {
+      "type": "object",
+      "required": [
+        "hyperparameter_search_count",
+        "result_conditioned_parameter_change_allowed",
+        "retry_policy"
+      ],
+      "properties": {
+        "hyperparameter_search_count": {
+          "const": 0
+        },
+        "result_conditioned_parameter_change_allowed": {
+          "const": false
+        },
+        "retry_policy": {
+          "const": "exact_replay_or_bug_fix_only"
+        }
+      },
+      "additionalProperties": false
+    },
+    "canonical_digest": {
+      "$ref": "#/$defs/digest"
+    }
+  },
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "diagnostic_only": {
+      "type": "object",
+      "required": [
+        "implementation_sanity",
+        "diagnostic_only",
+        "fresh_oos",
+        "scientific_vote_allowed",
+        "scientific_claim_count_delta",
+        "eligible_for_promotion_review",
+        "formal_replacement_allowed",
+        "production_authority"
+      ],
+      "properties": {
+        "implementation_sanity": {
+          "const": true
+        },
+        "diagnostic_only": {
+          "const": true
+        },
+        "fresh_oos": {
+          "const": false
+        },
+        "scientific_vote_allowed": {
+          "const": false
+        },
+        "scientific_claim_count_delta": {
+          "const": 0
+        },
+        "eligible_for_promotion_review": {
+          "const": false
+        },
+        "formal_replacement_allowed": {
+          "const": false
+        },
+        "production_authority": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

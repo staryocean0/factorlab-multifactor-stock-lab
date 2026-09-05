@@ -1,0 +1,64 @@
+{
+  "availability_mode": "consumed_history",
+  "bar_authority_segments": [
+    {
+      "end": "2012-12-31",
+      "mode": "consumed_history",
+      "start": "2008-09-23"
+    },
+    {
+      "end": "2020-12-31",
+      "mode": "schedule_bound_pit",
+      "start": "2013-01-01"
+    },
+    {
+      "end": "2025-12-31",
+      "mode": "consumed_history",
+      "start": "2021-01-01"
+    }
+  ],
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l2",
+  "first_governed_target_day": "2009-01-05",
+  "fresh_oos": false,
+  "industry_bucket_count": 80,
+  "level": 2,
+  "materialized_period": {
+    "end": "2025-12-31",
+    "start": "2009-01-05"
+  },
+  "production_authority": false,
+  "requested_period": {
+    "end": "2025-12-31",
+    "start": "2009-01-01"
+  },
+  "research_status": "diagnostic_only",
+  "rows_by_method": {
+    "dir_signal": {
+      "first_valid_day": "2009-01-05",
+      "last_valid_day": "2025-12-31",
+      "row_count": 263634
+    },
+    "equal_weight": {
+      "first_valid_day": "2009-01-05",
+      "last_valid_day": "2025-12-31",
+      "row_count": 263634
+    },
+    "market_cap": {
+      "first_valid_day": "2009-01-05",
+      "last_valid_day": "2025-12-31",
+      "row_count": 263634
+    },
+    "vol_signal": {
+      "first_valid_day": "2009-01-05",
+      "last_valid_day": "2025-12-31",
+      "row_count": 263634
+    }
+  },
+  "schema_version": "datahub.industry_index_common_history.coverage.v1",
+  "scoring_allowed": false,
+  "single_stock_authorized": false,
+  "static_2026_taxonomy_historical_backfill": true,
+  "strategy_effectiveness_claim": false,
+  "trading_day_count": 4130,
+  "training_allowed": false
+}

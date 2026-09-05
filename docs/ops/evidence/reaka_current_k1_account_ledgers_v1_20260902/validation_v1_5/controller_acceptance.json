@@ -1,0 +1,13 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_acceptance@1.0",
+  "status": "accepted_current_strategy_two_ledgers",
+  "validation_report_digest": "sha256:369f1a39f2a33918744194ff21027a1f84fae5324058708661d39639f30ff666",
+  "result_digest": "sha256:1ff96839b5ff849b53c984aa596fd9bbb75e7e8fa64a35cee532def0ad78aaee",
+  "account_snapshot_manifest_digest": "sha256:b652b4c3ddeeef9c4999a5ea7d61af6082a2fe7fa1910d32f3c73fa33b2729ca",
+  "strategy_or_parameter_mutation": false,
+  "result_backflow_allowed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "blockers": [],
+  "canonical_digest": "sha256:5a6d5541634502d741632e6dc24d68d859b5f75ed2ce0a170120f0634be766c1"
+}

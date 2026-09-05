@@ -1,0 +1,75 @@
+{
+  "schema_id": "factorlab.strategy_progressive_development@1.0",
+  "status": "result_free_successor_semantics_frozen",
+  "successor_to": "strategy_annual_session_rebuild@4.0",
+  "predecessor_semantic_digest": "sha256:dfbe8b5621e7eb60bbb335d7bdca87d6e1318a7318df358d306cccc8eacbae7d",
+  "hard_validity_gate": {
+    "compensable_by_performance": false,
+    "domains": [
+      "financial_semantics",
+      "mathematical_identity",
+      "temporal_causality",
+      "execution_accounting",
+      "reproducibility_and_source_closure",
+      "evidence_scope_and_multiplicity",
+      "authority_boundary"
+    ],
+    "failure_action": "invalidate_candidate_economics_and_retain_only_incident_or_counterexample"
+  },
+  "progression_retention": {
+    "requires_all_hard_validity_checks": true,
+    "requires_preregistered_primary_objective": true,
+    "requires_same_comparator_account_and_cost_basis": true,
+    "requires_full_account_repricing_when_investable": true,
+    "minimum_effect_size_gate_allowed": false,
+    "numerical_replay_tolerance_required": true,
+    "positive_improvement_above_numerical_tolerance_is_retained": true,
+    "failed_promotion_gate_may_delete_valid_progress": false,
+    "must_record_tradeoffs_concentration_attempt_id_and_failed_promotion_gates": true,
+    "automatic_runtime_rule_authority": false
+  },
+  "candidate_promotion": {
+    "separate_from_progression_retention": true,
+    "robustness_and_distribution_gates_may_block_promotion": true,
+    "promotion_failure_revokes_retained_progress": false,
+    "retrospective_promotion_grants_fresh_oos": false,
+    "retrospective_promotion_grants_production": false
+  },
+  "fresh_validation": {
+    "requires_one_frozen_candidate": true,
+    "one_shot_common_unseen_interval": true,
+    "candidate_ranking_or_retuning_allowed": false,
+    "no_opportunity_status": "inconclusive",
+    "failed_interval_may_validate_rebuild_using_it": false
+  },
+  "production_authorization": {
+    "requires_fresh_validation": true,
+    "requires_capacity_execution_monitoring_kill_switch_and_rollback": true,
+    "requires_user_financial_authorization": true,
+    "automatic_from_research": false
+  },
+  "decision_statuses": [
+    "invalid_rejected",
+    "evidence_inconclusive",
+    "no_measured_progress",
+    "progress_material_retained",
+    "progress_tradeoff_waiting_financial_owner",
+    "progressive_research_snapshot",
+    "retrospective_candidate_promoted",
+    "fresh_candidate_validated",
+    "production_admitted"
+  ],
+  "post_training_account_audit_required": true,
+  "post_training_account_audit_contract": "docs/ops/post_training_account_audit@1.0.json",
+  "historical_migration": {
+    "old_contracts_and_receipts_are_immutable": true,
+    "old_no_increment_verdicts_are_not_retroactively_rewritten": true,
+    "valid_weak_improvements_may_be_indexed_as_future_material_without_reselection": true,
+    "consumed_history_may_be_rerun_for_new_selection": false
+  },
+  "research_authority": true,
+  "parameter_authority": false,
+  "routing_authority": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:af41d0f66c9ef3a12f61e01afa19dc021b249877a18b6b52244d7c958040141b"
+}

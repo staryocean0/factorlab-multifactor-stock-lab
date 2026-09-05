@@ -1,0 +1,32 @@
+{
+  "all_checks_passed": true,
+  "availability_mode": "consumed_history",
+  "capability_decision": "diagnostic_only",
+  "checks": {
+    "all_rolling_inputs_end_before_trading_day": true,
+    "consumed_history_not_promoted_to_schedule_bound_pit": true,
+    "ends_in_2025": true,
+    "market_cap_visible_before_decision": true,
+    "prefix_invariance_passed": true,
+    "replay_passed": true,
+    "starts_on_first_governed_target_day": true,
+    "static_taxonomy_not_promoted_to_historical_pit": true,
+    "twelve_artifact_family_member_present": true,
+    "weight_sum_max_abs_error_at_most_1e_12": true
+  },
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l2",
+  "denial_reasons": [
+    "static_2026_taxonomy_is_not_historical_pit",
+    "2009_2012_and_2021_2025_bars_are_consumed_history",
+    "no_fresh_out_of_sample_certification"
+  ],
+  "fresh_oos": false,
+  "production_authority": false,
+  "research_status": "diagnostic_only",
+  "schema_version": "datahub.industry_index_common_history.certification.v1",
+  "scoring_allowed": false,
+  "single_stock_authorized": false,
+  "strategy_effectiveness_claim": false,
+  "training_allowed": false,
+  "weight_sum_max_abs_error": 3.3306690738754696e-16
+}

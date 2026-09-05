@@ -1,0 +1,16 @@
+{
+  "schema_id": "factorlab.reaka_controller_succession_audit@274.0",
+  "status": "stage4_machine_evidence_complete_waiting_user_financial_review",
+  "supersedes": "docs/ops/reaka_controller_succession_audit@273.0.json",
+  "supersedes_digest": "sha256:7811e69e8a6359f3670edcf5c5e7c96755f4eb5ecf2b188cc3aac2d9770b6937",
+  "authority_registry_digest": "sha256:2ad89e3d1f848bc14c761e086d562fdcd2ab86fc33a5a521625a1fea44194b79",
+  "round_registry_digest": "sha256:16e4c1471ab5d4f34954c488673a9bf9d8af53e8c0cb925bec1460861e96201d",
+  "manifest_digest": "sha256:ea59b0de117d386ab413dd07c5b3de2e3710eb34f3e004aabcf2574363dd5ca4",
+  "controller_acceptance_digest": "sha256:37795a2b060ad5ac08087ab63a06bcefa9bfc793c1975245dbaf7cb1c0aa2323",
+  "next_legal_action": "user_financial_review_of_stage4_evidence",
+  "stage5_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:082645054fd28b4a4c2f5618801f66498a3b28f5c2764ede5eebb8f873f2bd86"
+}

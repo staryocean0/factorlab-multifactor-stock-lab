@@ -1,0 +1,34 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_state_episode_atlas_validation@1.0",
+  "status": "passed",
+  "contract_digest": "sha256:e58931b2aacaf395da46b8818b7a8114396cae838b944ec3b2039daa5ae88652",
+  "formal_result_digest": "sha256:2cfefab2bf7b13c981e6eff5a7fa8bc916d7574f9e939101cb5e60b8e24d0145",
+  "isolated_result_digest": "sha256:2cfefab2bf7b13c981e6eff5a7fa8bc916d7574f9e939101cb5e60b8e24d0145",
+  "certificate_digest": "sha256:d83e2f37b09847fc1622ef24db626bacec1a31a636f24852a1c96a920eb2ae12",
+  "formal_isolated_byte_identical_files": [
+    "input_receipt.json",
+    "state_months.csv",
+    "state_episodes.csv",
+    "state_support.csv",
+    "transition_counts.csv",
+    "state_learnability_certificate.json",
+    "comparison_summary.json",
+    "result.json"
+  ],
+  "development_decision_months": 68,
+  "development_physical_transitions": 67,
+  "development_state_switches": 26,
+  "persistent_episode_count": {
+    "up": 1,
+    "sideways": 9,
+    "down": 1
+  },
+  "composite_learnability_route": "slow_context_low_rank_modulator",
+  "stage4_execution_allowed": false,
+  "model_training_executed": false,
+  "account_executed": false,
+  "post_2025_decision_rows": 0,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:cf4714e0e406c000edb3405bffec7402fc30a257e826482adf546ccda0fb2628"
+}

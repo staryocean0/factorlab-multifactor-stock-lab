@@ -1,0 +1,93 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_result@1.0",
+  "status": "completed_current_strategy_two_ledgers",
+  "strategy_id": "REAKA_D5_H20_R5_CURRENT_GENERATION_V1",
+  "model_identity": "d8-h8-K1-r0_fit_prefix_successor_incumbent",
+  "account_policy_id": "N30_equal_backfill_unconstrained",
+  "decision_clocks": [
+    "14:30",
+    "14:45"
+  ],
+  "slippage_multiplier": 1.0,
+  "replay_segments": [
+    "2011_2020",
+    "2021_2026"
+  ],
+  "selection_opportunity_diagnostics": {
+    "row_count": 88796,
+    "decision_count": 1480,
+    "selected_row_count": 44400,
+    "hindsight_label_is_runtime_input": false
+  },
+  "factor_return_surface_diagnostics": {
+    "row_count": 145796,
+    "segment_count": 10414,
+    "factor_count": 14
+  },
+  "realized_pnl_diagnostics": {
+    "row_count": 1063844,
+    "account_day_count": 7438,
+    "maximum_simple_identity_error": 1.1232334506949826e-15,
+    "maximum_linked_log_identity_error": 1.1210650463500116e-15,
+    "component_count": 5
+  },
+  "factor_fit_diagnostics": {
+    "14:30": {
+      "job_count": 5207,
+      "batch_size": 32,
+      "backend": "pytorch_rocm_float64_batched_lstsq",
+      "elapsed_seconds": 15.668903043988394,
+      "parity_sample_count": 12,
+      "coefficient_max_abs_parity_error": 2.42861286636753e-17,
+      "condition_max_relative_parity_error": 2.147335689534938e-15
+    },
+    "14:45": {
+      "job_count": 5207,
+      "batch_size": 32,
+      "backend": "pytorch_rocm_float64_batched_lstsq",
+      "elapsed_seconds": 15.597268727986375,
+      "parity_sample_count": 12,
+      "coefficient_max_abs_parity_error": 7.979727989493313e-17,
+      "condition_max_relative_parity_error": 1.5053367996807595e-15
+    }
+  },
+  "sealed_annual_replay_checks": {
+    "account_to_pnl_annual_log_max_abs_error": 7.882583474838611e-15,
+    "historical_four_group_max_abs_error": 1.0798653637955624e-15,
+    "post2020_four_group_max_abs_error": 1.8041124150158794e-15
+  },
+  "account_snapshot_manifest_digest": "sha256:b652b4c3ddeeef9c4999a5ea7d61af6082a2fe7fa1910d32f3c73fa33b2729ca",
+  "prefix_checks": {
+    "14:30": {
+      "calendar": true,
+      "symbols": true,
+      "epsilon_history": true,
+      "epsilon_future": true,
+      "state_values": true,
+      "state_available": true,
+      "exposure_positions": true,
+      "exposures": true,
+      "reliability": true,
+      "exposure_available": true,
+      "inference_rows": true
+    },
+    "14:45": {
+      "calendar": true,
+      "symbols": true,
+      "epsilon_history": true,
+      "epsilon_future": true,
+      "state_values": true,
+      "state_available": true,
+      "exposure_positions": true,
+      "exposures": true,
+      "reliability": true,
+      "exposure_available": true,
+      "inference_rows": true
+    }
+  },
+  "model_or_parameter_change": false,
+  "result_backflow_allowed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:8939d42b75d60e13db8bf81ec3f587bf40f87f0f292d262ae5635ac6f8fc8d43"
+}

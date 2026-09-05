@@ -1,0 +1,17 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_pre_result_incident@1.0",
+  "status": "closed_by_result_free_contract_v1_1",
+  "failed_contract_digest": "sha256:9387492d384624484244e08404e0b0b1e17715eb9929600aacd2b72024b6864d",
+  "failed_phase": "formal_account_snapshot_trade_leg_normalization_before_any_scientific_file_write",
+  "symptom": "reconstructed_per_leg_transaction_cost_sum_differed_from_frozen_account_daily_total_by_max_CNY_1p4199821054426138",
+  "root_cause": "the_frozen_account_engine_charges_cost_on_pre_cost_turnover_weights_but_allocates_new_share_quantities_from_nav_after_total_cost;recomputing_cost_from_post_cost_share_delta_times_execution_price_therefore_understates_the_original_cost_base",
+  "financial_correction": "preserve_the_frozen_daily_total_cost_exactly_and_allocate_it_once_across_trade_legs_in_proportion_to_each_frozen_leg_weight_times_its_direction_specific_cost_rate",
+  "daily_total_cost_changed": false,
+  "account_return_changed": false,
+  "model_score_policy_clock_or_parameter_changed": false,
+  "scientific_output_file_count": 0,
+  "result_opened": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:125fd2dc3f6e4fe116b05a7914130946c81b599b76a44c6313aad90e33cbc829"
+}

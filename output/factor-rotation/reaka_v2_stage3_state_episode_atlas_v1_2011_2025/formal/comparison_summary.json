@@ -1,0 +1,67 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_state_comparison@1.0",
+  "status": "repeat_periods_reported_not_used_for_route",
+  "roles": {
+    "development_material_state_certificate": {
+      "decision_month_count": 68,
+      "state_month_count": {
+        "up": 8,
+        "sideways": 50,
+        "down": 10
+      },
+      "raw_episode_count": {
+        "up": 6,
+        "sideways": 13,
+        "down": 8
+      },
+      "persistent_episode_count": {
+        "up": 1,
+        "sideways": 9,
+        "down": 1
+      }
+    },
+    "development_listing_not_pass_evidence": {
+      "decision_month_count": 12,
+      "state_month_count": {
+        "up": 0,
+        "sideways": 11,
+        "down": 1
+      },
+      "raw_episode_count": {
+        "up": 0,
+        "sideways": 2,
+        "down": 1
+      },
+      "persistent_episode_count": {
+        "up": 0,
+        "sideways": 2,
+        "down": 0
+      }
+    },
+    "consumed_repeat_comparison_no_retune": {
+      "decision_month_count": 96,
+      "state_month_count": {
+        "up": 7,
+        "sideways": 83,
+        "down": 6
+      },
+      "raw_episode_count": {
+        "up": 6,
+        "sideways": 12,
+        "down": 6
+      },
+      "persistent_episode_count": {
+        "up": 1,
+        "sideways": 11,
+        "down": 0
+      }
+    }
+  },
+  "route_selected_from_development_only": true,
+  "2017_is_pass_evidence": false,
+  "2018_2025_can_retune": false,
+  "post_2025_decision_rows": 0,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:d32d24b333cac577630e3d0590b9d2b7271d6566569a760d87ed7c951902047d"
+}

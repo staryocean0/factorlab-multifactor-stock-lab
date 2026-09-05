@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "readiness_report.json": "d68dcc5513721fdcb5e2d26bf53887f1564906c3eefe721f5a3cee8c911b679f"
+  },
+  "canonical_digest": "sha256:3bdd5f67bbe777d6c7605bf2d9c1f9d67dd1ad941d872955b066eb32cb58d2b5",
+  "dataset_version": "multifactor_research_data_readiness_v2_20260814",
+  "fresh_oos": false,
+  "immutable": true,
+  "latest_alias_allowed": false,
+  "production_authority": false,
+  "required_surface_count": 9,
+  "schema_id": "factorlab.multifactor_research_data_readiness_manifest.v1",
+  "state": "READY_WITH_DECLARED_NONBLOCKING_GAPS",
+  "state_catalog_v9_revalidation_required": true,
+  "state_factor_pairing_open": false,
+  "verified_surface_count": 9
+}

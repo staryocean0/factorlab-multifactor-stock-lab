@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://factorlab.local/schemas/macro_regime_dual_strategy_reaka_paper_v1_health@1.0.json",
+  "title": "REAKA Paper V1 Training Health Assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "source_result_digest",
+    "assessment_scope",
+    "policy",
+    "fit_receipt_count",
+    "gates",
+    "failed_gate_ids",
+    "blocked_missing_evidence_gate_ids",
+    "status",
+    "architecture_complete",
+    "training_health_certified",
+    "eligible_for_promotion_review",
+    "formal_replacement_allowed",
+    "production_authority",
+    "canonical_digest"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "macro_regime_dual_strategy_reaka_paper_v1_health@1.0"
+    },
+    "source_result_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "assessment_scope": {
+      "const": "operational_training_health_not_scientific_return_vote"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "fit_receipt_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["gate_id", "status", "reason"],
+        "properties": {
+          "gate_id": {"type": "string", "minLength": 1},
+          "status": {
+            "enum": ["passed", "failed", "blocked_missing_evidence"]
+          },
+          "reason": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": true
+      }
+    },
+    "failed_gate_ids": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "blocked_missing_evidence_gate_ids": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "status": {"enum": ["passed", "blocked"]},
+    "architecture_complete": {"const": true},
+    "training_health_certified": {"type": "boolean"},
+    "eligible_for_promotion_review": {"const": false},
+    "formal_replacement_allowed": {"const": false},
+    "production_authority": {"const": false},
+    "canonical_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}

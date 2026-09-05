@@ -1,0 +1,33 @@
+{
+  "schema_id": "factorlab.reaka_multifactor_infrastructure_validation@1.0",
+  "status": "passed",
+  "validated_contracts": {
+    "docs/ops/reaka_multifactor_semantic_ontology@1.0.json": "sha256:7591d8570062f72f3c17e4f548441d6ce226bb1eee674e9df8a62ff51b4ce240",
+    "docs/ops/reaka_multifactor_six_surface_infrastructure@1.0.json": "sha256:bd7531cbe950e05459ebc5b0f85344e7e535876255d9400db5a38dbee2b055a5",
+    "docs/ops/state_factor_research_state_machine@2.0.json": "sha256:2d6d3d9db7f51aa4aea05ec46148d8ecdb913e93b99723b1147ec4282f212896",
+    "docs/ops/reaka_prediction_content_rollback@2.0.json": "sha256:dd71687f4017b7acbd563442b278625d5604d6b3b4aa1104259b2da8f235457a",
+    "docs/ops/reaka_v2_stage3_observable_context_authority_correction@1.0.json": "sha256:e1ff1736423970fb49ff640ea134561ce8cb6ec92f908c73522478e697cc38f3",
+    "docs/ops/reaka_multifactor_current_manifest@1.0.json": "sha256:347291c002cfd98797ca84d09201a216289de762e6edc7846b35119b154f9ea9"
+  },
+  "semantic_invariants": {
+    "observable_state_equals_latent_operator_state": false,
+    "user_supplies_operator_count": false,
+    "model_learns_operator_matrices": true,
+    "model_learns_operator_assignments": true,
+    "stage3_may_select_operator_count": false,
+    "effective_operator_count_is_post_training_evidence": true,
+    "portfolio_top_k_is_operator_count": false
+  },
+  "normative_root_count": 25,
+  "current_entry_count": 1,
+  "top_level_index_count": 4,
+  "new_markdown_links_valid": true,
+  "stage3_operator_count_decision_authority": false,
+  "old_stage3_measurements_retained": true,
+  "old_stage3_operator_inference_revoked": true,
+  "stage4_execution_allowed": false,
+  "model_training_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:aea29d691c787d61902ae46a5ef6dda8951465088c1111508cae7453ccd391c0"
+}

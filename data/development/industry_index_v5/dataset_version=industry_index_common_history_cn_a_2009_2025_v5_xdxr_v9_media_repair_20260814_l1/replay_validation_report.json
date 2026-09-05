@@ -1,0 +1,23 @@
+{
+  "carrier_return_clock": "T_adjusted_open_to_close_return_realized_at_T_close",
+  "causal_feature_implementation": "groupby_symbol_transform_shift_1_then_rolling",
+  "cross_symbol_rolling_allowed": false,
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l1",
+  "first_logical_digests": {
+    "attribution": "sha256:0acbf07fe212b8cde619b710740dec2a62dce582b37d998905f9a5a2149ce3c0",
+    "constituent_audit": "sha256:54aa37b891f1f493b15f808ede9783ace8d7e31850ca6837d8cf379f59ef015c",
+    "coordinates": "sha256:4bbee1f747c6c73831240b9c224f7a218f62471548848e03d8a669fe5053e5b7",
+    "observations": "sha256:1a0478b0d75cbcb7a9aa6e12285b235e2243961ab75d106179f296de2da40117",
+    "signals": "sha256:69d1178ab4b477190e1d66fa726b27e095033f76498202bd61a868790897ad5e"
+  },
+  "passed": true,
+  "schema_version": "datahub.industry_index_attribution.replay.v1",
+  "second_logical_digests": {
+    "attribution": "sha256:0acbf07fe212b8cde619b710740dec2a62dce582b37d998905f9a5a2149ce3c0",
+    "constituent_audit": "sha256:54aa37b891f1f493b15f808ede9783ace8d7e31850ca6837d8cf379f59ef015c",
+    "coordinates": "sha256:4bbee1f747c6c73831240b9c224f7a218f62471548848e03d8a669fe5053e5b7",
+    "observations": "sha256:1a0478b0d75cbcb7a9aa6e12285b235e2243961ab75d106179f296de2da40117",
+    "signals": "sha256:69d1178ab4b477190e1d66fa726b27e095033f76498202bd61a868790897ad5e"
+  },
+  "weight_information_clock": "rolling_inputs_end_T_minus_1;market_cap_visible_before_T_0930"
+}

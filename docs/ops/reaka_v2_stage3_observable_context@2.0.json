@@ -1,0 +1,84 @@
+{
+  "schema_id": "factorlab.reaka_v2_stage3_observable_context@2.0",
+  "status": "result_free_stage3_observable_context_contract_frozen",
+  "stage": "stage3_observable_context_support",
+  "object": "S_obs",
+  "input_mode": "reuse_validated_raw_measurements_without_market_reexecution",
+  "allowed_input_files": [
+    "state_months.csv",
+    "state_episodes.csv",
+    "state_support.csv",
+    "transition_counts.csv"
+  ],
+  "retained_input_digests": {
+    "formal": {
+      "state_months.csv": "sha256:e4aecf7f5d1567fc5e30ab3e22c0bf98b44223190234e3df53a72dc46ceef404",
+      "state_episodes.csv": "sha256:04cb9d232e5e993d42d7edff6c65abd360eb49a911f44f2d66ff71b4d25907d6",
+      "state_support.csv": "sha256:6a92f8aba64ade82b66741b9e4039f4c57ddd1e08cf3d6ad2e46f9a8a81941f0",
+      "transition_counts.csv": "sha256:808e6d4a987f13b66b1e06caf5ba57c8986fda02372d8cc988e0fca9d8d66028"
+    },
+    "isolated": {
+      "state_months.csv": "sha256:e4aecf7f5d1567fc5e30ab3e22c0bf98b44223190234e3df53a72dc46ceef404",
+      "state_episodes.csv": "sha256:04cb9d232e5e993d42d7edff6c65abd360eb49a911f44f2d66ff71b4d25907d6",
+      "state_support.csv": "sha256:6a92f8aba64ade82b66741b9e4039f4c57ddd1e08cf3d6ad2e46f9a8a81941f0",
+      "transition_counts.csv": "sha256:808e6d4a987f13b66b1e06caf5ba57c8986fda02372d8cc988e0fca9d8d66028"
+    }
+  },
+  "upstream": {
+    "correction_digest": "sha256:e1ff1736423970fb49ff640ea134561ce8cb6ec92f908c73522478e697cc38f3",
+    "state_machine_digest": "sha256:2d6d3d9db7f51aa4aea05ec46148d8ecdb913e93b99723b1147ec4282f212896",
+    "manifest_digest": "sha256:347291c002cfd98797ca84d09201a216289de762e6edc7846b35119b154f9ea9",
+    "authority_digest": "sha256:26368f69e54a998ffab0c61181f868d7e3062c611be6b54ceb35bf7f641303b5",
+    "succession_digest": "sha256:744139a6c6f6cc28a18be5d9c338b9781bf80e7689a44e72df5044ba6153e162"
+  },
+  "required_outputs": [
+    "scope",
+    "PIT",
+    "episodes",
+    "transitions",
+    "duration_prevalence",
+    "temporal_cross_sectional_support",
+    "observable_context_support_certificate"
+  ],
+  "output_inventory": [
+    "measurement_receipt.json",
+    "observable_context_support_certificate.json",
+    "result.json"
+  ],
+  "formal_isolated_byte_identity_required": true,
+  "semantic_invariants": {
+    "observable_state_equals_latent_operator_state": false,
+    "user_supplies_operator_count": false,
+    "model_learns_operator_matrices": true,
+    "model_learns_operator_assignments": true,
+    "stage3_may_select_operator_count": false,
+    "effective_operator_count_is_post_training_evidence": true,
+    "portfolio_top_k_is_operator_count": false
+  },
+  "authority": {
+    "stage3_execution_allowed": true,
+    "stage4_execution_allowed": false,
+    "model_training_allowed": false,
+    "account_execution_allowed": false,
+    "production_authority": false
+  },
+  "fresh_oos": false,
+  "production_authority": false,
+  "source_closure": {
+    "docs/ops/reaka_multifactor_semantic_ontology@1.0.json": "sha256:ee6995210d28b914cc6defdfa1b92317e43b2e136bead185a1ffd012a2838667",
+    "docs/ops/reaka_multifactor_current_manifest@1.0.json": "sha256:08f2005b5a0e72804e44f8af4bcfce6cb970b82dfbf363e60b729db3ad0cd285",
+    "docs/ops/state_factor_research_state_machine@2.0.json": "sha256:d22737f4a4889cd9e538f7c0175089f10f9a99c9c2055d9f3621baf82a041cd1",
+    "docs/ops/reaka_prediction_content_rollback@2.0.json": "sha256:1860edf35698d44226fee4efa950940932e298ce76fe0b8c4528065ef7b4abf3",
+    "docs/ops/reaka_v2_stage3_observable_context_authority_correction@1.0.json": "sha256:c471b5891255651b09dca9064245e14805e54dc4ed7728f160c3b0c6776cb3bd",
+    "docs/ops/reaka_v2_stage3_observable_context_whitepaper.md": "sha256:8ad0ee875b58822c76c5031290fa1b1c324b8a34cd74865e3d3754b37c75d8d8",
+    "docs/user/reaka_v2_stage3_observable_context_workflow.md": "sha256:6bb51abaf5fb31b7d2c9c61823b48f60f14332873144870b9a3d72a6c6a2cb9c",
+    "docs/user/reaka_multifactor_current_workflow_v1_1.md": "sha256:7221d8253bfd3cdff4683c36d3fda8399fa0f9e3dbbf6a9c7b0e73ffbe36dcad",
+    "src/factor_lab/factor_rotation/reaka_v2_stage3_observable_context_v2.py": "sha256:3ad487f22b8be56cc0cfebc0afed7b1e3919c91df88344aac53115817ae3ef4b",
+    "scripts/factor_rotation/build_reaka_v2_stage3_observable_context_v2.py": "sha256:46f3f6c8f7202ace6a31dd6602da94684fb0eb184b139857523dd0fd47633441",
+    "scripts/factor_rotation/run_reaka_v2_stage3_observable_context_v2.py": "sha256:13073fa9e44dbe4829286f7e2274fc00fa889387a648aa71fd50b5af0e88901a",
+    "scripts/factor_rotation/validate_reaka_v2_stage3_observable_context_v2.py": "sha256:8b296d28e9905e0d33b1406cdce40e3270de1b8f6120af48e159fdc386037d58",
+    "scripts/factor_rotation/close_reaka_v2_stage3_observable_context_v2.py": "sha256:fe342b4de83a2c7f78fbdd99c3db3661d3295c84cfd203942df1bab26bb73e78",
+    "tests/unit/test_reaka_v2_stage3_observable_context_v2.py": "sha256:73034af53b0b3f4f7d549b8db9bc143ce2c37d86a34ebd1d31e53608f92c0be5"
+  },
+  "canonical_digest": "sha256:7d10af936b33e0af0cc81f26b381dceb6300be1e77fcc05513de67faa44e653e"
+}

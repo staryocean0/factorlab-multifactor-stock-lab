@@ -1,0 +1,303 @@
+{
+  "candidate_quarantine_failures": [],
+  "candidate_quarantine_surfaces": [
+    {
+      "direct_state_vote_allowed": false,
+      "materialized_factor_count": 43,
+      "materialized_factor_ids": [
+        "macro_capacity_utilization_industrial",
+        "macro_capacity_utilization_manufacturing",
+        "macro_cn_treasury_yield_10y",
+        "macro_cn_treasury_yield_1y",
+        "macro_cn_treasury_yield_3y",
+        "macro_core_cpi_yoy",
+        "macro_cpi_yoy",
+        "macro_enterprise_mid_long_term_loan_balance",
+        "macro_equipment_tools_purchase_investment_yoy",
+        "macro_excess_liquidity_m2_minus_nominal_gdp_yoy",
+        "macro_excess_liquidity_m2_minus_ppi_yoy_proxy",
+        "macro_fai_total_cumulative_yoy",
+        "macro_industrial_enterprise_finished_goods_inventory_yoy",
+        "macro_industrial_enterprise_profit_yoy",
+        "macro_industrial_enterprise_revenue_yoy",
+        "macro_industrial_finished_goods_turnover_days",
+        "macro_industrial_value_added_cumulative_yoy",
+        "macro_industrial_value_added_manufacturing_yoy",
+        "macro_industrial_value_added_yoy",
+        "macro_infrastructure_fai_cumulative_yoy",
+        "macro_juglar_cycle_position",
+        "macro_kitchin_cycle_position",
+        "macro_m1_yoy",
+        "macro_m2_yoy",
+        "macro_mfg_fai_cumulative_yoy",
+        "macro_nominal_gdp_yoy",
+        "macro_pmi_backlog_orders_index",
+        "macro_pmi_ex_factory_price_index",
+        "macro_pmi_finished_goods_inventory_index",
+        "macro_pmi_main_raw_material_purchase_price_index",
+        "macro_pmi_manufacturing",
+        "macro_pmi_new_export_orders_index",
+        "macro_pmi_new_orders_index",
+        "macro_pmi_orders_inventory_gap",
+        "macro_pmi_production_business_expectation_index",
+        "macro_pmi_production_index",
+        "macro_pmi_production_orders_gap",
+        "macro_pmi_purchase_quantity_index",
+        "macro_pmi_raw_material_inventory_index",
+        "macro_ppi_yoy",
+        "macro_real_rate_proxy",
+        "macro_rmb_loan_increment_cumulative_yoy",
+        "macro_tsf_stock_yoy"
+      ],
+      "maximum_observations_per_factor": 246,
+      "minimum_observations_per_factor": 1,
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/macro-factor-pool/fundamental_timeseries_20260710",
+      "reason": "source product is no longer present in the current DataHub authority lake and coverage is highly uneven; retain as candidate inventory only",
+      "registered_factor_count": 58,
+      "row_count": 2986,
+      "source_dataset_version": "macro_cycle_proxy_nbs2_20260710",
+      "status": "QUARANTINED_CANDIDATE_INVENTORY_ONLY",
+      "surface_id": "legacy_macro_factor_pool"
+    }
+  ],
+  "canonical_digest": "sha256:5d4731c20f03e873e3a914042476294725a106ed23ea280ccdc35a80eded9b87",
+  "contract_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/docs/ops/multifactor_research_data_contract@1.0.json",
+  "contract_sha256": "b452977929a2fd4c761b8b955ab2d6f0319842d93c69464a91a8ac047afcde75",
+  "data_gate_may_open_pairing_by_itself": false,
+  "forbidden_inputs": [
+    "adjust_factors_cn_a_xdxr_v8_20260808",
+    "bars_cn_a_1d_qfq_canonical_xdxr_v8_factorlab_2009_2025_20260813",
+    "bars_cn_a_1d_qfq_canonical_20260626_sina_auto",
+    "macro_fundamental_timeseries_cn_v52_risk_off_contract_shape_repaired_denied_20260718",
+    "market_wide_structured_financial_products_without_single_stock_pit_grant"
+  ],
+  "fresh_oos": false,
+  "gate_scope": "required_data_surfaces_only",
+  "nonblocking_macro_enhancement_gaps": [
+    "cn_treasury_yield_1y_and_10y_with_release_clock",
+    "yield_curve_10y_minus_1y",
+    "core_cpi_yoy",
+    "social_financing_and_credit_impulse",
+    "pmi_finished_goods_and_raw_material_inventory",
+    "industrial_finished_goods_inventory_yoy",
+    "fund_flow_cycle_and_excess_liquidity_components"
+  ],
+  "pairing_authority_source": "docs/ops/authoritative_market_state_catalog@2.0.json",
+  "production_authority": false,
+  "required_failures": [],
+  "required_surface_count": 9,
+  "research_period": {
+    "end": "2025-12",
+    "start": "2009-01"
+  },
+  "schema_id": "factorlab.multifactor_research_data_readiness.v1",
+  "state_catalog_v9_revalidation_required": true,
+  "state_factor_pairing_open": false,
+  "status": "READY_WITH_DECLARED_NONBLOCKING_GAPS",
+  "surfaces": [
+    {
+      "absolute_qfq_level_vintage_pit": false,
+      "checks": {
+        "consumer_factor_parent": true,
+        "factor_hash": true,
+        "quality_factor_parent": true,
+        "receipt_no_retired_fallback": true,
+        "return_research_granted": true,
+        "stock_partition": true
+      },
+      "dataset_version": "bars_cn_a_1d_qfq_canonical_xdxr_v9_factorlab_2009_2025_20260814",
+      "factor_dataset_version": "adjust_factors_cn_a_xdxr_v9_20260814",
+      "manifest_sha256": "a45ac26ecea10231a0ade11224001821fbad2d029ef46a608da10901b0ae3a5c",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1d_qfq_canonical_xdxr_v9_factorlab_2009_2025_20260814",
+      "record_count": 19205138,
+      "single_stock_feature_construction_allowed": true,
+      "status": "READY_RESEARCH_ONLY",
+      "surface_id": "qfq_stock_bars"
+    },
+    {
+      "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+      "decision_month_count": 204,
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/stock_market_cap_monthly_pit/dataset_version=stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+      "status": "READY_PIT",
+      "surface_id": "monthly_market_cap",
+      "surface_sha256": "2dbfd339ff65396ca14519ec3a5e1003b5073449334ea9e3d59b86e723d38e29"
+    },
+    {
+      "annual_only": true,
+      "dataset_version": "cn_a_financial_pit_first_release_annual_largecap_2008_2025.v1.20260811",
+      "factorlab_derived_factor_count": 21,
+      "factorlab_derived_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/macro_regime_dual_strategy_common_history_inputs_v1_2009_2025_20260812/strict_annual_financial",
+      "filing_count": 11240,
+      "half_year_report_allowed": false,
+      "interpolation_allowed": false,
+      "minimum_total_market_cap_cny": 15000000000,
+      "observations_sha256": "379dbc2128ab06e985a31aa30ff216ac10678176c5413acaf82c14f9e6858c80",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/issuer_financial_fact/dataset_version=cn_a_financial_pit_first_release_annual_largecap_2008_2025.v1.20260811",
+      "record_count": 89920,
+      "status": "READY_LIMITED_HONEST_GAP",
+      "surface_id": "strict_annual_financial"
+    },
+    {
+      "asof_columns_preserved": [
+        "observation_date",
+        "available_at"
+      ],
+      "certified_condition_series": [
+        "industrial_value_added_yoy",
+        "m2_yoy",
+        "nominal_gdp_yoy",
+        "pmi_manufacturing",
+        "pmi_new_orders_index",
+        "ppi_yoy"
+      ],
+      "dataset_version": "macro_fundamental_timeseries_cn_v90_macro_regime_dual_strategy_annual_rolling_granted_20260810",
+      "factorlab_all_series_input": {
+        "dataset_version": "multifactor_macro_input_2009_2025_v1_20260814",
+        "decision_count": 204,
+        "join_predicate": "source_available_at < decision_as_of",
+        "manifest_sha256": "bb3d0da31e0bba96341fb322c508e04c3ede983cf46a285d12229914372ad4dd",
+        "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/multifactor_macro_input_2009_2025_v1_20260814",
+        "series_count": 9
+      },
+      "factorlab_context": {
+        "dataset_version": "factorlab_common_history_macro_context_2009_2025_v1_20260812",
+        "decision_count": 204,
+        "interior_or_required_tail_gap_count": 0,
+        "manifest_sha256": "9371febcb64d5bac369610fec79d0e09a32db6c2358ac8231a1c838abad180ee",
+        "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/macro_regime_dual_strategy_common_history_inputs_v1_2009_2025_20260812/macro_context",
+        "series_count": 6,
+        "series_ids": [
+          "industrial_value_added_yoy",
+          "m2_yoy",
+          "nominal_gdp_yoy",
+          "pmi_manufacturing",
+          "pmi_new_orders_index",
+          "ppi_yoy"
+        ]
+      },
+      "observations_sha256": "44a25d7dabb35b8bd6c9829fbc1b6ce4a26cbea6a1f82f21ce2f4e1dcaa68856",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/macro_fundamental_timeseries/dataset_version=macro_fundamental_timeseries_cn_v90_macro_regime_dual_strategy_annual_rolling_granted_20260810",
+      "raw_parent_direct_state_vote_allowed": false,
+      "raw_parent_series": [
+        "m2_balance",
+        "nominal_gdp_amount",
+        "nominal_gdp_cumulative_amount"
+      ],
+      "record_count": 1431,
+      "series_count": 9,
+      "series_ids": [
+        "industrial_value_added_yoy",
+        "m2_balance",
+        "m2_yoy",
+        "nominal_gdp_amount",
+        "nominal_gdp_cumulative_amount",
+        "nominal_gdp_yoy",
+        "pmi_manufacturing",
+        "pmi_new_orders_index",
+        "ppi_yoy"
+      ],
+      "status": "READY_CORE_WITH_NONBLOCKING_ENHANCEMENT_GAPS",
+      "surface_id": "macro_pit"
+    },
+    {
+      "carrier_count": 12,
+      "levels": [
+        {
+          "bucket_count": 18,
+          "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l1",
+          "level": "L1",
+          "manifest_sha256": "3249c6b64ca767c71d58a8a235888d7c27a6a0056057cf1b617e77926a94ebe7",
+          "method_count": 4
+        },
+        {
+          "bucket_count": 80,
+          "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l2",
+          "level": "L2",
+          "manifest_sha256": "be2a4bdab778b5e8422fefe22299ea6e127856d730e2aaface7f00e1c146ee1e",
+          "method_count": 4
+        },
+        {
+          "bucket_count": 59,
+          "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l3",
+          "level": "L3",
+          "manifest_sha256": "8272f0d1e2a385c0994cc352ba7a72d3a960ebad1584f436d576dc5299ad330a",
+          "method_count": 4
+        }
+      ],
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/industry_index_common_history/product_version=industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814",
+      "product_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814",
+      "single_stock_scoring_allowed": false,
+      "static_taxonomy_historical_pit": false,
+      "status": "READY_DIAGNOSTIC_STATE_ONLY",
+      "surface_id": "custom_industry"
+    },
+    {
+      "certified_scope": {
+        "does_not_grant": [
+          "sector_membership",
+          "sector_index_bars",
+          "custom_weight_reconstruction",
+          "equal_weight_reconstruction",
+          "factorlab_cn_annual_expanding_pit.v1"
+        ],
+        "granted_only_for": "independent_exchange_index_breadth_and_momentum_input"
+      },
+      "dataset_hash": "28829a3929fa085254c8db2e9b77e818148e82ed0b4c6cc67fcc139647bd0f29",
+      "dataset_version": "szse_official_industry_index_panel_cn_a_2008_2026_pit_semantic_identity_v8_20260719",
+      "manifest_sha256": "68c3acfb3c8c07131acf0cc38bcfa566143467e91c67915bccb43ec780fec711",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/szse_industry_index_panel/dataset_version=szse_official_industry_index_panel_cn_a_2008_2026_pit_semantic_identity_v8_20260719",
+      "status": "READY_PIT_RESTRICTED_SCOPE",
+      "surface_id": "official_szse_industry"
+    },
+    {
+      "certified_scope": "2013--2020 CSRC quarterly published-snapshot state equal-weight return/index only; not an event-effective or 2009 product",
+      "dataset_hash": "70bdc722954d0e54c6649950d20a4bf27865bb5a553565365652a9405ba74115",
+      "dataset_version": "sector_index_cn_a_csrc2012_snapshot_state_equal_weight_2013_2020_v1_20260719",
+      "manifest_sha256": "06e8fc016782f54a929ffe7e90c61b5defcdb0ca88899dec339ec0147cb23dee",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/csrc_snapshot_equal_weight_sector_index/dataset_version=sector_index_cn_a_csrc2012_snapshot_state_equal_weight_2013_2020_v1_20260719",
+      "status": "READY_PIT_2013_2020_ONLY",
+      "surface_id": "csrc_snapshot_sector"
+    },
+    {
+      "bar_parent": {
+        "authority": "xdxr_v9_fixed_qfq_return_and_feature_research",
+        "duplicate_coordinate_count": 0,
+        "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1d_qfq_canonical_xdxr_v9_factorlab_2009_2025_20260814/instrument_type=stock",
+        "physical_end": "2025-12-31",
+        "physical_start": "2007-01-04",
+        "requested_warmup_start": "2007-01-01",
+        "row_count": 13643114,
+        "sha256": "87ab8717248785627aabf9c768bf6c7f5566598f56cb6e8e8a67ec88be1ee66f",
+        "symbol_count": 5448
+      },
+      "dataset_version": "factorlab_multifactor_stock_nonfinancial_165f_2009_2025_v2_xdxr_v9_20260814",
+      "factor_count": 165,
+      "manifest_sha256": "572b96b5078b5ba4f51e027485dfc6fb87b0df38e2e9b93fd6869c2e8e843af6",
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/factorlab_multifactor_stock_nonfinancial_165f_2009_2025_v2_xdxr_v9_20260814",
+      "status": "READY",
+      "surface_id": "factorlab_nonfinancial_surface"
+    },
+    {
+      "broad_market_reference": {
+        "end": "2026-07-23",
+        "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/macro-micro-historical-replay/round001-kitchin-v1/input/source_snapshots/csindex_000985_daily_20090101_20260723_raw.csv",
+        "reference_id": "csindex_000985_daily_20090101_20260723_raw",
+        "row_count": 4265,
+        "sha256": "295e44316a2dca78bdc6f29ca5cd1f5a99eff81dd0908c791511d0174bcc9ba8",
+        "start": "2009-01-01"
+      },
+      "cloudridge": {
+        "daily_point_count": 4485,
+        "end": "2026-06-24 07:00:00+00:00",
+        "package_id": "cloudridge_index-cloudridge-beta-index-v1-ede3d5f7b64f",
+        "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/cloud_runtime/result-packages/current/cloudridge-index-series.json",
+        "sha256": "63d0b922ef60d93e191b0d74cd2e03358ab0d77da98862d999331902ab0b0219",
+        "start": "2008-01-07 07:00:00+00:00"
+      },
+      "research_rows_cut_at": "2025-12-31",
+      "status": "READY_FIXED_RESEARCH_CARRIERS",
+      "surface_id": "local_market_indexes"
+    }
+  ],
+  "verified_surface_count": 9
+}

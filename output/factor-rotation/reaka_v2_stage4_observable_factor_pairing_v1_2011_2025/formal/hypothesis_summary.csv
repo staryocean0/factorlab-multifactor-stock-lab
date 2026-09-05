@@ -1,0 +1,31 @@
+data_role,hypothesis_id,factor,condition,expected_direction,financial_mechanism,decision_clock,n_in_months,n_out_months,factor_active_episode_count,aligned_episode_count,comparable_year_count,aligned_year_count,pooled_lift,median_episode_lift,median_annual_lift,machine_directional_evidence,financial_verdict
+development_material_pairing,H_INDEX_UP,index,up,enhance,uptrend strengthens market skeleton,14:30,8,60,6,4,5,1,0.0429872826194,0.03660617634,-0.00733055381825,mixed,waiting_user_review
+development_material_pairing,H_INDEX_UP,index,up,enhance,uptrend strengthens market skeleton,14:45,8,60,6,4,5,1,0.0387721472137,0.0354056398899,-0.0109871240034,mixed,waiting_user_review
+development_material_pairing,H_INDEX_DOWN,index,down,weaken,downtrend weakens market skeleton,14:30,10,58,8,3,5,1,0.0383204040689,0.0195714145967,0.0147639998261,opposed,waiting_user_review
+development_material_pairing,H_INDEX_DOWN,index,down,weaken,downtrend weakens market skeleton,14:45,10,58,8,3,5,0,0.0412924391843,0.0203282710712,0.0184747724466,opposed,waiting_user_review
+development_material_pairing,H_INDUSTRY_UP,industry,up,enhance,uptrend supports industry participation,14:30,8,60,6,2,5,4,-0.00069232908331,-0.000503957078561,0.000199266852625,mixed,waiting_user_review
+development_material_pairing,H_INDUSTRY_UP,industry,up,enhance,uptrend supports industry participation,14:45,8,60,6,3,5,1,-0.0010271400372,-0.000590544459967,-0.000284212643844,mixed,waiting_user_review
+development_material_pairing,H_INDUSTRY_SIDEWAYS,industry,sideways,enhance,sideways regime supports industry opportunity,14:30,50,18,13,9,6,1,0.0038617687821,0.00385599447218,-0.000905538622587,mixed,waiting_user_review
+development_material_pairing,H_INDUSTRY_SIDEWAYS,industry,sideways,enhance,sideways regime supports industry opportunity,14:45,50,18,13,10,6,3,0.00505853456647,0.00482776412246,-0.000602178394895,aligned,waiting_user_review
+development_material_pairing,H_INDUSTRY_DOWN,industry,down,weaken,downtrend weakens industry contribution,14:30,10,58,8,5,5,1,-0.00541943783431,-0.00208711314381,0.00198010762775,mixed,waiting_user_review
+development_material_pairing,H_INDUSTRY_DOWN,industry,down,weaken,downtrend weakens industry contribution,14:45,10,58,8,4,5,1,-0.00699940326201,-0.00130985469155,0.00277291114877,mixed,waiting_user_review
+development_listing_not_pass_evidence,H_INDEX_UP,index,up,enhance,uptrend strengthens market skeleton,14:30,0,12,0,0,0,0,,,,insufficient,waiting_user_review
+development_listing_not_pass_evidence,H_INDEX_UP,index,up,enhance,uptrend strengthens market skeleton,14:45,0,12,0,0,0,0,,,,insufficient,waiting_user_review
+development_listing_not_pass_evidence,H_INDEX_DOWN,index,down,weaken,downtrend weakens market skeleton,14:30,1,11,1,0,1,0,0.0566995533016,0.0566995533016,0.0566995533016,opposed,waiting_user_review
+development_listing_not_pass_evidence,H_INDEX_DOWN,index,down,weaken,downtrend weakens market skeleton,14:45,1,11,1,0,1,0,0.0564070145462,0.0564070145462,0.0564070145462,opposed,waiting_user_review
+development_listing_not_pass_evidence,H_INDUSTRY_UP,industry,up,enhance,uptrend supports industry participation,14:30,0,12,0,0,0,0,,,,insufficient,waiting_user_review
+development_listing_not_pass_evidence,H_INDUSTRY_UP,industry,up,enhance,uptrend supports industry participation,14:45,0,12,0,0,0,0,,,,insufficient,waiting_user_review
+development_listing_not_pass_evidence,H_INDUSTRY_SIDEWAYS,industry,sideways,enhance,sideways regime supports industry opportunity,14:30,11,1,2,2,1,1,0.002150855824,0.00216882032218,0.002150855824,aligned,waiting_user_review
+development_listing_not_pass_evidence,H_INDUSTRY_SIDEWAYS,industry,sideways,enhance,sideways regime supports industry opportunity,14:45,11,1,2,2,1,1,0.000395935264751,0.000409337532441,0.000395935264751,aligned,waiting_user_review
+development_listing_not_pass_evidence,H_INDUSTRY_DOWN,industry,down,weaken,downtrend weakens industry contribution,14:30,1,11,1,1,1,1,-0.002150855824,-0.002150855824,-0.002150855824,aligned,waiting_user_review
+development_listing_not_pass_evidence,H_INDUSTRY_DOWN,industry,down,weaken,downtrend weakens industry contribution,14:45,1,11,1,1,1,1,-0.000395935264751,-0.000395935264751,-0.000395935264751,aligned,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDEX_UP,index,up,enhance,uptrend strengthens market skeleton,14:30,7,91,6,6,6,5,0.0310250143054,0.0361634109115,0.0323894504129,aligned,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDEX_UP,index,up,enhance,uptrend strengthens market skeleton,14:45,7,91,6,6,6,5,0.0320078436603,0.0335324586617,0.0304775554993,aligned,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDEX_DOWN,index,down,weaken,downtrend weakens market skeleton,14:30,6,92,6,1,3,0,0.0375314015837,0.0362769141888,0.0543104071446,opposed,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDEX_DOWN,index,down,weaken,downtrend weakens market skeleton,14:45,6,92,6,1,3,0,0.0361959971879,0.0368548841745,0.0524438827622,opposed,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDUSTRY_UP,industry,up,enhance,uptrend supports industry participation,14:30,7,91,6,5,6,4,0.00597561535225,0.0026618338462,0.00185110795973,aligned,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDUSTRY_UP,industry,up,enhance,uptrend supports industry participation,14:45,7,91,6,4,6,4,0.00452387148532,0.00239864155781,0.00209297788888,aligned,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDUSTRY_SIDEWAYS,industry,sideways,enhance,sideways regime supports industry opportunity,14:30,85,13,12,0,7,2,-0.0054177985037,-0.00466405527551,-0.00305849978439,opposed,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDUSTRY_SIDEWAYS,industry,sideways,enhance,sideways regime supports industry opportunity,14:45,85,13,12,0,7,2,-0.00479953972785,-0.00432989288997,-0.00278513329831,opposed,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDUSTRY_DOWN,industry,down,weaken,downtrend weakens industry contribution,14:30,6,92,6,2,3,0,0.00394963834637,0.00593529032567,0.00443205687761,opposed,waiting_user_review
+consumed_repeat_comparison_no_retune,H_INDUSTRY_DOWN,industry,down,weaken,downtrend weakens industry contribution,14:45,6,92,6,1,3,0,0.00438729214335,0.00452777661388,0.00293514579114,opposed,waiting_user_review

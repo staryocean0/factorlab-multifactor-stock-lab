@@ -1,0 +1,207 @@
+{
+  "availability_mode": "consumed_history",
+  "checks": {
+    "direction_identity_max_abs_error": 0.0,
+    "screening_identity_max_abs_error": 0.0,
+    "structure_identity_max_abs_error": 0.0,
+    "volume_identity_max_abs_error": 0.0
+  },
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l1",
+  "formulas": {
+    "direction_effect": "D_S-EW_S",
+    "screening_effect": "EW_S-EW_U",
+    "structure_size_effect": "A_U-EW_U",
+    "volume_effect": "V_S-EW_S"
+  },
+  "fresh_oos": false,
+  "legacy_channel_semantics": {
+    "share_volume_ratio_use": "liquidity_screen_only",
+    "volume_anomaly": "turnover_amount_anomaly_using_avg_amount_5d_t1_div_avg_amount_20d_t1"
+  },
+  "passed": true,
+  "performance_method": {
+    "annualization_days": 252,
+    "carrier_return": "same_day_adjusted_open_T_to_adjusted_close_T_return_realized_at_T_close",
+    "cross_industry_aggregation": "equal_weight_mean_across_available_18L1_buckets_each_day",
+    "sharpe_risk_free_rate": 0.0,
+    "weights": "rolling_inputs_end_T_minus_1;market_cap_and_screen_visible_strictly_before_T_0930_Asia_Shanghai"
+  },
+  "period_performance": {
+    "consumed_history_carrier_2021_2025_diagnostic": {
+      "arm_metrics": {
+        "A_U": {
+          "annualized_return": 0.1757754654219452,
+          "annualized_volatility": 0.1662717288040938,
+          "maximum_drawdown": -0.20143690958113458,
+          "sharpe_zero_risk_free": 1.057333513190891,
+          "trading_day_count": 1212
+        },
+        "D_S": {
+          "annualized_return": 0.2629129940971018,
+          "annualized_volatility": 0.19635150266430035,
+          "maximum_drawdown": -0.23155622343401427,
+          "sharpe_zero_risk_free": 1.2876917041873237,
+          "trading_day_count": 1212
+        },
+        "EW_S": {
+          "annualized_return": 0.2624265183361617,
+          "annualized_volatility": 0.19650036292587672,
+          "maximum_drawdown": -0.23221922425453756,
+          "sharpe_zero_risk_free": 1.2849039884029723,
+          "trading_day_count": 1212
+        },
+        "EW_U": {
+          "annualized_return": 0.27809130992280495,
+          "annualized_volatility": 0.20485995463302642,
+          "maximum_drawdown": -0.2499893722109604,
+          "sharpe_zero_risk_free": 1.3010731945384046,
+          "trading_day_count": 1212
+        },
+        "V_S": {
+          "annualized_return": 0.2989538810502851,
+          "annualized_volatility": 0.19491919123185922,
+          "maximum_drawdown": -0.21421907739233426,
+          "sharpe_zero_risk_free": 1.4401745266075392,
+          "trading_day_count": 1212
+        }
+      },
+      "candidate_return_correlations": {
+        "A_U": {
+          "A_U": 1.0,
+          "D_S": 0.9487103863268049,
+          "V_S": 0.9463430068020002
+        },
+        "D_S": {
+          "A_U": 0.9487103863268049,
+          "D_S": 1.0,
+          "V_S": 0.9985134846054674
+        },
+        "V_S": {
+          "A_U": 0.9463430068020002,
+          "D_S": 0.9985134846054674,
+          "V_S": 1.0
+        }
+      },
+      "effect_metrics": {
+        "direction_effect": {
+          "annualized_mean": 0.00035610103944419785,
+          "positive_day_win_rate": 0.5297029702970297,
+          "trading_day_count": 1212
+        },
+        "screening_effect": {
+          "annualized_mean": -0.01405369556129371,
+          "positive_day_win_rate": 0.47029702970297027,
+          "trading_day_count": 1212
+        },
+        "structure_size_effect": {
+          "annualized_mean": -0.0907331244466287,
+          "positive_day_win_rate": 0.4389438943894389,
+          "trading_day_count": 1212
+        },
+        "volume_effect": {
+          "annualized_mean": 0.02823355391297665,
+          "positive_day_win_rate": 0.551980198019802,
+          "trading_day_count": 1212
+        }
+      },
+      "trading_day_count": 1212
+    },
+    "schedule_bound_carrier_2018_2020_static_taxonomy_diagnostic": {
+      "arm_metrics": {
+        "A_U": {
+          "annualized_return": 0.49335684912711136,
+          "annualized_volatility": 0.2463258601653748,
+          "maximum_drawdown": -0.36069092744348663,
+          "sharpe_zero_risk_free": 1.7526874520907214,
+          "trading_day_count": 2918
+        },
+        "D_S": {
+          "annualized_return": 0.5632558780932034,
+          "annualized_volatility": 0.27393514785039325,
+          "maximum_drawdown": -0.4106983970480126,
+          "sharpe_zero_risk_free": 1.7697721219124103,
+          "trading_day_count": 2918
+        },
+        "EW_S": {
+          "annualized_return": 0.5629081033164219,
+          "annualized_volatility": 0.27404892945395787,
+          "maximum_drawdown": -0.41147681185988605,
+          "sharpe_zero_risk_free": 1.7683418049353268,
+          "trading_day_count": 2918
+        },
+        "EW_U": {
+          "annualized_return": 0.6963611058854126,
+          "annualized_volatility": 0.2761969277971472,
+          "maximum_drawdown": -0.41123917597704196,
+          "sharpe_zero_risk_free": 2.0539750067063665,
+          "trading_day_count": 2918
+        },
+        "V_S": {
+          "annualized_return": 0.6040185039388948,
+          "annualized_volatility": 0.2722308703712795,
+          "maximum_drawdown": -0.40157686128199044,
+          "sharpe_zero_risk_free": 1.8738430833024504,
+          "trading_day_count": 2918
+        }
+      },
+      "candidate_return_correlations": {
+        "A_U": {
+          "A_U": 1.0,
+          "D_S": 0.9912551774781829,
+          "V_S": 0.990145068190351
+        },
+        "D_S": {
+          "A_U": 0.9912551774781829,
+          "D_S": 1.0,
+          "V_S": 0.9991075047596827
+        },
+        "V_S": {
+          "A_U": 0.990145068190351,
+          "D_S": 0.9991075047596827,
+          "V_S": 1.0
+        }
+      },
+      "effect_metrics": {
+        "direction_effect": {
+          "annualized_mean": 0.0001906093263743667,
+          "positive_day_win_rate": 0.4886908841672378,
+          "trading_day_count": 2918
+        },
+        "screening_effect": {
+          "annualized_mean": -0.08268940807321742,
+          "positive_day_win_rate": 0.3708019191226868,
+          "trading_day_count": 2918
+        },
+        "structure_size_effect": {
+          "annualized_mean": -0.13556934238711715,
+          "positive_day_win_rate": 0.3680603152844414,
+          "trading_day_count": 2918
+        },
+        "volume_effect": {
+          "annualized_mean": 0.0255057549554223,
+          "positive_day_win_rate": 0.5394105551747772,
+          "trading_day_count": 2918
+        }
+      },
+      "trading_day_count": 2918
+    }
+  },
+  "production_authority": false,
+  "research_status": "diagnostic_only",
+  "schema_version": "datahub.industry_index_attribution.report.v2",
+  "scoring_allowed": false,
+  "screened_coordinate_channels": [
+    "direction_amount_price_anomaly",
+    "volume_anomaly",
+    "screened_equal_weight_baseline"
+  ],
+  "single_stock_authorized": false,
+  "strategy_effectiveness_claim": false,
+  "training_allowed": false,
+  "unscreened_baseline_internal_only": true,
+  "unscreened_baseline_user_registration_allowed": false,
+  "unscreened_coordinate_channels": [
+    "structure",
+    "unscreened_equal_weight_baseline"
+  ]
+}

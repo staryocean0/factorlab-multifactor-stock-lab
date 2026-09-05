@@ -1,0 +1,18 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_pre_result_trade_leg_identity_incident@1.0",
+  "status": "closed_by_result_free_contract_v1_3",
+  "failed_contract_digest": "sha256:de7a699c8b6c57a01d30d5191e2d04ff50029f40bca467a24d21897995b4a3ed",
+  "failed_phase": "formal_post2020_account_trade_normalization_before_any_scientific_file_write",
+  "symptom": "asset_300185_share_quantity_change_direction_was_not_present_in_the_same_direction_frozen_turnover_leg_map",
+  "root_cause": "the_adapter_inferred_trade_identity_from_post_cost_target_share_quantity_changes_but_the_frozen_account_engine_defines_costed_trade_legs_from_pre_cost_portfolio_weight_changes;the_two_coordinates_need_not_have_the_same_direction_after_NAV_and_target_share_reallocation",
+  "financial_correction": "use_the_frozen_buy_legs_and_sell_legs_as_authoritative_trade_identity;derive_each_leg_trade_value_as_leg_weight_times_overnight_NAV_and_quantity_as_trade_value_div_execution_price;retain_actual_holdings_separately",
+  "account_holdings_changed": false,
+  "daily_total_cost_changed": false,
+  "account_return_changed": false,
+  "model_score_policy_clock_or_parameter_changed": false,
+  "scientific_output_file_count": 0,
+  "result_opened": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:0eacc60fb915c52c62de107fb0ad0ba0ab41d97145b52d0a66b6bbbc732f2b7d"
+}

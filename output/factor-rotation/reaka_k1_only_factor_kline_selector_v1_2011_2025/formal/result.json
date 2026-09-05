@@ -1,0 +1,36 @@
+{
+  "schema_id": "factorlab.reaka_k1_only_factor_kline_selector_result@1.0",
+  "tree": "formal",
+  "trading_identity": "K1_only",
+  "locked_grain": "monthly",
+  "state_logic": "factor_on_interval_kline_selector",
+  "next_bar_continuation_allowed": false,
+  "residual_is_selector_factor": false,
+  "weight_overlay_applied": false,
+  "upweight_candidates": [
+    "index:trend:up",
+    "index:channel:middle",
+    "index:channel:upper",
+    "industry:trend:up",
+    "industry:trend:sideways",
+    "industry:channel:lower"
+  ],
+  "downweight_candidates": [
+    "index:trend:down",
+    "index:channel:lower",
+    "size:trend:up",
+    "size:trend:down",
+    "size:channel:upper",
+    "industry:trend:down",
+    "industry:channel:middle",
+    "industry:channel:upper"
+  ],
+  "n_factor_on_intervals": 50,
+  "account_replayed": false,
+  "model_training_executed": false,
+  "new_factor_search_executed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "contract_digest": "sha256:65f1eb6dc69c9935e3cb84453bd08e49550e8f46d1935c4b7c06d3dab17ef40e",
+  "canonical_digest": "sha256:a6983dff7400f06f88149c12067e6cfbc3b720bee515b1c3e78444bd892a207a"
+}

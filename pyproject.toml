@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "factorlab-multifactor-stock-lab"
+version = "0.1.0"
+description = "Bounded FactorLab REAKA multifactor stock-selection research lab"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "jsonschema>=4.23,<5",
+  "numpy>=2.0,<2.6",
+  "pandas>=2.3,<3",
+  "pyarrow>=19,<20",
+  "pydantic>=2.10,<3",
+  "pytest>=8.3,<9",
+  "ruff>=0.9,<1",
+  "scikit-learn>=1.6,<2",
+  "scipy>=1.15,<2",
+]
+
+[project.optional-dependencies]
+paper = [
+  "torch>=2.7,<3",
+]
+
+[tool.hatch.build]
+dev-mode-exact = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/factor_lab"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+ignore = ["B008"]
+

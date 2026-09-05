@@ -1,0 +1,18 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_acceptance@1.0",
+  "status": "rejected",
+  "validation_report_digest": "sha256:9bf2d68e8b970f3a5a7aa54a8bb9d768297e38e6296c4ccd77ec2546725bb079",
+  "result_digest": "sha256:8939d42b75d60e13db8bf81ec3f587bf40f87f0f292d262ae5635ac6f8fc8d43",
+  "account_snapshot_manifest_digest": "sha256:b652b4c3ddeeef9c4999a5ea7d61af6082a2fe7fa1910d32f3c73fa33b2729ca",
+  "strategy_or_parameter_mutation": false,
+  "result_backflow_allowed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "blockers": [
+    "source_closure_drift",
+    "formal_contract_binding_invalid",
+    "isolated_contract_binding_invalid",
+    "formal_isolated_bytes_differ:result.json"
+  ],
+  "canonical_digest": "sha256:da48ee0564e282d0948f1bd7c207f3736c9d7250405bc8dca65f358a00a4f758"
+}

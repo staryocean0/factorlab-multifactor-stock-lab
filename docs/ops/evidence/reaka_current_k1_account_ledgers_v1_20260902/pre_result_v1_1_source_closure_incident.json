@@ -1,0 +1,15 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_pre_result_source_closure_incident@1.0",
+  "status": "closed_by_result_free_contract_v1_2",
+  "failed_contract_digest": "sha256:ed7661ae3562fe8bcb0d8010506a09db255560f5aee2856b31dbc433f7613819",
+  "failed_phase": "contract_loading_before_strategy_data_read",
+  "symptom": "contract_source_closure_contained_the_v1_0_predecessor_and_cost_incident_but_runtime_SOURCE_FILES_omitted_both",
+  "correction": "add_predecessor_and_both_pre_result_incidents_to_the_runtime_exact_source_closure_allowlist",
+  "strategy_data_rows_read": 0,
+  "scientific_output_file_count": 0,
+  "result_opened": false,
+  "model_score_policy_clock_or_parameter_changed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:8c26330fdfc0312e9dbf7b736485ac5d52b0c0b5f4cd6a58c93357cbeec02b46"
+}

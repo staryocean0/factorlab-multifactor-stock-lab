@@ -1,0 +1,29 @@
+{
+  "dataset_version": "adjust_factors_cn_a_xdxr_v9_20260814",
+  "dataset_kind": "adjustment_factors",
+  "source": "xdxr_events_direct_formula_v9",
+  "total_rows": 32981632,
+  "symbol_count": 5176,
+  "dataset_hash": "2fc1faeaff735b0251b8542e0d4ec3690a023469de044fadfc6fa246f7e53ee0",
+  "fixes_vs_v8": [
+    "fenhong is per-10-shares: divisor corrected (fenhong/10 via preclose formula)",
+    "cash dividend ratio now applied ON event day and after (was inverted pre-event)",
+    "combined (10*prev_close - fenhong + peigu*peigujia)/(10+songzhuangu+peigu) preclose formula",
+    "duplicate XDXR event records deduplicated before same-day aggregation (12,121 dup rows)",
+    "same-day multi-events aggregated into a single ratio"
+  ],
+  "step_probes": {
+    "000903": {
+      "2017-06-12": 2.018348624129135
+    },
+    "600519": {
+      "2017-07-07": 1.0151093188869997
+    },
+    "601398": {
+      "2017-07-11": 1.046900332928492
+    },
+    "603009": {
+      "2017-07-28": 2.5
+    }
+  }
+}

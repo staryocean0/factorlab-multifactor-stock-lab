@@ -1,0 +1,82 @@
+{
+  "aggregation": "equal_mean_across_screened_S_constituents",
+  "availability_mode": "consumed_history",
+  "dataset_version": "industry_index_common_history_cn_a_2009_2025_v5_xdxr_v9_media_repair_20260814_l2",
+  "factor_registration_allowed": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "research_status": "diagnostic_only",
+  "schema_version": "datahub.industry_index_attribution.signals.v1",
+  "scoring_allowed": false,
+  "signal_summaries": {
+    "consumed_history_carrier_2021_2025": {
+      "direction_amount_price_signal": {
+        "count": 89814,
+        "maximum": 1.2281940676790748,
+        "mean": 1.002557704591585,
+        "minimum": 0.9370091527660109,
+        "p01": 0.9794513591637131,
+        "p50": 1.0012601805662884,
+        "p99": 1.037442317585328,
+        "standard_deviation": 0.011119941815767653
+      },
+      "turnover_amount_signal": {
+        "count": 89814,
+        "maximum": 2.9851206422369643,
+        "mean": 1.0073794094351933,
+        "minimum": 0.3217749968730973,
+        "p01": 0.6013689422127774,
+        "p50": 0.9794824743896307,
+        "p99": 1.742331842215706,
+        "standard_deviation": 0.2220794488544418
+      }
+    },
+    "full_2018_2025": {
+      "direction_amount_price_signal": {
+        "count": 263634,
+        "maximum": 1.2281940676790748,
+        "mean": 1.0026836931365326,
+        "minimum": 0.9176917877872681,
+        "p01": 0.9770534464271774,
+        "p50": 1.001534067424013,
+        "p99": 1.0382148352794016,
+        "standard_deviation": 0.011303269245085335
+      },
+      "turnover_amount_signal": {
+        "count": 263634,
+        "maximum": 3.1598676147084093,
+        "mean": 1.005246034394111,
+        "minimum": 0.3217749968730973,
+        "p01": 0.5792967105044181,
+        "p50": 0.9773536801033645,
+        "p99": 1.7080686920398909,
+        "standard_deviation": 0.23359897061141996
+      }
+    },
+    "schedule_bound_carrier_2018_2020": {
+      "direction_amount_price_signal": {
+        "count": 173820,
+        "maximum": 1.1815264841400122,
+        "mean": 1.002748792291842,
+        "minimum": 0.9176917877872681,
+        "p01": 0.9760311536240607,
+        "p50": 1.0016930644596793,
+        "p99": 1.0384375490171867,
+        "standard_deviation": 0.011396326296068904
+      },
+      "turnover_amount_signal": {
+        "count": 173820,
+        "maximum": 3.1598676147084093,
+        "mean": 1.0041437047085757,
+        "minimum": 0.3406589451238671,
+        "p01": 0.5710746751335263,
+        "p50": 0.9759164259738429,
+        "p99": 1.6972193183585875,
+        "standard_deviation": 0.23932719931429622
+      }
+    }
+  },
+  "single_stock_authorized": false,
+  "strategy_effectiveness_claim": false,
+  "training_allowed": false
+}

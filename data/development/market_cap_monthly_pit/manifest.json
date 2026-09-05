@@ -1,0 +1,76 @@
+{
+  "artifacts": {
+    "certification_report.json": {
+      "path": "certification_report.json",
+      "sha256": "b398c429343c6bb697bdc2561af3a15de0f69a71906412122232d06d1a0aa031"
+    },
+    "coverage_report.json": {
+      "path": "coverage_report.json",
+      "sha256": "e8997894575c0883858e43eb4c1f96521997977bcddab15db43d303115032b6a"
+    },
+    "gap_ledger.json": {
+      "path": "gap_ledger.json",
+      "sha256": "28bc28c3bfd23f60ff8d2107b533bdac7cc7e0a764af80b74dc525b03d057c4c"
+    },
+    "lineage_receipt.json": {
+      "path": "lineage_receipt.json",
+      "sha256": "bab52d7485219f9392f5208bc8bdfe523594b7fae9e2bb1881cd09ab6ffb074d"
+    },
+    "market_cap_gaps.parquet": {
+      "logical_digest": "db8d7822a9f0650eca47e82f2e5a897205137552ba6d7d2ee8d594ef2a39102b",
+      "path": "market_cap_gaps.parquet",
+      "row_count": 682,
+      "sha256": "0d0a46ebf5c6c7575c2927efaadbcd2c10065f6b4f7ab1a3e02475399e827e03"
+    },
+    "market_cap_surface.parquet": {
+      "logical_digest": "13f9c81ae4ccb069888b17b18e194510e134517eef4e7fe494d1640fc83f25f6",
+      "path": "market_cap_surface.parquet",
+      "row_count": 655248,
+      "sha256": "2dbfd339ff65396ca14519ec3a5e1003b5073449334ea9e3d59b86e723d38e29"
+    },
+    "prefix_invariance_report.json": {
+      "path": "prefix_invariance_report.json",
+      "sha256": "c31d1d2924b4f56ab481a3c1486b08a54aa59cbb16f22a0fcf363ac62814d9bd"
+    },
+    "replay_validation_report.json": {
+      "path": "replay_validation_report.json",
+      "sha256": "e2337bfd8bc4262b6a6b0b37b7d481f8f4f990ca3a58c1b70a47be9a73b6fa34"
+    },
+    "warmup/market_cap_surface.parquet": {
+      "logical_digest": "d848d052c9e96878a1c7e234c38f5a73f9f1cc5117baad655834008deab02740",
+      "path": "warmup/market_cap_surface.parquet",
+      "row_count": 1402,
+      "sha256": "a318c7b17f27c6740aa38dcbdf9dcbe8b71c8f2e9be709ccf3a5a1d593908008"
+    }
+  },
+  "canonical_digest": "53fcd1f7ab30b9539abe27889d6bcef5ed7386a50a9876d5a7a39a1c6549405a",
+  "canonical_logical_digest": "13f9c81ae4ccb069888b17b18e194510e134517eef4e7fe494d1640fc83f25f6",
+  "dataset_hash": "2dbfd339ff65396ca14519ec3a5e1003b5073449334ea9e3d59b86e723d38e29",
+  "dataset_kind": "stock_market_cap_monthly_pit",
+  "dataset_version": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+  "decision_month_count": 204,
+  "decision_period": {
+    "end": "2025-12",
+    "start": "2009-01"
+  },
+  "immutable": true,
+  "latest_alias_allowed": false,
+  "parents": {
+    "bars": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1d_raw_canonical_may18_merged_20260519/bars.parquet",
+      "sha256": "620c5bd5ba8c3d7089f9f3ee474a1a88dea2ec7720721e1112fe734564662bda"
+    },
+    "share_capital": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/stock_share_capital_change/dataset_version=stock_share_capital_cn_a_event_pit_research_sina_repair_v4_20260630/share_capital_changes.parquet",
+      "sha256": "f6850cc64d3006980029fc16fd2df6ced701abb214b52e9905b41d76a5f2e39d"
+    }
+  },
+  "production_authority": false,
+  "record_count": 655248,
+  "research_ready_for_admitted_rows": true,
+  "schema_version": "stock_market_cap_monthly_pit_common_history.v1",
+  "scientific_claim_increment": 0,
+  "state": "READY",
+  "strategy_runtime_changed": false,
+  "symbol_count": 5468
+}

@@ -1,0 +1,39 @@
+{
+  "schema_id": "factorlab.reaka_prediction_content_rollback@2.0",
+  "status": "current_stage_rollback_semantics",
+  "state_definition_change_earliest_reopen": "stage3_observable_context_support",
+  "stage3_reopen_reason": "observable_input_identity_and_downstream_pairing_invalidated",
+  "stage3_operator_count_decision_authority": false,
+  "operator_count_selection_stage": "stage6_model_training_and_operator_capacity",
+  "old_checkpoint_reuse_allowed_after_predictive_content_change": false,
+  "semantic_invariants": {
+    "observable_state_equals_latent_operator_state": false,
+    "user_supplies_operator_count": false,
+    "model_learns_operator_matrices": true,
+    "model_learns_operator_assignments": true,
+    "stage3_may_select_operator_count": false,
+    "effective_operator_count_is_post_training_evidence": true,
+    "portfolio_top_k_is_operator_count": false
+  },
+  "production_authority": false,
+  "source_closure": {
+    "docs/user/reaka_multifactor_infrastructure_systematic_optimization_plan.md": "sha256:9d9bb0c4c076748c4b1eddc3c11d0ca8c1e65986271de01f5e4c3212fa9ede4c",
+    "docs/user/reaka_multifactor_current_workflow.md": "sha256:fb69b3605d3bf9827123806627a5fb6379b8381a9b8ea9caf430307866861e96",
+    "docs/user/state_factor_research_state_machine_v2_workflow.md": "sha256:5ba7f836e3cdd143c80a40074ec0c719801521ace0d03f9073e1259dbb59517f",
+    "docs/user/reaka_strategy_v2_external_ai_handoff_v2.md": "sha256:e05e8f6257f4b2dbcbe4711450afab55fb4a6b6053cccb60d85512e773b7baba",
+    "docs/ops/reaka_multifactor_semantic_ontology_whitepaper.md": "sha256:9a81029dc54bd16961d5da867ae9e27e89a8649f932e43b4ae380b208ec334f6",
+    "docs/ops/reaka_multifactor_six_surface_infrastructure_whitepaper.md": "sha256:26cd9410b2ceb55b1149bdb74fed887617f29644d1232363cb8ec26ccbe925c9",
+    "docs/ops/state_factor_research_state_machine_v2_whitepaper.md": "sha256:dd47ed71884232237758272b2e461d32ae86682f95ffddc32bc06d04b20e3897",
+    "docs/ops/reaka_prediction_content_rollback_v2_whitepaper.md": "sha256:d5c7e930e9a9a5ec1ab1638d1ff52f723f61a33429a7bc1649f6e7364c65f2bf",
+    "docs/ops/reaka_multifactor_model_assembly_v2_whitepaper.md": "sha256:edc4d9731e6c75cb58c1dbe173cd0d423b108ffa21ed385d1148ae0aa26fd4ce",
+    "docs/ops/reaka_operator_identifiability_whitepaper.md": "sha256:f8f10cce441fc3ad50335a9462dc4db824548731603ab40b4cb29ea28df31171",
+    "docs/ops/reaka_operator_identifiability@1.0.json": "sha256:f809dd61bdf93cad7ec7556ed49acee135b87239a746c10e2adb1d8b8d9834cb",
+    "docs/ops/koopman_residual_admission@1.0.json": "sha256:3fbe4fd158b9618f1c24c8c3d861c63eabace263275f0dcfe5bf2eae8cfefbf3",
+    "src/factor_lab/governance/reaka_multifactor_infrastructure_v1.py": "sha256:2bf34eee26666a2def2215f9911762b3f6b23f283d67c3d329b223f0f8473ddd",
+    "scripts/factor_rotation/build_reaka_multifactor_infrastructure_v1.py": "sha256:bee6dab2a60e9986f30d475e4daf14b585bef2db6fe662b5180ba3ec21d3e247",
+    "scripts/factor_rotation/validate_reaka_multifactor_infrastructure_v1.py": "sha256:5d7d189d5b77a2017f736fdac4a55493ff7a316716ec06b389a0350977797c38",
+    "scripts/factor_rotation/close_reaka_multifactor_infrastructure_v1.py": "sha256:e3e2e5398894fc0a26e643d38f3c7c19d0dd618ff16bf20733dff88016ed63e4",
+    "tests/unit/test_reaka_multifactor_infrastructure_v1.py": "sha256:7dd79d7d277648afcb4a027ad3b19dab0d00d611c2e7a8c45745a95cb6cb8983"
+  },
+  "canonical_digest": "sha256:dd71687f4017b7acbd563442b278625d5604d6b3b4aa1104259b2da8f235457a"
+}
