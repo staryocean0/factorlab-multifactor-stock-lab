@@ -20,9 +20,19 @@ bounded imports run without the absent full-project shared services.
 
 ## Final repair verification
 
-The next verification includes current-context certificate binding, the
-conditional-mean health correction, zero-energy counterexamples, and every
-existing unit test. Its exact run and result will be recorded after completion.
+[GitHub Actions 33981438446](https://github.com/staryocean0/factorlab-multifactor-stock-lab/actions/runs/33981438446)
+passed both jobs. It tested head `15a85cb887c76536847eb2156b0f13dfcaf9c935`
+on the PR merge checkout `8cb7eb0926e9983fdd1336ad249bc1ecc2d9d9bd`.
+The downloaded JUnit report records **127 tests, 0 failures, 0 errors, 0 skipped**
+across the complete `tests/unit` directory. This includes current-context
+certificate binding, conditional-mean calibration boundaries, zero-energy
+counterexamples, and all pre-existing unit tests.
+
+The downloaded audit still reports **355 checks, 1 hard error, 35 evidence gaps**.
+The workflow's report-only collection succeeded without changing that failed
+foundation verdict. Passing unit tests is not a passed data-package gate or
+financial result. The final subsequent commit records documents/evidence only;
+no tested implementation changed after this run.
 
 ## Separate data-package gate
 
@@ -32,3 +42,5 @@ is absent in the locked tree; pytest was not reached in that run. All 24
 2023/2024 monthly paths are absent from the base tree while listed in the data
 manifest. The user is uploading these files. No data or manifest was changed,
 and no missing-data check was bypassed. Complete package readiness is not claimed.
+
+The final-head [package CI 33981438328](https://github.com/staryocean0/factorlab-multifactor-stock-lab/actions/runs/33981438328) also failed at the same absent 2023/01.parquet check. Its new CPU torch installation passed.
