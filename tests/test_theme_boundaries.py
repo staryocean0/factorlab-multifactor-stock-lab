@@ -27,10 +27,15 @@ def test_current_authority_remains_closed() -> None:
 
 
 def test_no_2026_qfq_year() -> None:
-    years = sorted(path.parent.name for path in (ROOT / "data/development/cn_a_qfq_daily").glob("year=*/bars.parquet"))
+    years = sorted(path.name for path in (ROOT / "data/development/cn_a_qfq_daily").glob("year=*") if path.is_dir())
     assert "year=2026" not in years
     assert "year=2007" in years
+    assert "year=2023" in years
+    assert "year=2024" in years
     assert "year=2025" in years
+    for year in ("2023", "2024"):
+        names = sorted(path.name for path in (ROOT / "data/development/cn_a_qfq_daily" / f"year={year}").glob("*.parquet"))
+        assert names == ["h1.parquet", "h2.parquet"]
 
 
 def test_stage4_review_is_unsigned() -> None:

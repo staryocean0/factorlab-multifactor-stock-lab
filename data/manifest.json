@@ -182,28 +182,6 @@
       "year": 2022
     },
     {
-      "bytes": 44487804,
-      "data_role": "research_surface",
-      "maximum_trading_day": "2023-12-29",
-      "minimum_trading_day": "2023-01-03",
-      "path": "data/development/cn_a_qfq_daily/year=2023/bars.parquet",
-      "product": "cn_a_qfq_daily_bars",
-      "row_count": 1230115,
-      "sha256": "53a752bf0c05d6521a5f8ccd66c95d6e4b40793a23b808c7a671581a21c188ab",
-      "year": 2023
-    },
-    {
-      "bytes": 44593346,
-      "data_role": "research_surface",
-      "maximum_trading_day": "2024-12-31",
-      "minimum_trading_day": "2024-01-02",
-      "path": "data/development/cn_a_qfq_daily/year=2024/bars.parquet",
-      "product": "cn_a_qfq_daily_bars",
-      "row_count": 1277076,
-      "sha256": "23f530d636871c22dc3127d67fde4cb8863c34dc7e07f1c82d491d781313e5db",
-      "year": 2024
-    },
-    {
       "bytes": 41704511,
       "data_role": "research_surface",
       "maximum_trading_day": "2025-12-31",
@@ -1190,6 +1168,54 @@
       "path": "output/factor-rotation/reaka_current_k1_account_ledgers_v1_2011_2026/formal/selection_opportunity_ledger.parquet",
       "product": "current_k1_formal_ledgers",
       "sha256": "e9ab8d58fedda621338849d8d2877a31958b7839833027c249adb0fbda7ec24e"
+    },
+    {
+      "bytes": 21600415,
+      "data_role": "research_surface",
+      "half": "h1",
+      "maximum_trading_day": "2023-06-30",
+      "minimum_trading_day": "2023-01-03",
+      "path": "data/development/cn_a_qfq_daily/year=2023/h1.parquet",
+      "product": "cn_a_qfq_daily_bars",
+      "row_count": 588780,
+      "sha256": "079e7b205cea551f8a29dc48d8f313a6fe4ee80293860321d92293155e3a998f",
+      "year": 2023
+    },
+    {
+      "bytes": 22983077,
+      "data_role": "research_surface",
+      "half": "h2",
+      "maximum_trading_day": "2023-12-29",
+      "minimum_trading_day": "2023-07-03",
+      "path": "data/development/cn_a_qfq_daily/year=2023/h2.parquet",
+      "product": "cn_a_qfq_daily_bars",
+      "row_count": 641335,
+      "sha256": "c4a7880979250232c6f80feb286b103edc4e08253d5d7a370331ecc9367a2274",
+      "year": 2023
+    },
+    {
+      "bytes": 22222441,
+      "data_role": "research_surface",
+      "half": "h1",
+      "maximum_trading_day": "2024-06-28",
+      "minimum_trading_day": "2024-01-02",
+      "path": "data/development/cn_a_qfq_daily/year=2024/h1.parquet",
+      "product": "cn_a_qfq_daily_bars",
+      "row_count": 615124,
+      "sha256": "bd5e67a35c6d2a2cf01103720c3ee680758690b618b70b8b9ece4f26692c9b7d",
+      "year": 2024
+    },
+    {
+      "bytes": 22309463,
+      "data_role": "research_surface",
+      "half": "h2",
+      "maximum_trading_day": "2024-12-31",
+      "minimum_trading_day": "2024-07-01",
+      "path": "data/development/cn_a_qfq_daily/year=2024/h2.parquet",
+      "product": "cn_a_qfq_daily_bars",
+      "row_count": 661952,
+      "sha256": "c2af970281872d4af24a8bfc2a84992abbc20abe852e4daa62e9a7f96be5f458",
+      "year": 2024
     }
   ],
   "research_period": {
