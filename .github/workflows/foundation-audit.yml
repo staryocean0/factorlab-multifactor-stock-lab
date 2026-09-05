@@ -1,0 +1,34 @@
+name: REAKA foundation audit
+
+on:
+  push:
+    branches: [codex/reaka-foundation-audit-20260905]
+  pull_request:
+    paths:
+      - '.github/workflows/foundation-audit.yml'
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'docs/**'
+
+permissions:
+  contents: read
+
+jobs:
+  source-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare internal paper for mathematical review
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          mkdir -p audit-evidence
+          pdftotext -layout research_materials/liao_residual_enhanced_adaptive_koopman_stock_prediction_2026.pdf audit-evidence/paper.txt
+          sha256sum research_materials/liao_residual_enhanced_adaptive_koopman_stock_prediction_2026.pdf > audit-evidence/paper-sha256.txt
+          git rev-parse HEAD > audit-evidence/source-commit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: private-foundation-source-${{ github.sha }}
+          path: audit-evidence/
+          retention-days: 7
