@@ -1,9 +1,16 @@
 # pyright: reportAny=false
-"""REAKA V2 Stage4 pairing of prior-month S_obs with index/industry attribution."""
+"""Pair prior-month S_obs with realised selected-holdings attribution.
+
+These descriptive comparisons are not forward factor IC or predictive admission.
+The sealed @1.0 contract is historical: repaired live sources must not be rebound
+into its source closure to obtain new execution authority.
+"""
 
 from __future__ import annotations
 
+import hashlib
 from dataclasses import dataclass
+from io import BytesIO
 from pathlib import Path
 from typing import Final, cast
 
@@ -93,12 +100,107 @@ def data_role(old_role: str) -> str:
     return mapping[old_role]
 
 
+def _require_columns(frame: pd.DataFrame, columns: tuple[str, ...], label: str) -> None:
+    if frame.columns.has_duplicates or not set(columns).issubset(frame.columns):
+        raise ValueError(f"reaka_v2_stage4_{label}_columns_invalid")
+    if frame.empty or frame.loc[:, list(columns)].isna().any().any():
+        raise ValueError(f"reaka_v2_stage4_{label}_missing_values")
+
+
+def _months(values: pd.Series, label: str) -> pd.PeriodIndex:
+    if not values.map(lambda value: isinstance(value, str)).all() or not values.str.fullmatch(r"\d{4}-\d{2}").all():
+        raise ValueError(f"reaka_v2_stage4_{label}_month_invalid")
+    try:
+        return pd.PeriodIndex(values, freq="M")
+    except (TypeError, ValueError) as exc:
+        raise ValueError(f"reaka_v2_stage4_{label}_month_invalid") from exc
+
+
+def _local_timestamps(values: pd.Series) -> pd.DatetimeIndex:
+    stamps = []
+    for value in values:
+        stamp = pd.Timestamp(value)
+        stamps.append(stamp.tz_localize("Asia/Shanghai") if stamp.tzinfo is None else stamp.tz_convert("Asia/Shanghai"))
+    return pd.DatetimeIndex(stamps)
+
+
+def _validate_factor_rows(frame: pd.DataFrame) -> pd.PeriodIndex:
+    _require_columns(frame, ("period", "decision_clock", "year", "index", "industry", "data_role"), "factor")
+    periods = _months(frame["period"], "factor")
+    if frame.duplicated(["period", "decision_clock"]).any():
+        raise ValueError("reaka_v2_stage4_duplicate_monthly_key")
+    if not frame["decision_clock"].isin(("14:30", "14:45")).all():
+        raise ValueError("reaka_v2_stage4_clock_invalid")
+    if not frame.groupby("period")["decision_clock"].nunique().eq(2).all():
+        raise ValueError("reaka_v2_stage4_clock_support_mismatch")
+    try:
+        values = frame.loc[:, ["year", "index", "industry"]].apply(pd.to_numeric, errors="raise")
+    except (TypeError, ValueError) as exc:
+        raise ValueError("reaka_v2_stage4_factor_values_invalid") from exc
+    if not np.isfinite(values.to_numpy(dtype=float)).all():
+        raise ValueError("reaka_v2_stage4_factor_values_nonfinite")
+    if not np.array_equal(values["year"].to_numpy(), periods.year):
+        raise ValueError("reaka_v2_stage4_year_mismatch")
+    if (periods < pd.Period("2011-05", freq="M")).any() or (periods > pd.Period("2025-12", freq="M")).any():
+        raise ValueError("reaka_v2_stage4_period_outside_frozen_boundary")
+    expected = np.where(
+        periods.year < 2017,
+        "development_material_pairing",
+        np.where(periods.year == 2017, "development_listing_not_pass_evidence", "consumed_repeat_comparison_no_retune"),
+    )
+    if not np.array_equal(frame["data_role"].to_numpy(), expected):
+        raise ValueError("reaka_v2_stage4_calendar_role_mismatch")
+    return periods
+
+
+def _validate_pairing_panel(panel: pd.DataFrame) -> None:
+    periods = _validate_factor_rows(panel)
+    _require_columns(panel, ("source_period", "S_obs", "episode_id"), "pairing")
+    source = _months(panel["source_period"], "source")
+    if not (source + 1 == periods).all():
+        raise ValueError("reaka_v2_stage4_not_previous_calendar_month")
+    if not panel["S_obs"].isin(("up", "down", "sideways")).all():
+        raise ValueError("reaka_v2_stage4_state_invalid")
+    for field in ("source_period", "S_obs", "episode_id"):
+        if not panel.groupby("period")[field].nunique().eq(1).all():
+            raise ValueError("reaka_v2_stage4_cross_clock_state_mismatch")
+
+
 def build_pairing_panel(states: pd.DataFrame, factors: pd.DataFrame) -> pd.DataFrame:
+    _require_columns(
+        states, ("decision_period", "source_period", "trend", "data_role", "pit_available_at", "source_last_date"), "state"
+    )
+    decision = _months(states["decision_period"], "state_decision")
+    source = _months(states["source_period"], "state_source")
+    if states.duplicated("decision_period").any():
+        raise ValueError("reaka_v2_stage4_duplicate_state_month")
+    if not (source + 1 == decision).all():
+        raise ValueError("reaka_v2_stage4_not_previous_calendar_month")
+    if not states["trend"].isin(("up", "down", "sideways")).all():
+        raise ValueError("reaka_v2_stage4_state_invalid")
+    try:
+        available = _local_timestamps(states["pit_available_at"])
+        last_date = _local_timestamps(states["source_last_date"])
+    except (TypeError, ValueError) as exc:
+        raise ValueError("reaka_v2_stage4_state_timestamp_invalid") from exc
+    source_start = source.to_timestamp().tz_localize("Asia/Shanghai")
+    decision_start = decision.to_timestamp().tz_localize("Asia/Shanghai")
+    if (
+        available.isna().any()
+        or last_date.isna().any()
+        or not ((last_date >= source_start) & (last_date < decision_start) & (last_date <= available)).all()
+        or not (available < decision_start).all()
+    ):
+        raise ValueError("reaka_v2_stage4_state_not_pit")
     state = states.loc[:, ["decision_period", "source_period", "trend", "data_role"]].rename(
         columns={"trend": "S_obs", "data_role": "stage3_data_role"}
     )
+    _require_columns(factors, ("period", "decision_clock", "year", "index", "industry", "data_role"), "factor")
     factor = factors.loc[:, ["period", "decision_clock", "year", "index", "industry", "data_role"]].copy()
     factor["data_role"] = [data_role(str(value)) for value in factor["data_role"]]
+    _validate_factor_rows(factor)
+    for column in ("year", "index", "industry"):
+        factor[column] = pd.to_numeric(factor[column], errors="raise")
     joined = factor.merge(state, left_on="period", right_on="decision_period", how="inner", validate="many_to_one")
     if len(joined) != len(factor):
         raise ValueError("reaka_v2_stage4_state_join_gap")
@@ -109,20 +211,34 @@ def build_pairing_panel(states: pd.DataFrame, factors: pd.DataFrame) -> pd.DataF
         ).all()
     ):
         raise ValueError("reaka_v2_stage4_role_mismatch")
-    unique = joined.loc[:, ["data_role", "period", "S_obs"]].drop_duplicates().sort_values(["data_role", "period"])
-    unique["episode_number"] = unique.groupby("data_role")["S_obs"].transform(lambda x: x.ne(x.shift()).cumsum())
+    # Monthly state projection after both unique input keys have been checked;
+    # this never drops or combines duplicate attribution observations.
+    unique = joined.loc[joined["decision_clock"].eq("14:30"), ["data_role", "period", "S_obs"]].sort_values(
+        ["data_role", "period"]
+    )
+    month_number = pd.Series(pd.PeriodIndex(unique["period"], freq="M").asi8, index=unique.index)
+    starts = unique["data_role"].ne(unique["data_role"].shift()) | unique["S_obs"].ne(unique["S_obs"].shift())
+    starts |= month_number.diff().ne(1)
+    unique["episode_number"] = starts.groupby(unique["data_role"]).cumsum()
     joined = joined.merge(unique, on=["data_role", "period", "S_obs"], how="left", validate="many_to_one")
     joined["episode_id"] = joined["data_role"].astype(str) + ":" + joined["episode_number"].astype(int).astype(str)
-    return joined.loc[
+    panel = joined.loc[
         :, ["period", "source_period", "year", "data_role", "decision_clock", "S_obs", "episode_id", "index", "industry"]
     ].sort_values(["period", "decision_clock"])
+    _validate_pairing_panel(panel)
+    return panel
 
 
 def _aligned(value: float, expected: str) -> bool:
     return value > 0.0 if expected == "enhance" else value < 0.0
 
 
+def _opposed(value: float, expected: str) -> bool:
+    return value < 0.0 if expected == "enhance" else value > 0.0
+
+
 def evaluate(panel: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    _validate_pairing_panel(panel)
     annual_rows: list[dict[str, object]] = []
     episode_rows: list[dict[str, object]] = []
     summary_rows: list[dict[str, object]] = []
@@ -184,6 +300,8 @@ def evaluate(panel: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFr
                 annual_aligned = sum(_aligned(value, hypothesis.expected_direction) for value in annual_effects)
                 if not episode_effects or not annual_effects:
                     machine_direction = "insufficient"
+                elif pooled_lift == 0.0 and all(value == 0.0 for value in episode_effects + annual_effects):
+                    machine_direction = "no_direction"
                 elif (
                     _aligned(pooled_lift, hypothesis.expected_direction)
                     and episode_aligned * 2 >= len(episode_effects)
@@ -191,9 +309,9 @@ def evaluate(panel: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFr
                 ):
                     machine_direction = "aligned"
                 elif (
-                    not _aligned(pooled_lift, hypothesis.expected_direction)
-                    and episode_aligned * 2 < len(episode_effects)
-                    and annual_aligned * 2 < len(annual_effects)
+                    _opposed(pooled_lift, hypothesis.expected_direction)
+                    and sum(_opposed(value, hypothesis.expected_direction) for value in episode_effects) * 2 > len(episode_effects)
+                    and sum(_opposed(value, hypothesis.expected_direction) for value in annual_effects) * 2 > len(annual_effects)
                 ):
                     machine_direction = "opposed"
                 else:
@@ -224,14 +342,16 @@ def evaluate(panel: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFr
 
 
 def execute_tree(*, tree: str) -> dict[str, object]:
+    from factor_lab.governance.reaka_foundation_contract import require_research_action
+
+    require_research_action(ROOT, "stage4_execute")
     if tree not in {"formal", "isolated"}:
         raise ValueError("reaka_v2_stage4_tree_invalid")
     contract = load_contract()
     output = OUTPUT_ROOT / tree
     if output.exists() and any(output.iterdir()):
         raise FileExistsError(f"reaka_v2_stage4_output_exists:{output}")
-    states = pd.read_csv(STATE_ROOT / tree / "state_months.csv")
-    factors = pd.read_csv(FACTOR_ROOT / tree / "monthly_selector_panel.csv")
+    states, factors = _load_bound_inputs(contract, tree=tree)
     panel = build_pairing_panel(states, factors)
     annual, episodes, summary = evaluate(panel)
     output.mkdir(parents=True, exist_ok=False)
@@ -278,3 +398,24 @@ def execute_tree(*, tree: str) -> dict[str, object]:
         },
     )
     return result
+
+
+def _load_bound_inputs(contract: dict[str, object], *, tree: str) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Hash exactly the bytes parsed, before any output directory is created."""
+    if tree not in {"formal", "isolated"}:
+        raise ValueError("reaka_v2_stage4_tree_invalid")
+    digests = contract.get("input_digests")
+    expected = digests.get(tree) if isinstance(digests, dict) else None
+    if not isinstance(expected, dict) or set(expected) != {"state_months.csv", "monthly_selector_panel.csv"}:
+        raise PermissionError("reaka_v2_stage4_input_digest_inventory_invalid")
+    frames: list[pd.DataFrame] = []
+    for root, name in ((STATE_ROOT, "state_months.csv"), (FACTOR_ROOT, "monthly_selector_panel.csv")):
+        try:
+            raw = (root / tree / name).read_bytes()
+        except OSError as exc:
+            raise PermissionError(f"reaka_v2_stage4_input_unavailable:{name}") from exc
+        actual = "sha256:" + hashlib.sha256(raw).hexdigest()
+        if expected[name] != actual:
+            raise PermissionError(f"reaka_v2_stage4_input_digest_mismatch:{name}")
+        frames.append(pd.read_csv(BytesIO(raw)))
+    return frames[0], frames[1]

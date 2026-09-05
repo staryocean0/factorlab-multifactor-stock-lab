@@ -64,6 +64,7 @@ from factor_lab.factor_rotation.reaka_stage6_temporal_coordinate import (
     temporalize_task_spec,
 )
 from factor_lab.governance.canonicalization import canonical_digest
+from factor_lab.governance.reaka_foundation_contract import require_research_action
 
 HIDDEN_DIMENSIONS: Final[tuple[int, ...]] = (8, 16, 32)
 LEARNING_RATES: Final[tuple[float, ...]] = (0.0001, 0.0003, 0.001)
@@ -1071,6 +1072,7 @@ def run_declared_fit(
     checkpoints: tuple[int, ...],
     reconstruction_warmup_cycles: int = 1,
 ) -> dict[str, object]:
+    require_research_action(Path(__file__).resolve().parents[3], "train")
     started = time.perf_counter()
     _seed_everything(seed)
     model = build_calibration_model(feature_dim=feature_dim, hidden_dimension=hidden_dimension).to(device)
@@ -1624,6 +1626,7 @@ def execute(
     supplement_root: Path = DEFAULT_SUPPLEMENT_ROOT,
     device_name: str = "cuda:0",
 ) -> dict[str, object]:
+    require_research_action(Path(__file__).resolve().parents[3], "train")
     performance_path = evidence_root / "performance_preflight.json"
     if not performance_path.exists():
         raise CalibrationBlocked("preflight_required_before_execute")

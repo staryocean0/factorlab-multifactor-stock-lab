@@ -20,9 +20,10 @@ blocking category in
     transitions, ``(sum w)^2 / sum(w^2)`` over all batch x time
     observations (dimension = transitions), and is reported together with
     ``N``, ``K``, ``d`` and ``n_k_eff / d^2``;
-6.  auxiliary residual probes are explicitly non-authoritative; formal
-    four-residual evidence is built only from independently trained frozen
-    without-DRC / residual-MLP / REAKA arms on one bound support set;
+6.  auxiliary residual probes and training-objective residual snapshots
+    are explicitly non-authoritative; accepted formal four-residual
+    evidence requires independent frozen arms, history-only forecasts
+    and one bound support set, which these snapshots do not supply;
 7.  the annual receipt chain recomputes every digest from file bytes
     (never trusting a self-reported field), binds the policy digest to the
     freeze manifest and the tensor digest to the tensor manifest, and
@@ -94,6 +95,7 @@ from factor_lab.governance.reaka_residual_certificate import (
     build_formal_cross_arm_residual_certificate,
     formal_cross_arm_residual_certificate_valid,
 )
+from factor_lab.governance.reaka_foundation_contract import require_research_action
 
 STAGE6_ENGINE_SCHEMA_ID: Final = "factorlab.reaka_stage6_daily_engine@2.0"
 STAGE6_TENSOR_SCHEMA_ID: Final = (
@@ -1423,6 +1425,7 @@ def _train_residual_evidence_probes(
     formula at the highest step index.
     """
 
+    require_research_action(Path(__file__).resolve().parents[3], "train")
     from factor_lab.factor_rotation.reaka_paper_v1 import (  # noqa: E402
         _ConditionalResidualDenoiser,
     )
@@ -1724,13 +1727,17 @@ class Stage6HealthCertificate:
 
     def as_dict(self) -> dict[str, object]:
         payload: dict[str, object] = {
-            "schema_id": "factorlab.reaka_stage6_health_certificate@2.0",
+            "schema_id": "factorlab.reaka_stage6_health_certificate@2.1",
             "fit": self.fit,
             "status": self.status,
             "per_gate": {
                 gate: dict(values) for gate, values in self.per_gate.items()
             },
             "blocker_count": self.blocker_count,
+            "scientific_role": "legacy_training_health_and_required_evidence_only",
+            "threshold_authority": "historical_project_policy_not_mathematical_identity",
+            "scientific_acceptance_authority": False,
+            "formal_residual_acceptance_authority": False,
             "production_authority": False,
         }
         payload["canonical_digest"] = canonical_digest(payload)
@@ -1808,12 +1815,20 @@ def evaluate_stage6_health_certificate(
     conditional-mean validation remains explicitly blocked pending that
     evidence.  Diffusion retains its scale gates, but those legacy
     teacher-forced measurements do not replace historical-only conditional
-    distribution evidence in the downstream formal certificate.
+    distribution evidence.  That evidence is mandatory for diffusion even
+    when cross-arm aggregation is disabled.  A structurally valid cross-arm
+    summary also cannot establish calibration or conditional predictive
+    improvement from marginal energies and quantiles alone.
 
     A formal cross-arm consumer must supply the full current comparison
     identity from its own frozen task/config/support.  The artifact cannot
     supply its own expected identity.  Its operator count and support are
     additionally checked against this call's operator_count and health.
+
+    ``passed`` is confined to this historical health policy and explicitly
+    grants no scientific or formal residual acceptance authority.  The
+    limits below are historical project choices, not mathematical
+    necessities or guarantees of financial utility.
 
     The frozen limits (``training_health_contract.json``):
 
@@ -1830,6 +1845,11 @@ def evaluate_stage6_health_certificate(
     - minimum_cpu_gpu_score_correlation: 0.999 (preflight-level; recorded)
     - minimum_cpu_gpu_top20_member_overlap: 0.98 (preflight-level; recorded)
     """
+
+    if residual_mode not in {"none", "mlp", "diffusion"}:
+        raise ValueError(f"stage6_residual_mode_unknown:{residual_mode}")
+    if isinstance(operator_count, bool) or not isinstance(operator_count, int) or operator_count < 1:
+        raise ValueError("stage6_operator_count_must_be_positive_integer")
 
     gates: dict[str, dict[str, object]] = {}
     occupancy = health.soft_operator_occupancy
@@ -1944,6 +1964,24 @@ def evaluate_stage6_health_certificate(
                 "measurement_source": "legacy_teacher_forced_training_objective",
                 "history_only_distribution_validation_required": True,
             })
+        gates["conditional_distribution_validation"] = {
+            "value": None,
+            "limit": "same_support_history_only_distribution_evidence",
+            "kind": "required_evidence",
+            "pass": False,
+            "blocked": True,
+            "reason": "conditional_distribution_validation_missing",
+            "detail": {
+                "estimand": "conditional_residual_distribution",
+                "available_statistics": "teacher_forced_marginal_energies_and_quantiles_are_not_forecast_calibration",
+                "required_evidence": [
+                    "history_only_argmax_forecast_samples_without_realized_residual_input",
+                    "same_checkpoint_hard_selector_reference_residual",
+                    "validated_terminal_distribution_and_sampling_schedule",
+                    "same_support_frozen_conditional_distribution_scoring_rule_and_uncertainty",
+                ],
+            },
+        }
     gates["input_ood_fraction"] = _gate_verdict(
         value=health.input_ood_fraction,
         limit=0.05,
@@ -2149,13 +2187,16 @@ def evaluate_stage6r_integrity_certificate(
     }
     blockers = [name for name, verdict in gates.items() if verdict["blocked"]]
     payload: dict[str, object] = {
-        "schema_id": "factorlab.reaka_stage6r_integrity_certificate@1.0",
+        "schema_id": "factorlab.reaka_stage6r_integrity_certificate@1.1",
         "fit": fit_label,
         "status": "blocked" if blockers else "passed",
         "per_gate": gates,
         "blockers": blockers,
         "blocker_count": len(blockers),
         "scientific_role": "execution_integrity_only",
+        "health_acceptance_authority": False,
+        "scientific_acceptance_authority": False,
+        "formal_residual_acceptance_authority": False,
         "fresh_oos": False,
         "production_authority": False,
     }
@@ -2238,8 +2279,11 @@ class Stage6FitResult:
     diagnostic_health_certificate: dict[str, object] | None = None
     training_order_policy: str = "row_permutation"
     precision_policy: str = "float32"
+    adjudication_mode: str = "legacy_fail_closed"
 
     def validate_artifact_schema(self) -> None:
+        if self.adjudication_mode not in {"legacy_fail_closed", "stage6r_integrity_only"}:
+            raise ValueError(f"stage6_adjudication_mode_unknown:{self.adjudication_mode}")
         if self.validation_score_rows.ndim != 2 or self.validation_score_rows.shape[1] != ROW_WIDTH:
             raise ValueError("stage6_result_validation_rows_shape_invalid")
         if self.diagnostic_rows.ndim != 2 or self.diagnostic_rows.shape[1] != ROW_WIDTH:
@@ -2273,6 +2317,17 @@ class Stage6FitResult:
                 raise ValueError("stage6_blocked_result_contains_usable_scores")
             if self.checkpoint_path is not None or self.formal_arm_residual_evidence is not None:
                 raise ValueError("stage6_blocked_result_contains_usable_model_artifact")
+        integrity_only = self.adjudication_mode == "stage6r_integrity_only" or bool(
+            isinstance(self.health_certificate, dict)
+            and (
+                self.health_certificate.get("scientific_role") == "execution_integrity_only"
+                or str(self.health_certificate.get("schema_id", "")).startswith(
+                    "factorlab.reaka_stage6r_integrity_certificate@"
+                )
+            )
+        )
+        if integrity_only and self.formal_arm_residual_evidence is not None:
+            raise ValueError("stage6_integrity_only_result_contains_formal_residual_evidence")
 
     def as_dict(self) -> dict[str, object]:
         self.validate_artifact_schema()
@@ -2290,11 +2345,14 @@ class Stage6FitResult:
             ],
             "training_order_policy": self.training_order_policy,
             "precision_policy": self.precision_policy,
+            "adjudication_mode": self.adjudication_mode,
             "stopped_early": self.stopped_early,
             "health": self.health.as_dict(),
             "health_certificate": self.health_certificate,
             "diagnostic_health_certificate": self.diagnostic_health_certificate,
             "formal_arm_residual_evidence": self.formal_arm_residual_evidence,
+            "scientific_acceptance_authority": False,
+            "formal_residual_acceptance_authority": False,
             "validation_score_row_count": int(self.validation_score_rows.size // ROW_WIDTH),
             "diagnostic_score_row_count": int(self.diagnostic_rows.size // ROW_WIDTH),
             "diagnostic_cross_year_label_count": self.diagnostic_cross_year_count,
@@ -2652,6 +2710,7 @@ def fit_stage6_arm(
     a replayable checkpoint.
     """
 
+    require_research_action(Path(__file__).resolve().parents[3], "train")
     started = time.perf_counter()
     config.validate()
     if adjudication_mode not in {"legacy_fail_closed", "stage6r_integrity_only"}:
@@ -3223,9 +3282,11 @@ def fit_stage6_arm(
     else:
         certificate_payload = legacy_certificate_payload
 
-    # Formal evidence is emitted by the fitted frozen arm itself, never by
-    # the auxiliary probes.  Diffusion training noise is fixed so the arm
-    # evidence can be reproduced from the checkpoint and seed.
+    # This legacy per-arm snapshot uses the training objective and is
+    # diagnostic, including when stored in the historical formal-arm
+    # field.  Formal consumers reject its teacher-forced provenance.
+    # Fix the noise so the diagnostic can be reproduced from checkpoint
+    # and seed; reproducibility does not turn it into forecast evidence.
     _seed_everything(config.seed + 7001)
     formal_steps: Tensor | None = None
     formal_noise: Tensor | None = None
@@ -3292,7 +3353,9 @@ def fit_stage6_arm(
                 config=config,
                 directory=checkpoint_dir,
             )
-        formal_arm_evidence = Stage6FormalArmResidualEvidence(
+        # Integrity-only execution may retain diagnostic scores/checkpoints,
+        # but cannot relabel those artifacts as formal residual evidence.
+        formal_arm_evidence = None if adjudication_mode == "stage6r_integrity_only" else Stage6FormalArmResidualEvidence(
             arm_id=config.arm_id,
             task_id=config.task_id,
             sequence_length=config.sequence_length,
@@ -3349,6 +3412,7 @@ def fit_stage6_arm(
         ),
         training_order_policy=training_order_policy,
         precision_policy=precision_policy,
+        adjudication_mode=adjudication_mode,
     )
     result.validate_artifact_schema()
     return result

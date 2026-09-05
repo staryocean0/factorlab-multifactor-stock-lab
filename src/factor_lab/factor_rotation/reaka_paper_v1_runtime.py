@@ -15,6 +15,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Final
 
 import numpy as np
@@ -42,6 +43,7 @@ from factor_lab.factor_rotation.reaka_paper_v1 import (
     fit_reaka_paper_challenger,
 )
 from factor_lab.governance.canonicalization import canonical_digest
+from factor_lab.governance.reaka_foundation_contract import require_research_action
 
 REAKA_PAPER_ARM_ID: Final = "dual_lstm_gate_aks_conditional_ddpm_joint_v1"
 REAKA_PAPER_DIAGNOSTIC_SCHEMA_ID: Final = "macro_regime_dual_strategy_reaka_paper_v1_diagnostic@1.0"
@@ -184,6 +186,7 @@ def run_reaka_paper_round3a_diagnostic(
     config: ReakaPaperDiagnosticConfig | None = None,
 ) -> dict[str, object]:
     """Run the frozen successor on consumed history and retain aggregates only."""
+    require_research_action(Path(__file__).resolve().parents[3], "train")
 
     frozen = config or ReakaPaperDiagnosticConfig()
     frozen.validate()

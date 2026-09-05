@@ -4,9 +4,18 @@ from __future__ import annotations
 
 from dataclasses import replace
 
+import numpy as np
+import pytest
+
 from factor_lab.factor_rotation.reaka_stage6_daily_engine import (
+    ROW_WIDTH,
+    Stage6FitConfig,
+    Stage6FitResult,
     Stage6TrainingHealth,
+    _train_residual_evidence_probes,
     evaluate_stage6_health_certificate,
+    evaluate_stage6r_integrity_certificate,
+    fit_stage6_arm,
 )
 from factor_lab.governance.reaka_residual_certificate import (
     FORMAL_CROSS_ARM_IDS,
@@ -107,6 +116,51 @@ def test_diffusion_retains_scale_gates_and_requires_separate_distribution_eviden
         assert gate["estimand"] == "conditional_residual_distribution"
         assert gate["history_only_distribution_validation_required"] is True
         assert gate["measurement_source"] == "legacy_teacher_forced_training_objective"
+    assert certificate.per_gate["conditional_distribution_validation"]["blocked"] is True
+
+
+def test_teacher_forced_diffusion_scale_match_cannot_pass_individual_arm_health() -> None:
+    certificate = _certificate("diffusion", _health(median_ratio=1.0, q95_ratio=1.0))
+    assert certificate.per_gate["predicted_to_true_residual_median_ratio"]["pass"] is True
+    assert certificate.per_gate["predicted_to_true_residual_q95_ratio"]["pass"] is True
+    assert certificate.status == "blocked"
+    assert certificate.blocker_count == 1
+    assert certificate.per_gate["conditional_distribution_validation"]["reason"] == "conditional_distribution_validation_missing"
+
+
+def test_equal_marginal_distributions_do_not_establish_conditional_predictions() -> None:
+    # Both sample vectors have exactly the observed marginal distribution;
+    # only one respects the sign learned from the available condition.
+    realized = np.array([-2.0, -1.0, 1.0, 2.0])
+    good = realized.copy()
+    wrong_condition = -realized
+    np.testing.assert_array_equal(np.sort(good), np.sort(wrong_condition))
+    assert np.mean((realized - good) ** 2) < np.mean((realized - wrong_condition) ** 2)
+    certificate = _certificate("diffusion", _health(median_ratio=1.0, q95_ratio=1.0))
+    assert certificate.per_gate["conditional_distribution_validation"]["blocked"] is True
+
+
+@pytest.mark.parametrize("mode", ["unknown", "MLP", ""])
+def test_unknown_residual_mode_is_rejected(mode: str) -> None:
+    with pytest.raises(ValueError, match="stage6_residual_mode_unknown"):
+        _certificate(mode)
+
+
+@pytest.mark.parametrize("operator_count", [0, -1, True, 1.5])
+def test_invalid_operator_count_cannot_inherit_single_operator_exemption(operator_count: object) -> None:
+    with pytest.raises(ValueError, match="stage6_operator_count_must_be_positive_integer"):
+        evaluate_stage6_health_certificate(
+            fit_label="synthetic_no_training", health=_health(),
+            operator_count=operator_count, residual_mode="none", require_four_residual=False,
+        )
+
+
+def test_passed_legacy_health_has_no_scientific_or_residual_acceptance_authority() -> None:
+    payload = _certificate("none").as_dict()
+    assert payload["status"] == "passed"
+    assert payload["threshold_authority"] == "historical_project_policy_not_mathematical_identity"
+    assert payload["scientific_acceptance_authority"] is False
+    assert payload["formal_residual_acceptance_authority"] is False
 
 
 def test_conditional_mean_change_preserves_unrelated_health_failures() -> None:
@@ -185,3 +239,100 @@ def test_claimed_context_must_match_health_support_and_explicit_operator_count()
         result = _bound_health_certificate(artifact, asserted_context)
         assert result.status == "blocked"
         assert result.per_gate["formal_cross_arm_residual_certificate"]["reason"] == "formal_cross_arm_current_identity_mismatch"
+
+
+def test_valid_cross_arm_summary_cannot_close_missing_conditional_distribution_validation() -> None:
+    result = evaluate_stage6_health_certificate(
+        fit_label="current_run", health=_health(median_ratio=1.0, q95_ratio=1.0),
+        operator_count=1, residual_mode="diffusion", require_four_residual=True,
+        formal_cross_arm_certificate=_formal_certificate(),
+        expected_comparison_identity=_current_identity(),
+    )
+    assert result.per_gate["formal_cross_arm_residual_certificate"]["pass"] is True
+    assert result.per_gate["conditional_distribution_validation"]["blocked"] is True
+    assert result.status == "blocked"
+
+
+def _integrity_certificate() -> dict[str, object]:
+    return evaluate_stage6r_integrity_certificate(
+        fit_label="synthetic_no_training",
+        health=replace(_health(), active_module_gradient_norms={"encoder": 0.1}),
+        validation_learning_curve=({"coverage_cycle": 1, "total_loss": 0.5},),
+        model_parameters_finite=True,
+    )
+
+
+def _diagnostic_result(certificate: dict[str, object]) -> Stage6FitResult:
+    return Stage6FitResult(
+        config=Stage6FitConfig(
+            arm_id="reaka", task_id="daily::h20", sequence_length=10,
+            latent_dim=8, operator_count=1, seed=11,
+            train_years=(2009, 2010, 2011), validation_year=2012,
+        ),
+        first_epoch_losses={"total_loss": 1.0}, last_epoch_losses={"total_loss": 0.5},
+        epoch_count=1, stopped_early=False, health=_health(),
+        validation_score_rows=np.zeros((1, ROW_WIDTH), dtype=np.int64),
+        validation_scores=np.array([0.1]), operator_ids=np.array([0]),
+        diagnostic_rows=np.zeros((0, ROW_WIDTH), dtype=np.int64),
+        diagnostic_scores=np.array([]), diagnostic_cross_year_count=0,
+        train_row_count=4, validation_row_count=1, diagnostic_row_count=0,
+        peak_rss_mib=1.0, elapsed_seconds=0.0, model_state_digest="sha256:" + "b" * 64,
+        checkpoint_path="diagnostic-only.pt", health_certificate=certificate,
+        adjudication_mode="stage6r_integrity_only",
+    )
+
+
+def test_numerical_integrity_pass_is_explicitly_diagnostic() -> None:
+    certificate = _integrity_certificate()
+    assert certificate["status"] == "passed"
+    assert certificate["scientific_role"] == "execution_integrity_only"
+    assert certificate["health_acceptance_authority"] is False
+    assert certificate["scientific_acceptance_authority"] is False
+    assert certificate["formal_residual_acceptance_authority"] is False
+    result = _diagnostic_result(certificate).as_dict()
+    assert result["validation_score_row_count"] == 1  # Research diagnostics remain usable.
+    assert result["adjudication_mode"] == "stage6r_integrity_only"
+    assert result["formal_arm_residual_evidence"] is None
+    assert result["formal_residual_acceptance_authority"] is False
+
+
+@pytest.mark.parametrize("relabel_certificate", [False, True])
+def test_integrity_mode_cannot_emit_formal_residual_evidence(relabel_certificate: bool) -> None:
+    certificate = _integrity_certificate()
+    if relabel_certificate:
+        # The execution mode is independently bound to the fit result.
+        certificate = {**certificate, "schema_id": "claimed_formal", "scientific_role": "claimed_formal"}
+    result = replace(_diagnostic_result(certificate), formal_arm_residual_evidence={"status": "passed"})
+    with pytest.raises(ValueError, match="stage6_integrity_only_result_contains_formal_residual_evidence"):
+        result.as_dict()
+
+
+def test_legacy_integrity_schema_cannot_gain_authority_by_omitting_role() -> None:
+    certificate = {"schema_id": "factorlab.reaka_stage6r_integrity_certificate@1.0", "status": "passed"}
+    result = replace(
+        _diagnostic_result(certificate), adjudication_mode="legacy_fail_closed",
+        formal_arm_residual_evidence={"status": "passed"},
+    )
+    with pytest.raises(ValueError, match="stage6_integrity_only_result_contains_formal_residual_evidence"):
+        result.as_dict()
+
+
+@pytest.mark.parametrize("mode", ["legacy_fail_closed", "stage6r_integrity_only"])
+def test_frozen_fit_blocks_before_config_data_or_checkpoint_access(mode: str, tmp_path) -> None:
+    # None would fail immediately on config/data access if the current
+    # foundation gate were reached too late.  No model or market data run.
+    checkpoint_dir = tmp_path / "checkpoints"
+    with pytest.raises(PermissionError, match="REAKA"):
+        fit_stage6_arm(
+            shared=None, spec=None, rows_by_year=None, config=None,
+            adjudication_mode=mode, checkpoint_dir=checkpoint_dir,
+        )
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_frozen_residual_probes_block_before_tensor_or_optimizer_access() -> None:
+    with pytest.raises(PermissionError, match="REAKA"):
+        _train_residual_evidence_probes(
+            train_latent=None, train_residual=None, latent=None,
+            true_residual=None, model_config=None, device=None, seed=11,
+        )

@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import random
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Final, Literal
 
 import numpy as np
@@ -37,6 +38,7 @@ from factor_lab.factor_rotation.macro_regime_dual_strategy_round2 import (
     Round2Panel,
 )
 from factor_lab.governance.canonicalization import canonical_digest
+from factor_lab.governance.reaka_foundation_contract import require_research_action
 
 REAKA_PAPER_STRATEGY_ID: Final = "reaka_paper_formula_faithful_v1"
 REAKA_PAPER_CONTRACT_SCHEMA_ID: Final = "reaka_paper_replication_contract@1.0"
@@ -812,6 +814,7 @@ def fit_reaka_paper_challenger(
     seed: int,
 ) -> ReakaPaperFitResult:
     """Fit one end-to-end paper architecture on a frozen FactorLab fold."""
+    require_research_action(Path(__file__).resolve().parents[3], "train")
 
     frozen = config or ReakaPaperConfig()
     adapter = adapter_config or FactorLabReakaAdapterConfig()

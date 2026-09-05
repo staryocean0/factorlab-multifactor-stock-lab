@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+# ruff: noqa: E402
+# Retired materializers cannot recreate historical current/evidence authority.
+# Keep this check before legacy imports, including optional project dependencies.
+import sys as _foundation_sys
+from pathlib import Path as _FoundationPath
+
+_FOUNDATION_ROOT = _FoundationPath(__file__).resolve().parents[2]
+if str(_FOUNDATION_ROOT / "src") not in _foundation_sys.path:
+    _foundation_sys.path.insert(0, str(_FOUNDATION_ROOT / "src"))
+from factor_lab.governance.reaka_foundation_contract import (  # noqa: E402
+    reject_legacy_entrypoint as _reject_legacy_entrypoint,
+)
+
+if __name__ == "__main__":
+    _reject_legacy_entrypoint(__file__)
+
 import argparse
 from pathlib import Path
 from typing import cast
@@ -24,6 +40,7 @@ from factor_lab.portfolio.post_training_strategy_science_acceptance import (
 
 
 def main() -> int:
+    _reject_legacy_entrypoint(__file__)
     parser = argparse.ArgumentParser()
     parser.add_argument("--formal-root", type=Path, required=True)
     parser.add_argument("--isolated-root", type=Path, required=True)

@@ -5,6 +5,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from factor_lab.governance.reaka_foundation_contract import CURRENT_MANIFEST, CLOSED_ACTIONS, validate_foundation
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -19,11 +21,10 @@ def test_paper_is_present_and_private_only() -> None:
 
 
 def test_current_authority_remains_closed() -> None:
-    current = json.loads((ROOT / "docs/ops/reaka_multifactor_current_manifest@1.2.json").read_text())
-    assert current["stage5_execution_allowed"] is False
-    assert current["model_training_allowed"] is False
-    assert current["production_authority"] is False
-    assert current["semantic_invariants"]["user_supplies_operator_count"] is False
+    current = json.loads((ROOT / CURRENT_MANIFEST).read_text())
+    assert all(current["research_actions"][action] is False for action in CLOSED_ACTIONS)
+    assert current["user_financial_receipt_signed"] is False
+    assert validate_foundation(ROOT)["infrastructure_consistency"] == "passed"
 
 
 def test_no_2026_qfq_year() -> None:
@@ -38,7 +39,7 @@ def test_no_2026_qfq_year() -> None:
         assert names == [f"{m:02d}.parquet" for m in range(1, 13)]
 
 
-def test_stage4_review_is_unsigned() -> None:
+def test_historical_stage4_review_is_unsigned() -> None:
     summary = pd.read_csv(
         ROOT / "output/factor-rotation/reaka_v2_stage4_observable_factor_pairing_v1_2011_2025/formal/hypothesis_summary.csv"
     )

@@ -1,80 +1,52 @@
-# REAKA Multifactor Stock Lab Control Plane
+# REAKA bounded research control plane
 
-This private repository is a bounded FactorLab research theme package. Its
-purpose is to let an external research-grade agent continue multifactor stock
-selection research with the data, infrastructure, paper, and historical results
-that the local controller frozen for this lab. It is not an authority to trade,
-mutate the local FactorLab current pointer, choose K, or promote a strategy.
+The current authority for this repository is
+`docs/ops/reaka_multifactor_current_manifest@1.3.json`.
+Read `README.md`, `docs/INDEX.md`,
+`docs/user/reaka_multifactor_current_workflow_v1_3.md`,
+`docs/ops/reaka_foundation_whitepaper_v1_3.md`, and
+`docs/ops/reaka_foundation_semantics@1.1.json` before changing strategy semantics.
+The user authorized correcting and synchronizing documentation, whitepaper,
+code, tests and executable workflow. Continue those repairs without waiting for
+market data; the user will report when uploads are complete.
 
-## Takeover audit supplement (2026-09-05)
+Current state: `foundation_contract_active_research_execution_blocked`.
+Run `python scripts/validate_reaka_foundation.py` and synthetic unit tests.
+Report infrastructure consistency separately from data completeness, historical
+evidence readiness and scientific acceptance. No passing test or report command
+can sign a financial receipt or establish investment performance.
 
-Read `docs/user/reaka_foundation_audit_workflow.md` and its report before using
-the frozen handoff. The user authorized foundation audit and reversible repairs.
-Keep the original current@1.2 and source receipts immutable; use the new read-only
-audit for current-version checks. A successful report command is not a passed
-foundation gate. Do not silently relabel teacher-forced residuals, deduplicate
-Stage4 months, or call financial residual/account other latent residual.
+The Stage4 historical evidence has duplicate months and incomplete source
+closure. Its old instruction to ask for financial acceptance is superseded.
+Do not deduplicate it arbitrarily, overwrite old receipts, refreeze old hashes,
+or use legacy build/run/freeze/close/validate launchers that write sealed outputs.
+Use new versioned successor contracts for later evidence rebuilding.
 
-## Read order
+The model learns latent matrices and assignments; observable financial
+conditions are not operator labels. Matrix capacity, occupied states and the
+research-selected capacity are distinct. Gate weights mix return/feature
+encodings. Financial return residual, latent transition residual and account
+other are different quantities. Residual prediction is optional and may have no
+increment. Neither K progression nor correct mathematics guarantees profit.
 
-1. `README.md`
-2. `NOTICE.md`
-3. `docs/INDEX.md`
-4. `docs/user/cloud_execution_prompt.md`
-5. `docs/governance/data_usage_declaration.json`
-6. `docs/user/reaka_multifactor_current_workflow_v1_2.md`
-7. `docs/ops/reaka_multifactor_current_manifest@1.2.json`
-8. The REAKA paper PDF and its FactorLab summary under `research_materials/`
-9. `.codex/skills/strategy-slice-rebuild/SKILL.md` before any strategy change
+Only paths listed in current@1.3 have current normative authority. Earlier
+current manifests, registries, admission contracts, whitepapers and the packaged
+annual strategy-slice workflow remain historical/reference materials. Their
+K-order policy, annual research sequence and current-stage claims do not apply
+to this infrastructure-only task. Keep sealed historical bytes; source changes
+are tracked as successors in Git, never retroactively accepted by resealing old
+receipts. The licensed paper itself remains immutable.
 
-## Semantic checksum
+Training, Stage3/4 execution, capacity selection, accounts, evidence promotion,
+local FactorLab pointer changes and production are closed. Pure mathematics,
+synthetic tests, source audits and authorized infrastructure repair are allowed.
+No live trading or broker actions belong to this repository.
 
-```text
-observable_state_equals_latent_operator_state = false
-user_supplies_operator_count = false
-model_learns_operator_matrices = true
-model_learns_operator_assignments = true
-stage3_may_select_operator_count = false
-effective_operator_count_is_post_training_evidence = true
-portfolio_top_k_is_operator_count = false
-```
+Do not modify `data/development/`, delete pending 2023/2024 uploads, fetch or
+fabricate 2026+ rows, or describe 2018—2025 as fresh OOS. Data boundaries remain
+2007—2008 warmup and 2009—2025 research; `fresh_oos=false`.
+Preserve the user's parallel uploads when publishing branch changes.
 
-Stop if these cannot be confirmed. Do not invent K2 from a failed identification
-attempt. Do not treat S_obs as operator supervision.
-
-## Frozen boundaries
-
-- Current unique local action is user financial review of Stage4 evidence.
-- Stage5, training, residual/DRC training, account execution, pointer change and
-  production are closed in this repository.
-- Files outside the current manifest have no current normative authority.
-- Consumed formula identities in
-  `docs/ops/reaka_factor_parallel_consumed_formula_registry@2.0.json` must not be
-  rerun as if they were new.
-- Never use result-driven calendar rules. Dates, clusters and casebook names are
-  materials, not runtime state.
-- The paper is a licensed IEEE full text. Internal research only; no public
-  redistribution.
-
-## Data contract
-
-- A-share QFQ daily bars: 2007-2008 warmup, 2009-2025 research surface.
-- 165 non-financial factors, PIT market cap, industry indexes, macro input and
-  CloudRidge/000985 references are shipped as research surfaces through 2025-12-31.
-- 2026+ rows are physically absent and must not be downloaded, inferred,
-  requested over the network, or fabricated.
-- `fresh_oos=false`. 2018-2025 is already consumed comparison for the current
-  Stage4 line and cannot be advertised as unseen OOS.
-- Data is a research surface, not a live broker fill surface.
-
-## Deliverables
-
-- New reusable code under `src/factor_lab/`.
-- Tests under `tests/`.
-- Executable workflows under `scripts/`.
-- Specifications and notes under `docs/` or `cloud_results/`.
-- Do not modify `data/development/` or the frozen paper PDF.
-
-No production, paper-trading, registered-use, K-selection, or fresh-OOS
-authority is available in this repository.
-
+Place reusable code under `src/factor_lab/`, tests under `tests/`, executable
+workflows under `scripts/`, and contracts/evidence under `docs/` or
+`cloud_results/`. Do not publish the licensed IEEE paper outside internal research.

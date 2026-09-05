@@ -3,12 +3,16 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
 import pyarrow.parquet as pq
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from factor_lab.governance.reaka_foundation_contract import validate_foundation  # noqa: E402
 MAX_GIT_FILE_BYTES = 90 * 1024 * 1024
 FORBIDDEN_PARTS = {".env", "credentials", "cloud_runtime", ".beads"}
 IGNORED = {".git", "__pycache__", ".pytest_cache", ".ruff_cache", ".mypy_cache", ".venv"}
@@ -23,17 +27,17 @@ def sha256(path: Path) -> str:
 
 
 def main() -> int:
+    foundation = validate_foundation(ROOT)
+    if foundation["infrastructure_consistency"] != "passed":
+        raise RuntimeError(f"current foundation invalid: {foundation['errors']}")
     scope = json.loads((ROOT / "docs/governance/package_scope.json").read_text())
     usage = json.loads((ROOT / "docs/governance/data_usage_declaration.json").read_text())
     manifest = json.loads((ROOT / "data/manifest.json").read_text())
-    current = json.loads((ROOT / "docs/ops/reaka_multifactor_current_manifest@1.2.json").read_text())
     assert scope["private_repository_required"] is True
     assert scope["production_authority"] is False
     assert scope["model_training_allowed"] is False
     assert usage["fresh_oos"] is False
     assert manifest["post_2025_rows_included"] is False
-    assert current["next_legal_action"] == "user_financial_review_of_stage4_evidence"
-    assert current["model_training_allowed"] is False
     paper = ROOT / "research_materials/liao_residual_enhanced_adaptive_koopman_stock_prediction_2026.pdf"
     assert paper.is_file() and paper.stat().st_size > 100_000
     file_count = 0
@@ -67,7 +71,12 @@ def main() -> int:
     names = set(sample.schema_arrow.names)
     if "symbol" not in names or "amihud_illiquidity_20d_lag1" not in names:
         raise RuntimeError("165f schema drifted")
-    print(json.dumps({"ok": True, "file_count": file_count, "products": len(manifest["products"])}))
+    print(json.dumps({
+        "ok": True, "file_count": file_count, "products": len(manifest["products"]),
+        "infrastructure_consistency": "passed", "dataset_integrity": "passed",
+        "historical_evidence_readiness": "blocked", "scientific_acceptance": "not_established",
+        "research_execution_allowed": False,
+    }))
     return 0
 
 

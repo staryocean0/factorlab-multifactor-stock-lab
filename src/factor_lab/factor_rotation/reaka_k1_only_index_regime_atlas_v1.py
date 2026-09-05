@@ -11,6 +11,8 @@ import pandas as pd
 
 from factor_lab.factor_rotation.reaka_intraday_k1_preflight_v1 import canonical_valid, file_digest, read_json, write_json
 from factor_lab.portfolio.post_training_strategy_science_acceptance import assert_no_scientific_wall_clock
+from factor_lab.governance.reaka_foundation_contract import require_research_action
+
 
 ROOT: Final = Path(__file__).resolve().parents[3]
 CONTRACT: Final = ROOT / "docs/ops/reaka_k1_only_index_regime_atlas@1.0.json"
@@ -648,6 +650,7 @@ def replay_quarterly_atlas(daily: pd.DataFrame, tree: str) -> float:
 
 
 def execute_tree(*, tree: str, output_root: Path) -> dict[str, object]:
+    require_research_action(Path(__file__).resolve().parents[3], "stage3_execute")
     if tree not in {"formal", "isolated"}:
         raise PermissionError("k1_only_index_regime_tree_invalid")
     if output_root.exists():

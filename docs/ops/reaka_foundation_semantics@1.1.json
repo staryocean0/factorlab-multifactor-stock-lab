@@ -1,0 +1,90 @@
+{
+  "schema_id": "factorlab.reaka_foundation_semantics@1.1",
+  "status": "current_normative_foundation_semantics",
+  "scope": "bounded_repository_foundation_only",
+  "supersedes": "docs/ops/reaka_foundation_semantics@1.0.json",
+  "paper_sha256": "e47b342414508a2d1ab7859c6e6a7df1ceb99141e0561a3598e866645f14d21e",
+  "financial_target": "conditional_cross_sectional_stock_prediction_with_active_market_size_industry_exposures",
+  "invariants": {
+    "self_developed_factors_allowed": true,
+    "observable_state_equals_latent_operator_state": false,
+    "observable_condition_is_operator_label": false,
+    "gate_is_financial_factor_weight": false,
+    "larger_gate_emphasizes_return_encoding": true,
+    "model_learns_operator_matrices": true,
+    "model_learns_operator_assignments": true,
+    "model_automatically_changes_instantiated_operator_count": false,
+    "stage3_may_select_operator_count": false,
+    "effective_operator_usage_is_post_training_evidence": true,
+    "portfolio_top_k_is_operator_count": false,
+    "financial_residual_equals_latent_residual": false,
+    "account_other_is_pure_alpha": false,
+    "residual_predictor_is_mandatory": false,
+    "residual_must_be_nonzero": false,
+    "residual_must_be_predictable": false,
+    "residual_must_improve_financial_result": false,
+    "zero_conditional_mean_implies_scale_failure": false,
+    "mlp_mean_energy_comparable_to_diffusion_draw_energy": false,
+    "teacher_forced_denoising_is_history_only_forecast_evidence": false,
+    "stage4_realized_contribution_is_forward_predictive_increment": false,
+    "raw_matrix_difference_proves_operator_identification": false,
+    "k_then_residual_policy_equals_paper_joint_training": false,
+    "higher_capacity_failure_is_implied_by_lower_capacity_failure": false,
+    "mathematical_validity_implies_positive_financial_result": false
+  },
+  "objects": {
+    "S_obs": "observable causal condition; no supervision label for latent operator assignment",
+    "gate": "Z = Hy * G + Hx * (1-G); learned fusion weights, not financial factor weights",
+    "K_i": "learned latent transition matrix; training may use soft mixture, formal forecast uses argmax index to select the matrix",
+    "N_candidate": "preregistered instantiated matrix capacity before outcomes",
+    "N_used": "post-training occupancy under a declared support and assignment rule",
+    "N_selected": "research selection across registered capacities on common support; no selection in current stage",
+    "epsilon_return": "same-interval realized simple stock return minus previously frozen intercept and market/size/industry projection; only available after all returns mature",
+    "residual_latent": "Z_next - K_selected @ Z_current in the same frozen latent coordinate system",
+    "account_other": "account reconciliation remainder including costs, cash, holdings and omitted attribution effects; not pure alpha"
+  },
+  "evidence_requirements": {
+    "causal_inputs": "availability timestamp <= prediction timestamp; labels mature before fitting; transformations fit on training support only",
+    "financial_projection": "frozen coefficients, identical return horizon/units/convention, observed factors; pure reference arithmetic does not verify external PIT metadata",
+    "stage4": "unique role/clock/month, previous-month condition, finite input, exact frozen input hashes, no arbitrary deduplication",
+    "latent_comparison": "freeze coordinate identity or compare output-space forecasts on exact common support; raw matrix distances alone are diagnostic",
+    "residual_mean": "history-only conditional-mean errors and incremental predictive utility; no required amplitude match to realized residual",
+    "residual_distribution": "history-only conditional distribution calibration and sampler terminal-prior compatibility; denoising fit/amplitude ratios alone insufficient",
+    "capacity": "preregistered candidate family, comparator, objective, multiplicity and stop rule; lower-capacity failure does not mathematically close higher capacity",
+    "financial_acceptance": "separate hard validity, evidence readiness and economic usefulness; an honest zero/negative or inconclusive result is permitted"
+  },
+  "allowed_actions": [
+    "foundation_read",
+    "foundation_repair",
+    "synthetic_test"
+  ],
+  "research_actions": {
+    "train": false,
+    "stage3_execute": false,
+    "stage4_execute": false,
+    "account_execute": false,
+    "capacity_select": false,
+    "evidence_promote": false,
+    "production": false
+  },
+  "fresh_oos": false,
+  "user_financial_receipt_signed": false,
+  "local_factorlab_pointer_changed": false,
+  "data_boundary": {
+    "warmup_years": [
+      2007,
+      2008
+    ],
+    "research_years": [
+      2009,
+      2025
+    ],
+    "latest_allowed_date": "2025-12-31",
+    "consumed_comparison_years": [
+      2018,
+      2025
+    ]
+  },
+  "historical_policy_scope": "Earlier ontology, admission policies, annual workflow skill and current@1.0/@1.1/@1.2 remain historical records; their stage status and stronger residual/capacity claims are not current authority.",
+  "canonical_digest": "sha256:b410fb27fb0b786876c33fe1117606138254205ad9add757549ba529239c22e5"
+}

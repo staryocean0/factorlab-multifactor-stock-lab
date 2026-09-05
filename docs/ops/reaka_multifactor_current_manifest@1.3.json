@@ -1,0 +1,645 @@
+{
+  "schema_id": "factorlab.reaka_multifactor_current_manifest@1.3",
+  "scope": "bounded_repository_foundation_only",
+  "status": "foundation_contract_active_research_execution_blocked",
+  "supersedes": "docs/ops/reaka_multifactor_current_manifest@1.2.json",
+  "superseded_manifest_file_digest": "sha256:2c2535024076c1d3edcf74cd0df63f395a434435ef67e17e7431472b733f3972",
+  "semantics": "docs/ops/reaka_foundation_semantics@1.1.json",
+  "current_workflow": "docs/user/reaka_multifactor_current_workflow_v1_3.md",
+  "current_whitepaper": "docs/ops/reaka_foundation_whitepaper_v1_3.md",
+  "next_legal_action": "maintain_foundation_and_wait_for_user_data_completion_notice",
+  "allowed_actions": [
+    "foundation_read",
+    "foundation_repair",
+    "synthetic_test"
+  ],
+  "research_actions": {
+    "train": false,
+    "stage3_execute": false,
+    "stage4_execute": false,
+    "account_execute": false,
+    "capacity_select": false,
+    "evidence_promote": false,
+    "production": false
+  },
+  "fresh_oos": false,
+  "user_financial_receipt_signed": false,
+  "local_factorlab_pointer_changed": false,
+  "data_readiness": "not_evaluated_by_foundation_validation",
+  "historical_evidence_status": "blocked_duplicate_stage4_months_and_incomplete_source_closure",
+  "scientific_acceptance": "not_established",
+  "unlisted_files": "historical_or_reference_no_current_normative_authority",
+  "source_binding_scope": "Python dependency, regression test and launcher bytes are sealed for replay integrity. Historical policy definitions in those dependencies do not override the current semantic contract and whitepaper.",
+  "five_in_one": {
+    "documentation": [
+      {
+        "path": "AGENTS.md",
+        "file_digest": "sha256:871b81cac637b58d826be2d16983be6ab4a5623d50106cce83fb09447c959227"
+      },
+      {
+        "path": "README.md",
+        "file_digest": "sha256:a3b732b172c39d28f7bfe51e4ae8c064b1dce134761cea4fd5bc532d75c4fa9a"
+      },
+      {
+        "path": "ai-readme.md",
+        "file_digest": "sha256:99bf80b755ddc9144a1316e760ae4fe72f0846ea5ff1c8d6846b0c661371ec32"
+      },
+      {
+        "path": "docs/INDEX.md",
+        "file_digest": "sha256:1610c1167203edba1b530de37868f719720b5279291f0245a509abcfbb10b973"
+      },
+      {
+        "path": "docs/governance/data_usage_declaration.json",
+        "file_digest": "sha256:2583d930beea7a6e53170a872fd541a5e342859fb6679772c4dd1700e9f5e086"
+      },
+      {
+        "path": "docs/governance/package_scope.json",
+        "file_digest": "sha256:8900be4d146289a4b26189264f8064b4b1d1d156289faf8f055cf9f8fd6c254a"
+      },
+      {
+        "path": "docs/ops/reaka_foundation_semantics@1.1.json",
+        "file_digest": "sha256:9992be88813aad3e19662b8bf33b3a378e85c26ccbd31e6b1b72dbbd6f2f3aca"
+      },
+      {
+        "path": "docs/user/cloud_execution_prompt.md",
+        "file_digest": "sha256:4c51a3e5fdcd984bc483cd835b6000c17572f3416b67b7f005be7e7fc9ab77ea"
+      }
+    ],
+    "whitepaper": [
+      {
+        "path": "docs/ops/reaka_foundation_whitepaper_v1_3.md",
+        "file_digest": "sha256:46bde193d7bd6feb167ddcfd81523533ac60c4c4ad9b21ff515dcf4bc1d468d7"
+      }
+    ],
+    "code": [
+      {
+        "path": "src/factor_lab/__init__.py",
+        "file_digest": "sha256:6503480ddd4618e54eff6560c46844c0cc017d88b1baf0aea97d4c87646d9076"
+      },
+      {
+        "path": "src/factor_lab/candidate_assets/__init__.py",
+        "file_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "src/factor_lab/candidate_assets/services/__init__.py",
+        "file_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "src/factor_lab/candidate_assets/services/candidate_asset_service.py",
+        "file_digest": "sha256:451e3d5e01a0bb3d2b73aaf5c684274206b9d76f39c8b49ef34130a39ed5c166"
+      },
+      {
+        "path": "src/factor_lab/candidate_assets/services/factor_asset_service.py",
+        "file_digest": "sha256:96d2b918ef1b8b04a1247713b55cb02165b859bda15259f14ca893c76e143852"
+      },
+      {
+        "path": "src/factor_lab/core/errors.py",
+        "file_digest": "sha256:5a15e5ed4c28967263af89dd0a4b510ec2e8f0233df3887a1a750d303d50fa9a"
+      },
+      {
+        "path": "src/factor_lab/core/events.py",
+        "file_digest": "sha256:17aa40725cd834bc1a7791ce800ff88d938477612f20fdf98b1e3de2c383347d"
+      },
+      {
+        "path": "src/factor_lab/core/hashing.py",
+        "file_digest": "sha256:6e2850ff199ba9f9676513fc0df6ca7ff5e7fc1b5460ef016f965e1de71097db"
+      },
+      {
+        "path": "src/factor_lab/core/runtime_records.py",
+        "file_digest": "sha256:cc3b59d7fdaa7da8e9d388d6263c96a47c3e90841260b33d004fa2838a698007"
+      },
+      {
+        "path": "src/factor_lab/core/runtime_state.py",
+        "file_digest": "sha256:b6be174c49075838428ef43e3e393ea404cb416ab2bc57172bbe3303a17f4b15"
+      },
+      {
+        "path": "src/factor_lab/core/settings.py",
+        "file_digest": "sha256:5d361f7d15faee8832b27357a440391f20148b5f649a4d0492c35d514f863ef5"
+      },
+      {
+        "path": "src/factor_lab/core/source_universe.py",
+        "file_digest": "sha256:b1a875c9e0ea4edd32fb810ecbabd3c5050e7efcea13dff004e8ed8619dd9429"
+      },
+      {
+        "path": "src/factor_lab/core/storage.py",
+        "file_digest": "sha256:b0bc42a83408aeaa1fcb294b800f198528154e1f7c4b25db1cb411d446e152e8"
+      },
+      {
+        "path": "src/factor_lab/core/versions.py",
+        "file_digest": "sha256:a5776b49312fd54d2e2860ba15659e70611a0c1e4b4b5a5ffc4da3c6e05fb8d4"
+      },
+      {
+        "path": "src/factor_lab/evaluation/engine.py",
+        "file_digest": "sha256:b61c84a2a2763c1d92603935ae86688558b0ccba67019b932932b93b2a19b44b"
+      },
+      {
+        "path": "src/factor_lab/evaluation/label_builder.py",
+        "file_digest": "sha256:a83e3caf22cbca7077388b1003895e9b842913c5954bee71a5ec3cd0ae097cb7"
+      },
+      {
+        "path": "src/factor_lab/evaluation/oos_analyzer.py",
+        "file_digest": "sha256:764309cc8d6fe88f2a0c8472408557a7cbd67c737c927a733ed1fca474c87b4c"
+      },
+      {
+        "path": "src/factor_lab/evaluation/preprocessing.py",
+        "file_digest": "sha256:22545b8a230acb84b7f5af46f412e72d656144ee9c50834c8c13fb13a5ef6bc6"
+      },
+      {
+        "path": "src/factor_lab/evaluation/report_generator.py",
+        "file_digest": "sha256:cd4e1d0f10cd698c45267eb74a6d81cf02c28e16f66c6bbfe492cf88dc19ab48"
+      },
+      {
+        "path": "src/factor_lab/evaluation/risk_exposure_analyzer.py",
+        "file_digest": "sha256:337f41797b301f2d10939409f2ffade1a04c883c679f40c6a6bdd3d12643e7c8"
+      },
+      {
+        "path": "src/factor_lab/evaluation/services/factor_evaluation_service.py",
+        "file_digest": "sha256:f7e32c20fcaabcff051ffe7524fa200c7235b52ab59a3eed3ee2a0f119c95450"
+      },
+      {
+        "path": "src/factor_lab/factor_dynamics/__init__.py",
+        "file_digest": "sha256:65648cbdd32567f2033bd13eef27cfe48428649a34caa67554fb3366ae604a33"
+      },
+      {
+        "path": "src/factor_lab/factor_dynamics/services/__init__.py",
+        "file_digest": "sha256:952e704e9f2c065d5691463f20268b152178c3444514e0b9d29fa6036ead8914"
+      },
+      {
+        "path": "src/factor_lab/factor_dynamics/services/factor_temporal_dynamics_service.py",
+        "file_digest": "sha256:3a841afdb1eabd98894121e963283d678ced8dc5599b0840659af8cc31e6ce83"
+      },
+      {
+        "path": "src/factor_lab/factor_engine/advanced_factors.py",
+        "file_digest": "sha256:3a2ba9d2a1eb4dd2f2a161c874757975b3777465801c7c260d2d30f4dff22ceb"
+      },
+      {
+        "path": "src/factor_lab/factor_engine/dsl.py",
+        "file_digest": "sha256:45cb92b572d351b924204e3563afc44283ae316d667f45de47611c841edfd915"
+      },
+      {
+        "path": "src/factor_lab/factor_engine/models/factor_spec.py",
+        "file_digest": "sha256:547c10b77fc696d8be585d4891d60940481da1bb28f87ec4f42f2150c0f6bd5a"
+      },
+      {
+        "path": "src/factor_lab/factor_engine/repositories/spec_registry.py",
+        "file_digest": "sha256:fa3eabed183263f2f28e017b0c2d2c268a8cce823fdf15bed1ee244e673880b0"
+      },
+      {
+        "path": "src/factor_lab/factor_engine/standard_factors.py",
+        "file_digest": "sha256:e777c46b369dbd2e60b255567db1f0e9d9bf6a6993944d86997ac20a72500d52"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/__init__.py",
+        "file_digest": "sha256:bd157c7d0497c05b7c2426a622f33f3f25a486f37c586fb4852aed666ad51288"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/candidate_profile_workflow.py",
+        "file_digest": "sha256:ae557146f5a7d98ebb0d9f3da9ca0d05892859da0dd5f4a261705ecc726b4b16"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/constants.py",
+        "file_digest": "sha256:f9de3348d9092e10eead1875b764d8a6cf781e1f5c9b1bbcf90f0af8c50bc82a"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/dates.py",
+        "file_digest": "sha256:5bf0dba060eb403e1602cb1393c51d9fa27cec6424c9648a6c32b778d1f766e8"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/effectiveness_profile.py",
+        "file_digest": "sha256:73385a7d0cee74b3862667b2d74c41968938899d2f688c78d923c7c05a962b37"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/factor_specs.py",
+        "file_digest": "sha256:2fdbf9a763f44bbffd6ec4ed26dcd31b274353e3f2b648248565e9469e2b8fa2"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/factor_state.py",
+        "file_digest": "sha256:0b4252d8e1a3af31f30a21ad97610458d4a001d8a8b9aa2c086d805b212b86b9"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/factor_usage_method_state.py",
+        "file_digest": "sha256:65fe94b81dbffa5ce44dd313ea143b43b075fbf3ef7f6470903133fedb2f49c9"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round2.py",
+        "file_digest": "sha256:f00bf198febcc5fa99cf464659a2193c2ec6c35a0a6a368b0a42f5e5a3b1f07b"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round3.py",
+        "file_digest": "sha256:e9f15644d9a099f9dbff2c55ea2127e98f53a3fdec280c8365405efdc783ec55"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round3_battle.py",
+        "file_digest": "sha256:8c6b9d12ecffd92ce2ae219217f7ce3e90e51291062a03944ed239e237e7f11f"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round3_execution.py",
+        "file_digest": "sha256:27907e8f91e1e9e2e0e06693f2b5132c75bb9409ac67173eb9a20d9561094d66"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round3_runtime.py",
+        "file_digest": "sha256:bc05de720192266851fc2befd52d5740b6cc4592c649ca21c355f80a4d9ce5fa"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round3_shadow.py",
+        "file_digest": "sha256:b572c8fdceb52c0e72c074d8a18a024d0eaefd8cdbc6d09b74efa0b2e37f6fe0"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py",
+        "file_digest": "sha256:81107cc279ba589c7611cb1a8c879facee634f17bb791ae1b4690c97588e8526"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_alpha158.py",
+        "file_digest": "sha256:eb4ab1ebc2bf3266a0d09a18f5a76d131d695c997a4844566756e0bfdd4bbf18"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_alpha158_datahub.py",
+        "file_digest": "sha256:d8b7ec0b3c61ef93bb4aa6ec62a2e1c4a1b7d251f7a6f82535252b242978eef2"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_factor_authority_v3.py",
+        "file_digest": "sha256:fe843ebe94f882aea4c03f963a5fd0178e22ae818ef1b9f2d0a32a441108d274"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_factor_proposal_sandbox_audit_v1.py",
+        "file_digest": "sha256:6b492d4c1429728c7469ddb8564f70e5a4ba500149717a169db47a3bdb208c7c"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_financial_residual.py",
+        "file_digest": "sha256:3a75fb1bbd02a796b78e52531c4b335e25c8a0090273abed32bcd8fd0cef10ea"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+        "file_digest": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_k1_only_index_regime_atlas_v1.py",
+        "file_digest": "sha256:9c2570f9e8d55574df0c0bad56120a588167367da0594c78a559ab36c3e70a1d"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_paper_v1.py",
+        "file_digest": "sha256:c11980071eda55508c214d6439b10e6813cf7e0a29dec8591ae2907d0eed8b07"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_paper_v1_runtime.py",
+        "file_digest": "sha256:533beaf408d12bec389100e5624addcc770320b20f9b3cdf4387822c96d6c8a9"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_parameter_governance.py",
+        "file_digest": "sha256:80980d70353554f3f9a2b4670f50dbdeb6f96c4da68515383cd094a36a95353f"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_prediction_root_routing.py",
+        "file_digest": "sha256:551bc1b25e967d6ce1582eff1a6536065bcaa6ba36373f85b6fa6bed971c6fc0"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py",
+        "file_digest": "sha256:18e294504d94248c02c574b221f0b22a0439a7e4da3564e16fed1eb6b5b4e381"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py",
+        "file_digest": "sha256:27bff8b394a6249470970b2af69d785281ae6565cc3125b859bb628580fe65c9"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py",
+        "file_digest": "sha256:096e1340222c169b0524ffb4e6934ecb14862b67afdfe97b8ae13d8264cff1ee"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_stage6_parameter_calibration.py",
+        "file_digest": "sha256:f342bec0c79b91df4f0bfff7c0581366c42c0f82729bcd989e9986277b55de01"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_stage6_task_alignment.py",
+        "file_digest": "sha256:59d366d57a380218aea007a34afcd116481b79bd7c308a5e2f399ca40cd169a7"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_stage6_temporal_coordinate.py",
+        "file_digest": "sha256:9e2e0b5051385a0ed51ac8e56904f72388817fb52afd20f5bc6110e89d098633"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_v2_stage3_observable_context_v2.py",
+        "file_digest": "sha256:fffd49e43d4ea6110a43836123beef9808845d1d5cae39b319c620c316d9ee80"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_v2_stage3_state_episode_atlas_v1.py",
+        "file_digest": "sha256:d24505884b6460cfc00ade2dd405aa8c20395a14881bf8f24eb4a8f77c0a70de"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/reaka_v2_stage4_observable_factor_pairing_v1.py",
+        "file_digest": "sha256:6fb0fe527da96f99302c8427873d5ef6d2747bd18911767b0b0799a5e3ea2601"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/state_factor_research_state_machine.py",
+        "file_digest": "sha256:a04d502e2dbd5198ef8045fcf0168a38b82ef5659a26970a000995d5178d0a3a"
+      },
+      {
+        "path": "src/factor_lab/factor_rotation/strict_annual_financial_factors.py",
+        "file_digest": "sha256:ead2ad54142da4249068f443ff1403069f24296920fa1c9bca3257746335ff08"
+      },
+      {
+        "path": "src/factor_lab/governance/canonicalization.py",
+        "file_digest": "sha256:886cbe6dbf4b45cdb52b814d549cd8b21f1a7724a3f049dfcceb2fa53a68b41c"
+      },
+      {
+        "path": "src/factor_lab/governance/cutover_transition_contract.py",
+        "file_digest": "sha256:71a1e4ede16fe6683c457478399327063cf699eefe37e46f1ab829b9d4372f28"
+      },
+      {
+        "path": "src/factor_lab/governance/evidence_resolver.py",
+        "file_digest": "sha256:0058bd7e24f720a07888c36222ceac128f4c71f1def18c4aeef9f4964277b4f0"
+      },
+      {
+        "path": "src/factor_lab/governance/execution_surface_enforcement.py",
+        "file_digest": "sha256:d611971f97d5aff0f053c5667de6b644b8263c216968f8d6ff73cc18a265cabd"
+      },
+      {
+        "path": "src/factor_lab/governance/factor_family_usage_governance.py",
+        "file_digest": "sha256:1581efceefa0e40e09a973c4869bafbc6fab0569915f055797eb4041727cd050"
+      },
+      {
+        "path": "src/factor_lab/governance/factor_usage_discovery.py",
+        "file_digest": "sha256:964363d97ec5c3c95713226783454a09369c769af2f2495dac19b7f0c94269d0"
+      },
+      {
+        "path": "src/factor_lab/governance/factor_usage_integration.py",
+        "file_digest": "sha256:ffc1a2eb4715ab364c472258dc28520fb8dcbd61c8e35a296841160e5831a9ab"
+      },
+      {
+        "path": "src/factor_lab/governance/multiple_testing.py",
+        "file_digest": "sha256:58e793288b47ab97d22c39ce94c58e7998dddcd81632313aa8ae1a009f5e1cd5"
+      },
+      {
+        "path": "src/factor_lab/governance/production_authorization.py",
+        "file_digest": "sha256:7725ad093184dd300e5e6afb6ed6ec94f4b9ad9eb0d6c14760a93a3776bdc98f"
+      },
+      {
+        "path": "src/factor_lab/governance/reaka_foundation_audit.py",
+        "file_digest": "sha256:7e696bfba473c93550035ecbf19bc43fb5e910a0ec59b29e552450bd365903a3"
+      },
+      {
+        "path": "src/factor_lab/governance/reaka_foundation_contract.py",
+        "file_digest": "sha256:6c4811120a62f65d32510e2e8595b47c9d9720493e26a48438d81f6cefab4e82"
+      },
+      {
+        "path": "src/factor_lab/governance/reaka_multifactor_infrastructure_v1.py",
+        "file_digest": "sha256:2bf34eee26666a2def2215f9911762b3f6b23f283d67c3d329b223f0f8473ddd"
+      },
+      {
+        "path": "src/factor_lab/governance/reaka_residual_certificate.py",
+        "file_digest": "sha256:903d839efa86b6406d0033a5026d60215771a8ae3bf91aee0185d757481cb621"
+      },
+      {
+        "path": "src/factor_lab/governance/run_snapshot.py",
+        "file_digest": "sha256:9e612ade9efa50b87a315276004f2bd3797e84edf7f5616ad847807f9e592ef2"
+      },
+      {
+        "path": "src/factor_lab/governance/selection_freeze_manifest.py",
+        "file_digest": "sha256:c5d82bbcd1c830de36ce795a0fd1b1b766e0fb685b99e8e7d4d0458e4591cea6"
+      },
+      {
+        "path": "src/factor_lab/governance/services/event_store.py",
+        "file_digest": "sha256:037cce545c2332335f79216d6bfd01cb09ead474160a9077925a94b6187f0e79"
+      },
+      {
+        "path": "src/factor_lab/governance/services/state_machine.py",
+        "file_digest": "sha256:c05b175bf674d1a4ce97e7d8ff37d3b617ec8cc0bdd3c548c9024e520ba92eb0"
+      },
+      {
+        "path": "src/factor_lab/governance/strategy_family_registry.py",
+        "file_digest": "sha256:f550fa51e908cdabdf9bbcdf665502c6529a6c61befd3809ab43760fdde18455"
+      },
+      {
+        "path": "src/factor_lab/governance/temporal_governance_repository.py",
+        "file_digest": "sha256:acbf37f6e870be048887ad6ab3738f7dbc6e17dbeb0386f163ec0e8b4ccf8c30"
+      },
+      {
+        "path": "src/factor_lab/governance/temporal_integrity.py",
+        "file_digest": "sha256:66cda0b1254e3f900222a6cd6b5afc9820cb4f430d2905f6cee7df9ad0433868"
+      },
+      {
+        "path": "src/factor_lab/latent/__init__.py",
+        "file_digest": "sha256:1acb349bb088645aafa18c44e3d21b3eccebabae9a6927ff7ef41b5026cd2993"
+      },
+      {
+        "path": "src/factor_lab/latent/services/__init__.py",
+        "file_digest": "sha256:7304154536b08fb2308ac7caa5c0f888b5cef9cf35b79a8cf81f3cfdb7173bb7"
+      },
+      {
+        "path": "src/factor_lab/latent/services/daily_event_window_clustering_service.py",
+        "file_digest": "sha256:92ec1d6048cc2333408190feda770edc24830030610e119e40f48c840c64ec31"
+      },
+      {
+        "path": "src/factor_lab/latent/services/latent_exposure_materialization_service.py",
+        "file_digest": "sha256:84dfde2774794ea10607ac24b216e34284d8053abc5effbd7afd140c845f6217"
+      },
+      {
+        "path": "src/factor_lab/latent/services/latent_factor_contract_service.py",
+        "file_digest": "sha256:f4e3db8240c676828e7b74df33a7b1a0a6de894e070b6525cff68d515713e66f"
+      },
+      {
+        "path": "src/factor_lab/latent/services/latent_interpretation_service.py",
+        "file_digest": "sha256:ec6d2fff7686cfa313b4b7b1ab20ea568a237a5dd016196b52227d4b744e4747"
+      },
+      {
+        "path": "src/factor_lab/latent/services/latent_lab_state_service.py",
+        "file_digest": "sha256:dd1485d15943704d70db20b6ec78aab9da3524b0f246d0517df74739aa82fed7"
+      },
+      {
+        "path": "src/factor_lab/observability/__init__.py",
+        "file_digest": "sha256:601177643271e2525dd343a1c865d0d689a2cc02208a26e62218f4c73ca16d4e"
+      },
+      {
+        "path": "src/factor_lab/observability/config.py",
+        "file_digest": "sha256:30c6a82eb0c2fc7f43c3cbf656156d62173229810cb26344d96e2377270f61dc"
+      },
+      {
+        "path": "src/factor_lab/observability/exceptions.py",
+        "file_digest": "sha256:3af4fee33fdc958f7f7215afb53f10405c4591a1a04d2b08c6ba87f35fc63a54"
+      },
+      {
+        "path": "src/factor_lab/observability/logger.py",
+        "file_digest": "sha256:ecfaf2b0fe9ee3a12ba85130e3dc304aeeec6098eedb8a89106c2713fd4198ca"
+      },
+      {
+        "path": "src/factor_lab/portfolio/account_research_bundle.py",
+        "file_digest": "sha256:8228972eeff82b6489a4eb6db40919f76d4abdef42bfc334925d8ec3255cca2f"
+      },
+      {
+        "path": "src/factor_lab/portfolio/post_training_strategy_science_acceptance.py",
+        "file_digest": "sha256:64b832de9db9df6030f0ee57aa181a73d45bb54013c2218f8a39fbcfab767bfd"
+      },
+      {
+        "path": "src/factor_lab/portfolio/relative_performance.py",
+        "file_digest": "sha256:1b53dfb9ca96bda634eb5eac485c976d7032ea9c0a880cbd0b96b057dec2f166"
+      }
+    ],
+    "tests": [
+      {
+        "path": "tests/test_theme_boundaries.py",
+        "file_digest": "sha256:568b5d4e954ed0bc344c5ca1735e7c2cffa47c52656c4e8d5b900e7574fcdc4a"
+      },
+      {
+        "path": "tests/unit/test_reaka_bounded_imports.py",
+        "file_digest": "sha256:b4059e2aae73e5944b0e1a02fcac1d5b386333ea920a557a503f75716ebf7631"
+      },
+      {
+        "path": "tests/unit/test_reaka_financial_residual.py",
+        "file_digest": "sha256:d987027e6ce4e9c6423d640d18ac7a658f590f5d0d7cdce4a18bf701475d2899"
+      },
+      {
+        "path": "tests/unit/test_reaka_foundation_audit.py",
+        "file_digest": "sha256:d9aa2881edd1db39602e2486befb82abccbd881f7de77498969c81a79123e0da"
+      },
+      {
+        "path": "tests/unit/test_reaka_foundation_contract.py",
+        "file_digest": "sha256:f3522f3a229dac0718ff8a5ff62a8481a9a7c192a5a730390ae7b24e6bf19743"
+      },
+      {
+        "path": "tests/unit/test_reaka_legacy_entrypoints.py",
+        "file_digest": "sha256:796ca95c849723d2c687d7cd20c54b8fdb023e48f306893e1d8a000ea68e8e1f"
+      },
+      {
+        "path": "tests/unit/test_reaka_multifactor_infrastructure_v1.py",
+        "file_digest": "sha256:7dd79d7d277648afcb4a027ad3b19dab0d00d611c2e7a8c45745a95cb6cb8983"
+      },
+      {
+        "path": "tests/unit/test_reaka_paper_math_contract.py",
+        "file_digest": "sha256:79a564b0ff63847b80bf118c7a4993f573c239b09b1ad86080cf0894a3ddb2ef"
+      },
+      {
+        "path": "tests/unit/test_reaka_residual_certificate.py",
+        "file_digest": "sha256:4c05fa3b3248265b566d13aa04de1cef7fb0a09b3dc1eed7afb0efcc33e692aa"
+      },
+      {
+        "path": "tests/unit/test_reaka_stage6_health_estimand.py",
+        "file_digest": "sha256:f4b64553c56828f16b130872e7730797bcb6595da782baf2d49dda1749208f8b"
+      },
+      {
+        "path": "tests/unit/test_reaka_v2_stage4_observable_factor_pairing_v1.py",
+        "file_digest": "sha256:80fe5fe1dd85613cb4cb37feeed0666a2fb2209769230d8bb8739b78ff52b86d"
+      }
+    ],
+    "workflow": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "file_digest": "sha256:f36be6d4fc89bf5abe6234b7b199674aa5c106a3ede4a19cd26c8cb91313b80c"
+      },
+      {
+        "path": ".github/workflows/foundation-audit.yml",
+        "file_digest": "sha256:abd22a5f51632685c5565f75293eb8d2fb3de3fade2fbb9b601b98a4d9934ab4"
+      },
+      {
+        "path": "docs/user/reaka_multifactor_current_workflow_v1_3.md",
+        "file_digest": "sha256:edd1ddef6008438ebed23eb2bf63be2940b5700d25b4c9645dd5b8bfdb8663ab"
+      },
+      {
+        "path": "pyproject.toml",
+        "file_digest": "sha256:5bdb1ef5baadcb6bf4614f464b4f1fe92fea8a2cac56052f9b2e3c698a5f842f"
+      },
+      {
+        "path": "scripts/audit_reaka_foundation.py",
+        "file_digest": "sha256:2de158b5111e461969787b1d81bfbff8cbc7c97147e0e612ed23d01e08aca09d"
+      },
+      {
+        "path": "scripts/build_strategy_progressive_development_workflow.py",
+        "file_digest": "sha256:aeed314af647dc76a499d816dd507cfb7eedf26df9ee67249d0f2836a8327e3b"
+      },
+      {
+        "path": "scripts/build_strategy_slice_rebuild_workflow.py",
+        "file_digest": "sha256:95da07c6e2498197391027e21d1ed42cf71e65d3b5cf189eb162236b5c53e551"
+      },
+      {
+        "path": "scripts/factor_rotation/build_reaka_multifactor_infrastructure_v1.py",
+        "file_digest": "sha256:e138516eaba39c80a11355b285bda920fe5a99df92557a03d1a283a23ae21c78"
+      },
+      {
+        "path": "scripts/factor_rotation/build_reaka_v2_stage3_observable_context_v2.py",
+        "file_digest": "sha256:e0046feea72671ed73ff87abd9db2128150a446e0d45b035a08768a0ce610c45"
+      },
+      {
+        "path": "scripts/factor_rotation/build_reaka_v2_stage4_observable_factor_pairing_v1.py",
+        "file_digest": "sha256:9c8a4b32c7ca575546b86a6a68fc9816583d14716e182546fc84f88784d75040"
+      },
+      {
+        "path": "scripts/factor_rotation/close_reaka_multifactor_infrastructure_v1.py",
+        "file_digest": "sha256:aac906387619e614fa5860c7adceb990a31c3c4d11ee2f67a0cd1310dedc9124"
+      },
+      {
+        "path": "scripts/factor_rotation/close_reaka_v2_stage3_observable_context_v2.py",
+        "file_digest": "sha256:1b3de3ddb60b130949d2c628bfd52800a303e61a0e9baa27c9410003be547e50"
+      },
+      {
+        "path": "scripts/factor_rotation/close_reaka_v2_stage3_state_episode_atlas_v1.py",
+        "file_digest": "sha256:f881cb24635db78568cc2b06f3d6ff3834ac508ef102fd6a4fd764d61db44502"
+      },
+      {
+        "path": "scripts/factor_rotation/close_reaka_v2_stage4_observable_factor_pairing_v1.py",
+        "file_digest": "sha256:cad0213d3a9bc7f0832e1b3ceb50cd665dd1d4625f6b369dfb9cce99adc7ebfc"
+      },
+      {
+        "path": "scripts/factor_rotation/freeze_reaka_v2_stage3_state_episode_atlas_v1.py",
+        "file_digest": "sha256:32390fc14b2937e1fcadb1cadf57008bf294fafe92f57c8b680c3e81fe9b5296"
+      },
+      {
+        "path": "scripts/factor_rotation/run_reaka_v2_stage3_observable_context_v2.py",
+        "file_digest": "sha256:2720817be49e7b93570b7529851dcb3571ccaa53ad315e079bad51a8f90abc3a"
+      },
+      {
+        "path": "scripts/factor_rotation/run_reaka_v2_stage3_state_episode_atlas_v1.py",
+        "file_digest": "sha256:c9ee9e5849eb3595f469d3a1a8056030366264848fb795983adb7bfbf7308ef3"
+      },
+      {
+        "path": "scripts/factor_rotation/run_reaka_v2_stage4_observable_factor_pairing_v1.py",
+        "file_digest": "sha256:5f6b5a11442e7903468db069a042c8abe2643ea830926e9c3b10f05cde5ff224"
+      },
+      {
+        "path": "scripts/factor_rotation/validate_reaka_multifactor_infrastructure_v1.py",
+        "file_digest": "sha256:94c0781f300e44018a3976d9cf90cb096f0b132f968ddfbb51bc0a94d1197743"
+      },
+      {
+        "path": "scripts/factor_rotation/validate_reaka_v2_stage3_observable_context_v2.py",
+        "file_digest": "sha256:5c1412994bc2f1fa219c1661738960b8e53c4db87932edd72f07a7ac0a15cfbc"
+      },
+      {
+        "path": "scripts/factor_rotation/validate_reaka_v2_stage3_state_episode_atlas_v1.py",
+        "file_digest": "sha256:ae7237e0e0b7b3d7b8ed539358d6f0fbb3b289c7ecf022f6871411e50db94d36"
+      },
+      {
+        "path": "scripts/factor_rotation/validate_reaka_v2_stage4_observable_factor_pairing_v1.py",
+        "file_digest": "sha256:1774d32503112e70e64831d6443ab48528adf5d5dc81cfaeb7f38a43d1a5437f"
+      },
+      {
+        "path": "scripts/validate_reaka_foundation.py",
+        "file_digest": "sha256:724616c79b815690a92a8d939cd15615c5c260d6ab7073cb4c0588e8f61e8ef5"
+      },
+      {
+        "path": "scripts/validate_strategy_progressive_development_workflow.py",
+        "file_digest": "sha256:f8eeebaf01384db7c1852b67d39c513b9965e94326e4578dcdd17ed7d0300d80"
+      },
+      {
+        "path": "scripts/validate_strategy_slice_rebuild_workflow.py",
+        "file_digest": "sha256:a86b85c62e0f86150d72a6bc591dbed6cc178b37b967c5f61739778df1c6f203"
+      },
+      {
+        "path": "scripts/validate_theme_package.py",
+        "file_digest": "sha256:1a34fa7466af5c57f881033ec6cccb35e6242691bad22536104e00b3a42538e0"
+      }
+    ]
+  },
+  "historical_records": [
+    "docs/ops/reaka_multifactor_current_manifest@1.0.json",
+    "docs/ops/reaka_multifactor_current_manifest@1.1.json",
+    "docs/ops/reaka_multifactor_current_manifest@1.2.json",
+    "docs/ops/reaka_foundation_audit_20260905.md",
+    "docs/ops/reaka_foundation_semantics@1.0.json",
+    "docs/reference/ai_readme_before_foundation_v1_3.md"
+  ],
+  "historical_policy_resolution": {
+    "old_current_stage4_financial_review": "superseded; invalid historical evidence must be repaired before review",
+    "old_near_zero_residual_scale_failure": "superseded; conditional mean may correctly be zero",
+    "old_sequential_K_residual_admission": "historical project policy, requires new preregistration; not a mathematical necessity",
+    "old_occupancy_gate_energy_thresholds": "historical health diagnostics, not current financial admission or mathematical identities",
+    "legacy_mutating_entrypoints": "runtime rejected before side effects; old source retained in Git parent history"
+  },
+  "canonical_digest": "sha256:967c882dbd2e0762aed1bb69570cfa56e9dcdf8a370c1170eeab4a3d5ed6e3a4"
+}
