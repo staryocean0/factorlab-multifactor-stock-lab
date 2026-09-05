@@ -1786,6 +1786,7 @@ def evaluate_stage6_health_certificate(
     residual_mode: str = "diffusion",
     require_four_residual: bool = True,
     formal_cross_arm_certificate: dict[str, object] | None = None,
+    expected_comparison_identity: dict[str, object] | None = None,
 ) -> Stage6HealthCertificate:
     """Adjudicate a health snapshot against the frozen hard sanity limits.
 
@@ -1798,6 +1799,21 @@ def evaluate_stage6_health_certificate(
     neural arm; the four-residual evidence gate stays fail-closed unless
     ``require_four_residual`` is disabled for the parameter-free common
     root.
+
+    MSE-trained MLP residuals estimate E[R | history], whose amplitude may
+    correctly be much smaller than R when unpredictable noise dominates.
+    Their median/q95 amplitude ratios are diagnostics, not distribution
+    matching gates.  The legacy health snapshot has no historical-only
+    prediction MSE on the same support as a zero-residual control, so MLP
+    conditional-mean validation remains explicitly blocked pending that
+    evidence.  Diffusion retains its scale gates, but those legacy
+    teacher-forced measurements do not replace historical-only conditional
+    distribution evidence in the downstream formal certificate.
+
+    A formal cross-arm consumer must supply the full current comparison
+    identity from its own frozen task/config/support.  The artifact cannot
+    supply its own expected identity.  Its operator count and support are
+    additionally checked against this call's operator_count and health.
 
     The frozen limits (``training_health_contract.json``):
 
@@ -1877,6 +1893,38 @@ def evaluate_stage6_health_certificate(
             "reason": "not_applicable_no_residual_arm",
             "detail": 2.0,
         }
+    elif residual_mode == "mlp":
+        for name, value in (
+            ("predicted_to_true_residual_median_ratio", health.predicted_to_true_residual_median_ratio),
+            ("predicted_to_true_residual_q95_ratio", health.predicted_to_true_residual_q95_ratio),
+        ):
+            gates[name] = {
+                "value": value,
+                "limit": None,
+                "kind": "diagnostic",
+                "pass": True,
+                "blocked": False,
+                "reason": "not_applicable_conditional_mean",
+                "detail": {"estimand": "conditional_mean_of_residual", "amplitude_matching_required": False},
+            }
+        gates["conditional_mean_validation"] = {
+            "value": None,
+            "limit": "same_support_history_only_mean_error_evidence",
+            "kind": "required_evidence",
+            "pass": False,
+            "blocked": True,
+            "reason": "conditional_mean_validation_missing",
+            "detail": {
+                "estimand": "conditional_mean_of_residual",
+                "available_statistics": "marginal_energies_and_quantiles_do_not_identify_prediction_MSE",
+                "required_evidence": [
+                    "history_only_argmax_forecast_residual_prediction",
+                    "same_checkpoint_hard_selector_reference_residual",
+                    "same_support_prediction_MSE_and_zero_residual_MSE",
+                    "frozen_mean_error_comparison_rule_and_uncertainty",
+                ],
+            },
+        }
     else:
         gates["predicted_to_true_residual_median_ratio"] = _gate_verdict(
             value=health.predicted_to_true_residual_median_ratio,
@@ -1890,6 +1938,12 @@ def evaluate_stage6_health_certificate(
             kind="inclusive",
             detail=2.0,
         )
+        for name in ("predicted_to_true_residual_median_ratio", "predicted_to_true_residual_q95_ratio"):
+            gates[name].update({
+                "estimand": "conditional_residual_distribution",
+                "measurement_source": "legacy_teacher_forced_training_objective",
+                "history_only_distribution_validation_required": True,
+            })
     gates["input_ood_fraction"] = _gate_verdict(
         value=health.input_ood_fraction,
         limit=0.05,
@@ -1943,7 +1997,23 @@ def evaluate_stage6_health_certificate(
         },
     }
     if require_four_residual:
-        formal_passed = formal_cross_arm_residual_certificate_valid(formal_cross_arm_certificate)
+        current_identity_present = isinstance(expected_comparison_identity, dict) and health.common_support_digest is not None
+        current_identity_matches = bool(
+            current_identity_present
+            and expected_comparison_identity.get("operator_count") == operator_count
+            and expected_comparison_identity.get("support_digest") == health.common_support_digest
+        )
+        formal_passed = current_identity_matches and formal_cross_arm_residual_certificate_valid(
+            formal_cross_arm_certificate,
+            expected_comparison_identity=expected_comparison_identity,
+        )
+        formal_reason = (
+            None if formal_passed else (
+                "formal_cross_arm_current_identity_missing" if not current_identity_present else
+                "formal_cross_arm_current_identity_mismatch" if not current_identity_matches else
+                "formal_cross_arm_certificate_missing_blocked_or_identity_mismatch"
+            )
+        )
         gates["formal_cross_arm_residual_certificate"] = {
             "value": (
                 formal_cross_arm_certificate.get("canonical_digest")
@@ -1954,8 +2024,9 @@ def evaluate_stage6_health_certificate(
             "kind": "required_evidence",
             "pass": formal_passed,
             "blocked": not formal_passed,
-            "reason": None if formal_passed else "formal_cross_arm_certificate_missing_or_blocked",
+            "reason": formal_reason,
             "detail": formal_cross_arm_certificate,
+            "expected_comparison_identity": expected_comparison_identity,
         }
     else:
         gates["formal_cross_arm_residual_certificate"] = {

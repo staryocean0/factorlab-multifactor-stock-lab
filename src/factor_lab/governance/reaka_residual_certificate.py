@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import sys
 from dataclasses import dataclass
 from typing import Final, cast
 
@@ -189,6 +190,12 @@ def _formal_residual_summary_blockers(
     median = cast(float, summary["median_abs"])
     q95 = cast(float, summary["q95_abs"])
     tail = summary["tail_ratio"]
+    # A zero mean squared magnitude cannot accompany an ordinary positive
+    # absolute quantile.  Restrict this necessary-condition check to normal
+    # float64 squares so legitimate squared-value/mean underflow remains
+    # diagnostic instead of being rejected by an arbitrary epsilon.
+    if summary["energy"] == 0.0 and any(value * value >= sys.float_info.min for value in (median, q95)):
+        blockers.append(f"formal_residual_zero_energy_nonzero_quantile:{label}")
     if q95 < median:
         blockers.append(f"formal_residual_quantile_order_invalid:{label}")
     if median == 0.0 and tail is not None:
@@ -297,8 +304,17 @@ def build_formal_cross_arm_residual_certificate(
     return payload
 
 
-def formal_cross_arm_residual_certificate_valid(payload: object) -> bool:
-    """Rebuild evidence before accepting a certificate; never trust status text."""
+def formal_cross_arm_residual_certificate_valid(
+    payload: object,
+    *,
+    expected_comparison_identity: dict[str, object] | None = None,
+) -> bool:
+    """Validate internal evidence and, when supplied, the caller's current identity.
+
+    A consumer must construct the expected identity from its own frozen task,
+    configuration and support, not copy it from the artifact being checked.
+    Omitting it performs only a structural check, never current-run binding.
+    """
 
     if not isinstance(payload, dict) or payload.get("schema_id") != STAGE6_FORMAL_CROSS_ARM_SCHEMA_ID:
         return False
@@ -313,6 +329,11 @@ def formal_cross_arm_residual_certificate_valid(payload: object) -> bool:
                 return False
             evidences.append(Stage6FormalArmResidualEvidence.from_dict(arm_payload))
         rebuilt = build_formal_cross_arm_residual_certificate(tuple(evidences))
+        if expected_comparison_identity is not None and (
+            not isinstance(expected_comparison_identity, dict)
+            or canonical_digest(expected_comparison_identity) != canonical_digest(rebuilt["comparison_identity"])
+        ):
+            return False
         actual_digest = canonical_digest({key: value for key, value in payload.items() if key != "canonical_digest"})
         return (
             rebuilt["status"] == "passed"
@@ -321,4 +342,3 @@ def formal_cross_arm_residual_certificate_valid(payload: object) -> bool:
         )
     except (KeyError, TypeError, ValueError, AttributeError, OverflowError):
         return False
-

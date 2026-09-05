@@ -9,7 +9,7 @@ python -m pip install -e .
 python -m pip install 'torch>=2.7,<3' --index-url https://download.pytorch.org/whl/cpu
 python scripts/validate_theme_package.py
 python scripts/audit_reaka_foundation.py
-pytest -q tests/unit/test_reaka_foundation_audit.py tests/unit/test_reaka_residual_certificate.py tests/unit/test_reaka_paper_math_contract.py tests/unit/test_reaka_bounded_imports.py
+pytest -q tests/unit/test_reaka_foundation_audit.py tests/unit/test_reaka_residual_certificate.py tests/unit/test_reaka_paper_math_contract.py tests/unit/test_reaka_bounded_imports.py tests/unit/test_reaka_stage6_health_estimand.py
 ```
 
 第一项包检查仍严格核对所有数据。2023/24上传未完成会失败，不能删条目或改哈希让其通过。
@@ -25,7 +25,7 @@ pytest -q tests/unit/test_reaka_foundation_audit.py tests/unit/test_reaka_residu
 | 白皮书与金融解释 | docs/ops/reaka_foundation_audit_20260905.md |
 | 机器语义合同 | docs/ops/reaka_foundation_semantics@1.0.json |
 | 验证实现 | governance/reaka_foundation_audit.py、governance/reaka_residual_certificate.py |
-| 测试 | 四个本轮 test_reaka_*.py 文件 |
+| 测试 | 五个本轮 test_reaka_*.py 文件 |
 | 执行 | scripts/audit_reaka_foundation.py、.github/workflows/foundation-audit.yml |
 
 ## 剩余完成条件

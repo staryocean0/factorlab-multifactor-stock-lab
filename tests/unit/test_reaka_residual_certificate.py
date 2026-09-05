@@ -178,3 +178,42 @@ def test_consumer_binds_arm_keys_and_rejects_noncurrent_schema() -> None:
     current["schema_id"] = "factorlab.reaka_stage6_formal_cross_arm_residual_certificate@1.0"
     _resign(current)
     assert not formal_cross_arm_residual_certificate_valid(current)
+
+
+@pytest.mark.parametrize("field,bad", [
+    ("task_id", "another_task"),
+    ("support_digest", "sha256:" + "e" * 64),
+    ("operator_count", 4),
+    ("seed", 29),
+])
+def test_valid_certificate_cannot_be_transplanted_to_another_current_identity(field: str, bad: object) -> None:
+    current_identity = {
+        "task_id": "synthetic_h20", "sequence_length": 10, "latent_dim": 8,
+        "operator_count": 2, "seed": 11, "train_years": [2010, 2011],
+        "validation_year": 2012, "support_digest": "sha256:" + "a" * 64,
+    }
+    certificate = build_formal_cross_arm_residual_certificate(_arms())
+    assert formal_cross_arm_residual_certificate_valid(certificate, expected_comparison_identity=current_identity)
+    current_identity[field] = bad
+    assert not formal_cross_arm_residual_certificate_valid(certificate, expected_comparison_identity=current_identity)
+
+
+def test_partial_comparison_identity_does_not_bind_a_current_run() -> None:
+    certificate = build_formal_cross_arm_residual_certificate(_arms())
+    assert not formal_cross_arm_residual_certificate_valid(
+        certificate, expected_comparison_identity={"operator_count": 2, "support_digest": "sha256:" + "a" * 64}
+    )
+
+
+@pytest.mark.parametrize("field", ["true_residual", "estimated_residual"])
+def test_zero_energy_cannot_have_nonzero_representable_absolute_quantiles(field: str) -> None:
+    summary = {"energy": 0.0, "median_abs": 0.5, "q95_abs": 2.0, "tail_ratio": 4.0}
+    result = build_formal_cross_arm_residual_certificate(_replace_last(**{field: summary}))
+    assert result["status"] == "blocked"
+    assert f"formal_residual_zero_energy_nonzero_quantile:reaka:{'true' if field == 'true_residual' else 'estimated'}" in result["blockers"]
+
+
+def test_underflow_scale_zero_energy_is_not_rejected_by_an_arbitrary_epsilon() -> None:
+    summary = {"energy": 0.0, "median_abs": 1e-200, "q95_abs": 2e-200, "tail_ratio": 2.0}
+    result = build_formal_cross_arm_residual_certificate(_replace_last(estimated_residual=summary))
+    assert result["status"] == "passed"

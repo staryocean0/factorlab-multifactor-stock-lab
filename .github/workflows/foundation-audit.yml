@@ -1,8 +1,6 @@
 name: REAKA foundation audit
 
 on:
-  push:
-    branches: [codex/reaka-foundation-audit-20260905]
   pull_request:
     paths:
       - '.github/workflows/foundation-audit.yml'
@@ -48,7 +46,7 @@ jobs:
       - name: Run synthetic mathematics and evidence counterexamples
         run: |
           mkdir -p audit-validation
-          pytest -q tests/unit/test_reaka_foundation_audit.py tests/unit/test_reaka_residual_certificate.py tests/unit/test_reaka_paper_math_contract.py tests/unit/test_reaka_bounded_imports.py --junitxml=audit-validation/tests.xml
+          pytest -q tests/unit --junitxml=audit-validation/tests.xml
       - name: Collect current evidence audit without changing its verdict
         if: always()
         run: |
