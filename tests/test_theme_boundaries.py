@@ -35,7 +35,7 @@ def test_no_2026_qfq_year() -> None:
     assert "year=2025" in years
     for year in ("2023", "2024"):
         names = sorted(path.name for path in (ROOT / "data/development/cn_a_qfq_daily" / f"year={year}").glob("*.parquet"))
-        assert names == ["h1.parquet", "h2.parquet"]
+        assert names == [f"{m:02d}.parquet" for m in range(1, 13)]
 
 
 def test_stage4_review_is_unsigned() -> None:
