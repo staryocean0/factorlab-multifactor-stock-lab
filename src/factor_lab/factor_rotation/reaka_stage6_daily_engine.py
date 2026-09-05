@@ -87,6 +87,13 @@ from factor_lab.factor_rotation.reaka_stage6_paper_faithful_freeze import (
     Stage6FreezePolicy,
     canonical_digest,
 )
+from factor_lab.governance.reaka_residual_certificate import (
+    FORMAL_CROSS_ARM_IDS,
+    STAGE6_FORMAL_CROSS_ARM_SCHEMA_ID,
+    Stage6FormalArmResidualEvidence,
+    build_formal_cross_arm_residual_certificate,
+    formal_cross_arm_residual_certificate_valid,
+)
 
 STAGE6_ENGINE_SCHEMA_ID: Final = "factorlab.reaka_stage6_daily_engine@2.0"
 STAGE6_TENSOR_SCHEMA_ID: Final = (
@@ -97,9 +104,6 @@ STAGE6_HEALTH_SCHEMA_ID: Final = (
 )
 STAGE6_CERTIFICATE_SCHEMA_ID: Final = (
     "factorlab.reaka_stage6_posttraining_certificate@2.0"
-)
-STAGE6_FORMAL_CROSS_ARM_SCHEMA_ID: Final = (
-    "factorlab.reaka_stage6_formal_cross_arm_residual_certificate@1.0"
 )
 STAGE6_YEAR_RECEIPT_SCHEMA_ID: Final = (
     "factorlab.reaka_stage6_annual_controller_receipt@1.0"
@@ -1939,12 +1943,7 @@ def evaluate_stage6_health_certificate(
         },
     }
     if require_four_residual:
-        formal_passed = bool(
-            isinstance(formal_cross_arm_certificate, dict)
-            and formal_cross_arm_certificate.get("status") == "passed"
-            and formal_cross_arm_certificate.get("authority")
-            == "formal_cross_arm_acceptance_authority"
-        )
+        formal_passed = formal_cross_arm_residual_certificate_valid(formal_cross_arm_certificate)
         gates["formal_cross_arm_residual_certificate"] = {
             "value": (
                 formal_cross_arm_certificate.get("canonical_digest")
@@ -2136,177 +2135,6 @@ class Stage6FitConfig:
         payload["policy"] = self.policy.as_dict()
         payload["production_authority"] = False
         return payload
-
-
-@dataclass(frozen=True, slots=True)
-class Stage6FormalArmResidualEvidence:
-    """Actual residual output from one independently trained frozen arm.
-
-    Unlike the auxiliary probes, this evidence is emitted by the fitted arm
-    itself on the shared validation support and binds the model/checkpoint.
-    """
-
-    arm_id: str
-    task_id: str
-    sequence_length: int
-    latent_dim: int
-    operator_count: int
-    seed: int
-    train_years: tuple[int, ...]
-    validation_year: int
-    support_digest: str
-    model_state_digest: str
-    checkpoint_digest: str
-    health_certificate_digest: str
-    health_certificate_status: str
-    true_residual: dict[str, float | None]
-    estimated_residual: dict[str, float | None]
-
-    @property
-    def comparison_identity(self) -> tuple[object, ...]:
-        return (
-            self.task_id,
-            self.sequence_length,
-            self.latent_dim,
-            self.operator_count,
-            self.seed,
-            self.train_years,
-            self.validation_year,
-            self.support_digest,
-        )
-
-    def as_dict(self) -> dict[str, object]:
-        payload: dict[str, object] = {
-            "schema_id": "factorlab.reaka_stage6_formal_arm_residual_evidence@1.0",
-            "arm_id": self.arm_id,
-            "task_id": self.task_id,
-            "sequence_length": self.sequence_length,
-            "latent_dim": self.latent_dim,
-            "operator_count": self.operator_count,
-            "seed": self.seed,
-            "train_years": list(self.train_years),
-            "validation_year": self.validation_year,
-            "support_digest": self.support_digest,
-            "model_state_digest": self.model_state_digest,
-            "checkpoint_digest": self.checkpoint_digest,
-            "health_certificate_digest": self.health_certificate_digest,
-            "health_certificate_status": self.health_certificate_status,
-            "true_residual": dict(self.true_residual),
-            "estimated_residual": dict(self.estimated_residual),
-            "authority": "formal_frozen_arm_output",
-            "production_authority": False,
-        }
-        payload["canonical_digest"] = canonical_digest(payload)
-        return payload
-
-    @classmethod
-    def from_dict(cls, payload: dict[str, object]) -> Stage6FormalArmResidualEvidence:
-        declared = str(payload.get("canonical_digest", ""))
-        recomputed = canonical_digest(
-            {key: value for key, value in payload.items() if key != "canonical_digest"}
-        )
-        if declared != recomputed:
-            raise ValueError("stage6_formal_arm_evidence_digest_mismatch")
-        if payload.get("authority") != "formal_frozen_arm_output":
-            raise ValueError("stage6_formal_arm_evidence_authority_mismatch")
-        return cls(
-            arm_id=str(payload["arm_id"]),
-            task_id=str(payload["task_id"]),
-            sequence_length=int(payload["sequence_length"]),
-            latent_dim=int(payload["latent_dim"]),
-            operator_count=int(payload["operator_count"]),
-            seed=int(payload["seed"]),
-            train_years=tuple(int(year) for year in cast(list[object], payload["train_years"])),
-            validation_year=int(payload["validation_year"]),
-            support_digest=str(payload["support_digest"]),
-            model_state_digest=str(payload["model_state_digest"]),
-            checkpoint_digest=str(payload["checkpoint_digest"]),
-            health_certificate_digest=str(payload["health_certificate_digest"]),
-            health_certificate_status=str(payload["health_certificate_status"]),
-            true_residual={
-                str(key): cast(float | None, value)
-                for key, value in cast(dict[object, object], payload["true_residual"]).items()
-            },
-            estimated_residual={
-                str(key): cast(float | None, value)
-                for key, value in cast(dict[object, object], payload["estimated_residual"]).items()
-            },
-        )
-
-
-FORMAL_CROSS_ARM_IDS: Final = (
-    "without_drc",
-    "residual_mlp",
-    "reaka",
-)
-
-
-def build_formal_cross_arm_residual_certificate(
-    evidences: tuple[Stage6FormalArmResidualEvidence, ...],
-) -> dict[str, object]:
-    """Bind real no-residual/MLP/diffusion arm outputs on one support.
-
-    Missing arms, mixed configurations, missing checkpoints, or non-finite
-    summaries fail closed.  Auxiliary probe material is not accepted here.
-    """
-
-    by_arm = {evidence.arm_id: evidence for evidence in evidences}
-    blockers: list[str] = []
-    if len(by_arm) != len(evidences):
-        blockers.append("duplicate_formal_arm_evidence")
-    for arm_id in FORMAL_CROSS_ARM_IDS:
-        if arm_id not in by_arm:
-            blockers.append(f"missing_formal_arm:{arm_id}")
-    selected = [by_arm[arm_id] for arm_id in FORMAL_CROSS_ARM_IDS if arm_id in by_arm]
-    if selected:
-        identity = selected[0].comparison_identity
-        for evidence in selected[1:]:
-            if evidence.comparison_identity != identity:
-                blockers.append(f"formal_arm_comparison_identity_mismatch:{evidence.arm_id}")
-        for evidence in selected:
-            if not evidence.checkpoint_digest.startswith("sha256:"):
-                blockers.append(f"formal_arm_checkpoint_digest_missing:{evidence.arm_id}")
-            if not evidence.model_state_digest.startswith("sha256:"):
-                blockers.append(f"formal_arm_model_digest_missing:{evidence.arm_id}")
-            if not evidence.health_certificate_digest.startswith("sha256:"):
-                blockers.append(f"formal_arm_health_digest_missing:{evidence.arm_id}")
-            if evidence.health_certificate_status != "passed":
-                blockers.append(f"formal_arm_health_not_passed:{evidence.arm_id}")
-            energy = evidence.estimated_residual.get("energy")
-            if energy is None or not math.isfinite(float(energy)):
-                blockers.append(f"formal_arm_residual_nonfinite:{evidence.arm_id}")
-    arm_payloads = {evidence.arm_id: evidence.as_dict() for evidence in selected}
-    payload: dict[str, object] = {
-        "schema_id": STAGE6_FORMAL_CROSS_ARM_SCHEMA_ID,
-        "status": "blocked" if blockers else "passed",
-        "blocker_count": len(blockers),
-        "blockers": blockers,
-        "required_arms": list(FORMAL_CROSS_ARM_IDS),
-        "comparison_identity": (
-            {
-                "task_id": selected[0].task_id,
-                "sequence_length": selected[0].sequence_length,
-                "latent_dim": selected[0].latent_dim,
-                "operator_count": selected[0].operator_count,
-                "seed": selected[0].seed,
-                "train_years": list(selected[0].train_years),
-                "validation_year": selected[0].validation_year,
-                "support_digest": selected[0].support_digest,
-            }
-            if selected
-            else None
-        ),
-        "arms": arm_payloads,
-        "residual_layers": {
-            "linear_zero": arm_payloads.get("without_drc", {}).get("estimated_residual"),
-            "mlp": arm_payloads.get("residual_mlp", {}).get("estimated_residual"),
-            "diffusion": arm_payloads.get("reaka", {}).get("estimated_residual"),
-        },
-        "authority": "formal_cross_arm_acceptance_authority" if not blockers else "none",
-        "production_authority": False,
-    }
-    payload["canonical_digest"] = canonical_digest(payload)
-    return payload
 
 
 @dataclass(frozen=True, slots=True)
@@ -3413,6 +3241,10 @@ def fit_stage6_arm(
             health_certificate_status=str(certificate_payload["status"]),
             true_residual=residual_summary(formal_output.true_residual),
             estimated_residual=residual_summary(formal_output.estimated_residual),
+            evidence_source="teacher_forced_training_objective",
+            selector_mode="gumbel_soft",
+            reference_residual_source="training_next_latent_minus_soft_advanced",
+            history_only_inputs=False,
         ).as_dict()
 
     result = Stage6FitResult(

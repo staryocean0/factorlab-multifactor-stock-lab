@@ -6,6 +6,15 @@ selection research with the data, infrastructure, paper, and historical results
 that the local controller frozen for this lab. It is not an authority to trade,
 mutate the local FactorLab current pointer, choose K, or promote a strategy.
 
+## Takeover audit supplement (2026-09-05)
+
+Read `docs/user/reaka_foundation_audit_workflow.md` and its report before using
+the frozen handoff. The user authorized foundation audit and reversible repairs.
+Keep the original current@1.2 and source receipts immutable; use the new read-only
+audit for current-version checks. A successful report command is not a passed
+foundation gate. Do not silently relabel teacher-forced residuals, deduplicate
+Stage4 months, or call financial residual/account other latent residual.
+
 ## Read order
 
 1. `README.md`

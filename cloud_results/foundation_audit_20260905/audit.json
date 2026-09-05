@@ -1,0 +1,236 @@
+{
+  "schema_id": "factorlab.reaka_foundation_readonly_audit@1.0",
+  "status": "failed",
+  "audit_execution_completed": true,
+  "foundation_readiness": "blocked",
+  "foundation_ready": false,
+  "manifest": "docs/ops/reaka_multifactor_current_manifest@1.2.json",
+  "verified_checks": 355,
+  "hard_error_count": 1,
+  "evidence_gap_count": 35,
+  "findings": [
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "src/factor_lab/factor_rotation/reaka_operator_identifiability_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/factor_rotation/build_reaka_operator_identifiability_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_reaka_operator_identifiability_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "docs/ops/koopman_residual_admission_whitepaper.md",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "docs/user/koopman_residual_admission_workflow.md",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "src/factor_lab/factor_rotation/koopman_residual_admission_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/factor_rotation/run_koopman_residual_admission_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/factor_rotation/validate_koopman_residual_admission_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_koopman_residual_admission_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "docs/user/post_training_strategy_science_acceptance_workflow.md",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_joint_strategy_science_acceptance_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/factor_rotation/run_reaka_intraday_joint_strategy_science_acceptance_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/factor_rotation/validate_reaka_intraday_joint_strategy_science_acceptance_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_post_training_strategy_science_acceptance.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_reaka_intraday_joint_strategy_science_acceptance_v1.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "frozen_digest_mismatch",
+      "path": ".codex/skills/strategy-slice-rebuild/SKILL.md",
+      "detail": "Available bytes differ from the recorded SHA-256; frozen receipts were not rewritten."
+    },
+    {
+      "severity": "gap",
+      "code": "frozen_digest_mismatch",
+      "path": ".codex/skills/strategy-slice-rebuild/references/project-contract.md",
+      "detail": "Available bytes differ from the recorded SHA-256; frozen receipts were not rewritten."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "docs/ops/backtest_cloudridge_relative_performance@1.0.json",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "docs/ops/post_training_account_audit@1.0.json",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "docs/ops/post_training_account_research_bundle_whitepaper.md",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/benchmark_post_training_account_research_bundle.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/derive_post_training_account_reports.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/materialize_post_training_account_snapshot.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "scripts/validate_post_training_account_research_bundle.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "frozen_digest_mismatch",
+      "path": "src/factor_lab/portfolio/account_research_bundle.py",
+      "detail": "Available bytes differ from the recorded SHA-256; frozen receipts were not rewritten."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "src/factor_lab/portfolio/post_training_account_audit.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_account_research_bundle.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_relative_performance.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_strategy_progressive_development.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "docs/user/reaka_multifactor_current_workflow_v1_1.md",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "tests/unit/test_reaka_v2_stage3_observable_context_v2.py",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "frozen_handoff_version_conflict",
+      "path": "docs/user/reaka_strategy_v2_external_ai_handoff_v2.md",
+      "detail": "Current manifest retains a frozen handoff that names an older current entry; use the bounded entry overlay."
+    },
+    {
+      "severity": "error",
+      "code": "duplicate_condition_month",
+      "path": "output/factor-rotation/reaka_v2_stage4_observable_factor_pairing_v1_2011_2025/formal/pairing_panel.csv",
+      "detail": "Monthly observations are not unique by (data_role, decision_clock, period): {\"('consumed_repeat_comparison_no_retune', '14:30', '2018-01')\": 2, \"('consumed_repeat_comparison_no_retune', '14:30', '2021-01')\": 2, \"('consumed_repeat_comparison_no_retune', '14:45', '2018-01')\": 2, \"('consumed_repeat_comparison_no_retune', '14:45', '2021-01')\": 2}. Row counts cannot be reported as independent month counts; frozen data were not deduplicated."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "output/factor-rotation/reaka_v2_stage3_state_episode_atlas_v1_2011_2025/isolated/state_months.csv",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_frozen_file",
+      "path": "output/factor-rotation/reaka_k1_only_factor_kline_selector_v1_2011_2025/isolated/monthly_selector_panel.csv",
+      "detail": "The recorded bytes are unavailable; no historical replay is certified."
+    },
+    {
+      "severity": "gap",
+      "code": "missing_json",
+      "path": "output/factor-rotation/reaka_v2_stage4_observable_factor_pairing_v1_2011_2025/isolated/result.json",
+      "detail": "Required evidence is not shipped or is missing."
+    }
+  ],
+  "model_training_executed": false,
+  "account_execution_performed": false,
+  "financial_receipt_signed": false,
+  "controller_acceptance_created": false,
+  "scientific_result_validated": false,
+  "fresh_oos": false,
+  "production_authority": false
+}

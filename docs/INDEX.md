@@ -1,5 +1,14 @@
 # Multifactor Stock Lab Document Index
 
+## 2026-09-05 foundation audit
+
+Start with the [takeover audit and repair workflow](user/reaka_foundation_audit_workflow.md).
+The paper is conditionally compatible with the financial objective. The audit
+found residual-evidence and Stage4 observation defects; the foundation is not
+yet certified ready. New code tests do not constitute financial acceptance.
+The frozen Stage4 reports and current@1.2 remain historical evidence and
+research-state records; this audit adds explicit corrections without rewriting them.
+
 ## 1. User objective
 
 - [`user/cloud_execution_prompt.md`](user/cloud_execution_prompt.md)

@@ -1,0 +1,46 @@
+{
+  "schema_id": "factorlab.reaka_foundation_semantics@1.0",
+  "status": "research_audit_supplement_not_strategy_acceptance",
+  "base_commit": "3f67b9fd0a20da8d0f2f33276f4870bba2cbf04e",
+  "frozen_current_manifest": "docs/ops/reaka_multifactor_current_manifest@1.2.json",
+  "paper_sha256": "e47b342414508a2d1ab7859c6e6a7df1ceb99141e0561a3598e866645f14d21e",
+  "financial_target": "conditional_cross_sectional_stock_prediction_with_active_exposures",
+  "objects": {
+    "epsilon_return": "realized_return_minus_previously_frozen_financial_projection",
+    "residual_latent": "next_latent_minus_selected_operator_times_current_latent",
+    "account_other": "accounting_other_including_non_alpha_components",
+    "gate": "Hy_vs_Hx_latent_fusion_not_financial_factor_weight",
+    "operator_count": "bounded_model_capacity_not_factor_or_observable_state_count"
+  },
+  "corrected_claims": {
+    "self_developed_factors_allowed": true,
+    "observable_condition_is_operator_label": false,
+    "residual_must_be_nonzero": false,
+    "residual_must_be_predictable": false,
+    "residual_must_improve_financial_result": false,
+    "zero_conditional_mean_implies_scale_failure": false,
+    "mlp_mean_energy_comparable_to_diffusion_draw_energy": false,
+    "teacher_forced_denoising_is_history_only_forecast_evidence": false,
+    "stage4_realized_contribution_is_forward_predictive_increment": false,
+    "raw_matrix_difference_proves_operator_identification": false,
+    "k_then_residual_policy_equals_paper_joint_training": false,
+    "higher_capacity_failure_is_mathematically_implied_by_lower_capacity_failure": false
+  },
+  "required_evidence": [
+    "unique_month_clock_role",
+    "frozen_source_and_actual_output_digests",
+    "history_only_hard_selector_residual_forecast",
+    "common_support_output_space_comparisons",
+    "conditional_mean_and_distribution_calibration_separately",
+    "explicit_prediction_clock_and_label_maturity"
+  ],
+  "authority": {
+    "model_training_allowed": false,
+    "stage5_execution_allowed": false,
+    "user_financial_receipt_signed": false,
+    "account_execution_allowed": false,
+    "production_authority": false,
+    "fresh_oos": false
+  },
+  "canonical_digest": "sha256:8d4e976d522d3cc750c657bec50d49c86749e2f7c184d2eac7540871375bb515"
+}
