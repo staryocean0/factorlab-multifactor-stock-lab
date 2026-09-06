@@ -86,13 +86,13 @@ python scripts/reaka_r3_frozen_compare.py \
 
 ## 实际任务：LCL-R3-COND-20260906-01
 
-**状态与入口（2026-09-06）**：**本地已追加无训练收尾；待云端复核增量。** 六次H拟合不再重跑。 最新裁决见[cloud_review.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md)，第5节为只读增量任务。以下设计阶段与本地反馈按原字节段落保留为历史记录。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
+**状态与入口（2026-09-06）**：**云端已复核无训练增量，任务 `completed_with_limits`，不再要求同一补件或新的F/H/E拟合。** 当前裁决见[增量云端验收](../../cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_review.md)。旧设计、原反馈和先前待补要求原位保留为历史记录，以本行及末尾“无训练增量云端收口”为准；原R2/NOFIT不重开。
 
 **金融问题与主比较**：区分历史epsilon表示学习与原有直接X信息包增量。默认仅F完整输入、H同拓扑且全部71个X通道在训练和评价中置零；K1/r0、目标、支持、normalizer与训练规则相同。可选E只移除状态/状态掩码，保留暴露/可靠性/暴露掩码，不在默认执行范围。不是使用旧without_gate，也不把推理时置零当训练消融；新月度CloudRidge条件不混入。
 
 **云端已完成**：核阅相关arm注册、输入装配、encode、normalizer、fit-prefix与评价来源；已核范围没有合格现成H对照，不证明本地所有历史目录都没有。[输入/模型适配代码](../../src/factor_lab/factor_rotation/reaka_r3_condition_views.py)和[33项测试](../../tests/unit/test_reaka_r3_condition_views.py)已执行通过，零失败/错误/跳过；其中29项数组性质、4项明确的合成神经载体子类性质。回执见[execution_receipt.json](../../cloud_results/r3_condition_design_20260906/execution_receipt.json)。未完整导入原模型验证整个runner，未做真实拟合或新市场评分。
 
-**本地实现与缺失输入**：当前云端没有完整原K1数组、原训练数值模块的集成运行环境。原FactorLab提供两时钟K1 input、原fit-prefix配置/normalizer/六份分数与来源。先查已知相关实验是否有同口径F/H，充分则复用。否则需本地新建隔离的 `scripts/reaka_r3_condition_compare.py`；完整训练runner当前尚不存在，不把其命令当成已可执行。采用已提供 `condition_model_class` 或等价可审查接线，确保DMD、每个训练batch、canonical loss、forecast均使用同臂视图，且各臂独立预DMD初始化/优化器与DMD估计。
+**本地实现与缺失输入**：当前云端没有完整原K1数组、原训练数值模块的集成运行环境。原FactorLab提供两时钟K1 input、原fit-prefix配置/normalizer/六份分数与来源。先查已有同口径F/H，充分则复用。否则需本地新建隔离的 `scripts/reaka_r3_condition_compare.py`；完整训练runner当前尚不存在，不把其命令当成已可执行。采用已提供 `condition_model_class` 或等价可审查接线，确保DMD、每个训练batch、canonical loss、forecast均使用同臂视图，且各臂独立预DMD初始化/优化器与DMD估计。
 
 **预算与边界**：F原结果确可复用时只新增两时钟×三seed=最多6次H拟合，各最多3cycle。确有影响可比性的数值路径差异时，在新结果前记录原因，隔离新F/H最多12次拟合、36cycle；不是因H结果不利而重跑F。不得默认增加E、K、seed、训练长度或参数搜索。真实数值无效保留失败；弱/负增量是合法结果。旧模型、账户、原结果和原FactorLab脏工作区不动，不触发Actions。
 
@@ -119,6 +119,16 @@ python scripts/reaka_r3_frozen_compare.py \
 
 
 **无训练收尾增量（2026-09-06）**：未重跑训练 runner。已从 `run02` 保存分数导出每seed评价（6/6 digest 匹配，F−H 六 seed 均非负，1430 seed47≈0）。集成重载差为0。纠正H权重并未落盘、不可重载。来源补充见 [source_persistence.json](../../cloud_results/local_handoff_R3_condition_20260906/source_persistence.json)。桌面验收原文落库 [REAKA_R3_condition_cloud_review_20260906.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_acceptance/REAKA_R3_condition_cloud_review_20260906.md)。增量报告 [local_feedback_delta.md](../../cloud_results/local_handoff_R3_condition_20260906/local_feedback_delta.md)，[per_seed_metrics.json](../../cloud_results/local_handoff_R3_condition_20260906/per_seed_metrics.json)，[per_seed_daily.csv](../../cloud_results/local_handoff_R3_condition_20260906/per_seed_daily.csv)。收回“大部分优势”表述。未新训、未重开R2、未账户、未Actions。
+
+### 无训练增量云端收口（2026-09-06）
+
+复核本地提交 `360eae62df47583d185df00c2955dfe0723facb9`。接收六个seed汇总、已保存float32分数的集成重载一致性、最小源码/normalizer说明和H权重未保存的纠正。任务 `completed_with_limits`，不再请求本地补件、拟合或推理。更强的历史数值身份、CPU/CUDA隔离、纯X效应、PIT/OOS/账户主张仍未认证。
+
+云端直接执行85项可移植测试（33视图+13冻结评价+39后继判定），均通过；本地提交runner测试另为3通过、3因本地根缺失跳过。59项小证据检查通过；定向重聚合seed47双时钟全49日，共98个F/H配对，未重算其他seed的全部日表或个股级IC。六个全年F−H均值为正但不均匀；1430 seed47≈0、seed47两时钟相位2为负。不得将集成结果改写为每个seed或每相位一致，也不使用百分比机制归因。
+
+NaN修复由云端完成，实际runner的wiring判定调用了后继检查函数；训练/选周期/评分等11个函数AST未变。原运行源码与旧摘要保留在Git原提交，原报告/分数不变，本次没有新训。H只有分数没有原权重，可做既有支持评价，不能载入原H开展新推理；不补训冒充原权重。
+
+验收、命令与范围见 [cloud_review.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_review.md)、[cloud_checks.json](../../cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_checks.json)。后续由云端先设计因果选型、评价期隔离、运行环境可比且模型持久化的研究；当前本地无新待办。不自动增加E/K/残差网络、读取新数据、账户重放、Actions或main合并。
 
 ## 任务记录与反馈模板
 

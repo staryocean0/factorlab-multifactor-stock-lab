@@ -235,6 +235,29 @@ def fit_h_seed(*, seed: int, store, normalizer, device: torch.device) -> tuple[t
     }
 
 
+def validate_wiring_receipt(receipt: dict[str, Any]) -> None:
+    """Reject non-finite/invalid gaps before a successor may report passed.
+
+    Thresholds match the original wiring check. This checks a wiring receipt,
+    not backend equivalence, training identity or predictive usefulness.
+    """
+    limits = {
+        "f_wrap_loss_gap": 1e-6,
+        "f_wrap_latent_gap": 1e-5,
+        "h_x_loss_gap": 1e-6,
+        "h_x_latent_gap": 1e-5,
+        "h_x_forecast_gap": 1e-5,
+    }
+    if receipt.get("f_forecast_finite") is not True:
+        raise ValueError("R3 wiring: full-arm forecast is not finite")
+    for name, limit in limits.items():
+        value = receipt.get(name)
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            raise ValueError(f"R3 wiring: {name} must be a real finite gap")
+        if not math.isfinite(value) or not 0.0 <= value <= limit:
+            raise ValueError(f"R3 wiring: invalid or excessive {name}: {value}")
+
+
 def wiring_check(store, normalizer, device: torch.device) -> dict[str, Any]:
     from factor_lab.factor_rotation.reaka_intraday_k1_fit_prefix_successor_v1 import FIXED_CONFIG
     from factor_lab.factor_rotation.reaka_intraday_k1_preflight_v1 import normalize_batch
@@ -267,11 +290,7 @@ def wiring_check(store, normalizer, device: torch.device) -> dict[str, Any]:
     h_loss_gap = float(abs(h1.total_loss - h2.total_loss))
     h_latent_gap = float(torch.max(torch.abs(h1.latent - h2.latent)))
     h_score_gap = float(torch.max(torch.abs(h_forecast - h_forecast_noisy)))
-    if loss_gap > 1e-6 or latent_gap > 1e-5:
-        raise ValueError(f"history_full wrap is not F-identical: loss_gap={loss_gap} latent_gap={latent_gap}")
-    if h_loss_gap > 1e-6 or h_latent_gap > 1e-5 or h_score_gap > 1e-5:
-        raise ValueError("history_only still depends on X")
-    return {
+    receipt = {
         "train_batch_rows": int(len(take)),
         "max_train_year": int(store.inference_rows[splits["train"], 2].max()),
         "f_wrap_loss_gap": loss_gap,
@@ -280,9 +299,11 @@ def wiring_check(store, normalizer, device: torch.device) -> dict[str, Any]:
         "h_x_latent_gap": h_latent_gap,
         "h_x_forecast_gap": h_score_gap,
         "f_forecast_finite": bool(torch.isfinite(f_forecast).all()),
-        "passed": True,
         "2017_metrics_read": False,
     }
+    validate_wiring_receipt(receipt)
+    receipt["passed"] = True
+    return receipt
 
 
 def compare_clock(factorlab_root: Path, clock: str, h_scores: np.ndarray, frozen) -> tuple[dict[str, Any], list[dict[str, Any]]]:

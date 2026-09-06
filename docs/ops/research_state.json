@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-06",
-  "current_task": "r3_condition_comparison_cloud_reviewed_existing_score_details_pending",
+  "current_task": "r3_condition_delta_review_complete_next_evaluation_design",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -113,7 +113,7 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "按同一LCL-R3-COND-20260906-01的cloud_review第5节，只读已有H/F分数导出逐seed评价并补最小数值身份/normalizer/支持关联，更正权重保存与大部分优势表述。六次H拟合不重做；CPU/CUDA和无法恢复的历史身份明确保留，不自动增加训练、E、K或账户；R2与NOFIT不重开。",
+  "next_useful_action": "由云端先设计提高证据强度的后继评价：因果选型与评价期隔离、可比数值实现/运行环境、训练时持久化权重及normalizer。LCL-R3-COND-20260906-01已completed_with_limits，不再请求同一补件或新训；不继续围绕已消费2017调参，不自动增加E/K/残差网络、开放新数据或账户。确需新的本地计算时再交接最小任务。",
   "research_directions_not_a_mandatory_sequence": [
     {
       "question": "现任金融epsilon是否在正确时点、同一收益区间构造？",
@@ -132,9 +132,9 @@
     }
   ],
   "r3": {
-    "status": "condition_comparison_reviewed_descriptive_only_nofit_delta_pending",
-    "report": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md",
-    "checks": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_checks.json",
+    "status": "condition_comparison_review_complete_descriptive_only",
+    "report": "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_review.md",
+    "checks": "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_checks.json",
     "initial_report": "docs/ops/r3_evidence_use_adjudication_20260906.md",
     "evidence": "cloud_results/r3_evidence_use_20260906/",
     "publication": "cloud_results/r3_evidence_use_20260906/publication.md",
@@ -144,7 +144,7 @@
     "mean_rankic_1430": 0.15992587044817144,
     "mean_rankic_1445": 0.16152574720082447,
     "not_established": [
-      "original conditional-feature increment",
+      "strict original conditional-feature-only increment with matched numerical runtime",
       "new monthly S_obs increment",
       "independent historical OOS",
       "total-return or net-account alpha",
@@ -200,7 +200,7 @@
     },
     "local_condition_task": {
       "id": "LCL-R3-COND-20260906-01",
-      "status": "cloud_reviewed_scoped_results_nofit_details_pending",
+      "status": "completed_with_limits",
       "instruction": "docs/ops/r3_condition_increment_design_20260906.md#7-本地最小执行任务lcl-r3-cond-20260906-01",
       "required_implementation": "Submitted scripts/reaka_r3_condition_compare.py executed locally; supplement needs only existing-score per-seed export and identity notes, not a new trainer.",
       "reuse_before_fit": true,
@@ -215,8 +215,8 @@
       "decision_owner": "cloud review; local executes bounded implementation and numerical comparison",
       "feedback_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
       "feedback": "cloud_results/local_handoff_R3_condition_20260906/local_feedback.md",
-      "cloud_review": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md",
-      "cloud_checks": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_checks.json",
+      "cloud_review": "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_review.md",
+      "cloud_checks": "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_checks.json",
       "actual_H_fits": 6,
       "actual_cycles": 18,
       "F_reused": true,
@@ -227,11 +227,15 @@
       "runtime_numerical_identity_bridge_complete": false,
       "backend": "H CPU versus historical F CUDA; no backend equivalence established",
       "supplement_may_close_with_explicit_unknowns": true,
-      "checkpoint_persistence_note": "H weights were not saved; scores only. Model cannot be reloaded.",
-      "same_task_nofit_delta_status": "local_delta_feedback_pending_cloud_review",
-      "delta_feedback": "cloud_results/local_handoff_R3_condition_20260906/local_feedback_delta.md"
+      "checkpoint_persistence_note": "Confirmed local disclosure: H weights were NOT saved; saved review scores remain usable for this fixed support, but the original H cannot be loaded for new inference.",
+      "same_task_nofit_delta_status": "cloud_reviewed_completed_with_limits",
+      "delta_feedback": "cloud_results/local_handoff_R3_condition_20260906/local_feedback_delta.md",
+      "delta_feedback_commit": "360eae62df47583d185df00c2955dfe0723facb9",
+      "repeat_local_run_required": false,
+      "checkpoint_weights_persisted": false,
+      "checkpoint_persistence_disclosure_reviewed": true
     },
-    "same_task_local_delta_required": true,
+    "same_task_local_delta_required": false,
     "condition_cloud_review": {
       "status": "scoped_local_results_accepted_not_pure_X_certification",
       "reviewed_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
@@ -286,6 +290,48 @@
       "top30_win_days_1445": 25,
       "condition_feature_increment_identified": false,
       "full_repository_tests_run": false
+    },
+    "condition_delta_cloud_review": {
+      "status": "completed_with_limits",
+      "reviewed_commit": "360eae62df47583d185df00c2955dfe0723facb9",
+      "report": "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_review.md",
+      "checks": "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_checks.json",
+      "per_seed_summaries_received": 6,
+      "per_seed_mean_F_minus_H": {
+        "1430_seed11": 0.014230990722908638,
+        "1430_seed29": 0.020139214937996426,
+        "1430_seed47": 0.00024378058846846458,
+        "1445_seed11": 0.028927121330327932,
+        "1445_seed29": 0.01915281147454585,
+        "1445_seed47": 0.005980374929216189
+      },
+      "seed47_mean_near_zero_at_1430": true,
+      "not_all_seed_phases_positive": true,
+      "ensemble_reload_consistent_as_local_evidence": true,
+      "H_checkpoint_not_persisted": true,
+      "historical_numerical_identity_bridge_complete": false,
+      "CPU_CUDA_difference_isolated": false,
+      "strict_input_only_effect_certified": false,
+      "portable_tests": {
+        "tests": 85,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "local_runner_tests": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 3
+      },
+      "small_evidence_checks": 59,
+      "daily_reaggregation_scope": "seed47 both clocks, all 49 dates; other seed summaries arithmetically checked, not all daily rows or original equity arrays",
+      "production_wiring_guard_fixed_in_successor": true,
+      "new_training": false,
+      "new_inference": false,
+      "new_local_task_required": false,
+      "fresh_oos": false,
+      "production_authority": false
     }
   }
 }

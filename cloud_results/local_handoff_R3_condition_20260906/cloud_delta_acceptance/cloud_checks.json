@@ -1,0 +1,111 @@
+{
+  "task": "LCL-R3-COND-20260906-01",
+  "reviewed_commit": "360eae62df47583d185df00c2955dfe0723facb9",
+  "execution_location": "current_cloud_container",
+  "task_disposition": "completed_with_limits",
+  "evidence_disposition": "descriptive_consumed_comparison_not_strict_input_only_effect",
+  "portable_tests": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "portable_breakdown": {
+    "condition_views": 33,
+    "frozen_evaluation": 13,
+    "successor_wiring_validation": 39
+  },
+  "submitted_local_runner_tests": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3
+  },
+  "submitted_local_runner_test_blob": "4c49fade82d54981fcdb3e9f3974bc0f84f346e6",
+  "evidence_checks": {
+    "count": 59,
+    "failures": 0,
+    "summary_cells": 6,
+    "independently_reaggregated_seed": 47,
+    "paired_projection_rows": 98,
+    "original_predictor_rows_projected": 196,
+    "all_588_daily_rows_independently_reaggregated": false,
+    "raw_csv_bytes_rehashed": false,
+    "stock_level_scores_read": false
+  },
+  "patch_scope": {
+    "historical_runner_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
+    "original_sha256": "4c3d38267cd14bdde866d352efa94c6c862af3997cd37816942785a2b43fa687",
+    "changed_functions": [
+      "wiring_check"
+    ],
+    "added_functions": [
+      "validate_wiring_receipt"
+    ],
+    "unchanged_functions": [
+      "attach_factorlab",
+      "build_controlled_model",
+      "compare_clock",
+      "dump_json",
+      "file_sha",
+      "fit_h_seed",
+      "git_blob",
+      "load_module",
+      "main",
+      "record_f_reuse_decision",
+      "verify_source_blobs"
+    ],
+    "fit_score_selection_and_main_AST_unchanged": true,
+    "meaning": "Active runner has a successor wiring validation only. Original measured code remains in its Git commit; no historical result or fit was rewritten."
+  },
+  "commands": [
+    "python -m pytest -q tests/unit/test_reaka_r3_wiring_validation.py tests/unit/test_reaka_r3_condition_views.py tests/unit/test_reaka_r3_frozen_compare.py --junitxml=cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/portable_tests.xml",
+    "python -m pytest -q tests/unit/test_reaka_r3_condition_compare.py --junitxml=cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/local_runner_tests.xml",
+    "python cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/recheck_delta.py"
+  ],
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu",
+    "pytest": "9.0.2",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "verified_original_document_blobs": {
+    "docs/ops/research_state.json": "bb3367ef4db5b20d793f9dfce99ae0565ee388f5",
+    "docs/ops/cloud_local_communication.md": "699254b1454659ec33e7808ed85215f2f4f7f758"
+  },
+  "source_persistence_disposition": {
+    "current_snapshot_identities_received": true,
+    "historical_F_runtime_identity_certified": false,
+    "normalizer_matches_H_wiring_as_locally_reported": true,
+    "historical_F_normalizer_runtime_digest_available": false,
+    "H_weights_persisted": false,
+    "H_can_reload_for_new_inference": false,
+    "saved_H_scores_retained_locally": true,
+    "backend_difference_isolated": false
+  },
+  "prior_source_and_numerical_limits_not_silently_closed": true,
+  "new_local_task": null,
+  "training_executed": false,
+  "inference_executed": false,
+  "account_replay": false,
+  "actions_executed": false,
+  "r2_reopened": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "full_repository_tests_run": false,
+  "files_sha256": {
+    "scripts/reaka_r3_condition_compare.py": "6d33f810c2ec85dadcb1e8d499ab9ded1717ea909f79bdd3451220289fe10dae",
+    "tests/unit/test_reaka_r3_wiring_validation.py": "211673b32d62343393819b80850c691fe19d27ffef0901ed0d67404e55ce8e81",
+    "tests/unit/test_reaka_r3_condition_compare.py": "2012ced1e42b3fd9c6f0c3f00fc2df1dccef1550842527d18687b3efbf2256b3",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/recheck_delta.py": "cb0cb7db515bc48ef74300dec14e465a494df8258ffab6ad88142a64b0e91172",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/per_seed_metrics_extract.json": "9704be391e6439c788e79c41380de3058738df8fa4fc40e56c1f395414b55b12",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/seed47_rankic_projection.csv": "69be232e7f09d2307c2dd63c191979b0f4efb1df80db28d0777445885f671f7c",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/ensemble_reference_extract.json": "7f08f8b09e2362a9f3140d99b6512ada50f91ec877e4e10dab9e1dbe80401883",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/projection_provenance.json": "9a307d6b7556fd9bb95ba5292305dbe7a17fbed15904e9bfb6ce675b07d6e121",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/aggregation_checks.json": "b229faa3d7c53c647f7cf0831422e7ae6f1b2dc8d4eff432e9b553b5456d6812",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/portable_tests.xml": "a3fdab7f4c539601ce8c24c2075c6ee289b2310668766d6238cba15c691d656a",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/local_runner_tests.xml": "3f3a2e2ef467bad8abdf0036bf46303f97c32bf730021a23d6b94fb58dd12eac",
+    "cloud_results/local_handoff_R3_condition_20260906/cloud_delta_acceptance/cloud_review.md": "a5a21ebf83ce53328258421edd7efc26e8ae42880ca9933cf99d9842fa0da177"
+  }
+}
