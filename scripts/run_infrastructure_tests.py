@@ -21,16 +21,22 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 PREFIX = "src/factor_lab/factor_rotation/"
+FILTER_SOURCE = "src/factor_lab/filtering/cloudridge_3_0_hybrid_filter_bank.py"
 KNOWN_LEGACY_DEPENDENCIES = {
     "tests/unit/test_reaka_current_k1_account_ledgers_v1.py": [
         PREFIX + "reaka_intraday_target_fill_v1.py",
         PREFIX + "reaka_intraday_orthogonal_ot_v1.py",
         PREFIX + "reaka_intraday_k1_clock_attribution_v1.py",
+        FILTER_SOURCE,
     ],
     "tests/unit/test_reaka_intraday_k1_fit_prefix_successor_v1.py": [
         PREFIX + "reaka_intraday_k1_clock_attribution_v1.py",
     ],
+    "tests/unit/test_reaka_intraday_orthogonal_ot_v1.py": [FILTER_SOURCE],
 }
+# The filter dependency is from the actual merge-collection failure, not a guess:
+# Actions 34012432073, job 101430431354, snapshot b21bb752146d898f1d0d7c3a8728402912ba811f.
+# Both imports pass through orthogonal_factor_timing_state_v1.py:17.
 
 
 def test_scope(root: Path) -> dict[str, Any]:
@@ -42,7 +48,7 @@ def test_scope(root: Path) -> dict[str, Any]:
         if missing:
             deferred.append({"test_module": file, "missing_source_dependencies": missing,
                              "status": "not_executed_not_passed",
-                             "provenance": "cloud_results/first_round_rework_20260906/recovery_request.json"})
+                             "provenance": "docs/ops/infrastructure_audit_20260906.md"})
         else:
             selected.append(file)
     return {"discovered_unit_modules": files, "selected_unit_modules": selected,

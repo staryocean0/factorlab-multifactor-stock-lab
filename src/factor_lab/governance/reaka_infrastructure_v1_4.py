@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+from collections import Counter
 from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urlsplit
@@ -128,7 +129,10 @@ def markdown_links(text: str) -> list[str]:
     definitions = {key.lower(): target.strip("<>") for key, target in REF_DEF.findall(text)}
     for title, ref in REF_LINK.findall(text):
         key = (ref or title).lower()
-        links.append(definitions.get(key, f"__unresolved_reference__/{key}"))
+        # Without a matching definition [a][b] is plain text, often matrix
+        # indexing in this repository, not a broken Markdown reference.
+        if key in definitions:
+            links.append(definitions[key])
     links.extend(definitions.values())
     return list(dict.fromkeys(links))
 
@@ -139,7 +143,7 @@ def link_issues(root: Path, source: str, known_paths: set[str] | None = None) ->
     for link in markdown_links(file.read_text(encoding="utf-8")):
         parsed = urlsplit(link)
         if parsed.scheme in {"http", "https", "mailto"} or parsed.netloc:
-            continue  # External links are not fetched and are not certified.
+            continue
         target = (file.parent / unquote(parsed.path)).resolve() if parsed.path else file
         reason = ""
         if parsed.scheme or not target.is_relative_to(root.resolve()):
@@ -192,7 +196,9 @@ def navigation_inventory(root: Path) -> dict[str, Any]:
                 referenced.add(target.relative_to(root).as_posix())
     return {"inventory_source": source, "tracked_paths": len(paths),
             "materialized_markdown_files": len(docs), "markdown_links": link_count,
-            "issues": issues, "unreferenced_markdown": sorted(set(docs) - referenced),
+            "issues": issues, "issue_reason_counts": dict(Counter(x["reason"] for x in issues)),
+            "issues_by_source": dict(Counter(x["source"] for x in issues)),
+            "unreferenced_markdown": sorted(set(docs) - referenced),
             "agent_instruction_files": sorted(p for p in paths if Path(p).name in {"AGENTS.md", "SKILL.md"}),
             "limitations": "Inline/reference Markdown and ATX anchors only; external targets and prose semantics not verified. Unreferenced historical documents are not automatically defects."}
 
@@ -252,11 +258,11 @@ def validate_infrastructure(root: Path, *, inventory: bool = False) -> dict[str,
             target = record.get(field)
             if not safe_path(root, target).is_file():
                 errors.append(f"missing evidence locator: {section}.{field}")
-        for entry in manifest["entrypoints"]:
+        for entry in manifest["entrypoints"] + manifest["agent_interfaces"]:
             path = safe_path(root, entry)
             if path.is_file() and "CURRENT.json" not in path.read_text(encoding="utf-8"):
                 errors.append(f"entry does not route to CURRENT.json: {entry}")
-        active_docs = set(manifest["entrypoints"]) | {manifest["workflow"], manifest["whitepaper"], manifest["audit"]}
+        active_docs = set(manifest["entrypoints"] + manifest["agent_interfaces"]) | {manifest["workflow"], manifest["whitepaper"], manifest["audit"]}
         for path in sorted(active_docs):
             if path.endswith(".md") and safe_path(root, path).is_file():
                 for issue in link_issues(root, path):
