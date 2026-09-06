@@ -23,7 +23,8 @@
     "paper_model": ["src/factor_lab/factor_rotation/reaka_paper_v1.py", "tests/unit/test_reaka_paper_math_contract.py"],
     "residual_evidence": ["src/factor_lab/governance/reaka_residual_certificate.py", "tests/unit/test_reaka_residual_certificate.py", "tests/unit/test_reaka_stage6_health_estimand.py"],
     "stage4_attribution": ["src/factor_lab/factor_rotation/reaka_v2_stage4_observable_factor_pairing_v1.py", "tests/unit/test_reaka_v2_stage4_observable_factor_pairing_v1.py"],
-    "r1_byte_audit": ["src/factor_lab/governance/reaka_r1_upload_audit.py", "scripts/audit_reaka_r1_uploads.py", "tests/unit/test_reaka_r1_upload_audit.py"]
+    "r1_byte_audit": ["src/factor_lab/governance/reaka_r1_upload_audit.py", "scripts/audit_reaka_r1_uploads.py", "tests/unit/test_reaka_r1_upload_audit.py"],
+    "bounded_local_source_inventory": ["scripts/reaka_local_source_receipt.py", "tests/unit/test_reaka_local_source_receipt.py"]
   },
   "change_identity": "git_commit_for_live_sources_and_input_source_digests_for_empirical_run_receipts",
   "blocker_policy": "dependency_scoped_not_global_stage_order",
