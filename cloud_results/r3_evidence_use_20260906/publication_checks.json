@@ -1,0 +1,40 @@
+{
+  "schema_id": "factorlab.r3_publication_check@1.0",
+  "branch_base": "bfe0f0ae0949154aa6c4019144bac5cdc283e9bc",
+  "purpose": "Publish existing R3 package; no strategy rerun or new empirical conclusions",
+  "package_sha256": "f5fff660fd58833f8b8c13b7a2ee9d34db66b63b6b0f5d43d2737de9541aa8aa",
+  "script_sha256": "188d9a54746d95e079770cef701837d827880c61bc542dd2ad6f9a4729367e9f",
+  "test_sha256": "4b806ddceb659667f9b54d1136e8e655b45b9b7198da8366677ec7ac5222e43e",
+  "tests": {
+    "command": "python -m pytest -q tests/unit/test_reaka_r3_frozen_compare.py --junitxml=/mnt/data/r3_publish_check/tests.xml",
+    "exit_code": 0,
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit_sha256": "5c93cd503b7e34d8948da98c10f448a085741d5505899a4fa185e110bdcffc31",
+    "log_sha256": "67a62dd67d0864265fa543a93459a4de34254f7b6da4c5293ac81580efa379f0"
+  },
+  "arithmetic": {
+    "checks": 6,
+    "failures": 0,
+    "exit_code": 0,
+    "calculation_sha256": "826a76cc048bcde9d6287a1956637b4a48a57ab77613f3176e3dd98a4c2fb598",
+    "identical_to_package_result": true
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pytest": "9.0.2",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "scope": "Current cloud session targeted synthetic and scalar tests only; not whole-repository validation",
+  "real_frozen_comparison_run": false,
+  "training": false,
+  "frozen_model_inference": false,
+  "account_replay": false,
+  "full_pit_certified": false,
+  "actions_executed": false,
+  "main_merged": false
+}

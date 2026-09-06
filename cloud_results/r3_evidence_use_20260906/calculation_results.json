@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "1430_se_formula",
+      "passed": true
+    },
+    {
+      "id": "1430_phase_count",
+      "passed": true
+    },
+    {
+      "id": "1430_valid_correlation",
+      "passed": true
+    },
+    {
+      "id": "1445_se_formula",
+      "passed": true
+    },
+    {
+      "id": "1445_phase_count",
+      "passed": true
+    },
+    {
+      "id": "1445_valid_correlation",
+      "passed": true
+    }
+  ],
+  "failures": 0,
+  "clocks": {
+    "1430": {
+      "mean_rankic": 0.15992587044817141,
+      "residual_decile_spread_percent": 6.350312729058125,
+      "recomputed_naive_se": 0.014674080574036985,
+      "naive_mean_over_se_not_valid_significance_claim": 10.898527484654135,
+      "phase_min": 0.14955422554616188,
+      "phase_max": 0.17148502630362125
+    },
+    "1445": {
+      "mean_rankic": 0.16152574720082447,
+      "residual_decile_spread_percent": 6.499432299494441,
+      "recomputed_naive_se": 0.013974599056619455,
+      "naive_mean_over_se_not_valid_significance_claim": 11.558524616440666,
+      "phase_min": 0.1521065314619813,
+      "phase_max": 0.16970746348271573
+    }
+  },
+  "clock_rankic_difference_not_paired_test": 0.001599876752653051,
+  "adjacent_H20_overlap_fraction_for_D5_endpoints": 0.75,
+  "raw_row_count_not_independent_samples": true,
+  "claims_not_computed": [
+    "IC versus no-fit baselines",
+    "condition-feature incremental predictive effect",
+    "paired uncertainty intervals",
+    "total-return or net-account alpha"
+  ],
+  "scientific_acceptance": false,
+  "full_pit_certified": false,
+  "fresh_oos": false,
+  "observations_sha256": "34ce84689d8dc2b2db027d58387de30910b8037e510bb1026cd3ea90a43cb702"
+}

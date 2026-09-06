@@ -1,0 +1,79 @@
+{
+  "schema_id": "factorlab.r3_cloud_execution@1.0",
+  "performed_by": "current_cloud_session",
+  "branch_base": "bfe0f0ae0949154aa6c4019144bac5cdc283e9bc",
+  "github_written": false,
+  "github_write_blocker": "Exposed GitHub actions are read-only; create/create_tree absent after discovery. No gh executable; direct network DNS unavailable.",
+  "tests": {
+    "command": "python -m pytest -q tests/unit/test_reaka_r3_frozen_compare.py --junitxml=../r3_tests.xml",
+    "exit_code": 0,
+    "count": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "arithmetic_checks": {
+    "command": "python cloud_results/r3_evidence_use_20260906/review_calculations.py --output cloud_results/r3_evidence_use_20260906/calculation_results.json",
+    "exit_code": 0,
+    "count": 6,
+    "failures": 0
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pytest": "9.0.2",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "scope": "Selected historical fields, scalar arithmetic, new-script unit and synthetic file-schema tests only; not whole-repository validation.",
+  "real_frozen_comparison_run": false,
+  "new_training": false,
+  "frozen_inference": false,
+  "account_replay": false,
+  "full_pit_certified": false,
+  "actions_executed": false,
+  "fresh_oos": false,
+  "scientific_acceptance": false,
+  "files": [
+    {
+      "path": "cloud_results/r3_evidence_use_20260906/calculation_results.json",
+      "sha256": "826a76cc048bcde9d6287a1956637b4a48a57ab77613f3176e3dd98a4c2fb598",
+      "bytes": 1670
+    },
+    {
+      "path": "cloud_results/r3_evidence_use_20260906/review_calculations.py",
+      "sha256": "2786f50e4d14f845cddec28b1ccd8bb8bca66ec57f226e281afa0595747ac360",
+      "bytes": 2706
+    },
+    {
+      "path": "cloud_results/r3_evidence_use_20260906/source_observations.json",
+      "sha256": "34ce84689d8dc2b2db027d58387de30910b8037e510bb1026cd3ea90a43cb702",
+      "bytes": 3718
+    },
+    {
+      "path": "cloud_results/r3_evidence_use_20260906/tests.log",
+      "sha256": "a0584ab9a9bf51d0dc9910e73f866b592027fd98b58d4fa09a10f6372b51b252",
+      "bytes": 99
+    },
+    {
+      "path": "cloud_results/r3_evidence_use_20260906/tests.xml",
+      "sha256": "2e0f12d597717544ff798cab88db5c10749415ce1d4d423c418a6f2e273f7fc7",
+      "bytes": 1908
+    },
+    {
+      "path": "docs/ops/r3_evidence_use_adjudication_20260906.md",
+      "sha256": "bc8e8851b697b17963e633be2c33c474af248a9c3b5d3dfaae51caaf7619abe7",
+      "bytes": 17416
+    },
+    {
+      "path": "scripts/reaka_r3_frozen_compare.py",
+      "sha256": "188d9a54746d95e079770cef701837d827880c61bc542dd2ad6f9a4729367e9f",
+      "bytes": 14477
+    },
+    {
+      "path": "tests/unit/test_reaka_r3_frozen_compare.py",
+      "sha256": "4b806ddceb659667f9b54d1136e8e655b45b9b7198da8366677ec7ac5222e43e",
+      "bytes": 5433
+    }
+  ]
+}
