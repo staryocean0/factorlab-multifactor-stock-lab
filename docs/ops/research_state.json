@@ -223,10 +223,13 @@
       "training_finished_locally": true,
       "additional_fit_or_inference_requested": false,
       "checkpoint_persistence_verified": false,
-      "per_seed_evaluation_delivered": false,
+      "per_seed_evaluation_delivered": true,
       "runtime_numerical_identity_bridge_complete": false,
       "backend": "H CPU versus historical F CUDA; no backend equivalence established",
-      "supplement_may_close_with_explicit_unknowns": true
+      "supplement_may_close_with_explicit_unknowns": true,
+      "checkpoint_persistence_note": "H weights were not saved; scores only. Model cannot be reloaded.",
+      "same_task_nofit_delta_status": "local_delta_feedback_pending_cloud_review",
+      "delta_feedback": "cloud_results/local_handoff_R3_condition_20260906/local_feedback_delta.md"
     },
     "same_task_local_delta_required": true,
     "condition_cloud_review": {
@@ -237,22 +240,33 @@
       "F_minus_H_rankic_1445": 0.020999561006629863,
       "H_rankic_1430": 0.1440533686347263,
       "H_rankic_1445": 0.14052618619419457,
-      "rankic_win_days": [34,39],
-      "top30_win_days": [25,27],
+      "rankic_win_days": [
+        34,
+        39
+      ],
+      "top30_win_days": [
+        25,
+        27
+      ],
       "projection_checks": 63,
       "projection_failures": 0,
       "adapter_tests_passed": 33,
-      "original_runner_tests": {"passed": 1,"skipped_missing_local_root": 3,"failed": 0},
+      "original_runner_tests": {
+        "passed": 1,
+        "skipped_missing_local_root": 3,
+        "failed": 0
+      },
       "actual_main_guard_tests_passed": 3,
       "cloud_scope": "Submitted source bytes and all H dates reaggregated with prior accepted F/B projection. Not original real arrays, full Stage6 integration, raw CSV rehash, or training.",
       "pure_condition_increment_identified": false,
-      "per_seed_details_pending": true,
+      "per_seed_details_pending": false,
       "backend_difference_is_not_proof_of_result_error": true,
       "new_training_required_for_this_supplement": false,
       "full_pit_certified": false,
       "fresh_oos": false,
       "production_authority": false,
-      "actions_executed": false
+      "actions_executed": false,
+      "full_desktop_review_archived": "cloud_results/local_handoff_R3_condition_20260906/cloud_acceptance/REAKA_R3_condition_cloud_review_20260906.md"
     },
     "previous_nofit_report": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_review.md",
     "previous_nofit_checks": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_checks.json",

@@ -1,0 +1,96 @@
+{
+  "task": "LCL-R3-COND-20260906-01",
+  "kind": "source_and_persistence_note_no_training",
+  "factorlab_commit_reported": "b39bb12f43a46b165d18db93191a669234077444",
+  "theme_feedback_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
+  "bound_in_original_verify_source_blobs": {
+    "reaka_intraday_k1_fit_prefix_successor_v1.py": {
+      "git_blob": "f2538b64478c1c05a16c347e69864751661af4cb",
+      "sha256": "sha256:b9a5c17fd07d2e59b5977d6704ac09952806471f3353cac27f727bcd982d9ba2",
+      "matches_design_or_nofit_binding": true,
+      "expected_blob": "f2538b64478c1c05a16c347e69864751661af4cb"
+    },
+    "reaka_intraday_k1_training_v1.py": {
+      "git_blob": "94f6fb1eafb2d02cdad4a3cc2883884ef9356852",
+      "sha256": "sha256:61c5c2cf274e36dcd14ea88703638d2abdec3bbc017c3f482e60ba6eb49e7075",
+      "matches_design_or_nofit_binding": true,
+      "expected_blob": "94f6fb1eafb2d02cdad4a3cc2883884ef9356852"
+    },
+    "reaka_intraday_k1_preflight_v1.py": {
+      "git_blob": "6942fb2dc20d24307578bc7dda45368afaf3d1f5",
+      "sha256": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+      "matches_design_or_nofit_binding": true,
+      "expected_blob": "6942fb2dc20d24307578bc7dda45368afaf3d1f5"
+    }
+  },
+  "normalizer": {
+    "1430": {
+      "canonical_digest": "sha256:0bbf62be5f9a8c25d3ba493d17acefe45cb6929c5092f42f2af02dcf29c04589",
+      "matches_wiring_digest": true,
+      "fit_end_year": 2016,
+      "sample_rows": 65536,
+      "target_used": false,
+      "original_F_formal_stores_normalizer_digest": false,
+      "note": "Original F formal.json does not persist a normalizer digest. This recomputation matches the H-run wiring digest; it is not an independent historical-F runtime certificate."
+    },
+    "1445": {
+      "canonical_digest": "sha256:edfea759af356237d5fef393c4c5f3f51b1e0f2381f0262d96f3bd0ba800f575",
+      "matches_wiring_digest": true,
+      "fit_end_year": 2016,
+      "sample_rows": 65536,
+      "target_used": false,
+      "original_F_formal_stores_normalizer_digest": false,
+      "note": "Original F formal.json does not persist a normalizer digest. This recomputation matches the H-run wiring digest; it is not an independent historical-F runtime certificate."
+    }
+  },
+  "review_support": {
+    "shared_review_row_indices_sha256": "sha256:bb8cdc3056b7bf585f71282032a8983b6a07aaf48e625029eb215c578daad926",
+    "n_review_per_clock": 82321,
+    "date_min": "2017-01-06",
+    "date_max": "2017-12-29",
+    "applies_existing_nofit_input_manifest_and_formal_blobs": true
+  },
+  "h_checkpoint": {
+    "weights_persisted": false,
+    "save_state_tree_called": false,
+    "torch_save_called": false,
+    "checkpoint_files_in_run02": [],
+    "correction": "The earlier local_feedback.md phrase that model weights remained locally is incorrect for this run. The runner deleted the in-memory model after writing review score npy files. This H model cannot be reloaded. Do not retrain a replacement and call it the original H.",
+    "scores_retained": true,
+    "score_dir": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-COND-20260906-01/run02"
+  },
+  "backend": {
+    "H": "cpu",
+    "historical_F": "cuda:0",
+    "isolated": false,
+    "does_not_require_new_F_training_in_this_delta": true
+  },
+  "r2_reopened": false,
+  "account_replay": false,
+  "training_rerun": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "additional_consumed_model_files_current_snapshot": {
+    "reaka_paper_v1.py": {
+      "git_blob": "feeb57162d0159201b6244946d400bcdcf06eb15",
+      "sha256": "sha256:f333d0fc8b7bdf364a4de5d841ad99857a0b12a6c9bf050f6db563533ed15305",
+      "imported_by_training_v1_or_controlled_model": true,
+      "historical_F_runtime_bytes_certified": false,
+      "note": "Current FactorLab snapshot identity only. No freeze-time copy of these three files was bound in the original six-fit runner verify_source_blobs, so this does not prove they were the exact bytes used when original F scores were produced."
+    },
+    "reaka_stage6_daily_engine.py": {
+      "git_blob": "8ccb1dd0d593b17fa0ad34d1b495fe1b70fcc393",
+      "sha256": "sha256:9d76a35cf45d031bed06220c3f19dfe63956f0d434ab738aea4da34d6174aab1",
+      "imported_by_training_v1_or_controlled_model": true,
+      "historical_F_runtime_bytes_certified": false,
+      "note": "Current FactorLab snapshot identity only. No freeze-time copy of these three files was bound in the original six-fit runner verify_source_blobs, so this does not prove they were the exact bytes used when original F scores were produced."
+    },
+    "reaka_stage6_parameter_calibration.py": {
+      "git_blob": "84fa10fcfed9e79e4c444f67425a26b5ff9ee822",
+      "sha256": "sha256:f342bec0c79b91df4f0bfff7c0581366c42c0f82729bcd989e9986277b55de01",
+      "imported_by_training_v1_or_controlled_model": true,
+      "historical_F_runtime_bytes_certified": false,
+      "note": "Current FactorLab snapshot identity only. No freeze-time copy of these three files was bound in the original six-fit runner verify_source_blobs, so this does not prove they were the exact bytes used when original F scores were produced."
+    }
+  }
+}

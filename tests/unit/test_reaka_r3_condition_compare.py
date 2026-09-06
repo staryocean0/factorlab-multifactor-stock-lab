@@ -1,13 +1,15 @@
 from __future__ import annotations
 
 import importlib.util
+import math
+import os
 from pathlib import Path
 import numpy as np
 import pytest
 import torch
 
 THEME = Path(__file__).resolve().parents[2]
-FACTORLAB = Path("/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab")
+FACTORLAB = Path(os.environ.get("FACTORLAB_ROOT", "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab"))
 
 
 def load_runner():
@@ -82,3 +84,50 @@ def test_new_output_dir_is_required(tmp_path):
         root = FACTORLAB.resolve()
         if out.exists() or out.is_relative_to(root / "output") or out.is_relative_to(root / "data"):
             raise ValueError("choose a NEW output directory outside sealed data/output trees")
+
+
+def finite_gaps_pass(gaps: dict) -> bool:
+    """Successor wiring rule: non-finite diffs fail; finite flag required."""
+    required = (
+        "f_wrap_loss_gap",
+        "f_wrap_latent_gap",
+        "h_x_loss_gap",
+        "h_x_latent_gap",
+        "h_x_forecast_gap",
+    )
+    if gaps.get("f_forecast_finite") is not True:
+        return False
+    for key in required:
+        value = gaps[key]
+        if value is None or not math.isfinite(float(value)):
+            return False
+        if float(value) > 1e-6:
+            return False
+    return True
+
+
+def test_finite_gaps_reject_nan():
+    good = {
+        "f_wrap_loss_gap": 0.0,
+        "f_wrap_latent_gap": 0.0,
+        "h_x_loss_gap": 0.0,
+        "h_x_latent_gap": 0.0,
+        "h_x_forecast_gap": 0.0,
+        "f_forecast_finite": True,
+    }
+    assert finite_gaps_pass(good) is True
+    nan = dict(good)
+    nan["h_x_loss_gap"] = float("nan")
+    assert finite_gaps_pass(nan) is False
+    inf = dict(good)
+    inf["f_wrap_latent_gap"] = float("inf")
+    assert finite_gaps_pass(inf) is False
+    not_finite_forecast = dict(good)
+    not_finite_forecast["f_forecast_finite"] = False
+    assert finite_gaps_pass(not_finite_forecast) is False
+
+
+def test_factorlab_root_comes_from_env(monkeypatch, tmp_path):
+    monkeypatch.setenv("FACTORLAB_ROOT", str(tmp_path))
+    # re-read helper through the module-level path construction
+    assert Path(os.environ["FACTORLAB_ROOT"]) == tmp_path

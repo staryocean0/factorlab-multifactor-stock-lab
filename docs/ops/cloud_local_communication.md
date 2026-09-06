@@ -86,7 +86,7 @@ python scripts/reaka_r3_frozen_compare.py \
 
 ## 实际任务：LCL-R3-COND-20260906-01
 
-**状态与入口（2026-09-06）**：**云端已复核：受限接收现有六次H拟合及集成结果，待同任务的现有产物明细补充，不再训练。** 最新裁决见[cloud_review.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md)，第5节为只读增量任务。以下设计阶段与本地反馈按原字节段落保留为历史记录。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
+**状态与入口（2026-09-06）**：**本地已追加无训练收尾；待云端复核增量。** 六次H拟合不再重跑。 最新裁决见[cloud_review.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md)，第5节为只读增量任务。以下设计阶段与本地反馈按原字节段落保留为历史记录。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
 
 **金融问题与主比较**：区分历史epsilon表示学习与原有直接X信息包增量。默认仅F完整输入、H同拓扑且全部71个X通道在训练和评价中置零；K1/r0、目标、支持、normalizer与训练规则相同。可选E只移除状态/状态掩码，保留暴露/可靠性/暴露掩码，不在默认执行范围。不是使用旧without_gate，也不把推理时置零当训练消融；新月度CloudRidge条件不混入。
 
@@ -116,6 +116,9 @@ python scripts/reaka_r3_frozen_compare.py \
 **同任务最小增量（待用户转交）**：按报告第5节在原任务编号下追加 `local_feedback_delta.md`、所有seed的F/H逐日和汇总，以及现有分数/支持/最小实现身份。仅从run02已保存的H分数与原F分数读出；新增只读汇总函数/脚本并回传，不重跑会训练的runner.main。CPU/CUDA、未保存checkpoint或无法回溯的身份可明确保留为局限，不强制新训练来清零。没有完整现成导出命令的部分已在报告列明，不假称自动执行。原分数缺失即停止对应项并报告。
 
 **预算与状态**：六次拟合工作保留，本轮 `cloud_reviewed_scoped_results_nofit_details_pending`。追加任务新拟合/推理/账户/Actions次数均为0；不增E、K、seed或cycle，不上传大数组、不合并main。此记录由用户转交本地，不代表远程派发。本地填写增量已反馈，云端再复核；无新数据依赖的工作仍可继续。
+
+
+**无训练收尾增量（2026-09-06）**：未重跑训练 runner。已从 `run02` 保存分数导出每seed评价（6/6 digest 匹配，F−H 六 seed 均非负，1430 seed47≈0）。集成重载差为0。纠正H权重并未落盘、不可重载。来源补充见 [source_persistence.json](../../cloud_results/local_handoff_R3_condition_20260906/source_persistence.json)。桌面验收原文落库 [REAKA_R3_condition_cloud_review_20260906.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_acceptance/REAKA_R3_condition_cloud_review_20260906.md)。增量报告 [local_feedback_delta.md](../../cloud_results/local_handoff_R3_condition_20260906/local_feedback_delta.md)，[per_seed_metrics.json](../../cloud_results/local_handoff_R3_condition_20260906/per_seed_metrics.json)，[per_seed_daily.csv](../../cloud_results/local_handoff_R3_condition_20260906/per_seed_daily.csv)。收回“大部分优势”表述。未新训、未重开R2、未账户、未Actions。
 
 ## 任务记录与反馈模板
 
