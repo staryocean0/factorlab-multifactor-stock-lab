@@ -1,0 +1,43 @@
+{
+  "source_commit": "d340f249f01d3e413d876cf9096d789114fc6070",
+  "task": "LCL-R3-NOFIT-20260906-01",
+  "source_report_path": "cloud_results/local_handoff_R3_20260906/comparison.json",
+  "source_report_git_blob": "3be56c5483229b9cced7813b2e671384b112dddc",
+  "source_daily_path": "cloud_results/local_handoff_R3_20260906/paired_daily.csv",
+  "source_daily_git_blob": "9e2cfe3fb3711e35d872d2f08c875ef88f0ffcd8",
+  "projection_scope": "Connector-retrieved K1 and negative_mean10_epsilon columns on every date/clock, transcribed into 98 paired rows; not an original-byte copy of the 490-row CSV. Other baselines below are reported summary values, not row-level recomputation in this cloud run.",
+  "1430": {
+    "support_rows": 82321, "support_days": 49,
+    "k1_ic": 0.15992587044817144,
+    "reversal_mean10_ic": 0.13322081415939868,
+    "k1_spread": 0.06350312729058125,
+    "reversal_mean10_spread": 0.050428893983665214,
+    "k1_top30_excess": 0.04499727770739396,
+    "reversal_mean10_top30_excess": 0.03876866246916129,
+    "paired_ic_mean": 0.026705056288772767,
+    "paired_phase_means": {"0": 0.023365692767411544, "1": 0.03268055705514344, "2": 0.03202343803545132, "3": 0.018307338818194886},
+    "all_reported_rankic": {"K1": 0.15992587044817144, "last_epsilon": 0.05019425811118617, "negative_last_epsilon": -0.05019425811118617, "mean10_epsilon": -0.13322081415939868, "negative_mean10_epsilon": 0.13322081415939868},
+    "all_reported_delta": {"last_epsilon": 0.10973161233698528, "negative_last_epsilon": 0.2101201285593576, "mean10_epsilon": 0.2931466846075701, "negative_mean10_epsilon": 0.026705056288772767},
+    "formal_mean_rankic": 0.15992587044817141, "formal_mean_spread": 0.06350312729058125,
+    "formal_blob": "57a1ab18761e39cb66001090ac1782bd8eda2d8d",
+    "input_manifest_sha256": "7b8050270c72894ff2e6c67f1fb4a5a5513ca46e8cc0b8c02ed7e0ce3523dfd3",
+    "review_row_indices_sha256": "bb8cdc3056b7bf585f71282032a8983b6a07aaf48e625029eb215c578daad926"
+  },
+  "1445": {
+    "support_rows": 82321, "support_days": 49,
+    "k1_ic": 0.16152574720082447,
+    "reversal_mean10_ic": 0.13439309893986956,
+    "k1_spread": 0.06499432299494441,
+    "reversal_mean10_spread": 0.051102680759270436,
+    "k1_top30_excess": 0.042899832573497255,
+    "reversal_mean10_top30_excess": 0.038189403442848345,
+    "paired_ic_mean": 0.02713264826095494,
+    "paired_phase_means": {"0": 0.02641789654427561, "1": 0.030146642522431082, "2": 0.03196887472620067, "3": 0.019594160378808567},
+    "all_reported_rankic": {"K1": 0.16152574720082447, "last_epsilon": 0.049097523583691884, "negative_last_epsilon": -0.049097523583691884, "mean10_epsilon": -0.13439309893986956, "negative_mean10_epsilon": 0.13439309893986956},
+    "all_reported_delta": {"last_epsilon": 0.11242822361713257, "negative_last_epsilon": 0.21062327078451634, "mean10_epsilon": 0.295918846140694, "negative_mean10_epsilon": 0.02713264826095494},
+    "formal_mean_rankic": 0.16152574720082447, "formal_mean_spread": 0.06499432299494441,
+    "formal_blob": "ab75bd55f2a990dffc2036fa2f03a6295e88ec64",
+    "input_manifest_sha256": "e979fce98e3a6e67f6e5b2bef2701f100d2b174fcdef4539e417ba3aa0c9a7e7",
+    "review_row_indices_sha256": "bb8cdc3056b7bf585f71282032a8983b6a07aaf48e625029eb215c578daad926"
+  }
+}
