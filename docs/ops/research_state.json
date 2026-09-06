@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-06",
-  "current_task": "r3_condition_delta_review_complete_next_evaluation_design",
+  "current_task": "r3_time_isolated_evaluation_design_complete_no_execution",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -113,7 +113,7 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "由云端先设计提高证据强度的后继评价：因果选型与评价期隔离、可比数值实现/运行环境、训练时持久化权重及normalizer。LCL-R3-COND-20260906-01已completed_with_limits，不再请求同一补件或新训；不继续围绕已消费2017调参，不自动增加E/K/残差网络、开放新数据或账户。确需新的本地计算时再交接最小任务。",
+  "next_useful_action": "由云端按R3-TIME-ISOLATED-DESIGN-20260906-01实施后继直接接口：先接入标签成熟前缀选型、同环境成对F/H及运行时模型/normalizer保存重载，以小型接线检查验证；真实数据依赖确需本地执行时再单独交接。本轮方案和43项新合成测试已完成，未读取2018—2020真实标签、未新训或派发本地。旧R2/NOFIT/FH任务保持收口，不回到2017调参，不默认加E/K/残差网络或读2026。",
   "research_directions_not_a_mandatory_sequence": [
     {
       "question": "现任金融epsilon是否在正确时点、同一收益区间构造？",
@@ -332,6 +332,46 @@
       "new_local_task_required": false,
       "fresh_oos": false,
       "production_authority": false
+    },
+    "time_isolated_evaluation_design": {
+      "id": "R3-TIME-ISOLATED-DESIGN-20260906-01",
+      "status": "design_complete_not_executed",
+      "report": "docs/ops/r3_time_isolated_evaluation_design_20260906.md",
+      "plan": "docs/ops/r3_time_isolated_evaluation_plan_20260906.json",
+      "helpers": "src/factor_lab/factor_rotation/reaka_r3_time_isolation.py",
+      "checker": "scripts/check_reaka_r3_time_isolated_plan.py",
+      "tests": "tests/unit/test_reaka_r3_time_isolation.py",
+      "receipt": "cloud_results/r3_time_isolated_design_20260906/execution_receipt.json",
+      "source_base_commit": "1b3bd7ac41a95343134b2f32bb57d9e496b2a0bf",
+      "freeze_at": "2016-12-31T23:59:59+08:00",
+      "proposed_evaluation": "2018-2020 consumed repeat comparison, labels mature within existing 2020 calendar",
+      "primary_arms": [
+        "F_new",
+        "H_new"
+      ],
+      "same_environment_new_pair_required": true,
+      "old_FH_primary_reuse": false,
+      "future_fit_budget": 12,
+      "future_cycle_budget": 36,
+      "current_new_fits": 0,
+      "current_new_inference": 0,
+      "current_new_local_task_required": false,
+      "local_task_dispatched": false,
+      "new_helper_tests": 43,
+      "targeted_regression_tests_including_new": 128,
+      "test_failures": 0,
+      "test_errors": 0,
+      "test_skipped": 0,
+      "design_check": "passed_not_data_readiness_or_PIT",
+      "real_selector_integration_verified": false,
+      "real_training_runner_implemented": false,
+      "real_data_readiness": "not_evaluated",
+      "strict_input_only_effect_certified": false,
+      "fresh_oos": false,
+      "full_pit_certified": false,
+      "production_authority": false,
+      "actions_executed": false,
+      "note": "This is one future experiment design, not a global process rule or authorization to execute the 12 fits. Same-task historical gaps remain explicitly closed with limits."
     }
   }
 }

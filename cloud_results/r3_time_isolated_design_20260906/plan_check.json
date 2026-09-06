@@ -1,0 +1,10 @@
+{
+  "design_consistency": "passed",
+  "errors": [],
+  "data_readiness": "not_evaluated",
+  "market_experiment_executed": false,
+  "runner_integration_verified": false,
+  "PIT_certified": false,
+  "fresh_oos": false,
+  "production_authority": false
+}

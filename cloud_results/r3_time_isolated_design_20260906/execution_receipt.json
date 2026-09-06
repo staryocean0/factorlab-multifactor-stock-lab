@@ -1,0 +1,101 @@
+{
+  "schema_id": "factorlab.r3_time_isolated_design_receipt@1.0",
+  "design_id": "R3-TIME-ISOLATED-DESIGN-20260906-01",
+  "source_base_commit": "1b3bd7ac41a95343134b2f32bb57d9e496b2a0bf",
+  "scope": "Cloud-authored proposed design and metadata/byte helpers; no real market data, fitting, inference, PIT or selector integration.",
+  "status": "design_complete_synthetic_checks_passed",
+  "new_tests": {
+    "tests": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "targeted_regression_including_new": {
+    "tests": 128,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "counts_note": "43 new cases are included in 128; repeat executions are not independent evidence.",
+  "commands": [
+    {
+      "command": "PYTHONPATH=src python -m pytest -q tests/unit/test_reaka_r3_time_isolation.py --junitxml=cloud_results/r3_time_isolated_design_20260906/design_tests.xml",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/check_reaka_r3_time_isolated_plan.py",
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHONPATH=src python -m pytest -q tests/unit/test_reaka_r3_condition_views.py tests/unit/test_reaka_r3_frozen_compare.py tests/unit/test_reaka_r3_wiring_validation.py tests/unit/test_reaka_r3_time_isolation.py --junitxml=cloud_results/r3_time_isolated_design_20260906/targeted_tests.xml",
+      "exit_code": 0
+    }
+  ],
+  "test_environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "pytest": "9.0.2",
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu"
+  },
+  "network_attempt": "Direct container raw.githubusercontent.com download failed DNS; repository reads used GitHub connector. Existing local artifact baseline state blob matched 445ca87faccff44e87b33855048121614a9437c4.",
+  "plan_check": {
+    "design_consistency": "passed",
+    "errors": [],
+    "data_readiness": "not_evaluated",
+    "market_experiment_executed": false,
+    "runner_integration_verified": false,
+    "PIT_certified": false,
+    "fresh_oos": false,
+    "production_authority": false
+  },
+  "new_sources": {
+    "docs/ops/r3_time_isolated_evaluation_design_20260906.md": {
+      "bytes": 20613,
+      "sha256": "fbbf48cfbb86ea6978fa79c872b5e091e7f9ed933a04a6fb7c287aae99d17a1d",
+      "git_blob": "4f5b0b03637f0e54615b1724f48ea332b0cd10a9"
+    },
+    "docs/ops/r3_time_isolated_evaluation_plan_20260906.json": {
+      "bytes": 5782,
+      "sha256": "fb17fbc044ae6ed7df3e820d2613502c5e68f163db1de8a10e20ecc4f16f5104",
+      "git_blob": "b5cb834a287ef229280bc274131d90dadced9b53"
+    },
+    "src/factor_lab/factor_rotation/reaka_r3_time_isolation.py": {
+      "bytes": 11896,
+      "sha256": "8d5b753f17d61f4949c1e9c41250419a8123fc38c5a52f94e1cc331d4e4aae2e",
+      "git_blob": "c77ead29bb7795018bbfeacf88f6488aab371d3b"
+    },
+    "scripts/check_reaka_r3_time_isolated_plan.py": {
+      "bytes": 1089,
+      "sha256": "0aee5270a40eef0f26e4497db3c43743755be53a1d8e31db1ea1772b2f9dfe70",
+      "git_blob": "82cc91ed14e0c34167c61a987ea3d584db14cf56"
+    },
+    "tests/unit/test_reaka_r3_time_isolation.py": {
+      "bytes": 8128,
+      "sha256": "b9a67b582248771a6df4c95d0ac2a3eefc82c809051315bb00332caf270f5978",
+      "git_blob": "e1a012164520298b0c56c101dd1bd46d2896ece1"
+    }
+  },
+  "historical_state_sections_unchanged": true,
+  "cloud_local_communication_unchanged_no_local_task_created": true,
+  "not_executed": [
+    "real_tool_selection",
+    "real_input_state_rebuild",
+    "2018_2020_market_evaluation",
+    "new_F_H_fits",
+    "checkpoint_save_reload_on_real_model",
+    "bootstrap_on_market_results",
+    "whole_repository_tests",
+    "GitHub_Actions",
+    "main_merge",
+    "production_pointer_change"
+  ],
+  "future_fit_budget_only": 12,
+  "current_fit_count": 0,
+  "current_inference_count": 0,
+  "local_task_dispatched": false,
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "production_authority": false,
+  "limits": "Timestamp helper validates supplied metadata, not observed availability. Identity equality is not proof of runtime loading. Artifact inventory checks physical bytes/file-set only, not a torch load or numerical replay."
+}
