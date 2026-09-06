@@ -1,0 +1,56 @@
+{
+  "schema_id": "factorlab.reaka_first_round_rework_result@1.1",
+  "status": "delivered_original_bytes_accepted_R2_blocked_upstream_PIT_sources",
+  "input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
+  "data_tree": "915f17e0c4f8ab2090fe6f55417f150b5903eac3",
+  "source_of_prior_expected_digests": "cloud_results/first_round_rework_20260905/rework_result.json",
+  "prior_missing_six_inputs_resolved": true,
+  "missing_2023_2024_daily_resolved": true,
+  "accepted_checkpoint_count": 6,
+  "verified_checkpoint_tensor_count": 174,
+  "fit_objective_correction": "fit-prefix training_objective consumes historical epsilon and observable feature sequences; epsilon_future is the review label, not a directly supplied supervised fit target",
+  "r0_identity": "no latent residual correction; financial epsilon is still used and forecast",
+  "score_generation_causal_replay_verified": false,
+  "external_PIT_verified": false,
+  "full_historical_fit_reproducibility_verified": false,
+  "step_ledger": [
+    {
+      "step": "R0",
+      "status": "documentary_estimand_correction_completed"
+    },
+    {
+      "step": "R1",
+      "status": "delivered_file_and_model_entity_checks_passed_with_source_limits"
+    },
+    {
+      "step": "R2",
+      "status": "blocked",
+      "next_required": "recovery_request.json"
+    },
+    {
+      "step": "R3",
+      "status": "not_executed_before_R2"
+    },
+    {
+      "step": "R4",
+      "status": "not_executed_before_R2"
+    }
+  ],
+  "historical_account_blob_gaps": "acknowledged_unrecovered_no_resealing",
+  "fresh_oos": false,
+  "financial_acceptance": false,
+  "production_authority": false,
+  "new_model_fit": false,
+  "capacity_selection": false,
+  "new_score_materialization": false,
+  "account_replay": false,
+  "github_PR": 1,
+  "PR_merged": false,
+  "supplemental_reviewed_sources": {
+    "src/factor_lab/governance/reaka_r1_upload_audit.py": "sha256:0205c86305a0063577711ece519fc050ef007bc2a8a5baac7a76cedb3a3f74b1",
+    "scripts/audit_reaka_r1_uploads.py": "sha256:4d21ce300f13b78c5b1f66ca2c1f05455c03723a775e89d39976fa5687e1985b",
+    "tests/unit/test_reaka_r1_upload_audit.py": "sha256:4fd88dd3848ce322bc1ce1c70ecc6ac8786fcee028e196371a6eb4ee2c483953",
+    "tests/conftest.py": "sha256:05fea101d380c21d2287030af96e7a1939f3e829f2ee8ec91ed1dcd5b2a4b44d",
+    ".github/workflows/r1-upload-audit.yml": "sha256:fb7bd5824325e116edd2a1848a7166a88c886f65f07305ee26b637dd57e1d44f"
+  }
+}

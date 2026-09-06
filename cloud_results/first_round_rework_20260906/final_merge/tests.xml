@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="3.251" timestamp="2026-09-06T03:39:06.172446+00:00" hostname="runnervmejwal"><testcase classname="" name="tests.unit.test_reaka_current_k1_account_ledgers_v1" time="0.000"><error message="collection failure">ImportError while importing test module '/home/runner/work/factorlab-multifactor-stock-lab/factorlab-multifactor-stock-lab/tests/unit/test_reaka_current_k1_account_ledgers_v1.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_reaka_current_k1_account_ledgers_v1.py:9: in &lt;module&gt;
+    from factor_lab.factor_rotation.reaka_current_k1_account_ledgers_v1 import (
+src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py:29: in &lt;module&gt;
+    from factor_lab.factor_rotation import reaka_current_generation_aggregate_blackbox_gpu_v2 as gpu
+src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py:38: in &lt;module&gt;
+    from factor_lab.factor_rotation.reaka_current_generation_aggregate_blackbox_v1 import (
+src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py:37: in &lt;module&gt;
+    from factor_lab.factor_rotation import reaka_intraday_target_fill_v1 as target_fill_module
+E   ImportError: cannot import name 'reaka_intraday_target_fill_v1' from 'factor_lab.factor_rotation' (/home/runner/work/factorlab-multifactor-stock-lab/factorlab-multifactor-stock-lab/src/factor_lab/factor_rotation/__init__.py)</error></testcase></testsuite></testsuites>

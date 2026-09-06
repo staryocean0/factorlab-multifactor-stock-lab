@@ -1,0 +1,12 @@
+{
+  "schema_id": "factorlab.reaka_foundation_validation@1.0",
+  "current_manifest": "docs/ops/reaka_multifactor_current_manifest@1.3.json",
+  "infrastructure_consistency": "passed",
+  "checked_source_files": 146,
+  "errors": [],
+  "data_readiness": "not_evaluated",
+  "historical_evidence_readiness": "blocked",
+  "scientific_acceptance": "not_established",
+  "research_execution_allowed": false,
+  "production_authority": false
+}

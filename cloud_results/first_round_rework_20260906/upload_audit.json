@@ -1,0 +1,1947 @@
+{
+  "schema_id": "factorlab.reaka_first_round_upload_audit@1.0",
+  "fresh_oos": false,
+  "scientific_acceptance": "not_established",
+  "model_training_run": false,
+  "score_generation_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "errors": [],
+  "initial_inputs": [
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/manifest.json",
+      "digest": "sha256:7b8050270c72894ff2e6c67f1fb4a5a5513ca46e8cc0b8c02ed7e0ce3523dfd3",
+      "status": "matched_original_bytes"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/manifest.json",
+      "digest": "sha256:e979fce98e3a6e67f6e5b2bef2701f100d2b174fcdef4539e417ba3aa0c9a7e7",
+      "status": "matched_original_bytes"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1430.parquet",
+      "digest": "sha256:7ad9472f307b560d1a4474b18926c09fb23f9cd5645178dcc2b5ce1f315d883d",
+      "status": "matched_original_bytes"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1445.parquet",
+      "digest": "sha256:29c64330a3f65ef35430ac6ab23634f12896e7d8aecbb5f8c1c581b0b837e864",
+      "status": "matched_original_bytes"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1430.parquet",
+      "digest": "sha256:6652efb41bb9a0748c6c5b20b23f6f0a674ac21ed3ccc42a92ee6971cbec138c",
+      "status": "matched_original_bytes"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1445.parquet",
+      "digest": "sha256:25f7f5e812d6e3e17e05e281b905f4ab219bca2cb06b9b4eb4711cd073bc96d2",
+      "status": "matched_original_bytes"
+    }
+  ],
+  "clocks": [
+    {
+      "clock": "14:30",
+      "store_artifacts": 15,
+      "inference_rows": 853732,
+      "labelled_rows": 827753,
+      "unlabelled_inference_rows": 25979,
+      "calendar_start": "2007-01-04T00:00:00.000000000",
+      "calendar_end": "2020-12-31T00:00:00.000000000",
+      "normalizer_file_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+      "checkpoint_bindings": {
+        "11": {
+          "state_digest": "sha256:a2148a579e30422d3d29f680a7a5e7b4e8771d36500830df20915b20f272c998",
+          "tensor_count": 29,
+          "operator_shape": [
+            1,
+            8,
+            8
+          ],
+          "selected_cycle": 3,
+          "review_score_count": 82321
+        },
+        "29": {
+          "state_digest": "sha256:997c9e605d94592fc14a2cae29bc7b551d0701eb07599a0ac66733a931870fec",
+          "tensor_count": 29,
+          "operator_shape": [
+            1,
+            8,
+            8
+          ],
+          "selected_cycle": 3,
+          "review_score_count": 82321
+        },
+        "47": {
+          "state_digest": "sha256:7547d2938a7b9e2f3c221da0654ade3a64aa83641b5252f4779fd6a9083b5ad0",
+          "tensor_count": 29,
+          "operator_shape": [
+            1,
+            8,
+            8
+          ],
+          "selected_cycle": 2,
+          "review_score_count": 82321
+        }
+      },
+      "score_rows": 853732,
+      "market_rows": 6459216,
+      "score_columns": [
+        "symbol",
+        "decision_position",
+        "decision_date",
+        "score",
+        "decision_clock"
+      ],
+      "market_columns": [
+        "date",
+        "decision_clock",
+        "symbol",
+        "raw_execution_price",
+        "raw_close_price",
+        "previous_tradable_close",
+        "buy_ok",
+        "sell_ok",
+        "size_bucket",
+        "hfq_price_multiplier",
+        "hfq_factor_source",
+        "accounting_execution_price",
+        "accounting_close_price"
+      ],
+      "score_content_recomputed": false,
+      "external_pit_proven": false
+    },
+    {
+      "clock": "14:45",
+      "store_artifacts": 15,
+      "inference_rows": 853732,
+      "labelled_rows": 827753,
+      "unlabelled_inference_rows": 25979,
+      "calendar_start": "2007-01-04T00:00:00.000000000",
+      "calendar_end": "2020-12-31T00:00:00.000000000",
+      "normalizer_file_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+      "checkpoint_bindings": {
+        "11": {
+          "state_digest": "sha256:639ccee0a2247271358ef6965979bf683f9ef782e2c4666bc823e1f7c2f1e21e",
+          "tensor_count": 29,
+          "operator_shape": [
+            1,
+            8,
+            8
+          ],
+          "selected_cycle": 3,
+          "review_score_count": 82321
+        },
+        "29": {
+          "state_digest": "sha256:f5dcc5b00ab9ab4c57233a6b8badb441ee6e108f9d273cae741e9b4f40c37ab7",
+          "tensor_count": 29,
+          "operator_shape": [
+            1,
+            8,
+            8
+          ],
+          "selected_cycle": 3,
+          "review_score_count": 82321
+        },
+        "47": {
+          "state_digest": "sha256:8d7363e5f82ad9772af53adedefcb00b30c0a2933960f4c306bb0367a4b44e1a",
+          "tensor_count": 29,
+          "operator_shape": [
+            1,
+            8,
+            8
+          ],
+          "selected_cycle": 2,
+          "review_score_count": 82321
+        }
+      },
+      "score_rows": 853732,
+      "market_rows": 6459216,
+      "score_columns": [
+        "symbol",
+        "decision_position",
+        "decision_date",
+        "score",
+        "decision_clock"
+      ],
+      "market_columns": [
+        "date",
+        "decision_clock",
+        "symbol",
+        "raw_execution_price",
+        "raw_close_price",
+        "previous_tradable_close",
+        "buy_ok",
+        "sell_ok",
+        "size_bucket",
+        "hfq_price_multiplier",
+        "hfq_factor_source",
+        "accounting_execution_price",
+        "accounting_close_price"
+      ],
+      "score_content_recomputed": false,
+      "external_pit_proven": false
+    }
+  ],
+  "ledger_contract": {
+    "path": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+    "canonical_digest": "sha256:b2a7b1509fc64303ee7c72aac90db2b4f1e3a386b70b27f18c5a42e681c227b7",
+    "matched": true
+  },
+  "source_closure": [
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_3_pnl_segmentation_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_3_pnl_segmentation_incident.json",
+      "expected": "sha256:69a61bd42fa3d33d1922e009f0cde88e9a96d3136534fb8b0bb38c632fd58cd0",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_4_packaging_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_4_packaging_incident.json",
+      "expected": "sha256:9e48b3caea81d376bd43f1379e48d6fa2341dc02e6cf0c364d8a67d7b048d41b",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_trade_cost_allocation_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_trade_cost_allocation_incident.json",
+      "expected": "sha256:52087b9baf1ea401675aee52cb58741835384c3469b560db11e37b41eb3a4370",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_1_source_closure_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_1_source_closure_incident.json",
+      "expected": "sha256:73f10613e68933d3f025434321afd060192e2bab680184cad2e8215ad6c9be1f",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_2_trade_leg_identity_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_2_trade_leg_identity_incident.json",
+      "expected": "sha256:eee80d7dd52b37aa115a860b62fcc1b7cabcd0dedfacb6380b5e7ff6e7003a23",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/post_training_account_audit@1.1.json",
+      "resolved_path": "docs/ops/post_training_account_audit@1.1.json",
+      "expected": "sha256:a533e16381aaafc720f7237473932075f1e50f04f60b923e7d3f0e359777f252",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.0.json",
+      "resolved_path": "docs/ops/reaka_current_k1_account_ledgers@1.0.json",
+      "expected": "sha256:3fadcd7f701c23b6a9f3897014b3419b8b86585bf9a1c88ff1c7ab65f2740e9c",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.1.json",
+      "resolved_path": "docs/ops/reaka_current_k1_account_ledgers@1.1.json",
+      "expected": "sha256:061140a5c7f9aa463ff31a991f487094cd15479b7d83bf2bc9a734bdf9a8fc4c",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.2.json",
+      "resolved_path": "docs/ops/reaka_current_k1_account_ledgers@1.2.json",
+      "expected": "sha256:dbe7675fea9a6dbf7617b4055b879fc9888e4ba42f3d7f1a60bbf8434aabdb5c",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.3.json",
+      "resolved_path": "docs/ops/reaka_current_k1_account_ledgers@1.3.json",
+      "expected": "sha256:d661a764872cb4bd9cceab52e30f1185c53d1f42a978b23c23c07026cc2e1204",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.4.json",
+      "resolved_path": "docs/ops/reaka_current_k1_account_ledgers@1.4.json",
+      "expected": "sha256:91a8e60d99ba2cf74bdfe640ee71e8c5cd1c0d7cce8913be418d9fa689b2cb67",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_current_k1_account_ledgers_whitepaper.md",
+      "resolved_path": "docs/ops/reaka_current_k1_account_ledgers_whitepaper.md",
+      "expected": "sha256:54fd7921ab6bc1a5052a91d2016af58afc954a91d52ca79a9a71b899b82b1f84",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "docs/user/reaka_current_k1_account_ledgers_workflow.md",
+      "resolved_path": "docs/user/reaka_current_k1_account_ledgers_workflow.md",
+      "expected": "sha256:cbc268a99d9bfcece5a8c64aac3aafded6b14acef316be69c594354666875aa2",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/finalize_reaka_current_k1_account_ledgers_v1.py",
+      "resolved_path": "scripts/factor_rotation/finalize_reaka_current_k1_account_ledgers_v1.py",
+      "expected": "sha256:5cdc40bb63b31345564ebafaadd7e44857e9c312f8c38688325fc85a406e0738",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/run_reaka_current_k1_account_ledgers_v1.py",
+      "resolved_path": "scripts/factor_rotation/run_reaka_current_k1_account_ledgers_v1.py",
+      "expected": "sha256:2e7c7702114546cd37b3fd04a47d7869527b093af7dea772a5648f2de7344d5b",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/validate_reaka_current_k1_account_ledgers_v1.py",
+      "resolved_path": "scripts/factor_rotation/validate_reaka_current_k1_account_ledgers_v1.py",
+      "expected": "sha256:8421bc2cda388bb3cbdca620c7eb1878c1235bd9a8b496583e5baf1878485581",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py",
+      "expected": "sha256:03d96028d7781eaa8be1532e2b53f20186bbf27a18637e54fbbe09513ec9a77b",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py",
+      "expected": "sha256:80850973f75d2fda015f29dfb8b3e2e1f4c709eea4766c9db4f615963f7e5f73",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py",
+      "expected": "sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1",
+      "status": "mismatch",
+      "detail": "file digest mismatch: src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py: sha256:cce2c26db12aaba5a7feb212215fbc71b802b8377fd8ec8472fb88cdeb95b139 != sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v1.py",
+      "expected": "sha256:ae4da76b15ebdf5748091520190fbb41aabcf21a05414130fbfcc8402c7e97ea",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v2.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v2.py",
+      "expected": "sha256:7b1189a0b1a5d4da46e3620f7fb2463f6f22e34920bb76e295c0e89e57064802",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_post2020_annual_four_group_blackbox_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_k1_post2020_annual_four_group_blackbox_v1.py",
+      "expected": "sha256:500bbed57eb90c5315b646d37131406e0b7b4bd7151dc42a3dbb96392e7335e3",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_transaction_pnl_attribution_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_k1_transaction_pnl_attribution_v1.py",
+      "expected": "sha256:35db453e7163e852b75b63f5bd89a1e91c04e808ac40c881e5a0c96b9b9e3c78",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/portfolio/account_research_bundle.py",
+      "resolved_path": "src/factor_lab/portfolio/account_research_bundle.py",
+      "expected": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+      "status": "mismatch",
+      "detail": "file digest mismatch: src/factor_lab/portfolio/account_research_bundle.py: sha256:8228972eeff82b6489a4eb6db40919f76d4abdef42bfc334925d8ec3255cca2f != sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "tests/unit/test_reaka_current_k1_account_ledgers_v1.py",
+      "resolved_path": "tests/unit/test_reaka_current_k1_account_ledgers_v1.py",
+      "expected": "sha256:bf7c00f363cd3b6086f51d1e5983f73fd9f274755462fda9f4956166c2296a60",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_intraday_K1_preflight_whitepaper.md",
+      "resolved_path": "docs/ops/reaka_intraday_K1_preflight_whitepaper.md",
+      "expected": "sha256:83c7bcd96a09218d484608cfecb3b0e3d3c582be995dd6291de5e0ee7c4ff040",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "docs/user/reaka_intraday_K1_preflight_workflow.md",
+      "resolved_path": "docs/user/reaka_intraday_K1_preflight_workflow.md",
+      "expected": "sha256:34d3780ca8b45cc8b11404d1777b322fa4965a7df1421424526b95cbce00ccb6",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+      "expected": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/freeze_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/freeze_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:db054addf74fb3ebaa45bbddc0d6e291cc9424410da982c8c842d8dffd16c32f",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/materialize_reaka_intraday_K1_input_v1.py",
+      "resolved_path": "scripts/factor_rotation/materialize_reaka_intraday_K1_input_v1.py",
+      "expected": "sha256:2b1af96b5f1b2cba5195b0ef0bbd08d59285a80fb8c73992baa5657c83eebdec",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/run_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/run_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:63ecdfae51fb3993995be91a8db08b93f8e2671b8d0774388fc3e11fa2e5d582",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/validate_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/validate_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:dae5244c18cf96f1db5e68e476096918193e2440853490c4a9f60f01bbda035f",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/close_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/close_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:ea6edae26b4c9d4b350ca481535f5a69db75cce78955c6627d73a7c83fa7854d",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "tests/unit/test_reaka_intraday_k1_preflight_v1.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_k1_preflight_v1.py",
+      "expected": "sha256:0f4edc1cfbd1d7028eb486e2b672539a216037b0683cb03c03a0cd923fb5dcd2",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "docs/ops/reaka_intraday_K1_fit_prefix_successor_whitepaper.md",
+      "resolved_path": "docs/ops/reaka_intraday_K1_fit_prefix_successor_whitepaper.md",
+      "expected": "sha256:05d54af4d236c261ba97d293c2025586ad2616121f8d98005a7caad17c4fabcf",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "docs/user/reaka_intraday_K1_fit_prefix_successor_workflow.md",
+      "resolved_path": "docs/user/reaka_intraday_K1_fit_prefix_successor_workflow.md",
+      "expected": "sha256:0ebdce31324494b08cbecce6d4243bb191a05c51211d221c64ee69488bcc074a",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "expected": "sha256:b9a5c17fd07d2e59b5977d6704ac09952806471f3353cac27f727bcd982d9ba2",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/freeze_reaka_intraday_K1_fit_prefix_successor_v1.py",
+      "resolved_path": "scripts/factor_rotation/freeze_reaka_intraday_K1_fit_prefix_successor_v1.py",
+      "expected": "sha256:09fa1d6ffb11c14f054694231a7ee25ed0e1e7db8d1a3c05d1745cf9a2db7029",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/run_reaka_intraday_K1_fit_prefix_successor_v1.py",
+      "resolved_path": "scripts/factor_rotation/run_reaka_intraday_K1_fit_prefix_successor_v1.py",
+      "expected": "sha256:749890f0f1fd6b778eeb45f7f1b2066e0b3c9163b06f7652f466218e4218e5ab",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/validate_close_reaka_intraday_K1_fit_prefix_successor_v1.py",
+      "resolved_path": "scripts/factor_rotation/validate_close_reaka_intraday_K1_fit_prefix_successor_v1.py",
+      "expected": "sha256:2a201a4694a39db7d7f10cc315c783452cd7738a602103fdfcb8ddbd31c65282",
+      "status": "matched"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "tests/unit/test_reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "expected": "sha256:926dac537449c54fc631c4577ea0da5b93ee8cfc1df2dc07ec0312bcf679ec79",
+      "status": "missing"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.0.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.0.json",
+      "expected": "sha256:2b58e2e930450222ae6d338546cf3595c75a118bab05fcf4cdd60dfbb67bf155",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.1.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.1.json",
+      "expected": "sha256:7854c2e97c2fbf641b99003ae4f6515dc2fb459018e2f8f3e7702a5863e14be2",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "expected": "sha256:180f29bd18d62763571bf281d8af1b9e9051d7665a4527d417523e13638d6544",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_whitepaper.md",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_whitepaper.md",
+      "expected": "sha256:74d23a5e06f1c2bcc72616e480be1f5036ebf0e19c5337c636e472324ea6fe43",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "docs/user/reaka_intraday_portfolio_mapping_workflow.md",
+      "resolved_path": "docs/user/reaka_intraday_portfolio_mapping_workflow.md",
+      "expected": "sha256:fe03f058df6143033b4dcf44d827625927935620f14ac4e425fd3a4234893e54",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:dc7dc7f183201d76d4765c95562239adbbb73e9e5a44169ddbe39fa928fbecda",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "resolved_path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "expected": "sha256:74d826ffd3165c16dc4bf3dbb24423383a2584c8016806c10e51a38953cba492",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "scripts/factor_rotation/prepare_reaka_intraday_portfolio_mapping_session_v1.py",
+      "resolved_path": "scripts/factor_rotation/prepare_reaka_intraday_portfolio_mapping_session_v1.py",
+      "expected": "sha256:143a165d320e8f72b6e70c6229aeeb64f31e34b1a647266829f859749c9f7e1a",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "scripts/factor_rotation/validate_reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "scripts/factor_rotation/validate_reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:fdb614800df9b43351ac69f6b746df1a868968d1d19fa7711e87e9de9912988d",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "tests/unit/test_reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:5d4a3313a2beb402e035ebd5f912850511af44d632ca50f1802113f55054f2a1",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round2.py",
+      "resolved_path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round2.py",
+      "expected": "sha256:f00bf198febcc5fa99cf464659a2193c2ec6c35a0a6a368b0a42f5e5a3b1f07b",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py",
+      "expected": "sha256:81107cc279ba589c7611cb1a8c879facee634f17bb791ae1b4690c97588e8526",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+      "expected": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_training_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_training_v1.py",
+      "expected": "sha256:61c5c2cf274e36dcd14ea88703638d2abdec3bbc017c3f482e60ba6eb49e7075",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "expected": "sha256:b9a5c17fd07d2e59b5977d6704ac09952806471f3353cac27f727bcd982d9ba2",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_paper_v1.py",
+      "resolved_path": "docs/ops/evidence/r1_original_source_snapshots/reaka_paper_v1.py",
+      "expected": "sha256:0c18e9497cca6816dec36651cc636b2c3a8ce0968a2e576e50a4f9fe2452e914",
+      "status": "matched_archived_original"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_parameter_governance.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_parameter_governance.py",
+      "expected": "sha256:80980d70353554f3f9a2b4670f50dbdeb6f96c4da68515383cd094a36a95353f",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_prediction_root_routing.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_prediction_root_routing.py",
+      "expected": "sha256:551bc1b25e967d6ce1582eff1a6536065bcaa6ba36373f85b6fa6bed971c6fc0",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py",
+      "expected": "sha256:18e294504d94248c02c574b221f0b22a0439a7e4da3564e16fed1eb6b5b4e381",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py",
+      "expected": "sha256:104ba6534cc14f08f1d25f758815e8780f51b6b0f892da4ce8eedc710e405a20",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py",
+      "expected": "sha256:096e1340222c169b0524ffb4e6934ecb14862b67afdfe97b8ae13d8264cff1ee",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_parameter_calibration.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_parameter_calibration.py",
+      "expected": "sha256:bea1a65dae4a6313599e7de8f6d2276fd4e489f1c08e9feeb360b77c61717fd7",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_task_alignment.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_task_alignment.py",
+      "expected": "sha256:59d366d57a380218aea007a34afcd116481b79bd7c308a5e2f399ca40cd169a7",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_temporal_coordinate.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_temporal_coordinate.py",
+      "expected": "sha256:9e2e0b5051385a0ed51ac8e56904f72388817fb52afd20f5bc6110e89d098633",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/governance/canonicalization.py",
+      "resolved_path": "src/factor_lab/governance/canonicalization.py",
+      "expected": "sha256:886cbe6dbf4b45cdb52b814d549cd8b21f1a7724a3f049dfcceb2fa53a68b41c",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "resolved_path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "expected": "sha256:422ee7d397e61022ac76973929881bd9e78ab9fb54ad7a1693266db173f2491b",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "tests/unit/test_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "expected": "sha256:dba94d0ca7e8e84bdd35d6280acd0a655f5a00e049e49d1bbdc4f185a21fa61f",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "resolved_path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "expected": "sha256:74d826ffd3165c16dc4bf3dbb24423383a2584c8016806c10e51a38953cba492",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "scripts/factor_rotation/materialize_reaka_stage6_portfolio_inputs.py",
+      "resolved_path": "scripts/factor_rotation/materialize_reaka_stage6_portfolio_inputs.py",
+      "expected": "sha256:91b6088b67dc88f596bd625d21e38d23cf32e24a341295b00345a4a0cb63bc1c",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_portfolio_execution.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_portfolio_execution.py",
+      "expected": "sha256:754416b33c03e3484de8b7268765a5b94e8e8c135057b1287f6d5283ad4c73a0",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:dc7dc7f183201d76d4765c95562239adbbb73e9e5a44169ddbe39fa928fbecda",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "expected": "sha256:180f29bd18d62763571bf281d8af1b9e9051d7665a4527d417523e13638d6544",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_inputs_v1_20260901/validation_report.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_inputs_v1_20260901/validation_report.json",
+      "expected": "sha256:23278ce0a240072daa49021fb716afed848a63821947b25f78457ed23f002053",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "resolved_path": "docs/ops/evidence/r1_datahub_history_copies/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "expected": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a",
+      "status": "matched_archived_original"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_entrypoint_import_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_entrypoint_import_incident.json",
+      "expected": "sha256:07bb4c623ba0b9e569695bb027d56dd49ef81613702aa0cb3bca67c3085cc2e6",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_000638_HFQ_coverage_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_000638_HFQ_coverage_incident.json",
+      "expected": "sha256:69fa81385d03f44c4d2502fb1e43daff1702b6ba1a5d19b40e39223c50450b9c",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/xdxr_000638_incremental_repair_20260901/validation_report.json",
+      "resolved_path": "docs/ops/evidence/r1_datahub_history_copies/xdxr_000638_incremental_repair_20260901/validation_report.json",
+      "expected": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+      "status": "matched_archived_original"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_XDXR_suspended_event_date_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_XDXR_suspended_event_date_incident.json",
+      "expected": "sha256:539cec7529615b0ef4301b8218f7fc9edf46ba3c1a87c43856af5fc19fff94ae",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_HFQ_source_label_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_HFQ_source_label_incident.json",
+      "expected": "sha256:2669c8c191031d392f5a3e0b7603a5cb7f05b51878e121cc32e32f6866a92cda",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.3.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.3.json",
+      "expected": "sha256:76f265eec276d778a7dbeb09ba14b9371dfda5207f16687be754f8e9ff2a3999",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.2.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.2.json",
+      "expected": "sha256:77065f9794294be9aea8b04ec1a9665f82a8f622b4052dbb0d51e92f0fdf4b34",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.1.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.1.json",
+      "expected": "sha256:e5cb931f7c9ee9d3efb69eed3f0aaa9bf497969c5bf9dbcffa25baf2e1d9af02",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.0.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.0.json",
+      "expected": "sha256:74b59a6ecfb83f705ec8ebd46d7258c69ba49b3d9b7994a7c51cfe5de140272e",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.0.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.0.json",
+      "expected": "sha256:2b58e2e930450222ae6d338546cf3595c75a118bab05fcf4cdd60dfbb67bf155",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.1.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.1.json",
+      "expected": "sha256:7854c2e97c2fbf641b99003ae4f6515dc2fb459018e2f8f3e7702a5863e14be2",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "expected": "sha256:180f29bd18d62763571bf281d8af1b9e9051d7665a4527d417523e13638d6544",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_whitepaper.md",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_whitepaper.md",
+      "expected": "sha256:74d23a5e06f1c2bcc72616e480be1f5036ebf0e19c5337c636e472324ea6fe43",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "docs/user/reaka_intraday_portfolio_mapping_workflow.md",
+      "resolved_path": "docs/user/reaka_intraday_portfolio_mapping_workflow.md",
+      "expected": "sha256:fe03f058df6143033b4dcf44d827625927935620f14ac4e425fd3a4234893e54",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:dc7dc7f183201d76d4765c95562239adbbb73e9e5a44169ddbe39fa928fbecda",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "resolved_path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "expected": "sha256:74d826ffd3165c16dc4bf3dbb24423383a2584c8016806c10e51a38953cba492",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "scripts/factor_rotation/prepare_reaka_intraday_portfolio_mapping_session_v1.py",
+      "resolved_path": "scripts/factor_rotation/prepare_reaka_intraday_portfolio_mapping_session_v1.py",
+      "expected": "sha256:143a165d320e8f72b6e70c6229aeeb64f31e34b1a647266829f859749c9f7e1a",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "scripts/factor_rotation/validate_reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "scripts/factor_rotation/validate_reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:fdb614800df9b43351ac69f6b746df1a868968d1d19fa7711e87e9de9912988d",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "tests/unit/test_reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:5d4a3313a2beb402e035ebd5f912850511af44d632ca50f1802113f55054f2a1",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round2.py",
+      "resolved_path": "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round2.py",
+      "expected": "sha256:f00bf198febcc5fa99cf464659a2193c2ec6c35a0a6a368b0a42f5e5a3b1f07b",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py",
+      "expected": "sha256:81107cc279ba589c7611cb1a8c879facee634f17bb791ae1b4690c97588e8526",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+      "expected": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_training_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_training_v1.py",
+      "expected": "sha256:61c5c2cf274e36dcd14ea88703638d2abdec3bbc017c3f482e60ba6eb49e7075",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "expected": "sha256:b9a5c17fd07d2e59b5977d6704ac09952806471f3353cac27f727bcd982d9ba2",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_paper_v1.py",
+      "resolved_path": "docs/ops/evidence/r1_original_source_snapshots/reaka_paper_v1.py",
+      "expected": "sha256:0c18e9497cca6816dec36651cc636b2c3a8ce0968a2e576e50a4f9fe2452e914",
+      "status": "matched_archived_original"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_parameter_governance.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_parameter_governance.py",
+      "expected": "sha256:80980d70353554f3f9a2b4670f50dbdeb6f96c4da68515383cd094a36a95353f",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_prediction_root_routing.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_prediction_root_routing.py",
+      "expected": "sha256:551bc1b25e967d6ce1582eff1a6536065bcaa6ba36373f85b6fa6bed971c6fc0",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py",
+      "expected": "sha256:18e294504d94248c02c574b221f0b22a0439a7e4da3564e16fed1eb6b5b4e381",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py",
+      "expected": "sha256:104ba6534cc14f08f1d25f758815e8780f51b6b0f892da4ce8eedc710e405a20",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py",
+      "expected": "sha256:096e1340222c169b0524ffb4e6934ecb14862b67afdfe97b8ae13d8264cff1ee",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_parameter_calibration.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_parameter_calibration.py",
+      "expected": "sha256:bea1a65dae4a6313599e7de8f6d2276fd4e489f1c08e9feeb360b77c61717fd7",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_task_alignment.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_task_alignment.py",
+      "expected": "sha256:59d366d57a380218aea007a34afcd116481b79bd7c308a5e2f399ca40cd169a7",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_temporal_coordinate.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_temporal_coordinate.py",
+      "expected": "sha256:9e2e0b5051385a0ed51ac8e56904f72388817fb52afd20f5bc6110e89d098633",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "source_digests",
+      "path": "src/factor_lab/governance/canonicalization.py",
+      "resolved_path": "src/factor_lab/governance/canonicalization.py",
+      "expected": "sha256:886cbe6dbf4b45cdb52b814d549cd8b21f1a7724a3f049dfcceb2fa53a68b41c",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "resolved_path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "expected": "sha256:422ee7d397e61022ac76973929881bd9e78ab9fb54ad7a1693266db173f2491b",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "tests/unit/test_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "expected": "sha256:dba94d0ca7e8e84bdd35d6280acd0a655f5a00e049e49d1bbdc4f185a21fa61f",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "resolved_path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "expected": "sha256:74d826ffd3165c16dc4bf3dbb24423383a2584c8016806c10e51a38953cba492",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "scripts/factor_rotation/materialize_reaka_stage6_portfolio_inputs.py",
+      "resolved_path": "scripts/factor_rotation/materialize_reaka_stage6_portfolio_inputs.py",
+      "expected": "sha256:91b6088b67dc88f596bd625d21e38d23cf32e24a341295b00345a4a0cb63bc1c",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_portfolio_execution.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_stage6_portfolio_execution.py",
+      "expected": "sha256:754416b33c03e3484de8b7268765a5b94e8e8c135057b1287f6d5283ad4c73a0",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "expected": "sha256:dc7dc7f183201d76d4765c95562239adbbb73e9e5a44169ddbe39fa928fbecda",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "expected": "sha256:180f29bd18d62763571bf281d8af1b9e9051d7665a4527d417523e13638d6544",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_inputs_v1_20260901/validation_report.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_inputs_v1_20260901/validation_report.json",
+      "expected": "sha256:23278ce0a240072daa49021fb716afed848a63821947b25f78457ed23f002053",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "resolved_path": "docs/ops/evidence/r1_datahub_history_copies/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "expected": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a",
+      "status": "matched_archived_original"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_entrypoint_import_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_entrypoint_import_incident.json",
+      "expected": "sha256:07bb4c623ba0b9e569695bb027d56dd49ef81613702aa0cb3bca67c3085cc2e6",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_000638_HFQ_coverage_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_000638_HFQ_coverage_incident.json",
+      "expected": "sha256:69fa81385d03f44c4d2502fb1e43daff1702b6ba1a5d19b40e39223c50450b9c",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/xdxr_000638_incremental_repair_20260901/validation_report.json",
+      "resolved_path": "docs/ops/evidence/r1_datahub_history_copies/xdxr_000638_incremental_repair_20260901/validation_report.json",
+      "expected": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+      "status": "matched_archived_original"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_XDXR_suspended_event_date_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_XDXR_suspended_event_date_incident.json",
+      "expected": "sha256:539cec7529615b0ef4301b8218f7fc9edf46ba3c1a87c43856af5fc19fff94ae",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_HFQ_source_label_incident.json",
+      "resolved_path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_HFQ_source_label_incident.json",
+      "expected": "sha256:2669c8c191031d392f5a3e0b7603a5cb7f05b51878e121cc32e32f6866a92cda",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.3.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.3.json",
+      "expected": "sha256:76f265eec276d778a7dbeb09ba14b9371dfda5207f16687be754f8e9ff2a3999",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.2.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.2.json",
+      "expected": "sha256:77065f9794294be9aea8b04ec1a9665f82a8f622b4052dbb0d51e92f0fdf4b34",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.1.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.1.json",
+      "expected": "sha256:e5cb931f7c9ee9d3efb69eed3f0aaa9bf497969c5bf9dbcffa25baf2e1d9af02",
+      "status": "matched"
+    },
+    {
+      "manifest": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json",
+      "field": "market_rebuild_source_digests",
+      "path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.0.json",
+      "resolved_path": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.0.json",
+      "expected": "sha256:74b59a6ecfb83f705ec8ebd46d7258c69ba49b3d9b7994a7c51cfe5de140272e",
+      "status": "matched"
+    }
+  ],
+  "daily_2023_2024": [
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/01.parquet",
+      "digest": "sha256:a5072d5a4d4c8e8e8b47fcc6a0031b2275dccdd2c6d12e08cb1eba769c24ff8c",
+      "rows": 78685,
+      "date_min": "2023-01-03 00:00:00",
+      "date_max": "2023-01-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/02.parquet",
+      "digest": "sha256:93103fb1828344ba65ff2e20622bc7db6d6237d951f2557079afb16ffe57caa1",
+      "rows": 98757,
+      "date_min": "2023-02-01 00:00:00",
+      "date_max": "2023-02-28 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/03.parquet",
+      "digest": "sha256:9e31c39b2544cee86795c9caddb5a6cb72833864343274f2e3c8a9a03d5661a7",
+      "rows": 114335,
+      "date_min": "2023-03-01 00:00:00",
+      "date_max": "2023-03-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/04.parquet",
+      "digest": "sha256:94f4b8a2e979a6ef7f77b731b93cd13c023d9202ae74baf9317ebe3fc5ad8963",
+      "rows": 95105,
+      "date_min": "2023-04-03 00:00:00",
+      "date_max": "2023-04-28 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/05.parquet",
+      "digest": "sha256:90afe716c7a4083700e3d04f71a72fb894bbc01f8ea595f9371c805faf8373c3",
+      "rows": 100621,
+      "date_min": "2023-05-04 00:00:00",
+      "date_max": "2023-05-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/06.parquet",
+      "digest": "sha256:dcc0d0fd39660dfaa0e1c34dfda21dd34e4f9edca52424faef56160d655f6f4d",
+      "rows": 101277,
+      "date_min": "2023-06-01 00:00:00",
+      "date_max": "2023-06-30 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/07.parquet",
+      "digest": "sha256:6d0f18c0ebc52b25d26bba3b223e6de39e456be540f2bd25f9252b9f8c6fc440",
+      "rows": 107298,
+      "date_min": "2023-07-03 00:00:00",
+      "date_max": "2023-07-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/08.parquet",
+      "digest": "sha256:a56de7417c2b73dc9b888448b47121c53939421a175fd30790db0a28783d471b",
+      "rows": 118385,
+      "date_min": "2023-08-01 00:00:00",
+      "date_max": "2023-08-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/09.parquet",
+      "digest": "sha256:f1cea6277e7d7b89a9f9ada1094795c42d54f6fa01b0d81e40a460eed7a0bcf6",
+      "rows": 103432,
+      "date_min": "2023-09-01 00:00:00",
+      "date_max": "2023-09-28 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/10.parquet",
+      "digest": "sha256:5be8614e06619089a80c98b03a1919b93523e28c4d569ce82eb2b62027aa3347",
+      "rows": 88169,
+      "date_min": "2023-10-09 00:00:00",
+      "date_max": "2023-10-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/11.parquet",
+      "digest": "sha256:df248ff69cfdef11891293e36365ce57460216bda112a54614e218b9308ebfde",
+      "rows": 114452,
+      "date_min": "2023-11-01 00:00:00",
+      "date_max": "2023-11-30 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2023/12.parquet",
+      "digest": "sha256:3840ccfab4cd1730da33cee49893e1f96d03a2ec387ff0ff3228e4072cb06706",
+      "rows": 109599,
+      "date_min": "2023-12-01 00:00:00",
+      "date_max": "2023-12-29 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/01.parquet",
+      "digest": "sha256:8b28c2b5520dd067441b79d2f9682ec6639a955fe19960c1861bfd2bab13c2ab",
+      "rows": 115235,
+      "date_min": "2024-01-02 00:00:00",
+      "date_max": "2024-01-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/02.parquet",
+      "digest": "sha256:40701532f706215954f21ab494d4be4048e743f3e7397e9a940b4b1169d51bb8",
+      "rows": 78753,
+      "date_min": "2024-02-01 00:00:00",
+      "date_max": "2024-02-29 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/03.parquet",
+      "digest": "sha256:428ce31d0ca6bd7147dd479198162b5f6d364cce47783d377976b403899b1405",
+      "rows": 110360,
+      "date_min": "2024-03-01 00:00:00",
+      "date_max": "2024-03-29 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/04.parquet",
+      "digest": "sha256:5b1464a5f4437c97a985eee2dcd3711fe790e263313930eaad8f21866c07533c",
+      "rows": 105257,
+      "date_min": "2024-04-01 00:00:00",
+      "date_max": "2024-04-30 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/05.parquet",
+      "digest": "sha256:cf288290046449e0773d6df11d1816b8266294ce2c4c51d9a062274991eab09b",
+      "rows": 105350,
+      "date_min": "2024-05-06 00:00:00",
+      "date_max": "2024-05-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/06.parquet",
+      "digest": "sha256:d0e3c920c43e4161a023ce7debe6cfe45cd825b8ac025144ead3b0ad3d4bf44c",
+      "rows": 100169,
+      "date_min": "2024-06-03 00:00:00",
+      "date_max": "2024-06-28 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/07.parquet",
+      "digest": "sha256:bc5e1f8390055fb13d8470171646783e4f5725a5334487da8210d79f3e77db96",
+      "rows": 121396,
+      "date_min": "2024-07-01 00:00:00",
+      "date_max": "2024-07-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/08.parquet",
+      "digest": "sha256:c6665c21b26fe68721bec9cd2d913dc84023c403444c621bafbf48288362d3c7",
+      "rows": 116278,
+      "date_min": "2024-08-01 00:00:00",
+      "date_max": "2024-08-30 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/09.parquet",
+      "digest": "sha256:a1ab0901bceac2063ff25939e62f369927d715ea894509e76a54c061c4e516a3",
+      "rows": 100556,
+      "date_min": "2024-09-02 00:00:00",
+      "date_max": "2024-09-30 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/10.parquet",
+      "digest": "sha256:abd03434f970b11b87800846bd3cd8b20d805c1015d78096fe3c0ce0c975bb82",
+      "rows": 95350,
+      "date_min": "2024-10-08 00:00:00",
+      "date_max": "2024-10-31 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/11.parquet",
+      "digest": "sha256:109d4357c1f12960e2046ff18afcea52de207e01e8f03fc33d6c2fc908aa37b8",
+      "rows": 111407,
+      "date_min": "2024-11-01 00:00:00",
+      "date_max": "2024-11-29 00:00:00"
+    },
+    {
+      "path": "data/development/cn_a_qfq_daily/year=2024/12.parquet",
+      "digest": "sha256:9af94c3d3625b059c58f69ada0555179faccc8423f560f5db01d80c61d13cb2a",
+      "rows": 116965,
+      "date_min": "2024-12-02 00:00:00",
+      "date_max": "2024-12-31 00:00:00"
+    }
+  ],
+  "upstream_inventory": [
+    {
+      "suffix": "ot1/stock_residual_surfaces.npz",
+      "matches": []
+    },
+    {
+      "suffix": "ot1/d5_stock_exposures.parquet",
+      "matches": []
+    },
+    {
+      "suffix": "ot1/d5_stock_industry_exposures.parquet",
+      "matches": []
+    },
+    {
+      "suffix": "ot2/selected_factor_states.parquet",
+      "matches": []
+    },
+    {
+      "suffix": "entry_open_1430.npy",
+      "matches": []
+    },
+    {
+      "suffix": "entry_open_1445.npy",
+      "matches": []
+    }
+  ],
+  "declared_upstream_manifest_digests": {
+    "P6_2_acceptance_digest": "sha256:0dc8964fe42b4a22d9a9304d790e4c8f71fb62f6e44651de7df1ad4b6ef265cd",
+    "P6_1_manifests": {
+      "formal": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+      "isolated": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f"
+    },
+    "P6_2_manifests": {
+      "formal_1430_ot1": "sha256:e564d6dc818de9891eb7a8d83cd1fe62bb1490995857b5cb31518d6067970558",
+      "formal_1430_ot2": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a",
+      "formal_1430_ot3": "sha256:86d40e3cb1fd306800f27b81c1a2a24654dd8efa52672183fa6e366e936a83fa",
+      "formal_1445_ot1": "sha256:abcdaca494be21418798caef71d6b50a02e77fdf361f49b0210224e96b5855c2",
+      "formal_1445_ot2": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b",
+      "formal_1445_ot3": "sha256:7f6324a337a78440d8d2a21aba8cc41a442e2c45bf4bac955eff8cdc3c77d348",
+      "isolated_1430_ot1": "sha256:e564d6dc818de9891eb7a8d83cd1fe62bb1490995857b5cb31518d6067970558",
+      "isolated_1430_ot2": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a",
+      "isolated_1430_ot3": "sha256:86d40e3cb1fd306800f27b81c1a2a24654dd8efa52672183fa6e366e936a83fa",
+      "isolated_1445_ot1": "sha256:abcdaca494be21418798caef71d6b50a02e77fdf361f49b0210224e96b5855c2",
+      "isolated_1445_ot2": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b",
+      "isolated_1445_ot3": "sha256:7f6324a337a78440d8d2a21aba8cc41a442e2c45bf4bac955eff8cdc3c77d348"
+    }
+  },
+  "restorations": [
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1430.parquet",
+      "parts": 18,
+      "bytes": 149018552,
+      "digest": "sha256:6652efb41bb9a0748c6c5b20b23f6f0a674ac21ed3ccc42a92ee6971cbec138c"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1445.parquet",
+      "parts": 18,
+      "bytes": 149033417,
+      "digest": "sha256:25f7f5e812d6e3e17e05e281b905f4ab219bca2cb06b9b4eb4711cd073bc96d2"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_history.npy",
+      "parts": 7,
+      "bytes": 54250896,
+      "digest": "sha256:a84ce2e177915542857ce8842bffb3ebc60ef937430fbc6dad90960b083b8a19"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_future.npy",
+      "parts": 7,
+      "bytes": 54250896,
+      "digest": "sha256:83018e8b0bdf61a37d61ef5a43dac0a25cd26833af53da62590e39d4b1344953"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/stock_factor_exposures.npy",
+      "parts": 16,
+      "bytes": 130227456,
+      "digest": "sha256:28c3a6f5ef0304e18ec6db4f43b2a2baa7cedf5781a00a9541ea0ff6febba4b6"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_reliability.npy",
+      "parts": 16,
+      "bytes": 130227456,
+      "digest": "sha256:56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_available.npy",
+      "parts": 4,
+      "bytes": 32556960,
+      "digest": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/inference_rows.npy",
+      "parts": 4,
+      "bytes": 27319552,
+      "digest": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_history.npy",
+      "parts": 7,
+      "bytes": 54250896,
+      "digest": "sha256:da866ef0e967d8289f08872b797d16473081488f6352fc213848e2b3ff235bac"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_future.npy",
+      "parts": 7,
+      "bytes": 54250896,
+      "digest": "sha256:109e39090aaee744679ed12e176e48ec534583b99269ac2f1a24d8f3d9edc90a"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/stock_factor_exposures.npy",
+      "parts": 16,
+      "bytes": 130227456,
+      "digest": "sha256:d4bf3d17869a7564231f76ab55fd8687d5d7e6c89c57cc9a6492d07da745b38c"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_reliability.npy",
+      "parts": 16,
+      "bytes": 130227456,
+      "digest": "sha256:603bf38ebe0562b829001ddd9b3009313a2914a65b4e8e61525501e20f956b0c"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_available.npy",
+      "parts": 4,
+      "bytes": 32556960,
+      "digest": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97"
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/inference_rows.npy",
+      "parts": 4,
+      "bytes": 27319552,
+      "digest": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6"
+    }
+  ],
+  "verified_file_digests": {
+    "data/development/cn_a_qfq_daily/year=2023/01.parquet": "sha256:a5072d5a4d4c8e8e8b47fcc6a0031b2275dccdd2c6d12e08cb1eba769c24ff8c",
+    "data/development/cn_a_qfq_daily/year=2023/02.parquet": "sha256:93103fb1828344ba65ff2e20622bc7db6d6237d951f2557079afb16ffe57caa1",
+    "data/development/cn_a_qfq_daily/year=2023/03.parquet": "sha256:9e31c39b2544cee86795c9caddb5a6cb72833864343274f2e3c8a9a03d5661a7",
+    "data/development/cn_a_qfq_daily/year=2023/04.parquet": "sha256:94f4b8a2e979a6ef7f77b731b93cd13c023d9202ae74baf9317ebe3fc5ad8963",
+    "data/development/cn_a_qfq_daily/year=2023/05.parquet": "sha256:90afe716c7a4083700e3d04f71a72fb894bbc01f8ea595f9371c805faf8373c3",
+    "data/development/cn_a_qfq_daily/year=2023/06.parquet": "sha256:dcc0d0fd39660dfaa0e1c34dfda21dd34e4f9edca52424faef56160d655f6f4d",
+    "data/development/cn_a_qfq_daily/year=2023/07.parquet": "sha256:6d0f18c0ebc52b25d26bba3b223e6de39e456be540f2bd25f9252b9f8c6fc440",
+    "data/development/cn_a_qfq_daily/year=2023/08.parquet": "sha256:a56de7417c2b73dc9b888448b47121c53939421a175fd30790db0a28783d471b",
+    "data/development/cn_a_qfq_daily/year=2023/09.parquet": "sha256:f1cea6277e7d7b89a9f9ada1094795c42d54f6fa01b0d81e40a460eed7a0bcf6",
+    "data/development/cn_a_qfq_daily/year=2023/10.parquet": "sha256:5be8614e06619089a80c98b03a1919b93523e28c4d569ce82eb2b62027aa3347",
+    "data/development/cn_a_qfq_daily/year=2023/11.parquet": "sha256:df248ff69cfdef11891293e36365ce57460216bda112a54614e218b9308ebfde",
+    "data/development/cn_a_qfq_daily/year=2023/12.parquet": "sha256:3840ccfab4cd1730da33cee49893e1f96d03a2ec387ff0ff3228e4072cb06706",
+    "data/development/cn_a_qfq_daily/year=2024/01.parquet": "sha256:8b28c2b5520dd067441b79d2f9682ec6639a955fe19960c1861bfd2bab13c2ab",
+    "data/development/cn_a_qfq_daily/year=2024/02.parquet": "sha256:40701532f706215954f21ab494d4be4048e743f3e7397e9a940b4b1169d51bb8",
+    "data/development/cn_a_qfq_daily/year=2024/03.parquet": "sha256:428ce31d0ca6bd7147dd479198162b5f6d364cce47783d377976b403899b1405",
+    "data/development/cn_a_qfq_daily/year=2024/04.parquet": "sha256:5b1464a5f4437c97a985eee2dcd3711fe790e263313930eaad8f21866c07533c",
+    "data/development/cn_a_qfq_daily/year=2024/05.parquet": "sha256:cf288290046449e0773d6df11d1816b8266294ce2c4c51d9a062274991eab09b",
+    "data/development/cn_a_qfq_daily/year=2024/06.parquet": "sha256:d0e3c920c43e4161a023ce7debe6cfe45cd825b8ac025144ead3b0ad3d4bf44c",
+    "data/development/cn_a_qfq_daily/year=2024/07.parquet": "sha256:bc5e1f8390055fb13d8470171646783e4f5725a5334487da8210d79f3e77db96",
+    "data/development/cn_a_qfq_daily/year=2024/08.parquet": "sha256:c6665c21b26fe68721bec9cd2d913dc84023c403444c621bafbf48288362d3c7",
+    "data/development/cn_a_qfq_daily/year=2024/09.parquet": "sha256:a1ab0901bceac2063ff25939e62f369927d715ea894509e76a54c061c4e516a3",
+    "data/development/cn_a_qfq_daily/year=2024/10.parquet": "sha256:abd03434f970b11b87800846bd3cd8b20d805c1015d78096fe3c0ce0c975bb82",
+    "data/development/cn_a_qfq_daily/year=2024/11.parquet": "sha256:109d4357c1f12960e2046ff18afcea52de207e01e8f03fc33d6c2fc908aa37b8",
+    "data/development/cn_a_qfq_daily/year=2024/12.parquet": "sha256:9af94c3d3625b059c58f69ada0555179faccc8423f560f5db01d80c61d13cb2a",
+    "data/manifest.json": "sha256:6c5920ce7c43e8b01ce537bf55a964fc450781384c7a0d28b553f17094bf1da5",
+    "docs/ops/evidence/r1_datahub_history_copies/path_map.json": "sha256:344816d2a990097789b464259126f963a28b3ab1ce7884d3e97d23b5a3f9a9c0",
+    "docs/ops/evidence/r1_datahub_history_copies/security_day_metadata_000638_pit_repair_20260901/validation_report.json": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a",
+    "docs/ops/evidence/r1_datahub_history_copies/xdxr_000638_incremental_repair_20260901/validation_report.json": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+    "docs/ops/evidence/r1_original_source_snapshots/manifest.json": "sha256:b61ec29158f3a3dc05be431a4bf50c81880fbd545c729f6dd8c129ff35850cd9",
+    "docs/ops/evidence/r1_original_source_snapshots/reaka_paper_v1.py": "sha256:0c18e9497cca6816dec36651cc636b2c3a8ce0968a2e576e50a4f9fe2452e914",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_3_pnl_segmentation_incident.json": "sha256:69a61bd42fa3d33d1922e009f0cde88e9a96d3136534fb8b0bb38c632fd58cd0",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_4_packaging_incident.json": "sha256:9e48b3caea81d376bd43f1379e48d6fa2341dc02e6cf0c364d8a67d7b048d41b",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_trade_cost_allocation_incident.json": "sha256:52087b9baf1ea401675aee52cb58741835384c3469b560db11e37b41eb3a4370",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_1_source_closure_incident.json": "sha256:73f10613e68933d3f025434321afd060192e2bab680184cad2e8215ad6c9be1f",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_2_trade_leg_identity_incident.json": "sha256:eee80d7dd52b37aa115a860b62fcc1b7cabcd0dedfacb6380b5e7ff6e7003a23",
+    "docs/ops/evidence/reaka_intraday_K1_preflight_v1_20260831/preflight/1430/normalizer.json": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+    "docs/ops/evidence/reaka_intraday_K1_preflight_v1_20260831/preflight/1445/normalizer.json": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_inputs_v1_20260901/validation_report.json": "sha256:23278ce0a240072daa49021fb716afed848a63821947b25f78457ed23f002053",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_000638_HFQ_coverage_incident.json": "sha256:69fa81385d03f44c4d2502fb1e43daff1702b6ba1a5d19b40e39223c50450b9c",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_HFQ_source_label_incident.json": "sha256:2669c8c191031d392f5a3e0b7603a5cb7f05b51878e121cc32e32f6866a92cda",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_XDXR_suspended_event_date_incident.json": "sha256:539cec7529615b0ef4301b8218f7fc9edf46ba3c1a87c43856af5fc19fff94ae",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_entrypoint_import_incident.json": "sha256:07bb4c623ba0b9e569695bb027d56dd49ef81613702aa0cb3bca67c3085cc2e6",
+    "docs/ops/post_training_account_audit@1.1.json": "sha256:a533e16381aaafc720f7237473932075f1e50f04f60b923e7d3f0e359777f252",
+    "docs/ops/reaka_current_k1_account_ledgers@1.0.json": "sha256:3fadcd7f701c23b6a9f3897014b3419b8b86585bf9a1c88ff1c7ab65f2740e9c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.1.json": "sha256:061140a5c7f9aa463ff31a991f487094cd15479b7d83bf2bc9a734bdf9a8fc4c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.2.json": "sha256:dbe7675fea9a6dbf7617b4055b879fc9888e4ba42f3d7f1a60bbf8434aabdb5c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.3.json": "sha256:d661a764872cb4bd9cceab52e30f1185c53d1f42a978b23c23c07026cc2e1204",
+    "docs/ops/reaka_current_k1_account_ledgers@1.4.json": "sha256:91a8e60d99ba2cf74bdfe640ee71e8c5cd1c0d7cce8913be418d9fa689b2cb67",
+    "docs/ops/reaka_current_k1_account_ledgers@1.5.json": "sha256:a14aa00543b20def88bbb3f67e415f8ec6f5badd57b5d509d08e71a4fcb0bac7",
+    "docs/ops/reaka_current_k1_account_ledgers_whitepaper.md": "sha256:54fd7921ab6bc1a5052a91d2016af58afc954a91d52ca79a9a71b899b82b1f84",
+    "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json": "sha256:7ae5b0821a10368237cdae9911153b69c39b08cfd5875a6fb2b3acb587330ece",
+    "docs/ops/reaka_intraday_K1_fit_prefix_successor_whitepaper.md": "sha256:05d54af4d236c261ba97d293c2025586ad2616121f8d98005a7caad17c4fabcf",
+    "docs/ops/reaka_intraday_K1_preflight@1.0.json": "sha256:8e108eedf8a6f74ca598cc8bcc29db52256c2559915709ee31e0cbf3d0aa9992",
+    "docs/ops/reaka_intraday_K1_preflight_whitepaper.md": "sha256:83c7bcd96a09218d484608cfecb3b0e3d3c582be995dd6291de5e0ee7c4ff040",
+    "docs/ops/reaka_intraday_portfolio_mapping@1.0.json": "sha256:2b58e2e930450222ae6d338546cf3595c75a118bab05fcf4cdd60dfbb67bf155",
+    "docs/ops/reaka_intraday_portfolio_mapping@1.1.json": "sha256:7854c2e97c2fbf641b99003ae4f6515dc2fb459018e2f8f3e7702a5863e14be2",
+    "docs/ops/reaka_intraday_portfolio_mapping@1.2.json": "sha256:180f29bd18d62763571bf281d8af1b9e9051d7665a4527d417523e13638d6544",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.0.json": "sha256:74b59a6ecfb83f705ec8ebd46d7258c69ba49b3d9b7994a7c51cfe5de140272e",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.1.json": "sha256:e5cb931f7c9ee9d3efb69eed3f0aaa9bf497969c5bf9dbcffa25baf2e1d9af02",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.2.json": "sha256:77065f9794294be9aea8b04ec1a9665f82a8f622b4052dbb0d51e92f0fdf4b34",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.3.json": "sha256:76f265eec276d778a7dbeb09ba14b9371dfda5207f16687be754f8e9ff2a3999",
+    "docs/ops/reaka_intraday_portfolio_mapping_whitepaper.md": "sha256:74d23a5e06f1c2bcc72616e480be1f5036ebf0e19c5337c636e472324ea6fe43",
+    "docs/user/reaka_current_k1_account_ledgers_workflow.md": "sha256:cbc268a99d9bfcece5a8c64aac3aafded6b14acef316be69c594354666875aa2",
+    "docs/user/reaka_intraday_K1_fit_prefix_successor_workflow.md": "sha256:0ebdce31324494b08cbecce6d4243bb191a05c51211d221c64ee69488bcc074a",
+    "docs/user/reaka_intraday_portfolio_mapping_workflow.md": "sha256:fe03f058df6143033b4dcf44d827625927935620f14ac4e425fd3a4234893e54",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/manifest.json": "sha256:b0d0d4e5e3966d750606ea35e22e60fc6de294ef6cb9b1a9b383c1259bdc96e1",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_000.npy": "sha256:0605d192bfd9429d504673895d4c87f7e5bc5539184c7007048873391b3caa42",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_001.npy": "sha256:19a01395d4d40706b5ed13c1febb9557559c4e7fd8a0103ad482170222e8bb1d",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_002.npy": "sha256:02249b4d4ef6a950cb827c0359d19c682739eda8dc9f1ad6e52746c9c93da0ec",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_003.npy": "sha256:f231a6d989efb841f42e4bed792116922ecbb5ea14f76cd72b66dcec9065079d",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_004.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_005.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_006.npy": "sha256:c6f1801eff28af84c06e6d4c5e86b3223df03170ad2cd593df79e8377c9f6a28",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_007.npy": "sha256:37ab23aa9791b01db47871c864349713734f377e5f3d4388ef7d190faa576bfd",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_008.npy": "sha256:37ab23aa9791b01db47871c864349713734f377e5f3d4388ef7d190faa576bfd",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_009.npy": "sha256:cadb0bcc667bfde63dc7445b0367d90853bcf530854520af7cb6796ccc77bb04",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_010.npy": "sha256:df1988d56d95f8a441e52745d93a562d083061d546a73921e76ba70782378e87",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_011.npy": "sha256:08cd67ebacb98593a0cc2430941d64a6667db2f550c9733c98573b8a034940a4",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_012.npy": "sha256:94a126c328981d9eb216c10e3a3f32b468bc8aad2b3d232bac5de6452b9a3158",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_013.npy": "sha256:63fe38b59e8de7c3e58b47ba50eb89eadba09c833f79bb98db5247f361756ad0",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_014.npy": "sha256:5ddab482c1b7027f3701533815968177d302390aac4d74cf959edcfa2a0cba9a",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_015.npy": "sha256:a4e6fde280e12a4417e374dca432fea2ec85a75b70b4afeca195bea77eb7b952",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_016.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_017.npy": "sha256:8c5d68efb6cddc7fdd4763cf05ab5fd96303dae884c9b77e77e80a2cec135902",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_018.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_019.npy": "sha256:a3335d4021165f974c8fda39c0a1794410b0143804f6ad181382ffd85e844527",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_020.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_021.npy": "sha256:7fdbbacf245adeab27f3d17c939e32cc68fe5c4349da6ba1e4d16164f18cf038",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_022.npy": "sha256:503852c55c829b1b61eb063c491843d28e99c09471800c9b956ed0041f1a3fb1",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_023.npy": "sha256:d45c8811a0fbdb637c8e2947b6b89a3f14107b0ba4752c4eb5acfd489e500565",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_024.npy": "sha256:d45c8811a0fbdb637c8e2947b6b89a3f14107b0ba4752c4eb5acfd489e500565",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_025.npy": "sha256:3f70ac0ef985a2a78ca86330ebc56a61306c7c5516e8568b3a507364234b88ab",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_026.npy": "sha256:5c4a77c555d90c37e0b263c303fa16047f80e94286c524407f7fa6950158ae29",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_027.npy": "sha256:95b1fc3071e0e314a086f3cd8f2ff82c9ea41cf690921dfdb2b9e73c8901e01f",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_11/tensor_028.npy": "sha256:5bac9503fd856d290845c306c0f3d9bde8a6cec19e5c3fd10e1b0ea0320f0ad5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/manifest.json": "sha256:a9bbc5047f592bdd19f7968b0dc740b224885e3a1ee6286c1369af1429044bac",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_000.npy": "sha256:c6f7e4242fcc1e71ae485d9c52664a56261e83a49a72ed02576b065608bf03da",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_001.npy": "sha256:6bae0ee323c436bd8b8fba215eb66141b8e95705b7881198b99541fab99522a1",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_002.npy": "sha256:afba7064bd42d20f607c5f937df7721e9742b359b0ebda2fa66d26b96333fee5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_003.npy": "sha256:352f0fd1714daea6f85df6683dc2eb4ac6103805519e65cdb5594d1c1887024b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_004.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_005.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_006.npy": "sha256:c6f1801eff28af84c06e6d4c5e86b3223df03170ad2cd593df79e8377c9f6a28",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_007.npy": "sha256:ffdfb7d8b61bb3449f54639cb7fd4094794bd3eca6531846acad8e5d9d4129a5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_008.npy": "sha256:ffdfb7d8b61bb3449f54639cb7fd4094794bd3eca6531846acad8e5d9d4129a5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_009.npy": "sha256:1178eb3b231c317e0f261b5dafc0d5dcc7d0461160b7e4110d4abc8d76e7b197",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_010.npy": "sha256:f0b2eee6ba4c1bba56fea9311598dcad2cd19885808c5d2f561f900d59e4fd20",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_011.npy": "sha256:0066ff936e3cdbacf41ea21a260b247e21ac53b97971257406299f28db7fe3d3",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_012.npy": "sha256:b5a4ae71b69e1b148d75ab4493f5245b44879879ef6f397b31a267a977e3c747",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_013.npy": "sha256:fa3c07f000ae74821bd8c0d8365374162451912ce36f2eadae82f88a72b46138",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_014.npy": "sha256:f7e0ef8703530ecbd632bb30da7efa2c3406164953af59b3b6895ae04697044c",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_015.npy": "sha256:e3f6463b5c5beb1de2c02bedaa3cc017563b0a99c6b78f1a29fb0ebb74d41173",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_016.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_017.npy": "sha256:26a2e0a4ae847edb2a2c788c75262e0aca207c0ed5fdef978f5caf01a085264c",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_018.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_019.npy": "sha256:985a5161042f32d7f25b7b00a72d2969d5e916ef9a2cdefadc25dfa83bceeac9",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_020.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_021.npy": "sha256:c7479fedac9a1942dca37afbe1cbcb27b4f4ba77fcf150723cae5f28a265d2c5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_022.npy": "sha256:ed7a703550bfe652d1f27ef918754bb8b6532f96959940a761f3565895f62992",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_023.npy": "sha256:ab3c5da5051e9e1c99c6b894d55592085c0125b45c625d34ce85c1ebddd4ea06",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_024.npy": "sha256:ab3c5da5051e9e1c99c6b894d55592085c0125b45c625d34ce85c1ebddd4ea06",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_025.npy": "sha256:5391b14025a50f5694bb9c10129f9c6072206d63ab016bc0f5a6b49b3781c001",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_026.npy": "sha256:d7f7e0f89a61c6f423c58bc65f7570dfaf6bca17b6a6d668d0fc2aa6f405354e",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_027.npy": "sha256:95b1fc3071e0e314a086f3cd8f2ff82c9ea41cf690921dfdb2b9e73c8901e01f",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_29/tensor_028.npy": "sha256:a3cb45ef2678406e00181f820052fc65e3155cca0935e7713ed165afcad5dabe",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/manifest.json": "sha256:c494ce3859ec2625bffa8daf8d83caea1cf7f9f8834b31a94c1200f064a699c4",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_000.npy": "sha256:798ed0d00a25e033b8a485f598591b3f36c027f7e4e1909f408d72e78ba6bf01",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_001.npy": "sha256:ef36bdd583bb683ad12f416cea624e15718d88a9fb3e0c3b082a92bef6c5f2ec",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_002.npy": "sha256:4d11f86e95a15962e4a4c1ff7b2e7938eecd316f1c42244d6e31ab1fb22d5f55",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_003.npy": "sha256:11c830e383801015b083f52560809e8b0a61ffdd92c806d1f40cbf484c1eead0",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_004.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_005.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_006.npy": "sha256:c6f1801eff28af84c06e6d4c5e86b3223df03170ad2cd593df79e8377c9f6a28",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_007.npy": "sha256:edd1a04e1721e412b7e65773892972e6b2afda956bbc6976cc95a90b131b1e59",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_008.npy": "sha256:edd1a04e1721e412b7e65773892972e6b2afda956bbc6976cc95a90b131b1e59",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_009.npy": "sha256:ceeca1271320fa30d311051307833b8f58e46c7d8757bb843604dba92e408406",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_010.npy": "sha256:738aeac820adf47f3aef95b61402143073a60b0afc863b477cf38bc5b8101c33",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_011.npy": "sha256:60a62eda1aa79203062b24fad98bf7ad386d664dd0e8d3191da36ecad8b75db5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_012.npy": "sha256:c910a4add00790722e95472b5b3178028adb46ac4c095424d94fb175c2d1f592",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_013.npy": "sha256:56db6845708fb992abf5b0c00070919f45f74b896c5c38ecc9a4bc6d9896e43b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_014.npy": "sha256:475ef3e65e65b4067a531a86830f6c13990e41895102d908f321881a92895775",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_015.npy": "sha256:a59c66979b2fa26650d05da9a99dd5aed01e02f39d714ad141f7a5f392b74809",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_016.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_017.npy": "sha256:e87b12e20e331ae4725830d095a038014c6f9579a9f028d278172697476aea26",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_018.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_019.npy": "sha256:6219bb675512a1a7d589cb2df6482d2e08313fae0175b21e6c7a0edba392d3ea",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_020.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_021.npy": "sha256:6fc6ba3573988d5577e7e41e5b18495744eb5dcf8b7496ee9f4a64ed1c13284e",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_022.npy": "sha256:1593ca37e76b112835049fa651ca494afe959523ab06842c03cf2b19c11ccb87",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_023.npy": "sha256:556051e1e5d1604d060de8ba9a48725a193fa09b1bb70cd77261dce8762b0224",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_024.npy": "sha256:556051e1e5d1604d060de8ba9a48725a193fa09b1bb70cd77261dce8762b0224",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_025.npy": "sha256:e6dacd7ef8f0a1406796dfb60721b671456f5f73bec57331175a5811e25ee7e6",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_026.npy": "sha256:fd629fdc641ce53f7a25587d3a677404bf68a4412f6c4ab6cc17dd3f2bc31063",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_027.npy": "sha256:95b1fc3071e0e314a086f3cd8f2ff82c9ea41cf690921dfdb2b9e73c8901e01f",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/checkpoints/seed_47/tensor_028.npy": "sha256:1cc2a425f8bb187cbae466afa6b3f1c6365117b3bf2651e431d80baa39a16b5e",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/formal.json": "sha256:e7a492d8312c97dc4868ec69230dec607f2fc48254a279a2c287a2f98af0f8a7",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/review_scores_seed_11.npy": "sha256:c6c2be58c83bef2d99b58274891c71f3b72c0dd54f3f1be45fe2321ac4a2112b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/review_scores_seed_29.npy": "sha256:9ad86c4f3fdbf99f2540c4047b6cc048f261e251d50597951d111cd2d0d0a47c",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/review_scores_seed_47.npy": "sha256:a29ca795b66b80f0ef626076b0e4fbcce49ae6ccc48c5b3d877a53bdbf12e5fa",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/manifest.json": "sha256:ca0d94a46e06467b6f808117ef3bc040f48f3dcdec6cd24baee010e2022021e1",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_000.npy": "sha256:72c6b1af0368bb5cb120aabf0c483d9951abf0ee5271f12a0d87c421b32c3524",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_001.npy": "sha256:c84b7c815f8e7c4f0490323b83a7b41723b7af31eb9367b9a0882c87f9e86783",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_002.npy": "sha256:ae77326d2cfa0044eaf564845c41da5889264831307df195189b33b7283382ec",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_003.npy": "sha256:53df1c1dfc018f9bbb6b8be0d182a2adb0077233f54fcc44a76bbdff1f194a88",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_004.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_005.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_006.npy": "sha256:c6f1801eff28af84c06e6d4c5e86b3223df03170ad2cd593df79e8377c9f6a28",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_007.npy": "sha256:862b89c9f2b56d44f947cc9943c804009cfb8272016b8645f847643d1506d409",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_008.npy": "sha256:862b89c9f2b56d44f947cc9943c804009cfb8272016b8645f847643d1506d409",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_009.npy": "sha256:f0340291b64039bf0660031a8a303bda2379b5f318956205bc344d43c3bf90cf",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_010.npy": "sha256:91fba540972d3ae0236731984bc70cd2945970f6d28495e76c378c1e202c2f36",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_011.npy": "sha256:e64bf849c41497d651b9c124020a6d58d59ddfc9cb8ddcdf91dbcb97c46f7018",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_012.npy": "sha256:0dd28714340ee3d972d2cdda9e08aa29bcdcbc0cb87e4980e39d61368518d8ab",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_013.npy": "sha256:29c8beeb0ef448d992a05af9a39bed3bb4efebb5500e6b45adab498a31d87874",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_014.npy": "sha256:c87a362bcb981aac781e853d19570b06a0ac15fe158fc97f6489d227cfc986e2",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_015.npy": "sha256:4ed609989db92e340b5b45cdf72d8837e3e8e47844f2b4ce9c7fea8938b50cfd",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_016.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_017.npy": "sha256:8c5d68efb6cddc7fdd4763cf05ab5fd96303dae884c9b77e77e80a2cec135902",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_018.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_019.npy": "sha256:a3335d4021165f974c8fda39c0a1794410b0143804f6ad181382ffd85e844527",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_020.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_021.npy": "sha256:7fdbbacf245adeab27f3d17c939e32cc68fe5c4349da6ba1e4d16164f18cf038",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_022.npy": "sha256:503852c55c829b1b61eb063c491843d28e99c09471800c9b956ed0041f1a3fb1",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_023.npy": "sha256:0e7385bc66f813cacb1b5e721c15c3656dc9cbef27fc558c5f1ed02496e94978",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_024.npy": "sha256:0e7385bc66f813cacb1b5e721c15c3656dc9cbef27fc558c5f1ed02496e94978",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_025.npy": "sha256:11e6f637ab2a79a2d0c2ca44eb6ee4ae53a2eea6128b01fc8d9e4608f7bdf4c4",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_026.npy": "sha256:77df5561761f399cec5d6cf97ba85dbb70a99b6019213f0af418713ff8eece4d",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_027.npy": "sha256:95b1fc3071e0e314a086f3cd8f2ff82c9ea41cf690921dfdb2b9e73c8901e01f",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_11/tensor_028.npy": "sha256:5bac9503fd856d290845c306c0f3d9bde8a6cec19e5c3fd10e1b0ea0320f0ad5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/manifest.json": "sha256:d17b0eeea13bbd6b866169d3221a13648c30a1209a71db8b0e41a2e1df50664b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_000.npy": "sha256:3325b15930313a3ea0be7ceedf4492d4eab2b4006564cfa34ad2ede1ec863f85",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_001.npy": "sha256:1920151b00284974dcf2f14fba8d71d566b39f9e8b08c193ca93224c5414c910",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_002.npy": "sha256:7c217b1104b1ac3c0d8f684cad18f8e520338b116d94ef163cf8ec8696463384",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_003.npy": "sha256:f8c950c255816b66e0996a547932570b9a7adefd8e6b1fc6a62749b86bb13fd9",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_004.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_005.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_006.npy": "sha256:c6f1801eff28af84c06e6d4c5e86b3223df03170ad2cd593df79e8377c9f6a28",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_007.npy": "sha256:507582da164a531b520c9c28d66d35e789ae9312f7cb9ebe6dc84884a996a2de",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_008.npy": "sha256:507582da164a531b520c9c28d66d35e789ae9312f7cb9ebe6dc84884a996a2de",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_009.npy": "sha256:afe828ea55a3e768d3b391fdb3e59f3657011d7d5c2b340eaf43c8e46747c81e",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_010.npy": "sha256:8087cf6385b88e7fa65d08654b447f45526695f19653309a4c7e98b987c5b406",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_011.npy": "sha256:eb2d5c8873bf2c018fec7b1d9a6a7147de773b56713ef427049481a5fdf2f985",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_012.npy": "sha256:8460def81f7ec5103bb67413537ad29870791576eacc75684d7f7d27cac17341",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_013.npy": "sha256:7b99f5a81914c69f42d90022c9d966e159fba36398eba4d7b312b83021bd13fb",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_014.npy": "sha256:ddeac9a797ba0455316974026e92d5ab95f95586ddf82b74abccdaf3d8d038cc",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_015.npy": "sha256:3d3ad1a59b4325996548364da3e22e2aae1538d81f595e4482ee2e93a206b601",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_016.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_017.npy": "sha256:26a2e0a4ae847edb2a2c788c75262e0aca207c0ed5fdef978f5caf01a085264c",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_018.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_019.npy": "sha256:985a5161042f32d7f25b7b00a72d2969d5e916ef9a2cdefadc25dfa83bceeac9",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_020.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_021.npy": "sha256:c7479fedac9a1942dca37afbe1cbcb27b4f4ba77fcf150723cae5f28a265d2c5",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_022.npy": "sha256:ed7a703550bfe652d1f27ef918754bb8b6532f96959940a761f3565895f62992",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_023.npy": "sha256:37e73248d987bd077847b47b3fec10ca0b5325aeabefe05fa7fffc2b4e567fb7",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_024.npy": "sha256:37e73248d987bd077847b47b3fec10ca0b5325aeabefe05fa7fffc2b4e567fb7",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_025.npy": "sha256:14491fd5a6dcbe3527636698eb7254a328807aa539b7b52de6370ba6320d9aad",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_026.npy": "sha256:cf42a97da03a11f13663f409ef1ff55754b10ee4bbbcd11d0714df8aee9ea3eb",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_027.npy": "sha256:95b1fc3071e0e314a086f3cd8f2ff82c9ea41cf690921dfdb2b9e73c8901e01f",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_29/tensor_028.npy": "sha256:a3cb45ef2678406e00181f820052fc65e3155cca0935e7713ed165afcad5dabe",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/manifest.json": "sha256:42ffb2d0ec9edd465057e32b8fa066f393bf7ed1eb3880c7e0e380963ee4981d",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_000.npy": "sha256:650f5948e3e5531614657cb5a4a3c823e53b27ff73bebbbd78799145705f8a9b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_001.npy": "sha256:c6292729f18d5fcaf0341c1fbb0e300a79c671def828b2e617b7b05ddcde74b2",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_002.npy": "sha256:449c53fbd0fdb6a29ff77adf78e7ad972c6a3bdcad002e3d5c8e0481bce7fe17",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_003.npy": "sha256:c7b4ecc85960b4b24c35cdf6f35da3c412f7dfdeedeb43a374d83c262cf60896",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_004.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_005.npy": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_006.npy": "sha256:c6f1801eff28af84c06e6d4c5e86b3223df03170ad2cd593df79e8377c9f6a28",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_007.npy": "sha256:735addccf99f2c4db990d2c94f10d96e4cd8c860c61e23cc898f5480906f9386",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_008.npy": "sha256:735addccf99f2c4db990d2c94f10d96e4cd8c860c61e23cc898f5480906f9386",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_009.npy": "sha256:2ab1b7ae221cfd916ea7825d393383ea977818a1bea2cb8ba03b53b5426c3cc8",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_010.npy": "sha256:11aacc295c716859f71ca9633c18eed2c1ae1ba21dae6d898489fb35deab7150",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_011.npy": "sha256:fec423a30337295b76eb4050299e9053973294d57147b73ebd67778f92ab348a",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_012.npy": "sha256:10ff6faa7911cc2cc6ee209a5783dc0f09a87085b19f81bdd85a24a64474f1fd",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_013.npy": "sha256:32652f364fd5b3b672d695074442148342e88ee1c3f3978d252018538a5e328a",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_014.npy": "sha256:7a821070c24e668620536fc6ec4c5d2ec9b3b6524f579fdf161daf4d4ff8263a",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_015.npy": "sha256:3ffa6dadfb62e365883b2c70436ceb1df85e0b0429d77a5055def8acd8d3a455",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_016.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_017.npy": "sha256:e87b12e20e331ae4725830d095a038014c6f9579a9f028d278172697476aea26",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_018.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_019.npy": "sha256:6219bb675512a1a7d589cb2df6482d2e08313fae0175b21e6c7a0edba392d3ea",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_020.npy": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_021.npy": "sha256:6fc6ba3573988d5577e7e41e5b18495744eb5dcf8b7496ee9f4a64ed1c13284e",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_022.npy": "sha256:1593ca37e76b112835049fa651ca494afe959523ab06842c03cf2b19c11ccb87",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_023.npy": "sha256:c3b2378af395bc4b6fbcf25cf1d120c90cdada2e8a7193e40450ce3d3adf7f14",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_024.npy": "sha256:c3b2378af395bc4b6fbcf25cf1d120c90cdada2e8a7193e40450ce3d3adf7f14",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_025.npy": "sha256:548b94397ce4f57ab5dc8ea9e929a28697b9adc480c504ca7923ddbaccc8d981",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_026.npy": "sha256:36fef0d36ff9a145e978a7fefd2a86ce114fa83ee8e092e5c4714f0deca29dc9",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_027.npy": "sha256:95b1fc3071e0e314a086f3cd8f2ff82c9ea41cf690921dfdb2b9e73c8901e01f",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/checkpoints/seed_47/tensor_028.npy": "sha256:1cc2a425f8bb187cbae466afa6b3f1c6365117b3bf2651e431d80baa39a16b5e",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/formal.json": "sha256:1cdf601d52dfa6877a2142d43af510669d9aa9931e1c9b274dfa33b85395918c",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/review_scores_seed_11.npy": "sha256:2b4c899594f054768c0d1d9614109a80edb2a76d8e3d8540bcbdb928554ab041",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/review_scores_seed_29.npy": "sha256:bf11a7ecb86e5bf23f26c85fb050582a8e7767b9e9a2356ad3823bc2d142d0b7",
+    "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/review_scores_seed_47.npy": "sha256:f01ed2a4b05a0e7bf62bae42c7c88ad681eff6c731b544f9377c4029ca1cf06b",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_future.npy": "sha256:83018e8b0bdf61a37d61ef5a43dac0a25cd26833af53da62590e39d4b1344953",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_history.npy": "sha256:a84ce2e177915542857ce8842bffb3ebc60ef937430fbc6dad90960b083b8a19",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_available.npy": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_decision_positions.npy": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_reliability.npy": "sha256:56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/factor_ids.json": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/feature_registry.json": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/inference_rows.npy": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/labelled_row_indices.npy": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/manifest.json": "sha256:7b8050270c72894ff2e6c67f1fb4a5a5513ca46e8cc0b8c02ed7e0ce3523dfd3",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/state_available.npy": "sha256:50fa5e7f152496e20d04807cf62ce0ec856afc7dc40e934f13027330feb813eb",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/state_values.npy": "sha256:520602b31e9a7fad7041e943156e865a51857fcf84066efa87cf6ba0476ab64b",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/stock_factor_exposures.npy": "sha256:28c3a6f5ef0304e18ec6db4f43b2a2baa7cedf5781a00a9541ea0ff6febba4b6",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/variant_ids.json": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_future.npy": "sha256:109e39090aaee744679ed12e176e48ec534583b99269ac2f1a24d8f3d9edc90a",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_history.npy": "sha256:da866ef0e967d8289f08872b797d16473081488f6352fc213848e2b3ff235bac",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_available.npy": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_decision_positions.npy": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_reliability.npy": "sha256:603bf38ebe0562b829001ddd9b3009313a2914a65b4e8e61525501e20f956b0c",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/factor_ids.json": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/feature_registry.json": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/inference_rows.npy": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/labelled_row_indices.npy": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/manifest.json": "sha256:e979fce98e3a6e67f6e5b2bef2701f100d2b174fcdef4539e417ba3aa0c9a7e7",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/state_available.npy": "sha256:50fa5e7f152496e20d04807cf62ce0ec856afc7dc40e934f13027330feb813eb",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/state_values.npy": "sha256:b1f21b95d41c9b401fecd0cdbd36d60d279be42672d0118db048704f6294cdf3",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/stock_factor_exposures.npy": "sha256:d4bf3d17869a7564231f76ab55fd8687d5d7e6c89c57cc9a6492d07da745b38c",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/variant_ids.json": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1430.parquet": "sha256:7ad9472f307b560d1a4474b18926c09fb23f9cd5645178dcc2b5ce1f315d883d",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1445.parquet": "sha256:29c64330a3f65ef35430ac6ab23634f12896e7d8aecbb5f8c1c581b0b837e864",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1430.parquet": "sha256:6652efb41bb9a0748c6c5b20b23f6f0a674ac21ed3ccc42a92ee6971cbec138c",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1445.parquet": "sha256:25f7f5e812d6e3e17e05e281b905f4ab219bca2cb06b9b4eb4711cd073bc96d2",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1430.json": "sha256:b1ae04e2b1e4e87795f6f853e5ab43c911143824b6211719df04e8f546885d12",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/input_manifest_1445.json": "sha256:89c81c8b11d7e89064fc878ccefceb76ee6b50ade710be5ac5c240f5ca650893",
+    "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py": "sha256:74d826ffd3165c16dc4bf3dbb24423383a2584c8016806c10e51a38953cba492",
+    "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_market_rebuild_v2.py": "sha256:422ee7d397e61022ac76973929881bd9e78ab9fb54ad7a1693266db173f2491b",
+    "scripts/factor_rotation/finalize_reaka_current_k1_account_ledgers_v1.py": "sha256:5cdc40bb63b31345564ebafaadd7e44857e9c312f8c38688325fc85a406e0738",
+    "scripts/factor_rotation/freeze_reaka_intraday_K1_fit_prefix_successor_v1.py": "sha256:09fa1d6ffb11c14f054694231a7ee25ed0e1e7db8d1a3c05d1745cf9a2db7029",
+    "scripts/factor_rotation/materialize_reaka_stage6_portfolio_inputs.py": "sha256:91b6088b67dc88f596bd625d21e38d23cf32e24a341295b00345a4a0cb63bc1c",
+    "scripts/factor_rotation/prepare_reaka_intraday_portfolio_mapping_session_v1.py": "sha256:143a165d320e8f72b6e70c6229aeeb64f31e34b1a647266829f859749c9f7e1a",
+    "scripts/factor_rotation/run_reaka_current_k1_account_ledgers_v1.py": "sha256:2e7c7702114546cd37b3fd04a47d7869527b093af7dea772a5648f2de7344d5b",
+    "scripts/factor_rotation/run_reaka_intraday_K1_fit_prefix_successor_v1.py": "sha256:749890f0f1fd6b778eeb45f7f1b2066e0b3c9163b06f7652f466218e4218e5ab",
+    "scripts/factor_rotation/validate_close_reaka_intraday_K1_fit_prefix_successor_v1.py": "sha256:2a201a4694a39db7d7f10cc315c783452cd7738a602103fdfcb8ddbd31c65282",
+    "scripts/factor_rotation/validate_reaka_current_k1_account_ledgers_v1.py": "sha256:8421bc2cda388bb3cbdca620c7eb1878c1235bd9a8b496583e5baf1878485581",
+    "scripts/factor_rotation/validate_reaka_intraday_portfolio_mapping_v1.py": "sha256:fdb614800df9b43351ac69f6b746df1a868968d1d19fa7711e87e9de9912988d",
+    "src/factor_lab/factor_rotation/macro_regime_dual_strategy_round2.py": "sha256:f00bf198febcc5fa99cf464659a2193c2ec6c35a0a6a368b0a42f5e5a3b1f07b",
+    "src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py": "sha256:81107cc279ba589c7611cb1a8c879facee634f17bb791ae1b4690c97588e8526",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py": "sha256:03d96028d7781eaa8be1532e2b53f20186bbf27a18637e54fbbe09513ec9a77b",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py": "sha256:80850973f75d2fda015f29dfb8b3e2e1f4c709eea4766c9db4f615963f7e5f73",
+    "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py": "sha256:cce2c26db12aaba5a7feb212215fbc71b802b8377fd8ec8472fb88cdeb95b139",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v1.py": "sha256:ae4da76b15ebdf5748091520190fbb41aabcf21a05414130fbfcc8402c7e97ea",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v2.py": "sha256:7b1189a0b1a5d4da46e3620f7fb2463f6f22e34920bb76e295c0e89e57064802",
+    "src/factor_lab/factor_rotation/reaka_current_k1_post2020_annual_four_group_blackbox_v1.py": "sha256:500bbed57eb90c5315b646d37131406e0b7b4bd7151dc42a3dbb96392e7335e3",
+    "src/factor_lab/factor_rotation/reaka_current_k1_transaction_pnl_attribution_v1.py": "sha256:35db453e7163e852b75b63f5bd89a1e91c04e808ac40c881e5a0c96b9b9e3c78",
+    "src/factor_lab/factor_rotation/reaka_intraday_k1_fit_prefix_successor_v1.py": "sha256:b9a5c17fd07d2e59b5977d6704ac09952806471f3353cac27f727bcd982d9ba2",
+    "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+    "src/factor_lab/factor_rotation/reaka_intraday_k1_training_v1.py": "sha256:61c5c2cf274e36dcd14ea88703638d2abdec3bbc017c3f482e60ba6eb49e7075",
+    "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py": "sha256:dc7dc7f183201d76d4765c95562239adbbb73e9e5a44169ddbe39fa928fbecda",
+    "src/factor_lab/factor_rotation/reaka_parameter_governance.py": "sha256:80980d70353554f3f9a2b4670f50dbdeb6f96c4da68515383cd094a36a95353f",
+    "src/factor_lab/factor_rotation/reaka_prediction_root_routing.py": "sha256:551bc1b25e967d6ce1582eff1a6536065bcaa6ba36373f85b6fa6bed971c6fc0",
+    "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py": "sha256:18e294504d94248c02c574b221f0b22a0439a7e4da3564e16fed1eb6b5b4e381",
+    "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py": "sha256:104ba6534cc14f08f1d25f758815e8780f51b6b0f892da4ce8eedc710e405a20",
+    "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py": "sha256:096e1340222c169b0524ffb4e6934ecb14862b67afdfe97b8ae13d8264cff1ee",
+    "src/factor_lab/factor_rotation/reaka_stage6_parameter_calibration.py": "sha256:bea1a65dae4a6313599e7de8f6d2276fd4e489f1c08e9feeb360b77c61717fd7",
+    "src/factor_lab/factor_rotation/reaka_stage6_portfolio_execution.py": "sha256:754416b33c03e3484de8b7268765a5b94e8e8c135057b1287f6d5283ad4c73a0",
+    "src/factor_lab/factor_rotation/reaka_stage6_task_alignment.py": "sha256:59d366d57a380218aea007a34afcd116481b79bd7c308a5e2f399ca40cd169a7",
+    "src/factor_lab/factor_rotation/reaka_stage6_temporal_coordinate.py": "sha256:9e2e0b5051385a0ed51ac8e56904f72388817fb52afd20f5bc6110e89d098633",
+    "src/factor_lab/governance/canonicalization.py": "sha256:886cbe6dbf4b45cdb52b814d549cd8b21f1a7724a3f049dfcceb2fa53a68b41c",
+    "src/factor_lab/portfolio/account_research_bundle.py": "sha256:8228972eeff82b6489a4eb6db40919f76d4abdef42bfc334925d8ec3255cca2f",
+    "tests/unit/test_reaka_current_k1_account_ledgers_v1.py": "sha256:bf7c00f363cd3b6086f51d1e5983f73fd9f274755462fda9f4956166c2296a60",
+    "tests/unit/test_reaka_intraday_portfolio_mapping_market_rebuild_v2.py": "sha256:dba94d0ca7e8e84bdd35d6280acd0a655f5a00e049e49d1bbdc4f185a21fa61f",
+    "tests/unit/test_reaka_intraday_portfolio_mapping_v1.py": "sha256:5d4a3313a2beb402e035ebd5f912850511af44d632ca50f1802113f55054f2a1"
+  },
+  "delivered_byte_acceptance": "passed",
+  "source_closure_unresolved": [
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py",
+      "resolved_path": "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py",
+      "expected": "sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1",
+      "status": "mismatch",
+      "detail": "file digest mismatch: src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py: sha256:cce2c26db12aaba5a7feb212215fbc71b802b8377fd8ec8472fb88cdeb95b139 != sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1"
+    },
+    {
+      "manifest": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+      "field": "source_closure",
+      "path": "src/factor_lab/portfolio/account_research_bundle.py",
+      "resolved_path": "src/factor_lab/portfolio/account_research_bundle.py",
+      "expected": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+      "status": "mismatch",
+      "detail": "file digest mismatch: src/factor_lab/portfolio/account_research_bundle.py: sha256:8228972eeff82b6489a4eb6db40919f76d4abdef42bfc334925d8ec3255cca2f != sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "docs/user/reaka_intraday_K1_preflight_workflow.md",
+      "resolved_path": "docs/user/reaka_intraday_K1_preflight_workflow.md",
+      "expected": "sha256:34d3780ca8b45cc8b11404d1777b322fa4965a7df1421424526b95cbce00ccb6",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/freeze_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/freeze_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:db054addf74fb3ebaa45bbddc0d6e291cc9424410da982c8c842d8dffd16c32f",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/materialize_reaka_intraday_K1_input_v1.py",
+      "resolved_path": "scripts/factor_rotation/materialize_reaka_intraday_K1_input_v1.py",
+      "expected": "sha256:2b1af96b5f1b2cba5195b0ef0bbd08d59285a80fb8c73992baa5657c83eebdec",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/run_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/run_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:63ecdfae51fb3993995be91a8db08b93f8e2671b8d0774388fc3e11fa2e5d582",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/validate_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/validate_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:dae5244c18cf96f1db5e68e476096918193e2440853490c4a9f60f01bbda035f",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "scripts/factor_rotation/close_reaka_intraday_K1_preflight_v1.py",
+      "resolved_path": "scripts/factor_rotation/close_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:ea6edae26b4c9d4b350ca481535f5a69db75cce78955c6627d73a7c83fa7854d",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json",
+      "field": "source_closure",
+      "path": "tests/unit/test_reaka_intraday_k1_preflight_v1.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_k1_preflight_v1.py",
+      "expected": "sha256:0f4edc1cfbd1d7028eb486e2b672539a216037b0683cb03c03a0cd923fb5dcd2",
+      "status": "missing"
+    },
+    {
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json",
+      "field": "source_closure",
+      "path": "tests/unit/test_reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "resolved_path": "tests/unit/test_reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "expected": "sha256:926dac537449c54fc631c4577ea0da5b93ee8cfc1df2dc07ec0312bcf679ec79",
+      "status": "missing"
+    }
+  ],
+  "next_step": "R2_external_PIT_and_residual_construction_source_review",
+  "next_step_status": "blocked_missing_upstream_sources",
+  "historical_reproducibility_complete": false,
+  "input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
+  "input_tree": "915f17e0c4f8ab2090fe6f55417f150b5903eac3",
+  "foundation": {
+    "schema_id": "factorlab.reaka_foundation_validation@1.0",
+    "current_manifest": "docs/ops/reaka_multifactor_current_manifest@1.3.json",
+    "infrastructure_consistency": "passed",
+    "checked_source_files": 146,
+    "errors": [],
+    "data_readiness": "not_evaluated",
+    "historical_evidence_readiness": "blocked",
+    "scientific_acceptance": "not_established",
+    "research_execution_allowed": false,
+    "production_authority": false
+  }
+}
