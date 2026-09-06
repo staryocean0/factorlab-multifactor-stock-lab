@@ -1,35 +1,35 @@
-name: REAKA historical evidence audit
+name: Historical evidence report (explicit request only)
 
 on:
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   historical-evidence:
-    name: Historical current@1.2 evidence report (no acceptance authority)
+    name: Historical current@1.2 report, not acceptance
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Preserve historical failures and source gaps
+      - name: Preserve failures; report generation is not acceptance
         run: |
           mkdir -p historical-audit
           python scripts/audit_reaka_foundation.py --report-only > historical-audit/audit.json
-          python - <<'PYREPORT'
-          import json, os
+          python - <<'PY'
+          import os
           from pathlib import Path
-          report = json.loads(Path("historical-audit/audit.json").read_text())
-          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as out:
-              out.write("## Historical evidence only\n\n")
-              out.write("Report generation success is not evidence acceptance. Current@1.3 infrastructure and data checks are separate jobs.\n\n")
-              out.write("```json\n" + json.dumps(report, ensure_ascii=False, indent=2) + "\n```\n")
-          PYREPORT
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write('## Historical evidence only\n\nCommand completion does not accept this evidence. See the unchanged errors and gaps below.\n\n```json\n')
+              out.write(Path('historical-audit/audit.json').read_text())
+              out.write('\n```\n')
+          PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: historical-foundation-evidence-${{ github.sha }}
+          name: historical-evidence-${{ github.sha }}
           path: historical-audit/
           retention-days: 30

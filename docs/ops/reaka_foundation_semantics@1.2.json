@@ -1,0 +1,33 @@
+{
+  "schema_id": "factorlab.reaka_foundation_semantics@1.2",
+  "scope": "stable_mathematical_and_evidence_semantics_not_temporary_execution_permission",
+  "predecessor": "docs/ops/reaka_foundation_semantics@1.1.json",
+  "invariants": {
+    "self_developed_factors_allowed": true,
+    "observable_state_equals_latent_operator_state": false,
+    "observable_condition_is_operator_label": false,
+    "gate_is_financial_factor_weight": false,
+    "larger_gate_emphasizes_return_encoding": true,
+    "model_learns_operator_matrices": true,
+    "model_learns_operator_assignments": true,
+    "model_automatically_changes_instantiated_operator_count": false,
+    "stage3_may_select_operator_count": false,
+    "effective_operator_usage_is_post_training_evidence": true,
+    "portfolio_top_k_is_operator_count": false,
+    "financial_residual_equals_latent_residual": false,
+    "account_other_is_pure_alpha": false,
+    "residual_predictor_is_mandatory": false,
+    "residual_must_be_nonzero": false,
+    "residual_must_be_predictable": false,
+    "residual_must_improve_financial_result": false,
+    "zero_conditional_mean_implies_scale_failure": false,
+    "mlp_mean_energy_comparable_to_diffusion_draw_energy": false,
+    "teacher_forced_denoising_is_history_only_forecast_evidence": false,
+    "stage4_realized_contribution_is_forward_predictive_increment": false,
+    "raw_matrix_difference_proves_operator_identification": false,
+    "k_then_residual_policy_equals_paper_joint_training": false,
+    "higher_capacity_failure_is_implied_by_lower_capacity_failure": false,
+    "mathematical_validity_implies_positive_financial_result": false
+  },
+  "interpretation": "stage3 refers to the historical descriptive Stage3 implementation, not a ban on an independently defined capacity-selection study. This file does not authorize runs or enforce a K/residual search order."
+}

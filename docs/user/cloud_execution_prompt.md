@@ -1,19 +1,7 @@
-# REAKA 云端接管说明 V1.3
+# 云端接手
 
-从 `docs/ops/reaka_multifactor_current_manifest@1.3.json` 进入，依次阅读
-`docs/user/reaka_multifactor_current_workflow_v1_3.md`、
-`docs/ops/reaka_foundation_whitepaper_v1_3.md`、
-`docs/ops/reaka_foundation_semantics@1.1.json`。
-本轮用户已授权确保文档、白皮书、代码、测试、工作流口径正确一致。
+遵循 [CURRENT.json](../../CURRENT.json)、[任务工作流](reaka_multifactor_current_workflow_v1_4.md) 和 [研究状态](../ops/research_state.json)，不再维护另一套云端流程。
 
-先运行 `python scripts/validate_reaka_foundation.py` 与 `pytest -q tests/unit`。
-它们只验证现行口径和合成反例，不等待行情上传，也不训练模型。
-旧 Stage4 重复月份及来源缺口仍阻断该历史证据；不要请用户对它作金融验收。
-需要追溯时运行 `python scripts/audit_reaka_foundation.py`，保留其失败/缺口结论。
+先确认实际 checkout 的分支和提交，而不是把 PR 分支、main 和本地 FactorLab 当成同一环境。上传状态用最新树与上次已验回执分别判断：新增文件不等于已验收，旧缺件清单也不等于今天仍缺失。
 
-数据补齐由用户通知。收到通知后先运行 `python scripts/validate_theme_package.py`，
-再按 V1.3 工作流处理证据与后继合同；数据通过本身不开放训练、选 K、账户或生产。
-保留待上传的 2023/2024 文件和已有数据，禁止修改封存行情、历史验收摘要或本地 FactorLab 指针。
-
-其他旧“current”说明仅供历史溯源。现行检查器严格拒绝来源漂移、口径变动和关闭动作被打开；
-旧写入脚本已封闭，不能用旧 validate 命令重写通过收据。
+数据难以上传时，允许在数据所在环境执行有界验证并返回小体积回执；云端必须标注外部执行、核验范围与尚不能独立复验的内容。上传说明、文件摘要或抽样通过不能冒充完整 PIT 验证。没有相关执行能力时提供准确的检查接口与未验证项，不声称已在本地运行。

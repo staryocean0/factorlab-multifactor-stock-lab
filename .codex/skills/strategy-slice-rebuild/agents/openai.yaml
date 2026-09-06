@@ -1,4 +1,4 @@
 interface:
-  display_name: "策略自然年会话整案重建"
-  short_description: "从共同起点隔离执行逐年盲测、归因、整案重建与封账"
-  default_prompt: "Use $strategy-slice-rebuild to declare an isolated experiment branch, then run sequential annual blind tests, open-ended attribution, whole-policy rebuilds from the common root, and digest-chained snapshot sealing."
+  display_name: "策略研究任务导航"
+  short_description: "按 CURRENT.json 与实际任务依赖接手，不自动套用旧年度流程"
+  default_prompt: "Use CURRENT.json to read the current task workflow and research state. Treat the archived strategy-slice-rebuild protocol as historical reference, not a mandatory sequence."

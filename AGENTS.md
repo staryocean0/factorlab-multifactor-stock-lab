@@ -1,52 +1,20 @@
-# REAKA bounded research control plane
+# AI 接手约定
 
-The current authority for this repository is
-`docs/ops/reaka_multifactor_current_manifest@1.3.json`.
-Read `README.md`, `docs/INDEX.md`,
-`docs/user/reaka_multifactor_current_workflow_v1_3.md`,
-`docs/ops/reaka_foundation_whitepaper_v1_3.md`, and
-`docs/ops/reaka_foundation_semantics@1.1.json` before changing strategy semantics.
-The user authorized correcting and synchronizing documentation, whitepaper,
-code, tests and executable workflow. Continue those repairs without waiting for
-market data; the user will report when uploads are complete.
+唯一现行路由是 [CURRENT.json](CURRENT.json)。先读 [任务工作流](docs/user/reaka_multifactor_current_workflow_v1_4.md) 与 [研究状态](docs/ops/research_state.json)；仅在涉及数学或金融语义时阅读现行白皮书。无需串读所有 README、历史合同或回执。
 
-Current state: `foundation_contract_active_research_execution_blocked`.
-Run `python scripts/validate_reaka_foundation.py` and synthetic unit tests.
-Report infrastructure consistency separately from data completeness, historical
-evidence readiness and scientific acceptance. No passing test or report command
-can sign a financial receipt or establish investment performance.
+## 工作边界
 
-The Stage4 historical evidence has duplicate months and incomplete source
-closure. Its old instruction to ask for financial acceptance is superseded.
-Do not deduplicate it arbitrarily, overwrite old receipts, refreeze old hashes,
-or use legacy build/run/freeze/close/validate launchers that write sealed outputs.
-Use new versioned successor contracts for later evidence rebuilding.
+- 先把用户的金融问题映射到预测对象、可用信息、数学机制和反例，再选方法。允许否定假说、零残差、无增益；不能把 K、DDPM 或一条旧搜索次序当成必选答案。
+- 依赖缺失只阻断依赖它的动作与结论。继续有价值的独立工作；不要求整套 DataHub、历史完全复现或所有旧测试变绿后才能修文档、推导或写合成测试。
+- 当前任务是基础设施优化，不代表已授权运行新训练、重放账户或晋级。未来用户已授权的研究按工作流检查本任务所需信息与资源，不追加固定阶段顺序、多重审批或每次修订都冻结整仓的规则。
+- 保留原行情、旧合同与旧回执。更正结果或改变预测对象使用独立输出和可辨认身份；普通解释、索引、测试修订用 Git 提交即可。不要重算旧摘要来冒充旧过程复现。
+- 不使用未来信息、不改名伪造 OOS、不把已实现归因当未来预测、不把诊断当正式预测证据。报告实际执行与未执行的范围，不代签金融验收，不操作交易或本地生产指针。
+- 发布前检查分支/PR 与 main 的差异，保留用户并行上传；不能 force-push 覆盖它们。不重新分发授权论文或将凭据写入报告。
 
-The model learns latent matrices and assignments; observable financial
-conditions are not operator labels. Matrix capacity, occupied states and the
-research-selected capacity are distinct. Gate weights mix return/feature
-encodings. Financial return residual, latent transition residual and account
-other are different quantities. Residual prediction is optional and may have no
-increment. Neither K progression nor correct mathematics guarantees profit.
+## 维护方式
 
-Only paths listed in current@1.3 have current normative authority. Earlier
-current manifests, registries, admission contracts, whitepapers and the packaged
-annual strategy-slice workflow remain historical/reference materials. Their
-K-order policy, annual research sequence and current-stage claims do not apply
-to this infrastructure-only task. Keep sealed historical bytes; source changes
-are tracked as successors in Git, never retroactively accepted by resealing old
-receipts. The licensed paper itself remains immutable.
+代码放 `src/factor_lab/`，命令放 `scripts/`，反例放 `tests/`。当前状态只改其单一状态文件；工作流负责操作，白皮书负责语义，历史结果放原回执路径。新代码不必先进入一份巨大的全仓摘要白名单才允许开发。
 
-Training, Stage3/4 execution, capacity selection, accounts, evidence promotion,
-local FactorLab pointer changes and production are closed. Pure mathematics,
-synthetic tests, source audits and authorized infrastructure repair are allowed.
-No live trading or broker actions belong to this repository.
+执行 `python scripts/validate_reaka_foundation.py` 与 `python scripts/run_infrastructure_tests.py`。旧 V1.3 合同测试在固定历史字节上运行；它们不是现行文档的编辑锁。默认测试明确披露缺依赖的历史模块；新增测试默认纳入，不能用跳过、假模块或宽泛忽略规则制造通过。
 
-Do not modify `data/development/`, delete pending 2023/2024 uploads, fetch or
-fabricate 2026+ rows, or describe 2018—2025 as fresh OOS. Data boundaries remain
-2007—2008 warmup and 2009—2025 research; `fresh_oos=false`.
-Preserve the user's parallel uploads when publishing branch changes.
-
-Place reusable code under `src/factor_lab/`, tests under `tests/`, executable
-workflows under `scripts/`, and contracts/evidence under `docs/` or
-`cloud_results/`. Do not publish the licensed IEEE paper outside internal research.
+交接给出改动、实跑证据、未验证范围和一个最有价值的下一动作。已知缺口无新输入时不要重复重跑同一大检查，也不要仅回复“等待数据”。
