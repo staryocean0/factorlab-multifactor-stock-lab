@@ -1,0 +1,76 @@
+{
+  "schema_id": "factorlab.reaka_intraday_target_fill_contract@1.0",
+  "status": "frozen_materialization_authorized",
+  "issue_ref": "bd://fl-eginj.1",
+  "framework_content_adapter_digest": "sha256:bd060440404e3a736cb0b49959f3ba73879528a4ed9daeac7c9be77b5e0e63fd",
+  "P0_P5_acceptance_digest": "sha256:3400ff0fe45c1c730d13d98466e7e0c95abb53049ddb9fc0ed8244682f514f25",
+  "pre_result_performance_incident_digest": "sha256:23fc0d6f38ca16cc374330d65f8df3165e499e7d98047cd9ee70416c6ec79c74",
+  "dataset": {
+    "dataset_version": "bars_cn_a_1m_raw_canonical_4ceca170a851",
+    "dataset_root": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851",
+    "manifest_digest": "sha256:a0b2dae126d33fcf2ae0f3d23c87599b4f319fa2304424081d09a02026895b06",
+    "quality_report_digest": "sha256:450150e0d6eb6c722981cebf30c0dfe32088ad3ef52f7798eeafd0be0f3619ef",
+    "instrument_type": "stock",
+    "frequency": "1m",
+    "price_space": "raw"
+  },
+  "axis": {
+    "reference_digest": "sha256:2e05600873e76c3518cc2ee312f700a32915784276905ab2a29795640a94d1d7",
+    "OT3_digest": "sha256:b13e90e51c07a5597bb62c16ad6235fff45ffb28f25ce668c97bfd3a67d6036f",
+    "calendar_start": "2007-01-04",
+    "calendar_end": "2020-12-31",
+    "symbol_count": 3982
+  },
+  "decision_clocks": [
+    "14:30",
+    "14:45"
+  ],
+  "decision_price": "last_raw_trade_close_between_1300_and_decision_clock_same_day",
+  "execution_window": "next_tradable_after_bar_close",
+  "entry_fill": "first_raw_1m_bar_open_after_decision_clock_same_day",
+  "exit_fill": "same_clock_first_raw_1m_bar_open_after_clock_on_t_plus_20",
+  "history_return": "decision_close_t_div_decision_close_t_minus_20_minus_1",
+  "future_target": "entry_open_t_plus_20_div_entry_open_t_minus_1",
+  "H_days": 20,
+  "L_points": 10,
+  "W_days": 200,
+  "decision_interval_days": 5,
+  "phase_count": 4,
+  "portfolio_horizon_semantics": "rolling_h20_reforecast_r5",
+  "inference_support": [
+    "historical_window_complete_at_decision",
+    "strictly_prior_OT3_feature_support"
+  ],
+  "decision_mark_freshness": "must_have_same_day_afternoon_trade_at_or_after_1300",
+  "forbidden_inference_support": [
+    "future_target_available",
+    "post_decision_entry_available"
+  ],
+  "labels_joined_after_scoring": true,
+  "execution_eligibility_applied_after_scoring": true,
+  "residual_target_status": "not_materialized_requires_intraday_OT1_successor_before_model_training",
+  "data_usage": {
+    "2007_2008": "warmup_only",
+    "2009_2020": "consumed_development_material",
+    "post_2020_rows_allowed": 0,
+    "fresh_oos": false
+  },
+  "output_root": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020",
+  "source_closure": {
+    "docs/ops/reaka_intraday_target_fill_whitepaper.md": "sha256:1268e84b7042f2a63eda3d5dbc9edbf3e074ec0b8917bf404608a0441f4d4559",
+    "docs/user/reaka_intraday_target_fill_workflow.md": "sha256:67bd8494d88ccaf9a0de2d63fea6d7d72adcbd3e485224a829bb6766fa6b71bd",
+    "src/factor_lab/factor_rotation/reaka_intraday_target_fill_v1.py": "sha256:fb2224684a9a51723279dd1e9cdaf3165135a83100af2c43278559a52c2488f6",
+    "scripts/factor_rotation/freeze_reaka_intraday_target_fill_v1.py": "sha256:a074dea7587a0b4ab06c9b8aaba5529e255d81c256817b8d2009ead84a3fa0b0",
+    "scripts/factor_rotation/materialize_reaka_intraday_target_fill_v1.py": "sha256:a3f721371ec76c938386b2e36df701de6791754a24f185229e986ceafe94af2e",
+    "scripts/factor_rotation/validate_reaka_intraday_target_fill_v1.py": "sha256:3e2947b570f5069f0a93f2faa791b4b4183d631e1ed7a91fee2050c1b8c3ef60",
+    "scripts/factor_rotation/close_reaka_intraday_target_fill_v1.py": "sha256:49820800c65d739f08d0d82787a4ecda03e553e247ca3b7a9b99e1263de8a861",
+    "tests/unit/test_reaka_intraday_target_fill_v1.py": "sha256:a914a301fab6f1aa119148cee7af8a9c015621cbcd65826aba43b42bdd52fb1d"
+  },
+  "next_open_allowed": false,
+  "materialization_allowed": true,
+  "model_training_allowed": false,
+  "score_materialization_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:5cfc72b9eaf670aca896ba32fa59000eefe859b5c9482c991b82f219f9b6dcf3"
+}

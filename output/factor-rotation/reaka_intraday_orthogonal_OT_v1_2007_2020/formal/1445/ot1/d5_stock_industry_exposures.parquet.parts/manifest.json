@@ -1,0 +1,19 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 10478018,
+  "original_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/d5_stock_industry_exposures.parquet",
+  "original_sha256": "28c5946ec4afd43f618428f63924b1224cbd9cb2d24b74c81832aeea9e6f9225",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "name": "00.bin",
+      "bytes": 8388608,
+      "sha256": "4d9f5d382f6138f194e52353a76957614a483b01dc316dd2788a978b1bc81791"
+    },
+    {
+      "name": "01.bin",
+      "bytes": 2089410,
+      "sha256": "58c15ff60c2449d5738c57cd7117aa3dd4c89156baf90f8446758efbd0583eea"
+    }
+  ]
+}

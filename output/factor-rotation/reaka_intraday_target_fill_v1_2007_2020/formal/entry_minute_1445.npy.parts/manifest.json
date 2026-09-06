@@ -1,0 +1,29 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 27125512,
+  "original_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/entry_minute_1445.npy",
+  "original_sha256": "ddf63fcda4f2886d4dde82d5157fb6ee0c0765e17409d3e952c1a1c48fadd46c",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "name": "00.bin",
+      "bytes": 8388608,
+      "sha256": "1c502ac67c2427b0499e2dbcdf0962de4ea6afb28d07e56912797dd82b0d8a3f"
+    },
+    {
+      "name": "01.bin",
+      "bytes": 8388608,
+      "sha256": "ccf74c9bf55f421710d4845006bbfe48544deab81a5841d8bdb3a4a9437dc3d2"
+    },
+    {
+      "name": "02.bin",
+      "bytes": 8388608,
+      "sha256": "3f2369e3fb725592a5daffed2371da10a9949631927026f50b2ac00b70f83c0d"
+    },
+    {
+      "name": "03.bin",
+      "bytes": 1959688,
+      "sha256": "02360bcf6578d499ddbea5b18c65a0494fc61f6f51edcae3e2b011c1b0d59d83"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema_id": "factorlab.reaka_intraday_orthogonal_OT1_OT3@1.0",
+  "status": "frozen_controller_execution_authorized",
+  "issue_ref": "bd://fl-eginj.2",
+  "P6_1_acceptance_digest": "sha256:122305b8572e6499709d23687c48e43a74756c1e6d9532e8aaca7638c70da756",
+  "pre_result_contract_incident_digest": "sha256:0daa09e5570c1ffc0e38001392ab0f3f1f70e42d027fe191584db14ff1e6b569",
+  "pre_OT2_manifest_identity_incident_digest": "sha256:75e37a52f2517733ce4f92cb24a6bed28f1453dd737e791a656cdaeb8d327901",
+  "preclose_validation_inventory_incident_digest": "sha256:bf2095c5d7b4958d5ea17e4a12a95db8ff9eb49a87041c2ef3d548b65f118b49",
+  "decision_clocks": [
+    "14:30",
+    "14:45"
+  ],
+  "fit_end": "strict_t_minus_1",
+  "data_usage": {
+    "2007_2008": "warmup_only",
+    "2009_2020": "consumed_development_material",
+    "post_2020_rows_allowed": 0,
+    "fresh_oos": false
+  },
+  "inputs": {
+    "formal_P6_1_manifest": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+    "isolated_P6_1_manifest": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+    "cloudridge_membership_digest": "sha256:bc299485bdba5a647962d335d0d7632ee4a304463d4e9df76220fbbd19a4c0b8",
+    "accepted_core_membership_digest": "sha256:5020e02635fb84bb2e094b6d97da292ceb046604674dc0096832f247f5b247bc",
+    "accepted_registry_digest": "sha256:b2a81874dd22be782de91620d380b9091c9779d972cd7a70641603437e9a6371"
+  },
+  "OT1": {
+    "order": [
+      "market",
+      "single_small_minus_large_size",
+      "accepted_dynamic_industries",
+      "stock_idiosyncratic"
+    ],
+    "history_input": "decision_clock_H20_history_return",
+    "future_target": "same_clock_post_bar_fill_H20_return",
+    "factor_projection_fit": "history_only_strict_t_minus_1",
+    "stock_beta_fit": "120_daily_H20_rows_strict_t_minus_1",
+    "lookback_rows": 120,
+    "minimum_observations": 96,
+    "stock_beta_cadence": "D5",
+    "effective": "same_day_after_1430_or_1445_decision_bar",
+    "crossfit_folds": 5,
+    "fold_rule": "symbol_position_mod_5",
+    "carrier_excludes_entire_stock_fold": true,
+    "epsilon_history": "raw_history_minus_prior_fit_factor_mapping",
+    "epsilon_future": "raw_future_target_minus_same_frozen_factor_mapping"
+  },
+  "OT2": {
+    "candidate_tools": [
+      "laplace_iir_mixed_bandpass",
+      "laplace_iir_lowpass",
+      "butterworth_clean_bandpass",
+      "causal_haar_wavelet_bandpass",
+      "bollinger_volatility_channel",
+      "causal_trendline_channel",
+      "simple_moving_average_trend"
+    ],
+    "transparent_control": "naked_residual_level_follow_control_v1",
+    "state_input": "history_factor_basis_only",
+    "evaluation_grid": "D5",
+    "evaluation_target": "future_H20_factor_basis_same_clock",
+    "annual_metric": "mean_H20_net_per_D5_decision_not_daily_sum",
+    "cost_bps_per_D5_state_change": 7.0,
+    "years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "annual_sessions_sequential_and_digest_chained": true,
+    "selection": "one_tool_or_transparent_fallback_per_family_per_clock",
+    "all_attempts_enter_multiplicity": true
+  },
+  "OT3": {
+    "output_columns": [
+      "market_timing_transport",
+      "size_timing_transport",
+      "industry_timing_transport"
+    ],
+    "pre_sum_allowed": false,
+    "effective": "same_day_after_decision_bar"
+  },
+  "formal_isolated_byte_replay_required": true,
+  "source_closure": {
+    "docs/ops/reaka_intraday_orthogonal_OT1_OT3_whitepaper.md": "sha256:d2a8edaa742ebafadacdbe27b59280fb342c75618bc8560adfaef4ea3b0a6110",
+    "docs/user/reaka_intraday_orthogonal_OT1_OT3_workflow.md": "sha256:1e84996114b1c94ccf563428d8596ca50e4edd0499ce8aeb971981f18f455c97",
+    "src/factor_lab/factor_rotation/reaka_intraday_orthogonal_ot_v1.py": "sha256:4a8ff5fc74adfa474e12a2f0e9c6b770eb7afdb713fe6d676baa423fe5b23c86",
+    "scripts/factor_rotation/freeze_reaka_intraday_OT1_OT3_v1.py": "sha256:72fffc4cccac37ca6c1e808a8e28da039ebd5027c8a340dee55072aef4cd19dc",
+    "scripts/factor_rotation/run_reaka_intraday_OT1_v1.py": "sha256:154ea3edb122f42bd7b6636a31cab9c0870047bdd051e7212a9199a097cdf1bb",
+    "scripts/factor_rotation/build_reaka_intraday_OT2_candidates_v1.py": "sha256:cae821d93fe6baa2c65749d3e1687b5d7769f2a09e0223e3cc30b7e0b63260f4",
+    "scripts/factor_rotation/run_reaka_intraday_OT2_annual_session_v1.py": "sha256:34e5cff30609958ce70d25df41de2b7e1f8db41328439680f44f41b40f3d8627",
+    "scripts/factor_rotation/finalize_reaka_intraday_OT2_OT3_v1.py": "sha256:837a8548bd6eb84055b518733b0dcd98560d814aafc00ba56eb3849816735781",
+    "scripts/factor_rotation/validate_reaka_intraday_OT1_OT3_v1.py": "sha256:1b290744800f5e02a623bb02b727fe2a86b9267e0bd0c251551936e46e25699b",
+    "scripts/factor_rotation/close_reaka_intraday_OT1_OT3_v1.py": "sha256:b8acba0195ac78882d671a7c14fb5511f210c0e4e3b31b6a6eaa1326d94bbb47",
+    "tests/unit/test_reaka_intraday_orthogonal_ot_v1.py": "sha256:78e518a7db877abf2421001fd5c28de01326fc413c06b1346809063bb185fcb2",
+    "src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py": "sha256:81107cc279ba589c7611cb1a8c879facee634f17bb791ae1b4690c97588e8526",
+    "src/factor_lab/factor_rotation/orthogonal_factor_timing_state_v1.py": "sha256:571420e211afd431f1e1abe2d390974ff66f996e13d3525e8350e6cc98d0ffa7",
+    "src/factor_lab/factor_rotation/orthogonal_timing_stock_transport_v1.py": "sha256:7c898f60bd807c309ac9cd38f878ba95c2d9ef12f77b35f1126b35d12be1a636"
+  },
+  "OT1_execution_allowed": true,
+  "OT2_execution_allowed_after_OT1_pass": true,
+  "OT3_execution_allowed_after_OT2_pass": true,
+  "model_training_allowed": false,
+  "score_materialization_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:8102c9ec83db36f4de22a61df4288ed67c31345bb21b9072adfcd87cfd2a1551"
+}

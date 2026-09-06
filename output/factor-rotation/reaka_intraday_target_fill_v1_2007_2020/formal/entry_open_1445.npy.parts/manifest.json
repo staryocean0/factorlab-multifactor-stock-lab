@@ -1,0 +1,44 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 54250896,
+  "original_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/entry_open_1445.npy",
+  "original_sha256": "ac2867f0cba5ee8747b7d36bc578a4076efb7acfa642f4cfc76b43dfc6f12b82",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "name": "00.bin",
+      "bytes": 8388608,
+      "sha256": "71b8c9a95dfe6e9735ab73574063e5eb9bdae5f37e08cd308f73ba8f53875ba6"
+    },
+    {
+      "name": "01.bin",
+      "bytes": 8388608,
+      "sha256": "55560c4a4cc08a4b311398d24aa547992a8cc1603412566f6a0c49b9762a43e5"
+    },
+    {
+      "name": "02.bin",
+      "bytes": 8388608,
+      "sha256": "df3ca898247732e35d7c42c6e11985d8febf835526d60bf6c6b26dc10c5884d9"
+    },
+    {
+      "name": "03.bin",
+      "bytes": 8388608,
+      "sha256": "a27e2a240eed8557fd135486828f675c703080cbb741c28f8cca3fdcd147cf4e"
+    },
+    {
+      "name": "04.bin",
+      "bytes": 8388608,
+      "sha256": "1a1a4b26349bfe0c8a3ba7e060dcc0af2700e6710ad646db86b9dd2d4565d027"
+    },
+    {
+      "name": "05.bin",
+      "bytes": 8388608,
+      "sha256": "08c5fdc4514d31cf5df94b5075d9c76fb14db27ea75b2d2986f4a5f173fe3497"
+    },
+    {
+      "name": "06.bin",
+      "bytes": 3919248,
+      "sha256": "d6b5bdf72c9547fec6c06d07694f07fbef930b93db643b271e8f583677d395c8"
+    }
+  ]
+}

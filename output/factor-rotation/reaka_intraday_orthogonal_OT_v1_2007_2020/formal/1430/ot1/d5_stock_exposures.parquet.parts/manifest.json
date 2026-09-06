@@ -1,0 +1,49 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 63379086,
+  "original_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/d5_stock_exposures.parquet",
+  "original_sha256": "01fc36ffc480ac9d6a317074c0d35962e4feca36c10e27595f646f38ac4ff30d",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "name": "00.bin",
+      "bytes": 8388608,
+      "sha256": "0b3c73db47c3d29785c4133ed6ce532f77370ad2b3668c5f45254efb8783cf78"
+    },
+    {
+      "name": "01.bin",
+      "bytes": 8388608,
+      "sha256": "1ee9f9f4368a37b4601ca10502938fcd950228d347a44a33a80cb4a85e86b916"
+    },
+    {
+      "name": "02.bin",
+      "bytes": 8388608,
+      "sha256": "1609fb6999aeceb77ea618becc663dc2bc41d5feb52b0d58b4671cfdd51c6652"
+    },
+    {
+      "name": "03.bin",
+      "bytes": 8388608,
+      "sha256": "855691155280752f61d0f5c32d69fbef6c92a840330bc06cae6b41ff872fe158"
+    },
+    {
+      "name": "04.bin",
+      "bytes": 8388608,
+      "sha256": "132edbe21e30923cbfe257b3ae0db499b0e514a6c2aec0ec88e32d108adaa304"
+    },
+    {
+      "name": "05.bin",
+      "bytes": 8388608,
+      "sha256": "1a083889e4cc4e7e046254f21472ef1ac11362074e19c4a6633c6d0e3ea49ead"
+    },
+    {
+      "name": "06.bin",
+      "bytes": 8388608,
+      "sha256": "74dd42d10efbe30b4bdde99a1d3ad32b61e120640b839192490a4cac05d17149"
+    },
+    {
+      "name": "07.bin",
+      "bytes": 4658830,
+      "sha256": "9c4f2fb34bfb1fa2c7ee0feaf96d2516c8fd7281ad23687ca321bdf9ca9b50ef"
+    }
+  ]
+}

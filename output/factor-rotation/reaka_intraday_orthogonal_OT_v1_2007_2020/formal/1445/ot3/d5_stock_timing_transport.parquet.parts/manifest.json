@@ -1,0 +1,59 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 80190746,
+  "original_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot3/d5_stock_timing_transport.parquet",
+  "original_sha256": "dce64da3dc5139e273b29a1fa72b13996e790efabfbb4f83b4122b1e9aee39f7",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "name": "00.bin",
+      "bytes": 8388608,
+      "sha256": "3c46cf25fbe5e6a00ee1522d639152aa73ff5c8c7a7f6b6b721d78b440dd5188"
+    },
+    {
+      "name": "01.bin",
+      "bytes": 8388608,
+      "sha256": "678dc87652376da5e9469ed5eb23668b745acf1860a04eb7722c837e40b7faf0"
+    },
+    {
+      "name": "02.bin",
+      "bytes": 8388608,
+      "sha256": "3d9ae00b15b51199c6ebcc2f140e25ef0a190c6d367c6f160babb6fe8322bd9f"
+    },
+    {
+      "name": "03.bin",
+      "bytes": 8388608,
+      "sha256": "333dbb9dc80f235a41444c5059c2a435bad80126ec694152038067ac439dffb6"
+    },
+    {
+      "name": "04.bin",
+      "bytes": 8388608,
+      "sha256": "7cc831cd0e4aa0890d79425ba5690af106e5baa4b83360672ce304a1bc9747b4"
+    },
+    {
+      "name": "05.bin",
+      "bytes": 8388608,
+      "sha256": "6d6cb97a22e6e5069c2fa748f3b1de264ad5627584764b4d1dc41fa315d30353"
+    },
+    {
+      "name": "06.bin",
+      "bytes": 8388608,
+      "sha256": "7d2e2157240816020252bf4f58120211fffbf22dc53afd0800998db700b989cd"
+    },
+    {
+      "name": "07.bin",
+      "bytes": 8388608,
+      "sha256": "d550f11395f55974f41ddba1737b4bb8f21d3b8ece5de679e5039550c37b4e6b"
+    },
+    {
+      "name": "08.bin",
+      "bytes": 8388608,
+      "sha256": "2dfc8311bc4347259ee41a9c86346107e5b846f93edebf39bb871c3ef747661f"
+    },
+    {
+      "name": "09.bin",
+      "bytes": 4693274,
+      "sha256": "db994a67cfc528226b3c973bf1fc41ec2c55c4b087a6690e2fbd4d8c5af846b1"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 44795019,
+  "original_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/stock_residual_surfaces.npz",
+  "original_sha256": "e7d97cef72000218becd7b34c6b653718b889f52716f16307d1ea667eab5cfbf",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "name": "00.bin",
+      "bytes": 8388608,
+      "sha256": "f792af31cfd2ad66e8c59e28cd3d412d4b13f95d00fc657fec3e98d296fd581f"
+    },
+    {
+      "name": "01.bin",
+      "bytes": 8388608,
+      "sha256": "ace282528b16e4bdac81a2f9891f1256ceb5ff48846fa82768e23c63e7f123b0"
+    },
+    {
+      "name": "02.bin",
+      "bytes": 8388608,
+      "sha256": "974acd4874d8fe57c6da312fca916575769181542fe9b00094d2569f12c5624c"
+    },
+    {
+      "name": "03.bin",
+      "bytes": 8388608,
+      "sha256": "08c6043b33419adc7a72b6005b721cbbc4618a66c1c64d71e3623be771ee1688"
+    },
+    {
+      "name": "04.bin",
+      "bytes": 8388608,
+      "sha256": "6522522e9c3115d2069fa66aaa54cd4a542333d2f2e50e97436d2c55813941a2"
+    },
+    {
+      "name": "05.bin",
+      "bytes": 2851979,
+      "sha256": "66f4d63e802ec556ded48cd15df994027a41623a05ed17c23e31f94eb7f2f5fa"
+    }
+  ]
+}
