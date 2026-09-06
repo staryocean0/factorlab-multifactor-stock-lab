@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-06",
-  "current_task": "infrastructure_audit_and_guidance_improvement",
+  "current_task": "infrastructure_handoff_and_task_scoped_research_navigation",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -16,7 +16,7 @@
     "last_verification_blocker": "P6.1 target/fill and P6.2 residual, exposure and state provenance",
     "upload_observation": {
       "observed_main_commit": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
-      "meaning": "Additional P6.1/P6.2 parts were observed after the recorded R1 audit. Upload completeness and PIT have not been re-audited in this infrastructure task. Re-read current branch/tree before asserting a path is still missing."
+      "meaning": "Additional P6.1/P6.2 source modules, tests and parts were observed in the PR merge snapshot. Upload completeness and PIT have not been re-audited in this infrastructure task. Re-read the current branch/tree before asserting an old listed path is still missing."
     },
     "blocked_claims": ["historical_epsilon_and_factor_state_PIT_verified", "historical_account_results_independently_reproduced"],
     "unblocked_work": ["documentation", "mathematical_preanalysis", "interface_implementation", "synthetic_counterexamples", "independent_source_audits"]
@@ -34,5 +34,10 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "Use the task workflow; maintain independent infrastructure without waiting for upload completion. Resume only the required R2 checks when their evidence is actually available."
+  "next_useful_action": "在已有源码上定位金融残差、因子状态和成交时钟的实际构造链，先设计决定性的时点与收益重建反例；需要大数据时将对应只读检验放在数据所在环境，不重复索取已验收R1大文件。没有明确缺陷时不再启动一轮泛化基础设施重构。",
+  "research_directions_not_a_mandatory_sequence": [
+    {"question": "现任金融epsilon是否在正确时点、同一收益区间构造？", "independent_prework": "源代码与小型合同追踪、标签成熟和冻结系数反例；静态分析结论与真实PIT验证分别报告。", "empirical_dependency": "只有涉及实际构造正确性的主张才需要相应P6.1/P6.2有界验证。"},
+    {"question": "市场或行业条件能否通过个股异质响应改善排序？", "independent_prework": "写清无条件基准、总收益或金融残差目标、同支持评价和共同状态的统计单位；常数平移作为无效反例。", "empirical_dependency": "未来已授权比较需自己的因果输入与评价数据，不沿用Stage4已实现持仓贡献作为预测增量。"},
+    {"question": "增加容量或潜残差模型是否有必要？", "independent_prework": "区分改变金融残差预测与增加潜动力修正；比较可辨识性和简单基准，不默认选K2或DDPM。", "empirical_dependency": "按该实验预分析及尝试预算验证，允许零修正和无增益。"}
+  ]
 }

@@ -47,6 +47,28 @@ jobs:
       - run: python -m pip install 'torch>=2.7,<3' --index-url https://download.pytorch.org/whl/cpu
       - name: Fetch only the pinned historical source fixture commit
         run: git fetch --no-tags --depth=1 --filter=blob:none origin 3a75376e1f7f871bb72e48f886c275919b3c9671
+      - name: Materialize three small existing regression fixtures, not market panels
+        run: |
+          python - <<'PY'
+          import hashlib, json, subprocess
+          from pathlib import Path
+          paths = [
+              'output/factor-rotation/reaka_v2_stage3_state_episode_atlas_v1_2011_2025/formal/state_learnability_certificate.json',
+              'output/factor-rotation/reaka_v2_stage3_state_episode_atlas_v1_2011_2025/formal/state_months.csv',
+              'output/factor-rotation/reaka_k1_only_factor_kline_selector_v1_2011_2025/formal/monthly_selector_panel.csv',
+          ]
+          records = []
+          for relative in paths:
+              data = subprocess.run(['git', 'show', 'HEAD:' + relative], check=True, capture_output=True).stdout
+              path = Path(relative)
+              path.parent.mkdir(parents=True, exist_ok=True)
+              path.write_bytes(data)
+              records.append({'path': relative, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+          folder = Path('foundation-validation')
+          folder.mkdir(exist_ok=True)
+          (folder / 'regression_fixtures.json').write_text(json.dumps(records, indent=2) + '\n')
+          print('REGRESSION_FIXTURES=' + json.dumps(records))
+          PY
       - name: Current routing, semantics and navigation
         run: |
           mkdir -p foundation-validation
@@ -70,21 +92,19 @@ jobs:
                       data = json.loads(path.read_text())
                       if name == 'contract.json':
                           inventory = data.pop('navigation_inventory', {})
-                          data['navigation_summary'] = {k: inventory.get(k) for k in ('materialized_markdown_files', 'markdown_links', 'agent_instruction_files')}
+                          data['navigation_summary'] = {k: inventory.get(k) for k in ('materialized_markdown_files', 'markdown_links', 'agent_instruction_files', 'issue_reason_counts', 'issues_by_source')}
                           data['historical_navigation_issue_count'] = len(inventory.get('issues', []))
                       else:
                           data = {k: data.get(k) for k in ('checkout_commit', 'status', 'junit', 'deferred_historical_modules', 'all_unit_modules_selected', 'full_repository_validated')}
                       out.write('### ' + name + '\n```json\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n```\n')
-              # Keep a compact, retrievable receipt in the job log as well.
               receipt = folder / 'test_scope.json'
               if receipt.exists():
-                  data = json.loads(receipt.read_text())
-                  print('INFRASTRUCTURE_RECEIPT=' + json.dumps(data, ensure_ascii=False))
+                  print('INFRASTRUCTURE_RECEIPT=' + receipt.read_text().replace('\n', ''))
               report = folder / 'contract.json'
               if report.exists():
                   data = json.loads(report.read_text())
                   inventory = data.pop('navigation_inventory', {})
-                  data['navigation_summary'] = {k: inventory.get(k) for k in ('materialized_markdown_files', 'markdown_links', 'agent_instruction_files')}
+                  data['navigation_summary'] = {k: inventory.get(k) for k in ('materialized_markdown_files', 'markdown_links', 'agent_instruction_files', 'issue_reason_counts', 'issues_by_source')}
                   data['navigation_issue_count'] = len(inventory.get('issues', []))
                   print('NAVIGATION_RECEIPT=' + json.dumps(data, ensure_ascii=False))
           PY
