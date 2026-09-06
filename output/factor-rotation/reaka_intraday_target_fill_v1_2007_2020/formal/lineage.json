@@ -1,0 +1,21 @@
+{
+  "schema_id": "factorlab.reaka_intraday_target_fill_lineage@1.0",
+  "dataset_version": "bars_cn_a_1m_raw_canonical_4ceca170a851",
+  "decision_price": "last_raw_trade_close_between_1300_and_decision_clock_same_day",
+  "entry_fill": "first_raw_1m_bar_open_after_decision_clock_same_day",
+  "exit_fill": "same_clock_first_raw_1m_bar_open_after_clock_on_t_plus_20",
+  "history_return": "decision_close_t_div_decision_close_t_minus_20_minus_1",
+  "future_target": "entry_open_t_plus_20_div_entry_open_t_minus_1",
+  "inference_filters": [
+    "historical_window_complete_at_decision",
+    "strictly_prior_OT3_feature_support"
+  ],
+  "forbidden_inference_filters": [
+    "future_target",
+    "entry_fill"
+  ],
+  "labels_joined_after_scoring": true,
+  "execution_eligibility_applied_after_scoring": true,
+  "next_open_used": false,
+  "canonical_digest": "sha256:5273487e0a5687a28b76e9315880d22be83c8c6418289bb28ffd68d11cb2d8a4"
+}
