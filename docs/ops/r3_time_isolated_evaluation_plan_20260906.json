@@ -29,11 +29,7 @@
   },
   "tool_selection": {
     "candidates": "Existing seven eligible OT2 representatives; freeze actual IDs, parameters and code before prefix scores",
-    "families": [
-      "market",
-      "size",
-      "industry"
-    ],
+    "families": ["market", "size", "industry"],
     "select_on": "full_reference within mature prefix only",
     "state_materialization": "all five consumed cross-fit variants and all 14 factors, fixed family choice",
     "original_selector_policy": {
@@ -52,22 +48,12 @@
     "reuse_full_2009_2020_selected_tools": false,
     "add_or_relax_tools_after_evaluation": false
   },
-  "arms": [
-    "F",
-    "H"
-  ],
+  "arms": ["F", "H"],
   "reuse_old_scores_as_primary": false,
   "shared_backend": true,
   "preferred_backend": "cpu; both arms in the identical pinned environment",
-  "seeds": [
-    11,
-    29,
-    47
-  ],
-  "clocks": [
-    "1430",
-    "1445"
-  ],
+  "seeds": [11, 29, 47],
+  "clocks": ["1430", "1445"],
   "recipe": {
     "latent_dimension": 8,
     "hidden_dimension": 8,
@@ -100,44 +86,21 @@
   "evaluation": {
     "primary": "equal-date mean of the equal-clock mean paired RankIC(F-H)",
     "report_each_clock_and_seed": true,
-    "secondary": [
-      "paired median",
-      "win days",
-      "all years",
-      "all four phases",
-      "H20 epsilon decile spread",
-      "Top30 minus same-universe epsilon mean"
-    ],
-    "baselines": [
-      "last_epsilon",
-      "negative_last_epsilon",
-      "mean10_epsilon",
-      "negative_mean10_epsilon"
-    ],
+    "secondary": ["paired median", "win days", "all years", "all four phases", "H20 epsilon decile spread", "Top30 minus same-universe epsilon mean"],
+    "baselines": ["last_epsilon", "negative_last_epsilon", "mean10_epsilon", "negative_mean10_epsilon"],
     "bootstrap": {
       "kind": "paired moving blocks of scheduled D5 dates; both clocks together",
       "draws": 5000,
       "seed": 61207,
       "primary_length": 8,
-      "sensitivity_lengths": [
-        4,
-        12
-      ],
+      "sensitivity_lengths": [4, 12],
       "confidence": 0.95
     },
     "no_iid_seed_clock_replication": true,
     "no_posthoc_sign_flip_or_seed_year_selection": true,
     "intervals_are_conditional_diagnostics_not_fresh_OOS_acceptance": true
   },
-  "required_artifact_roles": [
-    "checkpoint",
-    "normalizer",
-    "source_snapshot",
-    "environment",
-    "selection",
-    "scores",
-    "coordinates"
-  ],
+  "required_artifact_roles": ["checkpoint", "normalizer", "source_snapshot", "environment", "selection", "scores", "coordinates"],
   "reload": {
     "fresh_model_object_before_scoring": true,
     "checkpoint_tensor_digest_exact": true,
@@ -148,10 +111,12 @@
   },
   "implementation_status": {
     "metadata_masks_and_pair_checks": "implemented_and_tested_separately",
-    "artifact_inventory": "implemented_identity_check_only_not_weight_writer_or_reload",
-    "causal_selector_integration": "not_implemented_in_this_design",
-    "matched_training_runner": "not_implemented_in_this_design",
-    "real_data_readiness": "not_evaluated",
+    "artifact_inventory": "existing identity checker retained; new runner writes real checkpoint trees, normalizer, source/environment and score artifacts",
+    "causal_selector_integration": "implemented_in_reaka_r3_time_isolated_runner_using_mature_H20_prefix; real local data not yet executed",
+    "matched_training_runner": "implemented_with_equal_pre_DMD_state_independent_DMD_minimum_loss_checkpoint_and_fresh_process_reload",
+    "fresh_process_reload_worker": "implemented_and_cloud_synthetic_probe_passed_with_180_scores_and_zero_target_reads",
+    "synthetic_integration": "cloud_passed_10_repository_equivalent_tests_plus_fresh_process_probe",
+    "real_data_readiness": "requires_local_P6.1_P6.2_paths; cloud_has_no_large_arrays",
     "experimental_results": "not_run"
   }
 }
