@@ -1,0 +1,32 @@
+{
+  "schema_id": "factorlab.r3_time_isolated_runner_integration_receipt@1.0",
+  "date": "2026-09-07",
+  "scope": "cloud implementation and synthetic integration only; no real market arrays",
+  "base_commit": "e7938c7f7891edae8b323bdd6271d5f8200d51e7",
+  "runner_test_equivalent": {"tests": 10, "failures": 0, "errors": 0},
+  "fresh_process_reload_probe": {"status": "passed", "scores": 180, "finite": true, "nonconstant": true, "target_values_read": 0},
+  "environment": {"python": "3.13.5", "numpy": "2.3.5", "pandas": "2.2.3", "torch": "2.10.0+cpu", "pytest": "9.0.2"},
+  "implemented": [
+    "mature H20 prefix selector adapter",
+    "prefix-selected state to K1 store materialization",
+    "matched pre-DMD F/H construction",
+    "independent arm DMD and fit with minimum canonical-loss checkpoint",
+    "checkpoint persistence",
+    "fresh-process reload score worker without labels",
+    "post-score label projection",
+    "seed rank-z ensemble and paired daily RankIC",
+    "fixed moving-block interval diagnostics"
+  ],
+  "not_executed": [
+    "real OT2 prefix selection",
+    "real K1 store rebuild",
+    "12 real F/H fits",
+    "real checkpoint reload",
+    "2018-2020 market evaluation",
+    "GitHub Actions",
+    "main merge"
+  ],
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false
+}
