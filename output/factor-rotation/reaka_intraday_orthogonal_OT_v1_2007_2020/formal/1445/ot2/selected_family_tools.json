@@ -1,0 +1,65 @@
+{
+  "schema_id": "factorlab.reaka_intraday_OT2_selected_tools@1.0",
+  "contract_digest": "sha256:8102c9ec83db36f4de22a61df4288ed67c31345bb21b9072adfcd87cfd2a1551",
+  "decision_clock": "14:45",
+  "annual_receipt_digests": {
+    "2009": "sha256:265cb15c4290bd10dcb164e29b36e221999721aca05361af5887174b5bbfe327",
+    "2010": "sha256:f5b554c9feb1c22cc2061aa8e02ae82e421103fc7398a7e58a52746b464e48b4",
+    "2011": "sha256:89a694059c5dffab2d9235b628b984b12fd3d29705a36d9f0cd823780fbe4f0c",
+    "2012": "sha256:fe8bcbe43cb25d1bd6e9928fb7dd29793e491c18b967fa589ccfa83e51d86045",
+    "2013": "sha256:c63a59a8bbc6906457dbbcb96203ce4ac8ef219e233d6343ceab345df2397083",
+    "2014": "sha256:6616c0f4cb9b0967150ad8008c8399fc5ae428cee507a772857a6c45df0bdda5",
+    "2015": "sha256:6fc961bfcf09fb8ef4493a7c6776e8a369556c761746b0fb410563edb5ec9825",
+    "2016": "sha256:b7d3cf8825f24b49f1db143cccc9b768e3866b1530755c00a99e344ef5b671ae",
+    "2017": "sha256:d2142921917756a29308919bc7f675979b5c7f3326815a3862f7ba74ccda92cf",
+    "2018": "sha256:5ff4b3c042434d5a01d342b32be1b8639546809def856fc833edbdcb7dcc492b",
+    "2019": "sha256:817f327bbadc0f822452515bf5dd315c40b4f206ed10ac0f81bd26ad0a235a17",
+    "2020": "sha256:88390bbb883a0730d62b038ecad71a6a7c20975d48e1b69044e645f2ec5302cd"
+  },
+  "selections": [
+    {
+      "economic_family_id": "industry",
+      "tool_id": "causal_haar_wavelet_bandpass",
+      "supported_years": 10.0,
+      "positive_increment_years": 7.0,
+      "positive_increment_share": 0.7,
+      "median_incremental_net": 0.00128832881445305,
+      "total_incremental_net": 0.0048028280175716,
+      "total_candidate_net": 0.0357071594689397,
+      "positive_increment_concentration": 0.20548298138307378,
+      "eligible": true,
+      "selection_status": "retrospective_tool_selected"
+    },
+    {
+      "economic_family_id": "market",
+      "tool_id": "naked_residual_level_follow_control_v1",
+      "supported_years": null,
+      "positive_increment_years": null,
+      "positive_increment_share": null,
+      "median_incremental_net": null,
+      "total_incremental_net": null,
+      "total_candidate_net": null,
+      "positive_increment_concentration": null,
+      "eligible": false,
+      "selection_status": "no_tool_increment_keep_transparent_control"
+    },
+    {
+      "economic_family_id": "size",
+      "tool_id": "laplace_iir_mixed_bandpass",
+      "supported_years": 10.0,
+      "positive_increment_years": 6.0,
+      "positive_increment_share": 0.6,
+      "median_incremental_net": 0.007089026133015,
+      "total_incremental_net": 0.0126748322743876,
+      "total_candidate_net": 0.0362355457355654,
+      "positive_increment_concentration": 0.30939815761801365,
+      "eligible": true,
+      "selection_status": "retrospective_tool_selected"
+    }
+  ],
+  "exact_one_state_per_family": true,
+  "fresh_oos": false,
+  "model_training_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6"
+}

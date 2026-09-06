@@ -1,0 +1,11 @@
+{
+  "schema_id": "factorlab.reaka_intraday_OT3_manifest@1.0",
+  "contract_digest": "sha256:8102c9ec83db36f4de22a61df4288ed67c31345bb21b9072adfcd87cfd2a1551",
+  "decision_clock": "14:45",
+  "transport_digest": "sha256:dce64da3dc5139e273b29a1fa72b13996e790efabfbb4f83b4122b1e9aee39f7",
+  "transport_rows": 1142919,
+  "decision_count": 507,
+  "pre_sum_column_present": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:9e1ee01564d541bda8c5ebd8660cb271ac2023145cdaf7068686c5874ab82e52"
+}
