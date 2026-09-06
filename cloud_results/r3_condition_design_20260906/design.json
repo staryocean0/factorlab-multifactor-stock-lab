@@ -1,0 +1,54 @@
+{
+  "design_id": "R3-CONDITION-DESIGN-20260906-01",
+  "feature_dim": 71,
+  "sequence_points": 10,
+  "channel_groups_half_open": {
+    "state_values": [
+      0,
+      14
+    ],
+    "state_available": [
+      14,
+      28
+    ],
+    "stock_factor_exposures": [
+      28,
+      42
+    ],
+    "exposure_reliability": [
+      42,
+      56
+    ],
+    "exposure_available": [
+      56,
+      70
+    ],
+    "age_placeholder": [
+      70,
+      71
+    ]
+  },
+  "primary_arms": [
+    "history_full",
+    "history_only"
+  ],
+  "optional_bridge_arm": "history_exposure",
+  "primary_contrast": "history_full_minus_history_only",
+  "optional_contrasts": [
+    "history_full_minus_history_exposure",
+    "history_exposure_minus_history_only"
+  ],
+  "apply_after": "original_fit_prefix_normalize_batch",
+  "required_call_sites": [
+    "DMD_initialization",
+    "training_objective_inputs",
+    "fit_prefix_checkpoint_loss",
+    "review_forecast_inputs"
+  ],
+  "same_topology_not_equal_effective_trainability": true,
+  "training_runner_integrated": false,
+  "training_executed": false,
+  "feature_increment_identified": false,
+  "fresh_oos": false,
+  "production_authority": false
+}

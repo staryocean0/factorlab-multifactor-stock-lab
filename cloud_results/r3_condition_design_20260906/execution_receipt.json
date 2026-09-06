@@ -1,0 +1,60 @@
+{
+  "task": "R3-CONDITION-DESIGN-20260906-01",
+  "status": "design_and_feature_views_complete_real_training_not_run",
+  "source_branch_base": "1c061e658772cfe668924644c556731cd18a2687",
+  "execution_location": "current_cloud_container",
+  "test_command": "python -m pytest -q tests/unit/test_reaka_r3_condition_views.py --junitxml=cloud_results/r3_condition_design_20260906/view_tests.xml",
+  "tests": 33,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "source_and_test_sha256": {
+    "src/factor_lab/factor_rotation/reaka_r3_condition_views.py": "7d76a03785e2d03623342c63c360ddf7680835433294f5f511163d09fba2f921",
+    "tests/unit/test_reaka_r3_condition_views.py": "70a6777eb4340d6a4d93f47921562d159b6968ea88b6cd78feb82677b663a072",
+    "docs/ops/r3_condition_increment_design_20260906.md": "04507605d460df3dbb3cb11a6dfcbaaaac084884c2e4c3f38c22c8de86652eab",
+    "docs/ops/research_state.json": "7c05fd5eb592a8ded1f636e3547564ffc36cb0a9278da4007b8a94dfa3bf0e40",
+    "docs/ops/cloud_local_communication.md": "d8f33cb9d7c0ea6cde45fade23ddfd37ad0d1b566aedf39836eb711fcd44a997"
+  },
+  "scope": "29 synthetic array/view cases plus 4 explicit synthetic-carrier subclass cases; forward/gradient checks only. Source excerpts and existing evidence reviewed. Not original Stage6 whole-module integration, actual DMD, fitted ablation, PIT or market-score computation.",
+  "reuse_search": "Current PR outputs and relevant arm registries, fit-prefix and diagnostic sources; no acceptable same-recipe history-only result found in reviewed evidence. No assertion about all local files.",
+  "network_read_note": "GitHub connector reads succeeded; direct container HTTPS retrieval failed with DNS error. No retry or market-data transfer.",
+  "training_runner_integrated": false,
+  "real_training_executed": false,
+  "frozen_inference_executed": false,
+  "new_local_task": {
+    "id": "LCL-R3-COND-20260906-01",
+    "status": "pending_user_transfer_not_executed",
+    "primary_new_fit_bound": 6,
+    "fallback_total_new_fit_bound": 12,
+    "optional_bridge_default": false,
+    "max_cycles_per_fit": 3,
+    "required_local_implementation": "Isolated scripts/reaka_r3_condition_compare.py runner integrating the supplied adapter with original seed initialization, arm-specific DMD, training, checkpoint loss and review; no turnkey training CLI is claimed to exist."
+  },
+  "existing_model_modified": false,
+  "r2_reopened": false,
+  "account_replay": false,
+  "actions_executed": false,
+  "condition_feature_increment_identified": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "torch": "2.10.0+cpu",
+  "provided_interfaces": [
+    "feature_view",
+    "normalized_batch_view",
+    "condition_model_class",
+    "describe_design"
+  ],
+  "documentation_update_checks": {
+    "original_state_git_blob": "cbf320a1e173f860593005f7d3a811bef9cf50e4",
+    "original_communication_git_blob": "5b62727e251d2f83492fcc63f1a2428646459ad0",
+    "original_bytes_reconstructed_and_matched": true,
+    "prior_communication_retained_verbatim": true,
+    "R1_R2_and_prior_R3_acceptance_fields_preserved": true
+  },
+  "test_repeated_before_publication": "33 cases rerun on unchanged implementation; not additional independent evidence.",
+  "full_repository_tests_run": false
+}

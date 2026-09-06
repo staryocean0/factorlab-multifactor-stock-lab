@@ -84,6 +84,24 @@ python scripts/reaka_r3_frozen_compare.py \
 
 **收口与下一动作**：本任务completed_with_limits，R3当前为nofit_baseline_comparison_reviewed_consumed_only。本次没有需要本地返工的问题，也没有新的本地数据任务。下一步由云端先查已有可比结果，设计区分收益历史建模与原有条件特征增量的最小对照；不将推理时置零当训练消融，不混入第二轮新增月度条件。此验收不启动训练、K搜索、残差网络、账户、Actions或main合并，R2及其他历史局限不重开。
 
+## 实际任务：LCL-R3-COND-20260906-01
+
+**状态与入口（2026-09-06）**：云端已完成设计和输入视图/模型子类适配，真实对照待用户转交本地，未派发、未拟合。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
+
+**金融问题与主比较**：区分历史epsilon表示学习与原有直接X信息包增量。默认仅F完整输入、H同拓扑且全部71个X通道在训练和评价中置零；K1/r0、目标、支持、normalizer与训练规则相同。可选E只移除状态/状态掩码，保留暴露/可靠性/暴露掩码，不在默认执行范围。不是使用旧without_gate，也不把推理时置零当训练消融；新月度CloudRidge条件不混入。
+
+**云端已完成**：核阅相关arm注册、输入装配、encode、normalizer、fit-prefix与评价来源；已核范围没有合格现成H对照，不证明本地所有历史目录都没有。[输入/模型适配代码](../../src/factor_lab/factor_rotation/reaka_r3_condition_views.py)和[33项测试](../../tests/unit/test_reaka_r3_condition_views.py)已执行通过，零失败/错误/跳过；其中29项数组性质、4项明确的合成神经载体子类性质。回执见[execution_receipt.json](../../cloud_results/r3_condition_design_20260906/execution_receipt.json)。未完整导入原模型验证整个runner，未做真实拟合或新市场评分。
+
+**本地实现与缺失输入**：当前云端没有完整原K1数组、原训练数值模块的集成运行环境。原FactorLab提供两时钟K1 input、原fit-prefix配置/normalizer/六份分数与来源。先查已知相关实验是否有同口径F/H，充分则复用。否则需本地新建隔离的 `scripts/reaka_r3_condition_compare.py`；完整训练runner当前尚不存在，不把其命令当成已可执行。采用已提供 `condition_model_class` 或等价可审查接线，确保DMD、每个训练batch、canonical loss、forecast均使用同臂视图，且各臂独立预DMD初始化/优化器与DMD估计。
+
+**预算与边界**：F原结果确可复用时只新增两时钟×三seed=最多6次H拟合，各最多3cycle。确有影响可比性的数值路径差异时，在新结果前记录原因，隔离新F/H最多12次拟合、36cycle；不是因H结果不利而重跑F。不得默认增加E、K、seed、训练长度或参数搜索。真实数值无效保留失败；弱/负增量是合法结果。旧模型、账户、原结果和原FactorLab脏工作区不动，不触发Actions。
+
+**现有可执行命令与待实现部分**：`python -m pytest -q tests/unit/test_reaka_r3_condition_views.py`可直接运行。正式训练CLI由本地在上述隔离runner中实现并记录真实命令；先以合成/小batch检验F恒等、H对X变化不敏感及四入口接线，再执行有界任务。方案第4—7节给出固定配置、相同2017支持、原逐日rank-z集成和原fit-prefix选周期规则；不读取future作为训练目标。
+
+**回传与云端验收**：新目录 `cloud_results/local_handoff_R3_condition_20260906/` 下 `local_feedback.md`、`comparison.json`、`paired_daily.csv`，并回传新增runner/测试。记录源提交、输入/normalizer/支持摘要、每seed初始化/选周期、实际拟合数量、复用理由、全部失败与环境。大数据/checkpoint留本地。报告已消费2017的F−H、H−既有四B，既有B同支持则复用；不升级PIT/OOS/金融因果或生产结论。
+
+**转交状态**：此提交保存明确可实施的设计与本地任务，由用户安排执行；没有直连本地自动执行通道。当前没有本地结果可验收。本地完成后只填“本地已反馈”，云端再复核；不是新建全局审批或重复旧补件。
+
 ## 任务记录与反馈模板
 
 以下是其他任务的模板，不是新增派发任务。记录可简写，字段可合并；只填写本次步骤必需的信息，不要求另外生成多份合同、报告或签字。

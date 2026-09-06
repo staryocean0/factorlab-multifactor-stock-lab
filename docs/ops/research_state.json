@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-06",
-  "current_task": "r3_nofit_comparison_cloud_review_complete_condition_increment_design_next",
+  "current_task": "r3_condition_increment_design_complete_local_matched_controls_pending",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -99,14 +99,14 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "LCL-R3-NOFIT-20260906-01已由云端验收收口，既有2017样本上的四基准描述性增量成立，不重复计算。下一步由云端先查可复用对照并设计区分收益历史建模与原有条件特征增益的最小可比方案；同目标、同支持、同信息/训练范围，推理置零不冒充训练消融。当前没有新的本地派发或训练任务，不重开R2、不改K、不重放账户、不用Actions、不恢复fresh OOS。",
+  "next_useful_action": "云端已完成R3条件信息对照设计与33项合成测试。按沟通文档LCL-R3-COND-20260906-01，由用户转交本地：先复用确实同口径结果；缺H时接线隔离runner并执行主F/H对照，F可复用则最多新增6次H拟合，否则记录真实数值差异后最多12次F/H拟合。每次最多3cycle，E不默认执行。现任模型不替换，R2/NOFIT不重跑，不开K/残差搜索、账户或Actions；2017仍已消费。",
   "research_directions_not_a_mandatory_sequence": [
     {"question": "现任金融epsilon是否在正确时点、同一收益区间构造？", "independent_prework": "沿用已验收的存盘算术和重建证据；仅对新任务确需的事件可得性或未覆盖来源另定检查，避免重复盘点。", "empirical_dependency": "全量PIT仍未认证；本轮任务完成不替代该更强主张的来源证据。"},
     {"question": "市场或行业条件能否通过个股异质响应改善排序？", "independent_prework": "写清无条件基准、总收益或金融残差目标、同支持评价和共同状态的统计单位；常数平移作为无效反例。", "empirical_dependency": "未来已授权比较需自己的因果输入与评价数据，不沿用Stage4已实现持仓贡献作为预测增量。"},
     {"question": "增加容量或潜残差模型是否有必要？", "independent_prework": "区分改变金融残差预测与增加潜动力修正；比较可辨识性和简单基准，不默认选K2或DDPM。", "empirical_dependency": "按该实验预分析及尝试预算验证，允许零修正和无增益。"}
   ],
   "r3": {
-    "status": "nofit_baseline_comparison_reviewed_consumed_only",
+    "status": "condition_increment_design_ready_local_comparison_pending",
     "report": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_review.md",
     "checks": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_checks.json",
     "initial_report": "docs/ops/r3_evidence_use_adjudication_20260906.md",
@@ -152,11 +152,44 @@
       "condition_feature_increment_identified": false,
       "full_repository_tests_run": false
     },
-    "new_local_task_required": false,
+    "new_local_task_required": true,
     "r2_reopened": false,
     "full_pit_certified": false,
     "fresh_oos": false,
     "production_authority": false,
-    "actions_executed": false
+    "actions_executed": false,
+    "condition_design": {
+      "id": "R3-CONDITION-DESIGN-20260906-01",
+      "status": "design_and_adapter_synthetic_tests_complete_real_fits_not_run",
+      "report": "docs/ops/r3_condition_increment_design_20260906.md",
+      "source": "src/factor_lab/factor_rotation/reaka_r3_condition_views.py",
+      "tests": "tests/unit/test_reaka_r3_condition_views.py",
+      "receipt": "cloud_results/r3_condition_design_20260906/execution_receipt.json",
+      "source_base_commit": "1c061e658772cfe668924644c556731cd18a2687",
+      "primary_contrast": "same_recipe_history_full_minus_history_only",
+      "optional_bridge": "history_exposure_not_in_default_execution",
+      "reuse_search_result": "No acceptable same-recipe history-only result in reviewed repository sources/output records; not proof that no matching local result exists.",
+      "targeted_synthetic_tests": 33,
+      "failures": 0,
+      "whole_original_model_integration_tested": false,
+      "real_training_executed": false,
+      "note": "29 array-interface cases and 4 explicitly synthetic-carrier subclass cases; not an empirical ablation or a turnkey training runner."
+    },
+    "local_condition_task": {
+      "id": "LCL-R3-COND-20260906-01",
+      "status": "pending_user_transfer_not_executed",
+      "instruction": "docs/ops/r3_condition_increment_design_20260906.md#7-本地最小执行任务lcl-r3-cond-20260906-01",
+      "required_implementation": "New isolated scripts/reaka_r3_condition_compare.py integrating the supplied view adapter into original initialization, arm-specific DMD, training, checkpoint selection and forecast. This complete runner is not yet supplied.",
+      "reuse_before_fit": true,
+      "new_H_fits_when_F_reusable_max": 6,
+      "joint_FH_fallback_fits_max": 12,
+      "max_cycles_per_fit": 3,
+      "optional_E_enabled": false,
+      "expected_feedback_root": "cloud_results/local_handoff_R3_condition_20260906/",
+      "incumbent_replacement_allowed": false,
+      "training_started": false,
+      "data_scope": "existing K1 fit-prefix inputs through 2016 and consumed 2017 review; no DataHub minute/account task",
+      "decision_owner": "cloud review; local executes bounded implementation and numerical comparison"
+    }
   }
 }
