@@ -1,0 +1,68 @@
+{
+  "schema_id": "factorlab.infrastructure_v1_4_local_inventory_validation@1.0",
+  "adopted_concurrent_baseline": "14fc345003258102866990263e1528dc39835142",
+  "implementation_commit": "3b7286efa043d1b69cb6bd91002be46a764ded3c",
+  "implementation_tree": "d577afb3c4305c49ddf87e13bb4c2bb9fb6c747c",
+  "actual_merge_checkout": "ece51c470b13579f708e8ef3577ca2d00148aefc",
+  "main_input_commit": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
+  "workflow_run_id": 34013765793,
+  "job_id": 101433931096,
+  "job_conclusion": "success",
+  "verification_source": "GitHub job status and decoded actual job logs, including INFRASTRUCTURE_RECEIPT and NAVIGATION_RECEIPT; artifact metadata independently read through GitHub API. Not an independent download/recount of the raw artifact ZIP/XML.",
+  "tests": {
+    "status": "passed_selected_scope",
+    "discovered_unit_modules": 23,
+    "executed_unit_modules": 21,
+    "tests": 409,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "local_inventory_counterexamples": 23,
+    "historical_fixture_commit": "3a75376e1f7f871bb72e48f886c275919b3c9671",
+    "deferred_historical_modules": [
+      {"test_module": "tests/unit/test_reaka_current_k1_account_ledgers_v1.py", "status": "not_executed_not_passed", "missing_source_dependencies": ["src/factor_lab/filtering/cloudridge_3_0_hybrid_filter_bank.py"]},
+      {"test_module": "tests/unit/test_reaka_intraday_orthogonal_ot_v1.py", "status": "not_executed_not_passed", "missing_source_dependencies": ["src/factor_lab/filtering/cloudridge_3_0_hybrid_filter_bank.py"]}
+    ],
+    "full_repository_validated": false
+  },
+  "infrastructure": {
+    "status": "passed",
+    "checked_current_sources": 42,
+    "errors": [],
+    "current_link_errors": 0,
+    "meaning": "Current routing, source locators, stable semantics and current local links; not complete historical source-byte closure or proof of all prose."
+  },
+  "navigation_inventory": {
+    "materialized_markdown_files": 84,
+    "markdown_link_targets": 2625,
+    "reported_historical_issues": 2491,
+    "issue_reason_counts": {"missing_target": 2487, "not_materialized": 1, "outside_repository": 3},
+    "scope": "Actual CI merge snapshot before this receipt-only commit; historical issues remain disclosed and are not whole-project upload requirements."
+  },
+  "local_counterexample_run": {"tests": 23, "failures": 0, "errors": 0, "skipped": 0, "input_type": "synthetic temporary files only; no real FactorLab source inventory performed"},
+  "artifact": {
+    "id": 9983281133,
+    "name": "infrastructure-ece51c470b13579f708e8ef3577ca2d00148aefc",
+    "bytes": 41498,
+    "github_reported_sha256": "47c8f47c9b35b061094a65e6dc90d479447855612bdf42128a214e7bc88d5d30",
+    "github_expires_at": "2026-10-06T05:22:41Z",
+    "raw_zip_independently_downloaded_and_rehashed_in_this_followup": false,
+    "files": ["checkout.txt", "contract.json", "environment.txt", "regression_fixtures.json", "test_scope.json", "tests.xml"]
+  },
+  "environment": {"python": "3.11.16", "pytest": "8.4.2", "numpy": "2.4.6", "pandas": "2.3.3", "pyarrow": "19.0.1", "torch": "2.14.0+cpu"},
+  "implementation_scope": [
+    "Metadata-only bounded local source collector with strict request parsing, path containment, streaming hashes and source-change detection",
+    "Original unknown OT digest conventions remain unbound even when a candidate matches",
+    "23 counterexamples automatically included by the existing current test runner",
+    "Current manifest component locator and workflow command/exit-code guidance"
+  ],
+  "no_additional_global_permission_engine": true,
+  "not_executed": ["real_local_P6_source_inventory", "whole_dataset_integrity", "full_unit_without_deferral", "R2_PIT_reconstruction", "new_training", "capacity_selection", "frozen_score_regeneration", "account_replay"],
+  "historical_inputs_receipts_and_model_bytes_modified": false,
+  "fresh_oos": false,
+  "scientific_acceptance": "not_established",
+  "production_authority": false,
+  "local_factorlab_pointer_changed": false,
+  "receipt_policy": "This follow-up commit adds only this receipt and takeover review. Tested implementation and current guidance remain unchanged from the implementation commit."
+}
