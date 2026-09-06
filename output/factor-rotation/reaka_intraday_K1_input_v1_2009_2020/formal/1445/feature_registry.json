@@ -1,0 +1,366 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_feature_registry@1.0",
+  "feature_dim": 71,
+  "channels": [
+    {
+      "position": 0,
+      "name": "state:orthogonal_market_cloudridge_v1",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 1,
+      "name": "state:orthogonal_size_small_minus_large_v1",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 2,
+      "name": "state:L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 3,
+      "name": "state:L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 4,
+      "name": "state:L1_FACTOR_CORE:l1_408d0d6311af6040",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 5,
+      "name": "state:L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 6,
+      "name": "state:L1_FACTOR_CORE:l1_671d1224f30429fc",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 7,
+      "name": "state:L1_FACTOR_CORE:l1_792b96c3abe50a27",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 8,
+      "name": "state:L1_FACTOR_CORE:l1_8984213af3aad2b9",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 9,
+      "name": "state:L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 10,
+      "name": "state:L1_FACTOR_CORE:l1_bb44b83305bab23e",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 11,
+      "name": "state:L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 12,
+      "name": "state:L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 13,
+      "name": "state:L1_FACTOR_CORE:l1_efc230548b31f923",
+      "role": "selected_signal_state"
+    },
+    {
+      "position": 14,
+      "name": "state_mask:orthogonal_market_cloudridge_v1",
+      "role": "state_availability"
+    },
+    {
+      "position": 15,
+      "name": "state_mask:orthogonal_size_small_minus_large_v1",
+      "role": "state_availability"
+    },
+    {
+      "position": 16,
+      "name": "state_mask:L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+      "role": "state_availability"
+    },
+    {
+      "position": 17,
+      "name": "state_mask:L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+      "role": "state_availability"
+    },
+    {
+      "position": 18,
+      "name": "state_mask:L1_FACTOR_CORE:l1_408d0d6311af6040",
+      "role": "state_availability"
+    },
+    {
+      "position": 19,
+      "name": "state_mask:L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+      "role": "state_availability"
+    },
+    {
+      "position": 20,
+      "name": "state_mask:L1_FACTOR_CORE:l1_671d1224f30429fc",
+      "role": "state_availability"
+    },
+    {
+      "position": 21,
+      "name": "state_mask:L1_FACTOR_CORE:l1_792b96c3abe50a27",
+      "role": "state_availability"
+    },
+    {
+      "position": 22,
+      "name": "state_mask:L1_FACTOR_CORE:l1_8984213af3aad2b9",
+      "role": "state_availability"
+    },
+    {
+      "position": 23,
+      "name": "state_mask:L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+      "role": "state_availability"
+    },
+    {
+      "position": 24,
+      "name": "state_mask:L1_FACTOR_CORE:l1_bb44b83305bab23e",
+      "role": "state_availability"
+    },
+    {
+      "position": 25,
+      "name": "state_mask:L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+      "role": "state_availability"
+    },
+    {
+      "position": 26,
+      "name": "state_mask:L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+      "role": "state_availability"
+    },
+    {
+      "position": 27,
+      "name": "state_mask:L1_FACTOR_CORE:l1_efc230548b31f923",
+      "role": "state_availability"
+    },
+    {
+      "position": 28,
+      "name": "beta:orthogonal_market_cloudridge_v1",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 29,
+      "name": "beta:orthogonal_size_small_minus_large_v1",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 30,
+      "name": "beta:L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 31,
+      "name": "beta:L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 32,
+      "name": "beta:L1_FACTOR_CORE:l1_408d0d6311af6040",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 33,
+      "name": "beta:L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 34,
+      "name": "beta:L1_FACTOR_CORE:l1_671d1224f30429fc",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 35,
+      "name": "beta:L1_FACTOR_CORE:l1_792b96c3abe50a27",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 36,
+      "name": "beta:L1_FACTOR_CORE:l1_8984213af3aad2b9",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 37,
+      "name": "beta:L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 38,
+      "name": "beta:L1_FACTOR_CORE:l1_bb44b83305bab23e",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 39,
+      "name": "beta:L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 40,
+      "name": "beta:L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 41,
+      "name": "beta:L1_FACTOR_CORE:l1_efc230548b31f923",
+      "role": "stock_factor_exposure"
+    },
+    {
+      "position": 42,
+      "name": "reliability:orthogonal_market_cloudridge_v1",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 43,
+      "name": "reliability:orthogonal_size_small_minus_large_v1",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 44,
+      "name": "reliability:L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 45,
+      "name": "reliability:L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 46,
+      "name": "reliability:L1_FACTOR_CORE:l1_408d0d6311af6040",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 47,
+      "name": "reliability:L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 48,
+      "name": "reliability:L1_FACTOR_CORE:l1_671d1224f30429fc",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 49,
+      "name": "reliability:L1_FACTOR_CORE:l1_792b96c3abe50a27",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 50,
+      "name": "reliability:L1_FACTOR_CORE:l1_8984213af3aad2b9",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 51,
+      "name": "reliability:L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 52,
+      "name": "reliability:L1_FACTOR_CORE:l1_bb44b83305bab23e",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 53,
+      "name": "reliability:L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 54,
+      "name": "reliability:L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 55,
+      "name": "reliability:L1_FACTOR_CORE:l1_efc230548b31f923",
+      "role": "exposure_reliability"
+    },
+    {
+      "position": 56,
+      "name": "exposure_mask:orthogonal_market_cloudridge_v1",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 57,
+      "name": "exposure_mask:orthogonal_size_small_minus_large_v1",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 58,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 59,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 60,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_408d0d6311af6040",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 61,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 62,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_671d1224f30429fc",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 63,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_792b96c3abe50a27",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 64,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_8984213af3aad2b9",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 65,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 66,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_bb44b83305bab23e",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 67,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 68,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 69,
+      "name": "exposure_mask:L1_FACTOR_CORE:l1_efc230548b31f923",
+      "role": "exposure_availability"
+    },
+    {
+      "position": 70,
+      "name": "exposure_age_fraction",
+      "role": "exact_D5_refresh_age_zero"
+    }
+  ],
+  "price_volume_channels": [],
+  "LAT_channels": [],
+  "oracle_or_target_channels": [],
+  "production_authority": false,
+  "canonical_digest": "sha256:ef5a92688ae207b7eaa3da60b219d238754fa4219d815d7a069947c7507d4159"
+}

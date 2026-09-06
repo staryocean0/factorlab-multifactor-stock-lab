@@ -1,0 +1,19 @@
+{
+  "factor_ids": [
+    "orthogonal_market_cloudridge_v1",
+    "orthogonal_size_small_minus_large_v1",
+    "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+    "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+    "L1_FACTOR_CORE:l1_408d0d6311af6040",
+    "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+    "L1_FACTOR_CORE:l1_671d1224f30429fc",
+    "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+    "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+    "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+    "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+    "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+    "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+    "L1_FACTOR_CORE:l1_efc230548b31f923"
+  ],
+  "canonical_digest": "sha256:67128a192242cf66cc6bf03fa3c2f245ae7bd81d014ee551109b28c795e6464e"
+}

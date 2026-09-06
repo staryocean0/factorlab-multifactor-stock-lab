@@ -1,0 +1,29 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 27319552,
+  "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/inference_rows.npy",
+  "original_sha256": "72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "bytes": 8388608,
+      "name": "00.bin",
+      "sha256": "c6a3703535d04a6f4c643239f09d6786daf553b85bcb8dcfd4e4a8e1450df832"
+    },
+    {
+      "bytes": 8388608,
+      "name": "01.bin",
+      "sha256": "f68b02da8df1bf60b54aeb326cd1fca0e07bad44b5b6d86c8cd0b523c1fd94de"
+    },
+    {
+      "bytes": 8388608,
+      "name": "02.bin",
+      "sha256": "6e043ba73318c00395ac2dadec0cd8f632e650bd6a6b583c501fe2aa97fb0957"
+    },
+    {
+      "bytes": 2153728,
+      "name": "03.bin",
+      "sha256": "30a701dea90b240ccacccd51ad1415e096f1352c15b0ecf861507693d4d2ec13"
+    }
+  ]
+}

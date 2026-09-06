@@ -1,0 +1,29 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 32556960,
+  "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_available.npy",
+  "original_sha256": "8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "bytes": 8388608,
+      "name": "00.bin",
+      "sha256": "9ebe0b694d6c6e1049b9bc2ca057e84f9312d7ab1066eed310de765cbc9fc3ec"
+    },
+    {
+      "bytes": 8388608,
+      "name": "01.bin",
+      "sha256": "0cfcd5b82bf11f9f963c2f28f32967e35e9d695bf5c0cacf9f5c016e198c246f"
+    },
+    {
+      "bytes": 8388608,
+      "name": "02.bin",
+      "sha256": "2ad5b2c885702ecb3e73e9bca95089dae98b3e09ccf28edac4f918757b0b05c0"
+    },
+    {
+      "bytes": 7391136,
+      "name": "03.bin",
+      "sha256": "89df2923c56bc430bf757b8f117949cfd5f4a2c524a7f8dee6b1dd8b918e6d69"
+    }
+  ]
+}

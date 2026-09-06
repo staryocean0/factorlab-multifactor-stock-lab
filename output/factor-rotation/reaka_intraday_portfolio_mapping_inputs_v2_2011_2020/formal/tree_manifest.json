@@ -1,0 +1,21 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_tree@1.0",
+  "contract_digest": "sha256:c4064f1a7cf14794e803782e0d75e80563b729980e2ee6f2d61b16772336f9fc",
+  "tree_neutral": true,
+  "files": {
+    "bounded_score_panel_1430.parquet": "sha256:7ad9472f307b560d1a4474b18926c09fb23f9cd5645178dcc2b5ce1f315d883d",
+    "bounded_score_panel_1445.parquet": "sha256:29c64330a3f65ef35430ac6ab23634f12896e7d8aecbb5f8c1c581b0b837e864",
+    "daily_market_panel_1430.parquet": "sha256:6652efb41bb9a0748c6c5b20b23f6f0a674ac21ed3ccc42a92ee6971cbec138c",
+    "daily_market_panel_1445.parquet": "sha256:25f7f5e812d6e3e17e05e281b905f4ab219bca2cb06b9b4eb4711cd073bc96d2",
+    "input_manifest_1430.json": "sha256:b1ae04e2b1e4e87795f6f853e5ab43c911143824b6211719df04e8f546885d12",
+    "input_manifest_1445.json": "sha256:89c81c8b11d7e89064fc878ccefceb76ee6b50ade710be5ac5c240f5ca650893",
+    "security_metadata_repair_tradeability_panel.parquet": "sha256:7ed033e7d87d51b2b824ffe275078ecb330b57679ff238dc303987baf4411fe4",
+    "source_closure_1430.json": "sha256:97eb21c89f3f8a4902c3941d9fcbe10e003581876043f45bfc3fe71e2abc130b",
+    "source_closure_1445.json": "sha256:6c34544af00a9e991e05460ebb513ca52f4ea1837556a072d46a73b2f92d1b06",
+    "validation_report.json": "sha256:35aa81722ce245c6f7e3a1dfa7caaa2754c34a5125543320b65acdf0219ddeb8"
+  },
+  "validation_digest": "sha256:4053c67cc7121da5dc9f5b7b31c90331f944b74cf6b165eabcc8357590bfdd0d",
+  "account_mapping_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:17d0c64f522df37c906d3e84f95b1aa1b64bafe4c140d81d833f91d5b25e8fa3"
+}

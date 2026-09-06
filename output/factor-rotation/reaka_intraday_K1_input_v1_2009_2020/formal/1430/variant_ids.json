@@ -1,0 +1,11 @@
+{
+  "variant_ids": [
+    "full_reference",
+    "crossfit_fold_0",
+    "crossfit_fold_1",
+    "crossfit_fold_2",
+    "crossfit_fold_3",
+    "crossfit_fold_4"
+  ],
+  "canonical_digest": "sha256:6a2a96979179a09f36e9afd696de6e25533d61ac4442a43a5d026b2882e782ce"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_source_closure@1.0",
+  "contract_digest": "sha256:36f630c37ac8bfe9fee4d98b6a341562fb96549fff6d423fa7f0a62dbacafd0b",
+  "market_rebuild_contract_digest": "sha256:c4064f1a7cf14794e803782e0d75e80563b729980e2ee6f2d61b16772336f9fc",
+  "tree_neutral": true,
+  "decision_clock": "14:45",
+  "source_digests": {
+    "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_market_rebuild_v2.py": "sha256:422ee7d397e61022ac76973929881bd9e78ab9fb54ad7a1693266db173f2491b",
+    "tests/unit/test_reaka_intraday_portfolio_mapping_market_rebuild_v2.py": "sha256:dba94d0ca7e8e84bdd35d6280acd0a655f5a00e049e49d1bbdc4f185a21fa61f",
+    "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py": "sha256:74d826ffd3165c16dc4bf3dbb24423383a2584c8016806c10e51a38953cba492",
+    "scripts/factor_rotation/materialize_reaka_stage6_portfolio_inputs.py": "sha256:91b6088b67dc88f596bd625d21e38d23cf32e24a341295b00345a4a0cb63bc1c",
+    "src/factor_lab/factor_rotation/reaka_stage6_portfolio_execution.py": "sha256:754416b33c03e3484de8b7268765a5b94e8e8c135057b1287f6d5283ad4c73a0",
+    "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py": "sha256:dc7dc7f183201d76d4765c95562239adbbb73e9e5a44169ddbe39fa928fbecda",
+    "docs/ops/reaka_intraday_portfolio_mapping@1.2.json": "sha256:180f29bd18d62763571bf281d8af1b9e9051d7665a4527d417523e13638d6544",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_inputs_v1_20260901/validation_report.json": "sha256:23278ce0a240072daa49021fb716afed848a63821947b25f78457ed23f002053",
+    "/home/starryocean/桌面/量化/unified_datahub/evidence/history/security_day_metadata_000638_pit_repair_20260901/validation_report.json": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_entrypoint_import_incident.json": "sha256:07bb4c623ba0b9e569695bb027d56dd49ef81613702aa0cb3bca67c3085cc2e6",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_000638_HFQ_coverage_incident.json": "sha256:69fa81385d03f44c4d2502fb1e43daff1702b6ba1a5d19b40e39223c50450b9c",
+    "/home/starryocean/桌面/量化/unified_datahub/evidence/history/xdxr_000638_incremental_repair_20260901/validation_report.json": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_XDXR_suspended_event_date_incident.json": "sha256:539cec7529615b0ef4301b8218f7fc9edf46ba3c1a87c43856af5fc19fff94ae",
+    "docs/ops/evidence/reaka_intraday_portfolio_mapping_market_rebuild_v2_20260901/pre_result_HFQ_source_label_incident.json": "sha256:2669c8c191031d392f5a3e0b7603a5cb7f05b51878e121cc32e32f6866a92cda",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.3.json": "sha256:76f265eec276d778a7dbeb09ba14b9371dfda5207f16687be754f8e9ff2a3999",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.2.json": "sha256:77065f9794294be9aea8b04ec1a9665f82a8f622b4052dbb0d51e92f0fdf4b34",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.1.json": "sha256:e5cb931f7c9ee9d3efb69eed3f0aaa9bf497969c5bf9dbcffa25baf2e1d9af02",
+    "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.0.json": "sha256:74b59a6ecfb83f705ec8ebd46d7258c69ba49b3d9b7994a7c51cfe5de140272e"
+  },
+  "verified_input_count": 47,
+  "input_manifest_digest": "sha256:d3b67b94e34650ac2782f9c4fbf87d0554d4d3a935d4765f0b1a301ca70c46dd",
+  "account_mapping_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:0ab74563d97ce9dccfd421937070083e4a4d39b4ab45827ac8731c5ce80d7709"
+}

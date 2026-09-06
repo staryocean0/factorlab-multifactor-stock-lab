@@ -1,0 +1,44 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 54250896,
+  "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_future.npy",
+  "original_sha256": "109e39090aaee744679ed12e176e48ec534583b99269ac2f1a24d8f3d9edc90a",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "bytes": 8388608,
+      "name": "00.bin",
+      "sha256": "ea6de2a0b9b620ba4d8989fd6e87712abf3a93be2d535695f7e4439bda47063c"
+    },
+    {
+      "bytes": 8388608,
+      "name": "01.bin",
+      "sha256": "4345b2639304d05628f93fd5a744fdee0ce5b9ffad362f1df88c984eeeeaae88"
+    },
+    {
+      "bytes": 8388608,
+      "name": "02.bin",
+      "sha256": "78f82955f9eed231d8ff6a113f166d35c97e4c14e5d1e02b1c9b90d44dab8993"
+    },
+    {
+      "bytes": 8388608,
+      "name": "03.bin",
+      "sha256": "10aaf8f63963c0872f6713dbc70ace6e6b82426bad3c3ec48b365410db359fed"
+    },
+    {
+      "bytes": 8388608,
+      "name": "04.bin",
+      "sha256": "d00122b49c0529ed5646a14fca7b0000bf0a06db2f009a270e57202811a509ca"
+    },
+    {
+      "bytes": 8388608,
+      "name": "05.bin",
+      "sha256": "c1b13bee7210eb59cf106280f6ff26250d93a19e1d1927cc3642c609f5e64d75"
+    },
+    {
+      "bytes": 3919248,
+      "name": "06.bin",
+      "sha256": "c0eb4069a31786bcfbcd47404e2d7812ea63c45db410fd6b47d26614307a0521"
+    }
+  ]
+}

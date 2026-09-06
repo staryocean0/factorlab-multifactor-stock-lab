@@ -1,0 +1,851 @@
+{
+  "schema_id": "factorlab.r1_split_artifacts@1.0",
+  "files": [
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1430.parquet",
+      "original_bytes": 149018552,
+      "original_sha256": "6652efb41bb9a0748c6c5b20b23f6f0a674ac21ed3ccc42a92ee6971cbec138c",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "8325f1d43941480baca7f38738a18e3a8f54cf7c12fa17f1b388a4c171dcd765"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "88c2da628de24f0f12ec7c7e0229c97140a8407ccc9ff1993ca1acf51d799d6a"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "5c947bf42e09418b671e58b0d481a8dd680e231a7e487537163207cd9772b396"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "5a6ad9ff72c7f33ff4ad0c435a567b5b8b53bb8a5c198623250ced47014da4be"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "d75aa933e46cee358273303bbdcdb49b6ab4693f86e7f5297066f01d359a670e"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "e7d6a63f4124a78ee99ea6aa322d90afe7cb10d8989ff00de6451411ce3ad888"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 8388608,
+          "sha256": "b2a6f767ce0ea7c08b807ddecf7546f31630c283cd70a8100f8a20f526772c31"
+        },
+        {
+          "name": "07.bin",
+          "bytes": 8388608,
+          "sha256": "9c9feec9e82bbda3ee40302d64d33d319be372b98444391be4d8eecf753cfe8b"
+        },
+        {
+          "name": "08.bin",
+          "bytes": 8388608,
+          "sha256": "7c8053ba94f2a5e84b7d32f9487e87b7705dc2a412527a0f8ced63282f7d179f"
+        },
+        {
+          "name": "09.bin",
+          "bytes": 8388608,
+          "sha256": "550e8f9f7e5238916aede561d803259f665a6b0ff3b4b4f908e7566267586ba4"
+        },
+        {
+          "name": "10.bin",
+          "bytes": 8388608,
+          "sha256": "b3b916a120552e2087eed6f25cb7d7b33d0fffec48c0fe12f6e24ca3d81ec87f"
+        },
+        {
+          "name": "11.bin",
+          "bytes": 8388608,
+          "sha256": "2567eb1e219dfd9689521233f396139d68a3318b78a8ce406fbff0efcbd8e401"
+        },
+        {
+          "name": "12.bin",
+          "bytes": 8388608,
+          "sha256": "58d06e1715af1687e2a6b9df52ce22a542a9eb9377b7aaf1662db536050b484c"
+        },
+        {
+          "name": "13.bin",
+          "bytes": 8388608,
+          "sha256": "ba17c645d6666cc6e5e048f2bc28aee8622f63bcf6338519692ebdc532b31de4"
+        },
+        {
+          "name": "14.bin",
+          "bytes": 8388608,
+          "sha256": "2270ddab24138eabefd1195a178395f2a0b5effd756ddca8c4556ceb8cb20c3e"
+        },
+        {
+          "name": "15.bin",
+          "bytes": 8388608,
+          "sha256": "ade9056c52a9237fcd777d5272d058faf234ce9747c90e0e088bde86fd9c8b3f"
+        },
+        {
+          "name": "16.bin",
+          "bytes": 8388608,
+          "sha256": "34f47fb04eee75e8de2d71c1f4e0fcd2625b9047bb62b557f21eae702782dd09"
+        },
+        {
+          "name": "17.bin",
+          "bytes": 6412216,
+          "sha256": "f2d5cdb157fbca823aad25795f6ec318c2667c30fa8658f39397acebcfe091ff"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1445.parquet",
+      "original_bytes": 149033417,
+      "original_sha256": "25f7f5e812d6e3e17e05e281b905f4ab219bca2cb06b9b4eb4711cd073bc96d2",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "ee94d215246ff808aa285d2723baa38e367083363e491b1064085cb87ff239a0"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "21d4edcea30303aa1221479562ae1f2aca9a7f92455fc18a9f54e71338032d8b"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "15aa390d730debf1b4bd183c039e506726817333ee3394830b5f682bf6efa3e9"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "aefe983ca27a4d51eb49c0fe22ab5a4f0238340af01330e2bf2e7ad81cd0865e"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "cfdf57cbb940970b6df722ee53cabff4a2352b7ba491b1c6a34ae00aeda08afe"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "992cec77d34831d5a57764e0feb9007575d724b1af7e484fbebc7300f1229bab"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 8388608,
+          "sha256": "3d109aca97eb53c9fdd0db7131360e3065d9dbd5a198eb68ce65dc93b5c032b3"
+        },
+        {
+          "name": "07.bin",
+          "bytes": 8388608,
+          "sha256": "9d3c882815dd04af82c7958bc113d1586206d33b8310843ef396596519fdb3e5"
+        },
+        {
+          "name": "08.bin",
+          "bytes": 8388608,
+          "sha256": "53ba8a3408ebe77fd66da60146c04f8cd1f046bb8b1f15e239a141a143305e0b"
+        },
+        {
+          "name": "09.bin",
+          "bytes": 8388608,
+          "sha256": "af808bf235a998f7df79695b6fc6796cf78dba99275f42a5c477293060ca6758"
+        },
+        {
+          "name": "10.bin",
+          "bytes": 8388608,
+          "sha256": "fb4e17311bf1f292f5186a4114f623b884f8dfd96729e9d9b0157b00337608f4"
+        },
+        {
+          "name": "11.bin",
+          "bytes": 8388608,
+          "sha256": "63f5a5e8f1d80c38e3bd56ea1305982baeffe992f41e7cc06724b4bcd8d00726"
+        },
+        {
+          "name": "12.bin",
+          "bytes": 8388608,
+          "sha256": "9db12f5a2fef9467fa7d3cacee25b4718848bb4e09578f888f6ca6adb34f0b3a"
+        },
+        {
+          "name": "13.bin",
+          "bytes": 8388608,
+          "sha256": "862030e958e112d7d62dd36a5791047044a3df9f6473f4d21dc3c9bb31751b42"
+        },
+        {
+          "name": "14.bin",
+          "bytes": 8388608,
+          "sha256": "cdf08c54b2d5b2afefa829e2aba74341b20081c5b81c2f22ab3c9c8130c67ef4"
+        },
+        {
+          "name": "15.bin",
+          "bytes": 8388608,
+          "sha256": "17200f959d6c09f9094a93a2497d3806d8638bc06d46cefae22d3c1d4fa4d93d"
+        },
+        {
+          "name": "16.bin",
+          "bytes": 8388608,
+          "sha256": "3388ae6d1e755f628cbc5542ff4a547735eee84ebcce3b7592b3a7791cdcaf46"
+        },
+        {
+          "name": "17.bin",
+          "bytes": 6427081,
+          "sha256": "0cf064d50dab891e01e46c189013b3a725ec0609e8cc81ee2c24206dc27af7c2"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_future.npy",
+      "original_bytes": 54250896,
+      "original_sha256": "83018e8b0bdf61a37d61ef5a43dac0a25cd26833af53da62590e39d4b1344953",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "ea6de2a0b9b620ba4d8989fd6e87712abf3a93be2d535695f7e4439bda47063c"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "83dd9ffd701910ad1d216b02d56056e473c7f09ac3e864349c7cd4be8d0dbbc5"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "d1d9d3f0d7708e6eb3b9c1a125ba6b2eedade1b2e28b12f8e8f76cd66b43a60e"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "be9feb5bbe12dadb77508a07456277abc8eabaa4559820f5c3395c8205c51a0c"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "143e3f8ed889f731be9847490cb08c788f2b5e3de9e9ff572280d242312c00e8"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "e676c57e55d21bac7d7b28061e6a6e287ed7873e83d352cff5629935287197cd"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 3919248,
+          "sha256": "345928fe74f3e7c732a461e1a0dc9511d0edf8b7b250645ff9d4888f67761354"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_history.npy",
+      "original_bytes": 54250896,
+      "original_sha256": "a84ce2e177915542857ce8842bffb3ebc60ef937430fbc6dad90960b083b8a19",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "ea6de2a0b9b620ba4d8989fd6e87712abf3a93be2d535695f7e4439bda47063c"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "ce8c9e869aca6e817122066287adb22cb200c72bbbd2b68fdfe53ae78d070923"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "f0709e25b959c999ea0708c86b4166580cbe03f1ea6161c469a9d284da8961b1"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "dd4c8a11f901ccebcf9709bd2b9f1b1226bba2be8746b4544696e9fb31454ac5"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "603442f2343f338dc2f503adbe533b6261a62aa5209bf9003112248487fc7fb8"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "a84e9287d7dbcfa52c3840a9c9e1fb6b938605d192f62e6c0eb994524c1cbf1d"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 3919248,
+          "sha256": "cd2de8acc9ca7926102c7c7c0ad8aa0434fa825ebc8ded87bcbddf1ad507f123"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_available.npy",
+      "original_bytes": 32556960,
+      "original_sha256": "8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "9ebe0b694d6c6e1049b9bc2ca057e84f9312d7ab1066eed310de765cbc9fc3ec"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "0cfcd5b82bf11f9f963c2f28f32967e35e9d695bf5c0cacf9f5c016e198c246f"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "2ad5b2c885702ecb3e73e9bca95089dae98b3e09ccf28edac4f918757b0b05c0"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 7391136,
+          "sha256": "89df2923c56bc430bf757b8f117949cfd5f4a2c524a7f8dee6b1dd8b918e6d69"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_reliability.npy",
+      "original_bytes": 130227456,
+      "original_sha256": "56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "5c4ca5480fa59e789dc42261dc441fbb76bc256999beb907d1cf8da856a10c60"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "a156ff196b1feb0d3c425af26204eb0b7b4728f5cca320629c0d94b749bdf28a"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "d64b919e6b47e62d0b9331fa55aec2e418d6e9bd2f95a3cfb8f545d84f62714d"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "33c37b08690d80bedb677d7e55479bab18d43756c8f84fe7426727311be1f0a3"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "768de78ed548f80fda38a6ff5b617bf9e92ccee3c8ccfe66885b8ce428bc8475"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 8388608,
+          "sha256": "72ead8d15641b29da6143ee464066f2c03c3b6cce6880f65b9891636b2b52ff5"
+        },
+        {
+          "name": "07.bin",
+          "bytes": 8388608,
+          "sha256": "9ce19e5ec3d8c7223360fd17f4d806a6cc20040cf729b313a46d428377a688ec"
+        },
+        {
+          "name": "08.bin",
+          "bytes": 8388608,
+          "sha256": "ac1054c13d4c370d3caa804056f732e8439d13a9f02468539c633ea6ea62ff6c"
+        },
+        {
+          "name": "09.bin",
+          "bytes": 8388608,
+          "sha256": "533f8279ca316fad887f4811b420c7bafb7f23281fdd1c4fc16971401218a633"
+        },
+        {
+          "name": "10.bin",
+          "bytes": 8388608,
+          "sha256": "0f34b9ec13271b3978c325788945fd2d736ab7ce15286e74998ae8119a806264"
+        },
+        {
+          "name": "11.bin",
+          "bytes": 8388608,
+          "sha256": "24db2f6e851300a7426dc080d44e8e096af83e012e7a5719d8b463135fc5e3b4"
+        },
+        {
+          "name": "12.bin",
+          "bytes": 8388608,
+          "sha256": "3c8bc6faaef16d4bd6eec0ac9acfbda902462236dad00fff3a408e1663d233c6"
+        },
+        {
+          "name": "13.bin",
+          "bytes": 8388608,
+          "sha256": "ebb7f91168dc984c68ee59fa4de0648e8e66931ac2f94524a20082fef1ccfb83"
+        },
+        {
+          "name": "14.bin",
+          "bytes": 8388608,
+          "sha256": "a8257b99ef43965c299699c7af91ee88843d9ac8ffc9c556af3249bc1419086d"
+        },
+        {
+          "name": "15.bin",
+          "bytes": 4398336,
+          "sha256": "81e28f939e1b5b5518dc231913155c16849764a5baf9135ced92a554ad60259f"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/inference_rows.npy",
+      "original_bytes": 27319552,
+      "original_sha256": "72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "c6a3703535d04a6f4c643239f09d6786daf553b85bcb8dcfd4e4a8e1450df832"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "f68b02da8df1bf60b54aeb326cd1fca0e07bad44b5b6d86c8cd0b523c1fd94de"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "6e043ba73318c00395ac2dadec0cd8f632e650bd6a6b583c501fe2aa97fb0957"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 2153728,
+          "sha256": "30a701dea90b240ccacccd51ad1415e096f1352c15b0ecf861507693d4d2ec13"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/stock_factor_exposures.npy",
+      "original_bytes": 130227456,
+      "original_sha256": "28c3a6f5ef0304e18ec6db4f43b2a2baa7cedf5781a00a9541ea0ff6febba4b6",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "5c4ca5480fa59e789dc42261dc441fbb76bc256999beb907d1cf8da856a10c60"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "6d2ef646bf3d42b6cbcb0551c7cdae4d86da91175ce0650cebd8d64c7298eb3d"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "3ad2a30634c06cc9319e660e91ac90e54d319e459cc67cc26a3f5ad384c3cd25"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "6c39ba57d4ddc4899db2f82fda57030daa3c0e2f03a86c10687c880a10136823"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "e840a684a61251445411e0cb08e11693d497b037301438b30ec0081aba3ae0fd"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 8388608,
+          "sha256": "7a263a4aaa85cfd1c9aeabc57f4bdf29430fd878415496023eba021b628eee5b"
+        },
+        {
+          "name": "07.bin",
+          "bytes": 8388608,
+          "sha256": "0fa983cfb45584615bf92fce6ea8e95353b2e5878c96c58e1d8aefe9e6acd681"
+        },
+        {
+          "name": "08.bin",
+          "bytes": 8388608,
+          "sha256": "b7103cdecdb3349ff8ca1605a4ce71dee876207f0ab51047e1119c5d27227ec4"
+        },
+        {
+          "name": "09.bin",
+          "bytes": 8388608,
+          "sha256": "0b339ca6acc2d829a74e6ab4040fa5c1404126c283b55abadb67bab41e428fe0"
+        },
+        {
+          "name": "10.bin",
+          "bytes": 8388608,
+          "sha256": "636533dd8855e95dfd4a8a67756594d355b44db6fee04d93142e1e11ef070282"
+        },
+        {
+          "name": "11.bin",
+          "bytes": 8388608,
+          "sha256": "0bed2233a8abd3d2361b503b59a3b1e177446b3252c1904f811bb97c06ccb50f"
+        },
+        {
+          "name": "12.bin",
+          "bytes": 8388608,
+          "sha256": "3b0b7da035b467c85f95a10128258723620924d46d774b6965e2de2bdd761944"
+        },
+        {
+          "name": "13.bin",
+          "bytes": 8388608,
+          "sha256": "5f6af9804da904e39edc2942b1af17ce1031761ce32ffbf3cb080dae256eda31"
+        },
+        {
+          "name": "14.bin",
+          "bytes": 8388608,
+          "sha256": "cdb6dec72ae14b48004bf33be60b4ebfa93233be78efa4b5d55d4863db5828f6"
+        },
+        {
+          "name": "15.bin",
+          "bytes": 4398336,
+          "sha256": "982cf4087bf15ccd10a4d7a8c7818a0c56cdca23565c8c5bf6aa84282fe75603"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_future.npy",
+      "original_bytes": 54250896,
+      "original_sha256": "109e39090aaee744679ed12e176e48ec534583b99269ac2f1a24d8f3d9edc90a",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "ea6de2a0b9b620ba4d8989fd6e87712abf3a93be2d535695f7e4439bda47063c"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "4345b2639304d05628f93fd5a744fdee0ce5b9ffad362f1df88c984eeeeaae88"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "78f82955f9eed231d8ff6a113f166d35c97e4c14e5d1e02b1c9b90d44dab8993"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "10aaf8f63963c0872f6713dbc70ace6e6b82426bad3c3ec48b365410db359fed"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "d00122b49c0529ed5646a14fca7b0000bf0a06db2f009a270e57202811a509ca"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "c1b13bee7210eb59cf106280f6ff26250d93a19e1d1927cc3642c609f5e64d75"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 3919248,
+          "sha256": "c0eb4069a31786bcfbcd47404e2d7812ea63c45db410fd6b47d26614307a0521"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_history.npy",
+      "original_bytes": 54250896,
+      "original_sha256": "da866ef0e967d8289f08872b797d16473081488f6352fc213848e2b3ff235bac",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "ea6de2a0b9b620ba4d8989fd6e87712abf3a93be2d535695f7e4439bda47063c"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "33a7a50991944314c118b54d9323ed98d48a68bcd17cc87af5d360b561a4e909"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "ca6b93e14d95543f3aa0aca3f2b8733b9bc1f1c70976e9f2b1668ce4d6fa6a62"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "962774ee7ccf130aaea08cfc185f4e43b1b8a58683498457f28d0dc285ab93c3"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "bbddb1d8bf35408237d1754a1aa6e4d858f9c81a4a731d345d328bbdd8f9d56a"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "7eaa40d15e2e6134bc83caa911650b8fc2d93f5350eeb9c218cb044375dce367"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 3919248,
+          "sha256": "dd0502cb3e8c96bbdb9a276f506bf6cc3ba3457a3a4fb15bb65ebe071b126825"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_available.npy",
+      "original_bytes": 32556960,
+      "original_sha256": "8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "9ebe0b694d6c6e1049b9bc2ca057e84f9312d7ab1066eed310de765cbc9fc3ec"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "0cfcd5b82bf11f9f963c2f28f32967e35e9d695bf5c0cacf9f5c016e198c246f"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "2ad5b2c885702ecb3e73e9bca95089dae98b3e09ccf28edac4f918757b0b05c0"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 7391136,
+          "sha256": "89df2923c56bc430bf757b8f117949cfd5f4a2c524a7f8dee6b1dd8b918e6d69"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_reliability.npy",
+      "original_bytes": 130227456,
+      "original_sha256": "603bf38ebe0562b829001ddd9b3009313a2914a65b4e8e61525501e20f956b0c",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "5c4ca5480fa59e789dc42261dc441fbb76bc256999beb907d1cf8da856a10c60"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "410b131afb0b2d2a376c46c11bd6eac284ddf133f66fe9586c3b058a0cb49446"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "007aae10d972b3c976a54692a2eafa8de52ad43898a8a0befab4f0488396aef6"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "746e839d6ab3a8b9e1db287685a508d7bec9b7f95c4d82b85181d01d7fe24702"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "25b97182342f9ac92dc902e9fddd6d2ecb4792a9e50b294722196cd2d0445bf8"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 8388608,
+          "sha256": "abf297a46ae8a4293dc2302c46b8147ec348ab57ff6d2216f7a3472711c7f2c1"
+        },
+        {
+          "name": "07.bin",
+          "bytes": 8388608,
+          "sha256": "843d91761664b4c1b1dc65b209dfbba05cfa57dc17255b85cd9b179392aff1fe"
+        },
+        {
+          "name": "08.bin",
+          "bytes": 8388608,
+          "sha256": "5d86a462ceb6e8c64f8b5e98531e5a006996e25172e6f4353830f2385ef1a87a"
+        },
+        {
+          "name": "09.bin",
+          "bytes": 8388608,
+          "sha256": "7f10cca4db04ae0d94abbca52025fc3bdcaccddda8eb88f027a2004f1fc069e0"
+        },
+        {
+          "name": "10.bin",
+          "bytes": 8388608,
+          "sha256": "c41151ae101def4dd5e5449644ba7e77957da6bb3a67830da6a80799eb47d208"
+        },
+        {
+          "name": "11.bin",
+          "bytes": 8388608,
+          "sha256": "7d0713d50e957b6e7d39895efb11fdb7e19fd84e29029707fcd763f81d6d6cc1"
+        },
+        {
+          "name": "12.bin",
+          "bytes": 8388608,
+          "sha256": "7f9d0752de1931e632a276cd4a14516b12f598d6d650be2464342eb049dbb88a"
+        },
+        {
+          "name": "13.bin",
+          "bytes": 8388608,
+          "sha256": "f7df6c05c620c19ae79e830244d18196f47aca3d6e9e5ad58136e77b8efdb4a0"
+        },
+        {
+          "name": "14.bin",
+          "bytes": 8388608,
+          "sha256": "fa0d2070c5746fb0706de8520802b9fbd8779c6cb2f814b0d4ce75d1f0796a5a"
+        },
+        {
+          "name": "15.bin",
+          "bytes": 4398336,
+          "sha256": "225eada68eb280c6c5c723f9f7e9b7ad721bd951b98dff6447e5207b04dbce5d"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/inference_rows.npy",
+      "original_bytes": 27319552,
+      "original_sha256": "72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "c6a3703535d04a6f4c643239f09d6786daf553b85bcb8dcfd4e4a8e1450df832"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "f68b02da8df1bf60b54aeb326cd1fca0e07bad44b5b6d86c8cd0b523c1fd94de"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "6e043ba73318c00395ac2dadec0cd8f632e650bd6a6b583c501fe2aa97fb0957"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 2153728,
+          "sha256": "30a701dea90b240ccacccd51ad1415e096f1352c15b0ecf861507693d4d2ec13"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    },
+    {
+      "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/stock_factor_exposures.npy",
+      "original_bytes": 130227456,
+      "original_sha256": "d4bf3d17869a7564231f76ab55fd8687d5d7e6c89c57cc9a6492d07da745b38c",
+      "part_size": 8388608,
+      "parts": [
+        {
+          "name": "00.bin",
+          "bytes": 8388608,
+          "sha256": "5c4ca5480fa59e789dc42261dc441fbb76bc256999beb907d1cf8da856a10c60"
+        },
+        {
+          "name": "01.bin",
+          "bytes": 8388608,
+          "sha256": "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74"
+        },
+        {
+          "name": "02.bin",
+          "bytes": 8388608,
+          "sha256": "69cdfa8b3c9a810bb88958a2314dcef58893cd6b187c7edc23dbcc32f6e1fe43"
+        },
+        {
+          "name": "03.bin",
+          "bytes": 8388608,
+          "sha256": "cde6d6d4b8d70c29d5b4dacb6177106c5081449999bf4f06fe7cecc3bbc9c5e6"
+        },
+        {
+          "name": "04.bin",
+          "bytes": 8388608,
+          "sha256": "7942826657876b6daf1b783e36edbb194e59d5e1fe9fa5b78f148623a10ee9ce"
+        },
+        {
+          "name": "05.bin",
+          "bytes": 8388608,
+          "sha256": "174e2eb02ef35b699a2113d88e438f715ffd4446e00554c2f0873a53f001d619"
+        },
+        {
+          "name": "06.bin",
+          "bytes": 8388608,
+          "sha256": "72a53b44b3e00a89bf2435524a4c21f78f4180ea0a535781d089833dc9350688"
+        },
+        {
+          "name": "07.bin",
+          "bytes": 8388608,
+          "sha256": "15c3d539ef698f2106f144123ac8ef4fe0c0368d1613d96ac56ac835382d64b0"
+        },
+        {
+          "name": "08.bin",
+          "bytes": 8388608,
+          "sha256": "639b923f23b1c6ebc35362d0493c431bf7fcca409f069474d3074aac69d59aac"
+        },
+        {
+          "name": "09.bin",
+          "bytes": 8388608,
+          "sha256": "e5edcc103a48d611bbfaa524de2b1ea765ef8854d39d56b0b8c15c7fa9d9a9bb"
+        },
+        {
+          "name": "10.bin",
+          "bytes": 8388608,
+          "sha256": "6407ddc713a200fb2525a869471488fd1c298719b70627ad2a9062ec824a22b0"
+        },
+        {
+          "name": "11.bin",
+          "bytes": 8388608,
+          "sha256": "71a926b64de521571097fa92901c999fe802568574f929748e5d59c27f60b445"
+        },
+        {
+          "name": "12.bin",
+          "bytes": 8388608,
+          "sha256": "b6d43c6d28e4e5c23ebb12c69edebd31bbbb7122947ff43b5cf4594de29afd9d"
+        },
+        {
+          "name": "13.bin",
+          "bytes": 8388608,
+          "sha256": "ac754632dd6cb35ef7a25bc7d2f7b62825e42a6159f376f1243310012d6c7530"
+        },
+        {
+          "name": "14.bin",
+          "bytes": 8388608,
+          "sha256": "d508838697e7db41830f268f473b2462dd12c38d0ed153f1a9232ff2efb93d29"
+        },
+        {
+          "name": "15.bin",
+          "bytes": 4398336,
+          "sha256": "1b6d7e75376dba2da4b0a2123d1457fa9f109c9a751a858b9dd7e6ffd706e75a"
+        }
+      ],
+      "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest."
+    }
+  ]
+}

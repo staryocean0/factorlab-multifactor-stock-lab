@@ -1,0 +1,338 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_fit_prefix_successor@1.0",
+  "status": "passed_retrospective_K1_candidate",
+  "contract_digest": "sha256:fccc9b4c0e575a8bdf692b496bb7e4c716b5fe7a33800e515413cee7ac4e6ca1",
+  "tree_neutral": true,
+  "clock": "14:45",
+  "config": {
+    "candidate_id": "d8_h8_lr0p03_max3_fit_prefix_K1_r0",
+    "capacity_id": "d8_h8",
+    "latent_dimension": 8,
+    "hidden_dimension": 8,
+    "learning_rate": 0.03,
+    "max_cycles": 3,
+    "operator_count": 1,
+    "residual_identity": "r0_exact_zero"
+  },
+  "seed_results": [
+    {
+      "seed": 11,
+      "fixed_pre_loss": 1.7570598125457764,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.3334811117674739,
+          "canonical_train_loss": 0.8373210430145264,
+          "gradient_norm_max": 7.5433633010693635
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9752551066868469,
+          "canonical_train_loss": 0.8094425201416016,
+          "gradient_norm_max": 1.92958547125735
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.9625461201592784,
+          "canonical_train_loss": 0.808832049369812,
+          "gradient_norm_max": 2.079385547345123
+        }
+      ],
+      "selected_cycle": 3,
+      "selected_canonical_loss": 0.808832049369812,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 1.0872447490692139,
+      "DMD_initialization": {
+        "ridge": 2.361470880300565,
+        "pre_projection_spectral_radius": 0.9929979301304609,
+        "projected_spectral_radius": 0.9929979301304609,
+        "condition_number": 5.1736850987718075,
+        "raw_transition_count": 361628,
+        "operator_digest": "14fc941f5b7fe8552558936c11daa0a18983b9a1a964b36ad4a4ece4b2fcbdfd"
+      },
+      "review": {
+        "day_count": 49,
+        "mean_daily_rankic": 0.15582808583421087,
+        "daily_rankic_std": 0.08962787110228705,
+        "daily_rankic_se": 0.012803981586041008,
+        "mean_top_bottom_decile_spread": 0.06339402167706347,
+        "phase_mean_rankic": {
+          "0": 0.15035488459419658,
+          "1": 0.16292378506577637,
+          "2": 0.16477966675794098,
+          "3": 0.14450804184195207
+        },
+        "positive_phase_count": 4
+      },
+      "healthy": true,
+      "2018_rows_read": 0,
+      "2019_2020_rows_read": 0,
+      "state_digest": "sha256:639ccee0a2247271358ef6965979bf683f9ef782e2c4666bc823e1f7c2f1e21e",
+      "checkpoint_relative": "checkpoints/seed_11",
+      "review_score_digest": "sha256:2b4c899594f054768c0d1d9614109a80edb2a76d8e3d8540bcbdb928554ab041"
+    },
+    {
+      "seed": 29,
+      "fixed_pre_loss": 1.6958116292953491,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.2121462489110106,
+          "canonical_train_loss": 0.818493664264679,
+          "gradient_norm_max": 2.5803009549900544
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9611879968468607,
+          "canonical_train_loss": 0.8186954259872437,
+          "gradient_norm_max": 1.200703996265954
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.9538576115764884,
+          "canonical_train_loss": 0.787847638130188,
+          "gradient_norm_max": 1.3456304094482048
+        }
+      ],
+      "selected_cycle": 3,
+      "selected_canonical_loss": 0.787847638130188,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 1.6530553102493286,
+      "DMD_initialization": {
+        "ridge": 1.5016615049167685,
+        "pre_projection_spectral_radius": 0.9943068414307974,
+        "projected_spectral_radius": 0.9943068414307974,
+        "condition_number": 6.2428683828772655,
+        "raw_transition_count": 361628,
+        "operator_digest": "32997e2e04965bf75ef251cc12a996c7f83676198abea30dcd36d36402348074"
+      },
+      "review": {
+        "day_count": 49,
+        "mean_daily_rankic": 0.16164708990952042,
+        "daily_rankic_std": 0.10091799704024519,
+        "daily_rankic_se": 0.014416856720035027,
+        "mean_top_bottom_decile_spread": 0.0648236221001736,
+        "phase_mean_rankic": {
+          "0": 0.15798143480484056,
+          "1": 0.16982663082738259,
+          "2": 0.16526966900996612,
+          "3": 0.15320874340418858
+        },
+        "positive_phase_count": 4
+      },
+      "healthy": true,
+      "2018_rows_read": 0,
+      "2019_2020_rows_read": 0,
+      "state_digest": "sha256:f5dcc5b00ab9ab4c57233a6b8badb441ee6e108f9d273cae741e9b4f40c37ab7",
+      "checkpoint_relative": "checkpoints/seed_29",
+      "review_score_digest": "sha256:bf11a7ecb86e5bf23f26c85fb050582a8e7767b9e9a2356ad3823bc2d142d0b7"
+    },
+    {
+      "seed": 47,
+      "fixed_pre_loss": 1.8501901626586914,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.2084049640565042,
+          "canonical_train_loss": 0.8147653937339783,
+          "gradient_norm_max": 3.6648957066028522
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9749118845699644,
+          "canonical_train_loss": 0.8023597002029419,
+          "gradient_norm_max": 3.709538762026414
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.9664752015982377,
+          "canonical_train_loss": 0.8162813782691956,
+          "gradient_norm_max": 3.3865232007644646
+        }
+      ],
+      "selected_cycle": 2,
+      "selected_canonical_loss": 0.8023597002029419,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 0.8533177375793457,
+      "DMD_initialization": {
+        "ridge": 2.1313776507829894,
+        "pre_projection_spectral_radius": 0.9943357367174785,
+        "projected_spectral_radius": 0.9943357367174785,
+        "condition_number": 2.4861415064619554,
+        "raw_transition_count": 361628,
+        "operator_digest": "bd7d528a56e148024bc2b9940cb0adfefd6df1a799e52271425599d8cbd9cb54"
+      },
+      "review": {
+        "day_count": 49,
+        "mean_daily_rankic": 0.15122738828724347,
+        "daily_rankic_std": 0.09686109325039523,
+        "daily_rankic_se": 0.013837299035770747,
+        "mean_top_bottom_decile_spread": 0.0595340350087428,
+        "phase_mean_rankic": {
+          "0": 0.14642834005105065,
+          "1": 0.16096355102844986,
+          "2": 0.1528974449742115,
+          "3": 0.1444810457046811
+        },
+        "positive_phase_count": 4
+      },
+      "healthy": true,
+      "2018_rows_read": 0,
+      "2019_2020_rows_read": 0,
+      "state_digest": "sha256:8d7363e5f82ad9772af53adedefcb00b30c0a2933960f4c306bb0367a4b44e1a",
+      "checkpoint_relative": "checkpoints/seed_47",
+      "review_score_digest": "sha256:f01ed2a4b05a0e7bf62bae42c7c88ad681eff6c731b544f9377c4029ca1cf06b"
+    }
+  ],
+  "diagnostic": {
+    "cell_id": "1445",
+    "clock": "14:45",
+    "config": {
+      "candidate_id": "d8_h8_lr0p03_max3_fit_prefix_K1_r0",
+      "capacity_id": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.03,
+      "max_cycles": 3,
+      "operator_count": 1,
+      "residual_identity": "r0_exact_zero"
+    },
+    "source": "P6_4_1_missing",
+    "seed_dynamics": [
+      {
+        "seed": 11,
+        "sample_rows": 32768,
+        "spectral_radius": 0.9906220066683639,
+        "condition_number": 25.20012277444919,
+        "one_step_latent_mse": 0.001163493941328443,
+        "one_step_latent_relative_mse": 0.026433675613105282,
+        "one_step_advanced_to_next_rms_ratio": 0.9977760948407395,
+        "observed_one_step_gain": {
+          "q50": 1.004928672351068,
+          "q95": 1.0987099144280188,
+          "q99": 1.1464537802755936
+        },
+        "recursive_observed_gain": {
+          "1": {
+            "q50": 1.004928663033164,
+            "q95": 1.0987099186149905,
+            "q99": 1.1464537953984153
+          },
+          "2": {
+            "q50": 1.0027516902315108,
+            "q95": 1.0860158199865926,
+            "q99": 1.1168873035510978
+          },
+          "4": {
+            "q50": 0.9894434363097135,
+            "q95": 1.0584404881509004,
+            "q99": 1.0809691376507697
+          }
+        }
+      },
+      {
+        "seed": 29,
+        "sample_rows": 32768,
+        "spectral_radius": 0.9911857399112166,
+        "condition_number": 29.447789750343507,
+        "one_step_latent_mse": 0.0016772316711556705,
+        "one_step_latent_relative_mse": 0.09000562316591147,
+        "one_step_advanced_to_next_rms_ratio": 0.9497904131311299,
+        "observed_one_step_gain": {
+          "q50": 0.9771152686513013,
+          "q95": 0.9982028629876808,
+          "q99": 1.0067575488319584
+        },
+        "recursive_observed_gain": {
+          "1": {
+            "q50": 0.9771152566200867,
+            "q95": 0.998202869638903,
+            "q99": 1.0067575467199406
+          },
+          "2": {
+            "q50": 0.9576629078636585,
+            "q95": 1.0034711474853564,
+            "q99": 1.0230504143065056
+          },
+          "4": {
+            "q50": 0.933912796866734,
+            "q95": 0.9886119101136139,
+            "q99": 1.010376461033808
+          }
+        }
+      },
+      {
+        "seed": 47,
+        "sample_rows": 32768,
+        "spectral_radius": 1.0442058084426065,
+        "condition_number": 54.44676481202796,
+        "one_step_latent_mse": 0.0019482647803070426,
+        "one_step_latent_relative_mse": 0.03303542040368897,
+        "one_step_advanced_to_next_rms_ratio": 0.9726814591360414,
+        "observed_one_step_gain": {
+          "q50": 0.9814304287264615,
+          "q95": 1.0030676072353268,
+          "q99": 1.0105999578310032
+        },
+        "recursive_observed_gain": {
+          "1": {
+            "q50": 0.9814304577772913,
+            "q95": 1.0030675727237441,
+            "q99": 1.0105999401160937
+          },
+          "2": {
+            "q50": 0.9593514712768321,
+            "q95": 0.9932677832165754,
+            "q99": 1.0028393038591046
+          },
+          "4": {
+            "q50": 0.9121091211382305,
+            "q95": 0.9616368117534874,
+            "q99": 0.9781130221349055
+          }
+        }
+      }
+    ],
+    "mean_spectral_radius": 1.0086711850073957,
+    "mean_one_step_relative_mse": 0.04982490639423524,
+    "mean_recursive_q99_gain_step4": 1.0231528736064945,
+    "ensemble_review_metrics": {
+      "day_count": 49,
+      "mean_daily_rankic": 0.16152574720082447,
+      "daily_rankic_std": 0.09782219339633619,
+      "daily_rankic_se": 0.013974599056619455,
+      "mean_top_bottom_decile_spread": 0.06499432299494441,
+      "phase_mean_rankic": {
+        "0": 0.1566622285727581,
+        "1": 0.16970746348271573,
+        "2": 0.16715745620237976,
+        "3": 0.1521065314619813
+      },
+      "positive_phase_count": 4
+    },
+    "ensemble_member_score_spearman": 0.9990515258234958,
+    "ensemble_input_score_spearman": 0.9997202590993559,
+    "2018_rows_read": 0,
+    "2019_2020_rows_read": 0,
+    "account_run": false,
+    "production_authority": false
+  },
+  "checks": {
+    "all_seed_fit_prefix_health": true,
+    "all_seed_checkpoint_selection_target_free": true,
+    "all_seed_condition_number": true,
+    "ensemble_member_robustness": true,
+    "ensemble_input_robustness": true,
+    "ensemble_rankic_positive": true,
+    "ensemble_spread_positive": true
+  },
+  "2018_rows_read": 0,
+  "2019_2020_rows_read": 0,
+  "account_run": false,
+  "P6_5_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:d9e50d40799c08fa8a3ca90f9ade11439a205bc2e6fb16b8b61936cbc5dc6271"
+}

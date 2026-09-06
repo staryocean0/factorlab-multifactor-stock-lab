@@ -1,0 +1,171 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_contract@1.0",
+  "status": "frozen_result_free_current_strategy_two_ledger_execution_open",
+  "user_authorization": "2026-09-02_update_both_ledgers_for_current_new_strategy",
+  "project_parent": {
+    "path": "docs/ops/post_training_account_audit@1.1.json",
+    "canonical_digest": "sha256:60b7e06d67fe5e93660ded02672e6d2e10c9cd3628dd77e7195faacb7e5b27ce",
+    "file_sha256": "sha256:a533e16381aaafc720f7237473932075f1e50f04f60b923e7d3f0e359777f252"
+  },
+  "strategy_identity": {
+    "strategy_id": "REAKA_D5_H20_R5_CURRENT_GENERATION_V1",
+    "model": "d8-h8-K1-r0_fit_prefix_successor_incumbent",
+    "model_identity_digest": "sha256:ea35bd38660a074fe70fc577d0e8de1501cd71dfa63471197a86673e32db173a",
+    "residual": "r0_exact_zero",
+    "account_policy": "N30_equal_backfill_unconstrained",
+    "top_n": 30,
+    "weighting": "equal",
+    "buy_unavailable": "backfill_from_same_event_frozen_rank",
+    "sell_unavailable": "carry_forced_holding",
+    "decision_clocks": [
+      "14:30",
+      "14:45"
+    ],
+    "slippage_multiplier": 1.0,
+    "execution": "bar_close_then_next_tradable_after_bar_close_raw_PIT_then_HFQ_accounting"
+  },
+  "current_authority_bindings": {
+    "strategy_registry_path": "docs/ops/reaka_strategy_authority_registry@73.0.json",
+    "strategy_registry_digest": "sha256:e74315bb0ccfd9c31a25e0fdb6fccf5cf96a0d5914557bdc2d49b57d44f6fc2b",
+    "controller_succession_path": "docs/ops/reaka_controller_succession_audit@234.0.json",
+    "controller_succession_digest": "sha256:53ad897d9053b462430bdf30a277049d24f60d2207633dbbd10fbd8583ba7e55",
+    "A0_model_score_freeze_digest": "sha256:2d1dd648b416816cb9e5a27d70506adf0de271d0b2b65d96a731c3c255941603",
+    "A1_account_baseline_digest": "sha256:89fc1bbcdabb291252182f2f938009e301b636516d9458e216705476154a0d60"
+  },
+  "superseded_for_current_identity_only": {
+    "old_opportunity_ledger": {
+      "identity": "REAKA_OPPORTUNITY_LEDGER_V8_ALL_INDUSTRY",
+      "score_model": "d8-K2",
+      "contract_digest": "sha256:272b6939f272cb74ee4f57385c9f38dd8f9ad35243a5fd2ec61ef3c35f07f744",
+      "historical_files_rewritten": false,
+      "may_be_called_current_K1_ledger": false
+    },
+    "old_current_K1_trade_attribution": {
+      "covered_years": [
+        2019,
+        2020
+      ],
+      "contract_digest": "sha256:499f6fcc119f1f9c3d3c6d98395ce821f33ac19cf26afbf9511a2e213b041b37",
+      "historical_files_rewritten": false,
+      "role": "partial_predecessor_and_replay_anchor"
+    }
+  },
+  "data_usage": {
+    "2011_2016": "consumed_training_prefix_account_and_attribution_review",
+    "2017": "consumed_internal_review",
+    "2018": "consumed_retrospective_confirmation",
+    "2019_2020": "consumed_holdout_economic_replay",
+    "2021_2026": "globally_consumed_detailed_two_ledger_update_authorized_by_user",
+    "2026_endpoint": "2026-08-25_partial",
+    "detailed_post2020_stock_trade_and_attribution_read_allowed_for_this_execution": true,
+    "result_backflow_to_model_score_account_or_clock_parameters": false,
+    "fresh_oos": false
+  },
+  "replay_segments": {
+    "segments": [
+      "2011_2020",
+      "2021_2026"
+    ],
+    "each_segment_starts_from_frozen_initial_nav": true,
+    "uncosted_2020_to_2021_holding_carry_allowed": false,
+    "reason": "preserve_the_two_accepted_account_replay_roots_without_fabricating_cross_boundary_continuity"
+  },
+  "selection_opportunity_ledger": {
+    "decision_cadence": "D5_frozen_grid",
+    "horizon_days": 20,
+    "horizon_return": "current_next_tradable_after_bar_close_entry_to_same_clock_entry_20_trading_days_later",
+    "comparison_universe": "same_decision_finite_current_K1_score_and_buyable_and_finite_entry_exit",
+    "selected": "stable_score_desc_symbol_asc_top30",
+    "oracle": "stable_realized_H20_desc_symbol_asc_top30_on_same_universe",
+    "persisted_rows": "union_of_selected_oracle_and_actual_post_execution_holdings",
+    "actual_holding_extension_required": true,
+    "oracle_is_hindsight_diagnostic_only": true,
+    "oracle_runtime_or_parameter_authority": false
+  },
+  "realized_pnl_ledger": {
+    "account_basis": "actual_corrected_account_snapshot",
+    "stock_segments": [
+      "previous_close_to_close",
+      "previous_close_to_execution",
+      "execution_to_close"
+    ],
+    "factor_components": [
+      "index",
+      "size",
+      "industry",
+      "other"
+    ],
+    "transaction_cost_separate": true,
+    "annual_four_group_maps_transaction_cost_to_other": true,
+    "daily_simple_identity_required": true,
+    "daily_linked_log_identity_required": true,
+    "sealed_annual_four_group_replay_required": true
+  },
+  "performance": {
+    "post2020_score_builds_per_tree_per_clock": 1,
+    "account_replays_per_tree_per_clock_per_segment": 1,
+    "factor_return_fit": "ROCm_float64_batched_lstsq_once_per_variant_segment",
+    "factor_batch_size": 32,
+    "CPU_parity_sample_count_per_clock": 12,
+    "coefficient_max_abs_parity_tolerance": 1e-10,
+    "condition_relative_parity_tolerance": 1e-10,
+    "stable_sort_and_sequential_account_backend": "CPU"
+  },
+  "allowed_outputs": [
+    "account_snapshot/portfolio_daily.parquet",
+    "account_snapshot/holdings.parquet",
+    "account_snapshot/trades.parquet",
+    "account_snapshot/events.parquet",
+    "account_snapshot/snapshot_manifest.json",
+    "selection_opportunity_ledger.parquet",
+    "selection_opportunity_decision_summary.csv",
+    "selection_opportunity_annual.csv",
+    "factor_return_surface.parquet",
+    "realized_pnl_ledger.parquet",
+    "realized_pnl_annual.csv",
+    "result.json",
+    "execution_receipt.json"
+  ],
+  "acceptance_gates": {
+    "current_model_and_account_identity_exact": true,
+    "all_post2020_prefix_checks": true,
+    "opportunity_labels_strictly_post_decision": true,
+    "oracle_top30_is_same_universe_ceiling": true,
+    "account_snapshot_complete": true,
+    "additive_trade_costs": true,
+    "factor_fit_CPU_ROCm_parity": true,
+    "daily_simple_and_linked_log_conservation": true,
+    "sealed_annual_four_group_replay": true,
+    "formal_isolated_scientific_bytes": true,
+    "source_closure_exact": true
+  },
+  "source_closure": {
+    "docs/ops/post_training_account_audit@1.1.json": "sha256:a533e16381aaafc720f7237473932075f1e50f04f60b923e7d3f0e359777f252",
+    "docs/ops/reaka_current_k1_account_ledgers_whitepaper.md": "sha256:184d46e2345ed470e7cd7e685d0440c0b44965de355d184e33aedda3719cf50c",
+    "docs/user/reaka_current_k1_account_ledgers_workflow.md": "sha256:395a47b4f01b8594ac97f11f8353367b043e75e43fb69b0dcc96a41b1ef33b61",
+    "scripts/factor_rotation/run_reaka_current_k1_account_ledgers_v1.py": "sha256:2e7c7702114546cd37b3fd04a47d7869527b093af7dea772a5648f2de7344d5b",
+    "scripts/factor_rotation/validate_reaka_current_k1_account_ledgers_v1.py": "sha256:6bbdaf19a7cb9ea5207d4eb36dcaad3ea2db6076b939eda576cebccaeaa35df1",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py": "sha256:03d96028d7781eaa8be1532e2b53f20186bbf27a18637e54fbbe09513ec9a77b",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py": "sha256:80850973f75d2fda015f29dfb8b3e2e1f4c709eea4766c9db4f615963f7e5f73",
+    "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py": "sha256:ec185c9b266e784c0fddd135cfc2bfb4028c11aa137ab39e0c465f3aa24fc482",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v1.py": "sha256:ae4da76b15ebdf5748091520190fbb41aabcf21a05414130fbfcc8402c7e97ea",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v2.py": "sha256:7b1189a0b1a5d4da46e3620f7fb2463f6f22e34920bb76e295c0e89e57064802",
+    "src/factor_lab/factor_rotation/reaka_current_k1_post2020_annual_four_group_blackbox_v1.py": "sha256:500bbed57eb90c5315b646d37131406e0b7b4bd7151dc42a3dbb96392e7335e3",
+    "src/factor_lab/factor_rotation/reaka_current_k1_transaction_pnl_attribution_v1.py": "sha256:35db453e7163e852b75b63f5bd89a1e91c04e808ac40c881e5a0c96b9b9e3c78",
+    "src/factor_lab/portfolio/account_research_bundle.py": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+    "tests/unit/test_reaka_current_k1_account_ledgers_v1.py": "sha256:f15abd125d1ca754baa6bf081f0b8a6a261c66a6a803f249ef9bba411dc5c95c"
+  },
+  "authority": {
+    "parameter_selection": false,
+    "model_or_score_mutation": false,
+    "account_policy_mutation": false,
+    "factor_admission": false,
+    "strategy_mutation": false,
+    "pointer_change": false,
+    "production_authority": false
+  },
+  "formal_execution_allowed": true,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:9387492d384624484244e08404e0b0b1e17715eb9929600aacd2b72024b6864d"
+}

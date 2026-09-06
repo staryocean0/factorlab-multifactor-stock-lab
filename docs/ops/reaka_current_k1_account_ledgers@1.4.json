@@ -1,0 +1,92 @@
+{
+  "schema_id": "factorlab.reaka_current_K1_account_ledgers_contract@1.4",
+  "status": "frozen_result_free_current_strategy_two_ledger_execution_open_after_pnl_segment_router_repair",
+  "user_authorization": "2026-09-02_update_both_ledgers_for_current_new_strategy",
+  "predecessor": {
+    "path": "docs/ops/reaka_current_k1_account_ledgers@1.3.json",
+    "canonical_digest": "sha256:f8fd18330544e1deb7e6fe35a1ba67e125a4dbb0e0370797ec225c4c3a5f83a7",
+    "file_sha256": "sha256:d661a764872cb4bd9cceab52e30f1185c53d1f42a978b23c23c07026cc2e1204",
+    "rewritten": false,
+    "all_strategy_data_opportunity_pnl_cost_performance_and_authority_semantics_inherited": true
+  },
+  "pre_acceptance_incident": {
+    "path": "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_3_pnl_segmentation_incident.json",
+    "canonical_digest": "sha256:edfb9d16d8a83a1253e44f918e5991b26894ad5b05061b4bed5e6352cace8e17",
+    "file_sha256": "sha256:69a61bd42fa3d33d1922e009f0cde88e9a96d3136534fb8b0bb38c632fd58cd0",
+    "invalid_partial_output_authority": false,
+    "result_json_written": false,
+    "execution_receipt_written": false
+  },
+  "pnl_segment_router_repair": {
+    "costed_trade_symbols": "frozen_buy_sell_legs_only",
+    "pnl_reallocated_symbols": "union_of_costed_trade_symbols_and_actual_pre_post_share_quantity_changes",
+    "account_return_or_cost_changed": false,
+    "sealed_annual_four_group_replay_required": true
+  },
+  "strategy_identity": {
+    "strategy_id": "REAKA_D5_H20_R5_CURRENT_GENERATION_V1",
+    "model": "d8-h8-K1-r0_fit_prefix_successor_incumbent",
+    "account_policy": "N30_equal_backfill_unconstrained",
+    "decision_clocks": [
+      "14:30",
+      "14:45"
+    ],
+    "slippage_multiplier": 1.0,
+    "replay_segments": [
+      "2011_2020",
+      "2021_2026"
+    ]
+  },
+  "data_usage": {
+    "all_intervals": "consumed_detailed_two_ledger_update_only",
+    "detailed_post2020_read_allowed_for_this_execution": true,
+    "result_backflow_allowed": false,
+    "fresh_oos": false
+  },
+  "acceptance_gates": {
+    "all_v1_0_through_v1_3_gates_inherited": true,
+    "account_daily_PnL_conservation": true,
+    "sealed_annual_four_group_replay": true,
+    "exact_source_closure": true,
+    "current_K1_identity": true,
+    "selection_opportunity_and_realized_pnl_ledgers_separate": true,
+    "formal_isolated_scientific_bytes": true
+  },
+  "source_closure": {
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_acceptance_v1_3_pnl_segmentation_incident.json": "sha256:69a61bd42fa3d33d1922e009f0cde88e9a96d3136534fb8b0bb38c632fd58cd0",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_trade_cost_allocation_incident.json": "sha256:52087b9baf1ea401675aee52cb58741835384c3469b560db11e37b41eb3a4370",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_1_source_closure_incident.json": "sha256:73f10613e68933d3f025434321afd060192e2bab680184cad2e8215ad6c9be1f",
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/pre_result_v1_2_trade_leg_identity_incident.json": "sha256:eee80d7dd52b37aa115a860b62fcc1b7cabcd0dedfacb6380b5e7ff6e7003a23",
+    "docs/ops/post_training_account_audit@1.1.json": "sha256:a533e16381aaafc720f7237473932075f1e50f04f60b923e7d3f0e359777f252",
+    "docs/ops/reaka_current_k1_account_ledgers@1.0.json": "sha256:3fadcd7f701c23b6a9f3897014b3419b8b86585bf9a1c88ff1c7ab65f2740e9c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.1.json": "sha256:061140a5c7f9aa463ff31a991f487094cd15479b7d83bf2bc9a734bdf9a8fc4c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.2.json": "sha256:dbe7675fea9a6dbf7617b4055b879fc9888e4ba42f3d7f1a60bbf8434aabdb5c",
+    "docs/ops/reaka_current_k1_account_ledgers@1.3.json": "sha256:d661a764872cb4bd9cceab52e30f1185c53d1f42a978b23c23c07026cc2e1204",
+    "docs/ops/reaka_current_k1_account_ledgers_whitepaper.md": "sha256:723bda55bdda903303b6603cb749d7a9f1b4d2a9351d2df6add975364fc13fb7",
+    "docs/user/reaka_current_k1_account_ledgers_workflow.md": "sha256:4f91c4f5b596066b770dcc31a1c0e7817c6f63451d9058aacd8ae09f43c2b9a3",
+    "scripts/factor_rotation/run_reaka_current_k1_account_ledgers_v1.py": "sha256:2e7c7702114546cd37b3fd04a47d7869527b093af7dea772a5648f2de7344d5b",
+    "scripts/factor_rotation/validate_reaka_current_k1_account_ledgers_v1.py": "sha256:6bbdaf19a7cb9ea5207d4eb36dcaad3ea2db6076b939eda576cebccaeaa35df1",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py": "sha256:03d96028d7781eaa8be1532e2b53f20186bbf27a18637e54fbbe09513ec9a77b",
+    "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py": "sha256:80850973f75d2fda015f29dfb8b3e2e1f4c709eea4766c9db4f615963f7e5f73",
+    "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py": "sha256:484752d06d3be13af184ef6fd4889a255b9c78dddb19fc427026ebe5c7e43199",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v1.py": "sha256:ae4da76b15ebdf5748091520190fbb41aabcf21a05414130fbfcc8402c7e97ea",
+    "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v2.py": "sha256:7b1189a0b1a5d4da46e3620f7fb2463f6f22e34920bb76e295c0e89e57064802",
+    "src/factor_lab/factor_rotation/reaka_current_k1_post2020_annual_four_group_blackbox_v1.py": "sha256:500bbed57eb90c5315b646d37131406e0b7b4bd7151dc42a3dbb96392e7335e3",
+    "src/factor_lab/factor_rotation/reaka_current_k1_transaction_pnl_attribution_v1.py": "sha256:35db453e7163e852b75b63f5bd89a1e91c04e808ac40c881e5a0c96b9b9e3c78",
+    "src/factor_lab/portfolio/account_research_bundle.py": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+    "tests/unit/test_reaka_current_k1_account_ledgers_v1.py": "sha256:7fb2ffd8cd1217b2ae8d4cb92f4616569126c42aeb82c6ab2b69f1d1a6c89d62"
+  },
+  "authority": {
+    "parameter_selection": false,
+    "model_or_score_mutation": false,
+    "account_policy_mutation": false,
+    "factor_admission": false,
+    "strategy_mutation": false,
+    "pointer_change": false,
+    "production_authority": false
+  },
+  "formal_execution_allowed": true,
+  "fresh_oos": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:55f859f16ddabff4192b260d0c8445d061f48ad3c33aa87439fbf7c34b10f9db"
+}

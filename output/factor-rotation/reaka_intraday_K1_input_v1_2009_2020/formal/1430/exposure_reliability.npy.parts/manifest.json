@@ -1,0 +1,89 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 130227456,
+  "original_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_reliability.npy",
+  "original_sha256": "56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "bytes": 8388608,
+      "name": "00.bin",
+      "sha256": "5c4ca5480fa59e789dc42261dc441fbb76bc256999beb907d1cf8da856a10c60"
+    },
+    {
+      "bytes": 8388608,
+      "name": "01.bin",
+      "sha256": "2daeb1f36095b44b318410b3f4e8b5d989dcc7bb023d1426c492dab0a3053e74"
+    },
+    {
+      "bytes": 8388608,
+      "name": "02.bin",
+      "sha256": "a156ff196b1feb0d3c425af26204eb0b7b4728f5cca320629c0d94b749bdf28a"
+    },
+    {
+      "bytes": 8388608,
+      "name": "03.bin",
+      "sha256": "d64b919e6b47e62d0b9331fa55aec2e418d6e9bd2f95a3cfb8f545d84f62714d"
+    },
+    {
+      "bytes": 8388608,
+      "name": "04.bin",
+      "sha256": "33c37b08690d80bedb677d7e55479bab18d43756c8f84fe7426727311be1f0a3"
+    },
+    {
+      "bytes": 8388608,
+      "name": "05.bin",
+      "sha256": "768de78ed548f80fda38a6ff5b617bf9e92ccee3c8ccfe66885b8ce428bc8475"
+    },
+    {
+      "bytes": 8388608,
+      "name": "06.bin",
+      "sha256": "72ead8d15641b29da6143ee464066f2c03c3b6cce6880f65b9891636b2b52ff5"
+    },
+    {
+      "bytes": 8388608,
+      "name": "07.bin",
+      "sha256": "9ce19e5ec3d8c7223360fd17f4d806a6cc20040cf729b313a46d428377a688ec"
+    },
+    {
+      "bytes": 8388608,
+      "name": "08.bin",
+      "sha256": "ac1054c13d4c370d3caa804056f732e8439d13a9f02468539c633ea6ea62ff6c"
+    },
+    {
+      "bytes": 8388608,
+      "name": "09.bin",
+      "sha256": "533f8279ca316fad887f4811b420c7bafb7f23281fdd1c4fc16971401218a633"
+    },
+    {
+      "bytes": 8388608,
+      "name": "10.bin",
+      "sha256": "0f34b9ec13271b3978c325788945fd2d736ab7ce15286e74998ae8119a806264"
+    },
+    {
+      "bytes": 8388608,
+      "name": "11.bin",
+      "sha256": "24db2f6e851300a7426dc080d44e8e096af83e012e7a5719d8b463135fc5e3b4"
+    },
+    {
+      "bytes": 8388608,
+      "name": "12.bin",
+      "sha256": "3c8bc6faaef16d4bd6eec0ac9acfbda902462236dad00fff3a408e1663d233c6"
+    },
+    {
+      "bytes": 8388608,
+      "name": "13.bin",
+      "sha256": "ebb7f91168dc984c68ee59fa4de0648e8e66931ac2f94524a20082fef1ccfb83"
+    },
+    {
+      "bytes": 8388608,
+      "name": "14.bin",
+      "sha256": "a8257b99ef43965c299699c7af91ee88843d9ac8ffc9c556af3249bc1419086d"
+    },
+    {
+      "bytes": 4398336,
+      "name": "15.bin",
+      "sha256": "81e28f939e1b5b5518dc231913155c16849764a5baf9135ced92a554ad60259f"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "note": "GitHub 100MB limit; concatenate parts in order to restore original bytes and digest.",
+  "original_bytes": 149018552,
+  "original_path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1430.parquet",
+  "original_sha256": "6652efb41bb9a0748c6c5b20b23f6f0a674ac21ed3ccc42a92ee6971cbec138c",
+  "part_size": 8388608,
+  "parts": [
+    {
+      "bytes": 8388608,
+      "name": "00.bin",
+      "sha256": "8325f1d43941480baca7f38738a18e3a8f54cf7c12fa17f1b388a4c171dcd765"
+    },
+    {
+      "bytes": 8388608,
+      "name": "01.bin",
+      "sha256": "88c2da628de24f0f12ec7c7e0229c97140a8407ccc9ff1993ca1acf51d799d6a"
+    },
+    {
+      "bytes": 8388608,
+      "name": "02.bin",
+      "sha256": "5c947bf42e09418b671e58b0d481a8dd680e231a7e487537163207cd9772b396"
+    },
+    {
+      "bytes": 8388608,
+      "name": "03.bin",
+      "sha256": "5a6ad9ff72c7f33ff4ad0c435a567b5b8b53bb8a5c198623250ced47014da4be"
+    },
+    {
+      "bytes": 8388608,
+      "name": "04.bin",
+      "sha256": "d75aa933e46cee358273303bbdcdb49b6ab4693f86e7f5297066f01d359a670e"
+    },
+    {
+      "bytes": 8388608,
+      "name": "05.bin",
+      "sha256": "e7d6a63f4124a78ee99ea6aa322d90afe7cb10d8989ff00de6451411ce3ad888"
+    },
+    {
+      "bytes": 8388608,
+      "name": "06.bin",
+      "sha256": "b2a6f767ce0ea7c08b807ddecf7546f31630c283cd70a8100f8a20f526772c31"
+    },
+    {
+      "bytes": 8388608,
+      "name": "07.bin",
+      "sha256": "9c9feec9e82bbda3ee40302d64d33d319be372b98444391be4d8eecf753cfe8b"
+    },
+    {
+      "bytes": 8388608,
+      "name": "08.bin",
+      "sha256": "7c8053ba94f2a5e84b7d32f9487e87b7705dc2a412527a0f8ced63282f7d179f"
+    },
+    {
+      "bytes": 8388608,
+      "name": "09.bin",
+      "sha256": "550e8f9f7e5238916aede561d803259f665a6b0ff3b4b4f908e7566267586ba4"
+    },
+    {
+      "bytes": 8388608,
+      "name": "10.bin",
+      "sha256": "b3b916a120552e2087eed6f25cb7d7b33d0fffec48c0fe12f6e24ca3d81ec87f"
+    },
+    {
+      "bytes": 8388608,
+      "name": "11.bin",
+      "sha256": "2567eb1e219dfd9689521233f396139d68a3318b78a8ce406fbff0efcbd8e401"
+    },
+    {
+      "bytes": 8388608,
+      "name": "12.bin",
+      "sha256": "58d06e1715af1687e2a6b9df52ce22a542a9eb9377b7aaf1662db536050b484c"
+    },
+    {
+      "bytes": 8388608,
+      "name": "13.bin",
+      "sha256": "ba17c645d6666cc6e5e048f2bc28aee8622f63bcf6338519692ebdc532b31de4"
+    },
+    {
+      "bytes": 8388608,
+      "name": "14.bin",
+      "sha256": "2270ddab24138eabefd1195a178395f2a0b5effd756ddca8c4556ceb8cb20c3e"
+    },
+    {
+      "bytes": 8388608,
+      "name": "15.bin",
+      "sha256": "ade9056c52a9237fcd777d5272d058faf234ce9747c90e0e088bde86fd9c8b3f"
+    },
+    {
+      "bytes": 8388608,
+      "name": "16.bin",
+      "sha256": "34f47fb04eee75e8de2d71c1f4e0fcd2625b9047bb62b557f21eae702782dd09"
+    },
+    {
+      "bytes": 6412216,
+      "name": "17.bin",
+      "sha256": "f2d5cdb157fbca823aad25795f6ec318c2667c30fa8658f39397acebcfe091ff"
+    }
+  ]
+}
