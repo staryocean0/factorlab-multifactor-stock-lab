@@ -1,0 +1,59 @@
+{
+  "schema_id": "factorlab.r2_cloud_document_review@1.0",
+  "task": "LCL-R2-20260906-01",
+  "reviewed_local_commit": "8ffdd90b5a664337058fad4a301f85ddfa6aa599",
+  "cloud_review_completed": true,
+  "r2_status": "partially_reviewed_not_closed",
+  "acceptance": "scoped_local_evidence_accepted_with_identity_and_consumption_gaps",
+  "github_source_blobs": {
+    "scripts/reaka_r2_local_audit_v1.py": "a003fe75fbb127761b63b963c320deecd88de539",
+    "cloud_results/local_handoff_R2_20260906/local_audit_summary.json": "89f89a3524c5643bd55ae7554f29210c9087328a",
+    "cloud_results/local_handoff_R2_20260906/local_feedback.md": "d7d8371d6eabb5cd697153deeea9ea709a45218c",
+    "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py": "6942fb2dc20d24307578bc7dda45368afaf3d1f5"
+  },
+  "small_public_json_checks": {
+    "source_commit": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
+    "materialization": "GitHub connector text preserved; reconstructed raw bytes verified against returned Git blob IDs",
+    "records": [
+      {"name": "1430_selected_family_tools.json", "bytes": 2999, "git_blob_sha": "8bb5a47e1439d13515f48b6f73cedc09e1a356ff", "github_blob_match": true, "raw_sha256": "sha256:cd5d7ed8ad65938b89652a1cb66d272463b4067f35f8467d6be2d9bbd3b08c00", "canonical_recomputed": "sha256:eec20a28752536b9047842becaca304aee8eaa1bf967f28339438fa4d83c5af3", "canonical_match": true},
+      {"name": "1445_selected_family_tools.json", "bytes": 2996, "git_blob_sha": "632f23c7fe2f22d97c6b5b9f068a7c249fa54dea", "github_blob_match": true, "raw_sha256": "sha256:fffcd456bd204df28b38abc6b5f809257a8f7c20271bfb36775327d68d0ee345", "canonical_recomputed": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6", "canonical_match": true},
+      {"name": "1430_ot2_manifest.json", "bytes": 528, "git_blob_sha": "7d9dbd91ceb7442d756761b75e409510fed84625", "github_blob_match": true, "raw_sha256": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a", "canonical_recomputed": "sha256:ef2cb0a3e6ed694f576ab54b9472119efb8b977221b1acd990cf5f95198b58fc", "canonical_match": true},
+      {"name": "1445_ot2_manifest.json", "bytes": 528, "git_blob_sha": "95ee7602bd222e70ff1386d1c5cdb7b0840813fa", "github_blob_match": true, "raw_sha256": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b", "canonical_recomputed": "sha256:52e4c0b2adcb9b245f4fc17a7490c1f5710d9547beebff87c7b261f347966ac3", "canonical_match": true}
+    ],
+    "source_binding": "Both OT2 raw manifests match original recovery digests; canonical selection documents recomputed and matched manifest selection_digest",
+    "local_original_bytes_compared": false
+  },
+  "isolated_counterexamples": {
+    "schema_id": "factorlab.r2_cloud_review_probes@1.0",
+    "reviewed_commit": "8ffdd90b5a664337058fad4a301f85ddfa6aa599",
+    "reviewed_source_blob": "a003fe75fbb127761b63b963c320deecd88de539",
+    "execution": "current_cloud_session_isolated_source_excerpts_and_synthetic_fixtures",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "counterexamples_reproduced": 5,
+    "findings": [
+      {"id": "G1", "source_function": "digest_row", "counterexample_reproduced": true, "observed": "byte_match", "body_digest_matches_expected": false, "issue": "stale embedded digest accepted; raw failure silently changes convention"},
+      {"id": "G2", "source_function": "audit_ot1", "counterexample_reproduced": true, "observed_passed": true, "comparison": {"compared": 1, "only_left_finite": 0, "only_right_finite": 1, "max_abs": 0.0, "p99_abs": 0.0, "violations": 0}, "issue": "partial missing reconstruction on stored finite support ignored by final gate"},
+      {"id": "G3", "source_function": "audit_ot2", "counterexample_reproduced": true, "observed_passed": true, "stored_comparison": {"compared": 1, "only_left_finite": 0, "only_right_finite": 0, "max_abs": 1.0, "p99_abs": 1.0, "violations": 1}, "issue": "stored-state mismatch calculated but excluded from final gate"},
+      {"id": "G4", "source_function": "audit_p61", "counterexample_reproduced": true, "observed_evaluation_subset_passed": true, "issue": "empty evaluation accepted despite two finite future-labelled inference rows"},
+      {"id": "G5", "source_function": "audit_p61", "counterexample_reproduced": true, "parent_gate_accepts_missing_sample": true, "issue": "parent passed can include blocked raw-source sampling; split arithmetic and source status"}
+    ],
+    "full_original_module_executed": false,
+    "real_P6_data_read": false,
+    "actual_submission_gate_failures_proven": false,
+    "interpretation": "guard bugs reproduced, not evidence that actual arrays are corrupt. Submitted C/D numeric fields report zero support differences and zero store mismatches; preserve those scoped observations.",
+    "full_pit_certified": false,
+    "actions_executed": false
+  },
+  "probe_script_sha256": "sha256:76d0e5014cb81a74851039012bc37cdcd58ab6b9420cc1d3826e59e45204679e",
+  "accepted_local_scopes": ["P6.1 stored H20 identities and minute-label order", "declared DataHub sample price/minute agreement", "OT1 stored finite-support residual arithmetic and reported OLS spots", "fixed-tool full_reference prefix/store comparison for reported three factors", "K1 epsilon/axis equality and label subset", "14:30 seed11 512-row frozen inference reported agreement"],
+  "not_closed": ["strict item-level local 81-object identity", "actual crossfit states, exposure, reliability and masks consumed in K1 71 features", "OT3 full connection arithmetic", "event-time availability and timezone convention", "historically causal tool selection or independent review evidence", "full inference, full PIT, original account replay"],
+  "important_qualifications": {"guard_counterexamples_do_not_prove_corrupted_real_data": true, "reported_C_and_D_statistics_have_zero_missing_or_stored_mismatch": true, "fresh_oos_false_does_not_remove_retrospective_selection_dependence": true, "lineage_string_ambiguity_not_proven_t_minus_1_formula_error": true, "no_automatic_retrain_or_full_replay": true},
+  "local_delta_requests": ["export existing A.rows and recompute explicit canonical identity; strengthen predicates without broad rescan", "audit actual K1 crossfit state/exposure/mask paths and supported prefix behaviour", "supply existing timestamp-conversion evidence or retain event-time/PIT as unverified"],
+  "not_executed": ["real local P6/DataHub audit", "frozen inference", "nine local tests", "full repository test suite", "GitHub Actions", "training", "account replay"],
+  "full_pit_certified": false,
+  "fresh_oos": false,
+  "scientific_acceptance": "not_established",
+  "production_authority": false,
+  "source_materialization_limit": "Small JSON bytes verified against Git blob IDs; source predicate excerpts transcribed from connector output. No full repository clone or original-module execution claimed."
+}

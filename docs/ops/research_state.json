@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-06",
-  "current_task": "infrastructure_handoff_and_task_scoped_research_navigation",
+  "current_task": "r2_scoped_cloud_review_completed_local_delta_requested",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -11,15 +11,34 @@
     "explanation": "Six original inputs, six checkpoints and 24 daily partitions were checked in the recorded R1 run. This does not prove upstream PIT or recompute frozen scores. Do not ask for these deliveries again without an identified change."
   },
   "r2": {
-    "status": "not_independently_verified",
+    "status": "partially_reviewed_not_closed",
     "recovery_request": "cloud_results/first_round_rework_20260906/recovery_request.json",
-    "last_verification_blocker": "P6.1 target/fill and P6.2 residual, exposure and state provenance",
+    "last_verification_blocker": "Remaining strict local identity, actual K1 crossfit state/exposure/mask consumption and event-time evidence; no longer a blanket upstream-upload request",
     "upload_observation": {
       "observed_main_commit": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
       "meaning": "Additional P6.1/P6.2 source modules, tests and parts were observed in the PR merge snapshot. Upload completeness and PIT have not been re-audited in this infrastructure task. Re-read the current branch/tree before asserting an old listed path is still missing."
     },
-    "blocked_claims": ["historical_epsilon_and_factor_state_PIT_verified", "historical_account_results_independently_reproduced"],
-    "unblocked_work": ["documentation", "mathematical_preanalysis", "interface_implementation", "synthetic_counterexamples", "independent_source_audits"]
+    "local_feedback": {
+      "commit": "8ffdd90b5a664337058fad4a301f85ddfa6aa599",
+      "report": "cloud_results/local_handoff_R2_20260906/local_feedback.md",
+      "summary": "cloud_results/local_handoff_R2_20260906/local_audit_summary.json",
+      "task": "LCL-R2-20260906-01"
+    },
+    "cloud_review": {
+      "status": "completed_scoped_acceptance_with_open_claims",
+      "report": "cloud_results/local_handoff_R2_20260906/cloud_review.md",
+      "checks": "cloud_results/local_handoff_R2_20260906/cloud_review_checks.json",
+      "scope": "Read local reports and auditor, recompute four public JSON identities, reproduce five isolated guard counterexamples; not an independent large-data rerun",
+      "accepted_local_scopes": ["P6.1 stored H20 arithmetic and minute-label order", "declared DataHub sample equality", "OT1 stored finite-support arithmetic and OLS spots", "fixed-tool full_reference prefix and stored agreement for reported factors", "K1 epsilon and axes", "14:30 seed11 512 review rows"],
+      "open_claims": ["strict local 81-item raw/canonical binding detail", "actual K1 crossfit states, exposures, reliability and masks", "OT3 full connection", "event-time availability and timezone", "historically causal selection or independent review evidence"],
+      "local_delta": "Same task: export existing A.rows, correct auditor gates, verify actual consumed feature branch, supply existing timestamp convention evidence or retain uncertainty. No broad retrain or replay.",
+      "artifact_reuse": "Retain fixed artifacts for reproduction and consumed-development analysis; not blanket PIT or causal-strategy acceptance",
+      "full_pit_certified": false,
+      "automatic_retraining_required": false,
+      "actions_executed": false
+    },
+    "blocked_claims": ["historical_epsilon_and_factor_state_PIT_verified", "historical_account_results_independently_reproduced", "entire_K1_feature_consumption_verified", "retrospective_tool_selection_is_historically_frozen"],
+    "unblocked_work": ["documentation", "mathematical_preanalysis", "interface_implementation", "synthetic_counterexamples", "independent_source_audits", "reuse_reviewed_scoped_local_arithmetic_evidence"]
   },
   "historical_stage4": {
     "status": "not_accepted",
@@ -34,7 +53,7 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "在已有源码上定位金融残差、因子状态和成交时钟的实际构造链，先设计决定性的时点与收益重建反例；需要大数据时将对应只读检验放在数据所在环境，不重复索取已验收R1大文件。没有明确缺陷时不再启动一轮泛化基础设施重构。",
+  "next_useful_action": "同一 LCL-R2-20260906-01 只补云端复核报告第4节：导出原A.rows并正确重算canonical，修审计器漏判，核对实际进入K1的crossfit状态/暴露/掩码；补已有时间约定证据或保留未知。沿用已复核算术证据，不重新上传R1、不自动重训、不重放账户、不调用Actions。",
   "research_directions_not_a_mandatory_sequence": [
     {"question": "现任金融epsilon是否在正确时点、同一收益区间构造？", "independent_prework": "源代码与小型合同追踪、标签成熟和冻结系数反例；静态分析结论与真实PIT验证分别报告。", "empirical_dependency": "只有涉及实际构造正确性的主张才需要相应P6.1/P6.2有界验证。"},
     {"question": "市场或行业条件能否通过个股异质响应改善排序？", "independent_prework": "写清无条件基准、总收益或金融残差目标、同支持评价和共同状态的统计单位；常数平移作为无效反例。", "empirical_dependency": "未来已授权比较需自己的因果输入与评价数据，不沿用Stage4已实现持仓贡献作为预测增量。"},
