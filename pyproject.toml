@@ -34,7 +34,7 @@ packages = ["src/factor_lab"]
 minversion = "8.0"
 addopts = "-ra -q"
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
 
 [tool.ruff]
 line-length = 140
@@ -44,4 +44,3 @@ src = ["src", "tests", "scripts"]
 [tool.ruff.lint]
 select = ["B", "E", "F", "I", "UP"]
 ignore = ["B008"]
-
