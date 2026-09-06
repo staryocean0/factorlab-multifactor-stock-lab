@@ -1,0 +1,263 @@
+{
+  "n_h_fits": 6,
+  "receipts": [
+    {
+      "seed": 11,
+      "arm": "history_only",
+      "fixed_pre_loss": 1.7449978590011597,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.14857542341539,
+          "canonical_train_loss": 0.821243405342102,
+          "gradient_norm_max": 2.7958682984977106
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9704712947163087,
+          "canonical_train_loss": 0.8179348707199097,
+          "gradient_norm_max": 1.8720043374218074
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.9639598950416501,
+          "canonical_train_loss": 0.8127118349075317,
+          "gradient_norm_max": 1.7658189449720612
+        }
+      ],
+      "selected_cycle": 3,
+      "selected_canonical_loss": 0.8127118349075317,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 0.706269383430481,
+      "DMD_initialization": {
+        "ridge": 0.13835211639406583,
+        "pre_projection_spectral_radius": 0.9368678695331276,
+        "projected_spectral_radius": 0.9368678695331276,
+        "condition_number": 1164.2452033121547,
+        "raw_transition_count": 361628,
+        "operator_digest": "7b54949a41ed90f49521ec9422188217f70c11fbc9cf1ccc562535e156d6212a"
+      },
+      "healthy": true,
+      "clock": "1430",
+      "n_parameters": 3619,
+      "review_score_digest": "sha256:ef32ad648ff666d186260447d70cf775fa491712afef2cc996e58a8939853a04",
+      "local_score_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-COND-20260906-01/run02/h_review_scores_1430_seed_11.npy"
+    },
+    {
+      "seed": 29,
+      "arm": "history_only",
+      "fixed_pre_loss": 1.6829813718795776,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.1412546729533057,
+          "canonical_train_loss": 0.8174643516540527,
+          "gradient_norm_max": 1.8362450314440586
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9742831960113619,
+          "canonical_train_loss": 0.8157838582992554,
+          "gradient_norm_max": 3.7441460943828826
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.964269375601189,
+          "canonical_train_loss": 0.8154096603393555,
+          "gradient_norm_max": 0.8424817031304054
+        }
+      ],
+      "selected_cycle": 3,
+      "selected_canonical_loss": 0.8154096603393555,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 0.7487467527389526,
+      "DMD_initialization": {
+        "ridge": 0.11960685735913992,
+        "pre_projection_spectral_radius": 0.9291122142477002,
+        "projected_spectral_radius": 0.9291122142477002,
+        "condition_number": 796.8714796095874,
+        "raw_transition_count": 361628,
+        "operator_digest": "5cf933bd1fd393a21e745b591dae6d3eb48549978c0f09713e1869fab0448656"
+      },
+      "healthy": true,
+      "clock": "1430",
+      "n_parameters": 3619,
+      "review_score_digest": "sha256:89d8e2025770a324407a4d02e5849df97d4e17ca504c374192ecb0f7cfff8828",
+      "local_score_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-COND-20260906-01/run02/h_review_scores_1430_seed_29.npy"
+    },
+    {
+      "seed": 47,
+      "arm": "history_only",
+      "fixed_pre_loss": 1.6992616653442383,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.1654422021855486,
+          "canonical_train_loss": 0.8216708302497864,
+          "gradient_norm_max": 2.48076133575546
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9740902770858718,
+          "canonical_train_loss": 0.8304837346076965,
+          "gradient_norm_max": 2.4889165781717333
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.9647687480224647,
+          "canonical_train_loss": 0.8168904781341553,
+          "gradient_norm_max": 1.0950311890718687
+        }
+      ],
+      "selected_cycle": 3,
+      "selected_canonical_loss": 0.8168904781341553,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 0.7346605658531189,
+      "DMD_initialization": {
+        "ridge": 0.23811882240081272,
+        "pre_projection_spectral_radius": 0.9460747509181742,
+        "projected_spectral_radius": 0.9460747509181742,
+        "condition_number": 493.0466869143662,
+        "raw_transition_count": 361628,
+        "operator_digest": "0d3235010fa43627a03e6d599e69b62769b489ce80a1991726652b29f79e5123"
+      },
+      "healthy": true,
+      "clock": "1430",
+      "n_parameters": 3619,
+      "review_score_digest": "sha256:ff0761aad762149f54292c38240a27cb69a456b4378fb93fa864206ec643e0ae",
+      "local_score_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-COND-20260906-01/run02/h_review_scores_1430_seed_47.npy"
+    },
+    {
+      "seed": 11,
+      "arm": "history_only",
+      "fixed_pre_loss": 1.7457388639450073,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.1516226740336595,
+          "canonical_train_loss": 0.8232207298278809,
+          "gradient_norm_max": 1.9632503707704339
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9705366601588691,
+          "canonical_train_loss": 0.8130383491516113,
+          "gradient_norm_max": 1.8422806547905115
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.9628799704905837,
+          "canonical_train_loss": 0.821039617061615,
+          "gradient_norm_max": 1.088904598902021
+        }
+      ],
+      "selected_cycle": 2,
+      "selected_canonical_loss": 0.8130383491516113,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 0.6466238498687744,
+      "DMD_initialization": {
+        "ridge": 0.138337722564322,
+        "pre_projection_spectral_radius": 0.9369108819564633,
+        "projected_spectral_radius": 0.9369108819564633,
+        "condition_number": 1181.2313555015419,
+        "raw_transition_count": 361628,
+        "operator_digest": "efc34d39d5dcd5d7f2383b70ba20d0503ca60e20b2d227be8eca75878d52b7fb"
+      },
+      "healthy": true,
+      "clock": "1445",
+      "n_parameters": 3619,
+      "review_score_digest": "sha256:8c48649194f68c3f87dde6f51001bd95c12a0ad05c7e475113acd92e364d97e9",
+      "local_score_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-COND-20260906-01/run02/h_review_scores_1445_seed_11.npy"
+    },
+    {
+      "seed": 29,
+      "arm": "history_only",
+      "fixed_pre_loss": 1.6837297677993774,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.1417541051737174,
+          "canonical_train_loss": 0.8180088400840759,
+          "gradient_norm_max": 1.8416843300595378
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.970088779831362,
+          "canonical_train_loss": 0.8175131678581238,
+          "gradient_norm_max": 1.319599687940507
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.964658533829821,
+          "canonical_train_loss": 0.8127784132957458,
+          "gradient_norm_max": 0.9692552779134325
+        }
+      ],
+      "selected_cycle": 3,
+      "selected_canonical_loss": 0.8127784132957458,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 0.7429769039154053,
+      "DMD_initialization": {
+        "ridge": 0.1196311586265299,
+        "pre_projection_spectral_radius": 0.9290521780688392,
+        "projected_spectral_radius": 0.9290521780688392,
+        "condition_number": 776.5155203614685,
+        "raw_transition_count": 361628,
+        "operator_digest": "aabdb538c4b763522d66f1b052c901a6d982c6245e34fecb47766a96ab934861"
+      },
+      "healthy": true,
+      "clock": "1445",
+      "n_parameters": 3619,
+      "review_score_digest": "sha256:57d7feee86c3646edc703fc53762852c19aa87b59484dc1e3a86a4b0b5ab1708",
+      "local_score_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-COND-20260906-01/run02/h_review_scores_1445_seed_29.npy"
+    },
+    {
+      "seed": 47,
+      "arm": "history_only",
+      "fixed_pre_loss": 1.6999980211257935,
+      "cycles": [
+        {
+          "cycle": 1,
+          "mean_train_loss": 1.1680816246792938,
+          "canonical_train_loss": 0.8195386528968811,
+          "gradient_norm_max": 2.4851346063982107
+        },
+        {
+          "cycle": 2,
+          "mean_train_loss": 0.9728643197765253,
+          "canonical_train_loss": 0.8181875348091125,
+          "gradient_norm_max": 1.7910450127737532
+        },
+        {
+          "cycle": 3,
+          "mean_train_loss": 0.9648664460156926,
+          "canonical_train_loss": 0.8232921957969666,
+          "gradient_norm_max": 1.368067350141494
+        }
+      ],
+      "selected_cycle": 2,
+      "selected_canonical_loss": 0.8181875348091125,
+      "checkpoint_selection_source": "fit_prefix_canonical_loss_only",
+      "2017_used_for_checkpoint_selection": false,
+      "update_parameter_ratio": 0.6677452921867371,
+      "DMD_initialization": {
+        "ridge": 0.2381427489470718,
+        "pre_projection_spectral_radius": 0.9460864184508011,
+        "projected_spectral_radius": 0.9460864184508011,
+        "condition_number": 491.76742682465147,
+        "raw_transition_count": 361628,
+        "operator_digest": "1fa96c15158ce01dae32efbc4606fc3da7bb8dc0dcba44e980b3769e8486b118"
+      },
+      "healthy": true,
+      "clock": "1445",
+      "n_parameters": 3619,
+      "review_score_digest": "sha256:a10f01f56f3338afc1038b0f4984dd5cf8122e57b1475efe3f52da29dc2cab95",
+      "local_score_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-COND-20260906-01/run02/h_review_scores_1445_seed_47.npy"
+    }
+  ]
+}

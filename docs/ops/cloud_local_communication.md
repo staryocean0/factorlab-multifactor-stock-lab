@@ -86,7 +86,7 @@ python scripts/reaka_r3_frozen_compare.py \
 
 ## 实际任务：LCL-R3-COND-20260906-01
 
-**状态与入口（2026-09-06）**：云端已完成设计和输入视图/模型子类适配，真实对照待用户转交本地，未派发、未拟合。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
+**状态与入口（2026-09-06）**：云端已完成设计和输入视图/模型子类适配。**本地已反馈** F 复用 + 6 次 H 拟合对照；尚未云端复核。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
 
 **金融问题与主比较**：区分历史epsilon表示学习与原有直接X信息包增量。默认仅F完整输入、H同拓扑且全部71个X通道在训练和评价中置零；K1/r0、目标、支持、normalizer与训练规则相同。可选E只移除状态/状态掩码，保留暴露/可靠性/暴露掩码，不在默认执行范围。不是使用旧without_gate，也不把推理时置零当训练消融；新月度CloudRidge条件不混入。
 
@@ -101,6 +101,9 @@ python scripts/reaka_r3_frozen_compare.py \
 **回传与云端验收**：新目录 `cloud_results/local_handoff_R3_condition_20260906/` 下 `local_feedback.md`、`comparison.json`、`paired_daily.csv`，并回传新增runner/测试。记录源提交、输入/normalizer/支持摘要、每seed初始化/选周期、实际拟合数量、复用理由、全部失败与环境。大数据/checkpoint留本地。报告已消费2017的F−H、H−既有四B，既有B同支持则复用；不升级PIT/OOS/金融因果或生产结论。
 
 **转交状态**：此提交保存明确可实施的设计与本地任务，由用户安排执行；没有直连本地自动执行通道。当前没有本地结果可验收。本地完成后只填“本地已反馈”，云端再复核；不是新建全局审批或重复旧补件。
+
+
+**本地反馈（2026-09-06）**：基点 `6552b6f`；FactorLab `b39bb12f` 未改脏区。F 复用（fit-prefix/training/preflight blob 一致），已知目录无同口径 H。新建 `scripts/reaka_r3_condition_compare.py` 与 `tests/unit/test_reaka_r3_condition_compare.py`。pytest 视图 33 + runner 4 通过。正式命令 `run02` 退出码 0，H 拟合 6 次、未跑 E、未重训 F。F rankIC 与 NOFIT 一致；F−H 约 +0.016/+0.021。报告 [local_feedback.md](../../cloud_results/local_handoff_R3_condition_20260906/local_feedback.md)、[comparison.json](../../cloud_results/local_handoff_R3_condition_20260906/comparison.json)、[paired_daily.csv](../../cloud_results/local_handoff_R3_condition_20260906/paired_daily.csv)。大分数 npy 留本地。不是 PIT/OOS/因果/生产。
 
 ## 任务记录与反馈模板
 
