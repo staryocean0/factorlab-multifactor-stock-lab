@@ -35,7 +35,17 @@
       "artifact_reuse": "Retain fixed artifacts for reproduction and consumed-development analysis; not blanket PIT or causal-strategy acceptance",
       "full_pit_certified": false,
       "automatic_retraining_required": false,
-      "actions_executed": false
+      "actions_executed": false,
+      "additional_cloud_checks": {
+        "readme": "cloud_results/local_handoff_R2_20260906/cloud_review_v1/README.md",
+        "receipt": "cloud_results/local_handoff_R2_20260906/cloud_review_v1/cloud_checks.json",
+        "reproducer": "cloud_results/local_handoff_R2_20260906/cloud_review_v1/cloud_review_checks.py",
+        "summary_consistency_checks": 60,
+        "summary_consistency_failures": 0,
+        "isolated_observations_reproduced": 8,
+        "original_json_bodies_rehashed": 4,
+        "scope": "Independent current-session small-evidence checks. Overlapping probes are not additive market evidence. Preserve the existing review and same-task delta; no large-data replay or second protocol."
+      }
     },
     "blocked_claims": ["historical_epsilon_and_factor_state_PIT_verified", "historical_account_results_independently_reproduced", "entire_K1_feature_consumption_verified", "retrospective_tool_selection_is_historically_frozen"],
     "unblocked_work": ["documentation", "mathematical_preanalysis", "interface_implementation", "synthetic_counterexamples", "independent_source_audits", "reuse_reviewed_scoped_local_arithmetic_evidence"]

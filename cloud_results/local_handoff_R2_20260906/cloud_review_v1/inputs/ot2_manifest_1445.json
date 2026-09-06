@@ -1,0 +1,9 @@
+{
+  "schema_id": "factorlab.reaka_intraday_OT2_manifest@1.0",
+  "selected_states_digest": "sha256:d4e20ada19a837bcb7616b91c25556e179645c91071def783c34f01c51696e0e",
+  "annual_metrics_digest": "sha256:e3b3d62edb0b594af614906fbd2a309527a73a4b431beed9d3d1cd473858ad22",
+  "selection_digest": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6",
+  "selected_state_rows": 217116,
+  "production_authority": false,
+  "canonical_digest": "sha256:52e4c0b2adcb9b245f4fc17a7490c1f5710d9547beebff87c7b261f347966ac3"
+}
