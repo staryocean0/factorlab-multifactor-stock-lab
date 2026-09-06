@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-06",
-  "current_task": "r2_local_delta_feedback_waiting_cloud_review",
+  "current_task": "r2_local_delta_review_completed_with_limits_ready_for_R3_evidence_use_adjudication",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -11,9 +11,10 @@
     "explanation": "Six original inputs, six checkpoints and 24 daily partitions were checked in the recorded R1 run. This does not prove upstream PIT or recompute frozen scores. Do not ask for these deliveries again without an identified change."
   },
   "r2": {
-    "status": "partially_reviewed_not_closed",
+    "status": "bounded_reproducibility_review_complete_pit_not_certified",
+    "handoff_task_status": "completed_with_limits",
     "recovery_request": "cloud_results/first_round_rework_20260906/recovery_request.json",
-    "last_verification_blocker": "Cloud has not yet reviewed the local A/B/C delta; event-time availability and retrospective tool-selection causality remain unverified",
+    "last_verification_blocker": "No additional same-task A/B/C delivery required. Remaining event-time availability, retrospective selection and full PIT limits constrain claims, not unrelated work.",
     "upload_observation": {
       "observed_main_commit": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
       "meaning": "Additional P6.1/P6.2 source modules, tests and parts were observed in the PR merge snapshot. Upload completeness and PIT have not been re-audited in this infrastructure task. Re-read the current branch/tree before asserting an old listed path is still missing."
@@ -25,21 +26,42 @@
       "task": "LCL-R2-20260906-01"
     },
     "cloud_review": {
-      "status": "completed_scoped_acceptance_with_open_claims",
-      "report": "cloud_results/local_handoff_R2_20260906/cloud_review.md",
-      "checks": "cloud_results/local_handoff_R2_20260906/cloud_review_checks.json",
-      "scope": "Read local reports and auditor, recompute four public JSON identities, reproduce five isolated guard counterexamples; not an independent large-data rerun",
-      "accepted_local_scopes": ["P6.1 stored H20 arithmetic and minute-label order", "declared DataHub sample equality", "OT1 stored finite-support arithmetic and OLS spots", "fixed-tool full_reference prefix and stored agreement for reported factors", "K1 epsilon and axes", "14:30 seed11 512 review rows"],
-      "open_claims": ["strict local 81-item raw/canonical binding detail", "actual K1 crossfit states, exposures, reliability and masks", "OT3 full connection", "event-time availability and timezone", "historically causal selection or independent review evidence"],
-      "local_delta": "Executed locally 2026-09-06; waiting cloud review of local_feedback_delta.md. Successor auditor v1.1 repaired G1-G5, recomputed selection canonical, verified consumed K1 crossfit/exposure/mask branches, and retained event-availability unknown.",
+      "status": "completed_delta_acceptance_with_explicit_limits",
+      "report": "cloud_results/local_handoff_R2_20260906/cloud_delta_review.md",
+      "checks": "cloud_results/local_handoff_R2_20260906/cloud_delta_review_checks.json",
+      "initial_report": "cloud_results/local_handoff_R2_20260906/cloud_review.md",
+      "initial_checks": "cloud_results/local_handoff_R2_20260906/cloud_review_checks.json",
+      "scope": "Read delta report, summary, complete successor auditor and relevant identity detail; run 7 exact-source tests, 6 isolated synthetic assembly tests and 48 small-evidence checks in cloud. Not a real-array or full-PIT rerun.",
+      "accepted_local_scopes": [
+        "P6.1 stored H20 arithmetic and minute-label order",
+        "declared DataHub sample equality",
+        "OT1 stored finite-support arithmetic and OLS spots",
+        "K1 epsilon and axes",
+        "14:30 seed11 512 review rows",
+        "81-item local identity ledger: 79 prior raw comparisons reused, 2 selection JSON bodies rebound",
+        "K1 state, exposure, reliability and mask storage replay with original builders",
+        "fixed-tool prefix and stored agreement: five consumed folds times 14 factors per clock at one cutoff"
+      ],
+      "open_claims": [
+        "full upstream PIT and event availability/timezone semantics",
+        "historically causal tool selection or independent review evidence",
+        "all real 71-channel rows independently reassembled and all frozen scores recomputed",
+        "original historical account process reproduced"
+      ],
+      "local_delta": "Accepted within declared scope; no further same-task upload or large rerun required. C retained explicit uncertainty as allowed by the original supplement request.",
       "local_delta_feedback": {
-        "status": "local_feedback_written_not_cloud_reviewed",
+        "status": "cloud_reviewed_scoped_acceptance",
+        "commit": "eb1fa92e81e7548bd9b50b48c9848fc2853e6cde",
         "report": "cloud_results/local_handoff_R2_20260906/local_feedback_delta.md",
         "summary": "cloud_results/local_handoff_R2_20260906/local_audit_delta_summary.json",
+        "detail": "cloud_results/local_handoff_R2_20260906/local_audit_delta.json",
         "auditor": "scripts/reaka_r2_local_audit_v1_1.py",
         "original_auditor_unchanged": "scripts/reaka_r2_local_audit_v1.py"
       },
-      "artifact_reuse": "Retain fixed artifacts for reproduction and consumed-development analysis; not blanket PIT or causal-strategy acceptance",
+      "artifact_reuse": "Retain fixed artifacts for reproduction and consumed-development analysis; not blanket PIT, causal historical strategy or production acceptance",
+      "ot3_direct_k1_feature_dependency": false,
+      "ot3_full_chain_verified": false,
+      "new_local_data_task_required": false,
       "full_pit_certified": false,
       "automatic_retraining_required": false,
       "actions_executed": false,
@@ -51,11 +73,18 @@
         "summary_consistency_failures": 0,
         "isolated_observations_reproduced": 8,
         "original_json_bodies_rehashed": 4,
-        "scope": "Independent current-session small-evidence checks. Overlapping probes are not additive market evidence. Preserve the existing review and same-task delta; no large-data replay or second protocol."
-      }
+        "scope": "Historical initial-review checks, preserved unchanged. Do not add overlapping observations to current test counts or independent market evidence."
+      },
+      "delta_cloud_checks": {"successor_tests": 7, "synthetic_assembly_tests": 6, "small_evidence_checks": 48, "failures": 0, "full_repository_test_run": false}
     },
-    "blocked_claims": ["historical_epsilon_and_factor_state_PIT_verified", "historical_account_results_independently_reproduced", "entire_K1_feature_consumption_verified", "retrospective_tool_selection_is_historically_frozen"],
-    "unblocked_work": ["documentation", "mathematical_preanalysis", "interface_implementation", "synthetic_counterexamples", "independent_source_audits", "reuse_reviewed_scoped_local_arithmetic_evidence"]
+    "blocked_claims": [
+      "historical_epsilon_and_factor_state_PIT_verified",
+      "historical_account_results_independently_reproduced",
+      "all_real_K1_71_channel_rows_independently_reassembled",
+      "retrospective_tool_selection_is_historically_frozen",
+      "minute_label_order_proves_trade_execution"
+    ],
+    "unblocked_work": ["documentation", "mathematical_preanalysis", "interface_implementation", "synthetic_counterexamples", "independent_source_audits", "reuse_reviewed_scoped_local_arithmetic_evidence", "R3_evidence_use_adjudication"]
   },
   "historical_stage4": {
     "status": "not_accepted",
@@ -70,9 +99,9 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "云端按断言复核 LCL-R2-20260906-01 增量：A 身份与 G1–G5、B 实际 K1 消费支路、C 标签代理/事件可得性未验证。不要把本地退出 0 写成全量 PIT；不重传 R1、不自动重训、不重放账户、不调用 Actions。",
+  "next_useful_action": "本轮 LCL-R2-20260906-01 已按声明范围验收收口，不再重复 A/B/C 补件。转入 R3 的证据用途裁决：以已消费开发材料身份明确现任 K1 与条件特征可回答的预测问题、基准和评价设计；先使用已有结果与源码说明，不自动重训、K搜索、账户重放或调用 Actions。事件时钟/全量PIT等未证事项只限制对应主张。",
   "research_directions_not_a_mandatory_sequence": [
-    {"question": "现任金融epsilon是否在正确时点、同一收益区间构造？", "independent_prework": "源代码与小型合同追踪、标签成熟和冻结系数反例；静态分析结论与真实PIT验证分别报告。", "empirical_dependency": "只有涉及实际构造正确性的主张才需要相应P6.1/P6.2有界验证。"},
+    {"question": "现任金融epsilon是否在正确时点、同一收益区间构造？", "independent_prework": "沿用已验收的存盘算术和重建证据；仅对新任务确需的事件可得性或未覆盖来源另定检查，避免重复盘点。", "empirical_dependency": "全量PIT仍未认证；本轮任务完成不替代该更强主张的来源证据。"},
     {"question": "市场或行业条件能否通过个股异质响应改善排序？", "independent_prework": "写清无条件基准、总收益或金融残差目标、同支持评价和共同状态的统计单位；常数平移作为无效反例。", "empirical_dependency": "未来已授权比较需自己的因果输入与评价数据，不沿用Stage4已实现持仓贡献作为预测增量。"},
     {"question": "增加容量或潜残差模型是否有必要？", "independent_prework": "区分改变金融残差预测与增加潜动力修正；比较可辨识性和简单基准，不默认选K2或DDPM。", "empirical_dependency": "按该实验预分析及尝试预算验证，允许零修正和无增益。"}
   ]

@@ -1,0 +1,55 @@
+{
+  "schema_id": "factorlab.r2_delta_cloud_acceptance@1.0",
+  "task": "LCL-R2-20260906-01",
+  "reviewed_commit": "eb1fa92e81e7548bd9b50b48c9848fc2853e6cde",
+  "verdict": "completed_with_limits",
+  "r2_status": "bounded_reproducibility_review_complete_pit_not_certified",
+  "executed_by": "current_cloud_session",
+  "source_identity": [
+    {"path": "scripts/reaka_r2_local_audit_v1_1.py", "bytes": 27385, "git_blob": "a076bcf6d48f4c3c49e56ea3a65deb16ecb1491c", "expected_git_blob": "a076bcf6d48f4c3c49e56ea3a65deb16ecb1491c", "sha256": "04a100b566294e03369313ef475190318d850c10de8b5fc014909a21e659aa0e", "match": true},
+    {"path": "tests/unit/test_reaka_r2_local_audit_v1_1.py", "bytes": 7129, "git_blob": "5f73d364ee7c03165d16d8f9a88a015182c2b8e4", "expected_git_blob": "5f73d364ee7c03165d16d8f9a88a015182c2b8e4", "sha256": "97ff56a20dbdc956d1e52e4ec6a7df0aba2576187aecc519889b95cae137ee09", "match": true},
+    {"path": "src/factor_lab/governance/canonicalization.py", "bytes": 694, "git_blob": "03c56b9ec94c7d0e71cfbcbd25e43fba117d154d", "expected_git_blob": "03c56b9ec94c7d0e71cfbcbd25e43fba117d154d", "sha256": "886cbe6dbf4b45cdb52b814d549cd8b21f1a7724a3f049dfcceb2fa53a68b41c", "match": true}
+  ],
+  "successor_tests": {
+    "command": "python -m pytest -q tests/unit/test_reaka_r2_local_audit_v1_1.py --junitxml=../successor_tests.xml",
+    "exit_code": 0, "tests": 7, "failures": 0, "errors": 0, "skipped": 0,
+    "junit_sha256": "f52c152649105c9feaf164174ea3523649316a2e31cc0dffb6ca42a7234d36e3",
+    "log_sha256": "c16e476727b44651fa5f7dfdcafb51f1ac3060244911f7766ff0b1b89f467249"
+  },
+  "synthetic_assembly_tests": {
+    "command": "python -m pytest -q test_assembly_review.py --junitxml=assembly_tests.xml",
+    "exit_code": 0, "tests": 6, "failures": 0, "errors": 0, "skipped": 0,
+    "scope": "isolated method excerpt, independent scalar oracle on 5 folds and 71 channels; no full original-module import or real-row rerun",
+    "source_module_blob": "6942fb2dc20d24307578bc7dda45368afaf3d1f5",
+    "excerpt_sha256": "24d2a8902a402974a3106e37cd38d21ed319450d705c402c69379758b5730f91",
+    "tests_sha256": "1fc374346ffa989468ef64d1449b9a7a7a0f6986195c40275c4399118c5e15c9",
+    "junit_sha256": "ca215068adb987683a7560b9552005c04aeab604e87238165d3ff311d52501f4"
+  },
+  "small_evidence": {
+    "command": "python check_small_evidence.py", "exit_code": 0, "passed": 48, "failed": 0,
+    "json_sha256": "b1b03ca51c113a4276b833c684475bf7e7797f6237daa6dc396f4c0d776559de",
+    "scope": "summary consistency, known JSON bodies and original-statistics rejudgment only; 81 raw files and 140 real prefix paths were NOT rerun here"
+  },
+  "environment": {"python": "3.13.5", "numpy": "2.3.5", "pandas": "2.2.3", "platform": "Linux-6.18.35-x86_64-with-glibc2.41"},
+  "accepted_local_evidence": {
+    "identity_rows": 81, "raw_comparisons_reused": 79, "selection_json_bodies_recomputed": 2,
+    "clocks": ["1430", "1445"], "state_cells_per_array_per_clock": 286104,
+    "exposure_cells_per_array_per_clock": 32556832, "counts_include_default_zeros": true,
+    "fixed_tool_prefix_combinations_per_clock": 70, "prefix_cutoff": "2016-12-31",
+    "rebuild_uses_original_state_and_exposure_builders": true, "cloud_independent_real_array_replay": false
+  },
+  "remaining_limits": [
+    "full upstream PIT and vendor time conversion not certified",
+    "tool selection used 2009-2020 future evaluations; not historically frozen",
+    "full real 71-channel assembly/all checkpoint scores not independently rerun",
+    "old Stage4 not accepted; original account blobs unrecovered"
+  ],
+  "new_local_data_task_required": false,
+  "automatic_retraining_required": false,
+  "full_pit_certified": false,
+  "fresh_oos": false,
+  "scientific_acceptance": "not_established",
+  "production_authority": false,
+  "actions_executed": false,
+  "main_merged": false
+}
