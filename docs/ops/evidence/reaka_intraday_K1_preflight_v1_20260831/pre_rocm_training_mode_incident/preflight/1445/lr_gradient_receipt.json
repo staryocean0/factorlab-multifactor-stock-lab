@@ -1,0 +1,543 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_LR_probe@1.0",
+  "status": "passed",
+  "rows": [
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.0001,
+      "losses": [
+        1.687170147895813,
+        1.6866815090179443,
+        1.6861963272094727,
+        1.6857150793075562
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        0.18544769287109375,
+        0.18237712979316711,
+        0.17937040328979492
+      ],
+      "update_parameter_ratio": 0.0012124975910410285,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.0003,
+      "losses": [
+        1.687170147895813,
+        1.685714840888977,
+        1.6842924356460571,
+        1.6829005479812622
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        0.17920121550559998,
+        0.17038597166538239,
+        0.16252854466438293
+      ],
+      "update_parameter_ratio": 0.0036059345584362745,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.001,
+      "losses": [
+        1.687170147895813,
+        1.6824487447738647,
+        1.678055763244629,
+        1.6739028692245483
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        0.15707486867904663,
+        0.13443760573863983,
+        0.11904183030128479
+      ],
+      "update_parameter_ratio": 0.01162854116410017,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.003,
+      "losses": [
+        1.687170147895813,
+        1.6742159128189087,
+        1.6630319356918335,
+        1.653018593788147
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        0.11238040030002594,
+        0.11353014409542084,
+        0.10017940402030945
+      ],
+      "update_parameter_ratio": 0.03174364194273949,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.01,
+      "losses": [
+        1.687170147895813,
+        1.662186622619629,
+        1.6322977542877197,
+        1.6189250946044922
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        0.24099981784820557,
+        0.1601513922214508,
+        0.23289260268211365
+      ],
+      "update_parameter_ratio": 0.08164124190807343,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.03,
+      "losses": [
+        1.687170147895813,
+        1.8239188194274902,
+        1.614725112915039,
+        1.6385849714279175
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        1.0471220016479492,
+        0.3719087243080139,
+        0.585822343826294
+      ],
+      "update_parameter_ratio": 0.1892164945602417,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.1,
+      "losses": [
+        1.687170147895813,
+        3.4060521125793457,
+        1.6754298210144043,
+        1.643444538116455
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        3.534954071044922,
+        0.5464013814926147,
+        0.062516950070858
+      ],
+      "update_parameter_ratio": 0.6671810746192932,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d8_h8",
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "learning_rate": 0.3,
+      "losses": [
+        1.687170147895813,
+        6.281935214996338,
+        3.0810186862945557,
+        9.251413345336914
+      ],
+      "gradient_maxima": [
+        0.1885586380958557,
+        5.9133100509643555,
+        1.3128324747085571,
+        18.37987518310547
+      ],
+      "update_parameter_ratio": 2.041600465774536,
+      "DMD": {
+        "ridge": 0.03494571577382621,
+        "pre_projection_radius": 1.0219030851714768
+      },
+      "healthy": false
+    },
+    {
+      "identity": "d16_h16",
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "learning_rate": 0.0001,
+      "losses": [
+        1.6663122177124023,
+        1.6648931503295898,
+        1.6635068655014038,
+        1.6621522903442383
+      ],
+      "gradient_maxima": [
+        0.15539029240608215,
+        0.14692431688308716,
+        0.13869144022464752,
+        0.13084255158901215
+      ],
+      "update_parameter_ratio": 0.0013746723998337984,
+      "DMD": {
+        "ridge": 0.03215347859739995,
+        "pre_projection_radius": 1.0649615153134089
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h16",
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "learning_rate": 0.0003,
+      "losses": [
+        1.6663122177124023,
+        1.662150263786316,
+        1.658265233039856,
+        1.65459406375885
+      ],
+      "gradient_maxima": [
+        0.15539029240608215,
+        0.1300901621580124,
+        0.12565699219703674,
+        0.13377735018730164
+      ],
+      "update_parameter_ratio": 0.0040613943710923195,
+      "DMD": {
+        "ridge": 0.03215347859739995,
+        "pre_projection_radius": 1.0649615153134089
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h16",
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "learning_rate": 0.001,
+      "losses": [
+        1.6663122177124023,
+        1.6535193920135498,
+        1.642651915550232,
+        1.6329286098480225
+      ],
+      "gradient_maxima": [
+        0.15539029240608215,
+        0.14669394493103027,
+        0.15254567563533783,
+        0.1379518061876297
+      ],
+      "update_parameter_ratio": 0.01298116147518158,
+      "DMD": {
+        "ridge": 0.03215347859739995,
+        "pre_projection_radius": 1.0649615153134089
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h16",
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "learning_rate": 0.003,
+      "losses": [
+        1.6663122177124023,
+        1.6364375352859497,
+        1.6143028736114502,
+        1.6002947092056274
+      ],
+      "gradient_maxima": [
+        0.15539029240608215,
+        0.23572123050689697,
+        0.09486805647611618,
+        0.10446786880493164
+      ],
+      "update_parameter_ratio": 0.03330163285136223,
+      "DMD": {
+        "ridge": 0.03215347859739995,
+        "pre_projection_radius": 1.0649615153134089
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h16",
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "learning_rate": 0.01,
+      "losses": [
+        1.6663122177124023,
+        1.6402208805084229,
+        1.6949681043624878,
+        1.5765302181243896
+      ],
+      "gradient_maxima": [
+        0.15539029240608215,
+        0.5399041771888733,
+        0.7383620738983154,
+        0.16850018501281738
+      ],
+      "update_parameter_ratio": 0.08075112849473953,
+      "DMD": {
+        "ridge": 0.03215347859739995,
+        "pre_projection_radius": 1.0649615153134089
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h16",
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "learning_rate": 0.03,
+      "losses": [
+        1.6663122177124023,
+        1.8378949165344238,
+        2.2965314388275146,
+        1.6018986701965332
+      ],
+      "gradient_maxima": [
+        0.15539029240608215,
+        1.3390671014785767,
+        1.9223992824554443,
+        0.49822425842285156
+      ],
+      "update_parameter_ratio": 0.22526194155216217,
+      "DMD": {
+        "ridge": 0.03215347859739995,
+        "pre_projection_radius": 1.0649615153134089
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h16",
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "learning_rate": 0.1,
+      "losses": [
+        1.6663122177124023,
+        3.514488935470581,
+        2.9846928119659424,
+        2.970940351486206
+      ],
+      "gradient_maxima": [
+        0.15539029240608215,
+        3.470987558364868,
+        3.1027870178222656,
+        2.9911961555480957
+      ],
+      "update_parameter_ratio": 0.7518148422241211,
+      "DMD": {
+        "ridge": 0.03215347859739995,
+        "pre_projection_radius": 1.0649615153134089
+      },
+      "healthy": false
+    },
+    {
+      "identity": "d16_h32",
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "learning_rate": 0.0001,
+      "losses": [
+        1.6072553396224976,
+        1.606361746788025,
+        1.605487585067749,
+        1.6046323776245117
+      ],
+      "gradient_maxima": [
+        0.0628373771905899,
+        0.05698634311556816,
+        0.056953065097332,
+        0.056925516575574875
+      ],
+      "update_parameter_ratio": 0.0013983293902128935,
+      "DMD": {
+        "ridge": 0.03171996699166771,
+        "pre_projection_radius": 1.0622525862432237
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h32",
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "learning_rate": 0.0003,
+      "losses": [
+        1.6072553396224976,
+        1.6046316623687744,
+        1.602173924446106,
+        1.5998517274856567
+      ],
+      "gradient_maxima": [
+        0.0628373771905899,
+        0.05691201239824295,
+        0.056845810264348984,
+        0.05682564526796341
+      ],
+      "update_parameter_ratio": 0.00412313686683774,
+      "DMD": {
+        "ridge": 0.03171996699166771,
+        "pre_projection_radius": 1.0622525862432237
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h32",
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "learning_rate": 0.001,
+      "losses": [
+        1.6072553396224976,
+        1.5991815328598022,
+        1.5923174619674683,
+        1.5857913494110107
+      ],
+      "gradient_maxima": [
+        0.0628373771905899,
+        0.05664459615945816,
+        0.05669894441962242,
+        0.057041727006435394
+      ],
+      "update_parameter_ratio": 0.013032125309109688,
+      "DMD": {
+        "ridge": 0.03171996699166771,
+        "pre_projection_radius": 1.0622525862432237
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h32",
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "learning_rate": 0.003,
+      "losses": [
+        1.6072553396224976,
+        1.5888333320617676,
+        1.5709052085876465,
+        1.558255672454834
+      ],
+      "gradient_maxima": [
+        0.0628373771905899,
+        0.15731558203697205,
+        0.05839085578918457,
+        0.07462120801210403
+      ],
+      "update_parameter_ratio": 0.03432881459593773,
+      "DMD": {
+        "ridge": 0.03171996699166771,
+        "pre_projection_radius": 1.0622525862432237
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h32",
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "learning_rate": 0.01,
+      "losses": [
+        1.6072553396224976,
+        1.612606167793274,
+        1.5588270425796509,
+        1.564048409461975
+      ],
+      "gradient_maxima": [
+        0.0628373771905899,
+        0.6702526807785034,
+        0.29143187403678894,
+        0.48171466588974
+      ],
+      "update_parameter_ratio": 0.08646196126937866,
+      "DMD": {
+        "ridge": 0.03171996699166771,
+        "pre_projection_radius": 1.0622525862432237
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h32",
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "learning_rate": 0.03,
+      "losses": [
+        1.6072553396224976,
+        2.097910165786743,
+        1.764926791191101,
+        1.5974392890930176
+      ],
+      "gradient_maxima": [
+        0.0628373771905899,
+        2.0546274185180664,
+        1.152806043624878,
+        0.5097730159759521
+      ],
+      "update_parameter_ratio": 0.22901484370231628,
+      "DMD": {
+        "ridge": 0.03171996699166771,
+        "pre_projection_radius": 1.0622525862432237
+      },
+      "healthy": true
+    },
+    {
+      "identity": "d16_h32",
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "learning_rate": 0.1,
+      "losses": [
+        1.6072553396224976,
+        7.613842010498047,
+        20.115352630615234,
+        3.8946609497070312
+      ],
+      "gradient_maxima": [
+        0.0628373771905899,
+        7.417480945587158,
+        12.76133918762207,
+        3.169142961502075
+      ],
+      "update_parameter_ratio": 0.7037104368209839,
+      "DMD": {
+        "ridge": 0.03171996699166771,
+        "pre_projection_radius": 1.0622525862432237
+      },
+      "healthy": false
+    }
+  ],
+  "selected_learning_rates": {
+    "d8_h8": 0.1,
+    "d16_h16": 0.03,
+    "d16_h32": 0.03
+  },
+  "right_censored_identities": [],
+  "target_read": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:ce0659128ed5d203ded6d4b1497d1bd334b06930768739f74ba0457e60d0d30d"
+}

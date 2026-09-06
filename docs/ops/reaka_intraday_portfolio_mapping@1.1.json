@@ -1,0 +1,138 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping@1.1",
+  "status": "result_free_corporate_action_and_historical_cost_repair_implementation_authorized",
+  "issue_ref": "bd://fl-eginj.14",
+  "supersedes_contract_digest": "sha256:4aeed2e058cc7ece74ce70f88656980e6d1ad4a21684a8b7f42389fb6736d929",
+  "pre_execution_incident_digest": "sha256:5d6205f4348c30d33d4d3d400ead11fd3d5c8946238cc420021954fd3892121c",
+  "authority_receipt_digest": "sha256:51bfa93154262eb2622f46798b1697523396ea990dcb2d5bd68c4ac5bd2d9306",
+  "inheritance": {
+    "base_contract": "docs/ops/reaka_intraday_portfolio_mapping@1.0.json",
+    "base_contract_digest": "sha256:4aeed2e058cc7ece74ce70f88656980e6d1ad4a21684a8b7f42389fb6736d929",
+    "unchanged": [
+      "fixed_strategy_identity",
+      "data_usage",
+      "common_root_policy",
+      "candidate_family",
+      "industry_concentration_axis",
+      "whole_policy_selection",
+      "clock_nomination_gate",
+      "annual_session_protocol",
+      "required_outputs"
+    ],
+    "replaced": [
+      "execution_and_accounting",
+      "costs",
+      "current_permissions"
+    ]
+  },
+  "common_root_policy": {
+    "policy_id": "N30_equal_backfill_unconstrained",
+    "top_n": 30,
+    "weighting": "equal",
+    "buy_unavailable": "backfill_next_ranked_buyable_at_same_execution_event",
+    "size_concentration": "none"
+  },
+  "candidate_family": {
+    "top_n": [10, 30, 50],
+    "weighting": ["equal", "rank_linear_capped_2_over_N"],
+    "buy_unavailable": ["cash", "backfill_next_ranked_buyable_at_same_execution_event"],
+    "size_concentration": ["none", "PIT_total_market_cap_tercile_max_50pct"],
+    "executable_policy_count": 24,
+    "all_combinations_required": true,
+    "post_result_family_change_allowed": false
+  },
+  "execution_and_accounting": {
+    "decision_to_execution": "same_day_first_raw_PIT_minute_strictly_after_1430_or_1445_close",
+    "order_and_fill_audit_price": "raw_execution_price",
+    "raw_fill_must_remain_persisted": true,
+    "economic_unit_price_formula": "raw_price * hfq_price_multiplier",
+    "economic_unit_semantics": "adjusted_units_preserve_self_financing_value_across_cash_dividend_bonus_split_rights_and_consolidation_events",
+    "qfq_or_hfq_price_used_as_order_fill": false,
+    "factor_type": "hfq",
+    "factor_dataset_version": "adjust_factors_cn_a_xdxr_v9_20260814",
+    "factor_manifest_sha256": "sha256:6bc90e954452f8366459a80cf76439289ea73bf837b02cdcbba9e2447c86d1f9",
+    "factor_file_sha256": "sha256:2fc1faeaff735b0251b8542e0d4ec3690a023469de044fadfc6fa246f7e53ee0",
+    "factor_quality": {
+      "duplicate_count": 0,
+      "null_symbol": 0,
+      "null_trading_day": 0,
+      "null_price_multiplier": 0,
+      "quality_score": 100.0
+    },
+    "required_market_fields": [
+      "raw_execution_price",
+      "raw_close_price",
+      "hfq_price_multiplier",
+      "accounting_execution_price",
+      "accounting_close_price",
+      "buy_ok",
+      "sell_ok",
+      "size_bucket"
+    ],
+    "validator_equalities": [
+      "accounting_execution_price == raw_execution_price * hfq_price_multiplier",
+      "accounting_close_price == raw_close_price * hfq_price_multiplier"
+    ],
+    "missing_factor_policy": "fail_closed_no_account_economics",
+    "future_target_or_entry_may_filter_score_universe": false
+  },
+  "costs": {
+    "selection_role": "fixed_historical_schedule_plus_stress_not_candidate",
+    "commission_bps_per_side": 2.5,
+    "commission_semantics": "fixed_research_assumption_not_exact_broker_invoice",
+    "transfer_fee_bps_per_side": 0.1,
+    "transfer_fee_semantics": "fixed_conservative_research_assumption",
+    "stamp_tax_sell_schedule": [
+      {
+        "start_inclusive": "2008-09-19",
+        "end_exclusive": "2023-08-28",
+        "bps": 10.0,
+        "applies_to": "seller_only"
+      }
+    ],
+    "baseline_slippage_bps_per_side": 2.0,
+    "slippage_multipliers": [1.0, 2.0, 3.0],
+    "baseline_buy_cost_bps": 4.6,
+    "baseline_sell_cost_bps_2009_2020": 14.6,
+    "cost_rate_selected_from_returns": false
+  },
+  "whole_policy_selection": {
+    "comparison_root": "N30_equal_backfill_unconstrained",
+    "full_account_repricing_required": true,
+    "both_clocks_must_pass": true,
+    "annual_gate": {
+      "minimum_affected_years": 3,
+      "minimum_positive_share": 0.6,
+      "median_increment_minimum": 0.0,
+      "total_increment_minimum": 0.0
+    },
+    "quarterly_gate": {
+      "affected_absolute_increment": 0.00025,
+      "minimum_affected_quarters": 12,
+      "minimum_distinct_years": 3,
+      "minimum_positive_share": 0.6,
+      "median_increment_minimum": 0.0,
+      "total_increment_minimum": 0.0
+    },
+    "economics_gate_each_clock": {
+      "net_log_return_increment_minimum": 0.0,
+      "sharpe_increment_minimum": 0.0,
+      "maximum_drawdown_worsening_limit": 0.02,
+      "cost_2x_and_3x_increment_must_remain_positive": true
+    },
+    "tie_break": [
+      "minimum_policy_complexity_relative_to_common_root",
+      "maximum_worst_clock_net_log_return_increment",
+      "policy_id_ascending"
+    ],
+    "no_passing_challenger": "retain_common_root_without_new_strategy_claim"
+  },
+  "current_permissions": {
+    "infrastructure_implementation_allowed": true,
+    "score_extension_execution_allowed": false,
+    "account_mapping_execution_allowed": false,
+    "post_2020_read_allowed": false,
+    "production_authority": false
+  },
+  "canonical_digest": "sha256:6af5ff79dc8e8d94a7fdb00d711a061180bb796704fe2c8300ac2812ec1ceb2b"
+}

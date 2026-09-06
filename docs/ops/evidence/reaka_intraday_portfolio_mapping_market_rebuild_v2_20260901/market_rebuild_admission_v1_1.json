@@ -1,0 +1,20 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_admission@1.1",
+  "status": "entrypoint_repair_controller_admitted_market_only_rebuild_account_closed",
+  "issue_ref": "bd://fl-eginj.14",
+  "contract_digest": "sha256:afb73b68b3ee4315a7c4abf29f74ebe92f1dd7480e52da17c228d0ce448e9a88",
+  "succession_digest": "sha256:07fd92668477a42efc2c0fa5700a1fce70c22068f3587e51ee149b618209cbe3",
+  "strategy_authority_registry_digest": "sha256:2e4d4bd47d2a68855701f016632cc92385165fe442d5ae32753fecc01d9fcae0",
+  "pre_result_entrypoint_incident_sha256": "sha256:07bb4c623ba0b9e569695bb027d56dd49ef81613702aa0cb3bca67c3085cc2e6",
+  "verified_inputs_per_tree": 39,
+  "source_closure_file_count": 10,
+  "outside_repo_entrypoint_test_passed": true,
+  "score_panel_rebuild_allowed": false,
+  "market_rebuild_execution_allowed": true,
+  "account_mapping_execution_allowed": false,
+  "annual_session_execution_allowed": false,
+  "post_2020_read_allowed": false,
+  "production_authority": false,
+  "next_legal_action": "restart formal then isolated market-only input trees from empty destinations",
+  "canonical_digest": "sha256:99bfaec2952659d3a17a96d3e89b4d70c448e67e6d6caa86fd863ef23c773c87"
+}

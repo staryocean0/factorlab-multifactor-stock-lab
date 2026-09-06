@@ -1,0 +1,57 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_run_instantiation@1.0",
+  "status": "passed_preflight_formal_training_closed",
+  "parameter_values": {
+    "data.stock_universe": "intraday_OT1_available_full_A_share_PIT",
+    "encoder.layer_count": 1,
+    "network.hidden_dimension": [
+      {
+        "latent_dimension": 8,
+        "hidden_dimension": 8
+      },
+      {
+        "latent_dimension": 16,
+        "hidden_dimension": 16
+      },
+      {
+        "latent_dimension": 16,
+        "hidden_dimension": 32
+      }
+    ],
+    "koopman.initialization": "training_prefix_regularized_DMD_radius_le_1",
+    "selector.gumbel_temperature": "not_applicable_K1",
+    "selector.gumbel_schedule": "not_applicable_K1",
+    "selector.straight_through": false,
+    "residual.target_gradient_attachment": "not_applicable_r0",
+    "residual.denoiser_architecture": "not_applicable_r0",
+    "residual.time_embedding_dimension": "not_applicable_r0",
+    "residual.x0_mapping": "not_applicable_r0",
+    "decoder.architecture": "shared_one_hidden_layer_follows_capacity_root",
+    "loss.scale_normalization": "per_element_mean_Lrec_plus_Lkoop",
+    "optimizer.family": "adam",
+    "optimizer.learning_rate": {
+      "d8_h8": 0.1,
+      "d16_h16": 0.03,
+      "d16_h32": 0.03
+    },
+    "optimizer.weight_decay": 0.0,
+    "training.coverage_budget": "P6_4_convergence_cycles_max_budget_preregistered_before_fit",
+    "training.early_stopping": "after_health_gate_internal_2017_rankic_platform",
+    "training.gradient_clip_norm": "disabled_if_unclipped_gradient_receipt_finite",
+    "training.general_initialization": "xavier_orthogonal_chrono_plus_DMD",
+    "portfolio.rebalance_frequency": "D5_R5_at_1430_or_1445",
+    "portfolio.weighting": "post_training_Top10_Top30_equal_weight_not_executed"
+  },
+  "parameter_count": 22,
+  "compatibility_digest": "sha256:0cf7d4bb9f63a354a215c9765323a3f313b6635dbe77b1d45331fd67396e908a",
+  "LR_receipt_digest": "sha256:7e50390d7d72eaf047971a67eb46833a878611f43cff5cce339b60052769e045",
+  "backend_receipt_digest": "sha256:e9a13541b9e313a80432906c61f2b412070eff44d1cb04be6fd8339b588b82e1",
+  "workflow_gate_digest": "sha256:3f13276fb7e09352e1e09ef6a65d093dd0e1374b1f01fa4e3ce49f19ce472510",
+  "financial_alignment_gate_digest": "sha256:d926260e52e7fb720243e93f22c00c7afc4409166f389c2c46897982bba57067",
+  "root_scope_gate_digest": "sha256:93c01284dbc31f625d4ab5aa2af7233ea1ed9c2bb5898c0e47d490c600a05d14",
+  "selected_backend": "cpu",
+  "user_math_inputs_required": [],
+  "formal_training_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:201e2e2b7ba87682c89b82be01da21a236bd3da655d3f1b226a3029ce778a34a"
+}

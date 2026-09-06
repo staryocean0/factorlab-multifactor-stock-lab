@@ -1,0 +1,21 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_admission@1.3",
+  "status": "suspended_XDXR_event_boundary_controller_admitted_market_only_rebuild_account_closed",
+  "issue_ref": "bd://fl-eginj.14",
+  "contract_digest": "sha256:259d1e3277d383c97fb08dc175c2594aca73e49999812f4b8ea9982b7d2b0de4",
+  "succession_digest": "sha256:8204272c2980e977f9ccef8b12404f485aeacc7937278012f3712faccfbe09ee",
+  "strategy_authority_registry_digest": "sha256:88f78dfd9f4b768b990ebc63e0d26666d01330dbbe84d4389a129f904c6ca8cf",
+  "pre_result_suspended_event_incident_sha256": "sha256:539cec7529615b0ef4301b8218f7fc9edf46ba3c1a87c43856af5fc19fff94ae",
+  "verified_inputs_per_tree": 45,
+  "source_closure_file_count": 16,
+  "event_day_market_row_required": false,
+  "first_subsequent_market_row_previous_close_required": true,
+  "score_panel_rebuild_allowed": false,
+  "market_rebuild_execution_allowed": true,
+  "account_mapping_execution_allowed": false,
+  "annual_session_execution_allowed": false,
+  "post_2020_read_allowed": false,
+  "production_authority": false,
+  "next_legal_action": "restart formal then isolated market-only input trees from empty destinations",
+  "canonical_digest": "sha256:54013aabdc50a96cc6e2899f5797430bc98cbc8e19d7d583145bbe15f3477e8d"
+}

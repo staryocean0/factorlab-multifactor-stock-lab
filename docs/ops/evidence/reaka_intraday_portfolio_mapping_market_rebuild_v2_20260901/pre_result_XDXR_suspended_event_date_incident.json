@@ -1,0 +1,18 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_incident@1.2",
+  "status": "closed_before_output_materialization",
+  "issue_ref": "bd://fl-eginj.14",
+  "detected_at": "2026-09-01T18:55:00+08:00",
+  "superseded_contract_digest": "sha256:fe2f0b7b6781632d7189904c4e9ba8a4daac0838728be9f748536d8bc7411d57",
+  "superseded_succession_digest": "sha256:bf559df865b23d26ba2d231c0df8555579396bd6212567f29a134f9d23edb536",
+  "failure": "market_rebuild_target_hfq_event_market_row_missing:2013-04-10",
+  "root_cause": "the exact 2013-04-10 XDXR event occurred inside a full-day suspension interval; the first subsequent positive raw bar is 2013-05-16, so same-day market-row lookup is structurally invalid",
+  "event_date": "2013-04-10",
+  "first_subsequent_positive_bar_date": "2013-05-16",
+  "score_files_written": 0,
+  "market_files_written": 0,
+  "account_or_strategy_results_written": 0,
+  "post_2020_rows_read": 0,
+  "resolution": "use the first market row on or after the event solely to obtain its carried previous_tradable_close, while applying the unchanged XDXR step to all rows with date greater than or equal to the event date",
+  "production_authority": false
+}

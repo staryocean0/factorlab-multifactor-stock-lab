@@ -1,0 +1,149 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_preflight_controller_acceptance@1.0",
+  "status": "passed_P6_3_waiting_formal_K1_r0_training_checkpoint",
+  "issue_ref": "bd://fl-eginj.3",
+  "contract_digest": "sha256:381884f28556861670351174d45a1a16662c1d944d92118d8695c895f3c7c5eb",
+  "validation_report_digest": "sha256:3866018ce966a7260fd9f571978eea7e214ec53cbcc0a7347a9803d9c09ae71f",
+  "clock_reports": {
+    "1430": {
+      "inference_rows": 853732,
+      "labelled_rows": 827753,
+      "inference_without_label": 25979,
+      "r_eff": 19.779222077645798,
+      "tau_s_days": 20.0,
+      "n_eff_time": 69.0,
+      "n_eff_design": 2533.343245594643,
+      "n_eff_upper": 88000.25,
+      "capacity_roots": [
+        {
+          "latent_dimension": 8,
+          "hidden_dimension": 8
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 16
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 32
+        }
+      ],
+      "capacity_support": [
+        {
+          "latent_dimension": 8,
+          "hidden_dimension": 8,
+          "d_squared": 64,
+          "n_k_eff_time_lower_over_d_squared": 1.078125,
+          "n_k_eff_design_over_d_squared": 39.5834882124163,
+          "n_k_eff_upper_over_d_squared": 1375.00390625,
+          "support_diagnostic": "comfortable"
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 16,
+          "d_squared": 256,
+          "n_k_eff_time_lower_over_d_squared": 0.26953125,
+          "n_k_eff_design_over_d_squared": 9.895872053104075,
+          "n_k_eff_upper_over_d_squared": 343.7509765625,
+          "support_diagnostic": "thin_claim_limited"
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 32,
+          "d_squared": 256,
+          "n_k_eff_time_lower_over_d_squared": 0.26953125,
+          "n_k_eff_design_over_d_squared": 9.895872053104075,
+          "n_k_eff_upper_over_d_squared": 343.7509765625,
+          "support_diagnostic": "thin_claim_limited"
+        }
+      ],
+      "learning_rates": {
+        "d8_h8": 0.1,
+        "d16_h16": 0.03,
+        "d16_h32": 0.03
+      },
+      "selected_backend": "rocm",
+      "cpu_seconds": 1.3744347089959774,
+      "rocm_seconds": 0.2588348060089629,
+      "rocm_parity_passed": true,
+      "formal_isolated_mismatches": []
+    },
+    "1445": {
+      "inference_rows": 853732,
+      "labelled_rows": 827753,
+      "inference_without_label": 25979,
+      "r_eff": 19.738789154990634,
+      "tau_s_days": 20.0,
+      "n_eff_time": 69.0,
+      "n_eff_design": 2533.343245594643,
+      "n_eff_upper": 88000.25,
+      "capacity_roots": [
+        {
+          "latent_dimension": 8,
+          "hidden_dimension": 8
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 16
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 32
+        }
+      ],
+      "capacity_support": [
+        {
+          "latent_dimension": 8,
+          "hidden_dimension": 8,
+          "d_squared": 64,
+          "n_k_eff_time_lower_over_d_squared": 1.078125,
+          "n_k_eff_design_over_d_squared": 39.5834882124163,
+          "n_k_eff_upper_over_d_squared": 1375.00390625,
+          "support_diagnostic": "comfortable"
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 16,
+          "d_squared": 256,
+          "n_k_eff_time_lower_over_d_squared": 0.26953125,
+          "n_k_eff_design_over_d_squared": 9.895872053104075,
+          "n_k_eff_upper_over_d_squared": 343.7509765625,
+          "support_diagnostic": "thin_claim_limited"
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 32,
+          "d_squared": 256,
+          "n_k_eff_time_lower_over_d_squared": 0.26953125,
+          "n_k_eff_design_over_d_squared": 9.895872053104075,
+          "n_k_eff_upper_over_d_squared": 343.7509765625,
+          "support_diagnostic": "thin_claim_limited"
+        }
+      ],
+      "learning_rates": {
+        "d8_h8": 0.1,
+        "d16_h16": 0.03,
+        "d16_h32": 0.03
+      },
+      "selected_backend": "rocm",
+      "cpu_seconds": 2.2035071040154435,
+      "rocm_seconds": 0.21758880000561476,
+      "rocm_parity_passed": true,
+      "formal_isolated_mismatches": []
+    }
+  },
+  "accepted_findings": [
+    "1430_and_1445_inputs_are_independent_and_byte_replayable",
+    "inference_rows_are_not_filtered_by_future_target_or_entry",
+    "D5_four_phase_anchor_is_global_2008_12_01",
+    "K1_r0_71_dimension_feature_identity_is_closed",
+    "compatibility_capacity_LR_gradient_and_backend_gates_pass",
+    "all_22_current_parameters_are_explicit_without_user_math_input"
+  ],
+  "next_legal_action": "user_checkpoint_before_formal_K1_r0_training",
+  "formal_training_allowed": false,
+  "score_materialization_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:d4228e6cc1a783cf705ad01a385b367b60043bd3744256d6fdce32a371af91f5"
+}

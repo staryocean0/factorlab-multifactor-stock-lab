@@ -1,0 +1,20 @@
+{
+  "schema_id": "factorlab.r1_datahub_history_copies@1.0",
+  "note": "These are the two historical DataHub repair validation reports referenced by the mapping source closure. They are evidence copies, not the DataHub lake. Original absolute paths are recorded; this package does not contain the 2TiB store.",
+  "files": [
+    {
+      "original_absolute_path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "package_path": "docs/ops/evidence/r1_datahub_history_copies/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "digest": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a",
+      "expected": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a",
+      "match": true
+    },
+    {
+      "original_absolute_path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/xdxr_000638_incremental_repair_20260901/validation_report.json",
+      "package_path": "docs/ops/evidence/r1_datahub_history_copies/xdxr_000638_incremental_repair_20260901/validation_report.json",
+      "digest": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+      "expected": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_normalizer@1.0",
+  "fit_end_year": 2016,
+  "sample_rows": 65536,
+  "return_mean": 0.00029598494234565865,
+  "return_scale": 0.10415244506416413,
+  "beta_mean": 0.4935797517738284,
+  "beta_scale": 0.9838279073496426,
+  "reliability_mean": 0.3647397535871433,
+  "reliability_scale": 0.07044442933469182,
+  "state_values_kept_native": true,
+  "masks_kept_native": true,
+  "target_used": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:0bbf62be5f9a8c25d3ba493d17acefe45cb6929c5092f42f2af02dcf29c04589"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_incident@1.0",
+  "status": "closed_before_output_materialization",
+  "issue_ref": "bd://fl-eginj.14",
+  "detected_at": "2026-09-01T18:00:00+08:00",
+  "superseded_contract_digest": "sha256:017e8a4d5c28955bb6abee7b012e991f1ae9002a55a9ec015344c8924c8d958d",
+  "superseded_succession_digest": "sha256:64e196f7ca65c57fbdaacf82b7f345616c07d728774f3dcc6fcf66f860b90b4c",
+  "failed_command_stage": "python_entrypoint_import",
+  "failure": "ModuleNotFoundError: No module named scripts",
+  "root_cause": "the new runner inserted only ROOT/src into sys.path and omitted the repository root required by scripts.factor_rotation imports",
+  "score_files_written": 0,
+  "market_files_written": 0,
+  "account_or_strategy_results_written": 0,
+  "post_2020_rows_read": 0,
+  "resolution": "insert both repository root and ROOT/src, add an outside-repository CLI import test, freeze a successor contract, and restart from empty destinations",
+  "production_authority": false
+}

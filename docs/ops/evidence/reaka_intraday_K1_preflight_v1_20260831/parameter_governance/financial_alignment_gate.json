@@ -1,0 +1,15 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_financial_alignment_gate@1.0",
+  "status": "passed_for_mathematical_preflight_only",
+  "user_instruction": "Codex_owns_mathematical_choices_user_retains_financial_decisions",
+  "financial_task_identity_changed": false,
+  "decision_and_rebalance_clocks": [
+    "14:30",
+    "14:45"
+  ],
+  "next_open_execution_allowed": false,
+  "strategy_economics_preapproved": false,
+  "formal_training_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:d926260e52e7fb720243e93f22c00c7afc4409166f389c2c46897982bba57067"
+}

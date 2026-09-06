@@ -1,0 +1,39 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_backend_benchmark@1.0",
+  "status": "passed",
+  "representative_identity": "d16_h16_K1_r0",
+  "batch_rows": 4096,
+  "timing_blocks": 5,
+  "repetitions_per_block": 4,
+  "timing_statistic": "median_of_alternating_blocks",
+  "minimum_rocm_speedup": 1.1,
+  "cpu_block_seconds": [
+    1.5039980550063774,
+    1.200819360994501,
+    2.2035071040154435,
+    2.4882086570141837,
+    4.145794228010345
+  ],
+  "cpu_seconds": 2.2035071040154435,
+  "cpu_loss": 1.721599817276001,
+  "cpu_gradient_max": 0.1775154024362564,
+  "rocm_available": true,
+  "rocm_block_seconds": [
+    0.21758880000561476,
+    0.19187309499830008,
+    0.9835972650034819,
+    0.2775208209932316,
+    0.20162715599872172
+  ],
+  "rocm_seconds": 0.21758880000561476,
+  "rocm_speedup": 10.126932562515089,
+  "rocm_loss": 1.721599817276001,
+  "rocm_gradient_max": 0.17751498520374298,
+  "parity_max_abs": 1.8067657947540283e-07,
+  "score_spearman": 0.9999999998253771,
+  "parity_passed": true,
+  "selected_backend": "rocm",
+  "target_read": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:cd9e4f161e32d4787d328bbb78b463c095c87831140fb0c58c513c0dbe521af0"
+}

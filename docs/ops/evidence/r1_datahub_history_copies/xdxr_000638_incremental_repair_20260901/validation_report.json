@@ -1,0 +1,56 @@
+{
+  "schema_id": "datahub.xdxr_000638_incremental_repair_validation@1.0",
+  "status": "passed_unregistered_incremental_successor",
+  "validated_at": "2026-09-01T18:30:00+08:00",
+  "product_key": "cn_a_stock_xdxr_adjustment_authority.v1",
+  "symbol": "000638",
+  "plan": {
+    "path": ".runtime/live/reports/governed_refresh/monthly_2020-12_xdxr_000638.plan.json",
+    "plan_sha256": "fe2e62a1d412f308b759cd11ae383ac662b5c1d4509056b562e9236b800ff5cf",
+    "file_sha256": "7614c943c40e6108b54c9f42bc7e40b1b8710db95bd126d55764b3ae9ad8b647"
+  },
+  "inputs": {
+    "predecessor_sha256": "b30f6db2127d3dfd2095cdc1bdf54d1ecbb60656ecc5b8db5a1fc7ed334d8463",
+    "workset_sha256": "cae2cdea97a51e29e4cc00e9b98b730c9b01b2bee1c9668cad99301d4ac35d2c",
+    "runner_sha256": "97e8f1a1a87dbd287ff82af1e5b630e345bd8bac07d075c4657d3153fe83f055",
+    "scan_mode": "incremental",
+    "changed_symbol_count": 1
+  },
+  "source_receipt": {
+    "total_symbols": 1,
+    "success": 1,
+    "empty": 0,
+    "errors": 0,
+    "first_event_date": "1997-04-30",
+    "last_event_date": "2025-12-31",
+    "target_all_event_count": 16,
+    "target_2011_2020_event_count": 3,
+    "target_2011_2020_category1_event_count": 1,
+    "target_2011_2020_category1_peigu_nonzero": 0,
+    "target_2011_2020_category1_suogu_nonzero": 0,
+    "category1_event": {
+      "date": "2013-04-10",
+      "fenhong": 0.0,
+      "peigujia": 0.0,
+      "songzhuangu": 10.0,
+      "peigu": 0.0,
+      "suogu": 0.0
+    }
+  },
+  "successor": {
+    "formal_path": ".runtime/live/lake/tdx_xdxr_v2/staging_incremental_000638_20260901/xdxr_events.parquet",
+    "isolated_path": ".runtime/live/lake/tdx_xdxr_v2/staging_incremental_000638_20260901_isolated/xdxr_events.parquet",
+    "event_count": 183666,
+    "sha256": "334df9c19e77872873f809b63e32255b15d3235794842fb1936645211ba1538a",
+    "coverage_summary_sha256": "2200fbb2ce3b334ce2bffd7a3acb2783acf43a7579d94a41ffcbdd9f5f5d88c9",
+    "formal_isolated_byte_identical": true
+  },
+  "authority_boundary": {
+    "main_registry_written": false,
+    "serving_alias_written": false,
+    "production_authority": false,
+    "FactorLab_use": "bounded exact event-formula repair only after a separately frozen successor contract"
+  },
+  "remaining_blockers": [],
+  "next_legal_action": "FactorLab freezes a successor market-rebuild contract that binds this exact event successor and preserves account execution closed"
+}

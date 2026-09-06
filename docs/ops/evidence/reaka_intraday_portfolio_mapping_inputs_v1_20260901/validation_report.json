@@ -1,0 +1,68 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_input_validation@1.0",
+  "status": "score_extension_passed_market_truth_blocked",
+  "issue_ref": "bd://fl-eginj.14",
+  "contract_digest": "sha256:36f630c37ac8bfe9fee4d98b6a341562fb96549fff6d423fa7f0a62dbacafd0b",
+  "score_extension_admission_digest": "sha256:d42fcdc7df8a68324bdce1e22b9fe001491143665244dab838128563ffae5655",
+  "formal_isolated_byte_identical": true,
+  "score_extension": {
+    "status": "passed",
+    "rows_per_clock": 853732,
+    "years": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+    "nonfinite_scores": 0,
+    "parent_checkpoints_read_only": true,
+    "training_or_checkpoint_selection_run": false,
+    "post_2020_rows": 0,
+    "formal_score_1430_sha256": "sha256:7ad9472f307b560d1a4474b18926c09fb23f9cd5645178dcc2b5ce1f315d883d",
+    "formal_score_1445_sha256": "sha256:29c64330a3f65ef35430ac6ab23634f12896e7d8aecbb5f8c1c581b0b837e864"
+  },
+  "market_input": {
+    "status": "blocked_missing_authoritative_security_metadata",
+    "rows_per_clock": 6457230,
+    "certified_HFQ_rows_per_clock": 6436550,
+    "bounded_XDXR_rows_per_clock": 20680,
+    "corporate_action_execution_identity_max_abs_error": 0.0,
+    "post_2020_rows": 0,
+    "formal_market_1430_sha256": "sha256:be0f1c50ed003361d258bba09ead4837a3e3714751892d2a680ae711676933fd",
+    "formal_market_1445_sha256": "sha256:aaa410eca167f776b9d2dca4155f02d7526d8ff3d4d62028a84ce7b2ec3506a5"
+  },
+  "blocking_gap": {
+    "id": "DataHub_security_day_metadata_missing_scored_symbol_000638",
+    "symbol": "000638",
+    "missing_score_coordinates_per_clock": 143,
+    "first_decision_date": "2011-08-09",
+    "last_decision_date": "2020-12-31",
+    "clock_1430_rank_impact": {
+      "minimum_rank": 6,
+      "Top10_dates": 1,
+      "Top30_dates": 7,
+      "Top50_dates": 12
+    },
+    "clock_1445_rank_impact": {
+      "minimum_rank": 3,
+      "Top10_dates": 2,
+      "Top30_dates": 6,
+      "Top50_dates": 9
+    },
+    "raw_daily_bars_present": true,
+    "raw_intraday_target_fill_coordinates_present": true,
+    "security_day_metadata_2011_2020_present": false,
+    "safe_local_fallback_exists": false,
+    "treat_as_unbuyable_allowed": false,
+    "drop_from_score_universe_allowed": false,
+    "static_or_inferred_ST_status_allowed": false
+  },
+  "industry_constraint_historical_execution_allowed": false,
+  "score_panels_reusable_after_upstream_repair": true,
+  "current_market_panels_have_account_authority": false,
+  "account_mapping_execution_allowed": false,
+  "annual_session_execution_allowed": false,
+  "account_results_written": false,
+  "post_2020_rows_read": 0,
+  "production_authority": false,
+  "blockers": [
+    "authoritative_security_metadata_missing_for_000638_on_143_scored_coordinates_per_clock"
+  ],
+  "next_legal_action": "authorize_or_deliver_a_DataHub_PIT_security_metadata_repair_for_000638_then_rebuild_market_inputs_under_a_new_version",
+  "canonical_digest": "sha256:13ad74ee04aabbe3f739295d40d205da7ba61fcefc976fbc31940c05adf3833e"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_parameter_root_scope@1.0",
+  "status": "passed",
+  "active": [
+    "network.hidden_dimension",
+    "optimizer.learning_rate"
+  ],
+  "fixed": [
+    "operator_count_K1",
+    "residual_identity_r0_exact_zero"
+  ],
+  "conditional": [],
+  "inactive": [
+    "selector.gumbel_temperature",
+    "residual.denoiser_architecture",
+    "residual.time_embedding_dimension"
+  ],
+  "latent_and_hidden_are_measured_capacity_coordinates": true,
+  "historical_root_scope_override_allowed": false,
+  "formal_training_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:93c01284dbc31f625d4ab5aa2af7233ea1ed9c2bb5898c0e47d490c600a05d14"
+}

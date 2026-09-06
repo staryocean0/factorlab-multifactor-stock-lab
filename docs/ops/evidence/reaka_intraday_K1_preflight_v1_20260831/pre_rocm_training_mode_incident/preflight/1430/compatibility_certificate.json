@@ -1,0 +1,52 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_input_compatibility@1.0",
+  "status": "passed_preflight_scope_only",
+  "decision_clock": "14:30",
+  "Delta_x_days": 20,
+  "Delta_y_days": 20,
+  "H_days": 20,
+  "L_points": 10,
+  "W_days": 200,
+  "decision_interval_days": 5,
+  "rebalance_interval_days": 5,
+  "q_h": 1.0,
+  "q_w": 10.0,
+  "tau_x_method": "selected_state_D5_run_length_median",
+  "tau_s_method": "selected_state_D5_run_length_median",
+  "tau_x_days": 20.0,
+  "tau_s_days": 20.0,
+  "q_x_status": "measured",
+  "q_s_status": "measured",
+  "r_eff": 19.779222077645798,
+  "latent_dimension_candidates": [
+    8,
+    16
+  ],
+  "capacity_root_candidates": [
+    {
+      "latent_dimension": 8,
+      "hidden_dimension": 8
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 16
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 32
+    }
+  ],
+  "operator_count": 1,
+  "n_eff_method": "unique_D5_labelled_decisions_div_four_H20_overlap",
+  "n_eff_time": 69.0,
+  "n_k_eff_method": "K1_equals_n_eff_time",
+  "n_k_eff": 69.0,
+  "overlap_inference": "four_phase_block_or_HAC_required",
+  "inference_rows": 853732,
+  "labelled_rows": 827753,
+  "training_prefix_rows": 361628,
+  "target_value_used_for_capacity_measurement": false,
+  "target_availability_used_only_for_labelled_n_eff": true,
+  "production_authority": false,
+  "canonical_digest": "sha256:0cf7d4bb9f63a354a215c9765323a3f313b6635dbe77b1d45331fd67396e908a"
+}

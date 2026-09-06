@@ -1,0 +1,123 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping@1.2",
+  "status": "result_free_bounded_XDXR_factor_gap_repair_implementation_authorized",
+  "issue_ref": "bd://fl-eginj.14",
+  "supersedes_contract_digest": "sha256:6af5ff79dc8e8d94a7fdb00d711a061180bb796704fe2c8300ac2812ec1ceb2b",
+  "HFQ_symbol_coverage_incident_digest": "sha256:03441113b6a5eef20c769a00554f696726a9a43e60153367d29201ecd91222d9",
+  "authority_receipt_digest": "sha256:51bfa93154262eb2622f46798b1697523396ea990dcb2d5bd68c4ac5bd2d9306",
+  "inheritance": {
+    "base_contract": "docs/ops/reaka_intraday_portfolio_mapping@1.1.json",
+    "base_contract_digest": "sha256:6af5ff79dc8e8d94a7fdb00d711a061180bb796704fe2c8300ac2812ec1ceb2b",
+    "unchanged": [
+      "fixed_strategy_identity",
+      "data_usage",
+      "common_root_policy",
+      "candidate_family",
+      "industry_concentration_axis",
+      "costs",
+      "whole_policy_selection",
+      "clock_nomination_gate",
+      "annual_session_protocol"
+    ],
+    "replaced": [
+      "corporate_action_factor_coverage",
+      "current_permissions"
+    ]
+  },
+  "common_root_policy": {
+    "policy_id": "N30_equal_backfill_unconstrained",
+    "top_n": 30,
+    "weighting": "equal",
+    "buy_unavailable": "backfill_next_ranked_buyable_at_same_execution_event",
+    "size_concentration": "none"
+  },
+  "candidate_family": {
+    "top_n": [10, 30, 50],
+    "weighting": ["equal", "rank_linear_capped_2_over_N"],
+    "buy_unavailable": ["cash", "backfill_next_ranked_buyable_at_same_execution_event"],
+    "size_concentration": ["none", "PIT_total_market_cap_tercile_max_50pct"],
+    "executable_policy_count": 24,
+    "all_combinations_required": true,
+    "post_result_family_change_allowed": false
+  },
+  "corporate_action_factor_coverage": {
+    "primary": {
+      "dataset_version": "adjust_factors_cn_a_xdxr_v9_20260814",
+      "factor_type": "hfq",
+      "factor_file_sha256": "sha256:2fc1faeaff735b0251b8542e0d4ec3690a023469de044fadfc6fa246f7e53ee0",
+      "exact_then_strict_backward_asof": true
+    },
+    "bounded_missing_symbol_repair": {
+      "eligible_only_when_symbol_has_zero_rows_in_primary_product": true,
+      "event_dataset": "tdx_xdxr_v2/staging_full_20260826_merged/xdxr_events.parquet",
+      "event_file_sha256": "sha256:b30f6db2127d3dfd2095cdc1bdf54d1ecbb60656ecc5b8db5a1fc7ed334d8463",
+      "event_categories_used": [1],
+      "formula": "previous_tradable_close * (10 + songzhuangu + peigu) / (10 * previous_tradable_close - fenhong + peigu * peigujia)",
+      "initial_factor": 1.0,
+      "apply_from_event_date_forward": true,
+      "future_event_allowed": false,
+      "allowed_missing_symbols": [
+        "000004",
+        "002808",
+        "002898",
+        "300029",
+        "600193",
+        "600421",
+        "600599",
+        "600608",
+        "600636",
+        "600696"
+      ],
+      "allowed_symbol_count": 10,
+      "expected_category1_events_2011_2020": 22,
+      "peigu_or_suogu_nonzero_allowed": false,
+      "unknown_symbol_or_event_shape_policy": "fail_closed"
+    },
+    "required_output_fields": [
+      "hfq_price_multiplier",
+      "hfq_factor_source",
+      "accounting_execution_price",
+      "accounting_close_price"
+    ],
+    "raw_order_fill_identity_unchanged": true
+  },
+  "whole_policy_selection": {
+    "comparison_root": "N30_equal_backfill_unconstrained",
+    "full_account_repricing_required": true,
+    "both_clocks_must_pass": true,
+    "annual_gate": {
+      "minimum_affected_years": 3,
+      "minimum_positive_share": 0.6,
+      "median_increment_minimum": 0.0,
+      "total_increment_minimum": 0.0
+    },
+    "quarterly_gate": {
+      "affected_absolute_increment": 0.00025,
+      "minimum_affected_quarters": 12,
+      "minimum_distinct_years": 3,
+      "minimum_positive_share": 0.6,
+      "median_increment_minimum": 0.0,
+      "total_increment_minimum": 0.0
+    },
+    "economics_gate_each_clock": {
+      "net_log_return_increment_minimum": 0.0,
+      "sharpe_increment_minimum": 0.0,
+      "maximum_drawdown_worsening_limit": 0.02,
+      "cost_2x_and_3x_increment_must_remain_positive": true
+    },
+    "tie_break": [
+      "minimum_policy_complexity_relative_to_common_root",
+      "maximum_worst_clock_net_log_return_increment",
+      "policy_id_ascending"
+    ],
+    "no_passing_challenger": "retain_common_root_without_new_strategy_claim"
+  },
+  "current_permissions": {
+    "infrastructure_implementation_allowed": true,
+    "score_extension_execution_allowed": false,
+    "account_mapping_execution_allowed": false,
+    "post_2020_read_allowed": false,
+    "production_authority": false
+  },
+  "canonical_digest": "sha256:36f630c37ac8bfe9fee4d98b6a341562fb96549fff6d423fa7f0a62dbacafd0b"
+}

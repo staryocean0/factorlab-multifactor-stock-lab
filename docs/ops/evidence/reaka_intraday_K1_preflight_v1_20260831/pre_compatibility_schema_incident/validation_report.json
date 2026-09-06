@@ -1,0 +1,111 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_preflight_validation@1.0",
+  "status": "passed",
+  "contract_digest": "sha256:4bf8ddfb04427b7a297da73386e2321d27498d48b64f9915256b6e04cb7f6870",
+  "clock_reports": {
+    "1430": {
+      "inference_rows": 853732,
+      "labelled_rows": 827753,
+      "inference_without_label": 25979,
+      "r_eff": 19.779222077645798,
+      "tau_s_days": 20.0,
+      "n_eff_time": 69.0,
+      "capacity_roots": [
+        {
+          "latent_dimension": 8,
+          "hidden_dimension": 8
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 16
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 32
+        }
+      ],
+      "learning_rates": {
+        "d8_h8": 0.1,
+        "d16_h16": 0.03,
+        "d16_h32": 0.03
+      },
+      "selected_backend": "cpu",
+      "cpu_seconds": 0.37807747299666516,
+      "rocm_seconds": 0.39970454000285827,
+      "rocm_parity_passed": true,
+      "formal_isolated_mismatches": []
+    },
+    "1445": {
+      "inference_rows": 853732,
+      "labelled_rows": 827753,
+      "inference_without_label": 25979,
+      "r_eff": 19.738789154990634,
+      "tau_s_days": 20.0,
+      "n_eff_time": 69.0,
+      "capacity_roots": [
+        {
+          "latent_dimension": 8,
+          "hidden_dimension": 8
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 16
+        },
+        {
+          "latent_dimension": 16,
+          "hidden_dimension": 32
+        }
+      ],
+      "learning_rates": {
+        "d8_h8": 0.1,
+        "d16_h16": 0.03,
+        "d16_h32": 0.03
+      },
+      "selected_backend": "cpu",
+      "cpu_seconds": 0.2970194040099159,
+      "rocm_seconds": 0.40722692900453694,
+      "rocm_parity_passed": true,
+      "formal_isolated_mismatches": []
+    }
+  },
+  "source_closure_mismatches": [],
+  "parameter_governance_digests": {
+    "workflow_gate_digest": "sha256:3f13276fb7e09352e1e09ef6a65d093dd0e1374b1f01fa4e3ce49f19ce472510",
+    "financial_alignment_gate_digest": "sha256:d926260e52e7fb720243e93f22c00c7afc4409166f389c2c46897982bba57067",
+    "root_scope_gate_digest": "sha256:93c01284dbc31f625d4ab5aa2af7233ea1ed9c2bb5898c0e47d490c600a05d14"
+  },
+  "checks": {
+    "ruff": {
+      "command": [
+        "ruff",
+        "check",
+        "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+        "scripts/factor_rotation/freeze_reaka_intraday_K1_preflight_v1.py",
+        "scripts/factor_rotation/materialize_reaka_intraday_K1_input_v1.py",
+        "scripts/factor_rotation/run_reaka_intraday_K1_preflight_v1.py",
+        "scripts/factor_rotation/validate_reaka_intraday_K1_preflight_v1.py",
+        "scripts/factor_rotation/close_reaka_intraday_K1_preflight_v1.py",
+        "tests/unit/test_reaka_intraday_k1_preflight_v1.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "All checks passed!\n",
+      "stderr_tail": ""
+    },
+    "pytest": {
+      "command": [
+        "pytest",
+        "-q",
+        "tests/unit/test_reaka_intraday_k1_preflight_v1.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "....                                                                     [100%]\n",
+      "stderr_tail": ""
+    }
+  },
+  "blockers": [],
+  "formal_training_run": false,
+  "score_materialization_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:0b6dfcbf15d78baf6c6f80de016c3a51520920f8cefaf8fd90498846749ee1f4"
+}

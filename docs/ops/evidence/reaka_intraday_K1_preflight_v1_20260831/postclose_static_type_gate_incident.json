@@ -1,0 +1,19 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_static_type_gate_incident@1.0",
+  "status": "prior_closeout_revoked_requires_contract_rebuild",
+  "trigger": "targeted_basedpyright_found_eight_explicit_object_narrowing_errors",
+  "scope": [
+    "validate_reaka_intraday_K1_preflight_v1.py",
+    "test_reaka_intraday_k1_preflight_v1.py"
+  ],
+  "root_cause": "runtime_JSON_types_were_not_explicitly_narrowed_for_static_checker",
+  "repair": "add_explicit_casts_then_rerun_ruff_pytest_basedpyright_and_whole_contract",
+  "revoked_acceptance_digest": "sha256:770fb7e7305f80255300862563bff0517ad1fa4cefcc4dc1db11b54ed8036833",
+  "old_contract_digest": "sha256:dc9293ed57c6aa69eb9f603b46946204daec12f401d4760d4a53e3c1fe5c5a21",
+  "scientific_numbers_changed": false,
+  "formal_training_run": false,
+  "score_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:07fb90b0b3583139f637ddfb4e17543779a65e4230dc0274ca8ebf4cc7b52030"
+}

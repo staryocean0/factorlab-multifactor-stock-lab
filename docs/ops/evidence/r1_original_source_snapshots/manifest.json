@@ -1,0 +1,31 @@
+{
+  "schema_id": "factorlab.r1_original_source_snapshots@1.0",
+  "files": [
+    {
+      "original_path": "src/factor_lab/factor_rotation/reaka_paper_v1.py",
+      "snapshot_path": "docs/ops/evidence/r1_original_source_snapshots/reaka_paper_v1.py",
+      "historical_commit": "59dfbbe2f7eb16347338db3331a039df3e6b6023",
+      "digest": "sha256:0c18e9497cca6816dec36651cc636b2c3a8ce0968a2e576e50a4f9fe2452e914",
+      "expected_by_mapping_receipt": "sha256:0c18e9497cca6816dec36651cc636b2c3a8ce0968a2e576e50a4f9fe2452e914",
+      "match": true,
+      "current_package_path_preserved": true,
+      "reason": "Current package paper module is the V1.3 foundation byte; mapping receipt binds an older blob. Snapshot preserves original bytes without overwriting current source."
+    }
+  ],
+  "unrecovered_expected_blobs": [
+    {
+      "original_path": "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py",
+      "expected_by_account_receipt": "sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1",
+      "current_package_digest": "sha256:cce2c26db12aaba5a7feb212215fbc71b802b8377fd8ec8472fb88cdeb95b139",
+      "historical_blob_in_factorlab_git": false,
+      "action": "keep_current_package_bytes_do_not_fake_old_digest"
+    },
+    {
+      "original_path": "src/factor_lab/portfolio/account_research_bundle.py",
+      "expected_by_account_receipt": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+      "current_package_digest": "sha256:8228972eeff82b6489a4eb6db40919f76d4abdef42bfc334925d8ec3255cca2f",
+      "historical_blob_in_factorlab_git": false,
+      "action": "keep_current_package_bytes_do_not_fake_old_digest"
+    }
+  ]
+}

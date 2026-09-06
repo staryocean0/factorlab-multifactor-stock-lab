@@ -1,0 +1,22 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_compatibility_schema_incident@1.0",
+  "status": "archived_requires_contract_rebuild",
+  "trigger": "controller_preclose_comparison_against_framework_adapter_required_fields",
+  "omitted_fields": [
+    "q_x",
+    "q_s",
+    "latent_dimension",
+    "capacity_n_eff_over_d_squared_bounds",
+    "post_training_condition_and_perturbation_obligation"
+  ],
+  "root_cause": "P6_3_validator_checked_receipt_status_but_not_the_full_P3_adapter_field_contract",
+  "repair": "materialize_all_required_fields_and_make_validator_fail_closed_on_each_field",
+  "old_contract_digest": "sha256:4bf8ddfb04427b7a297da73386e2321d27498d48b64f9915256b6e04cb7f6870",
+  "old_validation_digest": "sha256:0b6dfcbf15d78baf6c6f80de016c3a51520920f8cefaf8fd90498846749ee1f4",
+  "scientific_result_written": false,
+  "formal_training_run": false,
+  "score_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:ae284f1c8fab81dd5e5e31eec863b073858b29c7e9bbf27b0dd0b57c6916cc0f"
+}

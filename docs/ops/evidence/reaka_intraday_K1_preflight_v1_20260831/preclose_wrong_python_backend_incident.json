@@ -1,0 +1,18 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_backend_environment_incident@1.0",
+  "status": "archived_repaired_before_controller_validation",
+  "trigger": "system_CPU_python_reported_ROCm_unavailable_while_project_ROCm72_environment_exists",
+  "old_backend_receipt_digests": {
+    "1430": "sha256:e9a13541b9e313a80432906c61f2b412070eff44d1cb04be6fd8339b588b82e1",
+    "1445": "sha256:fc490fdcb72de7c86c1900b9d44d638f71eb9cccaa3a23f4f8c9b75ce898c845"
+  },
+  "old_python": "/usr/bin/python",
+  "repair_python": "/home/starryocean/.venvs/factor-lab-rocm72/bin/python",
+  "repair": "rerun_both_clock_preflights_with_same_program_under_ROCm72_environment_CPU_and_cuda0",
+  "scientific_result_written": false,
+  "formal_training_run": false,
+  "score_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:845869df5f07219ed10097c95ab0ad1565988c20ce4fd9bbb72d2b83f8143ed4"
+}

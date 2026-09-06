@@ -1,0 +1,130 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_preflight@1.0",
+  "status": "frozen_controller_preflight_execution_authorized",
+  "issue_ref": "bd://fl-eginj.3",
+  "inputs": {
+    "P6_2_acceptance_digest": "sha256:0dc8964fe42b4a22d9a9304d790e4c8f71fb62f6e44651de7df1ad4b6ef265cd",
+    "P6_1_manifests": {
+      "formal": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+      "isolated": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f"
+    },
+    "P6_2_manifests": {
+      "formal_1430_ot1": "sha256:e564d6dc818de9891eb7a8d83cd1fe62bb1490995857b5cb31518d6067970558",
+      "formal_1430_ot2": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a",
+      "formal_1430_ot3": "sha256:86d40e3cb1fd306800f27b81c1a2a24654dd8efa52672183fa6e366e936a83fa",
+      "formal_1445_ot1": "sha256:abcdaca494be21418798caef71d6b50a02e77fdf361f49b0210224e96b5855c2",
+      "formal_1445_ot2": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b",
+      "formal_1445_ot3": "sha256:7f6324a337a78440d8d2a21aba8cc41a442e2c45bf4bac955eff8cdc3c77d348",
+      "isolated_1430_ot1": "sha256:e564d6dc818de9891eb7a8d83cd1fe62bb1490995857b5cb31518d6067970558",
+      "isolated_1430_ot2": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a",
+      "isolated_1430_ot3": "sha256:86d40e3cb1fd306800f27b81c1a2a24654dd8efa52672183fa6e366e936a83fa",
+      "isolated_1445_ot1": "sha256:abcdaca494be21418798caef71d6b50a02e77fdf361f49b0210224e96b5855c2",
+      "isolated_1445_ot2": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b",
+      "isolated_1445_ot3": "sha256:7f6324a337a78440d8d2a21aba8cc41a442e2c45bf4bac955eff8cdc3c77d348"
+    }
+  },
+  "pre_contract_manifest_path_incident_digest": "sha256:6b7a82bbd8f885b9f0519e6b7f98f6b3e3947d17e06e42c06f63960983cb02fb",
+  "backend_environment_incident_digest": "sha256:845869df5f07219ed10097c95ab0ad1565988c20ce4fd9bbb72d2b83f8143ed4",
+  "ROCm_training_mode_incident_digest": "sha256:d0de51a91dd96b1c33bca3447f02159ead8a04ab67011ea0e56c937b66dc6189",
+  "compatibility_schema_incident_digest": "sha256:ae284f1c8fab81dd5e5e31eec863b073858b29c7e9bbf27b0dd0b57c6916cc0f",
+  "static_type_gate_incident_digest": "sha256:07fb90b0b3583139f637ddfb4e17543779a65e4230dc0274ca8ebf4cc7b52030",
+  "backend_timing_stability_incident_digest": "sha256:f61701e95dfefecd15fd0721ff2c60ad7ceb458e06fb204395ed004bcfcd2a20",
+  "parameter_governance": {
+    "workflow_gate_digest": "sha256:3f13276fb7e09352e1e09ef6a65d093dd0e1374b1f01fa4e3ce49f19ce472510",
+    "financial_alignment_gate_digest": "sha256:d926260e52e7fb720243e93f22c00c7afc4409166f389c2c46897982bba57067",
+    "root_scope_gate_digest": "sha256:93c01284dbc31f625d4ab5aa2af7233ea1ed9c2bb5898c0e47d490c600a05d14"
+  },
+  "decision_clocks": [
+    "14:30",
+    "14:45"
+  ],
+  "frequency_signature": "D5-H20-R5",
+  "history_horizon_days": 20,
+  "future_target_horizon_days": 20,
+  "sequence_points": 10,
+  "window_days": 200,
+  "operator_count": 1,
+  "residual_identity": "r0_exact_zero",
+  "feature_dim": 71,
+  "feature_blocks": {
+    "selected_state": 14,
+    "state_mask": 14,
+    "stock_factor_exposure": 14,
+    "exposure_reliability": 14,
+    "exposure_mask": 14,
+    "exposure_age_fraction": 1
+  },
+  "forbidden_feature_blocks": [
+    "price_volume",
+    "LAT",
+    "oracle",
+    "future_target"
+  ],
+  "inference_universe": "history_epsilon_complete_and_current_exposure_support_only",
+  "target_may_filter_inference": false,
+  "D5_phase_anchor": "2008-12-01",
+  "fit_prefix_end_year": 2016,
+  "capacity_roots": [
+    {
+      "latent_dimension": 8,
+      "hidden_dimension": 8
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 16
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 32
+    }
+  ],
+  "capacity_pruning_rule": "latent_dimension_le_measured_r_eff_with_d8_floor",
+  "learning_rate_grid": [
+    0.0001,
+    0.0003,
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "learning_rate_rule": "largest_healthy_before_first_unhealthy_right_censor_blocks",
+  "learning_rate_steps": 4,
+  "backend_rule": "ROCm_only_if_numerical_parity_and_median_speedup_at_least_1p10_else_CPU",
+  "backend_timing_blocks": 5,
+  "backend_repetitions_per_block": 4,
+  "minimum_rocm_speedup": 1.1,
+  "backend_score_parity_max_abs": 0.0001,
+  "backend_score_parity_min_spearman": 0.999999,
+  "parameter_surface_count": 22,
+  "user_math_inputs_required": [],
+  "data_usage": {
+    "2007_2008": "warmup_only",
+    "2009_2020": "consumed_development_material",
+    "post_2020_rows_allowed": 0,
+    "fresh_oos": false
+  },
+  "formal_isolated_byte_replay_required": true,
+  "source_closure": {
+    "docs/ops/reaka_intraday_K1_preflight_whitepaper.md": "sha256:83c7bcd96a09218d484608cfecb3b0e3d3c582be995dd6291de5e0ee7c4ff040",
+    "docs/user/reaka_intraday_K1_preflight_workflow.md": "sha256:34d3780ca8b45cc8b11404d1777b322fa4965a7df1421424526b95cbce00ccb6",
+    "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+    "scripts/factor_rotation/freeze_reaka_intraday_K1_preflight_v1.py": "sha256:db054addf74fb3ebaa45bbddc0d6e291cc9424410da982c8c842d8dffd16c32f",
+    "scripts/factor_rotation/materialize_reaka_intraday_K1_input_v1.py": "sha256:2b1af96b5f1b2cba5195b0ef0bbd08d59285a80fb8c73992baa5657c83eebdec",
+    "scripts/factor_rotation/run_reaka_intraday_K1_preflight_v1.py": "sha256:63ecdfae51fb3993995be91a8db08b93f8e2671b8d0774388fc3e11fa2e5d582",
+    "scripts/factor_rotation/validate_reaka_intraday_K1_preflight_v1.py": "sha256:dae5244c18cf96f1db5e68e476096918193e2440853490c4a9f60f01bbda035f",
+    "scripts/factor_rotation/close_reaka_intraday_K1_preflight_v1.py": "sha256:ea6edae26b4c9d4b350ca481535f5a69db75cce78955c6627d73a7c83fa7854d",
+    "tests/unit/test_reaka_intraday_k1_preflight_v1.py": "sha256:0f4edc1cfbd1d7028eb486e2b672539a216037b0683cb03c03a0cd923fb5dcd2"
+  },
+  "input_materialization_allowed": true,
+  "compatibility_preflight_allowed": true,
+  "LR_gradient_preflight_allowed": true,
+  "CPU_ROCm_preflight_allowed": true,
+  "formal_training_allowed": false,
+  "score_materialization_allowed": false,
+  "account_execution_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:381884f28556861670351174d45a1a16662c1d944d92118d8695c895f3c7c5eb"
+}

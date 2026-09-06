@@ -1,0 +1,13 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_pre_contract_incident@1.0",
+  "status": "archived_repaired_before_contract_freeze",
+  "trigger": "P6_2_clock_root_has_no_top_level_manifest",
+  "repair": "bind_each_actual_OT1_OT2_OT3_manifest_per_tree_and_clock",
+  "parameter_governance_drafts_written_before_failure": true,
+  "contract_written": false,
+  "input_store_written": false,
+  "scientific_result_written": false,
+  "formal_training_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:6b7a82bbd8f885b9f0519e6b7f98f6b3e3947d17e06e42c06f63960983cb02fb"
+}

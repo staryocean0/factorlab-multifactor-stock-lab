@@ -1,0 +1,13 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_parameter_workflow_gate@1.0",
+  "status": "passed_for_result_free_P6_3_preflight",
+  "P6_2_acceptance_digest": "sha256:0dc8964fe42b4a22d9a9304d790e4c8f71fb62f6e44651de7df1ad4b6ef265cd",
+  "P5_framework_acceptance_digest": "sha256:3400ff0fe45c1c730d13d98466e7e0c95abb53049ddb9fc0ed8244682f514f25",
+  "parameter_catalog_digest": "sha256:00a6072c3b8cd79a62fc9858825908428f0e7938b4ddd03fc695c6a076cf5b95",
+  "parameter_governance_whitepaper_digest": "sha256:b1734f8748a45459849b144c6ce5ee111e3f233375f6b2e2c62040450c38a9c5",
+  "succession_whitepaper_digest": "sha256:8b7a4235b1406cacc354d84c5096383f47bfc63f6112ac95ceb1433999c452a7",
+  "historical_parameter_override_allowed": false,
+  "formal_training_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:3f13276fb7e09352e1e09ef6a65d093dd0e1374b1f01fa4e3ce49f19ce472510"
+}

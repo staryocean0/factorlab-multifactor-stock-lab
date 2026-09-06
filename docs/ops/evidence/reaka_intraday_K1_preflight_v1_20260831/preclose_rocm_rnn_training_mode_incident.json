@@ -1,0 +1,16 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_rocm_training_mode_incident@1.0",
+  "status": "archived_requires_contract_rebuild",
+  "wrong_python_incident_digest": "sha256:845869df5f07219ed10097c95ab0ad1565988c20ce4fd9bbb72d2b83f8143ed4",
+  "trigger": "ROCm_MIOpen_RNN_backward_rejected_eval_mode",
+  "exception": "miopen RNN backward can only be called in training mode",
+  "root_cause": "backend_benchmark_set_model_eval_before_backward",
+  "repair": "set_training_mode_after_deterministic_warmup_before_backward_on_both_CPU_and_ROCm",
+  "old_contract_digest": "sha256:8125cfd38f84344ecce85fb0dea9e898d70e66c2e274e2acd20998d6ad561a8a",
+  "scientific_result_written": false,
+  "formal_training_run": false,
+  "score_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:d0de51a91dd96b1c33bca3447f02159ead8a04ab67011ea0e56c937b66dc6189"
+}

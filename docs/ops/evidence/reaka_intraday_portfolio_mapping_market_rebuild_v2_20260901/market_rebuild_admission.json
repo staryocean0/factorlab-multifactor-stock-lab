@@ -1,0 +1,18 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_admission@1.0",
+  "status": "controller_admitted_market_only_rebuild_account_closed",
+  "issue_ref": "bd://fl-eginj.14",
+  "contract_digest": "sha256:017e8a4d5c28955bb6abee7b012e991f1ae9002a55a9ec015344c8924c8d958d",
+  "succession_digest": "sha256:64e196f7ca65c57fbdaacf82b7f345616c07d728774f3dcc6fcf66f860b90b4c",
+  "strategy_authority_registry_digest": "sha256:823ee5b73e702436b24919f538711a9ab5534db768850a230b3f03186b093ac3",
+  "verified_inputs_per_tree": 38,
+  "source_closure_file_count": 9,
+  "score_panel_rebuild_allowed": false,
+  "market_rebuild_execution_allowed": true,
+  "account_mapping_execution_allowed": false,
+  "annual_session_execution_allowed": false,
+  "post_2020_read_allowed": false,
+  "production_authority": false,
+  "next_legal_action": "build formal then isolated market-only input trees from empty destinations",
+  "canonical_digest": "sha256:0b5a751595ad537477fb78be023ef59aa6b99730337d57e7ba6bec7404749439"
+}

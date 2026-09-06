@@ -1,0 +1,16 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_incident@1.3",
+  "status": "closed_before_output_materialization",
+  "issue_ref": "bd://fl-eginj.14",
+  "detected_at": "2026-09-01T19:15:00+08:00",
+  "superseded_contract_digest": "sha256:259d1e3277d383c97fb08dc175c2594aca73e49999812f4b8ea9982b7d2b0de4",
+  "superseded_succession_digest": "sha256:8204272c2980e977f9ccef8b12404f485aeacc7937278012f3712faccfbe09ee",
+  "failure": "portfolio_mapping_HFQ_factor_source_invalid",
+  "root_cause": "the target repair used a new provenance label although its mathematical formula is exactly the already admitted bounded_xdxr_event_formula_v1 identity",
+  "score_files_written": 0,
+  "market_files_written": 0,
+  "account_or_strategy_results_written": 0,
+  "post_2020_rows_read": 0,
+  "resolution": "retain the existing exact formula identity label bounded_xdxr_event_formula_v1 and preserve target-specific provenance in the rebuild contract and source closure rather than widening the validator allowlist",
+  "production_authority": false
+}

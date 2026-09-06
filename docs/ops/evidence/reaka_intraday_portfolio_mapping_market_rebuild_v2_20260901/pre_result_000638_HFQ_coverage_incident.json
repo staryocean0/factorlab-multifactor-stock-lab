@@ -1,0 +1,22 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_incident@1.1",
+  "status": "closed_before_output_materialization",
+  "issue_ref": "bd://fl-eginj.14",
+  "detected_at": "2026-09-01T18:15:00+08:00",
+  "superseded_contract_digest": "sha256:afb73b68b3ee4315a7c4abf29f74ebe92f1dd7480e52da17c228d0ce448e9a88",
+  "superseded_succession_digest": "sha256:07fd92668477a42efc2c0fa5700a1fce70c22068f3587e51ee149b618209cbe3",
+  "failure": "portfolio_mapping_unregistered_HFQ_symbol_gap:000638",
+  "root_cause": "the same historical member omission excluded 000638 from both the fixed V9 factor product and the predecessor full XDXR event file, so the original ten-symbol bounded list could not discover it",
+  "fixed_V9_factor_rows": 0,
+  "predecessor_XDXR_event_rows": 0,
+  "score_files_written": 0,
+  "market_files_written": 0,
+  "account_or_strategy_results_written": 0,
+  "post_2020_rows_read": 0,
+  "DataHub_successor_validation_sha256": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+  "DataHub_successor_event_file_sha256": "sha256:334df9c19e77872873f809b63e32255b15d3235794842fb1936645211ba1538a",
+  "recovered_category1_events_2011_2020": 1,
+  "peigu_or_suogu_nonzero": false,
+  "resolution": "split 000638 from the old ten-symbol repair, bind the exact incremental DataHub successor, and apply the unchanged previous-close XDXR formula in a separately frozen successor contract",
+  "production_authority": false
+}

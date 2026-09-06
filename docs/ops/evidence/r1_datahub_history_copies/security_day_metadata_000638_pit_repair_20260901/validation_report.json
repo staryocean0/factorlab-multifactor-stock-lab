@@ -1,0 +1,131 @@
+{
+  "schema_id": "datahub.security_day_metadata_000638_pit_repair_validation@1.0",
+  "status": "passed_candidate_only",
+  "validated_at": "2026-09-01T17:30:00+08:00",
+  "scope": {
+    "product_key": "cn_multi_asset_security_day_metadata.v1",
+    "dataset_contract_id": "security_day_metadata_cn_multi_asset_1d",
+    "symbol": "000638",
+    "start_date": "2011-01-01",
+    "end_date": "2020-12-31"
+  },
+  "governance": {
+    "plan_path": ".runtime/live/reports/governed_refresh/monthly_2020-12_security_metadata_000638.plan.json",
+    "plan_sha256": "0e2b3725dd88b9b30a7852a849bed77c63ebf473412d3dc83e86be974aa815f2",
+    "base_contract_sha256": "4f848523a2b4012ee24482cf2d7790f0d0e9ea75e2021b73100970b1f0f4624b",
+    "current_contract_sha256": "23526bc2c6f329dfe3ca04556c769046d802e10c1e95edffa2d096cd07d71c18",
+    "user_math_inputs_required": []
+  },
+  "root_cause": {
+    "classification": "historical_membership_denominator_omission",
+    "current_snapshot_contains_000638": false,
+    "fixed_authority_daily_contains_000638": false,
+    "fixed_lifecycle_contains_000638": true,
+    "fixed_raw_daily_bars_contains_000638": true,
+    "baseline_annual_components_with_000638": 0,
+    "affected_baseline_years": 10
+  },
+  "official_receipt": {
+    "source_id": "szse_stock_delist",
+    "source_tier": "A0",
+    "artifact_root": ".runtime/live/artifacts/stock_security_metadata/szse_stock_delist_000638_repair_d6b839ff8bda",
+    "artifact_id": "d6b839ff8bda88884a53373e6fb9565de1fa2a0809d1eb4b631fa7b5cf6d190a",
+    "manifest_sha256": "12b3ba79d735949cf81b5f3172e1f8a448cc3823c0b52e40382248bf1a93ebb7",
+    "raw_xlsx_sha256": "d05da6ad86dc89d6c5921620b2f15b9ab4ef28a285b6acda5d3cf7bd205c8432",
+    "parsed_rows": 208,
+    "unique_symbols": 208,
+    "target_match_count": 1,
+    "listed_date": "1996-11-26",
+    "terminal_date": "2026-06-03"
+  },
+  "pre_result_incidents": [
+    {
+      "id": "000638_repair_incident_001_global_lifecycle_source_precedence",
+      "status": "closed_before_candidate_promotion",
+      "account_or_strategy_results_written": false,
+      "incident_sha256": "74d4db054d8da283bc669be73e8dd007dda87f5b7b14150a4aec5b07ce8224a3"
+    }
+  ],
+  "candidate": {
+    "dataset_version": "security_day_metadata_cn_a_stock_000638_pit_repair_20110104_20201231_v2_20260901",
+    "storage_uri": ".runtime/live/lake/security_day_metadata/dataset_version=security_day_metadata_cn_a_stock_000638_pit_repair_20110104_20201231_v2_20260901",
+    "record_count": 2432,
+    "first_trading_day": "2011-01-04",
+    "last_trading_day": "2020-12-31",
+    "primary_key_duplicates": 0,
+    "baseline_target_key_collisions": 0,
+    "non_target_baseline_rewrites": 0,
+    "post_2020_rows": 0,
+    "payload_sha256": "22e4627785e4f1e83666e7dc0bc7765605ae089e58cc5b37d788e203fbaa4908",
+    "bundle_manifest_sha256": "b191a00c149ddc22bfe9138946c7e63195b504ce9503ef386cac68fbd13a026c",
+    "content_tree_sha256": "c0d5d80e30ff4efe974784423ba1ad19a6a6aabfd552fcd5e18955bba7d974b2",
+    "source_closure_item_count": 56,
+    "source_closure_sha256": "79c0445758ed39a368b6343d8e47a4940c6162985e0b81798be04b1de44d0250"
+  },
+  "field_gates": {
+    "suspension_unknown": 0,
+    "risk_warning_unknown": 0,
+    "board_unknown": 0,
+    "listing_phase_unknown": 0,
+    "board_main_rows": 2432,
+    "board_official_listing_instance_basis_rows": 2432,
+    "risk_warning_normal_rows": 2432,
+    "listing_phase_seasoned_rows": 2432
+  },
+  "suspension_adjudication": {
+    "monthly_target_source_rows": 19,
+    "open_tail_count": 15,
+    "explicit_intraday_days": 2,
+    "full_day_rows": 365,
+    "intraday_halt_rows": 2,
+    "not_full_day_suspended_rows": 14,
+    "not_suspended_rows": 2051,
+    "positive_raw_bar_days": 2067,
+    "full_day_with_positive_raw_bar": 0,
+    "not_full_day_suspended_without_positive_raw_bar": 0,
+    "global_b_class_suspension_rows_consumed": 0
+  },
+  "factorlab_consumer_check": {
+    "clock_1430_missing_score_coordinates_before": 143,
+    "clock_1430_joined_after": 143,
+    "clock_1445_missing_score_coordinates_before": 143,
+    "clock_1445_joined_after": 143,
+    "per_clock_full_day_coordinates": 0,
+    "per_clock_known_intraday_halt_coordinates": 0,
+    "per_clock_not_full_day_coordinates": 1,
+    "per_clock_not_suspended_coordinates": 142,
+    "not_full_day_coordinate": "2015-01-27"
+  },
+  "determinism": {
+    "formal_root": ".runtime/parallel/security-day/000638-repair/formal_v3",
+    "isolated_root": ".runtime/parallel/security-day/000638-repair/isolated_v3",
+    "file_count_per_root": 8,
+    "byte_identical": true,
+    "content_tree_sha256": "c0d5d80e30ff4efe974784423ba1ad19a6a6aabfd552fcd5e18955bba7d974b2"
+  },
+  "verification": {
+    "focused_pytest": "49 passed",
+    "ruff": "passed",
+    "basedpyright_errors": 0,
+    "mypy": "passed",
+    "main_metadata_sqlite_sha256_before": "4d405d040aca92f897176bab4d10a5c863292fd688797956af8b4f2d44d8ec16",
+    "main_metadata_sqlite_sha256_after": "4d405d040aca92f897176bab4d10a5c863292fd688797956af8b4f2d44d8ec16"
+  },
+  "source_files": {
+    "runner_sha256": "bbb5b793424e4ba8101350aa21dfef3ed106b955635879ce8a04d9a5be7ed51b",
+    "tests_sha256": "653068077232bb235364729b68bb915109a54c0b9189c8c41a5b693e85119145",
+    "whitepaper_sha256": "612b459c3651cf7818ad35735ca162034c44660f8e5c6ca334d64f1d31232346",
+    "workflow_sha256": "d06cc28a323b0cb159eaf81ea4b6cfde563f2aabfa0154460883af81ef32d8e3"
+  },
+  "authority_boundary": {
+    "main_registry_written": false,
+    "serving_decision_written": false,
+    "serving_alias_written": false,
+    "production_authority": false,
+    "factorlab_account_execution_authorized": false
+  },
+  "remaining_blockers": [
+    "FactorLab daily market panels are still the old incomplete version and must be rebuilt from empty under a new fixed version"
+  ],
+  "next_legal_action": "FactorLab keeps both score panels unchanged, rebuilds both market panels from empty with this fixed DataHub candidate, then reruns formal/isolated byte identity and exact 143-of-143 join validation before any account test"
+}

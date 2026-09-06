@@ -1,0 +1,184 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping@1.0",
+  "status": "result_free_infrastructure_implementation_authorized_account_execution_closed",
+  "issue_ref": "bd://fl-eginj.14",
+  "authority_receipt_digest": "sha256:51bfa93154262eb2622f46798b1697523396ea990dcb2d5bd68c4ac5bd2d9306",
+  "parent_bindings": {
+    "P6_6_closeout_acceptance_digest": "sha256:44d52c562d6dbe9a2c6333e2b584ba94ba649bbb8be551016e7d8fb65a77e8a6",
+    "fit_prefix_K1_acceptance_digest": "sha256:0c56df0b528a2662af5ae5d4bb75c0f2bbe5093a0b6bf7c13218afcb812f771a",
+    "intraday_target_fill_acceptance_digest": "sha256:122305b8572e6499709d23687c48e43a74756c1e6d9532e8aaca7638c70da756",
+    "K1_preflight_acceptance_digest": "sha256:d4228e6cc1a783cf705ad01a385b367b60043bd3744256d6fdce32a371af91f5",
+    "strategy_registry_28_digest": "sha256:97ee168404238de79a479934e4df946c58f4b53b4715f5fad8f32d7208c95632",
+    "succession_189_digest": "sha256:967a3761e61a8457d787d9a484d2d65c713784a1c6e8e6a1bd614c87133b48a6"
+  },
+  "fixed_strategy_identity": {
+    "model": "d8-h8-K1-r0_fit_prefix_successor_incumbent",
+    "parent_checkpoints_read_only": true,
+    "seed_ensemble": "mean_of_per_decision_cross_sectional_average_tie_rankz_over_11_29_47",
+    "frequency": "D5-H20-R5_rolling_h20_reforecast_R5",
+    "decision_clocks": [
+      "14:30",
+      "14:45"
+    ],
+    "clock_books": "separate_paired_variants_no_quiet_mix",
+    "execution": "same_day_first_raw_PIT_minute_strictly_after_decision_bar_close",
+    "next_open_allowed": false,
+    "retraining_allowed": false
+  },
+  "data_usage": {
+    "2009_2020": "consumed_development_material_no_fresh_claim",
+    "annual_sessions": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "2009_2010_expected_role": "opportunity_absent_if_no_mature_K1_score",
+    "2021_2026": "closed_zero_read_consumed_repeat_audit",
+    "fresh_challenge_available": false
+  },
+  "common_root_policy": {
+    "policy_id": "N30_equal_backfill_unconstrained",
+    "top_n": 30,
+    "weighting": "equal",
+    "single_name_cap": "one_over_N",
+    "buy_unavailable": "backfill_next_ranked_buyable_at_same_execution_event",
+    "size_concentration": "none",
+    "industry_concentration": "none"
+  },
+  "candidate_family": {
+    "top_n": [
+      10,
+      30,
+      50
+    ],
+    "weighting": [
+      "equal",
+      "rank_linear_capped_2_over_N"
+    ],
+    "buy_unavailable": [
+      "cash",
+      "backfill_next_ranked_buyable_at_same_execution_event"
+    ],
+    "size_concentration": [
+      "none",
+      "PIT_total_market_cap_tercile_max_50pct"
+    ],
+    "executable_policy_count": 24,
+    "all_combinations_required": true,
+    "post_result_family_change_allowed": false
+  },
+  "industry_concentration_axis": {
+    "implementation_and_synthetic_tests_required": true,
+    "candidate": "PIT_CSRC_industry_max_25pct",
+    "historical_execution_status": "closed_until_100pct_PIT_coverage_on_all_scored_decisions",
+    "known_current_coverage_start": "2013",
+    "static_2026_taxonomy_allowed": false,
+    "missing_label_backfill_allowed": false,
+    "excluded_from_24_policy_attempt_denominator_until_gate_passes": true
+  },
+  "execution_and_accounting": {
+    "method": "share_based_self_financing_daily_NAV_with_explicit_cash",
+    "decision_to_execution": "same_day_strictly_after_1430_or_1445_close",
+    "daily_mark": "raw_daily_close_from_bound_generic_PIT_price_panel",
+    "sell_unavailable": "forced_carry_exact_shares",
+    "buy_unavailable_cash": "unfilled_target_weight_remains_cash",
+    "buy_unavailable_backfill": "traverse_score_desc_symbol_asc_at_same_execution_event",
+    "forced_carry_counts_toward_position_and_group_caps": true,
+    "future_entry_or_target_may_filter_scores": false
+  },
+  "costs": {
+    "selection_role": "fixed_assumption_plus_stress_not_candidate",
+    "commission_bps_per_side": 2.5,
+    "transfer_fee_bps_per_side": 0.1,
+    "stamp_tax_sell_bps": 5.0,
+    "baseline_slippage_bps_per_side": 2.0,
+    "slippage_multipliers": [
+      1.0,
+      2.0,
+      3.0
+    ],
+    "cost_identity_source_digest": "sha256:ff78ac932375446e8163f53b2e99d6838472f75295adc90a6cca482d0b46de22",
+    "cost_rate_selected_from_returns": false
+  },
+  "whole_policy_selection": {
+    "comparison_root": "N30_equal_backfill_unconstrained",
+    "full_account_repricing_required": true,
+    "both_clocks_must_pass": true,
+    "annual_gate": {
+      "minimum_affected_years": 3,
+      "minimum_positive_share": 0.6,
+      "median_increment_minimum": 0.0,
+      "total_increment_minimum": 0.0
+    },
+    "quarterly_gate": {
+      "affected_absolute_increment": 0.00025,
+      "minimum_affected_quarters": 12,
+      "minimum_distinct_years": 3,
+      "minimum_positive_share": 0.6,
+      "median_increment_minimum": 0.0,
+      "total_increment_minimum": 0.0
+    },
+    "economics_gate_each_clock": {
+      "net_log_return_increment_minimum": 0.0,
+      "sharpe_increment_minimum": 0.0,
+      "maximum_drawdown_worsening_limit": 0.02,
+      "cost_2x_and_3x_increment_must_remain_positive": true
+    },
+    "tie_break": [
+      "minimum_policy_complexity_relative_to_common_root",
+      "maximum_worst_clock_net_log_return_increment",
+      "policy_id_ascending"
+    ],
+    "no_passing_challenger": "retain_common_root_without_new_strategy_claim"
+  },
+  "clock_nomination_gate": {
+    "default": "retain_two_separate_paired_books",
+    "single_clock_nomination_requires": [
+      "same_selected_mapping_policy",
+      "higher_base_cost_net_log_return",
+      "higher_daily_sharpe",
+      "maximum_drawdown_no_worse",
+      "positive_paired_annual_net_difference_in_at_least_7_of_10_supported_years",
+      "quarterly_distribution_gate_passed",
+      "dominance_preserved_at_2x_and_3x_slippage"
+    ],
+    "failure": "retain_1430_and_1445_as_parallel_research_variants",
+    "production_clock_selection_allowed": false
+  },
+  "annual_session_protocol": {
+    "blind_prior_policy_first": true,
+    "calendar_year_runtime_rule_allowed": false,
+    "batch_all_year_execution_allowed": false,
+    "prior_receipt_digest_chain_required": true,
+    "prior_policy_digest_chain_required": true,
+    "main_controller_manual_year_review_required": true
+  },
+  "required_outputs": [
+    "bounded_score_panel",
+    "input_and_source_closure_receipts",
+    "formal_isolated_byte_comparison",
+    "twelve_annual_session_receipts",
+    "all_24_policy_attempt_metrics",
+    "annual_and_quarterly_distribution_gates",
+    "clock_paired_comparison",
+    "industry_PIT_coverage_gap_receipt",
+    "controller_validation_and_acceptance"
+  ],
+  "current_permissions": {
+    "infrastructure_implementation_allowed": true,
+    "score_extension_execution_allowed": false,
+    "account_mapping_execution_allowed": false,
+    "post_2020_read_allowed": false,
+    "production_authority": false
+  },
+  "canonical_digest": "sha256:4aeed2e058cc7ece74ce70f88656980e6d1ad4a21684a8b7f42389fb6736d929"
+}

@@ -1,0 +1,107 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_input_compatibility@1.0",
+  "status": "compatible_with_claim_limitations",
+  "decision_clock": "14:30",
+  "Delta_x_days": 20,
+  "Delta_y_days": 20,
+  "H_days": 20,
+  "L_points": 10,
+  "W_days": 200,
+  "decision_interval_days": 5,
+  "rebalance_interval_days": 5,
+  "q_h": 1.0,
+  "q_w": 10.0,
+  "tau_x_method": "median_abs_autocorrelation_half_life_across_state_beta_reliability_at_H20_lags",
+  "tau_s_method": "selected_state_D5_run_length_median",
+  "tau_x_days": 40.0,
+  "tau_s_days": 20.0,
+  "q_x": 2.0,
+  "q_s": 1.0,
+  "q_x_status": "measured",
+  "q_s_status": "measured",
+  "feature_median_abs_autocorrelation_by_H20_lag": [
+    0.5820394347414767,
+    0.3772151829947642,
+    0.28031406735182884,
+    0.20396187630197748,
+    0.1413767007635693,
+    0.1266187301845832,
+    0.11701334416174926,
+    0.10257099946770296,
+    0.11525673297963186
+  ],
+  "r_eff": 19.779222077645798,
+  "latent_dimension": [
+    8,
+    16
+  ],
+  "latent_dimension_candidates": [
+    8,
+    16
+  ],
+  "capacity_root_candidates": [
+    {
+      "latent_dimension": 8,
+      "hidden_dimension": 8
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 16
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 32
+    }
+  ],
+  "capacity_support": [
+    {
+      "latent_dimension": 8,
+      "hidden_dimension": 8,
+      "d_squared": 64,
+      "n_k_eff_time_lower_over_d_squared": 1.078125,
+      "n_k_eff_design_over_d_squared": 39.5834882124163,
+      "n_k_eff_upper_over_d_squared": 1375.00390625,
+      "support_diagnostic": "comfortable"
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 16,
+      "d_squared": 256,
+      "n_k_eff_time_lower_over_d_squared": 0.26953125,
+      "n_k_eff_design_over_d_squared": 9.895872053104075,
+      "n_k_eff_upper_over_d_squared": 343.7509765625,
+      "support_diagnostic": "thin_claim_limited"
+    },
+    {
+      "latent_dimension": 16,
+      "hidden_dimension": 32,
+      "d_squared": 256,
+      "n_k_eff_time_lower_over_d_squared": 0.26953125,
+      "n_k_eff_design_over_d_squared": 9.895872053104075,
+      "n_k_eff_upper_over_d_squared": 343.7509765625,
+      "support_diagnostic": "thin_claim_limited"
+    }
+  ],
+  "operator_count": 1,
+  "n_eff_method": "four_phase_time_lower_time_x_sqrt_cross_section_design_and_cross_section_upper",
+  "n_eff_time": 69.0,
+  "median_labelled_cross_section": 1348.0,
+  "n_eff_design_time_x_sqrt_cross_section": 2533.343245594643,
+  "n_eff_cross_section_upper_bound": 88000.25,
+  "n_k_eff_method": "K1_inherits_each_n_eff_bound_pretraining",
+  "n_k_eff": 69.0,
+  "post_training_operator_obligations": [
+    "actual_n_k_eff_and_n_k_eff_over_d_squared",
+    "koopman_matrix_condition_number",
+    "member_and_input_perturbation_stability"
+  ],
+  "operator_identifiability_claimed": false,
+  "overlap_inference": "four_phase_block_or_HAC_required",
+  "inference_rows": 853732,
+  "labelled_rows": 827753,
+  "training_prefix_rows": 361628,
+  "target_value_used_for_capacity_measurement": false,
+  "target_availability_used_only_for_labelled_n_eff": true,
+  "production_authority": false,
+  "canonical_digest": "sha256:492f293ebc9dba45a61901e7ae0459dd652645809a2f2cc4d2a6d482698607e3"
+}

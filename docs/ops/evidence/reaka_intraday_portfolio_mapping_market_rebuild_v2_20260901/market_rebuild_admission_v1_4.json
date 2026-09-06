@@ -1,0 +1,21 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_admission@1.4",
+  "status": "HFQ_formula_identity_label_controller_admitted_market_only_rebuild_account_closed",
+  "issue_ref": "bd://fl-eginj.14",
+  "contract_digest": "sha256:c4064f1a7cf14794e803782e0d75e80563b729980e2ee6f2d61b16772336f9fc",
+  "succession_digest": "sha256:ff6a87e51c91ac65bb35bfac15ab354084174c9bb9810f7b0251a51a5efe3a96",
+  "strategy_authority_registry_digest": "sha256:e9f3153402c85ef2de8438a0905b04a1d9f7b35b679fe685c9b00ca2c0f345c6",
+  "pre_result_HFQ_label_incident_sha256": "sha256:2669c8c191031d392f5a3e0b7603a5cb7f05b51878e121cc32e32f6866a92cda",
+  "verified_inputs_per_tree": 47,
+  "source_closure_file_count": 18,
+  "factor_source_label": "bounded_xdxr_event_formula_v1",
+  "validator_allowlist_changed": false,
+  "score_panel_rebuild_allowed": false,
+  "market_rebuild_execution_allowed": true,
+  "account_mapping_execution_allowed": false,
+  "annual_session_execution_allowed": false,
+  "post_2020_read_allowed": false,
+  "production_authority": false,
+  "next_legal_action": "restart formal then isolated market-only input trees from empty destinations",
+  "canonical_digest": "sha256:7477c086bd8f3d57552d5c72821e824bd62ef145b08a1bb48c6a508073e644c7"
+}

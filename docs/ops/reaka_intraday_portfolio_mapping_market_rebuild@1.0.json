@@ -1,0 +1,200 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild@1.0",
+  "status": "result_free_DataHub_repair_bound_market_rebuild_authorized",
+  "issue_ref": "bd://fl-eginj.14",
+  "frozen_at": "2026-09-01T17:50:00+08:00",
+  "parent_P7_contract_digest": "sha256:36f630c37ac8bfe9fee4d98b6a341562fb96549fff6d423fa7f0a62dbacafd0b",
+  "blocked_input_validation_digest": "sha256:13ad74ee04aabbe3f739295d40d205da7ba61fcefc976fbc31940c05adf3833e",
+  "DataHub_repair_validation_file_sha256": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a",
+  "scope": {
+    "strategy_identity": "d8_h8_lr0p03_max3_fit_prefix_K1_r0",
+    "decision_clocks": [
+      "14:30",
+      "14:45"
+    ],
+    "minimum_year": 2011,
+    "maximum_year": 2020,
+    "repair_symbol": "000638",
+    "missing_score_coordinates_per_clock_before": 143,
+    "required_joined_score_coordinates_per_clock_after": 143
+  },
+  "rebuild_policy": {
+    "score_training_allowed": false,
+    "checkpoint_read_required": false,
+    "score_panel_source": "copy exact bytes from the accepted v1 formal/isolated score panels",
+    "old_market_panel_reuse_allowed": false,
+    "market_panel_destination_must_start_empty": true,
+    "daily_panel_repair": "append only the fixed 000638 DataHub security metadata plus fixed positive raw bars to the old annual tradeability denominator",
+    "raw_execution_source_unchanged": "reaka_intraday_target_fill_v1_2007_2020",
+    "HFQ_source_unchanged": "adjust_factors_cn_a_xdxr_v9_20260814 plus the frozen ten-symbol bounded XDXR repair",
+    "market_cap_source_unchanged": "stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812",
+    "formal_isolated_byte_identity_required": true
+  },
+  "inputs": {
+    "score_roots": {
+      "formal": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v1_2011_2020/formal",
+      "isolated": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v1_2011_2020/isolated"
+    },
+    "target_fill_roots": {
+      "formal": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal",
+      "isolated": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/isolated"
+    },
+    "score_panel_digests": {
+      "14:30": "sha256:7ad9472f307b560d1a4474b18926c09fb23f9cd5645178dcc2b5ce1f315d883d",
+      "14:45": "sha256:29c64330a3f65ef35430ac6ab23634f12896e7d8aecbb5f8c1c581b0b837e864"
+    },
+    "old_input_manifest_digests": {
+      "14:30": "sha256:1f66d36e19e5afea1510e2308e4cc5b173dc7cf47278b7406a5a8666c424e91f",
+      "14:45": "sha256:3c00e22893445cb7093cd5f478fc91e0e822573148321e99a4ef2eb2004c7c02"
+    },
+    "old_source_closure_digests": {
+      "14:30": "sha256:17af96441e682ecd5ab015a8d2e2785d3fbc446c58f0434a09c9c678a691fed9",
+      "14:45": "sha256:fc4f26ed6cf914bca4b5f6e0cb56091230a6b6173d77746f497737aeb1e8c248"
+    },
+    "target_fill_digests": {
+      "manifest.json": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+      "calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+      "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+      "entry_open_1430.npy": "sha256:9cbd8adab2936148cb8ef8528c9ee8cfd480d87b3d4a8cc352a712caf1a60482",
+      "entry_open_1445.npy": "sha256:ac2867f0cba5ee8747b7d36bc578a4076efb7acfa642f4cfc76b43dfc6f12b82"
+    },
+    "daily_panels": [
+      {
+        "year": 2011,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2011/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:9ecda801a4c83dc98f61c27c0b6c781ac803e3f159c8ade0f290319613c49ee1"
+      },
+      {
+        "year": 2012,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2012/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:b7cf7fd7d50c9c30057b9e59b7bde54347a18f721d4967a9efe6ce8d3e673411"
+      },
+      {
+        "year": 2013,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2013/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:ce4b7fd265b206baccf48896e6d574717bcc4ef539ba41583a1e60c6637f9f50"
+      },
+      {
+        "year": 2014,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2014/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:969d0fdef9b9dc4bcf0b5c4517a8e14cb2d08d5199b702802c72f6bf5cd356ef"
+      },
+      {
+        "year": 2015,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2015/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:16aade12a4892a572e63cc124dc7a8c3c16eabbbd4a9f06118275bcda26b15ce"
+      },
+      {
+        "year": 2016,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2016/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:aecc524f9f1746314856d1fa624cce745a06a73c0d6bbb062d0db80d58639704"
+      },
+      {
+        "year": 2017,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2017/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:2cc69f53efd4e5eff49b14a1fd8d34b8bc1f18d17b12dadc1332e2ec1b2ef623"
+      },
+      {
+        "year": 2018,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2018/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:4aa0cdc566786c5b16f363bb7d9f7e15909e4b568d1774481b168d8fc8af29c2"
+      },
+      {
+        "year": 2019,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2019/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:fd442bac37c2ba67106f1f3902b0e6435ffa62df33e6ec6bff46ba9c0334ecaf"
+      },
+      {
+        "year": 2020,
+        "path": "output/factor-rotation/multifrequency_campaigns/MFOS_C001_RESIDUAL_FEEDBACK_20260828/phase2/annual_sessions/2020/inputs/price_tradeability_panel.parquet",
+        "sha256": "sha256:83844e09750321754a75bc85dc30afdeaf5640c0536570363941099b33275ec9"
+      }
+    ],
+    "datahub_repair_payload": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/security_day_metadata/dataset_version=security_day_metadata_cn_a_stock_000638_pit_repair_20110104_20201231_v2_20260901/security_day_metadata.parquet",
+      "sha256": "sha256:22e4627785e4f1e83666e7dc0bc7765605ae089e58cc5b37d788e203fbaa4908"
+    },
+    "datahub_repair_bundle_manifest": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/security_day_metadata/dataset_version=security_day_metadata_cn_a_stock_000638_pit_repair_20110104_20201231_v2_20260901/bundle_manifest.json",
+      "sha256": "sha256:b191a00c149ddc22bfe9138946c7e63195b504ce9503ef386cac68fbd13a026c"
+    },
+    "datahub_repair_validation": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "sha256": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a"
+    },
+    "raw_daily_bars": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1d_raw_canonical_may18_merged_20260519/bars.parquet",
+      "sha256": "sha256:620c5bd5ba8c3d7089f9f3ee474a1a88dea2ec7720721e1112fe734564662bda"
+    },
+    "market_cap": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/stock_market_cap_monthly_pit/dataset_version=stock_market_cap_monthly_pit_cn_a_2009_2025_v6_certified_20260812/market_cap_surface.parquet",
+      "sha256": "sha256:2dbfd339ff65396ca14519ec3a5e1003b5073449334ea9e3d59b86e723d38e29"
+    },
+    "adjustment_factors": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/adjustment_factors/dataset_version=adjust_factors_cn_a_xdxr_v9_20260814/factors.parquet",
+      "sha256": "sha256:2fc1faeaff735b0251b8542e0d4ec3690a023469de044fadfc6fa246f7e53ee0"
+    },
+    "xdxr_events": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/tdx_xdxr_v2/staging_full_20260826_merged/xdxr_events.parquet",
+      "sha256": "sha256:b30f6db2127d3dfd2095cdc1bdf54d1ecbb60656ecc5b8db5a1fc7ed334d8463"
+    },
+    "price_limit_rules": {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/config/market_standards/profiles/cn_a_stock_trading_rules.v1.json",
+      "sha256": "sha256:75d3c061455aab43e896bd6b0e4809b50431fc24daa0c4c4f85dae4608f0a775"
+    }
+  },
+  "source_closure": [
+    {
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "sha256": "sha256:00cf76fedbdb32b5f3dfdd084eb9eb52d635038aad9f448c9628275bb408a198"
+    },
+    {
+      "path": "tests/unit/test_reaka_intraday_portfolio_mapping_market_rebuild_v2.py",
+      "sha256": "sha256:c255d9fcb0ff8bcf6db087db57e240c9ebacca6d583e01b8f30caf8681289b06"
+    },
+    {
+      "path": "scripts/factor_rotation/build_reaka_intraday_portfolio_mapping_inputs_v1.py",
+      "sha256": "sha256:74d826ffd3165c16dc4bf3dbb24423383a2584c8016806c10e51a38953cba492"
+    },
+    {
+      "path": "scripts/factor_rotation/materialize_reaka_stage6_portfolio_inputs.py",
+      "sha256": "sha256:91b6088b67dc88f596bd625d21e38d23cf32e24a341295b00345a4a0cb63bc1c"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_portfolio_execution.py",
+      "sha256": "sha256:754416b33c03e3484de8b7268765a5b94e8e8c135057b1287f6d5283ad4c73a0"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_portfolio_mapping_v1.py",
+      "sha256": "sha256:dc7dc7f183201d76d4765c95562239adbbb73e9e5a44169ddbe39fa928fbecda"
+    },
+    {
+      "path": "docs/ops/reaka_intraday_portfolio_mapping@1.2.json",
+      "sha256": "sha256:180f29bd18d62763571bf281d8af1b9e9051d7665a4527d417523e13638d6544"
+    },
+    {
+      "path": "docs/ops/evidence/reaka_intraday_portfolio_mapping_inputs_v1_20260901/validation_report.json",
+      "sha256": "sha256:23278ce0a240072daa49021fb716afed848a63821947b25f78457ed23f002053"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/evidence/history/security_day_metadata_000638_pit_repair_20260901/validation_report.json",
+      "sha256": "sha256:f4ed83d26059300f23ad200a52f375c6ccb68ce8236cb9059a62faa18602cf5a"
+    }
+  ],
+  "acceptance_gates": {
+    "score_panel_digest_unchanged_each_clock": true,
+    "target_score_coordinates_joined_each_clock": 143,
+    "all_score_market_coordinates_joined": true,
+    "market_primary_key_duplicates": 0,
+    "raw_times_HFQ_identity_max_abs_error": 0.0,
+    "formal_isolated_byte_identical": true,
+    "post_2020_rows": 0,
+    "user_math_inputs_required": []
+  },
+  "market_rebuild_execution_allowed": true,
+  "account_mapping_execution_allowed": false,
+  "annual_session_execution_allowed": false,
+  "post_2020_read_allowed": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:017e8a4d5c28955bb6abee7b012e991f1ae9002a55a9ec015344c8924c8d958d"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_backend_timing_stability_incident@1.0",
+  "status": "current_contract_revoked_requires_robust_benchmark_rebuild",
+  "trigger": "same_exact_1430_workload_backend_selection_flipped_across_replays",
+  "prior_observations": [
+    {
+      "selected": "cpu",
+      "cpu_seconds": 0.2814793039869983,
+      "rocm_seconds": 0.39668575901305303
+    },
+    {
+      "selected": "rocm",
+      "receipt_digest": "sha256:aa35ff548f11c24dd222d603ed19f0cdac3eab2ee2e9c4202baeee33d1356774"
+    }
+  ],
+  "root_cause": "single_timing_block_without_speed_margin",
+  "repair": "five_alternating_blocks_median_and_ROCm_requires_at_least_1p10_speedup",
+  "scientific_numbers_changed": false,
+  "formal_training_run": false,
+  "score_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:f61701e95dfefecd15fd0721ff2c60ad7ceb458e06fb204395ed004bcfcd2a20"
+}

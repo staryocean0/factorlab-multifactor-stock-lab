@@ -1,0 +1,21 @@
+{
+  "schema_id": "factorlab.reaka_intraday_portfolio_mapping_market_rebuild_admission@1.2",
+  "status": "000638_XDXR_successor_controller_admitted_market_only_rebuild_account_closed",
+  "issue_ref": "bd://fl-eginj.14",
+  "contract_digest": "sha256:fe2f0b7b6781632d7189904c4e9ba8a4daac0838728be9f748536d8bc7411d57",
+  "succession_digest": "sha256:bf559df865b23d26ba2d231c0df8555579396bd6212567f29a134f9d23edb536",
+  "strategy_authority_registry_digest": "sha256:6dad4bf5f3906375281efcfd1be9088cf8c2653321a3c5c658ca2be33ba47c71",
+  "pre_result_HFQ_incident_sha256": "sha256:69fa81385d03f44c4d2502fb1e43daff1702b6ba1a5d19b40e39223c50450b9c",
+  "DataHub_XDXR_validation_sha256": "sha256:a73d60a2736fe147e36c259d5fdbe1e776558f15de611373d3c4de51c8bc0228",
+  "verified_inputs_per_tree": 43,
+  "source_closure_file_count": 14,
+  "target_category1_event_count": 1,
+  "score_panel_rebuild_allowed": false,
+  "market_rebuild_execution_allowed": true,
+  "account_mapping_execution_allowed": false,
+  "annual_session_execution_allowed": false,
+  "post_2020_read_allowed": false,
+  "production_authority": false,
+  "next_legal_action": "restart formal then isolated market-only input trees from empty destinations",
+  "canonical_digest": "sha256:0d474c8ca0a6a6b7e74e4002855c758db189a878b2d3852ee319e12210bacc20"
+}

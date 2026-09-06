@@ -1,0 +1,21 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_backend_benchmark@1.0",
+  "status": "passed",
+  "representative_identity": "d16_h16_K1_r0",
+  "batch_rows": 4096,
+  "repetitions": 6,
+  "cpu_seconds": 0.37807747299666516,
+  "cpu_loss": 1.720749020576477,
+  "cpu_gradient_max": 0.17095163464546204,
+  "rocm_available": true,
+  "rocm_seconds": 0.39970454000285827,
+  "rocm_loss": 1.7207491397857666,
+  "rocm_gradient_max": 0.17095117270946503,
+  "parity_max_abs": 2.086162567138672e-07,
+  "score_spearman": 0.9999999998253771,
+  "parity_passed": true,
+  "selected_backend": "cpu",
+  "target_read": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:018cc5292e859ea6dce5ccdf72c47a4a89fd2c79d06f22931cb0fa22c284d7b2"
+}
