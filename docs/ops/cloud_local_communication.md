@@ -86,7 +86,7 @@ python scripts/reaka_r3_frozen_compare.py \
 
 ## 实际任务：LCL-R3-COND-20260906-01
 
-**状态与入口（2026-09-06）**：云端已完成设计和输入视图/模型子类适配。**本地已反馈** F 复用 + 6 次 H 拟合对照；尚未云端复核。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
+**状态与入口（2026-09-06）**：**云端已复核：受限接收现有六次H拟合及集成结果，待同任务的现有产物明细补充，不再训练。** 最新裁决见[cloud_review.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md)，第5节为只读增量任务。以下设计阶段与本地反馈按原字节段落保留为历史记录。[任务方案](r3_condition_increment_design_20260906.md)第7节为本地操作说明。这是云端与本地协作，按AGENTS Protocol 1/2；原R2和R3-NOFIT均已收口，不重复。
 
 **金融问题与主比较**：区分历史epsilon表示学习与原有直接X信息包增量。默认仅F完整输入、H同拓扑且全部71个X通道在训练和评价中置零；K1/r0、目标、支持、normalizer与训练规则相同。可选E只移除状态/状态掩码，保留暴露/可靠性/暴露掩码，不在默认执行范围。不是使用旧without_gate，也不把推理时置零当训练消融；新月度CloudRidge条件不混入。
 
@@ -104,6 +104,18 @@ python scripts/reaka_r3_frozen_compare.py \
 
 
 **本地反馈（2026-09-06）**：基点 `6552b6f`；FactorLab `b39bb12f` 未改脏区。F 复用（fit-prefix/training/preflight blob 一致），已知目录无同口径 H。新建 `scripts/reaka_r3_condition_compare.py` 与 `tests/unit/test_reaka_r3_condition_compare.py`。pytest 视图 33 + runner 4 通过。正式命令 `run02` 退出码 0，H 拟合 6 次、未跑 E、未重训 F。F rankIC 与 NOFIT 一致；F−H 约 +0.016/+0.021。报告 [local_feedback.md](../../cloud_results/local_handoff_R3_condition_20260906/local_feedback.md)、[comparison.json](../../cloud_results/local_handoff_R3_condition_20260906/comparison.json)、[paired_daily.csv](../../cloud_results/local_handoff_R3_condition_20260906/paired_daily.csv)。大分数 npy 留本地。不是 PIT/OOS/因果/生产。
+
+### R3条件对照云端验收（2026-09-06）
+
+复核提交 `e17aacb4ce933ad397b5d5d541e7269a2237c226`。报告 [cloud_review.md](../../cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md)，回执 [cloud_checks.json](../../cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_checks.json)。云端实际执行33项视图测试（通过）、原runner测试（1通过/3因本地根目录缺失跳过），以及直接调用原main的3项保护测试（通过）；98条双时钟投影及逐周期记录的63项一致性检查均通过。未重算个股级IC、原数组或真实训练，测试/检查数不是独立市场证据。
+
+**接收**：六次H拟合/18cycle及对应fit-prefix选周期的本地记录；集成F−H RankIC为+0.0158725/+0.0209996，胜出34/49和39/49日，四相位均值为正；Top30残差差为+0.42990/+0.38324个百分点，胜出25/49和27/49日。仅为已消费2017的描述性混合后端对照，尚非完整数值匹配的纯X效应。原R2/NOFIT验收、数据、模型和原报告不改写。
+
+**尚缺及解释修正**：逐seed评价未回传；实际paper/Stage6/初始化实现及normalizer与原F的身份桥接不完整；F为CUDA、H为CPU，限制继续保留。runner未见保存H权重步骤，有其他保存则给原路径/摘要，否则明确未持久化，不为补记录重训。H超过简单规则不等于“解释大部分优势”，该原表述不接受。1430均值基准因float32/float64一处tie有约9.09e-9均值IC差，F−H不受影响，不重算旧回执。
+
+**同任务最小增量（待用户转交）**：按报告第5节在原任务编号下追加 `local_feedback_delta.md`、所有seed的F/H逐日和汇总，以及现有分数/支持/最小实现身份。仅从run02已保存的H分数与原F分数读出；新增只读汇总函数/脚本并回传，不重跑会训练的runner.main。CPU/CUDA、未保存checkpoint或无法回溯的身份可明确保留为局限，不强制新训练来清零。没有完整现成导出命令的部分已在报告列明，不假称自动执行。原分数缺失即停止对应项并报告。
+
+**预算与状态**：六次拟合工作保留，本轮 `cloud_reviewed_scoped_results_nofit_details_pending`。追加任务新拟合/推理/账户/Actions次数均为0；不增E、K、seed或cycle，不上传大数组、不合并main。此记录由用户转交本地，不代表远程派发。本地填写增量已反馈，云端再复核；无新数据依赖的工作仍可继续。
 
 ## 任务记录与反馈模板
 

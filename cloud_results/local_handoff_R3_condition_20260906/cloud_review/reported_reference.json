@@ -1,0 +1,21 @@
+{
+  "reviewed_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
+  "origin": "Values transcribed from the local comparison and seed receipts; not copies of the original JSON bytes.",
+  "local_csv_git_blob_reported_by_connector": "c1d9794ac16cf5cc56e651db3c5e26956edd0ad9",
+  "local_comparison_git_blob_reported_by_connector": "eb59ac8c1662971b0842063bce9d20ea2a229310",
+  "seed_receipts_git_blob_reported_by_connector": "b847908e8d4b41aae5c929cb515fa61f39a74848",
+  "clocks": {
+    "1430": {"H_ic": 0.1440533686347263, "delta_ic": 0.015872501813445145, "H_spread": 0.059671928485482965, "H_top30": 0.040698304281670476, "days": 49, "rows": 82321, "phase_delta": [0.016646296462670667,0.017554766903547372,0.012026330761258095,0.017583127380653363]},
+    "1445": {"H_ic": 0.14052618619419457, "delta_ic": 0.020999561006629863, "H_spread": 0.05765077935888124, "H_top30": 0.03906738723094976, "days": 49, "rows": 82321, "phase_delta": [0.024388129472294903,0.020127229085541428,0.01633568401117371,0.02353585787379743]}
+  },
+  "fits": [
+    {"clock":"1430", "seed":11, "pre":1.7449978590011597, "canonical":[0.821243405342102,0.8179348707199097,0.8127118349075317], "selected":3},
+    {"clock":"1430", "seed":29, "pre":1.6829813718795776, "canonical":[0.8174643516540527,0.8157838582992554,0.8154096603393555], "selected":3},
+    {"clock":"1430", "seed":47, "pre":1.6992616653442383, "canonical":[0.8216708302497864,0.8304837346076965,0.8168904781341553], "selected":3},
+    {"clock":"1445", "seed":11, "pre":1.7457388639450073, "canonical":[0.8232207298278809,0.8130383491516113,0.821039617061615], "selected":2},
+    {"clock":"1445", "seed":29, "pre":1.6837297677993774, "canonical":[0.8180088400840759,0.8175131678581238,0.8127784132957458], "selected":3},
+    {"clock":"1445", "seed":47, "pre":1.6999980211257935, "canonical":[0.8195386528968811,0.8181875348091125,0.8232921957969666], "selected":2}
+  ],
+  "mean10_dtype_observation": {"clock":"1430", "day_position":2525, "old_ic":0.16003801418651448, "new_ic":0.16003845954198362, "old_mean":0.13322081415939868, "new_mean":0.1332208232482858, "days":49},
+  "no_claim_of_original_raw_array_or_equity_level_recomputation": true
+}

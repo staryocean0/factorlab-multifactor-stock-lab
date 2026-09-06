@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-06",
-  "current_task": "r3_condition_increment_design_complete_local_matched_controls_pending",
+  "current_task": "r3_condition_comparison_cloud_reviewed_existing_score_details_pending",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -75,7 +75,13 @@
         "original_json_bodies_rehashed": 4,
         "scope": "Historical initial-review checks, preserved unchanged. Do not add overlapping observations to current test counts or independent market evidence."
       },
-      "delta_cloud_checks": {"successor_tests": 7, "synthetic_assembly_tests": 6, "small_evidence_checks": 48, "failures": 0, "full_repository_test_run": false}
+      "delta_cloud_checks": {
+        "successor_tests": 7,
+        "synthetic_assembly_tests": 6,
+        "small_evidence_checks": 48,
+        "failures": 0,
+        "full_repository_test_run": false
+      }
     },
     "blocked_claims": [
       "historical_epsilon_and_factor_state_PIT_verified",
@@ -84,7 +90,15 @@
       "retrospective_tool_selection_is_historically_frozen",
       "minute_label_order_proves_trade_execution"
     ],
-    "unblocked_work": ["documentation", "mathematical_preanalysis", "interface_implementation", "synthetic_counterexamples", "independent_source_audits", "reuse_reviewed_scoped_local_arithmetic_evidence", "R3_evidence_use_adjudication"]
+    "unblocked_work": [
+      "documentation",
+      "mathematical_preanalysis",
+      "interface_implementation",
+      "synthetic_counterexamples",
+      "independent_source_audits",
+      "reuse_reviewed_scoped_local_arithmetic_evidence",
+      "R3_evidence_use_adjudication"
+    ]
   },
   "historical_stage4": {
     "status": "not_accepted",
@@ -99,16 +113,28 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "云端已完成R3条件信息对照设计与33项合成测试。按沟通文档LCL-R3-COND-20260906-01，由用户转交本地：先复用确实同口径结果；缺H时接线隔离runner并执行主F/H对照，F可复用则最多新增6次H拟合，否则记录真实数值差异后最多12次F/H拟合。每次最多3cycle，E不默认执行。现任模型不替换，R2/NOFIT不重跑，不开K/残差搜索、账户或Actions；2017仍已消费。",
+  "next_useful_action": "按同一LCL-R3-COND-20260906-01的cloud_review第5节，只读已有H/F分数导出逐seed评价并补最小数值身份/normalizer/支持关联，更正权重保存与大部分优势表述。六次H拟合不重做；CPU/CUDA和无法恢复的历史身份明确保留，不自动增加训练、E、K或账户；R2与NOFIT不重开。",
   "research_directions_not_a_mandatory_sequence": [
-    {"question": "现任金融epsilon是否在正确时点、同一收益区间构造？", "independent_prework": "沿用已验收的存盘算术和重建证据；仅对新任务确需的事件可得性或未覆盖来源另定检查，避免重复盘点。", "empirical_dependency": "全量PIT仍未认证；本轮任务完成不替代该更强主张的来源证据。"},
-    {"question": "市场或行业条件能否通过个股异质响应改善排序？", "independent_prework": "写清无条件基准、总收益或金融残差目标、同支持评价和共同状态的统计单位；常数平移作为无效反例。", "empirical_dependency": "未来已授权比较需自己的因果输入与评价数据，不沿用Stage4已实现持仓贡献作为预测增量。"},
-    {"question": "增加容量或潜残差模型是否有必要？", "independent_prework": "区分改变金融残差预测与增加潜动力修正；比较可辨识性和简单基准，不默认选K2或DDPM。", "empirical_dependency": "按该实验预分析及尝试预算验证，允许零修正和无增益。"}
+    {
+      "question": "现任金融epsilon是否在正确时点、同一收益区间构造？",
+      "independent_prework": "沿用已验收的存盘算术和重建证据；仅对新任务确需的事件可得性或未覆盖来源另定检查，避免重复盘点。",
+      "empirical_dependency": "全量PIT仍未认证；本轮任务完成不替代该更强主张的来源证据。"
+    },
+    {
+      "question": "市场或行业条件能否通过个股异质响应改善排序？",
+      "independent_prework": "写清无条件基准、总收益或金融残差目标、同支持评价和共同状态的统计单位；常数平移作为无效反例。",
+      "empirical_dependency": "未来已授权比较需自己的因果输入与评价数据，不沿用Stage4已实现持仓贡献作为预测增量。"
+    },
+    {
+      "question": "增加容量或潜残差模型是否有必要？",
+      "independent_prework": "区分改变金融残差预测与增加潜动力修正；比较可辨识性和简单基准，不默认选K2或DDPM。",
+      "empirical_dependency": "按该实验预分析及尝试预算验证，允许零修正和无增益。"
+    }
   ],
   "r3": {
-    "status": "condition_increment_design_ready_local_comparison_pending",
-    "report": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_review.md",
-    "checks": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_checks.json",
+    "status": "condition_comparison_reviewed_descriptive_only_nofit_delta_pending",
+    "report": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md",
+    "checks": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_checks.json",
     "initial_report": "docs/ops/r3_evidence_use_adjudication_20260906.md",
     "evidence": "cloud_results/r3_evidence_use_20260906/",
     "publication": "cloud_results/r3_evidence_use_20260906/publication.md",
@@ -117,7 +143,13 @@
     "accepted_claim": "On the exact consumed 2017 review support, the local frozen K1 rank-z ensemble has higher mean financial-epsilon RankIC than all four fixed no-fit history baselines; cloud reviewed source/identity and reaggregated the full-date strongest-baseline projection. Descriptive sample result only.",
     "mean_rankic_1430": 0.15992587044817144,
     "mean_rankic_1445": 0.16152574720082447,
-    "not_established": ["original conditional-feature increment", "new monthly S_obs increment", "independent historical OOS", "total-return or net-account alpha", "inferential significance or generalization beyond this consumed support"],
+    "not_established": [
+      "original conditional-feature increment",
+      "new monthly S_obs increment",
+      "independent historical OOS",
+      "total-return or net-account alpha",
+      "inferential significance or generalization beyond this consumed support"
+    ],
     "local_task": {
       "id": "LCL-R3-NOFIT-20260906-01",
       "status": "completed_with_limits",
@@ -133,26 +165,16 @@
       "score_regeneration_required": false,
       "repeat_local_run_required": false
     },
-    "cloud_checks": {"targeted_tests": 13, "receipt_arithmetic_checks": 6, "failures": 0, "real_market_comparison_run": false, "full_repository_tests_run": false, "repeated_at_publication_not_additional_market_evidence": true},
-    "cloud_checks_scope_note": "Previous initial-authoring/publication checks above are historical. Current acceptance checks below are separate and not additive market evidence.",
-    "current_cloud_acceptance": {
-      "status": "completed_with_limits",
-      "reviewed_commit": "d340f249f01d3e413d876cf9096d789114fc6070",
+    "cloud_checks": {
       "targeted_tests": 13,
-      "paired_projection_consistency_checks": 57,
+      "receipt_arithmetic_checks": 6,
       "failures": 0,
-      "projection_rows": 98,
-      "scope": "Exact script/test bytes checked; 13 tests run in cloud; all 49 dates per clock reaggregated from connector-transcribed K1/negative-mean10 columns. Other three baseline summary differences arithmetically checked. No original equity-level IC or raw-array recomputation.",
-      "paired_rankic_delta_1430": 0.026705056288772767,
-      "paired_rankic_delta_1445": 0.02713264826095494,
-      "rankic_win_days_1430": 36,
-      "rankic_win_days_1445": 33,
-      "top30_win_days_1430": 26,
-      "top30_win_days_1445": 25,
-      "condition_feature_increment_identified": false,
-      "full_repository_tests_run": false
+      "real_market_comparison_run": false,
+      "full_repository_tests_run": false,
+      "repeated_at_publication_not_additional_market_evidence": true
     },
-    "new_local_task_required": true,
+    "cloud_checks_scope_note": "Initial-authoring/publication checks and nofit_cloud_acceptance are historical completed scopes. The current condition_cloud_review is separate, not additive market evidence.",
+    "new_local_task_required": false,
     "r2_reopened": false,
     "full_pit_certified": false,
     "fresh_oos": false,
@@ -173,13 +195,14 @@
       "failures": 0,
       "whole_original_model_integration_tested": false,
       "real_training_executed": false,
-      "note": "29 array-interface cases and 4 explicitly synthetic-carrier subclass cases; not an empirical ablation or a turnkey training runner."
+      "note": "29 array-interface cases and 4 explicitly synthetic-carrier subclass cases; not an empirical ablation or a turnkey training runner.",
+      "implementation_feedback": "Local runner and six H fits returned at e17aacb4; original design receipt and synthetic-test scope above remain historical."
     },
     "local_condition_task": {
       "id": "LCL-R3-COND-20260906-01",
-      "status": "pending_user_transfer_not_executed",
+      "status": "cloud_reviewed_scoped_results_nofit_details_pending",
       "instruction": "docs/ops/r3_condition_increment_design_20260906.md#7-本地最小执行任务lcl-r3-cond-20260906-01",
-      "required_implementation": "New isolated scripts/reaka_r3_condition_compare.py integrating the supplied view adapter into original initialization, arm-specific DMD, training, checkpoint selection and forecast. This complete runner is not yet supplied.",
+      "required_implementation": "Submitted scripts/reaka_r3_condition_compare.py executed locally; supplement needs only existing-score per-seed export and identity notes, not a new trainer.",
       "reuse_before_fit": true,
       "new_H_fits_when_F_reusable_max": 6,
       "joint_FH_fallback_fits_max": 12,
@@ -187,9 +210,68 @@
       "optional_E_enabled": false,
       "expected_feedback_root": "cloud_results/local_handoff_R3_condition_20260906/",
       "incumbent_replacement_allowed": false,
-      "training_started": false,
+      "training_started": true,
       "data_scope": "existing K1 fit-prefix inputs through 2016 and consumed 2017 review; no DataHub minute/account task",
-      "decision_owner": "cloud review; local executes bounded implementation and numerical comparison"
+      "decision_owner": "cloud review; local executes bounded implementation and numerical comparison",
+      "feedback_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
+      "feedback": "cloud_results/local_handoff_R3_condition_20260906/local_feedback.md",
+      "cloud_review": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md",
+      "cloud_checks": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_checks.json",
+      "actual_H_fits": 6,
+      "actual_cycles": 18,
+      "F_reused": true,
+      "training_finished_locally": true,
+      "additional_fit_or_inference_requested": false,
+      "checkpoint_persistence_verified": false,
+      "per_seed_evaluation_delivered": false,
+      "runtime_numerical_identity_bridge_complete": false,
+      "backend": "H CPU versus historical F CUDA; no backend equivalence established",
+      "supplement_may_close_with_explicit_unknowns": true
+    },
+    "same_task_local_delta_required": true,
+    "condition_cloud_review": {
+      "status": "scoped_local_results_accepted_not_pure_X_certification",
+      "reviewed_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
+      "report": "cloud_results/local_handoff_R3_condition_20260906/cloud_review/cloud_review.md",
+      "F_minus_H_rankic_1430": 0.015872501813445145,
+      "F_minus_H_rankic_1445": 0.020999561006629863,
+      "H_rankic_1430": 0.1440533686347263,
+      "H_rankic_1445": 0.14052618619419457,
+      "rankic_win_days": [34,39],
+      "top30_win_days": [25,27],
+      "projection_checks": 63,
+      "projection_failures": 0,
+      "adapter_tests_passed": 33,
+      "original_runner_tests": {"passed": 1,"skipped_missing_local_root": 3,"failed": 0},
+      "actual_main_guard_tests_passed": 3,
+      "cloud_scope": "Submitted source bytes and all H dates reaggregated with prior accepted F/B projection. Not original real arrays, full Stage6 integration, raw CSV rehash, or training.",
+      "pure_condition_increment_identified": false,
+      "per_seed_details_pending": true,
+      "backend_difference_is_not_proof_of_result_error": true,
+      "new_training_required_for_this_supplement": false,
+      "full_pit_certified": false,
+      "fresh_oos": false,
+      "production_authority": false,
+      "actions_executed": false
+    },
+    "previous_nofit_report": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_review.md",
+    "previous_nofit_checks": "cloud_results/local_handoff_R3_20260906/cloud_acceptance/cloud_checks.json",
+    "nofit_cloud_acceptance": {
+      "status": "completed_with_limits",
+      "reviewed_commit": "d340f249f01d3e413d876cf9096d789114fc6070",
+      "targeted_tests": 13,
+      "paired_projection_consistency_checks": 57,
+      "failures": 0,
+      "projection_rows": 98,
+      "scope": "Exact script/test bytes checked; 13 tests run in cloud; all 49 dates per clock reaggregated from connector-transcribed K1/negative-mean10 columns. Other three baseline summary differences arithmetically checked. No original equity-level IC or raw-array recomputation.",
+      "paired_rankic_delta_1430": 0.026705056288772767,
+      "paired_rankic_delta_1445": 0.02713264826095494,
+      "rankic_win_days_1430": 36,
+      "rankic_win_days_1445": 33,
+      "top30_win_days_1430": 26,
+      "top30_win_days_1445": 25,
+      "condition_feature_increment_identified": false,
+      "full_repository_tests_run": false
     }
   }
 }

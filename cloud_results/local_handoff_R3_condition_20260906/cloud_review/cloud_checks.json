@@ -1,0 +1,70 @@
+{
+  "task": "LCL-R3-COND-20260906-01",
+  "reviewed_commit": "e17aacb4ce933ad397b5d5d541e7269a2237c226",
+  "status": "cloud_reviewed_scoped_results_nofit_details_pending",
+  "location": "current_cloud_container",
+  "test_suites": {
+    "view_tests.xml": {"tests": 33, "failures": 0, "errors": 0, "skipped": 0},
+    "runner_original_tests.xml": {"tests": 4, "failures": 0, "errors": 0, "skipped": 3},
+    "cli_guard_tests.xml": {"tests": 3, "failures": 0, "errors": 0, "skipped": 0}
+  },
+  "numerical_projection_checks": 63,
+  "projection_check_failures": 0,
+  "results": {
+    "1430": {
+      "days": 49, "support_rows": 82321,
+      "F_rankic": 0.15992587044817144, "H_rankic": 0.1440533686347263,
+      "F_minus_H_rankic": 0.015872501813445145,
+      "paired_median": 0.021087673542944538, "rankic_win_days": 34,
+      "phase_delta": [0.016646296462670667, 0.017554766903547372, 0.012026330761258095, 0.017583127380653363],
+      "spread_delta": 0.003831198805098277, "spread_win_days": 30,
+      "top30_excess_delta": 0.004298973425723482, "top30_win_days": 25,
+      "H_minus_original_mean_reversal": 0.010832554475327626,
+      "backend_equivalence_verified": false, "pure_X_increment_certified": false
+    },
+    "1445": {
+      "days": 49, "support_rows": 82321,
+      "F_rankic": 0.16152574720082447, "H_rankic": 0.14052618619419457,
+      "F_minus_H_rankic": 0.020999561006629863,
+      "paired_median": 0.02256785907931902, "rankic_win_days": 39,
+      "phase_delta": [0.024388129472294903, 0.020127229085541428, 0.01633568401117371, 0.02353585787379743],
+      "spread_delta": 0.00734354363606317, "spread_win_days": 34,
+      "top30_excess_delta": 0.003832445342547488, "top30_win_days": 27,
+      "H_minus_original_mean_reversal": 0.006133087254325071,
+      "backend_equivalence_verified": false, "pure_X_increment_certified": false
+    }
+  },
+  "cross_clock_delta_correlation": 0.9251068253952914,
+  "projection_scope": "Recompute the bounded cloud F/H review; never train or access FactorLab.\n\nF/B use the previous accepted projection. H uses all 98 rows transcribed from\nthis delivery's connector text. These are numerical projections, not the raw\n588-row CSV, and do not certify run-time arrays or cross-backend equivalence.",
+  "source_sha256": {
+    "scripts/reaka_r3_condition_compare.py": "4c3d38267cd14bdde866d352efa94c6c862af3997cd37816942785a2b43fa687",
+    "tests/unit/test_reaka_r3_condition_compare.py": "009cc2f50129676418fdb867c23cfe8dadf476d0d29fa3edaec1f72311428ee6",
+    "src/factor_lab/factor_rotation/reaka_r3_condition_views.py": "7d76a03785e2d03623342c63c360ddf7680835433294f5f511163d09fba2f921"
+  },
+  "source_git_blobs": {
+    "scripts/reaka_r3_condition_compare.py": "91a6b87cb58d57fb4c034934dcb0b15bbed7333b",
+    "tests/unit/test_reaka_r3_condition_compare.py": "4a02ae98c39959b86fe263b0c540d4ed40a98850"
+  },
+  "projection_sha256": {
+    "prior_paired_projection.csv": "8db9e9332583a472938cc966f1bd649c8daa7e010876138b55fc4db0ca55b304",
+    "h_projection.csv": "130eabc18b936c06ed006cdd0d8700d313144c78de9039db6a104018398e8a86",
+    "reported_reference.json": "0a01c2e66137202783378ebd7eaf63650a9183e0a7776c04bf640fdf66b411c0"
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5", "torch": "2.10.0+cpu", "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "original_raw_csv_rehashed": false,
+  "real_array_or_equity_rankic_recomputed": false,
+  "full_repository_tests_run": false,
+  "training_executed_in_cloud": false,
+  "additional_training_requested": false,
+  "actions_executed": false,
+  "same_task_nofit_delta_required": true,
+  "backend_equivalence_verified": false,
+  "pure_X_effect_certified": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "r2_reopened": false,
+  "artifact_persistence": "No H checkpoint write found in submitted runner; ask for existing independent save or record missing. Do not recreate by retraining."
+}
