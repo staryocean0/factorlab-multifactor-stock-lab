@@ -1,0 +1,99 @@
+{
+  "schema_id": "factorlab.infrastructure_v1_4_validation_receipt@1.0",
+  "source": "Downloaded GitHub Actions artifact; ZIP digest and JUnit counts independently checked after the run. This compact receipt is derived from the artifact, not a substitute for its raw files.",
+  "repository": "staryocean0/factorlab-multifactor-stock-lab",
+  "implementation_commit": "ebdf63c5b7ad98c6349e90da6f4410a80f4f8e92",
+  "checkout_merge_commit": "028923e8112a7b215332a9ab056b63d16ca61bcb",
+  "main_input_commit": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
+  "workflow_run_id": 34012881110,
+  "job_id": 101431595307,
+  "job_conclusion": "success",
+  "artifact": {
+    "id": 9983024620,
+    "name": "infrastructure-028923e8112a7b215332a9ab056b63d16ca61bcb",
+    "bytes": 41091,
+    "sha256": "0c6898e9ae038b4dca882cdc30b2577adf503b899a214840d7324e397e665c73",
+    "downloaded_bytes_digest_match": true,
+    "files": ["checkout.txt", "contract.json", "environment.txt", "regression_fixtures.json", "test_scope.json", "tests.xml"],
+    "github_expires_at": "2026-10-06T05:01:41Z"
+  },
+  "infrastructure": {
+    "status": "passed",
+    "checked_current_sources": 40,
+    "errors": [],
+    "current_link_errors": 0,
+    "meaning": "Live routing, current source locators, stable semantic assertions and current Markdown links. Not a full source-byte closure or a proof of every prose statement."
+  },
+  "tests": {
+    "status": "passed_selected_scope",
+    "discovered_unit_modules": 22,
+    "executed_unit_modules": 20,
+    "tests": 386,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_v1_4_counterexamples": 38,
+    "historical_v1_3_contract_tests": 20,
+    "historical_fixture_commit": "3a75376e1f7f871bb72e48f886c275919b3c9671",
+    "full_repository_validated": false,
+    "deferred_historical_modules": [
+      {
+        "test_module": "tests/unit/test_reaka_current_k1_account_ledgers_v1.py",
+        "status": "not_executed_not_passed",
+        "missing_source_dependencies": ["src/factor_lab/filtering/cloudridge_3_0_hybrid_filter_bank.py"]
+      },
+      {
+        "test_module": "tests/unit/test_reaka_intraday_orthogonal_ot_v1.py",
+        "status": "not_executed_not_passed",
+        "missing_source_dependencies": ["src/factor_lab/filtering/cloudridge_3_0_hybrid_filter_bank.py"]
+      }
+    ]
+  },
+  "navigation_inventory": {
+    "materialized_markdown_files": 83,
+    "markdown_link_targets": 2618,
+    "reported_historical_issues": 2491,
+    "issue_reason_counts": {"missing_target": 2487, "not_materialized": 1, "outside_repository": 3},
+    "issues_in_four_copied_whole_project_indexes": 2377,
+    "meaning": "Historical/reference link limitations are disclosed, not treated as requirements to upload the whole original project. External links, non-materialized Markdown and prose semantics are not certified."
+  },
+  "small_regression_fixtures": [
+    {"path": "output/factor-rotation/reaka_v2_stage3_state_episode_atlas_v1_2011_2025/formal/state_learnability_certificate.json", "bytes": 14782, "sha256": "a5136f5ed993ab5460623497b933c95c1a4ceb443ad51f91147cf10f37634bc2"},
+    {"path": "output/factor-rotation/reaka_v2_stage3_state_episode_atlas_v1_2011_2025/formal/state_months.csv", "bytes": 40678, "sha256": "e4aecf7f5d1567fc5e30ab3e22c0bf98b44223190234e3df53a72dc46ceef404"},
+    {"path": "output/factor-rotation/reaka_k1_only_factor_kline_selector_v1_2011_2025/formal/monthly_selector_panel.csv", "bytes": 73238, "sha256": "bfd8543a23086ca46c0b92fa29acb0d8ff22b351108ff492d9598da2df3e7e13"}
+  ],
+  "environment": {"python": "3.11.16", "pytest": "8.4.2", "numpy": "2.4.6", "pandas": "2.3.3", "pyarrow": "19.0.1", "torch": "2.14.0+cpu"},
+  "prior_actual_failures": [
+    {
+      "run_id": 34012432073,
+      "checkout": "b21bb752146d898f1d0d7c3a8728402912ba811f",
+      "status": "failed",
+      "collection_errors": 2,
+      "cause": "Transitive historical filtering source was not delivered; new main modules were correctly included and not silently ignored.",
+      "artifact_id": 9982882453,
+      "artifact_sha256": "2c871c6510a741eb20ed292e0dd958b975e3225f4df0b643d2058a4499561bb3",
+      "downloaded_bytes_digest_match": true
+    },
+    {
+      "run_id": 34012598174,
+      "checkout": "522b98ec41708328dfc9ca5fbac824e490bcf5f1",
+      "status": "failed",
+      "tests": 384,
+      "passed": 382,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "cause": "Sparse checkout omitted existing small regression fixtures; fixed by materializing their exact Git bytes, not deferring tests or weakening assertions.",
+      "artifact_id": 9982935883,
+      "artifact_sha256": "fd1c11ac11a65999bbfce7d1bb9198f05f8d395657c20f48bc28497d104ed5dd",
+      "downloaded_bytes_digest_match": true
+    }
+  ],
+  "not_executed": ["whole_dataset_integrity_job", "full_unit_without_deferral_job", "R2_upstream_PIT_reconstruction", "frozen_score_regeneration", "new_training", "capacity_selection", "account_replay"],
+  "scientific_acceptance": "not_established",
+  "fresh_oos": false,
+  "production_authority": false,
+  "local_factorlab_pointer_changed": false,
+  "history_and_data_mutation": "No data, output, old manifest or original evidence bytes changed in this V1.4 infrastructure round. Three small fixtures were read at CI runtime only.",
+  "receipt_commit_policy": "The follow-up commit only appends this receipt and its explanation; implementation and tested current guidance remain at the verified commit."
+}
