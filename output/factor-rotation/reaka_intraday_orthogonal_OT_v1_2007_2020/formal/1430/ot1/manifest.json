@@ -1,0 +1,32 @@
+{
+  "schema_id": "factorlab.reaka_intraday_OT1_manifest@1.0",
+  "contract_digest": "sha256:8102c9ec83db36f4de22a61df4288ed67c31345bb21b9072adfcd87cfd2a1551",
+  "decision_clock": "14:30",
+  "files": {
+    "factor_basis_history.parquet": "sha256:03d13768aa6ab5ede74f93a30b52de8e655b8b318221345fca3d48b71f3f3f87",
+    "factor_basis_future.parquet": "sha256:223a53a4c0cfab7d3b00849f669a3f146ca009b2ad548cb0cd197c86580bdbba",
+    "basis_projection_receipts.parquet": "sha256:72050704e1a696cfcc2470ec4890818e422966f0230e3e4d1b1eb5a74cc43254",
+    "d5_stock_exposures.parquet": "sha256:01fc36ffc480ac9d6a317074c0d35962e4feca36c10e27595f646f38ac4ff30d",
+    "d5_stock_industry_exposures.parquet": "sha256:20e1d764482c5fe4b33be16b1e9d79c11e67d561afe00857c5f1a0ccb9812b64",
+    "exposure_decision_summary.parquet": "sha256:21a7743a2a7b8680c2017dfc897c93ff4dd8b6b791aa6ba61c08c43a1eb70463",
+    "stock_residual_surfaces.npz": "sha256:7c8854e81288712f0a51e7e50c912d3bf0d63f23c33719fe05c7aaa528dda723"
+  },
+  "factor_variant_count": 6,
+  "industry_factor_count": 12,
+  "basis_history_rows": 217116,
+  "basis_future_rows": 215436,
+  "projection_receipt_rows": 213924,
+  "stock_exposure_rows": 1142919,
+  "industry_exposure_rows": 684119,
+  "decision_count": 584,
+  "epsilon_history_finite_count": 5632172,
+  "epsilon_future_finite_count": 5501746,
+  "raw_carrier_minimum_member_count": 33,
+  "post_2020_rows_read": 0,
+  "uses_future_in_fit": false,
+  "model_training_run": false,
+  "score_run": false,
+  "account_run": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:cc94a6bb14a9f2cc64eb68dfe63686a233fae10244014e2cc8e06afabd80b668"
+}

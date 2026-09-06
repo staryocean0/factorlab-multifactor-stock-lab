@@ -1,0 +1,12 @@
+{
+  "schema_id": "factorlab.reaka_intraday_OT2_candidate_manifest@1.0",
+  "contract_digest": "sha256:8102c9ec83db36f4de22a61df4288ed67c31345bb21b9072adfcd87cfd2a1551",
+  "decision_clock": "14:30",
+  "candidate_states_digest": "sha256:add066047e61ef0b29512658d9bd1b83901fd928ff691e379e14f3e5b0dbe1fc",
+  "factor_count": 14,
+  "tool_or_control_count": 8,
+  "state_row_count": 289488,
+  "uses_forward_outcome": false,
+  "production_authority": false,
+  "canonical_digest": "sha256:96905a0b80cd1da6216ff47345d1a6e84ecc57f81f2e40f628684a03a4c1b316"
+}
