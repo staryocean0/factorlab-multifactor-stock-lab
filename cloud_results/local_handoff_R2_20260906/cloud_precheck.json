@@ -1,0 +1,15 @@
+{
+  "execution_location": "cloud_current_session",
+  "script_git_blob": "619ec7a22e4febb2486830b2e0dbcec26d11582c",
+  "script_sha256": "894b94997f7aeb28b1d86b3608cd630955e0144a2bd6c34028b62ebb9a1076b6",
+  "checks": [
+    {"name": "CLI help and required flags", "passed": true},
+    {"name": "byte_match", "exit_code": 0, "passed": true},
+    {"name": "byte_mismatch", "exit_code": 1, "passed": true},
+    {"name": "missing", "exit_code": 2, "passed": true},
+    {"name": "duplicate_json_keys", "exit_code": 1, "passed": true}
+  ],
+  "real_data_audited": false,
+  "github_actions_executed": false,
+  "checks_passed": 5
+}
