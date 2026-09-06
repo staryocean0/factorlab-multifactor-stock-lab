@@ -54,7 +54,7 @@
 
 ## 实际任务：LCL-R3-NOFIT-20260906-01
 
-**状态与当前入口（2026-09-06）**：云端 R3 首轮裁决已完成；只读真实分数对照待用户转交本地，未自动派发、未执行。上一轮交付包没有写回 GitHub，本次补交原脚本、测试、报告和计算证据。请直接使用本开发分支文件，不再要求本地搬运交付包。当前发布说明见 [publication.md](../../cloud_results/r3_evidence_use_20260906/publication.md)；原报告里的“尚未写回”是编写时的历史状态。
+**状态与当前入口（2026-09-06）**：云端 R3 首轮裁决已完成。**本地已反馈**真实零拟合对照；尚未云端复核。上一轮交付包没有写回 GitHub，本次补交原脚本、测试、报告和计算证据。请直接使用本开发分支文件，不再要求本地搬运交付包。当前发布说明见 [publication.md](../../cloud_results/r3_evidence_use_20260906/publication.md)；原报告里的“尚未写回”是编写时的历史状态。
 
 **协作与任务边界**：这是云端与本地协作，按 AGENTS Protocol 1/2。R2 的 completed_with_limits 状态及历史记录保持不变。任务书是 [R3 证据用途裁决](r3_evidence_use_adjudication_20260906.md) 第5节，只比较已消费2017现任K1与四个固定、零拟合的epsilon基准，不识别条件特征的全部独立增量，不恢复fresh OOS。
 
@@ -73,6 +73,9 @@ python scripts/reaka_r3_frozen_compare.py \
 **回传与验收**：新 `local_feedback.md`、`comparison.json`、`paired_daily.csv`，附实际命令/退出码、脚本及输入身份、失败和未执行范围。大数组留本地。本地只填写“本地已反馈”；云端读取后独立记录复核结果。零退出码不等于PIT、条件增量、盈利或生产通过。负结果正常保留。
 
 **告知与提交规则**：用户已收到原R3任务编号和交付包，本次回复提供GitHub实际提交与脚本入口。由用户安排本地执行；不声称已远程派发。保存使用 `[skip ci]`，不调用Actions、不force-push、不合并main，不改变原始数据和模型。
+
+
+**本地反馈（2026-09-06）**：主题仓 `d6804cd`；脚本 SHA-256 `188d9a54746d95e079770cef701837d827880c61bc542dd2ad6f9a4729367e9f`；FactorLab `b39bb12f`。`pytest tests/unit/test_reaka_r3_frozen_compare.py` 退出码 0（13 passed）。`python3 scripts/reaka_r3_frozen_compare.py --factorlab-root <FactorLab> --output-dir <FactorLab>/tmp/LCL-R3-NOFIT-20260906-01/run01` 退出码 0。两时钟 `completed_consumed_diagnostic`，各 82321 行 / 49 日；K1 与原 formal 回执 atol=1e-4 复原。报告 [local_feedback.md](../../cloud_results/local_handoff_R3_20260906/local_feedback.md)，[comparison.json](../../cloud_results/local_handoff_R3_20260906/comparison.json)，[paired_daily.csv](../../cloud_results/local_handoff_R3_20260906/paired_daily.csv)。未训练、未 checkpoint 推理、未读 DataHub、未账户重放、未打开 2026、未调用 Actions。大数组留本地。零退出码不是 PIT/fresh OOS/生产通过。
 
 ## 任务记录与反馈模板
 
