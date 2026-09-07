@@ -63,10 +63,16 @@ def _git_blob(path: Path) -> str:
     return proc.stdout.strip()
 
 
-def validate_source_stack(theme_root: Path) -> dict[str, str]:
+def validate_source_stack(repo_root: Path) -> dict[str, str]:
+    """Bind Stage-B dependencies using a repository-root path contract.
+
+    `coarse.validate_runtime_identity` also consumes the repository root, so the
+    same path object can safely be passed through preflight and the real runner.
+    """
+    module_root = repo_root / "src/factor_lab/factor_rotation"
     paths = {
-        "x_decomposition": theme_root / "reaka_r3_x_decomposition.py",
-        "x_coarse_runner": theme_root / "reaka_r3_x_coarse_runner.py",
+        "x_decomposition": module_root / "reaka_r3_x_decomposition.py",
+        "x_coarse_runner": module_root / "reaka_r3_x_coarse_runner.py",
     }
     observed = {name: _git_blob(path) for name, path in paths.items()}
     expected = {
@@ -451,11 +457,11 @@ def combine_clocks(output_root: Path) -> dict[str, Any]:
 
 
 def run(timeiso_root: Path, xcoarse_root: Path, output_root: Path, reload_script: Path,
-        theme_root: Path, factorlab_root: Path, expected_factorlab_commit: str) -> dict[str, Any]:
+        repo_root: Path, factorlab_root: Path, expected_factorlab_commit: str) -> dict[str, Any]:
     if output_root.exists():
         raise FileExistsError(output_root)
-    source_stack = validate_source_stack(theme_root)
-    runtime = coarse.validate_runtime_identity(timeiso_root, theme_root, expected_factorlab_commit, factorlab_root)
+    source_stack = validate_source_stack(repo_root)
+    runtime = coarse.validate_runtime_identity(timeiso_root, repo_root, expected_factorlab_commit, factorlab_root)
     xref = validate_xcoarse_reference(xcoarse_root, timeiso_root)
     output_root.mkdir(parents=True)
     write_json(output_root / "runtime_identity.json", {"source_stack": source_stack, "timeiso": runtime, "xcoarse": xref["runtime_identity"]})
