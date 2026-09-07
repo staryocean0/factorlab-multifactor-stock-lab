@@ -1,8 +1,10 @@
 # LCL-R3-TRANSFER-INPUT-20260907-01：同定义特征输入重建
 
-这是云端与本地协作。状态：本地已反馈；待云端复核。回传见 `cloud_results/local_handoff_R3_transfer_inputs_20260907/local_feedback.md`。开发分支 `codex/reaka-foundation-audit-20260905`。INFOCLOCK已完成，不重复它的审计。
+这是云端与本地协作。状态：云端已核工程构建，`cloud_reviewed_build_received_boundary_delta_pending`；尚未通过同定义尾部最终验收。回传见 `cloud_results/local_handoff_R3_transfer_inputs_20260907/local_feedback.md`。开发分支 `codex/reaka-foundation-audit-20260905`。INFOCLOCK已完成，不重复它的审计。
 
-## 本地需要完成的唯一任务
+> **当前只执行本任务末尾的“云端验收后边界delta”。** 上文原生成命令保留为历史任务说明，不是要求现在重新跑全部桥接。完整裁决见 `cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_acceptance/cloud_review.md`。
+
+## 原本地构建任务（已反馈，以下保留为历史说明）
 
 基于原TIMEISO的固定队列、工具与normalizer，生成两时钟2021—2025同定义**特征**源包，再运行已提供的构建器。尚无同定义源包，故本任务不是只改一个目录就能运行旧命令。
 
@@ -88,3 +90,22 @@ source snapshot记录文件身份不替代历史到达日志；unknown可保留�
 ## 5. 完成后停止
 
 不启动24项跨期模型评分，不生成未来标签绩效，不重新选择seed/年份/参数，不新增臂、CloudRidge公式或账户研究。下游标签与评分接线由云端按本次真实源包和接口继续，不把当前构建器冒充完整行情到策略执行器。
+
+
+## 云端验收后边界delta（2026-09-07）
+
+本地结果提交 `1c9f78f7f31282473f715ce7302be867d1aea440` 已复核：两时钟各242日、931677预测行、916077成熟候选；工程交付接收。原来源桥接存在有限行/全局位置适配、成员时序检查缺口；源码与目标期边界需要补上直接证据。云端已修正后继 `_basis_frame` 和 `validate_membership_timing`，106项测试通过。旧报告和数组不改。
+
+仅补三件直接依赖，详细方法与验收边界见上述cloud_review第3节：
+
+1. **状态尾部影响**：核对本次真实基底中的非有限行。没有受影响行则给出统计/实际helper依据，不重建；存在则只比较/修复受影响的state_values/state_available。全局day_position应接续原日历；实际消费者按trading_day排序，不能只因位置元数据错误就断言原分数有错。
+2. **成员有界来源和时序**：对本次实际使用的<=2025、原3982映射后的成员检查effective_date>asof_date，记录违例/缺日期计数；补保留/排除行数、来源身份及生产规则，不把先全读后截断说成从未读取2026。不读取2026标签，不再次读取2026成员来证明排除。历史到达时间可以保留unknown。
+3. **末端衔接**：每时钟最后一个原2020 D5，比较真正由新路径算出的相关因子基底、beta/reliability/available和epsilon接缝；优先缓存，仅在确有必要时运行该边界所需的局部原配方计算。不用已复制的前缀当独立核验。486仅为股票暴露刷新决策点，因子基底投影范围另报，不为计数重算。
+
+先测试后继代码：
+
+```bash
+python -m pytest -q tests/unit/test_reaka_r3_transfer_bridge_contracts.py tests/unit/test_reaka_r3_transfer_source_bridge.py tests/unit/test_reaka_r3_transfer_inputs.py
+```
+
+回传同目录 `local_feedback_delta.md`、`boundary_checks.json` 和必要小回执。新网络fit=0、inference=0、checkpoint reload=0、Actions=0。不要直接重新运行全源包主命令；真实影响为零可保留原数组。确有差异仅修对应尾部、另建产物并明确新旧身份，不能覆盖原source_bundles/run01。完成后停止，由云端签署最终输入验收；24项跨期评分仍未启动。

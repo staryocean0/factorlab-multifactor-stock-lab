@@ -126,6 +126,21 @@ def _prefix_close_ok(reference: np.ndarray, candidate: np.ndarray) -> None:
         raise ValueError("decision_close prefix support drifted")
 
 
+def validate_membership_timing(frame: pd.DataFrame, *, name: str) -> None:
+    """Same forward-effective invariant as the original intraday loader.
+
+    This checks supplied table semantics only, not historical arrival/PIT.
+    """
+    if not {"asof_date", "effective_date"}.issubset(frame.columns):
+        raise ValueError(f"{name}: membership dates missing")
+    asof = pd.to_datetime(frame["asof_date"], errors="raise")
+    effective = pd.to_datetime(frame["effective_date"], errors="raise")
+    if asof.isna().any() or effective.isna().any():
+        raise ValueError(f"{name}: missing membership date")
+    if effective.le(asof).any():
+        raise ValueError(f"{name}: membership_not_forward_effective")
+
+
 def _load_memberships(symbols: np.ndarray, industry_ids: tuple[str, ...], small_id: str, large_id: str) -> tuple[pd.DataFrame, pd.DataFrame]:
     cutoff = pd.Timestamp("2026-01-01")
     positions = {str(sym): int(i) for i, sym in enumerate(symbols)}
@@ -151,24 +166,38 @@ def _load_memberships(symbols: np.ndarray, industry_ids: tuple[str, ...], small_
     core = core.loc[core["asof_date"] < cutoff].copy()
     core = remap_positions(core, positions)
     core["target_name"] = core["target_id"].astype(str)
+    validate_membership_timing(cloudridge, name="cloudridge")
+    validate_membership_timing(core, name="core")
     return cloudridge, core
 
 
-def _basis_frame(clock: str, calendar: np.ndarray, basis: np.ndarray, factor_ids: list[str], variants: tuple[str, ...]) -> pd.DataFrame:
+def _basis_frame(clock: str, calendar: np.ndarray, basis: np.ndarray, factor_ids: list[str], variants: tuple[str, ...], *, start_position: int = 0) -> pd.DataFrame:
+    """Preserve original basis_frame's finite-row support and global positions.
+
+    build_selected_states sorts trading_day, not day_position. Retaining global
+    positions repairs metadata; omitting nonfinite rows preserves filter input
+    support. Historical generated stores are not silently rewritten.
+    """
+    if type(start_position) is not int or start_position < 0:
+        raise ValueError("nonnegative global start_position required")
+    if basis.shape != (len(variants), len(calendar), len(factor_ids)):
+        raise ValueError("basis/calendar identity mismatch")
     rows = []
     days = pd.to_datetime(calendar.astype("datetime64[D]"))
+    positions = np.arange(start_position, start_position + len(calendar), dtype=np.int64)
     for v_i, variant in enumerate(variants):
         for f_i, factor in enumerate(factor_ids):
             values = basis[v_i, :, f_i]
+            finite = np.isfinite(values)
             rows.append(pd.DataFrame({
                 "decision_clock": clock[:2] + ":" + clock[2:],
                 "return_role": "history",
                 "variant_id": variant,
-                "trading_day": days,
-                "day_position": np.arange(len(calendar), dtype=np.int64),
+                "trading_day": days[finite],
+                "day_position": positions[finite],
                 "factor_id": factor,
-                "orthogonal_return": values,
-                "available": np.isfinite(values),
+                "orthogonal_return": values[finite],
+                "available": np.ones(int(finite.sum()), dtype=bool),
                 "uses_future_in_fit": False,
             }))
     return pd.concat(rows, ignore_index=True)
@@ -281,7 +310,7 @@ def build_clock(clock: str, output_bundle: Path, stats: dict[str, Any]) -> dict[
 
     old_basis = pd.read_parquet(FACTORLAB_ROOT / OT_REL / clock / "ot1/factor_basis_history.parquet")
     old_basis = old_basis.loc[pd.to_datetime(old_basis["trading_day"]) <= pd.Timestamp("2020-12-31")].copy()
-    new_basis = _basis_frame(clock, new_cal[len(old_cal):], basis_h[:, len(old_cal):, :], factor_ids, variants)
+    new_basis = _basis_frame(clock, new_cal[len(old_cal):], basis_h[:, len(old_cal):, :], factor_ids, variants, start_position=len(old_cal))
     history_basis = pd.concat((old_basis, new_basis), ignore_index=True)
     selection = pd.DataFrame(json.loads(selection_path.read_text(encoding="utf-8")))
     states = ot1.build_selected_states(

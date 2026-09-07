@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-07",
-  "current_task": "r3_transfer_feature_adapter_tested_local_source_bridge_pending",
+  "current_task": "r3_transfer_input_build_received_boundary_delta_pending",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -113,7 +113,7 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "执行LCL-R3-TRANSFER-INPUT-20260907-01：本地在实际已加载生产源码快照下延伸2021–2025同定义特征源包，再用云端已测试的双时钟映射/前缀构建器发布无标签特征仓；网络拟合/推理/checkpoint重载均为0。允许所需原配方滚动OLS与固定滤波，另报范围。INFOCLOCK不重复；24项跨期评分未启动。",
+  "next_useful_action": "完成LCL-R3-TRANSFER-INPUT-20260907-01同任务边界delta：真实尾部非有限基底行影响、截至2025成员来源/forward-effective检查、每时钟最后旧D5接缝。优先现存中间量；0网络fit/推理/重载/Actions。无需重做INFOCLOCK或全历史，检查无影响则保留原数组；暂不启动24项评分。",
   "research_directions_not_a_mandatory_sequence": [
     {
       "question": "现任金融epsilon是否在正确时点、同一收益区间构造？",
@@ -132,9 +132,9 @@
     }
   ],
   "r3": {
-    "status": "transfer_feature_adapter_ready_source_bundle_not_yet_built",
-    "report": "docs/ops/r3_transfer_input_rebuild_20260907.md",
-    "checks": "cloud_results/local_handoff_R3_infoclock_20260907/cloud_acceptance/execution_receipt.json",
+    "status": "transfer_input_build_reviewed_boundary_delta_pending",
+    "report": "cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_acceptance/cloud_review.md",
+    "checks": "cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_acceptance/execution_receipt.json",
     "initial_report": "docs/ops/r3_evidence_use_adjudication_20260906.md",
     "evidence": "cloud_results/r3_evidence_use_20260906/",
     "publication": "cloud_results/r3_evidence_use_20260906/publication.md",
@@ -281,7 +281,7 @@
       "paired_projection_consistency_checks": 57,
       "failures": 0,
       "projection_rows": 98,
-      "scope": "Exact script/test bytes checked; 13 tests run in cloud; all 49 dates per clock reaggregated from connector-transcribed K1/negative-mean10 columns. Other three baseline summary differences arithmetically checked. No original equity-level IC or raw-array recomputation.",
+      "scope": "Exact script/test bytes checked; 13 tests run in cloud; all 49 dates per clock reaggregated from connector-transcribed K1/negative-mean10 columns. Other three baseline summary differences arithmetically checked, not original equity-level IC or raw-array recomputation.",
       "paired_rankic_delta_1430": 0.026705056288772767,
       "paired_rankic_delta_1445": 0.02713264826095494,
       "rankic_win_days_1430": 36,
@@ -427,8 +427,8 @@
       "local_checkpoint_directories_reported_present": 24
     },
     "transfer_readiness_after_infoclock": {
-      "status": "feature_adapter_integrated_synthetic_tests_passed_real_source_bridge_pending",
-      "owner": "cloud_next_design_and_implementation",
+      "status": "feature_stores_built_tail_semantics_pending",
+      "owner": "cloud_review_and_local_bounded_delta",
       "existing_plan": "docs/ops/r3_information_clock_transfer_plan_20260907.json",
       "model_fits": 0,
       "score_jobs_executed": 0,
@@ -447,7 +447,7 @@
     },
     "transfer_input_task": {
       "id": "LCL-R3-TRANSFER-INPUT-20260907-01",
-      "status": "awaiting_local_source_bridge_and_feature_build",
+      "status": "cloud_reviewed_build_received_boundary_delta_pending",
       "instruction": "docs/ops/cloud_local_communication_R3_transfer_inputs_20260907.md",
       "script": "scripts/reaka_r3_build_transfer_inputs.py",
       "module": "src/factor_lab/factor_rotation/reaka_r3_transfer_inputs.py",
@@ -469,7 +469,21 @@
       "transfer_scoring_runner_integrated": false,
       "PIT_certified": false,
       "fresh_oos": false,
-      "production_authority": false
+      "production_authority": false,
+      "feedback_commit": "1c9f78f7f31282473f715ce7302be867d1aea440",
+      "local_bridge_implemented": true,
+      "local_two_clock_features_built": true,
+      "cloud_review": "cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_acceptance/cloud_review.md",
+      "cloud_small_evidence_checks_passed": 47,
+      "cloud_original_targeted_tests_passed": 93,
+      "cloud_successor_targeted_tests_passed": 106,
+      "cloud_new_contract_tests": 13,
+      "original_arrays_recomputed_in_cloud": false,
+      "original_arrays_overwritten": false,
+      "same_definition_tail_accepted": false,
+      "local_delta_required": true,
+      "source_member_2026_read_isolation_certified": false,
+      "model_scoring_authorized_by_this_review": false
     }
   }
 }
