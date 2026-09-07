@@ -1,0 +1,46 @@
+{
+  "schema_id": "factorlab.r3_x_decomposition_design@1.0",
+  "design_id": "R3-X-DECOMP-MONTHLY-DESIGN-20260907-01",
+  "accepted_timeiso_reference": {
+    "final_acceptance_commit": "59ef90b08bf99b10279144876020b0cb4afa2128",
+    "primary_F_minus_H_rankic": 0.020536824420887195,
+    "evaluation": "consumed_2018_2020",
+    "fresh_oos": false
+  },
+  "coarse_stage": {
+    "task_id": "LCL-R3-XCOARSE-20260907-01",
+    "arms": ["H", "E", "F"],
+    "E_channels": "28:70",
+    "new_fit_arm": "E",
+    "max_new_fits": 6,
+    "max_cycles_per_fit": 3,
+    "max_total_cycles": 18,
+    "rerun_F": false,
+    "rerun_H": false,
+    "contrasts": ["E_minus_H", "F_minus_E"],
+    "ordered_conditional_not_unique_causal_attribution": true
+  },
+  "fine_stage": {
+    "status": "preregistered_not_authorized",
+    "arms": ["STATE_VALUE_PLUS_E", "BETA_ONLY", "BETA_RELIABILITY"]
+  },
+  "monthly": {
+    "status": "timing_interface_ready_formula_identity_unbound",
+    "known_description": "previous-completed-calendar-month CloudRidge 1sigma / S_obs condition",
+    "formula_recovered": false,
+    "experimental_channel": 70,
+    "feature_dim": 71,
+    "endpoint_timing": "each sequence endpoint maps to its own previous completed calendar month",
+    "future_availability_rejected": true,
+    "missing_policy": "error",
+    "real_fit_authorized": false
+  },
+  "cloud_tests": {
+    "passed": 27,
+    "failed": 0,
+    "real_arrays_read": false,
+    "real_fits": 0
+  },
+  "full_pit_certified": false,
+  "production_authority": false
+}
