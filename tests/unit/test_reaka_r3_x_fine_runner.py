@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import sys
 from pathlib import Path
 
@@ -34,6 +35,36 @@ def synthetic_scores():
             values["STATE_VALUE_PLUS_E"].append(0.75*base)
             values["F"].append(base)
     return {k:np.asarray(v,float) for k,v in values.items()}, np.asarray(targets,float), np.asarray(rows,int)
+
+
+def common_identity(m):
+    return {
+        "seed": 11, "clock": "1430",
+        **{key: f"sha256:{key}" for key in m.coarse.PAIR_FIELDS},
+    }
+
+
+def write_e_reference(root: Path, m, *, change_field=None, future_reads=0, selected_cycle=2, manifest_match=True):
+    common=common_identity(m)
+    identity={"arm":"E", **common}
+    if change_field:
+        identity[change_field]="sha256:changed"
+    model=root/"models/seed_11/E"
+    (model/"checkpoint").mkdir(parents=True)
+    losses={1:.9,2:.8,3:.85}
+    fit={
+        "seed":11,
+        "cycles":[{"cycle":c,"canonical_train_loss":losses[c]} for c in (1,2,3)],
+        "selected_cycle":selected_cycle,
+        "selected_canonical_loss":losses[selected_cycle],
+        "fit_rows":361628,
+        "future_target_values_read":future_reads,
+    }
+    digest="sha256:checkpoint"
+    (model/"fit_receipt.json").write_text(json.dumps({"fit":fit,"identity":identity,"checkpoint_state_digest":digest}))
+    (model/"checkpoint/manifest.json").write_text(json.dumps({"state_digest":digest if manifest_match else "sha256:other"}))
+    (model/"reload_spec.json").write_text(json.dumps({"seed":11,"device_name":"cpu","output_path":str(model/"scores.npz")}))
+    return common
 
 
 def test_budget_is_exactly_three_new_arms_times_two_clocks_times_three_seeds():
@@ -75,6 +106,34 @@ def test_xcoarse_reconstruction_checks_all_three_existing_contrasts(tmp_path):
     changed=frame.copy();changed.loc[0,"E_minus_H"]+=.01
     with pytest.raises(ValueError, match="E_minus_H"):
         m.verify_xcoarse_reconstruction(changed,p)
+
+
+def test_accepted_E_reference_requires_frozen_identity_and_minimum_cycle(tmp_path):
+    m=load(); common=write_e_reference(tmp_path,m)
+    receipt=m.validate_e_reference_files(tmp_path,common,11,"1430")
+    assert receipt["identity"]["arm"] == "E"
+    assert receipt["fit"]["selected_cycle"] == 2
+
+
+def test_accepted_E_reference_rejects_identity_drift(tmp_path):
+    m=load(); common=write_e_reference(tmp_path,m,change_field="normalizer_digest")
+    with pytest.raises(ValueError, match="normalizer_digest"):
+        m.validate_e_reference_files(tmp_path,common,11,"1430")
+
+
+def test_accepted_E_reference_rejects_future_target_or_nonminimum_checkpoint(tmp_path):
+    m=load(); common=write_e_reference(tmp_path,m,future_reads=1)
+    with pytest.raises(ValueError, match="future target"):
+        m.validate_e_reference_files(tmp_path,common,11,"1430")
+    other=tmp_path/"other"; common2=write_e_reference(other,m,selected_cycle=3)
+    with pytest.raises(ValueError, match="checkpoint selection"):
+        m.validate_e_reference_files(other,common2,11,"1430")
+
+
+def test_accepted_E_reference_rejects_checkpoint_manifest_mismatch(tmp_path):
+    m=load(); common=write_e_reference(tmp_path,m,manifest_match=False)
+    with pytest.raises(ValueError, match="checkpoint digest"):
+        m.validate_e_reference_files(tmp_path,common,11,"1430")
 
 
 def test_cli_has_only_generic_fine_reload_worker():
