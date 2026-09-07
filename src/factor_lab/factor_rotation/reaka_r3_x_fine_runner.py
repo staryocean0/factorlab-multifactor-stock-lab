@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import math
+import subprocess
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -25,9 +26,13 @@ CLOCKS = ("1430", "1445")
 SEEDS = (11, 29, 47)
 NEW_ARMS = ("STATE_VALUE_PLUS_E", "BETA_ONLY", "BETA_RELIABILITY")
 REFERENCE_ARMS = ("F", "E", "H")
+ARM_ORDER = ("F", "STATE_VALUE_PLUS_E", "E", "BETA_RELIABILITY", "BETA_ONLY", "H")
 MAX_CYCLES_PER_FIT = 3
 MAX_NEW_FITS = len(CLOCKS) * len(SEEDS) * len(NEW_ARMS)  # 18
 MAX_TOTAL_CYCLES = MAX_NEW_FITS * MAX_CYCLES_PER_FIT  # 54
+TOP_N = 30
+EXPECTED_X_DECOMP_GIT_BLOB = "040182c3f8571083a83d8df3cd852f82dc1f4e48"
+EXPECTED_X_COARSE_GIT_BLOB = "5adcfc81dff0a637e0ae21987db02d1c94ba5b9b"
 CONTRASTS = (
     "STATE_VALUE_PLUS_E_minus_E",
     "F_minus_STATE_VALUE_PLUS_E",
@@ -35,6 +40,8 @@ CONTRASTS = (
     "BETA_RELIABILITY_minus_BETA_ONLY",
     "E_minus_BETA_RELIABILITY",
 )
+COARSE_CONTRASTS = ("F_minus_E", "E_minus_H", "F_minus_H")
+ALL_CONTRASTS = (*CONTRASTS, *COARSE_CONTRASTS)
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -47,6 +54,29 @@ def read_json(path: Path) -> dict[str, Any]:
 def write_json(path: Path, body: Mapping[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(dict(body), ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+
+
+def _git_blob(path: Path) -> str:
+    proc = subprocess.run(["git", "hash-object", str(path)], capture_output=True, text=True)
+    if proc.returncode != 0:
+        raise ValueError(f"cannot hash source file: {path}: {proc.stderr[-500:]}")
+    return proc.stdout.strip()
+
+
+def validate_source_stack(theme_root: Path) -> dict[str, str]:
+    paths = {
+        "x_decomposition": theme_root / "reaka_r3_x_decomposition.py",
+        "x_coarse_runner": theme_root / "reaka_r3_x_coarse_runner.py",
+    }
+    observed = {name: _git_blob(path) for name, path in paths.items()}
+    expected = {
+        "x_decomposition": EXPECTED_X_DECOMP_GIT_BLOB,
+        "x_coarse_runner": EXPECTED_X_COARSE_GIT_BLOB,
+    }
+    for name in expected:
+        if observed[name] != expected[name]:
+            raise ValueError(f"Stage-B dependency source drift: {name}")
+    return observed
 
 
 def build_arm_model(candidate: Mapping[str, Any], seed: int, arm: str):
@@ -72,13 +102,28 @@ def _selected_cycle_is_minimum(fit: Mapping[str, Any]) -> bool:
     cycles = list(fit.get("cycles", []))
     selected = fit.get("selected_cycle")
     selected_loss = fit.get("selected_canonical_loss")
-    if not cycles or selected not in (1, 2, 3):
+    if selected not in (1, 2, 3) or selected_loss is None:
         return False
-    by_cycle = {int(row["cycle"]): float(row["canonical_train_loss"]) for row in cycles}
-    if set(by_cycle) - {1, 2, 3}:
+    try:
+        by_cycle = {int(row["cycle"]): float(row["canonical_train_loss"]) for row in cycles}
+    except (KeyError, TypeError, ValueError):
+        return False
+    if set(by_cycle) != {1, 2, 3}:
         return False
     minimum = min(by_cycle.values())
-    return selected in by_cycle and abs(by_cycle[int(selected)] - float(selected_loss)) <= 1e-12 and abs(float(selected_loss) - minimum) <= 1e-12
+    earliest = min(cycle for cycle, loss in by_cycle.items() if abs(loss - minimum) <= 1e-12)
+    return int(selected) == earliest and abs(by_cycle[int(selected)] - float(selected_loss)) <= 1e-12 and abs(float(selected_loss) - minimum) <= 1e-12
+
+
+def validate_fit_result(fit: Mapping[str, Any], arm: str, seed: int, clock: str) -> None:
+    if int(fit.get("seed", -1)) != seed:
+        raise ValueError(f"{arm} fit seed drift: {clock}/{seed}")
+    if int(fit.get("fit_rows", -1)) != 361628:
+        raise ValueError(f"{arm} fit-row drift: {clock}/{seed}")
+    if fit.get("future_target_values_read") != 0:
+        raise ValueError(f"{arm} fit read future target: {clock}/{seed}")
+    if not _selected_cycle_is_minimum(fit):
+        raise ValueError(f"{arm} checkpoint selection drift: {clock}/{seed}")
 
 
 def validate_e_reference_files(xcoarse_clock: Path, common: Mapping[str, Any], seed: int, clock: str) -> dict[str, Any]:
@@ -94,12 +139,7 @@ def validate_e_reference_files(xcoarse_clock: Path, common: Mapping[str, Any], s
         if identity.get(key) != common.get(key):
             raise ValueError(f"accepted E frozen identity mismatch: {clock}/{seed}/{key}")
     fit = dict(receipt.get("fit", {}))
-    if fit.get("future_target_values_read") != 0:
-        raise ValueError(f"accepted E fit read future target: {clock}/{seed}")
-    if int(fit.get("fit_rows", -1)) != 361628:
-        raise ValueError(f"accepted E fit-row drift: {clock}/{seed}")
-    if not _selected_cycle_is_minimum(fit):
-        raise ValueError(f"accepted E checkpoint selection drift: {clock}/{seed}")
+    validate_fit_result(fit, "accepted_E", seed, clock)
     checkpoint_digest = receipt.get("checkpoint_state_digest")
     if not isinstance(checkpoint_digest, str) or manifest.get("state_digest") != checkpoint_digest:
         raise ValueError(f"accepted E checkpoint digest mismatch: {clock}/{seed}")
@@ -138,71 +178,122 @@ def verify_xcoarse_reconstruction(frame: pd.DataFrame, accepted_csv: Path, atol:
     accepted = pd.read_csv(accepted_csv)
     if not np.array_equal(frame["day_position"].to_numpy(), accepted["day_position"].to_numpy()):
         raise ValueError("xcoarse day coordinates changed")
-    for key in ("F_minus_E", "E_minus_H", "F_minus_H"):
+    for key in COARSE_CONTRASTS:
         if not np.allclose(frame[key].to_numpy(float), accepted[key].to_numpy(float), atol=atol, rtol=0.0):
             raise ValueError(f"xcoarse reconstruction mismatch: {key}")
 
 
+def _decile_spread(score: np.ndarray, target: np.ndarray) -> float:
+    order = np.argsort(score, kind="mergesort")
+    count = max(1, len(target) // 10)
+    return float(target[order[-count:]].mean() - target[order[:count]].mean())
+
+
+def _top30_minus_universe(score: np.ndarray, target: np.ndarray) -> float:
+    order = np.argsort(score, kind="mergesort")
+    return float(target[order[-TOP_N:]].mean() - target.mean())
+
+
 def daily_fine(scores: Mapping[str, np.ndarray], targets: np.ndarray, rows: np.ndarray) -> pd.DataFrame:
-    required = ("F", "STATE_VALUE_PLUS_E", "E", "BETA_RELIABILITY", "BETA_ONLY", "H")
-    if tuple(scores.keys()) != required:
-        raise ValueError(f"score arm order must be {required}")
+    if tuple(scores.keys()) != ARM_ORDER:
+        raise ValueError(f"score arm order must be {ARM_ORDER}")
     out: list[dict[str, Any]] = []
     for day in np.unique(rows[:, 0]):
         mask = rows[:, 0] == day
-        if int(mask.sum()) < 30:
+        if int(mask.sum()) < TOP_N:
             continue
-        rho: dict[str, float] = {}
-        for arm in required:
-            value = float(spearmanr(scores[arm][mask], targets[mask]).statistic)
+        target = np.asarray(targets[mask], dtype=float)
+        if not np.isfinite(target).all():
+            raise ValueError("nonfinite target on fine paired support")
+        rankic: dict[str, float] = {}
+        decile: dict[str, float] = {}
+        top30: dict[str, float] = {}
+        for arm in ARM_ORDER:
+            score = np.asarray(scores[arm][mask], dtype=float)
+            if not np.isfinite(score).all():
+                raise ValueError(f"nonfinite fine score: {arm}")
+            value = float(spearmanr(score, target).statistic)
             if not math.isfinite(value):
-                break
-            rho[arm] = value
-        if len(rho) != len(required):
-            continue
+                raise ValueError(f"nonfinite fine RankIC: {arm}")
+            rankic[arm] = value
+            decile[arm] = _decile_spread(score, target)
+            top30[arm] = _top30_minus_universe(score, target)
         row = {
             "day_position": int(day), "year": int(rows[mask, 2][0]),
             "phase": int(rows[mask, 3][0]), "n": int(mask.sum()),
         }
-        row.update({f"rankic_{arm}": rho[arm] for arm in required})
-        row.update({
-            "STATE_VALUE_PLUS_E_minus_E": rho["STATE_VALUE_PLUS_E"] - rho["E"],
-            "F_minus_STATE_VALUE_PLUS_E": rho["F"] - rho["STATE_VALUE_PLUS_E"],
-            "BETA_ONLY_minus_H": rho["BETA_ONLY"] - rho["H"],
-            "BETA_RELIABILITY_minus_BETA_ONLY": rho["BETA_RELIABILITY"] - rho["BETA_ONLY"],
-            "E_minus_BETA_RELIABILITY": rho["E"] - rho["BETA_RELIABILITY"],
-            "F_minus_E": rho["F"] - rho["E"],
-            "E_minus_H": rho["E"] - rho["H"],
-            "F_minus_H": rho["F"] - rho["H"],
-        })
-        state_sum = row["STATE_VALUE_PLUS_E_minus_E"] + row["F_minus_STATE_VALUE_PLUS_E"]
-        exposure_sum = row["BETA_ONLY_minus_H"] + row["BETA_RELIABILITY_minus_BETA_ONLY"] + row["E_minus_BETA_RELIABILITY"]
+        row.update({f"rankic_{arm}": rankic[arm] for arm in ARM_ORDER})
+        row.update({f"decile_{arm}": decile[arm] for arm in ARM_ORDER})
+        row.update({f"top30_{arm}": top30[arm] for arm in ARM_ORDER})
+        definitions = {
+            "STATE_VALUE_PLUS_E_minus_E": ("STATE_VALUE_PLUS_E", "E"),
+            "F_minus_STATE_VALUE_PLUS_E": ("F", "STATE_VALUE_PLUS_E"),
+            "BETA_ONLY_minus_H": ("BETA_ONLY", "H"),
+            "BETA_RELIABILITY_minus_BETA_ONLY": ("BETA_RELIABILITY", "BETA_ONLY"),
+            "E_minus_BETA_RELIABILITY": ("E", "BETA_RELIABILITY"),
+            "F_minus_E": ("F", "E"),
+            "E_minus_H": ("E", "H"),
+            "F_minus_H": ("F", "H"),
+        }
+        for name, (left, right) in definitions.items():
+            row[name] = rankic[left] - rankic[right]
+            row[f"decile_{name}"] = decile[left] - decile[right]
+            row[f"top30_{name}"] = top30[left] - top30[right]
+        state_sum = row[CONTRASTS[0]] + row[CONTRASTS[1]]
+        exposure_sum = row[CONTRASTS[2]] + row[CONTRASTS[3]] + row[CONTRASTS[4]]
         if abs(state_sum - row["F_minus_E"]) > 1e-12:
             raise AssertionError("state fine contrasts do not close to F-E")
         if abs(exposure_sum - row["E_minus_H"]) > 1e-12:
             raise AssertionError("exposure fine contrasts do not close to E-H")
+        for prefix in ("decile_", "top30_"):
+            state_secondary = row[prefix + CONTRASTS[0]] + row[prefix + CONTRASTS[1]]
+            exposure_secondary = row[prefix + CONTRASTS[2]] + row[prefix + CONTRASTS[3]] + row[prefix + CONTRASTS[4]]
+            if abs(state_secondary - row[prefix + "F_minus_E"]) > 1e-12:
+                raise AssertionError(f"state {prefix} contrasts do not close to F-E")
+            if abs(exposure_secondary - row[prefix + "E_minus_H"]) > 1e-12:
+                raise AssertionError(f"exposure {prefix} contrasts do not close to E-H")
         out.append(row)
     if not out:
         raise ValueError("no finite fine paired days")
     return pd.DataFrame(out)
 
 
+def _stats(values: np.ndarray) -> dict[str, Any]:
+    return {
+        "mean": float(values.mean()), "median": float(np.median(values)),
+        "win_days": int((values > 0).sum()), "loss_days": int((values < 0).sum()),
+    }
+
+
 def summarize(frame: pd.DataFrame) -> dict[str, Any]:
-    keys = (*CONTRASTS, "F_minus_E", "E_minus_H", "F_minus_H")
     body: dict[str, Any] = {"days": int(len(frame))}
-    for key in keys:
-        values = frame[key].to_numpy(float)
-        body[key] = {
-            "mean": float(values.mean()), "median": float(np.median(values)),
-            "win_days": int((values > 0).sum()), "loss_days": int((values < 0).sum()),
-        }
+    for key in ALL_CONTRASTS:
+        body[key] = _stats(frame[key].to_numpy(float))
+    body["secondary"] = {
+        "decile_spread": {key: _stats(frame[f"decile_{key}"].to_numpy(float)) for key in ALL_CONTRASTS},
+        "top30_minus_universe": {key: _stats(frame[f"top30_{key}"].to_numpy(float)) for key in ALL_CONTRASTS},
+    }
     body["by_year"] = {
-        str(int(year)): {key: float(group[key].mean()) for key in keys}
+        str(int(year)): {key: float(group[key].mean()) for key in ALL_CONTRASTS}
         for year, group in frame.groupby("year", sort=True)
     }
     body["by_phase"] = {
-        str(int(phase)): {key: float(group[key].mean()) for key in keys}
+        str(int(phase)): {key: float(group[key].mean()) for key in ALL_CONTRASTS}
         for phase, group in frame.groupby("phase", sort=True)
+    }
+    body["secondary_by_year"] = {
+        metric: {
+            str(int(year)): {key: float(group[f"{prefix}{key}"].mean()) for key in ALL_CONTRASTS}
+            for year, group in frame.groupby("year", sort=True)
+        }
+        for metric, prefix in (("decile_spread", "decile_"), ("top30_minus_universe", "top30_"))
+    }
+    body["secondary_by_phase"] = {
+        metric: {
+            str(int(phase)): {key: float(group[f"{prefix}{key}"].mean()) for key in ALL_CONTRASTS}
+            for phase, group in frame.groupby("phase", sort=True)
+        }
+        for metric, prefix in (("decile_spread", "decile_"), ("top30_minus_universe", "top30_"))
     }
     return body
 
@@ -262,6 +353,7 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
                 raise ValueError(f"{arm} pre-DMD digest mismatch: {clock}/{seed}")
             arm_root = output_root / clock / f"models/seed_{seed}/{arm}"
             model, fit = timeiso.fit_arm(model, store, normalizer, seed, MAX_CYCLES_PER_FIT, "cpu")
+            validate_fit_result(fit, arm, seed, clock)
             checkpoint = arm_root / "checkpoint"
             tr.save_state_tree(model, checkpoint)
             reload_spec = {
@@ -271,7 +363,7 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
                 "output_path": str(arm_root / "scores.npz"), "device_name": "cpu",
             }
             write_json(arm_root / "reload_spec.json", reload_spec)
-            import subprocess, sys
+            import sys
             proc = subprocess.run([sys.executable, str(reload_script), "--reload-fine-worker", str(arm_root / "reload_spec.json")], capture_output=True, text=True)
             if proc.returncode != 0:
                 raise RuntimeError(f"fresh reload failed: {clock}/{seed}/{arm}: {proc.stderr[-1000:]} {proc.stdout[-1000:]}")
@@ -298,7 +390,7 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
         base = labelled["F"]
         if not all(coarse._same_score_coordinates(base, row) for row in labelled.values()):
             raise ValueError("labelled fine coordinates differ")
-        frame = daily_fine({arm: labelled[arm]["scores"] for arm in ordered_raw}, base["targets"], base["rows"])
+        frame = daily_fine({arm: labelled[arm]["scores"] for arm in ARM_ORDER}, base["targets"], base["rows"])
         row = {"clock": clock, "seed": seed}
         for key in CONTRASTS:
             row[key] = float(frame[key].mean())
@@ -311,9 +403,8 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
     base = ensemble["F"]
     if not all(coarse._same_score_coordinates(base, row) for row in ensemble.values()):
         raise ValueError("ensemble fine support mismatch")
-    arm_order = ("F", "STATE_VALUE_PLUS_E", "E", "BETA_RELIABILITY", "BETA_ONLY", "H")
-    frame = daily_fine({arm: ensemble[arm]["scores"] for arm in arm_order}, base["targets"], base["rows"])
-    coarse_frame = frame[["day_position", "F_minus_E", "E_minus_H", "F_minus_H"]].copy()
+    frame = daily_fine({arm: ensemble[arm]["scores"] for arm in ARM_ORDER}, base["targets"], base["rows"])
+    coarse_frame = frame[["day_position", *COARSE_CONTRASTS]].copy()
     verify_xcoarse_reconstruction(coarse_frame, xcoarse_clock / "paired_daily.csv")
     frame.to_csv(output_root / clock / "paired_daily.csv", index=False)
     pd.DataFrame(per_seed).to_csv(output_root / clock / "per_seed.csv", index=False)
@@ -334,22 +425,27 @@ def combine_clocks(output_root: Path) -> dict[str, Any]:
     if not np.array_equal(left["day_position"].to_numpy(), right["day_position"].to_numpy()):
         raise ValueError("fine clock coordinates differ")
     combined = pd.DataFrame({"day_position": left["day_position"]})
-    keys = (*CONTRASTS, "F_minus_E", "E_minus_H", "F_minus_H")
-    for key in keys:
-        combined[key] = (left[key].to_numpy(float) + right[key].to_numpy(float)) / 2.0
-    # Arithmetic closure is a diagnostic, not a causal decomposition claim.
-    if not np.allclose(combined[CONTRASTS[0]] + combined[CONTRASTS[1]], combined["F_minus_E"], atol=1e-12, rtol=0.0):
-        raise AssertionError("combined state closure failed")
-    if not np.allclose(combined[CONTRASTS[2]] + combined[CONTRASTS[3]] + combined[CONTRASTS[4]], combined["E_minus_H"], atol=1e-12, rtol=0.0):
-        raise AssertionError("combined exposure closure failed")
+    prefixes = ("", "decile_", "top30_")
+    for prefix in prefixes:
+        for key in ALL_CONTRASTS:
+            combined[prefix + key] = (left[prefix + key].to_numpy(float) + right[prefix + key].to_numpy(float)) / 2.0
+    for prefix in prefixes:
+        if not np.allclose(combined[prefix + CONTRASTS[0]] + combined[prefix + CONTRASTS[1]], combined[prefix + "F_minus_E"], atol=1e-12, rtol=0.0):
+            raise AssertionError(f"combined {prefix} state closure failed")
+        if not np.allclose(combined[prefix + CONTRASTS[2]] + combined[prefix + CONTRASTS[3]] + combined[prefix + CONTRASTS[4]], combined[prefix + "E_minus_H"], atol=1e-12, rtol=0.0):
+            raise AssertionError(f"combined {prefix} exposure closure failed")
     _, _, timeiso, _, _ = coarse._rt()
     result: dict[str, Any] = {"days": int(len(combined))}
-    for key in keys:
+    for key in ALL_CONTRASTS:
         values = combined[key].to_numpy(float)
         result[key] = {
-            "mean": float(values.mean()), "median": float(np.median(values)), "win_days": int((values > 0).sum()),
+            **_stats(values),
             "moving_block": {str(block): timeiso.block_ci(values, block) for block in (4, 8, 12)},
         }
+    result["secondary"] = {
+        "decile_spread": {key: _stats(combined[f"decile_{key}"].to_numpy(float)) for key in ALL_CONTRASTS},
+        "top30_minus_universe": {key: _stats(combined[f"top30_{key}"].to_numpy(float)) for key in ALL_CONTRASTS},
+    }
     combined.to_csv(output_root / "combined_daily.csv", index=False)
     return result
 
@@ -358,10 +454,11 @@ def run(timeiso_root: Path, xcoarse_root: Path, output_root: Path, reload_script
         theme_root: Path, factorlab_root: Path, expected_factorlab_commit: str) -> dict[str, Any]:
     if output_root.exists():
         raise FileExistsError(output_root)
+    source_stack = validate_source_stack(theme_root)
     runtime = coarse.validate_runtime_identity(timeiso_root, theme_root, expected_factorlab_commit, factorlab_root)
     xref = validate_xcoarse_reference(xcoarse_root, timeiso_root)
     output_root.mkdir(parents=True)
-    write_json(output_root / "runtime_identity.json", {"timeiso": runtime, "xcoarse": xref["runtime_identity"]})
+    write_json(output_root / "runtime_identity.json", {"source_stack": source_stack, "timeiso": runtime, "xcoarse": xref["runtime_identity"]})
     clocks = {clock: run_clock(timeiso_root, xcoarse_root, output_root, clock, reload_script) for clock in CLOCKS}
     total = sum(int(row["new_fits"]) for row in clocks.values())
     if total != MAX_NEW_FITS:
@@ -372,9 +469,13 @@ def run(timeiso_root: Path, xcoarse_root: Path, output_root: Path, reload_script
         "new_arms": list(NEW_ARMS), "new_fits": total,
         "reference_refits": {"F": 0, "E": 0, "H": 0},
         "accepted_E_identity_verified": True,
+        "source_stack_verified": True,
         "max_cycles_per_fit": MAX_CYCLES_PER_FIT, "max_total_cycles": MAX_TOTAL_CYCLES,
         "clocks": clocks, "combined": combine_clocks(output_root),
         "interpretation": {
+            "primary_metric": "daily_cross_sectional_rankic",
+            "secondary_metrics": ["H20_financial_residual_decile_spread", "H20_financial_residual_top30_minus_universe"],
+            "secondary_metrics_do_not_rescue_failed_primary": True,
             "ordered_nested_contrasts_only": True,
             "unique_additive_causal_attribution": False,
             "result_driven_arm_search": False,
