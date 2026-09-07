@@ -1,6 +1,6 @@
 # 云端—本地沟通：LCL-R3-TIMEISO-20260907-01
 
-**状态**：云端已复核核心真实运行；`local_reporting_delta_feedback_pending_cloud_review`。不重训、不重新推理；只需完成冻结方案尚缺的只读 reporting delta。大数据留在本地，不上传整湖，不用 GitHub Actions。
+**状态**：`completed_with_limits`。真实运行与只读 reporting delta 均已云端复核并收口；不再要求同任务本地补件、重训、重新推理或 checkpoint reload。大数据继续留本地，不上传整湖，不用 GitHub Actions。
 
 ## 目标
 
@@ -8,7 +8,7 @@
 
 ## 代码入口
 
-使用开发分支 `codex/reaka-foundation-audit-20260905` 的本次 runner 集成版本：
+使用开发分支 `codex/reaka-foundation-audit-20260905` 的 runner：
 
 - `src/factor_lab/factor_rotation/reaka_r3_time_isolated_runner.py`
 - `scripts/reaka_r3_time_isolated_compare.py`
@@ -16,22 +16,9 @@
 
 不得用旧 `reaka_r3_condition_compare.py` 代替本任务。
 
-## 本地只读准备检查
+## 真实运行（历史已执行）
 
-两时钟各自确认存在：
-
-- `ot_root/ot1/factor_basis_history.parquet`
-- `ot_root/ot1/factor_basis_future.parquet`
-- `ot_root/ot1/stock_residual_surfaces.npz`
-- `ot_root/ot1/d5_stock_exposures.parquet`
-- `ot_root/ot1/d5_stock_industry_exposures.parquet`
-- P6.1 `decision_positions.npy`
-
-路径或依赖缺失只阻断对应 clock；不要回到 R0/R1，不要重算已验收的 OT1 epsilon。
-
-## 运行规范（历史已执行）
-
-真实运行使用固定设计：两臂 × 两时钟 × seed 11/29/47 = 12 次新拟合，每次最多 3 cycle；不增加 E、K、seed、cycle、年份、阈值或调参搜索；两臂统一 CPU 后端。
+固定设计：两臂 × 两时钟 × seed 11/29/47 = 12 次新拟合，每次最多 3 cycle；不增加 E、K、seed、cycle、年份、阈值或调参搜索；两臂统一 CPU 后端。
 
 原运行命令：
 
@@ -39,51 +26,53 @@
 python scripts/reaka_r3_time_isolated_compare.py --spec /path/to/run_spec.json
 ```
 
-## 原必须回传的小产物
+本地运行时主题仓 HEAD `60f2c9f`，FactorLab `b39bb12f`。CLI 为注入本地 FactorLab 数值栈有 bootstrap 字节变化，实际 runner/CLI SHA 已写入 `source_snapshot.json`；结果提交 `84ef80f14e18ba8da7f7dd183e4d4bb4ab6388c1` 保存了该运行身份。
 
-大 store/checkpoint/score 数组保留本地。已回传：
+12 次 CPU 拟合完成，退出码 0。OT2 annual selection 只含 2009–2016；2017 不在主评价。评价窗口 2018-01-08..2020-12-03；预测 408,446 行，成熟标签 393,431 行，142 个配对日。6/6 F/H pair identity 除 arm 外一致；每个 selected cycle 是本臂3个 canonical loss 的最小值；fit rows=361,628，`future_target_values_read=0`。12 个 checkpoint 均持久化，并经 fresh-process worker 生成真实 score。
 
-1. `local_feedback.md`；
-2. 顶层 `result.json`；
-3. 两时钟 `result.json`、`paired_daily.csv`；
-4. `source_snapshot.json`、`environment.json`；
-5. 两时钟 selection 摘要；
-6. 12 个 checkpoint `manifest.json`、reload spec 与每个 seed/arm fit receipt。
-
-## 本地反馈（2026-09-07）
-
-主题仓运行时 HEAD `60f2c9f`。FactorLab `b39bb12f` 未改脏区。CLI 注入 FactorLab 数值栈后执行正式 runner，退出码 0。12 次 CPU 拟合完成。2017 不在主评价；窗口 2018-01-08..2020-12-03。等日期等时钟平均 F−H RankIC 0.020537。pair identity 6/6 通过。报告 [local_feedback.md](../../cloud_results/local_handoff_R3_timeiso_20260907/local_feedback.md) 与同目录小产物。store/checkpoint 张量/score npz 留本地。fresh_oos=false，PIT_certified=false，production_authority=false。未跑 E，未 Actions。
+大 store/checkpoint/score 数组保留本地。回传了 `local_feedback.md`、顶层与两时钟 result、paired_daily、source/environment、selection 摘要、12 份 checkpoint manifest / fit receipt / reload spec。
 
 ## 云端首轮验收（2026-09-07）
 
-复核提交 `84ef80f14e18ba8da7f7dd183e4d4bb4ab6388c1`。完整报告见 [cloud_review.md](../../cloud_results/local_handoff_R3_timeiso_20260907/cloud_review/cloud_review.md)，机器检查见 [cloud_checks.json](../../cloud_results/local_handoff_R3_timeiso_20260907/cloud_review/cloud_checks.json)。
+完整报告：[cloud_review.md](../../cloud_results/local_handoff_R3_timeiso_20260907/cloud_review/cloud_review.md)；机器检查：[cloud_checks.json](../../cloud_results/local_handoff_R3_timeiso_20260907/cloud_review/cloud_checks.json)。
 
-**核心结果受限接收。** 云端完整重聚合两时钟各142个逐日配对：14:30 mean F−H=0.0192325541、115/142日为正；14:45=0.0218410948、110/142日为正。按冻结方案先逐日等权平均两时钟，主量=0.0205368244、112/142日为正；两时钟日增量相关0.985835。预定 moving-block 的共同两时钟区间：block4 [0.009205,0.031424]、block8 [0.008335,0.033177]、block12 [0.007359,0.032470]。四个 phase 主量均为正。
+**核心结果受限接收。** 云端完整重聚合两时钟各142个逐日配对：14:30 mean F−H=0.0192325541、115/142日为正；14:45=0.0218410948、110/142日为正。冻结主量（每天先等权两个时钟，再跨日平均）=0.0205368244、112/142日为正；两时钟日增量相关0.985835。预定共同 moving-block 区间：block4 [0.009205,0.031424]、block8 [0.008335,0.033177]、block12 [0.007359,0.032470]。四个 phase 主量均为正。
 
-六组 F/H receipt 已核：除 arm 外配对身份一致，pre-DMD digest 同 seed/clock 一致；每个 selected cycle 均是本臂3个 canonical loss 的最小值；所有 fit rows=361628、`future_target_values_read=0`。两时钟 annual selection 仅 2009–2016，各171行，不含2017及以后。12个 model/arm 均回传 checkpoint manifest、fit receipt、reload spec；抽查 checkpoint state digest 与 fit receipt 一致。
-
-运行时 CLI 为了注入本地 FactorLab 数值栈相对 clean `60f2...` 有 bootstrap 字节变化；`source_snapshot.json` 已记录实际 runner/CLI SHA，结果提交 `84ef80...` 已保存该 CLI。以后将 git commit、runner SHA、CLI SHA、FactorLab commit 联合视为运行身份，不单凭 clean HEAD。
-
-## 同任务只读 reporting delta（待本地补充）
-
-冻结方案原先明确 `report_each_clock_and_seed=true`，并要求 secondary 的 all years / all phases / H20 decile spread / Top30，以及四个固定 no-fit baselines。当前核心集成结果已接收，但这些报告项未完整回传。
-
-**只读现有产物，不训练、不重新推理、不重新加载模型评分。** 使用 run01 已保存的 12 份 `scores.npz`、两时钟 store 与现成目标：
-
-1. 每个 `clock × seed` 分别计算 F、H 及 F−H：全期 mean/median/win days、2018/2019/2020逐年、四 phase；不得筛掉任何 seed/year。
-2. 集成层补 H20 epsilon top-bottom decile spread 与 Top30-minus-same-universe mean，F/H均报并给差值。
-3. 在同一 labelled support 上计算四个固定历史 epsilon 基准：`last_epsilon`、`negative_last_epsilon`、`mean10_epsilon`、`negative_mean10_epsilon`；报告逐时钟与等时钟合并的 mean RankIC，不能事后只保留最优方向。
-4. 不需要重复 block 4/8/12；共同主区间已由云端从上传的逐日表重算。
-5. 仅回传 `local_feedback_delta.md`、`per_seed_metrics.json/csv`、`secondary_metrics.json/csv`、`baseline_metrics.json/csv` 等小文件。大 score/store/checkpoint 继续本地保留。
-
-这次 reporting delta **不得新增拟合、推理、seed、E、K、cycle、年份或结果驱动重跑**。它不改变已接收的 +0.0205368 主结果，只完成冻结报告义务并检查 seed/year 稳定性。
-
-## 结论边界
-
-即使最终报告项均为正，也只能称为“已消费历史材料上的时间隔离、同环境算法比较”。`fresh_oos=false`、`PIT_certified=false`、`production_authority=false` 保持不变；不继承为新月度 CloudRidge 条件、总收益或账户 alpha 的证明。
-
+首轮验收后只缺冻结报告项，不影响核心主量，因此安排同任务只读 reporting delta：只读已有 scores/store，不训练、不重新推理、不 reload worker。
 
 ## 只读 reporting delta 本地反馈（2026-09-07）
 
-未重训、未重新推理、未 reload worker。读取 run01 既有 12 份 scores.npz 与两时钟 store。命令 `python3 scripts/reaka_r3_timeiso_reporting_delta.py` 退出码 0。新 fit=0，新 inference=0。六个 clock×seed、三年、四 phase、decile/Top30、四固定 baseline 已回传 [reporting_delta](../../cloud_results/local_handoff_R3_timeiso_20260907/reporting_delta/)。原始 scores/store/checkpoint 未修改。未调用 Actions。
+提交 `36a2a37d9841a4342d87274b177ed4d1a37d39d9`。脚本 `scripts/reaka_r3_timeiso_reporting_delta.py` 读取 run01 的既有 12 份 `scores.npz` 与两时钟 store；pytest 与汇总命令本地均退出码0。明确：新 fit=0、新 inference=0、checkpoint reload=0，原始模型/store/score未修改，未调用 Actions，未增加 E/K/seed/cycle/年份或筛掉不利切片。
 
+回传目录：[reporting_delta](../../cloud_results/local_handoff_R3_timeiso_20260907/reporting_delta/)，包括逐 seed、逐年/phase、集成 decile/Top30、四个固定 no-fit baseline 及只读回执。
+
+## 云端最终验收（2026-09-07）
+
+最终报告：[cloud_final_acceptance/cloud_review.md](../../cloud_results/local_handoff_R3_timeiso_20260907/cloud_final_acceptance/cloud_review.md)；最终检查：[cloud_final_acceptance/cloud_checks.json](../../cloud_results/local_handoff_R3_timeiso_20260907/cloud_final_acceptance/cloud_checks.json)。
+
+云端检查 reporting delta 源码：无 torch、training objective、forecast 或 reload-worker 调用；2017 被显式拒绝；mean10 固定为10个 H20 间隔端点；四个 baseline 符号固定；seed/arm 坐标与 labelled support 不一致会硬失败。
+
+云端对回传小表独立执行 71 项结构与算术一致性检查，71/71 通过：
+
+- 六个 clock×seed 全期 mean F−H 全部为正；
+- 18 个 clock×seed×year 平均增量全部为正，最小 +0.0012259640；
+- 24 个 clock×seed×phase 平均增量全部为正，最小 +0.0021342623；
+- 每个 seed 的年度/phase 加权值精确回到全期均值；
+- 所有报告 year/phase 的平均 decile spread F−H 与 Top30 F−H 均为正；
+- 四个 baseline 在两时钟全部 393,431 行共同支持上都有完整10点历史，无 history-filter 缩样；方向均按预先冻结定义。
+
+全期 secondary：14:30 decile F−H=+0.0091857015（104/142日胜）、Top30=+0.0139008493（100/142）；14:45 decile=+0.0108170167（109/142）、Top30=+0.0175869515（104/142）。这些都是 H20 金融残差目标，不是股票总收益或账户收益。
+
+四个固定规则中最强仍是 `negative_mean10_epsilon`：14:30 RankIC=0.1321169247，H−baseline=+0.0116342422，F−baseline=+0.0308667963；14:45 RankIC=0.1313727603，H−baseline=+0.0082716797，F−baseline=+0.0301127744。说明 history-only H 高于这些简单规则，full-X F 又进一步高于 H；不能把这些差值转成可加的机制归因比例。
+
+## 最终结论与边界
+
+任务 `LCL-R3-TIMEISO-20260907-01` 正式完成。可接受的研究陈述是：
+
+> 在已消费的 2018–2020 历史支持上，采用 2016 年末冻结选型和同一数值环境/算法配方时，直接 X 条件信息包对 K1 的未来 H20 金融残差截面预测表现存在稳定的正向算法增量。
+
+这里的直接 X 是当前 K1 既有 state/exposure/reliability/mask 等信息包，不是单一条件变量的经济因果效应。
+
+保持：`fresh_oos=false`、`PIT_certified=false`、`production_authority=false`。不得继承为全链 PIT、经济因果、新月度 CloudRidge 条件、股票总收益、交易成本后账户 alpha 或生产授权；两个时钟和三个 seed 也不能当作独立市场重复。
+
+同任务不再补件。下一步若继续研究，应单独设计“哪些 X 通道/状态真正贡献”以及“新增月度 CloudRidge 条件是否有独立增量”的预注册对照，不能把本轮整包 F−H 直接归给某一变量。
