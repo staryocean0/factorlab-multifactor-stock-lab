@@ -1,6 +1,6 @@
 # 云端—本地沟通：LCL-R3-TIMEISO-20260907-01
 
-**状态**：云端已复核核心真实运行；`cloud_reviewed_core_accepted_reporting_delta_pending`。不重训、不重新推理；只需完成冻结方案尚缺的只读 reporting delta。大数据留在本地，不上传整湖，不用 GitHub Actions。
+**状态**：云端已复核核心真实运行；`local_reporting_delta_feedback_pending_cloud_review`。不重训、不重新推理；只需完成冻结方案尚缺的只读 reporting delta。大数据留在本地，不上传整湖，不用 GitHub Actions。
 
 ## 目标
 
@@ -81,3 +81,9 @@ python scripts/reaka_r3_time_isolated_compare.py --spec /path/to/run_spec.json
 ## 结论边界
 
 即使最终报告项均为正，也只能称为“已消费历史材料上的时间隔离、同环境算法比较”。`fresh_oos=false`、`PIT_certified=false`、`production_authority=false` 保持不变；不继承为新月度 CloudRidge 条件、总收益或账户 alpha 的证明。
+
+
+## 只读 reporting delta 本地反馈（2026-09-07）
+
+未重训、未重新推理、未 reload worker。读取 run01 既有 12 份 scores.npz 与两时钟 store。命令 `python3 scripts/reaka_r3_timeiso_reporting_delta.py` 退出码 0。新 fit=0，新 inference=0。六个 clock×seed、三年、四 phase、decile/Top30、四固定 baseline 已回传 [reporting_delta](../../cloud_results/local_handoff_R3_timeiso_20260907/reporting_delta/)。原始 scores/store/checkpoint 未修改。未调用 Actions。
+

@@ -1,0 +1,85 @@
+{
+  "task": "LCL-R3-TIMEISO-20260907-01",
+  "new_fits": 0,
+  "new_inference": 0,
+  "rows": [
+    {
+      "days": 142,
+      "win_days": 95,
+      "loss_days": 47,
+      "zero_or_tie_days": 0,
+      "mean_rankic_F": 0.1514215804317284,
+      "mean_rankic_H": 0.1473997564447164,
+      "mean_delta_rankic": 0.004021823987012073,
+      "median_delta_rankic": 0.00452744806717606,
+      "clock": "1430",
+      "seed": 11,
+      "scope": "all"
+    },
+    {
+      "days": 142,
+      "win_days": 115,
+      "loss_days": 27,
+      "zero_or_tie_days": 0,
+      "mean_rankic_F": 0.16806381443995308,
+      "mean_rankic_H": 0.13653482873694822,
+      "mean_delta_rankic": 0.031528985703004865,
+      "median_delta_rankic": 0.03361130536436536,
+      "clock": "1430",
+      "seed": 29,
+      "scope": "all"
+    },
+    {
+      "days": 142,
+      "win_days": 87,
+      "loss_days": 55,
+      "zero_or_tie_days": 0,
+      "mean_rankic_F": 0.15711338356390994,
+      "mean_rankic_H": 0.14336218894443556,
+      "mean_delta_rankic": 0.013751194619474367,
+      "median_delta_rankic": 0.01005070593747891,
+      "clock": "1430",
+      "seed": 47,
+      "scope": "all"
+    },
+    {
+      "days": 142,
+      "win_days": 121,
+      "loss_days": 21,
+      "zero_or_tie_days": 0,
+      "mean_rankic_F": 0.1504875150725626,
+      "mean_rankic_H": 0.13299730150432365,
+      "mean_delta_rankic": 0.017490213568238957,
+      "median_delta_rankic": 0.017125821875280407,
+      "clock": "1445",
+      "seed": 11,
+      "scope": "all"
+    },
+    {
+      "days": 142,
+      "win_days": 110,
+      "loss_days": 32,
+      "zero_or_tie_days": 0,
+      "mean_rankic_F": 0.16574298107012653,
+      "mean_rankic_H": 0.13932363302456544,
+      "mean_delta_rankic": 0.02641934804556111,
+      "median_delta_rankic": 0.02795001104407739,
+      "clock": "1445",
+      "seed": 29,
+      "scope": "all"
+    },
+    {
+      "days": 142,
+      "win_days": 85,
+      "loss_days": 57,
+      "zero_or_tie_days": 0,
+      "mean_rankic_F": 0.1555462478246252,
+      "mean_rankic_H": 0.14202484595072726,
+      "mean_delta_rankic": 0.013521401873897932,
+      "median_delta_rankic": 0.008268535277753453,
+      "clock": "1445",
+      "seed": 47,
+      "scope": "all"
+    }
+  ]
+}
