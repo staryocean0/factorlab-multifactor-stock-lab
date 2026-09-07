@@ -1,0 +1,89 @@
+{
+  "schema_id": "factorlab.r3_x_coarse_cloud_checks@1.0",
+  "task_id": "LCL-R3-XCOARSE-20260907-01",
+  "local_result_commit": "a427827dc9253d16ff8ec786d58c8cac13f7b050",
+  "accepted": true,
+  "scope": "consumed_2018_2020_ordered_conditional_diagnostic",
+  "execution": {
+    "new_arm": "E",
+    "new_fits": 6,
+    "rerun_F": 0,
+    "rerun_H": 0,
+    "fine_arms_run": 0,
+    "F_plus_M_run": 0,
+    "actions_runs_on_local_commit": 0,
+    "result_driven_rerun_detected": false
+  },
+  "runtime_identity": {
+    "factorlab_commit": "b39bb12f43a46b165d18db93191a669234077444",
+    "timeiso_runner_sha256": "sha256:ee7036f1925ab61ed88cc96e79a0ee06af9bb2a75812a1a58f4aa2d4a61c3708",
+    "condition_views_sha256": "sha256:7d76a03785e2d03623342c63c360ddf7680835433294f5f511163d09fba2f921",
+    "stable_environment_match": true,
+    "device": "cpu",
+    "cuda_available": false
+  },
+  "fit_receipts": {
+    "count": 6,
+    "all_arm_E": true,
+    "all_fit_rows": 361628,
+    "all_future_target_values_read_zero": true,
+    "selected_cycle_is_minimum_canonical_loss": true,
+    "selected_cycles": {
+      "1430_seed11": 3,
+      "1430_seed29": 3,
+      "1430_seed47": 2,
+      "1445_seed11": 3,
+      "1445_seed29": 3,
+      "1445_seed47": 3
+    },
+    "checkpoint_manifests_present": 6,
+    "reload_specs_present": 6
+  },
+  "support": {
+    "paired_days_per_clock": 142,
+    "accepted_FH_daily_reconstruction_verified": true,
+    "same_support_contrasts": true
+  },
+  "combined": {
+    "F_minus_E": {
+      "mean": 0.011258802580991234,
+      "median": 0.010801806027513076,
+      "win_days": 105,
+      "block4": [0.006048725864005559, 0.01705598018418932],
+      "block8": [0.00593851254102115, 0.017342186931933002],
+      "block12": [0.005482454351278891, 0.017314750393172196]
+    },
+    "E_minus_H": {
+      "mean": 0.009278021839895956,
+      "median": 0.007066025050025826,
+      "win_days": 86,
+      "block4": [-0.00020247231790254154, 0.018143080797615427],
+      "block8": [-0.0010621365125196335, 0.019458336697201546],
+      "block12": [-0.00162036666959406, 0.019908617518263047]
+    },
+    "F_minus_H": {
+      "mean": 0.020536824420887195,
+      "median": 0.01854030021598827,
+      "win_days": 112,
+      "block8": [0.008334688697785642, 0.03317719554298435]
+    }
+  },
+  "per_seed_direction": {
+    "E_minus_H_positive_seeds": 6,
+    "F_minus_E_negative_exception": "1445_seed47=-0.003998780136208841"
+  },
+  "adjudication": {
+    "state_package_ordered_increment": "positive_and_more_stable_on_consumed_support",
+    "exposure_package_ordered_increment": "positive_mean_but_block_intervals_cross_zero",
+    "unique_additive_causal_attribution": false,
+    "stage_B_preregistered_fine_split_warranted": true
+  },
+  "monthly_cloudridge": {
+    "formula_identity_not_found": true,
+    "formula_recovered": false,
+    "F_plus_M_authorized": false
+  },
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "production_authority": false
+}
