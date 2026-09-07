@@ -1,0 +1,53 @@
+{
+  "schema_id": "factorlab.r3_x_decomposition_cloud_receipt@1.0",
+  "design_id": "R3-X-DECOMP-MONTHLY-DESIGN-20260907-01",
+  "source_base_commit": "59ef90b08bf99b10279144876020b0cb4afa2128",
+  "files": {
+    "src/factor_lab/factor_rotation/reaka_r3_x_decomposition.py": {
+      "sha256": "sha256:19f70454ddd523018d5c113c3ed409f5fdd25ed3d2cef5aa1b78fb64dc6dc8e3",
+      "bytes": 12184
+    },
+    "src/factor_lab/factor_rotation/reaka_r3_x_coarse_runner.py": {
+      "sha256": "sha256:f91f56bf532537060e269f227f6df96801ab90faa4798346109704969d343848",
+      "bytes": 16369
+    },
+    "scripts/reaka_r3_x_coarse_compare.py": {
+      "sha256": "sha256:397d61d717c68486bc931980dea53147d4acb213d480afb8c3a7ea68d43decdb",
+      "bytes": 2902
+    },
+    "tests/unit/test_reaka_r3_x_decomposition.py": {
+      "sha256": "sha256:2d23df1e1847f972a8f05db994c7f3bfe7961d8b518755b922921dd050681bc3",
+      "bytes": 6745
+    },
+    "tests/unit/test_reaka_r3_x_coarse_runner.py": {
+      "sha256": "sha256:d1c3b65c06585560e4622b5824d86c1022dae8fac7e7df917f8622fd1e759e08",
+      "bytes": 3161
+    },
+    "docs/ops/r3_x_decomposition_and_monthly_condition_design_20260907.md": {
+      "sha256": "sha256:2be27eca513ff6782d95817788fed05ee5fa483a4ffa65f318407bf8aef0ae21",
+      "bytes": 7462
+    },
+    "docs/ops/cloud_local_communication_R3_xdecomp_20260907.md": {
+      "sha256": "sha256:1f7c10f59311bcfd88573a2a3aa5287249b63f5c94722afa89eee5a56eaf76d8",
+      "bytes": 4837
+    },
+    "docs/ops/r3_x_decomposition_design_20260907.json": {
+      "sha256": "sha256:71a99ab26683066cca23f4eea7239322b60c108b80f53f769781492d3e311d9f",
+      "bytes": 1515
+    }
+  },
+  "tests": {
+    "passed": 27,
+    "failed": 0,
+    "command": "python -m pytest -q tests/unit/test_reaka_r3_x_decomposition.py tests/unit/test_reaka_r3_x_coarse_runner.py",
+    "scope": "synthetic/interface only; no real FactorLab arrays or fits"
+  },
+  "py_compile": "passed",
+  "real_arrays_read": false,
+  "real_fits": 0,
+  "local_task": "LCL-R3-XCOARSE-20260907-01",
+  "monthly_formula_identity": "not_recovered",
+  "actions_executed": false,
+  "fresh_oos": false,
+  "production_authority": false
+}
