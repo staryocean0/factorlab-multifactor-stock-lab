@@ -1,0 +1,75 @@
+{
+  "schema_id": "factorlab.r3_timeiso_final_cloud_acceptance@1.0",
+  "task": "LCL-R3-TIMEISO-20260907-01",
+  "status": "completed_with_limits",
+  "real_run_commit": "84ef80f14e18ba8da7f7dd183e4d4bb4ab6388c1",
+  "reporting_delta_commit": "36a2a37d9841a4342d87274b177ed4d1a37d39d9",
+  "primary": {
+    "days": 142,
+    "mean_equal_date_equal_clock_delta_rankic": 0.020536824420887195,
+    "median": 0.01854030021598827,
+    "positive_days": 112,
+    "clock_delta_correlation": 0.985834736660759,
+    "block4_95": [0.009204953136998408, 0.03142368143324111],
+    "block8_95": [0.008334688697785642, 0.03317719554298435],
+    "block12_95": [0.007359014942556427, 0.032470487689488056]
+  },
+  "per_seed": {
+    "all_six_mean_positive": true,
+    "means": {
+      "1430_seed11": 0.004021823987012073,
+      "1430_seed29": 0.031528985703004865,
+      "1430_seed47": 0.013751194619474367,
+      "1445_seed11": 0.017490213568238957,
+      "1445_seed29": 0.02641934804556111,
+      "1445_seed47": 0.013521401873897932
+    },
+    "year_slices": 18,
+    "year_slices_nonpositive": 0,
+    "phase_slices": 24,
+    "phase_slices_nonpositive": 0,
+    "minimum_year_delta": 0.0012259639657078393,
+    "minimum_phase_delta": 0.0021342622638689146
+  },
+  "secondary": {
+    "1430_decile_delta": 0.009185701493322807,
+    "1430_decile_win_days": 104,
+    "1430_top30_delta": 0.013900849305277508,
+    "1430_top30_win_days": 100,
+    "1445_decile_delta": 0.010817016651697965,
+    "1445_decile_win_days": 109,
+    "1445_top30_delta": 0.017586951525153247,
+    "1445_top30_win_days": 104,
+    "all_reported_year_phase_mean_decile_deltas_positive": true,
+    "all_reported_year_phase_mean_top30_deltas_positive": true
+  },
+  "baselines": {
+    "directions_fixed_a_priori": true,
+    "mean10_h20_spaced_endpoints": true,
+    "support_rows_each_clock": 393431,
+    "rows_missing_history": 0,
+    "strongest": "negative_mean10_epsilon",
+    "1430_strongest_rankic": 0.13211692469516437,
+    "1430_H_minus_strongest": 0.01163424218281104,
+    "1430_F_minus_strongest": 0.03086679626618621,
+    "1445_strongest_rankic": 0.13137276033081677,
+    "1445_H_minus_strongest": 0.008271679685336788,
+    "1445_F_minus_strongest": 0.03011277444373606
+  },
+  "reporting_delta": {
+    "new_fits": 0,
+    "new_inference": 0,
+    "checkpoint_reload": 0,
+    "modified_original_scores_or_store": false
+  },
+  "cloud_small_evidence_checks": {
+    "checks": 71,
+    "passed": 71,
+    "failed": 0,
+    "scope": "Transcribed GitHub small tables and source-level guards; not original local score/store replay."
+  },
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "production_authority": false,
+  "actions_executed": false
+}
