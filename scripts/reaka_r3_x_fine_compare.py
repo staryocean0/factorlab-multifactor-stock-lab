@@ -6,11 +6,37 @@ import argparse
 import importlib.util
 import json
 import os
+import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FACTORLAB_ROOT = Path(os.environ.get("FACTORLAB_ROOT", "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab"))
+EXPECTED_FINE_RUNNER_GIT_BLOB = "c6d6cfc940734c3363dc2b81fda80c2518394e80"
+EXPECTED_FINE_PREFLIGHT_GIT_BLOB = "5c85b72ddd85162f46a2d7da38002fdd151759ed"
+
+
+def _git_blob(path: Path) -> str:
+    proc = subprocess.run(["git", "hash-object", str(path)], cwd=ROOT, capture_output=True, text=True)
+    if proc.returncode != 0:
+        raise RuntimeError(f"cannot bind Stage-B entrypoint source: {path}: {proc.stderr[-500:]}")
+    return proc.stdout.strip()
+
+
+def validate_theme_entrypoints() -> dict[str, str]:
+    module_root = ROOT / "src/factor_lab/factor_rotation"
+    observed = {
+        "fine_runner": _git_blob(module_root / "reaka_r3_x_fine_runner.py"),
+        "fine_preflight": _git_blob(module_root / "reaka_r3_x_fine_preflight.py"),
+    }
+    expected = {
+        "fine_runner": EXPECTED_FINE_RUNNER_GIT_BLOB,
+        "fine_preflight": EXPECTED_FINE_PREFLIGHT_GIT_BLOB,
+    }
+    for name in expected:
+        if observed[name] != expected[name]:
+            raise RuntimeError(f"Stage-B entrypoint source drift: {name}")
+    return observed
 
 
 def _bootstrap() -> None:
@@ -66,6 +92,7 @@ def main() -> int:
         s = read_spec(args.spec)
         if s.get("schema_id") != "factorlab.r3_x_fine_run_spec@1.0":
             raise ValueError("wrong schema")
+        source_entrypoints = validate_theme_entrypoints()
         timeiso_root = Path(s["accepted_timeiso_run_root"]).resolve()
         xcoarse_root = Path(s["accepted_xcoarse_run_root"]).resolve()
         output_root = Path(s["output_root"]).resolve()
@@ -76,6 +103,7 @@ def main() -> int:
             timeiso_root, xcoarse_root, ROOT,
             FACTORLAB_ROOT, expected_factorlab_commit,
         )
+        pre["entrypoint_source_stack"] = source_entrypoints
         preflight_path = output_root.parent / f"{output_root.name}.preflight.json"
         fine.write_json(preflight_path, pre)
         if args.preflight_only:
@@ -89,6 +117,7 @@ def main() -> int:
             ROOT, FACTORLAB_ROOT, expected_factorlab_commit,
         )
         result["preflight_receipt"] = str(preflight_path)
+        result["entrypoint_source_stack"] = source_entrypoints
         fine.write_json(output_root / "result.json", result)
         print(json.dumps({
             "status": result["status"], "new_fits": result["new_fits"], "new_arms": result["new_arms"],
