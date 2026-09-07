@@ -73,7 +73,7 @@ def main() -> int:
 
         # Mandatory zero-fit, zero-inference reference preflight before any new model fit.
         pre = preflight.run(
-            timeiso_root, xcoarse_root, ROOT / "src/factor_lab/factor_rotation",
+            timeiso_root, xcoarse_root, ROOT,
             FACTORLAB_ROOT, expected_factorlab_commit,
         )
         preflight_path = output_root.parent / f"{output_root.name}.preflight.json"
@@ -86,7 +86,7 @@ def main() -> int:
 
         result = fine.run(
             timeiso_root, xcoarse_root, output_root, Path(__file__).resolve(),
-            ROOT / "src/factor_lab/factor_rotation", FACTORLAB_ROOT, expected_factorlab_commit,
+            ROOT, FACTORLAB_ROOT, expected_factorlab_commit,
         )
         result["preflight_receipt"] = str(preflight_path)
         fine.write_json(output_root / "result.json", result)
