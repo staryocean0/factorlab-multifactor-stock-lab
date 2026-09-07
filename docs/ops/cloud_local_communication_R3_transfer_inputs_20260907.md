@@ -1,6 +1,6 @@
 # LCL-R3-TRANSFER-INPUT-20260907-01：同定义特征输入重建
 
-这是云端与本地协作。状态：云端已核工程构建，`cloud_reviewed_build_received_boundary_delta_pending`；尚未通过同定义尾部最终验收。回传见 `cloud_results/local_handoff_R3_transfer_inputs_20260907/local_feedback.md`。开发分支 `codex/reaka-foundation-audit-20260905`。INFOCLOCK已完成，不重复它的审计。
+这是云端与本地协作。状态：本地已完成 B1—B3 边界 delta 并回传；待云端最终输入验收。`local_feedback_delta.md` / `boundary_checks.json`。原 source_bundles/run01 未覆盖。回传见 `cloud_results/local_handoff_R3_transfer_inputs_20260907/local_feedback.md`。开发分支 `codex/reaka-foundation-audit-20260905`。INFOCLOCK已完成，不重复它的审计。
 
 > **当前只执行本任务末尾的“云端验收后边界delta”。** 上文原生成命令保留为历史任务说明，不是要求现在重新跑全部桥接。完整裁决见 `cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_acceptance/cloud_review.md`。
 
