@@ -1,8 +1,8 @@
 # 云端—本地沟通：LCL-R3-XFINE-20260907-01
 
-**状态**：本地已反馈；待云端复核。Stage A `LCL-R3-XCOARSE-20260907-01` 已由云端验收通过。本任务只执行此前预注册的 Stage B 三个细拆 arm；月度 F+M 仍禁止。本地回传见 `cloud_results/local_handoff_R3_xfine_20260907/local_feedback.md`。
+**状态**：云端已复核，任务 `completed_with_limits`。Stage A `LCL-R3-XCOARSE-20260907-01` 已验收；Stage B 三个预注册细拆 arm 已完成并验收。月度 F+M 仍禁止。最终裁决见 `cloud_results/local_handoff_R3_xfine_20260907/cloud_acceptance/cloud_review.md`。
 
-> **最终执行门槛以 [`r3_xfine_execution_gate_20260907.md`](r3_xfine_execution_gate_20260907.md) 为准。** 本文件保留任务目标与回传约定；如果旧命令与 gate 冲突，使用 gate。
+> **最终执行门槛以 [`r3_xfine_execution_gate_20260907.md`](r3_xfine_execution_gate_20260907.md) 为准。** 本文件保留任务目标、执行记录与云端验收；历史命令如与 gate 冲突，以 gate 为准。
 
 ## 1. 研究目标
 
@@ -48,7 +48,7 @@
 
 ## 3. 云端开发完成内容
 
-当前开发分支已实现：
+冻结执行基点 `32b449b5603e034d5dad660cd7fdfdc3117481be` 已实现：
 
 - `src/factor_lab/factor_rotation/reaka_r3_x_fine_runner.py`
 - `src/factor_lab/factor_rotation/reaka_r3_x_fine_preflight.py`
@@ -68,18 +68,18 @@
 7. 每次 fresh reload 也重新验证冻结 fine source；
 8. **全时钟、6个 reference seed pair 的 zero-fit / zero-inference preflight 必须在任何新 fit 前完成**；
 9. 主指标仍为 daily H20 financial residual RankIC；
-10. 在结果产生前已冻结 residual decile-spread 和 Top30-minus-universe 二级指标；secondary 不得救活失败的 primary。
+10. 在结果产生前冻结 residual decile-spread 和 Top30-minus-universe 二级指标；secondary 不得救活失败的 primary。
 
-云端容器不含用户 FactorLab checkout，且实际 `git clone` 尝试因 `Could not resolve host: github.com` 失败，因此没有把当前最终代码说成已在云端完成仓库 pytest。真实 targeted tests 必须在本地通过后才训练。云端开发范围记录在：
+云端开发阶段没有用户 FactorLab checkout，不能把完整仓库 pytest 冒充云端通过；真实 targeted tests、preflight 与18 fits 均由本地按 gate 执行。
 
-`cloud_results/r3_x_fine_development_20260907/execution_receipt.json`
+## 4. 本地实际执行（2026-09-07）
 
-## 4. 本地执行顺序——不得跳步
+本地结果提交：`b8a2c30af3ac2384823fa641bfd537cffb9d20e2`。相对冻结执行基点恰好 ahead 1 commit，只新增结果/receipt/manifest/reload-spec/test log，并更新本任务状态；没有修改 Stage-B runner/CLI/数值源码。
 
-### 4.1 先跑五个 targeted test modules
+### 4.1 Targeted tests
 
 ```bash
-python -m pytest -q \
+python3 -m pytest -q \
   tests/unit/test_reaka_r3_x_decomposition.py \
   tests/unit/test_reaka_r3_x_coarse_runner.py \
   tests/unit/test_reaka_r3_x_fine_runner.py \
@@ -87,73 +87,72 @@ python -m pytest -q \
   tests/unit/test_reaka_r3_x_fine_cli.py
 ```
 
-必须 exit 0。失败则停止，不启动真实 fit。
+结果：49 passed / 0 failed / 0 errors / 0 skipped，exit 0。
 
-### 4.2 创建 run spec
+### 4.2 Zero-fit preflight
 
-```json
-{
-  "schema_id": "factorlab.r3_x_fine_run_spec@1.0",
-  "accepted_timeiso_run_root": "/path/to/FactorLab/tmp/LCL-R3-TIMEISO-20260907-01/run01",
-  "accepted_xcoarse_run_root": "/path/to/FactorLab/tmp/LCL-R3-XCOARSE-20260907-01/run01",
-  "output_root": "/path/to/FactorLab/tmp/LCL-R3-XFINE-20260907-01/run01",
-  "expected_factorlab_commit": "b39bb12f43a46b165d18db93191a669234077444"
-}
-```
-
-### 4.3 单独跑 read-only preflight
-
-```bash
-export FACTORLAB_ROOT="/path/to/factor_lab"
-python scripts/reaka_r3_x_fine_compare.py \
-  --spec /path/to/x_fine_run_spec.json \
-  --preflight-only
-```
-
-必须满足：
+`--preflight-only` exit 0：
 
 - `status=passed_read_only_reference_preflight`
 - `reference_seed_pairs_checked=6`
+- 1430/1445 均为 142 paired days
+- XCOARSE `F−E/E−H/F−H` 两时钟逐日重建通过
 - `new_fits=0`
 - `new_inference=0`
-- 两时钟 XCOARSE 逐日重建均通过
+- `future_result_peeking=false`
 
-preflight 失败则停止。
+### 4.3 正式运行
 
-### 4.4 最后才运行18 fits
+正式命令再次执行同一 preflight 后进入训练，exit 0：
 
-```bash
-python scripts/reaka_r3_x_fine_compare.py \
-  --spec /path/to/x_fine_run_spec.json
-```
+- new fits = 18
+- F/E/H refits = 0/0/0
+- 每 fit 3 cycles 上限；checkpoint selection 通过 minimum canonical loss / earliest tie gate
+- 18/18 `future_target_values_read=0`
+- 18/18 checkpoint manifest 与 fresh-process reload spec 回传
+- 未增加 seed/cycle/K/arm，未做结果驱动重跑
+- 未运行 F+M
+- 未调用 Actions
 
-正式命令还会再次跑同一 preflight，然后才进入训练。
+## 5. 云端最终验收结果
 
-## 5. 回传小产物
+云端读取本地回传、比较冻结基点与结果提交、复核测试/preflight/formal receipt、逐 seed 小表、两时钟/combined 汇总，并执行 47 项小证据结构/算术检查，47/47 通过。云端没有重跑本地大数组的18次训练，也没有重哈希本地大 checkpoint/scores.npz；该限制已写入验收报告。
 
-提交到：
+### 5.1 Combined primary RankIC
 
-`cloud_results/local_handoff_R3_xfine_20260907/`
+| contrast | mean | median | wins/losses | block8 |
+|---|---:|---:|---:|---|
+| `STATE_VALUE_PLUS_E − E` | +0.0008633 | -0.0009710 | 67 / 75 | [-0.00736, +0.00920] |
+| `F − STATE_VALUE_PLUS_E` | **+0.0103955** | +0.0098382 | **95 / 47** | **[+0.00481, +0.01730]** |
+| `BETA_ONLY − H` | +0.0055073 | +0.0023012 | 78 / 64 | [-0.00869, +0.01963] |
+| `BETA_RELIABILITY − BETA_ONLY` | **+0.0056343** | +0.0043558 | **87 / 55** | **[+0.00045, +0.01112]** |
+| `E − BETA_RELIABILITY` | **-0.0018636** | -0.0024104 | 58 / 84 | [-0.00485, +0.00052] |
 
-至少回传：
+粗分解继续精确闭合：
 
-1. `local_feedback.md`
-2. `run_spec.json`
-3. preflight receipt / 小型复制
-4. targeted test log
-5. 顶层 `result.json`
-6. `runtime_identity.json`
-7. 两时钟 `result.json`
-8. 两时钟 `paired_daily.csv`
-9. 两时钟 `per_seed.csv`
-10. 18 个新 arm `fit_receipt.json`
-11. 18 个 checkpoint `manifest.json`
-12. 18 个 `reload_spec.json`
-13. 首次失败日志（如有）
+- `F−E = +0.011258802580991234`
+- `E−H = +0.009278021839895956`
+- `F−H = +0.020536824420887195`
 
-大 scores/checkpoint/store 保持本地。
+RankIC、decile spread、Top30 三套 nested contrasts 的云端独立算术闭合误差均在约 `1.2e-17` 以内。
 
-反馈必须明确：实际主题仓 HEAD、FactorLab HEAD、测试命令和退出码、preflight 命令和退出码、正式命令和退出码、新 fits/cycles、是否发生失败后修代码、是否有任何结果驱动重跑。
+### 5.2 当前科学解释
+
+- **state values 自身没有建立稳定增量**：combined 近0、median负、block 4/8/12 跨0，per-seed 3正/3负；
+- **state availability/mask 是 state 侧最稳定的正增量**：combined `+0.01040`，block 4/8/12 均为正；6/6 seed 为正；两时钟×三年度和×四phase 的 ensemble mean 全部为正；
+- exposure values (`BETA_ONLY−H`) 为正点估计，但 block 区间跨0；
+- **reliability 是 exposure 侧最稳定的正 ordered increment**：combined `+0.00563`，block 4/8/12 均为正；两时钟×三年度和×四phase 的 ensemble mean 全部为正，但 per-seed 4正/2负，所以不能说每个seed都支持；
+- exposure availability (`E−BETA_RELIABILITY`) 没有建立正主 RankIC 增量，combined point estimate 为 `-0.00186`；所有两时钟×四phase 均为负，2018/2019 两时钟也为负，2020 两时钟转正；因此不能宣称普遍有害；
+- secondary 不能改变主裁决，例如 exposure availability 的 Top30 combined 为正，但主 RankIC 为负，仍判“未建立正主增量”。
+
+这些仍是路径依赖 nested ordered contrasts，不能转换为唯一因果特征重要性或百分比贡献。
+
+完整云端验收：
+
+- `cloud_results/local_handoff_R3_xfine_20260907/cloud_acceptance/cloud_review.md`
+- `cloud_results/local_handoff_R3_xfine_20260907/cloud_acceptance/cloud_checks.json`
+
+本任务不再需要本地补件、重训或重推理。
 
 ## 6. 月度 CloudRidge 继续阻断
 
@@ -174,3 +173,5 @@ Stage B 仍属于 consumed 2018–2020 的 nested ordered contrasts：
 - `production_authority=false`
 - 非 unique causal attribution
 - 非股票总收益/账户 alpha
+
+任务状态：`completed_with_limits`。
