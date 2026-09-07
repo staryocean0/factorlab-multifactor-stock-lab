@@ -80,6 +80,7 @@ def main() -> int:
     args = parser.parse_args()
     try:
         if args.reload_fine_worker:
+            validate_theme_entrypoints()
             s = read_spec(args.reload_fine_worker)
             out = fine.reload_arm_worker(
                 Path(s["store_root"]), Path(s["checkpoint_root"]), Path(s["normalizer_path"]),
