@@ -1,0 +1,6 @@
+{
+  "schema_id": "factorlab.r3_x_coarse_run_spec@1.0",
+  "accepted_timeiso_run_root": "/home/starryocean/\u684c\u9762/\u91cf\u5316/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-XCOARSE-20260907-01/accepted_view",
+  "output_root": "/home/starryocean/\u684c\u9762/\u91cf\u5316/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-XCOARSE-20260907-01/run01",
+  "expected_factorlab_commit": "b39bb12f43a46b165d18db93191a669234077444"
+}

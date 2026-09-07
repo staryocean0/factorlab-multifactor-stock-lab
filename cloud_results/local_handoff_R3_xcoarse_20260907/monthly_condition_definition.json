@@ -1,0 +1,12 @@
+{
+  "task": "LCL-R3-XCOARSE-20260907-01",
+  "query": "previous-completed-calendar-month CloudRidge 1sigma / S_obs condition",
+  "formula_identity_not_found": true,
+  "formula_recovered": false,
+  "F_plus_M_fit_executed": false,
+  "searched": [
+    "docs/ops/r3_x_decomposition_and_monthly_condition_design_20260907.md (cloud already unbound)",
+    "FactorLab docs/ops and docs/user filenames containing cloudridge, limited S_obs+1sigma co-occurrence search"
+  ],
+  "note": "No exact S_obs formula, 1sigma estimation window, sign encoding, available_at, or missing-month rule was recovered. Did not invent a formula or run F+M."
+}

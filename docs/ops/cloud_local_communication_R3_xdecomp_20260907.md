@@ -1,6 +1,6 @@
 # 云端—本地沟通：LCL-R3-XCOARSE-20260907-01
 
-**状态**：待本地执行。云端已实现 E-only runner 与月度时间接口并完成 27 项合成/接口检查；真实大数组留本地，不上传整湖，不使用 GitHub Actions。
+**状态**：本地已反馈；待云端复核。云端已实现 E-only runner 与月度时间接口并完成 27 项合成/接口检查；真实大数组留本地，不上传整湖，不使用 GitHub Actions。
 
 ## 1. 任务目标
 
@@ -136,3 +136,8 @@ runner 会自己 bootstrap；不要修改 FactorLab 数值源码。
 - 不把有序差值改写成唯一可加因果贡献。
 
 `fresh_oos=false`、`full_pit_certified=false`、`production_authority=false` 保持。
+
+## 本地反馈（2026-09-07）
+
+E-only 6 次拟合完成，F/H 未重跑，退出码 0。accepted F−H 逐日重现。combined E−H mean 0.009278，F−E mean 0.011259。报告 [local_feedback.md](../../cloud_results/local_handoff_R3_xcoarse_20260907/local_feedback.md)。月度公式未找回，未跑 F+M。未调用 Actions。
+
