@@ -1,6 +1,6 @@
 # 云端—本地沟通：LCL-R3-XFINE-20260907-01
 
-**状态**：待本地执行。Stage A `LCL-R3-XCOARSE-20260907-01` 已由云端验收通过。本任务只执行此前预注册的 Stage B 三个细拆 arm；月度 F+M 仍禁止。
+**状态**：本地已反馈；待云端复核。Stage A `LCL-R3-XCOARSE-20260907-01` 已由云端验收通过。本任务只执行此前预注册的 Stage B 三个细拆 arm；月度 F+M 仍禁止。本地回传见 `cloud_results/local_handoff_R3_xfine_20260907/local_feedback.md`。
 
 > **最终执行门槛以 [`r3_xfine_execution_gate_20260907.md`](r3_xfine_execution_gate_20260907.md) 为准。** 本文件保留任务目标与回传约定；如果旧命令与 gate 冲突，使用 gate。
 

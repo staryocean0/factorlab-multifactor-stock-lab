@@ -1,0 +1,47 @@
+{
+  "fit": {
+    "seed": 11,
+    "cycles": [
+      {
+        "cycle": 1,
+        "mean_train_loss": 1.2868264150151145,
+        "canonical_train_loss": 0.8368184566497803
+      },
+      {
+        "cycle": 2,
+        "mean_train_loss": 0.9768118554324507,
+        "canonical_train_loss": 0.8122966885566711
+      },
+      {
+        "cycle": 3,
+        "mean_train_loss": 0.957202677689456,
+        "canonical_train_loss": 0.8054940700531006
+      }
+    ],
+    "selected_cycle": 3,
+    "selected_canonical_loss": 0.8054940700531006,
+    "DMD_initialization": {
+      "ridge": 1.1866260961363055,
+      "pre_projection_spectral_radius": 0.9817831258201234,
+      "projected_spectral_radius": 0.9817831258201234,
+      "condition_number": 1.5082307334224914,
+      "raw_transition_count": 361628,
+      "operator_digest": "9b98e22d38ae9f1cf2379be0e8c4835e76e480617712e220a0d02bb574895cd8"
+    },
+    "fit_rows": 361628,
+    "future_target_values_read": 0
+  },
+  "identity": {
+    "arm": "STATE_VALUE_PLUS_E",
+    "seed": 11,
+    "clock": "1445",
+    "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+    "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+    "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+    "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+    "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+    "pre_dmd_state_digest": "sha256:9d6493ad2c6c7751b746a432d7d271dd8f52f9ecad53b78f792bbd9ae78e99b9",
+    "batch_order_digest": "sha256:0493cb75d6c63991e8ad0ea4c1bd62954e3e563d0a569908fa7f4a71978cc24c"
+  },
+  "checkpoint_state_digest": "sha256:22c150d4506cd7a365488437fd5818e92f572f17b4abc6b3a7df7c41f2b510cd"
+}

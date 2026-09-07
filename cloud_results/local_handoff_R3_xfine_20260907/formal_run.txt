@@ -1,0 +1,4 @@
+2026-09-07T18:44:18+08:00
+[1788777858.926514] [debian:687474:f]        vfs_fuse.c:301  UCX  ERROR inotify_add_watch(/run/user/1000/ucx) failed: No space left on device
+{"status": "completed_consumed_historical_only", "new_fits": 18, "new_arms": ["STATE_VALUE_PLUS_E", "BETA_ONLY", "BETA_RELIABILITY"], "preflight_receipt": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-XFINE-20260907-01/run01.preflight.json"}
+FORMAL_EXIT:0
