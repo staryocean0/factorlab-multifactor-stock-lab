@@ -76,6 +76,24 @@ def test_budget_is_exactly_three_new_arms_times_two_clocks_times_three_seeds():
     assert m.ARM_ORDER == ("F","STATE_VALUE_PLUS_E","E","BETA_RELIABILITY","BETA_ONLY","H")
 
 
+def test_source_stack_contract_uses_repository_root(monkeypatch, tmp_path):
+    m=load(); seen=[]
+    expected={
+        "reaka_r3_x_decomposition.py":m.EXPECTED_X_DECOMP_GIT_BLOB,
+        "reaka_r3_x_coarse_runner.py":m.EXPECTED_X_COARSE_GIT_BLOB,
+    }
+    def fake_blob(path):
+        seen.append(path)
+        return expected[path.name]
+    monkeypatch.setattr(m,"_git_blob",fake_blob)
+    out=m.validate_source_stack(tmp_path)
+    assert out["x_decomposition"] == m.EXPECTED_X_DECOMP_GIT_BLOB
+    assert seen == [
+        tmp_path/"src/factor_lab/factor_rotation/reaka_r3_x_decomposition.py",
+        tmp_path/"src/factor_lab/factor_rotation/reaka_r3_x_coarse_runner.py",
+    ]
+
+
 def test_fine_daily_closes_rankic_and_secondary_to_coarse_paths():
     m=load(); scores,targets,rows=synthetic_scores()
     frame=m.daily_fine(scores,targets,rows)
@@ -90,7 +108,6 @@ def test_fine_daily_closes_rankic_and_secondary_to_coarse_paths():
 def test_daily_secondary_matches_frozen_decile_and_top30_definition():
     m=load(); scores,targets,rows=synthetic_scores()
     frame=m.daily_fine(scores,targets,rows)
-    # With 30 monotone targets, F selects the top/bottom 3 and top 30 is the full universe.
     assert np.allclose(frame["decile_F"], 27.0)
     assert np.allclose(frame["top30_F"], 0.0)
     assert np.allclose(frame["decile_H"], -27.0)
@@ -162,10 +179,14 @@ def test_accepted_E_reference_rejects_checkpoint_manifest_mismatch(tmp_path):
         m.validate_e_reference_files(tmp_path,common,11,"1430")
 
 
-def test_cli_has_only_generic_fine_reload_worker():
+def test_cli_has_mandatory_preflight_and_frozen_entrypoint_blobs():
     text=(ROOT/"scripts/reaka_r3_x_fine_compare.py").read_text()
     assert "--reload-fine-worker" in text
     assert "--reload-e-worker" not in text
+    assert "--preflight-only" in text
+    assert "EXPECTED_FINE_RUNNER_GIT_BLOB" in text
+    assert "EXPECTED_FINE_PREFLIGHT_GIT_BLOB" in text
+    assert text.index("validate_theme_entrypoints()") < text.index("preflight.run(") < text.index("fine.run(")
 
 
 def test_no_monthly_arm_in_fine_runner():
