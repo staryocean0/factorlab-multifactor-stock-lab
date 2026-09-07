@@ -73,16 +73,27 @@ def test_budget_is_exactly_three_new_arms_times_two_clocks_times_three_seeds():
     assert m.MAX_NEW_FITS == 18
     assert m.MAX_TOTAL_CYCLES == 54
     assert m.REFERENCE_ARMS == ("F","E","H")
+    assert m.ARM_ORDER == ("F","STATE_VALUE_PLUS_E","E","BETA_RELIABILITY","BETA_ONLY","H")
 
 
-def test_fine_daily_closes_to_coarse_paths():
+def test_fine_daily_closes_rankic_and_secondary_to_coarse_paths():
     m=load(); scores,targets,rows=synthetic_scores()
     frame=m.daily_fine(scores,targets,rows)
-    state=frame["STATE_VALUE_PLUS_E_minus_E"]+frame["F_minus_STATE_VALUE_PLUS_E"]
-    exposure=frame["BETA_ONLY_minus_H"]+frame["BETA_RELIABILITY_minus_BETA_ONLY"]+frame["E_minus_BETA_RELIABILITY"]
-    assert np.allclose(state,frame["F_minus_E"])
-    assert np.allclose(exposure,frame["E_minus_H"])
-    assert np.allclose(state+exposure,frame["F_minus_H"])
+    for prefix in ("", "decile_", "top30_"):
+        state=frame[prefix+"STATE_VALUE_PLUS_E_minus_E"]+frame[prefix+"F_minus_STATE_VALUE_PLUS_E"]
+        exposure=frame[prefix+"BETA_ONLY_minus_H"]+frame[prefix+"BETA_RELIABILITY_minus_BETA_ONLY"]+frame[prefix+"E_minus_BETA_RELIABILITY"]
+        assert np.allclose(state,frame[prefix+"F_minus_E"])
+        assert np.allclose(exposure,frame[prefix+"E_minus_H"])
+        assert np.allclose(state+exposure,frame[prefix+"F_minus_H"])
+
+
+def test_daily_secondary_matches_frozen_decile_and_top30_definition():
+    m=load(); scores,targets,rows=synthetic_scores()
+    frame=m.daily_fine(scores,targets,rows)
+    # With 30 monotone targets, F selects the top/bottom 3 and top 30 is the full universe.
+    assert np.allclose(frame["decile_F"], 27.0)
+    assert np.allclose(frame["top30_F"], 0.0)
+    assert np.allclose(frame["decile_H"], -27.0)
 
 
 def test_daily_requires_frozen_arm_order():
@@ -128,6 +139,21 @@ def test_accepted_E_reference_rejects_future_target_or_nonminimum_checkpoint(tmp
     other=tmp_path/"other"; common2=write_e_reference(other,m,selected_cycle=3)
     with pytest.raises(ValueError, match="checkpoint selection"):
         m.validate_e_reference_files(other,common2,11,"1430")
+
+
+def test_selected_cycle_tie_requires_earliest_cycle():
+    m=load()
+    fit={
+        "selected_cycle":2,"selected_canonical_loss":0.8,
+        "cycles":[
+            {"cycle":1,"canonical_train_loss":0.8},
+            {"cycle":2,"canonical_train_loss":0.8},
+            {"cycle":3,"canonical_train_loss":0.9},
+        ],
+    }
+    assert m._selected_cycle_is_minimum(fit) is False
+    fit["selected_cycle"]=1
+    assert m._selected_cycle_is_minimum(fit) is True
 
 
 def test_accepted_E_reference_rejects_checkpoint_manifest_mismatch(tmp_path):
