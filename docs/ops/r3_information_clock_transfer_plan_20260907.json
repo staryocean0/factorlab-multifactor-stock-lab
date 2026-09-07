@@ -1,0 +1,65 @@
+{
+  "schema_id": "factorlab.r3_information_clock_and_transfer@1.0",
+  "design_id": "R3-INFOCLOCK-TRANSFER-20260907-01",
+  "source_base_commit": "270db9bc3ce6b8bcba03a66dfdd7fca8f2931cf2",
+  "selected_route": "information_clock_and_fixed_model_temporal_transfer",
+  "current_local_task": "LCL-R3-INFOCLOCK-20260907-01",
+  "current_scope": "target_free_input_profile_and_bounded_source_clock_review",
+  "current_new_fits": 0,
+  "current_new_inference": 0,
+  "current_checkpoint_reload": 0,
+  "current_labels_read": 0,
+  "monthly_formula_recovered": false,
+  "F_plus_M_authorized": false,
+  "constant_mask_is_not_proof_of_new_information": true,
+  "generative_producer_prefix_rebuild_implemented": false,
+  "forward_transfer": {
+    "status": "registered_not_executed_runner_not_yet_integrated",
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "excluded_years": [
+      2026
+    ],
+    "label_horizon_trading_positions": 20,
+    "label_maturity_end": "2025-12-31",
+    "selection_freeze_end": "2016-12-31",
+    "normalizer_refit": false,
+    "new_training": 0,
+    "reuse_arms": [
+      "F",
+      "STATE_VALUE_PLUS_E",
+      "BETA_ONLY",
+      "BETA_RELIABILITY"
+    ],
+    "clocks": [
+      "1430",
+      "1445"
+    ],
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "max_new_period_model_score_jobs": 24,
+    "primary_contrasts": [
+      "F_minus_STATE_VALUE_PLUS_E",
+      "BETA_RELIABILITY_minus_BETA_ONLY"
+    ],
+    "aggregation": "equal_date_mean_of_equal_clock_paired_rankic",
+    "secondary": [
+      "H20_epsilon_decile_spread",
+      "H20_epsilon_top30_minus_universe"
+    ],
+    "must_preserve_original_symbol_positions_and_factor_order": true,
+    "new_model_or_combined_selected_feature_arm": false,
+    "pointwise_intervals_not_joint_significance": true,
+    "fresh_oos": false
+  },
+  "PIT_certified": false,
+  "production_authority": false
+}
