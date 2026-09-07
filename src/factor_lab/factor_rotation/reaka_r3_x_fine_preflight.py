@@ -86,5 +86,5 @@ def run(timeiso_root: Path, xcoarse_root: Path, theme_root: Path,
         "reference_seed_pairs_checked": 6,
         "new_fits": 0,
         "new_inference": 0,
-        "future_result_peeking": false if False else False,
+        "future_result_peeking": False,
     }
