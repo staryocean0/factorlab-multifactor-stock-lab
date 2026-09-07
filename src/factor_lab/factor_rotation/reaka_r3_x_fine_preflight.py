@@ -65,11 +65,12 @@ def preflight_clock(timeiso_root: Path, xcoarse_root: Path, clock: str) -> dict[
     }
 
 
-def run(timeiso_root: Path, xcoarse_root: Path, theme_root: Path,
+def run(timeiso_root: Path, xcoarse_root: Path, repo_root: Path,
         factorlab_root: Path, expected_factorlab_commit: str) -> dict[str, Any]:
-    source_stack = fine.validate_source_stack(theme_root)
+    """Validate every accepted reference using repository-root path semantics."""
+    source_stack = fine.validate_source_stack(repo_root)
     runtime = coarse.validate_runtime_identity(
-        timeiso_root, theme_root, expected_factorlab_commit, factorlab_root,
+        timeiso_root, repo_root, expected_factorlab_commit, factorlab_root,
     )
     xcoarse = fine.validate_xcoarse_reference(xcoarse_root, timeiso_root)
     clocks = {
