@@ -1,0 +1,103 @@
+{
+  "schema_id": "factorlab.r3_transfer_feature_store@1.0",
+  "clock": "1430",
+  "status": "prepared_features_only_not_scored",
+  "calendar_start": "2007-01-04",
+  "calendar_end": "2025-12-31",
+  "symbol_count": 3982,
+  "factor_count": 14,
+  "feature_dim": 71,
+  "sequence_points": 10,
+  "bindings": {
+    "reference_manifest": "sha256:265c1d7b6e319eca87401812a6b696473c44c838734897774c066da8184154ba",
+    "bundle_manifest": "sha256:7bea85a30f958a0cbcee95841840b51b6ecdc61f20be75dbf4281e57e99412be",
+    "selection": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+    "normalizer": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547"
+  },
+  "prefix_checks": {
+    "epsilon_history": {
+      "historical_cells_compared": 13562692,
+      "comparison": "exact_value_and_NaN_support",
+      "passed": true
+    },
+    "state_values": {
+      "historical_cells_compared": 286104,
+      "comparison": "exact_value_and_NaN_support",
+      "passed": true
+    },
+    "stock_factor_exposures": {
+      "historical_cells_compared": 32556832,
+      "comparison": "exact_value_and_NaN_support",
+      "passed": true
+    },
+    "exposure_reliability": {
+      "historical_cells_compared": 32556832,
+      "comparison": "exact_value_and_NaN_support",
+      "passed": true
+    },
+    "state_available": {
+      "historical_cells_compared": 286104,
+      "comparison": "exact_value_and_NaN_support",
+      "passed": true
+    },
+    "exposure_available": {
+      "historical_cells_compared": 32556832,
+      "comparison": "exact_value_and_NaN_support",
+      "passed": true
+    }
+  },
+  "historical_prefix_origin": "reused_accepted_arrays",
+  "prefix_check_is_independent_producer_replay": false,
+  "rows": {
+    "original_rows_preserved": 853732,
+    "prediction_rows": 931677,
+    "prediction_days": 242,
+    "maturity_eligible_rows": 916077,
+    "maturity_rule": "decision_position+20 < len(bounded_calendar)",
+    "maturity_is_not_finite_target_or_event_availability": true,
+    "support_rule": "finite_ten_H20_history_endpoints_AND_current_any_exposure",
+    "labels_used_for_support": false
+  },
+  "producer_sources": {
+    "files_verified": 6,
+    "roles": [
+      "filter_implementation",
+      "intraday_ot_producer",
+      "k1_store_helpers",
+      "ot1_helper",
+      "producer_bridge",
+      "timing_helper"
+    ],
+    "scope": "reported_loaded_files_rehashed_not_full_execution_trace",
+    "historical_source_identity_certified": false
+  },
+  "artifact_digests": {
+    "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+    "stock_factor_exposures.npy": "sha256:f75a381088088afc08e42618355b52b4ce71bccf8687aeb7d357a3b5ad9fdea2",
+    "state_available.npy": "sha256:60a1d4a01ec63cf86f7fc12d6849a4081507ee7d122e1987e696ee594742b620",
+    "daily_support.json": "sha256:4d1ff31c35c87b433337688acd8632533168161ac0c8f2950804f92757cc0529",
+    "inference_rows.npy": "sha256:0ac8fbf0bd1b6804e1b22b199842afcd41eea03290ecd0d3fae2d3842eda7c05",
+    "normalizer.json": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+    "feature_registry.json": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e",
+    "exposure_reliability.npy": "sha256:036898f2b7904f3be9bcda9ceef9273556a85fd0c56321967f89e724c941869e",
+    "state_values.npy": "sha256:9c3a4482557a7e2f8bd6f5f276ba7e4d39a8ff1f9dbaee549fab8cc2891108ae",
+    "exposure_available.npy": "sha256:7f596c6b752d9204404584ab32805d6bc6b1ed6d4d083548fe1f33aec328273f",
+    "maturity_eligible_indices.npy": "sha256:117ec68c2e9e2f60e8239a90d947c1d6ed2125f8f3c3fe8a3c264549fb923726",
+    "factor_ids.json": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+    "calendar.npy": "sha256:c5d64bccb2ffc2dc545345caba167c10effbd080c5fe9db0199e086495997e3c",
+    "exposure_decision_positions.npy": "sha256:abbebe6f1d6546e7602afbec05ced0bb8b2c9e9a6deb4fdf4749e7efe13daab3",
+    "epsilon_history.npy": "sha256:f228df8184ea03fe497e0e43804fa2dd2e6c6b000a1bb12bcb95eafac0636430",
+    "prediction_indices.npy": "sha256:cf8be375e669acdd065176756195ac691036a5f37e00aade52ea82eab51110f9",
+    "mapping.json": "sha256:1b5900f36a57c3e0545bc72a10e55fe1e9d9ab6b88b7e4e91886212be22199bf",
+    "frozen_selection.json": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+    "variant_ids.json": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986"
+  },
+  "raw_producer_execution": "local_report_not_reexecuted_by_assembler",
+  "new_model_fits": 0,
+  "new_inference": 0,
+  "checkpoint_reload": 0,
+  "labels_read": false,
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false
+}
