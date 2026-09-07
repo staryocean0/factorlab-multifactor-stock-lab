@@ -68,6 +68,49 @@ def load_scores(path: Path) -> dict[str, np.ndarray]:
     return coarse.load_scores(path)
 
 
+def _selected_cycle_is_minimum(fit: Mapping[str, Any]) -> bool:
+    cycles = list(fit.get("cycles", []))
+    selected = fit.get("selected_cycle")
+    selected_loss = fit.get("selected_canonical_loss")
+    if not cycles or selected not in (1, 2, 3):
+        return False
+    by_cycle = {int(row["cycle"]): float(row["canonical_train_loss"]) for row in cycles}
+    if set(by_cycle) - {1, 2, 3}:
+        return False
+    minimum = min(by_cycle.values())
+    return selected in by_cycle and abs(by_cycle[int(selected)] - float(selected_loss)) <= 1e-12 and abs(float(selected_loss) - minimum) <= 1e-12
+
+
+def validate_e_reference_files(xcoarse_clock: Path, common: Mapping[str, Any], seed: int, clock: str) -> dict[str, Any]:
+    """Bind the accepted E score to its frozen receipt/checkpoint/reload identity."""
+    root = xcoarse_clock / f"models/seed_{seed}/E"
+    receipt = read_json(root / "fit_receipt.json")
+    manifest = read_json(root / "checkpoint/manifest.json")
+    reload_spec = read_json(root / "reload_spec.json")
+    identity = dict(receipt.get("identity", {}))
+    if identity.get("arm") != "E" or identity.get("seed") != seed or identity.get("clock") != clock:
+        raise ValueError(f"accepted E identity mismatch: {clock}/{seed}")
+    for key in coarse.PAIR_FIELDS:
+        if identity.get(key) != common.get(key):
+            raise ValueError(f"accepted E frozen identity mismatch: {clock}/{seed}/{key}")
+    fit = dict(receipt.get("fit", {}))
+    if fit.get("future_target_values_read") != 0:
+        raise ValueError(f"accepted E fit read future target: {clock}/{seed}")
+    if int(fit.get("fit_rows", -1)) != 361628:
+        raise ValueError(f"accepted E fit-row drift: {clock}/{seed}")
+    if not _selected_cycle_is_minimum(fit):
+        raise ValueError(f"accepted E checkpoint selection drift: {clock}/{seed}")
+    checkpoint_digest = receipt.get("checkpoint_state_digest")
+    if not isinstance(checkpoint_digest, str) or manifest.get("state_digest") != checkpoint_digest:
+        raise ValueError(f"accepted E checkpoint digest mismatch: {clock}/{seed}")
+    if int(reload_spec.get("seed", -1)) != seed or reload_spec.get("device_name") != "cpu":
+        raise ValueError(f"accepted E reload identity mismatch: {clock}/{seed}")
+    output_name = Path(str(reload_spec.get("output_path", ""))).name
+    if output_name != "scores.npz":
+        raise ValueError(f"accepted E reload output mismatch: {clock}/{seed}")
+    return receipt
+
+
 def validate_xcoarse_reference(xcoarse_root: Path, timeiso_root: Path) -> dict[str, Any]:
     result = read_json(xcoarse_root / "result.json")
     runtime = read_json(xcoarse_root / "runtime_identity.json")
@@ -86,7 +129,7 @@ def validate_xcoarse_reference(xcoarse_root: Path, timeiso_root: Path) -> dict[s
     accepted_path = Path(str(result.get("accepted_timeiso_root", "")))
     if accepted_path.name not in {"accepted_view", timeiso_root.name}:
         # Local xcoarse may use an overlay named accepted_view. We bind content via
-        # per-clock reconstruction below instead of requiring path equality.
+        # per-seed identity and per-clock reconstruction instead of path equality.
         raise ValueError("unexpected xcoarse accepted TIMEISO reference")
     return {"result": result, "runtime_identity": runtime}
 
@@ -206,6 +249,7 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
         f_receipt = read_json(experiment / f"models/seed_{seed}/F/fit_receipt.json")
         h_receipt = read_json(experiment / f"models/seed_{seed}/H/fit_receipt.json")
         common = coarse.accepted_pair_common(f_receipt, h_receipt)
+        validate_e_reference_files(xcoarse_clock, common, seed, clock)
         refs = _reference_paths(timeiso_clock, xcoarse_clock, seed)
         reference_scores = {arm: load_scores(path) for arm, path in refs.items()}
         if not coarse._same_score_coordinates(reference_scores["F"], reference_scores["E"], reference_scores["H"]):
@@ -256,7 +300,7 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
             raise ValueError("labelled fine coordinates differ")
         frame = daily_fine({arm: labelled[arm]["scores"] for arm in ordered_raw}, base["targets"], base["rows"])
         row = {"clock": clock, "seed": seed}
-        for key in CONRASTS if False else CONTRASTS:
+        for key in CONTRASTS:
             row[key] = float(frame[key].mean())
         per_seed.append(row)
         for arm, payload in ordered_raw.items():
@@ -267,7 +311,8 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
     base = ensemble["F"]
     if not all(coarse._same_score_coordinates(base, row) for row in ensemble.values()):
         raise ValueError("ensemble fine support mismatch")
-    frame = daily_fine({arm: ensemble[arm]["scores"] for arm in ("F", "STATE_VALUE_PLUS_E", "E", "BETA_RELIABILITY", "BETA_ONLY", "H")}, base["targets"], base["rows"])
+    arm_order = ("F", "STATE_VALUE_PLUS_E", "E", "BETA_RELIABILITY", "BETA_ONLY", "H")
+    frame = daily_fine({arm: ensemble[arm]["scores"] for arm in arm_order}, base["targets"], base["rows"])
     coarse_frame = frame[["day_position", "F_minus_E", "E_minus_H", "F_minus_H"]].copy()
     verify_xcoarse_reconstruction(coarse_frame, xcoarse_clock / "paired_daily.csv")
     frame.to_csv(output_root / clock / "paired_daily.csv", index=False)
@@ -275,6 +320,7 @@ def run_clock(timeiso_root: Path, xcoarse_root: Path, output_root: Path, clock: 
     result = {
         "clock": clock, "new_fits": len(SEEDS) * len(NEW_ARMS), "new_arms": list(NEW_ARMS),
         "reference_refits": {"F": 0, "E": 0, "H": 0},
+        "accepted_E_identity_verified": True,
         "xcoarse_reconstruction_verified": True,
         "summary": summarize(frame), "per_seed": per_seed, "receipts": receipts,
     }
@@ -325,6 +371,7 @@ def run(timeiso_root: Path, xcoarse_root: Path, output_root: Path, reload_script
         "status": "completed_consumed_historical_only",
         "new_arms": list(NEW_ARMS), "new_fits": total,
         "reference_refits": {"F": 0, "E": 0, "H": 0},
+        "accepted_E_identity_verified": True,
         "max_cycles_per_fit": MAX_CYCLES_PER_FIT, "max_total_cycles": MAX_TOTAL_CYCLES,
         "clocks": clocks, "combined": combine_clocks(output_root),
         "interpretation": {
