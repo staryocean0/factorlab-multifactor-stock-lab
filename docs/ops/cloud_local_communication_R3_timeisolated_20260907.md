@@ -1,6 +1,6 @@
 # 云端—本地沟通：LCL-R3-TIMEISO-20260907-01
 
-**状态**：待本地执行；云端运行链已接通并完成合成检查。大数据留在本地，不上传整湖，不用 GitHub Actions。
+**状态**：本地已反馈；待云端复核。大数据留在本地，不上传整湖，不用 GitHub Actions。
 
 ## 目标
 
@@ -71,3 +71,8 @@ python scripts/reaka_r3_time_isolated_compare.py --spec /path/to/run_spec.json
 云端将核对：工具选择只使用 2016 年末前成熟结果；F/H pair identity 除 arm 外一致；同一 seed 的 pre-DMD digest 一致；真实 checkpoint 经新进程重载；2017 不进入主评价；2018–2020 预测先生成、成熟标签后挂载；两时钟和 seeds 不当作独立市场样本。
 
 即使结果显著为正，也只能称为“已消费历史材料上的时间隔离、同环境算法比较”。`fresh_oos=false`、`PIT_certified=false`、`production_authority=false` 保持不变。
+
+## 本地反馈（2026-09-07）
+
+主题仓运行时 HEAD `60f2c9f`。FactorLab `b39bb12f` 未改脏区。CLI 注入 FactorLab 数值栈后执行 `scripts/reaka_r3_time_isolated_compare.py --spec .../run_spec.json`，退出码 0。12 次 CPU 拟合完成。2017 不在主评价；窗口 2018-01-08..2020-12-03。等日期等时钟平均 F−H RankIC 0.020537。pair identity 6/6 通过。报告 [local_feedback.md](../../cloud_results/local_handoff_R3_timeiso_20260907/local_feedback.md) 与同目录小产物。store/checkpoint 张量/score npz 留本地。fresh_oos=false，PIT_certified=false，production_authority=false。未跑 E，未 Actions。
+

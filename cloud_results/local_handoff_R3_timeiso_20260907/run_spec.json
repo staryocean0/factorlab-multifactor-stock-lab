@@ -1,0 +1,16 @@
+{
+  "schema_id": "factorlab.r3_time_isolated_run_spec@1.0",
+  "output_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01",
+  "device_name": "cpu",
+  "expected_source_commit": "60f2c9ffb850b11f4858b914078177b1ab6f55eb",
+  "clocks": {
+    "1430": {
+      "ot_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430",
+      "p6_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal"
+    },
+    "1445": {
+      "ot_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445",
+      "p6_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal"
+    }
+  }
+}

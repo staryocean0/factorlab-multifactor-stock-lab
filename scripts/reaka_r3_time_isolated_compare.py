@@ -4,7 +4,28 @@ from __future__ import annotations
 import argparse, hashlib, json, os, platform, subprocess, sys
 from pathlib import Path
 import numpy as np
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/"src"))
+ROOT=Path(__file__).resolve().parents[1]
+FACTORLAB_ROOT=Path(os.environ.get("FACTORLAB_ROOT","/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab"))
+
+def _bootstrap():
+    """Load FactorLab numerical stack, then inject this theme's time-isolated modules."""
+    import importlib.util
+    src=str(FACTORLAB_ROOT/"src")
+    if src not in sys.path:
+        sys.path.insert(0,src)
+    import factor_lab.factor_rotation as pkg
+    theme=ROOT/"src/factor_lab/factor_rotation"
+    for name in ("reaka_r3_condition_views","reaka_r3_time_isolation","reaka_r3_time_isolated_runner"):
+        dest=f"factor_lab.factor_rotation.{name}"
+        spec=importlib.util.spec_from_file_location(dest, theme/f"{name}.py")
+        if spec is None or spec.loader is None:
+            raise RuntimeError(f"cannot load {name}")
+        mod=importlib.util.module_from_spec(spec)
+        sys.modules[dest]=mod
+        spec.loader.exec_module(mod)
+        setattr(pkg,name,mod)
+
+_bootstrap()
 from factor_lab.factor_rotation.reaka_r3_time_isolated_runner import prepare_store,reload_worker,run_clock
 
 def sha_file(p:Path):

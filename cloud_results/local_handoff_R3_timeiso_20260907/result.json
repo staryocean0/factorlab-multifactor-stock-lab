@@ -1,0 +1,902 @@
+{
+  "schema_id": "factorlab.r3_time_isolated_run_result@1.0",
+  "status": "completed_consumed_historical_only",
+  "source": {
+    "git_commit": "60f2c9ffb850b11f4858b914078177b1ab6f55eb",
+    "runner_sha256": "sha256:ee7036f1925ab61ed88cc96e79a0ee06af9bb2a75812a1a58f4aa2d4a61c3708",
+    "cli_sha256": "sha256:490ee35222584c381656f9d41e0536ef064328eae2a521785db6c14f51d4bd4d"
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-7.1.8+deb13-amd64-x86_64-with-glibc2.41",
+    "numpy": "2.2.4",
+    "pandas": "2.2.3",
+    "torch": "2.6.0+debian",
+    "device": "cpu",
+    "cuda_available": false,
+    "pid": 42611
+  },
+  "clocks": {
+    "1430": {
+      "prepared": {
+        "store_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/store",
+        "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+        "selected_tools": [
+          {
+            "economic_family_id": "industry",
+            "tool_id": "causal_haar_wavelet_bandpass",
+            "supported_years": 6,
+            "positive_increment_years": 4,
+            "positive_increment_share": 0.6666666666666666,
+            "median_incremental_net": 0.0013311829167754882,
+            "total_incremental_net": 0.0017407839658717277,
+            "total_candidate_net": 0.028466925628376844,
+            "positive_increment_concentration": 0.3213995231275495,
+            "eligible": true,
+            "selection_status": "retrospective_tool_selected"
+          },
+          {
+            "economic_family_id": "market",
+            "tool_id": "simple_moving_average_trend",
+            "supported_years": 8,
+            "positive_increment_years": 6,
+            "positive_increment_share": 0.75,
+            "median_incremental_net": 0.003943390844395735,
+            "total_incremental_net": 0.02933353859703479,
+            "total_candidate_net": 0.07963867283666344,
+            "positive_increment_concentration": 0.31771427523566703,
+            "eligible": true,
+            "selection_status": "retrospective_tool_selected"
+          },
+          {
+            "economic_family_id": "size",
+            "tool_id": "laplace_iir_mixed_bandpass",
+            "supported_years": 6,
+            "positive_increment_years": 4,
+            "positive_increment_share": 0.6666666666666666,
+            "median_incremental_net": 0.006539398879296358,
+            "total_incremental_net": 0.012907725281097088,
+            "total_candidate_net": 0.056074780779494626,
+            "positive_increment_concentration": 0.4146440619399546,
+            "eligible": true,
+            "selection_status": "retrospective_tool_selected"
+          }
+        ],
+        "manifest": {
+          "schema_id": "factorlab.reaka_intraday_K1_input_store@1.0",
+          "status": "materialized_result_free_intraday_K1_input",
+          "contract_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+          "decision_clock": "14:30",
+          "calendar_start": "2007-01-04",
+          "calendar_end": "2020-12-31",
+          "calendar_days": 3406,
+          "symbol_count": 3982,
+          "factor_count": 14,
+          "feature_dim": 71,
+          "sequence_points": 10,
+          "H_days": 20,
+          "inference_row_count": 853732,
+          "labelled_row_count": 827753,
+          "inference_without_label_count": 25979,
+          "inference_year_min": 2011,
+          "inference_year_max": 2020,
+          "phase_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "factor_ids_digest": "sha256:67128a192242cf66cc6bf03fa3c2f245ae7bd81d014ee551109b28c795e6464e",
+          "variant_ids_digest": "sha256:6a2a96979179a09f36e9afd696de6e25533d61ac4442a43a5d026b2882e782ce",
+          "feature_registry_digest": "sha256:ef5a92688ae207b7eaa3da60b219d238754fa4219d815d7a069947c7507d4159",
+          "artifact_digests": {
+            "calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+            "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+            "epsilon_history.npy": "sha256:a84ce2e177915542857ce8842bffb3ebc60ef937430fbc6dad90960b083b8a19",
+            "epsilon_future.npy": "sha256:83018e8b0bdf61a37d61ef5a43dac0a25cd26833af53da62590e39d4b1344953",
+            "state_values.npy": "sha256:dacc1fd57f8fb80ab40a505e9cb953507a211ba64dac7125f2de8682fd258dc6",
+            "state_available.npy": "sha256:054fa59a5fbedb7e6811921511b1029d245978fe36a62d5b30fc39d94c18475d",
+            "exposure_decision_positions.npy": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+            "stock_factor_exposures.npy": "sha256:28c3a6f5ef0304e18ec6db4f43b2a2baa7cedf5781a00a9541ea0ff6febba4b6",
+            "exposure_reliability.npy": "sha256:56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e",
+            "exposure_available.npy": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+            "inference_rows.npy": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+            "labelled_row_indices.npy": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+            "factor_ids.json": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+            "variant_ids.json": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+            "feature_registry.json": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e"
+          },
+          "target_used_to_filter_inference": false,
+          "entry_used_to_filter_inference": false,
+          "post_2020_rows_read": 0,
+          "model_training_run": false,
+          "score_run": false,
+          "account_run": false,
+          "production_authority": false,
+          "canonical_digest": "sha256:0b5412c4e5b5f30b31f408c5801539187c0fc4a15d3974056adfa9c2d8a253a4"
+        }
+      },
+      "result": {
+        "schema_id": "factorlab.r3_time_isolated_clock_result@1.0",
+        "clock": "1430",
+        "prediction_rows": 408446,
+        "labelled_rows": 393431,
+        "days": 142,
+        "mean_delta_rankic": 0.019232554083375177,
+        "median_delta_rankic": 0.016500260834852995,
+        "win_days": 115,
+        "bootstrap": {
+          "4": {
+            "mean": 0.019232554083375177,
+            "lower": 0.008786858515107644,
+            "upper": 0.02945655577252431,
+            "block_length": 4,
+            "draws": 5000,
+            "seed": 61207
+          },
+          "8": {
+            "mean": 0.019232554083375177,
+            "lower": 0.00771470803873073,
+            "upper": 0.03118738357302936,
+            "block_length": 8,
+            "draws": 5000,
+            "seed": 61207
+          },
+          "12": {
+            "mean": 0.019232554083375177,
+            "lower": 0.006764320349721802,
+            "upper": 0.030834825993895924,
+            "block_length": 12,
+            "draws": 5000,
+            "seed": 61207
+          }
+        },
+        "seed_receipts": {
+          "F": [
+            {
+              "fit": {
+                "seed": 11,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.3287419953136281,
+                    "canonical_train_loss": 0.8324463963508606
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9720708410248884,
+                    "canonical_train_loss": 0.8099874258041382
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9615106443471576,
+                    "canonical_train_loss": 0.8037291169166565
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.8037291169166565,
+                "DMD_initialization": {
+                  "ridge": 2.3690094623008284,
+                  "pre_projection_spectral_radius": 0.9928142080741109,
+                  "projected_spectral_radius": 0.9928142080741109,
+                  "condition_number": 4.872808858438153,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "206afcdac272335f8752a55c3db55829a8806dd2e9d682f53802626f6717f68f"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "F",
+                "seed": 11,
+                "clock": "1430",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+                "normalizer_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:9d6493ad2c6c7751b746a432d7d271dd8f52f9ecad53b78f792bbd9ae78e99b9",
+                "batch_order_digest": "sha256:0493cb75d6c63991e8ad0ea4c1bd62954e3e563d0a569908fa7f4a71978cc24c"
+              },
+              "checkpoint_state_digest": "sha256:8a6c38b892c9fefc77015a9f56b34620db234bd82f293ea011fc4e6ebbe8a026"
+            },
+            {
+              "fit": {
+                "seed": 29,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.2149867073802638,
+                    "canonical_train_loss": 0.8163921236991882
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9616528433533041,
+                    "canonical_train_loss": 0.8188310265541077
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9528149541295642,
+                    "canonical_train_loss": 0.7886447906494141
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.7886447906494141,
+                "DMD_initialization": {
+                  "ridge": 1.504177794608971,
+                  "pre_projection_spectral_radius": 0.994013894469369,
+                  "projected_spectral_radius": 0.994013894469369,
+                  "condition_number": 7.229483129578809,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "b5d2367b3d0f29957e5443c696e953c70b69fbbc039b90f5b3b3eb7d3090eb1b"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "F",
+                "seed": 29,
+                "clock": "1430",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+                "normalizer_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:1f7c46ceac67a14c7e31479471e738d6c955d49c83eb4e3fc244abf24b50953a",
+                "batch_order_digest": "sha256:c0d2c1e81792ebfbcfb3d40a3403d4833d49c7106766f3741993b1970c881f63"
+              },
+              "checkpoint_state_digest": "sha256:a1b926fe27fa8edcc16d15c709bcfe4c35ddf289f50733c5fe1eaa8595009a14"
+            },
+            {
+              "fit": {
+                "seed": 47,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.203985664802371,
+                    "canonical_train_loss": 0.8152919411659241
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9732780029934659,
+                    "canonical_train_loss": 0.8092303276062012
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9633994853655968,
+                    "canonical_train_loss": 0.795578122138977
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.795578122138977,
+                "DMD_initialization": {
+                  "ridge": 2.130893495030795,
+                  "pre_projection_spectral_radius": 0.9941523347110822,
+                  "projected_spectral_radius": 0.9941523347110822,
+                  "condition_number": 2.472406503934719,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "da46350736d3c238f99e6eafb2ab2cba0d5c8de2d31e493aea0e12e3fe790f8c"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "F",
+                "seed": 47,
+                "clock": "1430",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+                "normalizer_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:31095efc85ec4743772c45a5aac2f20486479444abb424c0b90d9e4b1096c6ff",
+                "batch_order_digest": "sha256:d99c8b9c8f7ae170cd8a2474f30d39dc5f71a0690eb750c2c1ba3cf9788a4b46"
+              },
+              "checkpoint_state_digest": "sha256:d5df497cbd85ddc061f188deb006a6d71d524175c29d492d9da1d2e01eacf1fe"
+            }
+          ],
+          "H": [
+            {
+              "fit": {
+                "seed": 11,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.14857542341539,
+                    "canonical_train_loss": 0.821243405342102
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9704712947163087,
+                    "canonical_train_loss": 0.8179348707199097
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9639598950416501,
+                    "canonical_train_loss": 0.8127118349075317
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.8127118349075317,
+                "DMD_initialization": {
+                  "ridge": 0.13835211639406583,
+                  "pre_projection_spectral_radius": 0.9368678695331276,
+                  "projected_spectral_radius": 0.9368678695331276,
+                  "condition_number": 1164.2452033121547,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "7b54949a41ed90f49521ec9422188217f70c11fbc9cf1ccc562535e156d6212a"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "H",
+                "seed": 11,
+                "clock": "1430",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+                "normalizer_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:9d6493ad2c6c7751b746a432d7d271dd8f52f9ecad53b78f792bbd9ae78e99b9",
+                "batch_order_digest": "sha256:0493cb75d6c63991e8ad0ea4c1bd62954e3e563d0a569908fa7f4a71978cc24c"
+              },
+              "checkpoint_state_digest": "sha256:7bf75bbe4e9e90c459e70b9a0526e22fdccc2e8f34e759c225784a789bb1c310"
+            },
+            {
+              "fit": {
+                "seed": 29,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.1412546729533057,
+                    "canonical_train_loss": 0.8174643516540527
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9742831960113619,
+                    "canonical_train_loss": 0.8157838582992554
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.964269375601189,
+                    "canonical_train_loss": 0.8154096603393555
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.8154096603393555,
+                "DMD_initialization": {
+                  "ridge": 0.11960685735913992,
+                  "pre_projection_spectral_radius": 0.9291122142477002,
+                  "projected_spectral_radius": 0.9291122142477002,
+                  "condition_number": 796.8714796095874,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "5cf933bd1fd393a21e745b591dae6d3eb48549978c0f09713e1869fab0448656"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "H",
+                "seed": 29,
+                "clock": "1430",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+                "normalizer_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:1f7c46ceac67a14c7e31479471e738d6c955d49c83eb4e3fc244abf24b50953a",
+                "batch_order_digest": "sha256:c0d2c1e81792ebfbcfb3d40a3403d4833d49c7106766f3741993b1970c881f63"
+              },
+              "checkpoint_state_digest": "sha256:a6ee715897a5eeeea64ce042dfa5eb3cde5f2b5be2dd5fd14c47463abf0ddac2"
+            },
+            {
+              "fit": {
+                "seed": 47,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.1654422021855486,
+                    "canonical_train_loss": 0.8216708302497864
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9740902770858718,
+                    "canonical_train_loss": 0.8304837346076965
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9647687480224647,
+                    "canonical_train_loss": 0.8168904781341553
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.8168904781341553,
+                "DMD_initialization": {
+                  "ridge": 0.23811882240081272,
+                  "pre_projection_spectral_radius": 0.9460747509181742,
+                  "projected_spectral_radius": 0.9460747509181742,
+                  "condition_number": 493.0466869143662,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "0d3235010fa43627a03e6d599e69b62769b489ce80a1991726652b29f79e5123"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "H",
+                "seed": 47,
+                "clock": "1430",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+                "normalizer_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:31095efc85ec4743772c45a5aac2f20486479444abb424c0b90d9e4b1096c6ff",
+                "batch_order_digest": "sha256:d99c8b9c8f7ae170cd8a2474f30d39dc5f71a0690eb750c2c1ba3cf9788a4b46"
+              },
+              "checkpoint_state_digest": "sha256:fd9b9615a55b43ca43dcc01c259d0c87aea4b3bc10622dda03d719de3d741813"
+            }
+          ]
+        },
+        "fresh_oos": false,
+        "PIT_certified": false,
+        "production_authority": false
+      }
+    },
+    "1445": {
+      "prepared": {
+        "store_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1445/prepared/store",
+        "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+        "selected_tools": [
+          {
+            "economic_family_id": "industry",
+            "tool_id": "causal_haar_wavelet_bandpass",
+            "supported_years": 6,
+            "positive_increment_years": 4,
+            "positive_increment_share": 0.6666666666666666,
+            "median_incremental_net": 0.0014510712348682242,
+            "total_incremental_net": 0.0021331766097817313,
+            "total_candidate_net": 0.028388107290576323,
+            "positive_increment_concentration": 0.3217197446011232,
+            "eligible": true,
+            "selection_status": "retrospective_tool_selected"
+          },
+          {
+            "economic_family_id": "market",
+            "tool_id": "simple_moving_average_trend",
+            "supported_years": 8,
+            "positive_increment_years": 6,
+            "positive_increment_share": 0.75,
+            "median_incremental_net": 0.004469581188422572,
+            "total_incremental_net": 0.02497263271993313,
+            "total_candidate_net": 0.07965842960504194,
+            "positive_increment_concentration": 0.3063517173364117,
+            "eligible": true,
+            "selection_status": "retrospective_tool_selected"
+          },
+          {
+            "economic_family_id": "size",
+            "tool_id": "laplace_iir_mixed_bandpass",
+            "supported_years": 6,
+            "positive_increment_years": 4,
+            "positive_increment_share": 0.6666666666666666,
+            "median_incremental_net": 0.008536480475835675,
+            "total_incremental_net": 0.018338619490238486,
+            "total_candidate_net": 0.05471227160902038,
+            "positive_increment_concentration": 0.40813428675759467,
+            "eligible": true,
+            "selection_status": "retrospective_tool_selected"
+          }
+        ],
+        "manifest": {
+          "schema_id": "factorlab.reaka_intraday_K1_input_store@1.0",
+          "status": "materialized_result_free_intraday_K1_input",
+          "contract_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+          "decision_clock": "14:45",
+          "calendar_start": "2007-01-04",
+          "calendar_end": "2020-12-31",
+          "calendar_days": 3406,
+          "symbol_count": 3982,
+          "factor_count": 14,
+          "feature_dim": 71,
+          "sequence_points": 10,
+          "H_days": 20,
+          "inference_row_count": 853732,
+          "labelled_row_count": 827753,
+          "inference_without_label_count": 25979,
+          "inference_year_min": 2011,
+          "inference_year_max": 2020,
+          "phase_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "factor_ids_digest": "sha256:67128a192242cf66cc6bf03fa3c2f245ae7bd81d014ee551109b28c795e6464e",
+          "variant_ids_digest": "sha256:6a2a96979179a09f36e9afd696de6e25533d61ac4442a43a5d026b2882e782ce",
+          "feature_registry_digest": "sha256:ef5a92688ae207b7eaa3da60b219d238754fa4219d815d7a069947c7507d4159",
+          "artifact_digests": {
+            "calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+            "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+            "epsilon_history.npy": "sha256:da866ef0e967d8289f08872b797d16473081488f6352fc213848e2b3ff235bac",
+            "epsilon_future.npy": "sha256:109e39090aaee744679ed12e176e48ec534583b99269ac2f1a24d8f3d9edc90a",
+            "state_values.npy": "sha256:780fc63a318ffa10bb09cbd1f7cceb1e8f58c4683f74b21a8cea01419263f325",
+            "state_available.npy": "sha256:054fa59a5fbedb7e6811921511b1029d245978fe36a62d5b30fc39d94c18475d",
+            "exposure_decision_positions.npy": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+            "stock_factor_exposures.npy": "sha256:d4bf3d17869a7564231f76ab55fd8687d5d7e6c89c57cc9a6492d07da745b38c",
+            "exposure_reliability.npy": "sha256:603bf38ebe0562b829001ddd9b3009313a2914a65b4e8e61525501e20f956b0c",
+            "exposure_available.npy": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+            "inference_rows.npy": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+            "labelled_row_indices.npy": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+            "factor_ids.json": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+            "variant_ids.json": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+            "feature_registry.json": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e"
+          },
+          "target_used_to_filter_inference": false,
+          "entry_used_to_filter_inference": false,
+          "post_2020_rows_read": 0,
+          "model_training_run": false,
+          "score_run": false,
+          "account_run": false,
+          "production_authority": false,
+          "canonical_digest": "sha256:e43abd61af0d40a5beefd42e4eeffbaf3476e45e446088597344b6cd78f674a9"
+        }
+      },
+      "result": {
+        "schema_id": "factorlab.r3_time_isolated_clock_result@1.0",
+        "clock": "1445",
+        "prediction_rows": 408446,
+        "labelled_rows": 393431,
+        "days": 142,
+        "mean_delta_rankic": 0.021841094758399272,
+        "median_delta_rankic": 0.02045023369739679,
+        "win_days": 110,
+        "bootstrap": {
+          "4": {
+            "mean": 0.021841094758399272,
+            "lower": 0.00957367626453248,
+            "upper": 0.033416285072815875,
+            "block_length": 4,
+            "draws": 5000,
+            "seed": 61207
+          },
+          "8": {
+            "mean": 0.021841094758399272,
+            "lower": 0.008947179961595223,
+            "upper": 0.035076500921452224,
+            "block_length": 8,
+            "draws": 5000,
+            "seed": 61207
+          },
+          "12": {
+            "mean": 0.021841094758399272,
+            "lower": 0.008020203712134097,
+            "upper": 0.03424138264324696,
+            "block_length": 12,
+            "draws": 5000,
+            "seed": 61207
+          }
+        },
+        "seed_receipts": {
+          "F": [
+            {
+              "fit": {
+                "seed": 11,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.328917690872868,
+                    "canonical_train_loss": 0.8338940739631653
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9733699376282172,
+                    "canonical_train_loss": 0.80858314037323
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9616980081496865,
+                    "canonical_train_loss": 0.8067700862884521
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.8067700862884521,
+                "DMD_initialization": {
+                  "ridge": 2.375515567311505,
+                  "pre_projection_spectral_radius": 0.992859629995358,
+                  "projected_spectral_radius": 0.992859629995358,
+                  "condition_number": 4.8722549823019,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "2f43aa3e72651467736cac0a2197b3ffbddec91bd1994f5ef424ad87d25dc397"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "F",
+                "seed": 11,
+                "clock": "1445",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+                "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:9d6493ad2c6c7751b746a432d7d271dd8f52f9ecad53b78f792bbd9ae78e99b9",
+                "batch_order_digest": "sha256:0493cb75d6c63991e8ad0ea4c1bd62954e3e563d0a569908fa7f4a71978cc24c"
+              },
+              "checkpoint_state_digest": "sha256:9c9a2fecec18ac4b5df8323b817d2217bd5b3b918e43653deafe58610c9041d3"
+            },
+            {
+              "fit": {
+                "seed": 29,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.2149491289167318,
+                    "canonical_train_loss": 0.8090910315513611
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9614676248248364,
+                    "canonical_train_loss": 0.818414032459259
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9538205478205274,
+                    "canonical_train_loss": 0.7893511056900024
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.7893511056900024,
+                "DMD_initialization": {
+                  "ridge": 1.507903401485126,
+                  "pre_projection_spectral_radius": 0.9938670316766409,
+                  "projected_spectral_radius": 0.9938670316766409,
+                  "condition_number": 7.243175782359931,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "a613997b32bcc4d71dc65845c56f54a35265524ea9d826f1ef929f9ebb54173d"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "F",
+                "seed": 29,
+                "clock": "1445",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+                "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:1f7c46ceac67a14c7e31479471e738d6c955d49c83eb4e3fc244abf24b50953a",
+                "batch_order_digest": "sha256:c0d2c1e81792ebfbcfb3d40a3403d4833d49c7106766f3741993b1970c881f63"
+              },
+              "checkpoint_state_digest": "sha256:12de4e5d11bc6ce4bc293009ff63d140d037afe00547afa782b4fa9ea00c4d86"
+            },
+            {
+              "fit": {
+                "seed": 47,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.2040029283419422,
+                    "canonical_train_loss": 0.8202567100524902
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.973302215678937,
+                    "canonical_train_loss": 0.8075795769691467
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9635299374682822,
+                    "canonical_train_loss": 0.7962048649787903
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.7962048649787903,
+                "DMD_initialization": {
+                  "ridge": 2.132658759482214,
+                  "pre_projection_spectral_radius": 0.9941441254422354,
+                  "projected_spectral_radius": 0.9941441254422354,
+                  "condition_number": 2.4843817288476555,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "bdec1af09df2e83a367c3de6ec67102b7fae72c331982632cd63c5067f2c0d53"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "F",
+                "seed": 47,
+                "clock": "1445",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+                "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:31095efc85ec4743772c45a5aac2f20486479444abb424c0b90d9e4b1096c6ff",
+                "batch_order_digest": "sha256:d99c8b9c8f7ae170cd8a2474f30d39dc5f71a0690eb750c2c1ba3cf9788a4b46"
+              },
+              "checkpoint_state_digest": "sha256:4e6381479ba4674bb1adb3e6529eba9d14c78687393e576ec753f39d7f93bd01"
+            }
+          ],
+          "H": [
+            {
+              "fit": {
+                "seed": 11,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.1516226740336595,
+                    "canonical_train_loss": 0.8232207298278809
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9705366601588691,
+                    "canonical_train_loss": 0.8130383491516113
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9628799704905837,
+                    "canonical_train_loss": 0.821039617061615
+                  }
+                ],
+                "selected_cycle": 2,
+                "selected_canonical_loss": 0.8130383491516113,
+                "DMD_initialization": {
+                  "ridge": 0.138337722564322,
+                  "pre_projection_spectral_radius": 0.9369108819564633,
+                  "projected_spectral_radius": 0.9369108819564633,
+                  "condition_number": 1181.2313555015419,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "efc34d39d5dcd5d7f2383b70ba20d0503ca60e20b2d227be8eca75878d52b7fb"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "H",
+                "seed": 11,
+                "clock": "1445",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+                "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:9d6493ad2c6c7751b746a432d7d271dd8f52f9ecad53b78f792bbd9ae78e99b9",
+                "batch_order_digest": "sha256:0493cb75d6c63991e8ad0ea4c1bd62954e3e563d0a569908fa7f4a71978cc24c"
+              },
+              "checkpoint_state_digest": "sha256:1233785fac2d577de1a05fb129e098e72e52b17994d500eb0e51b6036b9c9116"
+            },
+            {
+              "fit": {
+                "seed": 29,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.1417541051737174,
+                    "canonical_train_loss": 0.8180088400840759
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.970088779831362,
+                    "canonical_train_loss": 0.8175131678581238
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.964658533829821,
+                    "canonical_train_loss": 0.8127784132957458
+                  }
+                ],
+                "selected_cycle": 3,
+                "selected_canonical_loss": 0.8127784132957458,
+                "DMD_initialization": {
+                  "ridge": 0.1196311586265299,
+                  "pre_projection_spectral_radius": 0.9290521780688392,
+                  "projected_spectral_radius": 0.9290521780688392,
+                  "condition_number": 776.5155203614685,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "aabdb538c4b763522d66f1b052c901a6d982c6245e34fecb47766a96ab934861"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "H",
+                "seed": 29,
+                "clock": "1445",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+                "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:1f7c46ceac67a14c7e31479471e738d6c955d49c83eb4e3fc244abf24b50953a",
+                "batch_order_digest": "sha256:c0d2c1e81792ebfbcfb3d40a3403d4833d49c7106766f3741993b1970c881f63"
+              },
+              "checkpoint_state_digest": "sha256:5ffefa6f873e19160cc5dbe166202c0cf51e8e2726490bbcac043681dcfd9d45"
+            },
+            {
+              "fit": {
+                "seed": 47,
+                "cycles": [
+                  {
+                    "cycle": 1,
+                    "mean_train_loss": 1.1680816246792938,
+                    "canonical_train_loss": 0.8195386528968811
+                  },
+                  {
+                    "cycle": 2,
+                    "mean_train_loss": 0.9728643197765253,
+                    "canonical_train_loss": 0.8181875348091125
+                  },
+                  {
+                    "cycle": 3,
+                    "mean_train_loss": 0.9648664460156926,
+                    "canonical_train_loss": 0.8232921957969666
+                  }
+                ],
+                "selected_cycle": 2,
+                "selected_canonical_loss": 0.8181875348091125,
+                "DMD_initialization": {
+                  "ridge": 0.2381427489470718,
+                  "pre_projection_spectral_radius": 0.9460864184508011,
+                  "projected_spectral_radius": 0.9460864184508011,
+                  "condition_number": 491.76742682465147,
+                  "raw_transition_count": 361628,
+                  "operator_digest": "1fa96c15158ce01dae32efbc4606fc3da7bb8dc0dcba44e980b3769e8486b118"
+                },
+                "fit_rows": 361628,
+                "future_target_values_read": 0
+              },
+              "identity": {
+                "arm": "H",
+                "seed": 47,
+                "clock": "1445",
+                "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+                "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+                "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+                "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+                "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+                "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+                "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+                "pre_dmd_state_digest": "sha256:31095efc85ec4743772c45a5aac2f20486479444abb424c0b90d9e4b1096c6ff",
+                "batch_order_digest": "sha256:d99c8b9c8f7ae170cd8a2474f30d39dc5f71a0690eb750c2c1ba3cf9788a4b46"
+              },
+              "checkpoint_state_digest": "sha256:51ffa4cf62f8c451796b87e72831a3ad0cb3fe8a0c63deef30eee1de4899db6d"
+            }
+          ]
+        },
+        "fresh_oos": false,
+        "PIT_certified": false,
+        "production_authority": false
+      }
+    }
+  },
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false
+}

@@ -1,0 +1,49 @@
+{
+  "fit": {
+    "seed": 29,
+    "cycles": [
+      {
+        "cycle": 1,
+        "mean_train_loss": 1.1417541051737174,
+        "canonical_train_loss": 0.8180088400840759
+      },
+      {
+        "cycle": 2,
+        "mean_train_loss": 0.970088779831362,
+        "canonical_train_loss": 0.8175131678581238
+      },
+      {
+        "cycle": 3,
+        "mean_train_loss": 0.964658533829821,
+        "canonical_train_loss": 0.8127784132957458
+      }
+    ],
+    "selected_cycle": 3,
+    "selected_canonical_loss": 0.8127784132957458,
+    "DMD_initialization": {
+      "ridge": 0.1196311586265299,
+      "pre_projection_spectral_radius": 0.9290521780688392,
+      "projected_spectral_radius": 0.9290521780688392,
+      "condition_number": 776.5155203614685,
+      "raw_transition_count": 361628,
+      "operator_digest": "aabdb538c4b763522d66f1b052c901a6d982c6245e34fecb47766a96ab934861"
+    },
+    "fit_rows": 361628,
+    "future_target_values_read": 0
+  },
+  "identity": {
+    "arm": "H",
+    "seed": 29,
+    "clock": "1445",
+    "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+    "source_digest": "sha256:441e187a69135e907021f91144eb343ce82df15a424d86ce79570b0e495b465e",
+    "environment_digest": "sha256:e98bce9d7ca1042e40880a2a06bd5b4d890f1153ce2d9069e1209f56ca92c0f0",
+    "selection_digest": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+    "normalizer_digest": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5",
+    "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+    "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+    "pre_dmd_state_digest": "sha256:1f7c46ceac67a14c7e31479471e738d6c955d49c83eb4e3fc244abf24b50953a",
+    "batch_order_digest": "sha256:c0d2c1e81792ebfbcfb3d40a3403d4833d49c7106766f3741993b1970c881f63"
+  },
+  "checkpoint_state_digest": "sha256:5ffefa6f873e19160cc5dbe166202c0cf51e8e2726490bbcac043681dcfd9d45"
+}
