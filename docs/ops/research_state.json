@@ -1,7 +1,7 @@
 {
   "schema_id": "factorlab.research_state@1.0",
   "as_of": "2026-09-07",
-  "current_task": "r3_infoclock_review_complete_transfer_inputs_not_ready",
+  "current_task": "r3_transfer_feature_adapter_tested_local_source_bridge_pending",
   "strategy_goal": "fully_invested_active_long_A_share_cross_sectional_selection",
   "incumbent_identity": "d8-h8-K1-r0_fit_prefix_successor",
   "last_verified_input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
@@ -113,7 +113,7 @@
   "fresh_oos": false,
   "scientific_acceptance": "not_established",
   "production_authority": false,
-  "next_useful_action": "云端制定同定义2021–2025输入重建与映射规格，先固定实际生产器快照、因子顺序和原股票位置/fold，保留2016工具及normalizer与原checkpoint。INFOCLOCK已completed_with_limits，不重跑七数组审计；动态state-mask解释已收窄为算法迁移问题，reliability仍为待验证质量候选。同schema迁移输入未就绪，24个评分任务未执行，本地暂无新任务。不得直接套用5894股票且含2026的不同schema产物，不重训、不猜月度公式、不读2026。",
+  "next_useful_action": "执行LCL-R3-TRANSFER-INPUT-20260907-01：本地在实际已加载生产源码快照下延伸2021–2025同定义特征源包，再用云端已测试的双时钟映射/前缀构建器发布无标签特征仓；网络拟合/推理/checkpoint重载均为0。允许所需原配方滚动OLS与固定滤波，另报范围。INFOCLOCK不重复；24项跨期评分未启动。",
   "research_directions_not_a_mandatory_sequence": [
     {
       "question": "现任金融epsilon是否在正确时点、同一收益区间构造？",
@@ -132,8 +132,8 @@
     }
   ],
   "r3": {
-    "status": "infoclock_review_complete_mask_constant_transfer_not_ready",
-    "report": "cloud_results/local_handoff_R3_infoclock_20260907/cloud_acceptance/cloud_review.md",
+    "status": "transfer_feature_adapter_ready_source_bundle_not_yet_built",
+    "report": "docs/ops/r3_transfer_input_rebuild_20260907.md",
     "checks": "cloud_results/local_handoff_R3_infoclock_20260907/cloud_acceptance/execution_receipt.json",
     "initial_report": "docs/ops/r3_evidence_use_adjudication_20260906.md",
     "evidence": "cloud_results/r3_evidence_use_20260906/",
@@ -174,7 +174,7 @@
       "repeated_at_publication_not_additional_market_evidence": true
     },
     "cloud_checks_scope_note": "Initial-authoring/publication checks and nofit_cloud_acceptance are historical completed scopes. The current condition_cloud_review is separate, not additive market evidence.",
-    "new_local_task_required": false,
+    "new_local_task_required": true,
     "r2_reopened": false,
     "full_pit_certified": false,
     "fresh_oos": false,
@@ -427,12 +427,12 @@
       "local_checkpoint_directories_reported_present": 24
     },
     "transfer_readiness_after_infoclock": {
-      "status": "same_definition_inputs_missing_no_scoring",
+      "status": "feature_adapter_integrated_synthetic_tests_passed_real_source_bridge_pending",
       "owner": "cloud_next_design_and_implementation",
       "existing_plan": "docs/ops/r3_information_clock_transfer_plan_20260907.json",
       "model_fits": 0,
       "score_jobs_executed": 0,
-      "new_local_task_required": false,
+      "new_local_task_required": true,
       "mask_contrast_claim": "algorithm_transfer_not_dynamic_mask_signal",
       "reliability_contrast_claim": "candidate_quality_feature_not_PIT_or_generalization_certified",
       "reported_input_calendar_end": "2020-12-31",
@@ -444,6 +444,32 @@
       },
       "historical_arrival_time": "unknown",
       "source_note": "Current untracked intraday producer and dirty timing helper are not bound merely by FactorLab HEAD; no claim of historical drift during runs."
+    },
+    "transfer_input_task": {
+      "id": "LCL-R3-TRANSFER-INPUT-20260907-01",
+      "status": "awaiting_local_source_bridge_and_feature_build",
+      "instruction": "docs/ops/cloud_local_communication_R3_transfer_inputs_20260907.md",
+      "script": "scripts/reaka_r3_build_transfer_inputs.py",
+      "module": "src/factor_lab/factor_rotation/reaka_r3_transfer_inputs.py",
+      "cloud_receipt": "cloud_results/r3_transfer_inputs_20260907/execution_receipt.json",
+      "new_tests_passed": 53,
+      "targeted_regression_tests_passed": 88,
+      "cloud_real_arrays_read": false,
+      "cloud_raw_producer_bridge_implemented": false,
+      "cloud_feature_bundle_to_store_integration_tested": true,
+      "historical_prefix_check": "exact_value_and_NaN_support_with_copy_or_replay_origin_disclosed",
+      "symbol_fold_identity_preserved": true,
+      "normalizer_refit": false,
+      "selection_refit": false,
+      "new_model_fits": 0,
+      "new_inference": 0,
+      "checkpoint_reload": 0,
+      "local_rolling_feature_statistics_allowed": true,
+      "future_labels_used_for_features": false,
+      "transfer_scoring_runner_integrated": false,
+      "PIT_certified": false,
+      "fresh_oos": false,
+      "production_authority": false
     }
   }
 }

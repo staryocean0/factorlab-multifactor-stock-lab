@@ -1,0 +1,68 @@
+{
+  "schema_id": "factorlab.r3_transfer_inputs_cloud_execution@1.0",
+  "source_base_commit": "c35ad8329f321301cfb5d2d774a260c4aa06aa40",
+  "task_id": "LCL-R3-TRANSFER-INPUT-20260907-01",
+  "command": "python -m pytest -q tests/unit/test_reaka_r3_transfer_inputs.py tests/unit/test_reaka_r3_information_clock_audit.py --junitxml=cloud_results/r3_transfer_inputs_20260907/targeted_tests.junit.xml",
+  "tests": 88,
+  "new_transfer_tests": 53,
+  "unchanged_infoclock_regression_tests": 35,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "fresh_process_two_clock_synthetic_build": true,
+  "independent_scalar_71_channel_check": true,
+  "py_compile": "passed",
+  "scope": "Synthetic bounded feature bundle to two-clock store, original-prefix and fold/axis mapping, immutable normalizer and label-free input assembly. No raw financial producer or actual model forward.",
+  "real_arrays_read": false,
+  "raw_source_bridge_implemented_in_cloud": false,
+  "new_model_fits": 0,
+  "new_model_inference": 0,
+  "checkpoint_reload": 0,
+  "full_FactorLab_or_repository_tests_executed": false,
+  "actions_executed": false,
+  "PIT_certified": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "files": {
+    "src/factor_lab/factor_rotation/reaka_r3_transfer_inputs.py": {
+      "bytes": 26175,
+      "git_blob": "353574896cb478489f7cdcba58697965a48f06e8",
+      "raw_sha256": "sha256:20f7416697664b6a285c2aa261999c889e0945fbd86ded9f0ce6977d22634baf"
+    },
+    "scripts/reaka_r3_build_transfer_inputs.py": {
+      "bytes": 1297,
+      "git_blob": "fa9d834574207d37eef19ac983a64110552d2543",
+      "raw_sha256": "sha256:9fec8eede75567137acfdee1bcb290da40253443279dfe42e159dc527be288d2"
+    },
+    "tests/unit/test_reaka_r3_transfer_inputs.py": {
+      "bytes": 20700,
+      "git_blob": "9ea956b045a2dbd94618c55fc20fa18b7f49c4b9",
+      "raw_sha256": "sha256:7aaae8b798609b3293fd52e02c373e59f3c966cf13c0637aaf4e01f81a2b3a30"
+    },
+    "docs/ops/r3_transfer_input_rebuild_20260907.md": {
+      "bytes": 8947,
+      "git_blob": "0514702297323d7343122a77c2dd879380768824",
+      "raw_sha256": "sha256:10cc3c93131afaaa888d4f615894e665e78b78f829395d3206cdc1a252e93df6"
+    },
+    "docs/ops/cloud_local_communication_R3_transfer_inputs_20260907.md": {
+      "bytes": 6311,
+      "git_blob": "505d20cea3e2d77a65847dc406a036d2af7e52b7",
+      "raw_sha256": "sha256:457ffa2aa855c6ba46a275aa3e9fe5b5b204b050d8c1bfb42611086cba8a365b"
+    },
+    "docs/ops/research_state.json": {
+      "bytes": 26503,
+      "git_blob": "04e53de5fef50f6d40e7652f0f586616bc2fe5c9",
+      "raw_sha256": "sha256:9d5d21748647404cf832b6a005a64495d752460a1f70fee9565f85a541ea7fd6"
+    },
+    "docs/ops/cloud_local_communication.md": {
+      "bytes": 28358,
+      "git_blob": "988d9237f714af6435fee35c13739092d7180bbb",
+      "raw_sha256": "sha256:f1247577487f9e5ef3de6a0e60da10c2faf60266aa5cb5255066151073da3a97"
+    }
+  }
+}
