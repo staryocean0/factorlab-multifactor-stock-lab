@@ -1,6 +1,6 @@
 # LCL-R3-INFOCLOCK-20260907-01：信息时钟与迁移准备
 
-这是云端与本地协作。状态：本地已反馈；待云端复核。当前唯一任务是来源与信息结构审计，不是新的消融/训练任务。回传见 `cloud_results/local_handoff_R3_infoclock_20260907/local_feedback.md`。
+这是云端与本地协作。状态：云端已复核，`completed_with_limits`。本地反馈提交 `879274409f79aceff72b0136c88138554a3c59a8`。验收见 `cloud_results/local_handoff_R3_infoclock_20260907/cloud_acceptance/cloud_review.md`。以下交接要求保留为历史，不要求重复执行。
 
 ## 问题与边界
 
@@ -69,3 +69,13 @@ python scripts/reaka_r3_information_clock_audit.py --spec /path/to/spec.json
 - `source_clock_review.md`：含上述跨期准备说明，无需单独制作多个合同。
 
 七个原数组、大模型和行情留本地。云端验收只关闭已覆盖问题；unknown不伪装通过。完成后停止，不自行启动24个跨期评分任务，不加新arm。
+
+## 云端验收（2026-09-07）
+
+接收本地七数组统计、来源时钟说明及迁移准备记录。本地新fit/inference/reload均为0，35项本地测试通过；云端另复跑原35项测试并实际执行107项小证据/独立标量合成核对，均通过。云端未读取本地原数组、未重哈希大文件、未执行生产器或真实模型。
+
+关键解释修正：两时钟2018–2020推理支持各408446坐标/146日，14个原生state-mask通道全恒1。原XFINE约+0.01040的mask臂差值保留，但不能解释为评价期动态mask信息增益；训练期mask并非全常量，具体训练机制仍未识别。规模mask零值率约0.0325473%，行业约1.0812492%，不是统一约1%。Reliability仍为非恒定质量候选，不是PIT证书。
+
+来源边界：time_evidence为空、unknown；当前intraday生产器有untracked/dirty来源，FactorLab HEAD不等于完整运行源码身份。当前同schema原3982股票输入只到2020。5894股票、含2026的residual-only产物未使用。24个checkpoint目录存在不等于输入就绪或本轮重载通过。
+
+本任务收口，不再要求同批补件，不重开R2，不训练、不新推理、不调用Actions。下一工作由云端先制定同定义跨期输入重建/映射规格；24项跨期评分尚未执行，本地暂无新任务。完整范围与证据见上述验收报告及同目录execution_receipt.json；旧报告/数组/执行器不改写。

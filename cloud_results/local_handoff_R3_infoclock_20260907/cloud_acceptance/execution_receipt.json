@@ -1,0 +1,101 @@
+{
+  "schema_id": "factorlab.r3_infoclock_acceptance_receipt@1.0",
+  "reviewed_commit": "879274409f79aceff72b0136c88138554a3c59a8",
+  "task_id": "LCL-R3-INFOCLOCK-20260907-01",
+  "task_status": "completed_with_limits",
+  "cloud_targeted_tests": {
+    "tests": 35,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cloud_small_evidence_checks": {
+    "passed": 107,
+    "failed": 0
+  },
+  "test_scope": "Exact original script, 35 tests; 107 exact-byte small-evidence and independent scalar synthetic checks. Not original arrays, producer, models, new periods or full repository.",
+  "inputs": {
+    "audit": {
+      "git_blob": "a831728b311c00f3fbfa655e2236219b2e96be48",
+      "sha256": "e20f4a9f1515cc63fea4cbe09bc2af89472234107f974f0cbe648e85db22acd6",
+      "bytes": 29408
+    },
+    "spec": {
+      "git_blob": "3ef9cc032b7a799a3e9555538ea9e3c3e8064918",
+      "sha256": "f2e6f14feaf943180710498552446b7c2f20f31fdca2dadad3b1d14d7382ea77",
+      "bytes": 2117
+    },
+    "script": {
+      "git_blob": "6e615bce1d81589fc38e1137038207c5ba27863e",
+      "sha256": "44ad4c73c649719b7d8aaab89e14caa6a158e78e316aac5a36573a63f614b91d",
+      "bytes": 15859
+    }
+  },
+  "derived": {
+    "fit_mask_zero_context_counts_per_factor": [
+      0,
+      1177,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101,
+      39101
+    ],
+    "fit_mask_zero_percent_market_size_industry": [
+      0.0,
+      0.03254725850874379,
+      1.0812492395500348
+    ],
+    "discovery_mask_cells_per_clock": 57182440,
+    "support_note": "146 target-free inference days, not 142 labelled evaluation days; this audit does not read label support",
+    "reliability_profile_note": "Raw masked reliability before fixed normalizer; identical marginal summaries do not imply cellwise identity."
+  },
+  "reliability_source_evidence": "Local current untracked intraday wrapper description plus known public daily helper; not full runtime closure.",
+  "time_status": "unknown",
+  "original_array_hashes_recomputed_in_cloud": false,
+  "original_manifest_bytes_independently_retrieved_this_turn": false,
+  "real_model_fits": 0,
+  "real_model_inference": 0,
+  "checkpoint_reload": 0,
+  "new_period_scoring": 0,
+  "new_local_task": false,
+  "actions_invoked": false,
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false,
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "scope_correction": "Native masks constant one on all 2018-2020 input contexts; prior algorithm gap is not evidence of dynamic evaluation-period mask information.",
+  "output_hashes": {
+    "verifier": {
+      "sha256": "023b2bbff8f0ce1ac714b629f1f0e2be58331426d2dc41d879d892d13736fc3d",
+      "git_blob": "2df377327a93fafdbd880fe7f6cf130401958e15",
+      "bytes": 9152
+    },
+    "report": {
+      "sha256": "256079a519f7c944ba06fb78a539e9c9fa07c56a53ffd290c6bb46e3d6c3ceb4",
+      "git_blob": "f853905f4791b7483d05692da3a9092dafe303cb",
+      "bytes": 9261
+    },
+    "cloud_log": {
+      "sha256": "e47967929d9d3f3d70701369946ada24cf4a7012a1bc9c6c21168ce063548922",
+      "git_blob": "899a8658bcb00bf133d393449aeafa04c044c272",
+      "bytes": 99
+    },
+    "cloud_junit": {
+      "sha256": "45cba61eaec305ffa403a3c1cf29eb7857fbe143c243b013a473ad0a268a6fdb",
+      "git_blob": "f45db09c6018e9d7df1522a2b8999b39c71d36f0",
+      "bytes": 5420
+    }
+  }
+}
