@@ -191,10 +191,18 @@ def build_label_sidecar(feature_store: Path, label_bundle: Path, reference_label
     if bm.get("fold_policy") != "explicit_incumbent_symbol_position_mod5":
         raise ValueError("label fold identity drift")
     required = ("calendar.npy", "symbols.npy", "factor_ids.json", "symbol_fold_ids.npy",
-                "epsilon_future.npy", "producer_sources.json")
+                "epsilon_future.npy", "producer_sources.json", "target_anchor_checks.json")
     artifacts = bm.get("artifact_digests", {})
     for name in required:
         bind_file(label_bundle / name, artifacts.get(name))
+
+    anchor_checks = read_json(label_bundle / "target_anchor_checks.json")
+    if anchor_checks.get("schema_id") != "factorlab.r3_transfer_target_anchor_checks@1.0" or anchor_checks.get("passed") is not True:
+        raise ValueError("bounded target producer anchor checks required")
+    if int(anchor_checks.get("anchors_checked", 0)) < 5 or int(anchor_checks.get("support_mismatches", -1)) != 0:
+        raise ValueError("insufficient target producer anchor coverage")
+    if float(anchor_checks.get("max_abs_error", float("inf"))) > 1e-7:
+        raise ValueError("target producer anchor values drift")
 
     ref_manifest = reference_label_store / "manifest.json"
     bind_file(ref_manifest, expected_reference_manifest_sha256)
