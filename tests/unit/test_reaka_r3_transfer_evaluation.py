@@ -77,8 +77,9 @@ def make_label_bundle(root: Path, cal, syms, ref_eps):
     eps=base[:,order]
     np.save(root/"epsilon_future.npy",eps)
     writej(root/"producer_sources.json",{"schema_id":"x"})
+    writej(root/"target_anchor_checks.json",{"schema_id":"factorlab.r3_transfer_target_anchor_checks@1.0","passed":True,"anchors_checked":5,"support_mismatches":0,"max_abs_error":0.0})
     m=load()
-    artifacts={n:m.sha_file(root/n) for n in ("calendar.npy","symbols.npy","factor_ids.json","symbol_fold_ids.npy","epsilon_future.npy","producer_sources.json")}
+    artifacts={n:m.sha_file(root/n) for n in ("calendar.npy","symbols.npy","factor_ids.json","symbol_fold_ids.npy","epsilon_future.npy","producer_sources.json","target_anchor_checks.json")}
     bundle={"schema_id":m.LABEL_SCHEMA,"clock":"1430","calendar_end":"2025-12-31","contains_2026":False,
         "target_definition":"H20_financial_residual_epsilon_future_K1_v1","horizon_trading_positions":20,
         "labels_used_for_features":False,"fold_policy":"explicit_incumbent_symbol_position_mod5",
