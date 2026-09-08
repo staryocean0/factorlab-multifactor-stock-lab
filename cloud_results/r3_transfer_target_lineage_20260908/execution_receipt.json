@@ -1,0 +1,37 @@
+{
+  "schema_id": "factorlab.r3_transfer_target_lineage_cloud_readiness@1.0",
+  "date": "2026-09-08",
+  "task_id": "LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01",
+  "source_commit_before_receipt": "f203a5c50f3ef9188634421e822c84b25495b913",
+  "diagnostic_git_blob": "63aa3263d49f8709d152778f22afe94869c92ecc",
+  "guard_test_git_blob": "c279d4bc3834a9e9f986eae82e07c408acc73674",
+  "isolated_logic_checks": {
+    "count": 8,
+    "failures": 0,
+    "checks": [
+      "five_structurally_mature_anchors_selected",
+      "all_selected_anchors_have_t_plus_20_inside_calendar",
+      "2020_12_31_not_selected_as_old_H20_anchor",
+      "finite_support_drift_rejected",
+      "large_numeric_drift_rejected",
+      "sub_tolerance_numeric_difference_accepted",
+      "shape_drift_rejected",
+      "future_h20_last_20_positions_remain_unlabelled"
+    ],
+    "scope": "Pure NumPy logic reproduced independently in the cloud; not an import/run of the local FactorLab stack and not a real-data target replay."
+  },
+  "repository_pytest_executed_in_cloud": false,
+  "real_factorlab_arrays_read": false,
+  "historical_OT_replay_executed_in_cloud": false,
+  "label_sidecar_built": false,
+  "archived_score_preflight_executed": false,
+  "model_fits": 0,
+  "checkpoint_reloads": 0,
+  "model_scores": 0,
+  "contains_2026_target": false,
+  "actions_invoked": false,
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false,
+  "next_required_execution": "Run tests/unit/test_reaka_r3_transfer_target_lineage_diag.py, then --self-test, then the read-only real-data target-lineage diagnostic locally."
+}
