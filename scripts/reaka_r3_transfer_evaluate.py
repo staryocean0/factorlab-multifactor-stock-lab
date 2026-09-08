@@ -31,7 +31,7 @@ def bootstrap_theme():
     theme = ROOT / "src/factor_lab/factor_rotation"
     for name in ("reaka_r3_condition_views", "reaka_r3_time_isolated_runner",
                  "reaka_r3_x_decomposition", "reaka_r3_transfer_inputs",
-                 "reaka_r3_transfer_evaluation"):
+                 "reaka_r3_transfer_score_preflight", "reaka_r3_transfer_evaluation"):
         dest = f"factor_lab.factor_rotation.{name}"
         path = theme / f"{name}.py"
         spec = importlib.util.spec_from_file_location(dest, path)
@@ -77,7 +77,12 @@ def main() -> int:
                               "seed": result["seed"], "arm": result["arm"],
                               "target_values_read": result["target_values_read"]}))
             return 0
-        result = m.run_transfer_evaluation(read(args.run), Path(__file__).resolve())
+        formal = read(args.run)
+        from factor_lab.factor_rotation import reaka_r3_transfer_score_preflight as preflight
+        gate = preflight.run(formal, ROOT, FACTORLAB_ROOT)
+        if gate.get("status") != "passed_read_only_checkpoint_score_preflight":
+            raise ValueError("transfer checkpoint/score preflight did not pass")
+        result = m.run_transfer_evaluation(formal, Path(__file__).resolve())
         print(json.dumps({"status": result["status"], "score_jobs": result["score_jobs"],
                           "new_model_fits": result["new_model_fits"]}))
         return 0
