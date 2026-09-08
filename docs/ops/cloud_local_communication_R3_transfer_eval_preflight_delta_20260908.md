@@ -1,6 +1,6 @@
 # LCL-R3-TRANSFER-EVAL-20260908-01：archived-score batch-context delta
 
-状态：**待本地执行同任务增量。** 上一轮sidecar v1.1已云端受限接收；24个2021–2025新期score仍未启动。
+状态：**本地已反馈（2026-09-08）。** batch-context preflight 24/24 通过（maxdiff=0）；正式 run 24/24 score jobs 完成。见 [resume_v11_delta/local_feedback.md](../../cloud_results/local_handoff_R3_transfer_eval_20260908/resume_v11_delta/local_feedback.md)。本地不代填云端已复核。
 
 云端复核：`cloud_results/local_handoff_R3_transfer_eval_20260908/resume_v11/cloud_review.md`。
 
@@ -96,3 +96,7 @@ python3 scripts/reaka_r3_transfer_evaluate.py \
 已通过的v1.1 sidecar不重建；此前失败证据不覆盖。
 
 证据身份仍为consumed historical transfer：`fresh_oos=false`、`PIT_certified=false`、`production_authority=false`。
+
+## 6. 本地反馈（2026-09-08）
+
+targeted tests 26 passed。`--preflight-only` exit 0，24 组 archived batch-context 重放 max abs error 均为 0，`archived_batch_geometry_preserved=true`，atol=1e-7。随后 `--run` 再次通过同一 preflight 并完成恰好 24 个无标签 score jobs，`status=completed_consumed_historical_transfer`。combined F−STATE mean RankIC≈0.00531（2021 年为负）；BETA_REL−BETA_ONLY≈0.00643。负年份/seed/phase 原样保留。未改容差，未因结果重跑。大 scores 留本地。

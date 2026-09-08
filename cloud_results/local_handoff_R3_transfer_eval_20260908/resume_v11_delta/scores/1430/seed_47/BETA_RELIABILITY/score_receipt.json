@@ -1,0 +1,15 @@
+{
+  "schema_id": "factorlab.r3_transfer_score_receipt@1.0",
+  "clock": "1430",
+  "seed": 47,
+  "arm": "BETA_RELIABILITY",
+  "score_rows": 931677,
+  "target_values_read": 0,
+  "label_path_received": false,
+  "checkpoint_state_digest": "sha256:d117153a607f7b1b77688d278ba0fc1f2412cc30f20d3526797ed9c3c52ef8d0",
+  "feature_manifest_sha256": "sha256:dae9dbf3dbdcd2c1299b3b67dc67b0e90ba99491f1e78c8bc2bba9d74e294173",
+  "candidate_sha256": "sha256:db9f1f00b335761fd9fe11a934b9a9c3bbcfd31ba5d1379e89491fd89a4a412d",
+  "normalizer_sha256": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+  "new_model_fits": 0,
+  "fresh_process": true
+}

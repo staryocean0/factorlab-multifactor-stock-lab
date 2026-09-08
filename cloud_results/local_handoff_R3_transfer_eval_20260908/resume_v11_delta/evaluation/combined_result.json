@@ -1,0 +1,115 @@
+{
+  "days": 238,
+  "F_minus_STATE_VALUE_PLUS_E": {
+    "mean": 0.005307745671817133,
+    "median": 0.00697726150060805,
+    "win_days": 149,
+    "loss_days": 89,
+    "moving_block": {
+      "4": {
+        "mean": 0.005307745671817133,
+        "lower": -0.0033328471883997653,
+        "upper": 0.013810389776097208,
+        "block_length": 4,
+        "draws": 5000,
+        "seed": 61207
+      },
+      "8": {
+        "mean": 0.005307745671817133,
+        "lower": -0.0039554627402847405,
+        "upper": 0.015222010038309216,
+        "block_length": 8,
+        "draws": 5000,
+        "seed": 61207
+      },
+      "12": {
+        "mean": 0.005307745671817133,
+        "lower": -0.004920318959656801,
+        "upper": 0.015309921071389768,
+        "block_length": 12,
+        "draws": 5000,
+        "seed": 61207
+      }
+    }
+  },
+  "BETA_RELIABILITY_minus_BETA_ONLY": {
+    "mean": 0.0064301572928477015,
+    "median": 0.005815130231243775,
+    "win_days": 153,
+    "loss_days": 85,
+    "moving_block": {
+      "4": {
+        "mean": 0.0064301572928477015,
+        "lower": 0.0032613852170230427,
+        "upper": 0.009573838710406095,
+        "block_length": 4,
+        "draws": 5000,
+        "seed": 61207
+      },
+      "8": {
+        "mean": 0.0064301572928477015,
+        "lower": 0.0031994016133545613,
+        "upper": 0.010220078930576313,
+        "block_length": 8,
+        "draws": 5000,
+        "seed": 61207
+      },
+      "12": {
+        "mean": 0.0064301572928477015,
+        "lower": 0.003296001762473256,
+        "upper": 0.010692347191676463,
+        "block_length": 12,
+        "draws": 5000,
+        "seed": 61207
+      }
+    }
+  },
+  "by_year": {
+    "2021": {
+      "F_minus_STATE_VALUE_PLUS_E": -0.0068086765324428455,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.0027312487129875114
+    },
+    "2022": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.005119972607655791,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.008548576231875903
+    },
+    "2023": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.016185100178337925,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.0045590347929214394
+    },
+    "2024": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.007133976005458072,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.003434799371160612
+    },
+    "2025": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.004885902863386495,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.013259849383033208
+    }
+  },
+  "by_phase": {
+    "0": {
+      "F_minus_STATE_VALUE_PLUS_E": -0.002959946488838742,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.006112301150125191
+    },
+    "1": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.0063668640661243454,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.008482491896323097
+    },
+    "2": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.010264768741739809,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.005778300979945565
+    },
+    "3": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.007457327868849389,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.005323798224817744
+    }
+  },
+  "decile": {
+    "F_minus_STATE_VALUE_PLUS_E": 0.00100237777016946,
+    "BETA_RELIABILITY_minus_BETA_ONLY": 0.001296646672001811
+  },
+  "top30": {
+    "F_minus_STATE_VALUE_PLUS_E": 0.006872755719981927,
+    "BETA_RELIABILITY_minus_BETA_ONLY": 0.0045928576274018576
+  }
+}

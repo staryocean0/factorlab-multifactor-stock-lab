@@ -1,0 +1,143 @@
+{
+  "clock": "1445",
+  "evaluation_rows": 914934,
+  "summary": {
+    "days": 238,
+    "F_minus_STATE_VALUE_PLUS_E": {
+      "mean": 0.004601521878871237,
+      "median": 0.006689071104505985,
+      "win_days": 146,
+      "loss_days": 92,
+      "moving_block": {
+        "4": {
+          "mean": 0.004601521878871237,
+          "lower": -0.005788572799239905,
+          "upper": 0.014525884788762086,
+          "block_length": 4,
+          "draws": 5000,
+          "seed": 61207
+        },
+        "8": {
+          "mean": 0.004601521878871237,
+          "lower": -0.006652633956560499,
+          "upper": 0.016161772739962527,
+          "block_length": 8,
+          "draws": 5000,
+          "seed": 61207
+        },
+        "12": {
+          "mean": 0.004601521878871237,
+          "lower": -0.00784230789234085,
+          "upper": 0.016336726030283227,
+          "block_length": 12,
+          "draws": 5000,
+          "seed": 61207
+        }
+      }
+    },
+    "BETA_RELIABILITY_minus_BETA_ONLY": {
+      "mean": 0.004545008627255823,
+      "median": 0.0036677836240956857,
+      "win_days": 149,
+      "loss_days": 89,
+      "moving_block": {
+        "4": {
+          "mean": 0.004545008627255823,
+          "lower": 0.0012219919394028372,
+          "upper": 0.007725633414696075,
+          "block_length": 4,
+          "draws": 5000,
+          "seed": 61207
+        },
+        "8": {
+          "mean": 0.004545008627255823,
+          "lower": 0.0011855718456482225,
+          "upper": 0.00845701931273957,
+          "block_length": 8,
+          "draws": 5000,
+          "seed": 61207
+        },
+        "12": {
+          "mean": 0.004545008627255823,
+          "lower": 0.0012408043733113715,
+          "upper": 0.008820122676161503,
+          "block_length": 12,
+          "draws": 5000,
+          "seed": 61207
+        }
+      }
+    },
+    "by_year": {
+      "2021": {
+        "F_minus_STATE_VALUE_PLUS_E": -0.009515310106397655,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.0008821061106258162
+      },
+      "2022": {
+        "F_minus_STATE_VALUE_PLUS_E": 0.004819431241434843,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.008375633306990532
+      },
+      "2023": {
+        "F_minus_STATE_VALUE_PLUS_E": 0.0190294245903678,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.0019624609271794565
+      },
+      "2024": {
+        "F_minus_STATE_VALUE_PLUS_E": 0.00560473316365382,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.00027661754364048256
+      },
+      "2025": {
+        "F_minus_STATE_VALUE_PLUS_E": 0.0029623419834465974,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.011588648029665638
+      }
+    },
+    "by_phase": {
+      "0": {
+        "F_minus_STATE_VALUE_PLUS_E": -0.004622707302815902,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.004449255597770534
+      },
+      "1": {
+        "F_minus_STATE_VALUE_PLUS_E": 0.005892342614599002,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.006193350083121384
+      },
+      "2": {
+        "F_minus_STATE_VALUE_PLUS_E": 0.010570560953347952,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.0037928690592609875
+      },
+      "3": {
+        "F_minus_STATE_VALUE_PLUS_E": 0.006442842778994502,
+        "BETA_RELIABILITY_minus_BETA_ONLY": 0.0037293699063641063
+      }
+    },
+    "decile": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.0004090584830425462,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.0006753669824288382
+    },
+    "top30": {
+      "F_minus_STATE_VALUE_PLUS_E": 0.005143755620265878,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.0038840274866638676
+    }
+  },
+  "per_seed": [
+    {
+      "clock": "1445",
+      "seed": 11,
+      "days": 238,
+      "F_minus_STATE_VALUE_PLUS_E": 0.004124175658161563,
+      "BETA_RELIABILITY_minus_BETA_ONLY": -0.0026092278909199337
+    },
+    {
+      "clock": "1445",
+      "seed": 29,
+      "days": 238,
+      "F_minus_STATE_VALUE_PLUS_E": 0.022609156516456307,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.0102986702242877
+    },
+    {
+      "clock": "1445",
+      "seed": 47,
+      "days": 238,
+      "F_minus_STATE_VALUE_PLUS_E": -0.006477560249784138,
+      "BETA_RELIABILITY_minus_BETA_ONLY": 0.0019766694056933065
+    }
+  ],
+  "label_sidecar_sha256": "sha256:203aefb6436f13bc48c4864d60e970cb293c885294f35bcb3930c070bb06306a"
+}

@@ -166,3 +166,7 @@ NaN修复由云端完成，实际runner的wiring判定调用了后继检查函�
 ## 后继任务：LCL-R3-TRANSFER-EVAL-20260908-01 resume（2026-09-08）
 
 **状态**：本地已反馈。sidecar v1.1 通过后，archived-score preflight 在 1445/29/BETA_ONLY 停止（maxdiff≈1.788e-7）。24 个新期 score 未启动。详见 [resume 任务书](cloud_local_communication_R3_transfer_eval_resume_20260908.md) 与 [resume_v11/local_feedback.md](../../cloud_results/local_handoff_R3_transfer_eval_20260908/resume_v11/local_feedback.md)。本地不代填云端已复核。
+
+## 后继任务：LCL-R3-TRANSFER-EVAL-20260908-01 preflight-delta（2026-09-08）
+
+**状态**：本地已反馈。batch-context preflight 24/24 通过后完成 24 个冻结 score jobs。详见 [delta 任务书](cloud_local_communication_R3_transfer_eval_preflight_delta_20260908.md) 与 [resume_v11_delta/local_feedback.md](../../cloud_results/local_handoff_R3_transfer_eval_20260908/resume_v11_delta/local_feedback.md)。本地不代填云端已复核。

@@ -1,0 +1,2 @@
+pytest score_preflight + evaluation + sidecar_v1_1
+summary: tests=26 failures=0 errors=0 skipped=0 exit=0

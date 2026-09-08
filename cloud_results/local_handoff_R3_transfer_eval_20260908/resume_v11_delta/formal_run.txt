@@ -1,0 +1,6 @@
+start 2026-09-08T16:34:02+08:00
+theme_head ec714cfda9ced07ca36582e7138b5ed4c1a851c4
+factorlab_head b39bb12f43a46b165d18db93191a669234077444
+cmd python3 scripts/reaka_r3_transfer_evaluate.py --run /home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-EVAL-20260908-01/specs/transfer_eval_run.json
+{"status": "completed_consumed_historical_transfer", "score_jobs": 24, "new_model_fits": 0}
+exit 0 2026-09-08T16:47:32+08:00
