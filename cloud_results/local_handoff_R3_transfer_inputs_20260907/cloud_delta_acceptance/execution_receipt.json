@@ -1,0 +1,66 @@
+{
+  "schema_id": "factorlab.r3_transfer_boundary_independent_review@1.0",
+  "review_date": "2026-09-08",
+  "reviewed_local_commit": "3ea55e503296761233f992b97ca4ae7decbaf349",
+  "parallel_acceptance_preserved": "04b56cde7aaf1070d2448e812ce7dbfa455c95f1",
+  "decision": "bounded_feature_artifact_reuse_not_provenance_certification",
+  "task_status": "completed_with_limits",
+  "new_local_supplement_required": false,
+  "original_regression": {
+    "tests": 71,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_review_tests": {
+    "tests": 25,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "small_receipt_checks": 163,
+  "commands": [
+    "python -m pytest -q tests/unit/test_reaka_r3_transfer_bridge_contracts.py tests/unit/test_reaka_r3_transfer_source_bridge.py tests/unit/test_reaka_r3_transfer_inputs.py",
+    "python -m pytest -q tests/unit/test_reaka_r3_transfer_boundary_review.py",
+    "python cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_delta_acceptance/verify_boundary_evidence.py --input cloud_results/local_handoff_R3_transfer_inputs_20260907/boundary_checks.json --output /new/path/cloud_checks.json"
+  ],
+  "input": {
+    "bytes": 7514,
+    "sha256": "1ef8cc6dcbf04b6f7b8bbcce19a5189d975652e4b963c3a23e07cd0619d572db",
+    "git_blob": "11c8855666b4704bace6b7f1796b5e4ee4e959f9"
+  },
+  "published_sources": {
+    "cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_delta_acceptance/cloud_review.md": {
+      "bytes": 8230,
+      "sha256": "aa90f4052ee01a2258b1c48cc742d1cd8b4e351955520f7b0d7f7f4526f8a8c0",
+      "git_blob": "63553ad2a383f198a48402593c3fe436144413dd"
+    },
+    "cloud_results/local_handoff_R3_transfer_inputs_20260907/cloud_delta_acceptance/verify_boundary_evidence.py": {
+      "bytes": 8935,
+      "sha256": "6f345afe0e0735772e5671b8238a6f205ab740389a8901922da21112835622f6",
+      "git_blob": "f3c0eee57b532eec679a4e12be8bf96cf7f6432c"
+    },
+    "tests/unit/test_reaka_r3_transfer_boundary_review.py": {
+      "bytes": 3426,
+      "sha256": "f82af59082708b50752e1cb690245f8859af1689f9ff60680450fe66a11e2c55",
+      "git_blob": "949d9724583f46868cddbbc9abfbad0acd1022c8"
+    }
+  },
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "py_compile": "passed",
+  "real_arrays_read": false,
+  "real_producer_replay": false,
+  "model_fits": 0,
+  "model_inference": 0,
+  "checkpoint_reload": 0,
+  "actions_invoked": false,
+  "B2_snapshot_content_identity_established": false,
+  "B2_membership_generator_equivalence_certified": false,
+  "PIT_certified": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "scope": "Cloud portable tests and exact small-receipt verification. Complete generated checks/JUnit in downloadable archive; checker reproduces the tracked input. No market evaluation."
+}
