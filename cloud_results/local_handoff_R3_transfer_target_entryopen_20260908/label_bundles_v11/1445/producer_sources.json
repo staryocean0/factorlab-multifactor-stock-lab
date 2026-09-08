@@ -1,0 +1,56 @@
+{
+  "schema_id": "factorlab.r3_loaded_producer_sources@1.0",
+  "files": [
+    {
+      "role": "label_bridge_successor",
+      "module": "__main__",
+      "path": "/home/starryocean/桌面/量化/factorlab-r2-handoff-20260906/scripts/reaka_r3_transfer_label_bridge_v1_1.py",
+      "raw_sha256": "sha256:f8f61c0f3ad6af5b0a2805c2b8ab9271c934fcdd61f1d0867d5db339b67ef7b7",
+      "bytes": 15618
+    },
+    {
+      "role": "feature_bridge",
+      "module": "r3_transfer_source_bridge_for_labels_v11",
+      "path": "/home/starryocean/桌面/量化/factorlab-r2-handoff-20260906/scripts/reaka_r3_transfer_source_bridge.py",
+      "raw_sha256": "sha256:3ca1cce35a68b23d62632e6921333fcfef4f9df3aa1aa79d6c3fad69d0729c0f",
+      "bytes": 21116
+    },
+    {
+      "role": "intraday_ot_producer",
+      "module": "factor_lab.factor_rotation.reaka_intraday_orthogonal_ot_v1",
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/src/factor_lab/factor_rotation/reaka_intraday_orthogonal_ot_v1.py",
+      "raw_sha256": "sha256:4a8ff5fc74adfa474e12a2f0e9c6b770eb7afdb713fe6d676baa423fe5b23c86",
+      "bytes": 34414
+    },
+    {
+      "role": "timing_helper",
+      "module": "factor_lab.factor_rotation.orthogonal_factor_timing_state_v1",
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/src/factor_lab/factor_rotation/orthogonal_factor_timing_state_v1.py",
+      "raw_sha256": "sha256:571420e211afd431f1e1abe2d390974ff66f996e13d3525e8350e6cc98d0ffa7",
+      "bytes": 18249
+    },
+    {
+      "role": "ot1_helper",
+      "module": "factor_lab.factor_rotation.orthogonal_index_timing_transport_ot1_v1",
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/src/factor_lab/factor_rotation/orthogonal_index_timing_transport_ot1_v1.py",
+      "raw_sha256": "sha256:81107cc279ba589c7611cb1a8c879facee634f17bb791ae1b4690c97588e8526",
+      "bytes": 29716
+    },
+    {
+      "role": "filter_implementation",
+      "module": "factor_lab.filtering.timing_validation",
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/src/factor_lab/filtering/timing_validation.py",
+      "raw_sha256": "sha256:c622c93e370d4afba03403d03d5cbd90633cd54f1dda9b700b91d04a865d75dc",
+      "bytes": 33250
+    },
+    {
+      "role": "k1_store_helpers",
+      "module": "factor_lab.factor_rotation.reaka_intraday_k1_preflight_v1",
+      "path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py",
+      "raw_sha256": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+      "bytes": 45890
+    }
+  ],
+  "binding": "current_loaded_source_files_not_historical_HEAD",
+  "PIT_certified": false
+}

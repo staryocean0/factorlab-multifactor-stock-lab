@@ -1,0 +1,7 @@
+start 2026-09-08T14:25:09+08:00
+theme_head d6f4bd3a6a7150250fba89e0365d506588e3cf1d
+factorlab_head b39bb12f43a46b165d18db93191a669234077444
+datahub /home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851
+python Python 3.13.5 /usr/bin/python3
+{"status": "bounded_entry_open_targets_prepared", "task_id": "LCL-R3-TRANSFER-TARGET-ENTRYOPEN-20260908-01"}
+exit 0 2026-09-08T14:47:38+08:00

@@ -1,0 +1,4 @@
+.......................................................................  [100%]
+- generated xml file: targeted_tests.junit.xml -
+
+summary: tests=71 failures=0 errors=0 skipped=0 exit=0

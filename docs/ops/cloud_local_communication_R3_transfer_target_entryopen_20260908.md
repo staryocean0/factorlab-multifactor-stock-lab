@@ -1,6 +1,6 @@
 # LCL-R3-TRANSFER-TARGET-ENTRYOPEN-20260908-01：恢复P6 entry-open future target
 
-状态：待本地执行。前置 `LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01` 已完成，云端接受判定A：当前OT代码在旧P6 raw + 旧factor basis上可精确重放旧beta/reliability/epsilon_history/epsilon_future；第一处分歧为当前错误地用decision close构造future H20。
+状态：**本地已反馈（2026-09-08）。** entry-open target source 与 successor label bundle 两时钟均通过 1e-7 锚点门；未建立 sidecar、未评分。见 [local_feedback.md](../../cloud_results/local_handoff_R3_transfer_target_entryopen_20260908/local_feedback.md)。前置 `LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01` 判定A保持。本地不代填云端已复核。
 
 ## 1. 已恢复的旧P6精确定义
 
@@ -123,3 +123,16 @@ python3 scripts/reaka_r3_transfer_label_bridge_v1_1.py \
 反馈必须报告实际主题仓HEAD、FactorLab HEAD、DataHub根、命令/exit code、读取月份范围、锚点、maxdiff、有限支持、是否发生重试、fit/reload/score/sidecar均为0、2026 target=false、Actions=false及所有未知。
 
 本任务仍为consumed historical extension准备：`fresh_oos=false`、`PIT_certified=false`、`production_authority=false`。
+
+## 6. 本地反馈（2026-09-08）
+
+本地已执行 targeted tests（71 passed）、entry-open target source 与 successor label bridge v1.1，exit 均为 0。产物在 `cloud_results/local_handoff_R3_transfer_target_entryopen_20260908/`。
+
+- 主题仓执行 HEAD：`d6f4bd3a6a7150250fba89e0365d506588e3cf1d`
+- FactorLab HEAD：`b39bb12f43a46b165d18db93191a669234077444`
+- DataHub：`bars_cn_a_1m_raw_canonical_4ceca170a851`；读取 69 个月份，无 2026
+- `anchor_checks.json.passed=true`；两时钟 `entry_minute_mismatches=0`；future H20 五锚点 max abs error=0
+- 两时钟 label `target_anchor_checks.json.passed=true`，`support_mismatches=0`，`max_abs_error=0.0`
+- new model fit=0；checkpoint reload=0；model score=0；sidecar=0；2026 target=false；Actions=false
+
+按任务书停止，等待云端验收后再恢复原 transfer-eval 的 sidecar/preflight/24 score。

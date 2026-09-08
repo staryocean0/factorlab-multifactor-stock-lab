@@ -1,0 +1,29 @@
+{
+  "schema_id": "factorlab.r3_transfer_label_bridge_result@1.1",
+  "task_id": "LCL-R3-TRANSFER-TARGET-ENTRYOPEN-20260908-01",
+  "status": "bounded_entry_open_label_bundles_prepared",
+  "clocks": {
+    "1430": {
+      "clock": "1430",
+      "calendar_days": 4618,
+      "symbols": 3982,
+      "tail_decisions": 242,
+      "anchors_checked": 5,
+      "bundle_sha256": "sha256:72f023efd4073987176290adcedc749ea8051bc54648e7c912a9bc5dbf39e188"
+    },
+    "1445": {
+      "clock": "1445",
+      "calendar_days": 4618,
+      "symbols": 3982,
+      "tail_decisions": 242,
+      "anchors_checked": 5,
+      "bundle_sha256": "sha256:d06d29113e51697f95277e972b1a3ef2e8d2ed9610d30e2b708117e48d3e9faf"
+    }
+  },
+  "new_model_fits": 0,
+  "model_inference": 0,
+  "checkpoint_reload": 0,
+  "contains_2026": false,
+  "fresh_oos": false,
+  "PIT_certified": false
+}

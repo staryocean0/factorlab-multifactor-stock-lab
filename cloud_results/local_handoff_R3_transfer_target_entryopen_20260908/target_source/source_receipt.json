@@ -1,0 +1,495 @@
+{
+  "schema_id": "factorlab.r3_transfer_entry_open_source@1.0",
+  "datahub_root": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851",
+  "historical_event_rule": "first_positive_finite_open_with_timestamp_wall_clock_strictly_after_decision_and_le_15_00",
+  "timestamp_convention": "timestamp_string_[11:16]_session_wall_clock_as_in_R2_audit_not_timezone_transform_receipt",
+  "tail_start": "2021-01-01",
+  "calendar_end": "2025-12-31",
+  "raw_partition_content_hashes_recorded": false,
+  "partitions": [
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2018-01/data_0.parquet",
+      "size_bytes": 244277804,
+      "mtime_ns": 1782543149274398142,
+      "content_sha256_recorded": false,
+      "month": "2018-01"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2018-02/data_0.parquet",
+      "size_bytes": 160163420,
+      "mtime_ns": 1782543149214400164,
+      "content_sha256_recorded": false,
+      "month": "2018-02"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2018-09/data_0.parquet",
+      "size_bytes": 212707031,
+      "mtime_ns": 1782543179289387079,
+      "content_sha256_recorded": false,
+      "month": "2018-09"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2018-10/data_0.parquet",
+      "size_bytes": 204694971,
+      "mtime_ns": 1782543179273387617,
+      "content_sha256_recorded": false,
+      "month": "2018-10"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2019-06/data_0.parquet",
+      "size_bytes": 218876006,
+      "mtime_ns": 1782551038720012736,
+      "content_sha256_recorded": false,
+      "month": "2019-06"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2019-07/data_0.parquet",
+      "size_bytes": 272465579,
+      "mtime_ns": 1782551064935205968,
+      "content_sha256_recorded": false,
+      "month": "2019-07"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2020-03/data_0.parquet",
+      "size_bytes": 297503025,
+      "mtime_ns": 1782543210356342194,
+      "content_sha256_recorded": false,
+      "month": "2020-03"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2020-04/data_0.parquet",
+      "size_bytes": 282450522,
+      "mtime_ns": 1782543210340342732,
+      "content_sha256_recorded": false,
+      "month": "2020-04"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2020-12/data_0.parquet",
+      "size_bytes": 347426537,
+      "mtime_ns": 1782543247135107194,
+      "content_sha256_recorded": false,
+      "month": "2020-12"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-01/data_0.parquet",
+      "size_bytes": 299708516,
+      "mtime_ns": 1782551213610647700,
+      "content_sha256_recorded": false,
+      "month": "2021-01"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-02/data_0.parquet",
+      "size_bytes": 237140486,
+      "mtime_ns": 1782543283309894444,
+      "content_sha256_recorded": false,
+      "month": "2021-02"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-03/data_0.parquet",
+      "size_bytes": 354260900,
+      "mtime_ns": 1782543283261896052,
+      "content_sha256_recorded": false,
+      "month": "2021-03"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-04/data_0.parquet",
+      "size_bytes": 330889696,
+      "mtime_ns": 1782543283233896991,
+      "content_sha256_recorded": false,
+      "month": "2021-04"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-05/data_0.parquet",
+      "size_bytes": 293599891,
+      "mtime_ns": 1782543283217897526,
+      "content_sha256_recorded": false,
+      "month": "2021-05"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-06/data_0.parquet",
+      "size_bytes": 341039455,
+      "mtime_ns": 1782543283193898330,
+      "content_sha256_recorded": false,
+      "month": "2021-06"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-07/data_0.parquet",
+      "size_bytes": 368372073,
+      "mtime_ns": 1782543327060430136,
+      "content_sha256_recorded": false,
+      "month": "2021-07"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-08/data_0.parquet",
+      "size_bytes": 375409889,
+      "mtime_ns": 1782543325040497688,
+      "content_sha256_recorded": false,
+      "month": "2021-08"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-09/data_0.parquet",
+      "size_bytes": 349268318,
+      "mtime_ns": 1782543324320521766,
+      "content_sha256_recorded": false,
+      "month": "2021-09"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-10/data_0.parquet",
+      "size_bytes": 277734626,
+      "mtime_ns": 1782543324112528722,
+      "content_sha256_recorded": false,
+      "month": "2021-10"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-11/data_0.parquet",
+      "size_bytes": 383445740,
+      "mtime_ns": 1782543324000532467,
+      "content_sha256_recorded": false,
+      "month": "2021-11"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2021-12/data_0.parquet",
+      "size_bytes": 406164643,
+      "mtime_ns": 1782543323940534475,
+      "content_sha256_recorded": false,
+      "month": "2021-12"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-01/data_0.parquet",
+      "size_bytes": 342381809,
+      "mtime_ns": 1782543365435147772,
+      "content_sha256_recorded": false,
+      "month": "2022-01"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-02/data_0.parquet",
+      "size_bytes": 285852185,
+      "mtime_ns": 1782543365419148306,
+      "content_sha256_recorded": false,
+      "month": "2022-02"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-03/data_0.parquet",
+      "size_bytes": 403550240,
+      "mtime_ns": 1782543365375149776,
+      "content_sha256_recorded": false,
+      "month": "2022-03"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-04/data_0.parquet",
+      "size_bytes": 338231927,
+      "mtime_ns": 1782543365323151512,
+      "content_sha256_recorded": false,
+      "month": "2022-04"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-05/data_0.parquet",
+      "size_bytes": 338625263,
+      "mtime_ns": 1782543365259153650,
+      "content_sha256_recorded": false,
+      "month": "2022-05"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-06/data_0.parquet",
+      "size_bytes": 377029382,
+      "mtime_ns": 1782543365307152046,
+      "content_sha256_recorded": false,
+      "month": "2022-06"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-07/data_0.parquet",
+      "size_bytes": 384990245,
+      "mtime_ns": 1782543409445679216,
+      "content_sha256_recorded": false,
+      "month": "2022-07"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-08/data_0.parquet",
+      "size_bytes": 421541560,
+      "mtime_ns": 1782543409369681750,
+      "content_sha256_recorded": false,
+      "month": "2022-08"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-09/data_0.parquet",
+      "size_bytes": 387107588,
+      "mtime_ns": 1782543409329683084,
+      "content_sha256_recorded": false,
+      "month": "2022-09"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-10/data_0.parquet",
+      "size_bytes": 300144975,
+      "mtime_ns": 1782543409293684284,
+      "content_sha256_recorded": false,
+      "month": "2022-10"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-11/data_0.parquet",
+      "size_bytes": 412232348,
+      "mtime_ns": 1782543409261685351,
+      "content_sha256_recorded": false,
+      "month": "2022-11"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2022-12/data_0.parquet",
+      "size_bytes": 411143103,
+      "mtime_ns": 1782543409409680416,
+      "content_sha256_recorded": false,
+      "month": "2022-12"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-01/data_0.parquet",
+      "size_bytes": 306565866,
+      "mtime_ns": 1782543453280218622,
+      "content_sha256_recorded": false,
+      "month": "2023-01"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-02/data_0.parquet",
+      "size_bytes": 385868655,
+      "mtime_ns": 1782543453252219555,
+      "content_sha256_recorded": false,
+      "month": "2023-02"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-03/data_0.parquet",
+      "size_bytes": 436259257,
+      "mtime_ns": 1782543453168222351,
+      "content_sha256_recorded": false,
+      "month": "2023-03"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-04/data_0.parquet",
+      "size_bytes": 373808782,
+      "mtime_ns": 1782543453120223950,
+      "content_sha256_recorded": false,
+      "month": "2023-04"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-05/data_0.parquet",
+      "size_bytes": 388329592,
+      "mtime_ns": 1782543453208221019,
+      "content_sha256_recorded": false,
+      "month": "2023-05"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-06/data_0.parquet",
+      "size_bytes": 389825746,
+      "mtime_ns": 1782543453080225282,
+      "content_sha256_recorded": false,
+      "month": "2023-06"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-07/data_0.parquet",
+      "size_bytes": 411694543,
+      "mtime_ns": 1782543500562645286,
+      "content_sha256_recorded": false,
+      "month": "2023-07"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-08/data_0.parquet",
+      "size_bytes": 447075414,
+      "mtime_ns": 1782543500514646881,
+      "content_sha256_recorded": false,
+      "month": "2023-08"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-09/data_0.parquet",
+      "size_bytes": 394617830,
+      "mtime_ns": 1782543500438649408,
+      "content_sha256_recorded": false,
+      "month": "2023-09"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-10/data_0.parquet",
+      "size_bytes": 343201100,
+      "mtime_ns": 1782543500414650206,
+      "content_sha256_recorded": false,
+      "month": "2023-10"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-11/data_0.parquet",
+      "size_bytes": 435510729,
+      "mtime_ns": 1782543500458648743,
+      "content_sha256_recorded": false,
+      "month": "2023-11"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2023-12/data_0.parquet",
+      "size_bytes": 419015235,
+      "mtime_ns": 1782543500534646217,
+      "content_sha256_recorded": false,
+      "month": "2023-12"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-01/data_0.parquet",
+      "size_bytes": 431778336,
+      "mtime_ns": 1782543546073132831,
+      "content_sha256_recorded": false,
+      "month": "2024-01"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-02/data_0.parquet",
+      "size_bytes": 294102689,
+      "mtime_ns": 1782543546025134425,
+      "content_sha256_recorded": false,
+      "month": "2024-02"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-03/data_0.parquet",
+      "size_bytes": 416736208,
+      "mtime_ns": 1782543545977136020,
+      "content_sha256_recorded": false,
+      "month": "2024-03"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-04/data_0.parquet",
+      "size_bytes": 394747573,
+      "mtime_ns": 1782543545945137082,
+      "content_sha256_recorded": false,
+      "month": "2024-04"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-05/data_0.parquet",
+      "size_bytes": 394176508,
+      "mtime_ns": 1782543545873139473,
+      "content_sha256_recorded": false,
+      "month": "2024-05"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-06/data_0.parquet",
+      "size_bytes": 371274225,
+      "mtime_ns": 1782543545897138677,
+      "content_sha256_recorded": false,
+      "month": "2024-06"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-07/data_0.parquet",
+      "size_bytes": 438015557,
+      "mtime_ns": 1782543597339431151,
+      "content_sha256_recorded": false,
+      "month": "2024-07"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-08/data_0.parquet",
+      "size_bytes": 417425047,
+      "mtime_ns": 1782543597315431947,
+      "content_sha256_recorded": false,
+      "month": "2024-08"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-09/data_0.parquet",
+      "size_bytes": 352538989,
+      "mtime_ns": 1782551247433614275,
+      "content_sha256_recorded": false,
+      "month": "2024-09"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-10/data_0.parquet",
+      "size_bytes": 376830628,
+      "mtime_ns": 1782543597295432610,
+      "content_sha256_recorded": false,
+      "month": "2024-10"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-11/data_0.parquet",
+      "size_bytes": 437636903,
+      "mtime_ns": 1782543594187535712,
+      "content_sha256_recorded": false,
+      "month": "2024-11"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2024-12/data_0.parquet",
+      "size_bytes": 442311562,
+      "mtime_ns": 1782551288016375816,
+      "content_sha256_recorded": false,
+      "month": "2024-12"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-01/data_0.parquet",
+      "size_bytes": 370662635,
+      "mtime_ns": 1782543640717992838,
+      "content_sha256_recorded": false,
+      "month": "2025-01"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-02/data_0.parquet",
+      "size_bytes": 363262138,
+      "mtime_ns": 1782547945647118526,
+      "content_sha256_recorded": false,
+      "month": "2025-02"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-03/data_0.parquet",
+      "size_bytes": 424095745,
+      "mtime_ns": 1782547983670536942,
+      "content_sha256_recorded": false,
+      "month": "2025-03"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-04/data_0.parquet",
+      "size_bytes": 420644541,
+      "mtime_ns": 1782548022365906309,
+      "content_sha256_recorded": false,
+      "month": "2025-04"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-05/data_0.parquet",
+      "size_bytes": 381275025,
+      "mtime_ns": 1782548057753297764,
+      "content_sha256_recorded": false,
+      "month": "2025-05"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-06/data_0.parquet",
+      "size_bytes": 402498804,
+      "mtime_ns": 1782548094672632731,
+      "content_sha256_recorded": false,
+      "month": "2025-06"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-07/data_0.parquet",
+      "size_bytes": 469452812,
+      "mtime_ns": 1782548137659822416,
+      "content_sha256_recorded": false,
+      "month": "2025-07"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-08/data_0.parquet",
+      "size_bytes": 436190846,
+      "mtime_ns": 1782548176487059719,
+      "content_sha256_recorded": false,
+      "month": "2025-08"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-09/data_0.parquet",
+      "size_bytes": 460328349,
+      "mtime_ns": 1782548217246230039,
+      "content_sha256_recorded": false,
+      "month": "2025-09"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-10/data_0.parquet",
+      "size_bytes": 353328329,
+      "mtime_ns": 1782548248689571084,
+      "content_sha256_recorded": false,
+      "month": "2025-10"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-11/data_0.parquet",
+      "size_bytes": 415833950,
+      "mtime_ns": 1782548285844772667,
+      "content_sha256_recorded": false,
+      "month": "2025-11"
+    },
+    {
+      "path": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851/instrument_type=stock/trading_month=2025-12/data_0.parquet",
+      "size_bytes": 479826013,
+      "mtime_ns": 1782551331071063580,
+      "content_sha256_recorded": false,
+      "month": "2025-12"
+    }
+  ],
+  "PIT_certified": false
+}
