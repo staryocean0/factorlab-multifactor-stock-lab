@@ -1,0 +1,68 @@
+{
+  "schema_id": "factorlab.r3_transfer_target_anchor_failure_evidence@1.0",
+  "clock": "1430",
+  "passed": false,
+  "anchors_checked": 5,
+  "support_mismatches": 3663,
+  "max_abs_error": 0.01710730418562889,
+  "tolerance": 1e-07,
+  "anchors": [
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 2559,
+      "max_abs_error": 0.01710730418562889,
+      "above_tolerance": 2559,
+      "passed": false,
+      "day_position": 2680,
+      "date": "2018-01-08",
+      "ref_finite": 2559,
+      "new_finite": 2559
+    },
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 2957,
+      "max_abs_error": 0.012294996529817581,
+      "above_tolerance": 2957,
+      "passed": false,
+      "day_position": 2860,
+      "date": "2018-10-09",
+      "ref_finite": 2957,
+      "new_finite": 2957
+    },
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 3331,
+      "max_abs_error": 0.011489499360322952,
+      "above_tolerance": 3329,
+      "passed": false,
+      "day_position": 3040,
+      "date": "2019-07-04",
+      "ref_finite": 3331,
+      "new_finite": 3331
+    },
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 3441,
+      "max_abs_error": 0.016294153407216072,
+      "above_tolerance": 3439,
+      "passed": false,
+      "day_position": 3220,
+      "date": "2020-03-31",
+      "ref_finite": 3441,
+      "new_finite": 3441
+    },
+    {
+      "support_mismatches": 3663,
+      "finite_cells_compared": 0,
+      "max_abs_error": 0.0,
+      "above_tolerance": 0,
+      "passed": false,
+      "day_position": 3405,
+      "date": "2020-12-31",
+      "ref_finite": 0,
+      "new_finite": 3663
+    }
+  ],
+  "no_tolerance_change": true,
+  "no_anchor_reselection": true
+}

@@ -1,6 +1,6 @@
 # LCL-R3-TRANSFER-EVAL-20260908-01：冻结模型2021—2025迁移评价
 
-状态：待本地执行。前序 `LCL-R3-TRANSFER-INPUT-20260907-01` 已由云端最终验收，现有2021—2025无标签feature stores直接复用，不重建。
+状态：本地已在 target-anchor 门槛停止并回传；未建立 sidecar、未评分。见 `cloud_results/local_handoff_R3_transfer_eval_20260908/local_feedback.md`。
 
 ## 1. 唯一任务
 

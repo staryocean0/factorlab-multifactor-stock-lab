@@ -1,0 +1,1 @@
+first output root label_bundles: mkdir only, process exited without JSON (later reproduced as target producer does not reproduce accepted old anchors)

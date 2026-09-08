@@ -1,0 +1,5 @@
+........................................................................ [ 93%]
+.....                                                                    [100%]
+- generated xml file: /home/starryocean/桌面/量化/factorlab-r2-handoff-20260906/cloud_results/local_handoff_R3_transfer_eval_20260908/targeted_tests.junit.xml -
+
+summary: tests=77 failures=0 errors=0 skipped=0 exit=0
