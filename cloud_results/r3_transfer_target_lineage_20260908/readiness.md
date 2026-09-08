@@ -1,38 +1,28 @@
-# R3 transfer target-lineage readiness
+# R3 transfer target-lineage / entry-open repair readiness
 
 Date: 2026-09-08.
 
-Current local task: `LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01`.
+`LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01` completed locally at commit `2329b24161649afc4f176bbac990a0de920565b3` and is accepted with limits: current intraday OT code exactly replays old beta/reliability/available, epsilon_history and epsilon_future when fed old P6 raw arrays and old factor basis. The first extension-path divergence is raw future H20.
 
-Cloud conclusion before local data execution:
+Recovered historical P6 target semantics from the already accepted R2 independent auditor:
 
-- `LCL-R3-TRANSFER-EVAL-20260908-01` correctly stopped at the failed target-anchor gate.
-- The ordinary mature 2018--2020 anchors differ by about 0.011--0.017, so this is not a floating-point tolerance issue.
-- 2020-12-31 is structurally immature for an H20 future target in the accepted 2007--2020 calendar and is excluded by the successor diagnostic anchor rule.
-- TIMEISO `materialize_store()` copied `epsilon_history` / `epsilon_future` from the historical OT1 `stock_residual_surfaces.npz`; the current transfer label bridge reconstructs the target through current price, membership, basis and intraday OT code. Equivalence has not been established.
+- history H20 = decision_close[t] / decision_close[t-20] - 1;
+- future H20 = **entry_open[t+20] / entry_open[t] - 1**;
+- entry_open is the first positive finite one-minute open with timestamp wall-clock strictly after the decision clock and <=15:00.
 
-Cloud added `tests/unit/test_reaka_r3_transfer_target_lineage_diag.py` at commit `6693dbd3c0cf30f3ee6b5955c0313f901774529a`.
+The failed v1 transfer label bridge used decision close for the future target and remains preserved as a historical failed runner.
 
-Frozen source identities for the handoff:
+Current local task: `LCL-R3-TRANSFER-TARGET-ENTRYOPEN-20260908-01`.
 
-- diagnostic Git blob: `63aa3263d49f8709d152778f22afe94869c92ecc`
-- guard-test Git blob: `c279d4bc3834a9e9f986eae82e07c408acc73674`
+Use:
 
-Local execution order:
+- `scripts/reaka_r3_transfer_target_source_bridge.py`
+- `scripts/reaka_r3_transfer_label_bridge_v1_1.py`
+- `tests/unit/test_reaka_r3_transfer_target_source_bridge.py`
+- `docs/ops/cloud_local_communication_R3_transfer_target_entryopen_20260908.md`
 
-```bash
-python3 -m pytest -q tests/unit/test_reaka_r3_transfer_target_lineage_diag.py
-python3 scripts/reaka_r3_transfer_target_lineage_diag.py --self-test
-export FACTORLAB_ROOT="/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab"
-python3 scripts/reaka_r3_transfer_target_lineage_diag.py \
-  --output-root "$FACTORLAB_ROOT/tmp/LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01/run01"
-```
+This task first validates the historical DataHub entry-open event rule on five structurally mature old D5 anchors and their t+20 dates, then builds only the 2021--2025 target tail. The accepted 2007--2020 P6 prefix is reused. No 2026 target month is opened by the successor target bridge.
 
-Hard stop remains: no label sidecar, archived-score preflight, model checkpoint reload, transfer score job, model fit, 2026 target, account or CloudRidge monthly experiment.
+Even if the successor label bundles pass both clocks, the local task stops before sidecar creation, archived-score preflight, checkpoint reload or the 24 transfer score jobs. Those remain a separate release after cloud review of the repaired target bundles.
 
-Interpretation rule:
-
-1. If old P6 raw + old factor basis + current intraday OT code reproduces old `epsilon_future`, use the earlier layer comparisons to identify the first extension-path divergence.
-2. If that historical artifact replay fails, do not repair the extension target by tuning tolerances or anchors. The missing identity is the historical target producer and/or historical membership semantics; recover that evidence before declaring a same-definition 2021--2025 target.
-
-This readiness note is engineering/research routing only. It does not certify PIT, fresh OOS, target correctness, or production authority.
+`fresh_oos=false`, `PIT_certified=false`, `production_authority=false`.
