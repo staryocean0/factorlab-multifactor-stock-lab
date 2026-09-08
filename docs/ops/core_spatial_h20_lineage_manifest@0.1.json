@@ -1,0 +1,179 @@
+{
+  "schema_id": "factorlab.core_spatial_h20_lineage_manifest@0.1",
+  "repository": "staryocean0/factorlab-multifactor-stock-lab",
+  "branch": "codex/reaka-foundation-audit-20260905",
+  "evidence_head": "6dcc482f01e9c5173ce8b734c39033c6c248f4ca",
+  "status": "authority_arm_and_count_confirmed_exact_member_lineage_unresolved",
+  "authority_precedence": [
+    "docs/ops/phase1_lab_validation_20260908.md",
+    "docs/ops/reaka_factor_authority@3.0.json",
+    "docs/ops/reaka_factor_authority_v3_whitepaper.md",
+    "src/factor_lab/factor_rotation/reaka_factor_authority_v3.py"
+  ],
+  "paper_core": {
+    "input_arm_id": "CORE_SPATIAL_H20",
+    "authority_factor_identity_count": 48,
+    "resolved_exact_member_count": 0,
+    "unresolved_exact_member_count": 48,
+    "transparent_teacher": {
+      "id": "baseline_score",
+      "member_of_48_core": false,
+      "role": "transparent_teacher_or_baseline_anchor"
+    },
+    "optional_context_read_allowed_in_v3_core_freeze": false,
+    "current_composition_interpretation": "48_paper_core_only_teacher_separate_optional_financial_context_not_automatically_core"
+  },
+  "paper_boundary": {
+    "external_transparent_context_required_by_paper": false,
+    "paper_inputs": [
+      "historical_return_sequence",
+      "stock_feature_sequence"
+    ],
+    "paper_internal_state": "learned_latent_state_and_adaptive_operator_selector",
+    "project_context_role": "optional_factor_or_feature_interaction_only"
+  },
+  "freeze_and_validation": {
+    "step5": {
+      "status": "completed_per_phase1_report",
+      "frozen_core_factor_count": 48,
+      "teacher": "baseline_score",
+      "optional_context_columns_in_core_freeze": 0,
+      "note": "base factor-authority contract recorded rebuild-required before the later Step5 rerun; Phase I report is later adjudication evidence"
+    },
+    "step6": {
+      "status": "paper_core_neural_carrier_fidelity_passed_per_phase1_report",
+      "role": "engineering_carrier_fidelity_not_factor_effectiveness",
+      "fixed_seeds": [
+        11,
+        29,
+        47
+      ],
+      "primary_years": [
+        2019,
+        2020
+      ],
+      "factor_increment_or_context_preservation_required": false
+    }
+  },
+  "lineage_records": [],
+  "lineage_record_schema": {
+    "required_fields_when_resolved": [
+      "position",
+      "factor_id",
+      "paper_identity",
+      "source_artifact",
+      "source_digest",
+      "implementation_mapping",
+      "stage6_position",
+      "validation_status"
+    ],
+    "placeholder_names_forbidden": true,
+    "registry_name_substitution_for_missing_core_identity_forbidden": true
+  },
+  "registry_crosswalk": {
+    "source": "src/factor_lab/factor_rotation/factor_specs.py",
+    "git_blob_sha": "8a935c641203cfec722525d05dada959fc8ab6ff",
+    "authority_role": "general_factor_registry_not_authoritative_48_member_list",
+    "known_active_default_examples": [
+      "return_1d_lag1",
+      "momentum_5d_lag1",
+      "momentum_20d_lag1",
+      "volatility_20d_lag1",
+      "ma_deviation_20d_lag1",
+      "liquidity_amount_20d_log_lag1",
+      "liquidity_volume_20d_log_lag1"
+    ],
+    "known_structural_gated_examples": [
+      "market_cap_size_lag1",
+      "market_cap_from_pit_shares_lag1",
+      "industry_membership_lag1",
+      "fundamental_quality_lag1"
+    ],
+    "crosswalk_status": "not_safe_to_map_registry_entries_to_core_positions_without_frozen_member_artifact"
+  },
+  "optional_financial_channels": {
+    "market_or_index": {
+      "member_of_48_core_by_current_authority": false,
+      "possible_role": "optional_financial_factor_or_exposure_channel",
+      "admission_requires_own_evidence": true
+    },
+    "size": {
+      "member_of_48_core_by_current_authority": false,
+      "possible_role": "optional_structural_size_exposure_or_factor_channel",
+      "registry_status_note": "registered_structural_sources_require_availability_or_PIT_gate",
+      "admission_requires_own_evidence": true
+    },
+    "industry": {
+      "member_of_48_core_by_current_authority": false,
+      "possible_role": "optional_structural_industry_exposure_or_factor_channel",
+      "registry_status_note": "registered_structural_source_requires_availability_or_PIT_gate",
+      "admission_requires_own_evidence": true
+    },
+    "financial_epsilon": {
+      "member_of_48_core_by_current_authority": false,
+      "role": "financial_return_residual_subchannel_not_latent_Koopman_residual_and_not_whole_product_target"
+    },
+    "observable_context": {
+      "member_of_48_core_by_current_authority": false,
+      "role": "optional_factor_or_feature_interaction_only"
+    }
+  },
+  "superseded_or_non_authoritative_composition_clues": [
+    {
+      "source": "src/factor_lab/factor_rotation/reaka_prediction_root_routing.py",
+      "git_blob_sha": "7fb77e1ca741c39bfbcef27121ecdd1de5a42759",
+      "clue": "historical_current_h20_prediction_identity_used_CORE_SPATIAL_H20_plus_approved_transparent_context_and_approved_context_state_count_2",
+      "current_authority_status": "superseded_for_core_composition_by_v3_factor_authority_do_not_interpret_as_48_plus_2_formal_core"
+    }
+  ],
+  "stage5_stage6_implementation_bindings": [
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py",
+      "git_blob_sha": "82fadbdce24f6f2543c8c68ebfb305c75bb7f55c",
+      "role": "compiles_financial_intent_including_input_arm_factor_identity_count_universe_execution_contract"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py",
+      "git_blob_sha": "6f626ac46d3a73a16ab718f3e64a8fcffde66889",
+      "role": "paper_faithful_daily_training_engine_and_tensor_manifest_verification"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_stage6_paper_faithful_freeze.py",
+      "git_blob_sha": "78947fe36225e0d3dd3384f89081cfa19b989a60",
+      "role": "paper_faithful_stage6_freeze_policy"
+    }
+  ],
+  "unresolved_required_lineage": [
+    "ordered_list_of_all_48_exact_factor_ids",
+    "factor_id_to_paper_identity_mapping_for_each_member",
+    "factor_id_to_source_artifact_and_digest_for_each_member",
+    "factor_id_to_implementation_mapping_for_each_member",
+    "factor_id_to_stage6_tensor_position_for_each_member",
+    "member_level_validation_status_for_each_of_48"
+  ],
+  "resolution_rule": "upgrade_only_from_a_frozen_member_manifest_tensor_manifest_or_equivalent_authority_that_explicitly_serializes_the_48_identities_and_positions",
+  "source_evidence": [
+    {
+      "path": "docs/ops/reaka_factor_authority@3.0.json",
+      "git_blob_sha": "27b2eff2c703b0e2bdfbca6c97c147f614f35e18",
+      "role": "arm_count_teacher_optional_context_and_rollback_authority"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_factor_authority_v3.py",
+      "git_blob_sha": "86a0f29aff56129d22ea64ba88a58ab2ccc2648d",
+      "role": "executable_authority_contract_and_paper_boundary"
+    },
+    {
+      "path": "docs/ops/phase1_lab_validation_20260908.md",
+      "git_blob_sha": "a8622f9d654f1a4874b5158d1bf29d99e0f2e5ae",
+      "role": "later_adjudication_that_step5_48_plus_teacher_freeze_and_step6_fidelity_completed"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/factor_specs.py",
+      "git_blob_sha": "8a935c641203cfec722525d05dada959fc8ab6ff",
+      "role": "registry_boundary_and_optional_structural_factor_status_not_core_member_authority"
+    }
+  ],
+  "fresh_oos": false,
+  "production_authority": false
+}
