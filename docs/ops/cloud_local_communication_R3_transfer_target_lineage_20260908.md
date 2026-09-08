@@ -1,6 +1,6 @@
 # LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01：future residual 目标生产链只读诊断
 
-状态：**待本地执行。** 这是 `LCL-R3-TRANSFER-EVAL-20260908-01` 在 target-anchor 门槛停止后的唯一允许后继。不是新实验，不允许建立 sidecar 或启动任何模型评分。
+状态：**本地已反馈（2026-09-08）。** 只读诊断完成；未建立 sidecar、未评分。见 [local_feedback.md](../../cloud_results/local_handoff_R3_transfer_target_lineage_20260908/local_feedback.md)。这是 `LCL-R3-TRANSFER-EVAL-20260908-01` 在 target-anchor 门槛停止后的唯一允许后继。不是新实验。本地不代填云端已复核。
 
 ## 1. 云端裁决背景
 
@@ -114,3 +114,16 @@ python3 scripts/reaka_r3_transfer_target_lineage_diag.py \
 - 所有未知和缺失。
 
 完成后停止，由云端裁决是否存在可接受的同定义 2021--2025 target producer。
+
+## 7. 本地反馈（2026-09-08）
+
+本地已执行 targeted tests（8 passed）、`--self-test` 与正式只读诊断，exit 均为 0。产物在 `cloud_results/local_handoff_R3_transfer_target_lineage_20260908/`。
+
+- 主题仓执行 HEAD：`554a36b709f4c9aa51d31c0d246299ee99ab82ee`
+- FactorLab HEAD：`b39bb12f43a46b165d18db93191a669234077444`
+- `historical_artifact_replay_with_current_OT_code`：两时钟通过，max abs error = 0
+- `diagnosis`：两时钟均为 `raw_future_H20_path_diverges`
+- 结构成熟锚点：2018-01-08、2018-09-25、2019-06-20、2020-03-10、2020-12-03；未使用 2020-12-31
+- new model fit=0；checkpoint reload=0；model score=0；sidecar=0；2026 target=false；Actions=false
+
+属于云端判定 A：当前 OT 代码在旧 P6 raw + 旧 basis 上能重放旧 `epsilon_future`。第一处分歧是旧 P6 `future_h20_raw` 与当前延伸 close 的固定 t+20 公式；未调容差、未继续评分、未自行修复。等待云端裁决。

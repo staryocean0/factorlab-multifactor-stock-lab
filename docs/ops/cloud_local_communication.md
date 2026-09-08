@@ -150,3 +150,9 @@ NaN修复由云端完成，实际runner的wiring判定调用了后继检查函�
 ## 后继任务：LCL-R3-TRANSFER-INPUT-20260907-01（2026-09-07）
 
 **状态**：待本地执行。INFOCLOCK已完成，不重复。任务书及单一反馈入口为 [同定义特征输入重建](cloud_local_communication_R3_transfer_inputs_20260907.md)。云端已实现并测试源包到双时钟无标签特征仓的映射/前缀/装配接口；原始数据与未入库盘中生产器只在本地，故本地补隔离源包生成桥接后执行构建器。网络拟合、推理、checkpoint重载均为0，允许所需原配方滚动统计计算并另行记录。大数组不上传、不调用Actions；真实24项跨期评分未启动。新源码、测试与回执位置见任务书；当前研究状态仍以research_state.json为准。
+
+## 后继任务：LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01（2026-09-08）
+
+**状态**：本地已反馈（2026-09-08）。任务书与单一反馈入口为 [target-lineage 诊断](cloud_local_communication_R3_transfer_target_lineage_20260908.md)。本地小产物见 [local_feedback.md](../../cloud_results/local_handoff_R3_transfer_target_lineage_20260908/local_feedback.md)。
+
+本地执行主题仓 `554a36b`、FactorLab `b39bb12f`；pytest 8 passed、self-test 与正式诊断均为 exit 0。`historical_artifact_replay_with_current_OT_code` 两时钟通过（maxdiff=0）；`diagnosis=raw_future_H20_path_diverges`。未建立 sidecar、未评分、未训练、未读取 2026 target、未调用 Actions。本地不代填云端已复核。

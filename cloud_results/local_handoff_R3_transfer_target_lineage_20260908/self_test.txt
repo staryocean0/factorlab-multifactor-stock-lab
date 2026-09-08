@@ -1,0 +1,1 @@
+{"status": "self_test_passed", "anchors": [365, 630, 900, 1170, 1440]}
