@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build transfer label sidecars or run frozen 2021--2025 transfer evaluation."""
+"""Build transfer label sidecars, preflight, or run frozen transfer evaluation."""
 from __future__ import annotations
 import argparse
 import importlib.util
@@ -50,13 +50,26 @@ def read(path: Path):
     return body
 
 
+def run_preflight_only(spec_path: Path):
+    bootstrap_theme()
+    formal = read(spec_path)
+    from factor_lab.factor_rotation import reaka_r3_transfer_score_preflight as preflight
+    gate = preflight.run(formal, ROOT, FACTORLAB_ROOT)
+    if gate.get("status") != "passed_read_only_checkpoint_score_preflight":
+        raise ValueError("transfer checkpoint/score preflight did not pass")
+    return gate
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--build-label-sidecar", type=Path)
     p.add_argument("--score-worker", type=Path)
+    p.add_argument("--preflight-only", type=Path)
     p.add_argument("--run", type=Path)
     args = p.parse_args()
-    modes = sum(x is not None for x in (args.build_label_sidecar, args.score_worker, args.run))
+    modes = sum(x is not None for x in (
+        args.build_label_sidecar, args.score_worker, args.preflight_only, args.run
+    ))
     if modes != 1:
         p.error("choose exactly one mode")
     try:
@@ -68,6 +81,16 @@ def main() -> int:
                 Path(s["output_root"]), expected_bundle_sha256=str(s["label_bundle_sha256"]),
                 expected_reference_manifest_sha256=str(s["reference_manifest_sha256"]))
             print(json.dumps({"status": result["status"], "finite_evaluation_rows": result["finite_evaluation_rows"]}))
+            return 0
+        if args.preflight_only:
+            gate = run_preflight_only(args.preflight_only)
+            print(json.dumps({
+                "status": gate["status"],
+                "reference_pairs_checked": gate["reference_pairs_checked"],
+                "archived_batch_geometry_preserved": gate.get("archived_batch_geometry_preserved"),
+                "atol": gate.get("atol"),
+                "new_period_score_jobs": gate["new_period_score_jobs"],
+            }))
             return 0
         bootstrap_theme()
         from factor_lab.factor_rotation import reaka_r3_transfer_evaluation as m
