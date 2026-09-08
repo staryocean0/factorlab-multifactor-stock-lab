@@ -43,6 +43,10 @@ def run(spec: Mapping[str, Any], repo_root: Path, factorlab_root: Path) -> dict[
 
     if spec.get("schema_id") != "factorlab.r3_transfer_evaluation_run@1.0":
         raise ValueError("wrong transfer evaluation run schema")
+    head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=factorlab_root,
+                          capture_output=True, text=True)
+    if head.returncode or head.stdout.strip() != ev.EXPECTED_FACTORLAB_COMMIT:
+        raise ValueError("FactorLab commit mismatch")
     timeiso = Path(spec["timeiso_root"]).resolve()
     xfine = Path(spec["xfine_root"]).resolve()
     feature = Path(spec["transfer_feature_root"]).resolve()
