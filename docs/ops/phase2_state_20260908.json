@@ -1,0 +1,31 @@
+{
+  "schema_id": "factorlab.phase2_state@1.0",
+  "as_of": "2026-09-08",
+  "mission": "docs/ops/reaka_research_mission.md",
+  "phase1": {
+    "status": "PASS",
+    "report": "docs/ops/phase1_lab_validation_20260908.md"
+  },
+  "current_phase": "phase2_old_strategy_redevelopment",
+  "current_task": "P2-BASELINE-SPEC-20260908-01",
+  "status": "semantic_baseline_frozen_old_policy_identity_local_recovery_required",
+  "baseline_spec": "docs/ops/phase2_baseline_spec_20260908.md",
+  "phase2_kickoff": "docs/ops/phase2_old_strategy_redevelopment_20260908.md",
+  "local_task": {
+    "id": "LCL-P2-OLDSTRAT-ID-20260908-01",
+    "instruction": "docs/ops/cloud_local_communication_P2_old_strategy_identity_20260908.md",
+    "status": "awaiting_local_identity_recovery"
+  },
+  "blocked_until_identity_review": [
+    "new_strategy_training",
+    "parameter_tuning",
+    "candidate_selection_from_consumed_results",
+    "R3_based_baseline_selection",
+    "account_promotion"
+  ],
+  "r3_role": "subordinate_evidence_only_no_new_24_job_scoring",
+  "canonical_old_policy_identity": "unresolved_in_cloud_repo",
+  "cloudridge_s_obs_formula_identity": "not_recovered_do_not_guess",
+  "fresh_oos": false,
+  "production_authority": false
+}
