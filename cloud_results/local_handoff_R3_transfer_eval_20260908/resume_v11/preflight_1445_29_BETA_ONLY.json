@@ -1,0 +1,19 @@
+{
+  "clock": "1445",
+  "seed": 29,
+  "arm": "BETA_ONLY",
+  "receipt_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-XFINE-20260907-01/run01/1445/models/seed_29/BETA_ONLY/fit_receipt.json",
+  "score_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-XFINE-20260907-01/run01/1445/models/seed_29/BETA_ONLY/scores.npz",
+  "state_digest_match": true,
+  "manifest_digest": "sha256:a52531223f4aa67e6a122c88af6e611a758507a6cea2948a9e036ef6471840c9",
+  "loaded_digest": "sha256:a52531223f4aa67e6a122c88af6e611a758507a6cea2948a9e036ef6471840c9",
+  "rows_equal": true,
+  "archived_n": 408446,
+  "rows_replayed": 64,
+  "max_abs_error": 1.7881393432617188e-07,
+  "mean_abs_error": 2.7939677238464355e-09,
+  "median_abs_error": 0.0,
+  "p99_abs_error": 6.616115570068314e-08,
+  "above_1e-7": 1,
+  "finite": true
+}

@@ -162,3 +162,7 @@ NaN修复由云端完成，实际runner的wiring判定调用了后继检查函�
 **状态**：本地已反馈（2026-09-08）。任务书与单一反馈入口为 [entry-open target 修复](cloud_local_communication_R3_transfer_target_entryopen_20260908.md)。本地小产物见 [local_feedback.md](../../cloud_results/local_handoff_R3_transfer_target_entryopen_20260908/local_feedback.md)。
 
 本地执行主题仓 `d6f4bd3`、FactorLab `b39bb12f`；pytest 71 passed；target source 与 successor label bundle 两时钟锚点 maxdiff=0。未建立 sidecar、未评分、未训练、未读取 2026 target、未调用 Actions。本地不代填云端已复核。
+
+## 后继任务：LCL-R3-TRANSFER-EVAL-20260908-01 resume（2026-09-08）
+
+**状态**：本地已反馈。sidecar v1.1 通过后，archived-score preflight 在 1445/29/BETA_ONLY 停止（maxdiff≈1.788e-7）。24 个新期 score 未启动。详见 [resume 任务书](cloud_local_communication_R3_transfer_eval_resume_20260908.md) 与 [resume_v11/local_feedback.md](../../cloud_results/local_handoff_R3_transfer_eval_20260908/resume_v11/local_feedback.md)。本地不代填云端已复核。

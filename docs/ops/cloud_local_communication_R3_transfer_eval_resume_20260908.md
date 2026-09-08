@@ -1,6 +1,6 @@
 # LCL-R3-TRANSFER-EVAL-20260908-01：在entry-open target验收后恢复评分
 
-状态：target source / successor label bundle已云端验收通过；恢复评分前先完成新的@1.1 sidecar adapter测试。原错误`reaka_r3_transfer_label_bridge.py`和旧@1.0 label metadata不得再用于正式评价。
+状态：**本地已反馈（2026-09-08）。** sidecar v1.1 两时钟通过；archived-score preflight 在 1445/29/BETA_ONLY 以 maxdiff≈1.788e-7 停止；24 个新期 score 未启动。见 [resume_v11/local_feedback.md](../../cloud_results/local_handoff_R3_transfer_eval_20260908/resume_v11/local_feedback.md)。本地不代填云端已复核。
 
 ## 1. 已完成且不要重复
 
@@ -124,3 +124,7 @@ CLI必须先自动运行read-only archived-score preflight：
 回传沿原目录`cloud_results/local_handoff_R3_transfer_eval_20260908/`追加，不覆盖先前target-anchor失败证据。大score、sidecar target数组留本地。
 
 即使成功，身份仍是consumed 2021–2025 historical transfer：`fresh_oos=false`、`PIT_certified=false`、`production_authority=false`。
+
+## 7. 本地反馈（2026-09-08）
+
+sidecar adapter 测试 23 passed；两时钟 sidecar 构建成功，prefix maxdiff=0，years=2021–2025，2026=false。正式 `--run` 在 archived-score preflight 失败：`1445/29/BETA_ONLY` max abs error≈1.788e-7。只读补扫描 24 组旧分数有 4 组略超 1e-7，全部在 1445。未启动 24 个新期 score，未改容差。等待云端裁决。

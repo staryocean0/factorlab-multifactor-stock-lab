@@ -1,0 +1,18 @@
+{
+  "schema_id": "factorlab.r3_transfer_sidecar_v11_binding@1.0",
+  "source_label_bundle_schema": "factorlab.r3_transfer_label_bundle@1.1",
+  "source_label_bundle_sha256": "sha256:72f023efd4073987176290adcedc749ea8051bc54648e7c912a9bc5dbf39e188",
+  "target_source_bundle_sha256": "sha256:e434f1592d9d161aab2af57b0bde82b031014cdbaaa9521f3e680bf6c84d4644",
+  "raw_future_definition": "entry_open_t_plus_20_div_entry_open_t_minus_1",
+  "anchor_schema": "factorlab.r3_transfer_target_anchor_checks@1.1",
+  "anchors_checked": 5,
+  "anchor_support_mismatches": 0,
+  "anchor_max_abs_error": 0.0,
+  "compatibility_transform": "metadata_schema_only_arrays_symlinked_byte_identical",
+  "target_array_rewritten": false,
+  "model_scores_read": 0,
+  "checkpoint_reload": 0,
+  "new_model_fits": 0,
+  "fresh_oos": false,
+  "PIT_certified": false
+}

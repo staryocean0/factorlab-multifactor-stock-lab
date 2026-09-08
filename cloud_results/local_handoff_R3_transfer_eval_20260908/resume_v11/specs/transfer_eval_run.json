@@ -1,0 +1,14 @@
+{
+  "schema_id": "factorlab.r3_transfer_evaluation_run@1.0",
+  "output_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-EVAL-20260908-01/run01",
+  "timeiso_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01",
+  "xfine_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-XFINE-20260907-01/run01",
+  "transfer_feature_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-INPUT-20260907-01/run01",
+  "repo_root": "/home/starryocean/桌面/量化/factorlab-r2-handoff-20260906",
+  "factorlab_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab",
+  "accepted_environment": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/environment.json",
+  "label_sidecars": {
+    "1430": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-EVAL-20260908-01/label_sidecars_v11/1430",
+    "1445": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-EVAL-20260908-01/label_sidecars_v11/1445"
+  }
+}
