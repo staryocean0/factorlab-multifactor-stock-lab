@@ -1,0 +1,13 @@
+start 2026-09-08T15:59:18+08:00
+theme_head 
+factorlab_head 
+spec /home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-EVAL-20260908-01/specs/transfer_eval_run.json
+{"status": "failed", "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/experiment/models/seed_11/F/fit_receipt.json'"}
+exit 1 2026-09-08T15:59:22+08:00
+retry_start 2026-09-08T16:01:54+08:00
+theme_head 8b5800c8450a9d9324f74916ab2db220b77d501e
+factorlab_head b39bb12f43a46b165d18db93191a669234077444
+engineering_note materialized TIMEISO F fit_receipt.json from accepted seed_receipts; checkpoints/scores unchanged
+spec /home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-EVAL-20260908-01/specs/transfer_eval_run.json
+{"status": "failed", "error": "ValueError: archived score numerical mismatch: 1445/29/BETA_ONLY"}
+exit 1 2026-09-08T16:02:04+08:00

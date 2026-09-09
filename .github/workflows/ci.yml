@@ -2,13 +2,122 @@ name: bounded-theme-validation
 
 on:
   push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+      - 'output/**'
+      - 'cloud_results/**'
   pull_request:
+    paths-ignore:
+      - 'data/**'
+      - 'output/**'
+      - 'cloud_results/**'
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'Select current infrastructure, data integrity, or all unit modules'
+        type: choice
+        options: [infrastructure, dataset, full-unit]
+        default: infrastructure
 
 permissions:
   contents: read
 
 jobs:
-  validate:
+  foundation:
+    name: Current infrastructure and explicit unit scope
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            scripts
+            tests
+            docs
+            cloud_results
+            .github
+            .codex
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -e .
+      - run: python -m pip install 'torch>=2.7,<3' --index-url https://download.pytorch.org/whl/cpu
+      - name: Fetch only the pinned historical source fixture commit
+        run: git fetch --no-tags --depth=1 --filter=blob:none origin 3a75376e1f7f871bb72e48f886c275919b3c9671
+      - name: Materialize three small existing regression fixtures, not market panels
+        run: |
+          python - <<'PY'
+          import hashlib, json, subprocess
+          from pathlib import Path
+          paths = [
+              'output/factor-rotation/reaka_v2_stage3_state_episode_atlas_v1_2011_2025/formal/state_learnability_certificate.json',
+              'output/factor-rotation/reaka_v2_stage3_state_episode_atlas_v1_2011_2025/formal/state_months.csv',
+              'output/factor-rotation/reaka_k1_only_factor_kline_selector_v1_2011_2025/formal/monthly_selector_panel.csv',
+          ]
+          records = []
+          for relative in paths:
+              data = subprocess.run(['git', 'show', 'HEAD:' + relative], check=True, capture_output=True).stdout
+              path = Path(relative)
+              path.parent.mkdir(parents=True, exist_ok=True)
+              path.write_bytes(data)
+              records.append({'path': relative, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+          folder = Path('foundation-validation')
+          folder.mkdir(exist_ok=True)
+          (folder / 'regression_fixtures.json').write_text(json.dumps(records, indent=2) + '\n')
+          print('REGRESSION_FIXTURES=' + json.dumps(records))
+          PY
+      - name: Current routing, semantics and navigation
+        run: |
+          mkdir -p foundation-validation
+          git rev-parse HEAD > foundation-validation/checkout.txt
+          python -m pip freeze > foundation-validation/environment.txt
+          python scripts/validate_reaka_foundation.py --inventory > foundation-validation/contract.json
+      - name: Run actual current tests and disclose historical dependency gaps
+        run: python scripts/run_infrastructure_tests.py --output foundation-validation
+      - name: Publish the actual scope, not a whole-repository claim
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          folder = Path('foundation-validation')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write('## Infrastructure only\n\nNo dataset, PIT, historical replay, or financial acceptance is implied.\n\n')
+              for name in ('contract.json', 'test_scope.json'):
+                  path = folder / name
+                  if path.exists():
+                      data = json.loads(path.read_text())
+                      if name == 'contract.json':
+                          inventory = data.pop('navigation_inventory', {})
+                          data['navigation_summary'] = {k: inventory.get(k) for k in ('materialized_markdown_files', 'markdown_links', 'agent_instruction_files', 'issue_reason_counts', 'issues_by_source')}
+                          data['historical_navigation_issue_count'] = len(inventory.get('issues', []))
+                      else:
+                          data = {k: data.get(k) for k in ('checkout_commit', 'status', 'junit', 'deferred_historical_modules', 'all_unit_modules_selected', 'full_repository_validated')}
+                      out.write('### ' + name + '\n```json\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n```\n')
+              receipt = folder / 'test_scope.json'
+              if receipt.exists():
+                  print('INFRASTRUCTURE_RECEIPT=' + receipt.read_text().replace('\n', ''))
+              report = folder / 'contract.json'
+              if report.exists():
+                  data = json.loads(report.read_text())
+                  inventory = data.pop('navigation_inventory', {})
+                  data['navigation_summary'] = {k: inventory.get(k) for k in ('materialized_markdown_files', 'markdown_links', 'agent_instruction_files', 'issue_reason_counts', 'issues_by_source')}
+                  data['navigation_issue_count'] = len(inventory.get('issues', []))
+                  print('NAVIGATION_RECEIPT=' + json.dumps(data, ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: infrastructure-${{ github.sha }}
+          path: foundation-validation/
+          retention-days: 30
+
+  dataset-integrity:
+    name: Explicit data integrity, not PIT or economic acceptance
+    if: github.event_name == 'workflow_dispatch' && inputs.scope == 'dataset'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,4 +127,25 @@ jobs:
           cache: pip
       - run: python -m pip install -e .
       - run: python scripts/validate_theme_package.py
-      - run: pytest -q
+      - run: python -m pytest -q tests/test_theme_boundaries.py
+
+  full-unit:
+    name: Explicit all-unit collection without any deferral
+    if: github.event_name == 'workflow_dispatch' && inputs.scope == 'full-unit'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -e .
+      - run: python -m pip install 'torch>=2.7,<3' --index-url https://download.pytorch.org/whl/cpu
+      - run: git fetch --no-tags --depth=1 --filter=blob:none origin 3a75376e1f7f871bb72e48f886c275919b3c9671
+      - run: python -m pytest -q tests/unit --junitxml=full-unit.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-unit-${{ github.sha }}
+          path: full-unit.xml
+          retention-days: 30

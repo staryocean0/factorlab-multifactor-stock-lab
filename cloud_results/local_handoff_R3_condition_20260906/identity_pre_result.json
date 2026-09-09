@@ -1,0 +1,24 @@
+{
+  "f_reused": true,
+  "reason": "Original fit-prefix/training/preflight git blobs match the R3 design. Input manifests and formal.json blobs match the accepted NOFIT F scores. No same-recipe history-only (H) result exists in the known related directories. The residual-input ablation tree is a different intervention and is not reused as H. H will wrap FactorLab Stage6ReakaModel only at _encode_and_gate after original normalize_batch; F scores stay the frozen npy files. F is not retrained.",
+  "fallback_joint_fh_fits": false,
+  "known_related_dirs_checked": [
+    "output/factor-rotation/reaka_current_k1_residual_input_ablation_v1_2011_2026"
+  ],
+  "rejected_as_H": [
+    "reaka_current_k1_residual_input_ablation_v1_2011_2026"
+  ],
+  "optional_E_executed": false,
+  "max_new_fits": 6,
+  "max_cycles_per_fit": 3,
+  "device_for_H": "cpu",
+  "original_F_source_device": "cuda:0",
+  "device_limitation": "Local torch has no CUDA/ROCm; H trains on CPU. Frozen F scores are not retrained.",
+  "looked_at_new_2017_scores_before_recording_this": false,
+  "source_blobs": {
+    "fit_prefix": "f2538b64478c1c05a16c347e69864751661af4cb",
+    "training": "94f6fb1eafb2d02cdad4a3cc2883884ef9356852",
+    "preflight": "6942fb2dc20d24307578bc7dda45368afaf3d1f5"
+  },
+  "script_sha256": "sha256:4c3d38267cd14bdde866d352efa94c6c862af3997cd37816942785a2b43fa687"
+}

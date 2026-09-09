@@ -1,0 +1,4 @@
+interface:
+  display_name: "策略自然年会话整案重建"
+  short_description: "从共同起点隔离执行逐年盲测、归因、整案重建与封账"
+  default_prompt: "Use $strategy-slice-rebuild to declare an isolated experiment branch, then run sequential annual blind tests, open-ended attribution, whole-policy rebuilds from the common root, and digest-chained snapshot sealing."

@@ -1,0 +1,36 @@
+{
+  "schema_id": "factorlab.research_phase_transition@1.0",
+  "as_of": "2026-09-08",
+  "mission": "docs/ops/reaka_research_mission.md",
+  "phase_I": {
+    "status": "passed_with_explicit_evidence_limits",
+    "report": "docs/ops/phase1_lab_validation_20260908.md",
+    "mathematical_integrity": "PASS",
+    "financial_implementation_capability": "PASS",
+    "all_optional_factors_empirically_admitted": false,
+    "fresh_oos": false,
+    "production_authority": false
+  },
+  "correction": {
+    "authoritative_paper_core_factor_identity_count": 48,
+    "unsupported_previous_phrase": "48+2 all formally wired",
+    "meaning": "market/index, size, industry, context and style may be optional financial/context factors; they are not required to be part of the 48 paper core"
+  },
+  "phase_II": {
+    "status": "opened",
+    "current_task_id": "P2-BASELINE-MAP-20260908-01",
+    "task": "docs/ops/phase2_old_strategy_redevelopment_20260908.md",
+    "next_gate": "freeze canonical old-strategy identity and equivalent-baseline specification before any new model run",
+    "new_model_training_allowed_now": false,
+    "new_r3_scoring_allowed_now": false
+  },
+  "state_precedence": "For mission phase and next-task routing, this transition supersedes the stale top-level current_task/next_useful_action fields in docs/ops/research_state.json. Historical R1/R2/R3 evidence inside research_state remains in force within its recorded scope.",
+  "actions_executed": {
+    "new_training": 0,
+    "model_inference": 0,
+    "account_replay": 0,
+    "github_actions": 0
+  },
+  "fresh_oos": false,
+  "production_authority": false
+}

@@ -28,6 +28,8 @@ from factor_lab.factor_rotation.state_factor_research_state_machine import (
 from factor_lab.portfolio.post_training_strategy_science_acceptance import (
     assert_no_scientific_wall_clock,
 )
+from factor_lab.governance.reaka_foundation_contract import require_research_action
+
 
 ROOT: Final = Path(__file__).resolve().parents[3]
 CONTRACT: Final = ROOT / "docs/ops/reaka_v2_stage3_state_episode_atlas@1.0.json"
@@ -495,6 +497,7 @@ def _write_csv(path: Path, frame: pd.DataFrame) -> None:
 
 
 def execute_tree(*, tree: str, output_root: Path) -> dict[str, object]:
+    require_research_action(Path(__file__).resolve().parents[3], "stage3_execute")
     if tree not in {"formal", "isolated"}:
         raise ValueError("reaka_v2_stage3_tree_invalid")
     contract = load_contract()

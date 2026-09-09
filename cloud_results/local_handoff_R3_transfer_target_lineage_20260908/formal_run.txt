@@ -1,0 +1,7 @@
+start 2026-09-08T13:48:32+08:00
+theme_head 554a36b709f4c9aa51d31c0d246299ee99ab82ee
+factorlab_head b39bb12f43a46b165d18db93191a669234077444
+python Python 3.13.5 /usr/bin/python3
+cmd python3 scripts/reaka_r3_transfer_target_lineage_diag.py --output-root /home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01/run01
+{"status": "target_lineage_diagnosed_no_scores", "task_id": "LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01"}
+exit 0 2026-09-08T13:50:28+08:00

@@ -1,0 +1,26 @@
+{
+  "schema_id": "factorlab.r3_transfer_input_run@1.0",
+  "output_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-INPUT-20260907-01/run01",
+  "clocks": {
+    "1430": {
+      "reference_store": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/store",
+      "source_bundle": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-INPUT-20260907-01/source_bundles/1430",
+      "frozen_selection": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/selection/selected_tools.json",
+      "frozen_normalizer": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/experiment/normalizer.json",
+      "reference_manifest_sha256": "sha256:265c1d7b6e319eca87401812a6b696473c44c838734897774c066da8184154ba",
+      "bundle_manifest_sha256": "sha256:7bea85a30f958a0cbcee95841840b51b6ecdc61f20be75dbf4281e57e99412be",
+      "selection_sha256": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+      "normalizer_sha256": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547"
+    },
+    "1445": {
+      "reference_store": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1445/prepared/store",
+      "source_bundle": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-INPUT-20260907-01/source_bundles/1445",
+      "frozen_selection": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1445/prepared/selection/selected_tools.json",
+      "frozen_normalizer": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1445/experiment/normalizer.json",
+      "reference_manifest_sha256": "sha256:c02cc002793f3200bed3ff47a339138b8e2bf6ca99eea3d93c41306b341416cb",
+      "bundle_manifest_sha256": "sha256:29b1fee49573e2278575be7fe27ec535b68bdf9d688ec68cc7cef4b51c500c31",
+      "selection_sha256": "sha256:cba9982c018eea5e6e3d7fe118276819c04b34bba8f8c5ee7c03744391b1c35f",
+      "normalizer_sha256": "sha256:2214540e20969be032597c2686aec8a9581d4c5bdb6387e74582dd5ff8a1e1b5"
+    }
+  }
+}

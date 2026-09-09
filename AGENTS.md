@@ -1,71 +1,64 @@
-# REAKA Multifactor Stock Lab Control Plane
+# AI 接手约定
 
-This private repository is a bounded FactorLab research theme package. Its
-purpose is to let an external research-grade agent continue multifactor stock
-selection research with the data, infrastructure, paper, and historical results
-that the local controller frozen for this lab. It is not an authority to trade,
-mutate the local FactorLab current pointer, choose K, or promote a strategy.
+唯一现行路由是 [CURRENT.json](CURRENT.json)。先读 [研究总纲](docs/ops/reaka_research_mission.md)、[任务工作流](docs/user/reaka_multifactor_current_workflow_v1_4.md) 与 [研究状态](docs/ops/research_state.json)；仅在涉及数学或金融语义时阅读现行白皮书。无需串读所有 README、历史合同或回执。
 
-## Read order
+**总研究任务只有两阶段且有硬顺序**：阶段 I 先证明论文/研究策略与现有市场/指数、大小盘、行业等因子按新实验室设计组合后数学成立，并具备实现 A 股横截面主动多头选股这一金融需求的机制能力；只有阶段 I 正式通过后，阶段 II 才用新实验室把旧实验室开发出的策略重新开发一遍。单个基础设施、来源审计、消融、迁移或模型比较只能服务这两阶段，不能自行成为第三条长期主线。
 
-1. `README.md`
-2. `NOTICE.md`
-3. `docs/INDEX.md`
-4. `docs/user/cloud_execution_prompt.md`
-5. `docs/governance/data_usage_declaration.json`
-6. `docs/user/reaka_multifactor_current_workflow_v1_2.md`
-7. `docs/ops/reaka_multifactor_current_manifest@1.2.json`
-8. The REAKA paper PDF and its FactorLab summary under `research_materials/`
-9. `.codex/skills/strategy-slice-rebuild/SKILL.md` before any strategy change
+## 工作边界
 
-## Semantic checksum
+- 先把用户的金融问题映射到预测对象、可用信息、数学机制和反例，再选方法。允许否定假说、零残差、无增益；不能把 K、DDPM 或一条旧搜索次序当成必选答案。
+- 依赖缺失只阻断依赖它的动作与结论。继续有价值的独立工作；不要求整套 DataHub、历史完全复现或所有旧测试变绿后才能修文档、推导或写合成测试。
+- 当前研究授权与阶段顺序以 [研究总纲](docs/ops/reaka_research_mission.md) 为准。阶段 I 未完成时，不进行结果驱动的“下一代策略优化”；阶段 I 通过后按阶段 II 重开发旧策略。未来任务仍按工作流检查所需信息与资源，不追加无关的固定审批环节。
+- 保留原行情、旧合同与旧回执。更正结果或改变预测对象使用独立输出和可辨认身份；普通解释、索引、测试修订用 Git 提交即可。不要重算旧摘要来冒充旧过程复现。
+- 不使用未来信息、不改名伪造 OOS、不把已实现归因当未来预测、不把诊断当正式预测证据。报告实际执行与未执行的范围，不代签金融验收，不操作交易或本地生产指针。
+- 发布前检查分支/PR 与 main 的差异，保留用户并行上传；不能 force-push 覆盖它们。不重新分发授权论文或将凭据写入报告。
 
-```text
-observable_state_equals_latent_operator_state = false
-user_supplies_operator_count = false
-model_learns_operator_matrices = true
-model_learns_operator_assignments = true
-stage3_may_select_operator_count = false
-effective_operator_count_is_post_training_evidence = true
-portfolio_top_k_is_operator_count = false
-```
+## 云端—本地交接协议（默认不生效）
 
-Stop if these cannot be confirmed. Do not invent K2 from a failed identification
-attempt. Do not treat S_obs as operator supervision.
+### 生效条件
 
-## Frozen boundaries
+Protocol 1 与 Protocol 2 **默认不生效**。只有在当前任务中被明确告知“你和云端协作”时才生效。同等表述包括“按云端交接协议执行”、“这是云端与本地协作”。
 
-- Current unique local action is user financial review of Stage4 evidence.
-- Stage5, training, residual/DRC training, account execution, pointer change and
-  production are closed in this repository.
-- Files outside the current manifest have no current normative authority.
-- Consumed formula identities in
-  `docs/ops/reaka_factor_parallel_consumed_formula_registry@2.0.json` must not be
-  rerun as if they were new.
-- Never use result-driven calendar rules. Dates, clusters and casebook names are
-  materials, not runtime state.
-- The paper is a licensed IEEE full text. Internal research only; no public
-  redistribution.
+把一项任务发到某个云端主题仓库、并要求该云端会话继续执行，也视为已经明确告知**该云端会话**启用本协议。
 
-## Data contract
+### 不生效的情况
 
-- A-share QFQ daily bars: 2007-2008 warmup, 2009-2025 research surface.
-- 165 non-financial factors, PIT market cap, industry indexes, macro input and
-  CloudRidge/000985 references are shipped as research surfaces through 2025-12-31.
-- 2026+ rows are physically absent and must not be downloaded, inferred,
-  requested over the network, or fabricated.
-- `fresh_oos=false`. 2018-2025 is already consumed comparison for the current
-  Stage4 line and cannot be advertised as unseen OOS.
-- Data is a research surface, not a live broker fill surface.
+正常情况下，许多任务由本地发起、在本地执行。即使本协议已经写进 `AGENTS.md`，只要当前任务没有上述明确告知，本协议就不生效：
 
-## Deliverables
+- 按普通本地任务继续工作，不要去写交接文档、等待云端，或把步骤发到 GitHub Actions；
+- 不要因为本文存在，就把本地任务改写成云端协作任务；
+- 未生效时，下面 Protocol 1 / Protocol 2 没有运行时效力。
 
-- New reusable code under `src/factor_lab/`.
-- Tests under `tests/`.
-- Executable workflows under `scripts/`.
-- Specifications and notes under `docs/` or `cloud_results/`.
-- Do not modify `data/development/` or the frozen paper PDF.
+本协议即使生效，也只改变执行地点和沟通方式，不扩大训练、数据搬迁、金融验收或生产权限。
 
-No production, paper-trading, registered-use, K-selection, or fresh-OOS
-authority is available in this repository.
+### Protocol 1：云端缺数据时的文档交接与本地反馈
 
+适用于已激活协作后的计算、测试和证据检查。某一步因云端缺少所需数据而无法执行时，云端 AI 必须将该步骤写入 [云端—本地沟通文档](docs/ops/cloud_local_communication.md)，并在当次回复中明确告知用户任务编号、阻断原因、文档路径和需要本地大模型完成的事项，由用户安排本地大模型接手。不能只说“等待数据”、静默跳过，或默认要求把全部原始数据搬到云端。若沟通文档尚不存在，在首次交接时创建，不要为此先搬数据。
+
+交接只需一份可执行记录：任务目标与所需结论、代码分支/提交、已完成和未执行的步骤、缺失的最小数据及口径、执行命令或实施步骤、预期输出和验收条件。尚无可用执行器时如实写明需要本地实现的部分，不把拟议命令写成已经可以运行。已有同一任务记录则复用，历史大清单用链接定位，不反复复制或索取同一批文件。
+
+本地大模型完成后，在同一沟通记录中反馈实际代码版本、数据范围与必要身份摘要、命令与退出码、结果及产物位置、失败或未验证事项；大数据和大产物留在本地，只回传必要的小报告或可访问的文档。无法直接回写仓库时，由用户转交文档供云端归档；没有本地执行通道时，云端不得声称已经自动派发或执行。
+
+云端收到反馈后先读取并复核，区分“本地已反馈”与“云端已复核”，注明复核范围和结论后继续下游工作。不能把本地报告称为云端独立全量复验，也不能将未执行或失败项改写为通过。等待本地反馈期间，继续不依赖该缺失数据的独立工作。
+
+### Protocol 2：计算执行位置与工作流优先级
+
+**仅在本协议已生效时：** 云端 AI 在当前会话中直接执行 → 请求本地大模型执行 → 最后才考虑 GitHub Actions。本顺序适用于已有及后续云端工作流；工作流列出的命令说明要做什么，不意味着默认交给 Actions。未生效时不要按此顺序改写本地任务。
+
+先按每个步骤检查数据、工具、依赖和资源。能用当前云端会话实际可用的 Python、终端等工具完成的计算、测试、静态检查和小规模验证，优先自己运行并保存真实结果，不能因已有 CI 配置就外包给 Actions。写了代码、给出命令或推测结果都不等于实际执行。
+
+本地大模型的计算资源调度默认以**整体吞吐率**为目标：派发本地任务时，若 GPU 对该任务可用且预计性能优于 CPU、与 CPU 大致相当，或仅有小幅劣势，则优先使用 GPU，以释放 CPU 给其他并行工作。只有在 GPU 明显更慢、任务不适合 GPU、会改变冻结数值环境/复现口径，或现有证据合同明确要求 CPU 时，才优先使用 CPU。若执行设备会影响数值可复现性，先满足冻结环境与证据口径，再考虑资源利用率；任务书应明确实际 device 选择及理由。
+
+云端确实无法完成时，将该步骤按 Protocol 1 写入沟通文档，请本地大模型在其数据/算力环境执行；若已知云端缺少必要数据，可直接交接，不要求先进行注定失败的试跑。只有前两种方式不适用，且 Actions 能取得所需输入、具有可用额度并处于用户授权的资源范围内，才把 Actions 作为最后选择，并记录理由。无需为了走完顺序重复失败尝试或增加逐步审批。
+
+用户告知 Actions 无可用额度期间，不主动派发、重跑或用反复 push 试探额度。发布前检查相关触发条件，对适用的 push/pull_request 提交使用 `[skip ci]` 等跳过标记，避免仅为保存文档触发计算；其他触发类型需另行确认，不能假定标记通用。不伪造绿色检查、不擅自移除合并保护。额度恢复也不改变上述优先级。
+
+报告每一步的实际执行地点、已完成/未执行状态和证据位置。缺数据或额度不会自动否定策略，也不构成让无关步骤停工的理由；恢复后仅补执行仍必要的未完成步骤，不重复运行已具有适用证据的计算。
+
+## 维护方式
+
+代码放 `src/factor_lab/`，命令放 `scripts/`，反例放 `tests/`。当前状态只改其单一状态文件；工作流负责操作，白皮书负责语义，历史结果放原回执路径。新代码不必先进入一份巨大的全仓摘要白名单才允许开发。
+
+执行 `python scripts/validate_reaka_foundation.py` 与 `python scripts/run_infrastructure_tests.py`。旧 V1.3 合同测试在固定历史字节上运行；它们不是现行文档的编辑锁。默认测试明确披露缺依赖的历史模块；新增测试默认纳入，不能用跳过、假模块或宽泛忽略规则制造通过。
+
+交接给出改动、实跑证据、未验证范围和一个最有价值的下一动作。已知缺口无新输入时不要重复重跑同一大检查，也不要仅回复“等待数据”。

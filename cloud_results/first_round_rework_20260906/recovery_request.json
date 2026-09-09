@@ -1,0 +1,162 @@
+{
+  "schema_id": "factorlab.reaka_first_round_recovery_request@1.0",
+  "input_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
+  "completed_deliveries_do_not_resend": [
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/manifest.json",
+    "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/manifest.json",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1430.parquet",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1445.parquet",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1430.parquet",
+    "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1445.parquet"
+  ],
+  "resume_at": "R2_external_PIT_and_financial_epsilon_construction",
+  "required_bounded_upstream": [
+    {
+      "stage": "P6.1",
+      "clock": "14:30_and_14:45",
+      "needed": "Original target/fill manifest and referenced bounded observations, entry_open arrays, calendar, symbols and decision_positions with actual observation/fill timestamps; no daily-close substitution",
+      "manifest_digest_recorded": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+      "digest_rule": "Recover original manifest and its digest convention; mapping input also records this target_fill_manifest file digest",
+      "original_root": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal",
+      "original_file_digests": {
+        "manifest.json": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+        "calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+        "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+        "entry_open_1430.npy": "sha256:9cbd8adab2936148cb8ef8528c9ee8cfd480d87b3d4a8cc352a712caf1a60482",
+        "entry_open_1445.npy": "sha256:ac2867f0cba5ee8747b7d36bc578a4076efb7acfa642f4cfc76b43dfc6f12b82"
+      },
+      "root_provenance": "docs/ops/reaka_intraday_portfolio_mapping_market_rebuild@1.0.json:inputs.target_fill_roots"
+    },
+    {
+      "stage": "P6.2",
+      "clock": "14:30_and_14:45",
+      "needed": "Original OT1/OT2/OT3 manifests, contracts, materialization code and bounded source artifacts: stock_residual_surfaces, stock/industry exposures and selected factor states; follow only dependencies needed to verify residual arithmetic and PIT",
+      "manifest_digests_recorded": {
+        "formal_1430_ot1": "sha256:e564d6dc818de9891eb7a8d83cd1fe62bb1490995857b5cb31518d6067970558",
+        "formal_1430_ot2": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a",
+        "formal_1430_ot3": "sha256:86d40e3cb1fd306800f27b81c1a2a24654dd8efa52672183fa6e366e936a83fa",
+        "formal_1445_ot1": "sha256:abcdaca494be21418798caef71d6b50a02e77fdf361f49b0210224e96b5855c2",
+        "formal_1445_ot2": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b",
+        "formal_1445_ot3": "sha256:7f6324a337a78440d8d2a21aba8cc41a442e2c45bf4bac955eff8cdc3c77d348"
+      },
+      "root_locator": "Recovered from delivered historical blackbox source; verify each OT manifest against the P6.3 contract digest records",
+      "required_lineage": [
+        "return intervals and adjustment convention",
+        "intercept and beta fitting windows, input availability and freeze times",
+        "cross-fit fold membership and applicable decision support",
+        "factor return and condition publication availability",
+        "financial epsilon history/label maturity and prediction availability"
+      ],
+      "original_roots": [
+        "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430",
+        "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445"
+      ],
+      "root_provenance": "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py:OLD_OT_ROOT and source-input construction"
+    }
+  ],
+  "upstream_suffix_inventory": [
+    {
+      "suffix": "ot1/stock_residual_surfaces.npz",
+      "matches": []
+    },
+    {
+      "suffix": "ot1/d5_stock_exposures.parquet",
+      "matches": []
+    },
+    {
+      "suffix": "ot1/d5_stock_industry_exposures.parquet",
+      "matches": []
+    },
+    {
+      "suffix": "ot2/selected_factor_states.parquet",
+      "matches": []
+    },
+    {
+      "suffix": "entry_open_1430.npy",
+      "matches": []
+    },
+    {
+      "suffix": "entry_open_1445.npy",
+      "matches": []
+    }
+  ],
+  "missing_declared_source_files": [
+    {
+      "path": "docs/user/reaka_intraday_K1_preflight_workflow.md",
+      "expected": "sha256:34d3780ca8b45cc8b11404d1777b322fa4965a7df1421424526b95cbce00ccb6",
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json"
+    },
+    {
+      "path": "scripts/factor_rotation/freeze_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:db054addf74fb3ebaa45bbddc0d6e291cc9424410da982c8c842d8dffd16c32f",
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json"
+    },
+    {
+      "path": "scripts/factor_rotation/materialize_reaka_intraday_K1_input_v1.py",
+      "expected": "sha256:2b1af96b5f1b2cba5195b0ef0bbd08d59285a80fb8c73992baa5657c83eebdec",
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json"
+    },
+    {
+      "path": "scripts/factor_rotation/run_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:63ecdfae51fb3993995be91a8db08b93f8e2671b8d0774388fc3e11fa2e5d582",
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json"
+    },
+    {
+      "path": "scripts/factor_rotation/validate_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:dae5244c18cf96f1db5e68e476096918193e2440853490c4a9f60f01bbda035f",
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json"
+    },
+    {
+      "path": "scripts/factor_rotation/close_reaka_intraday_K1_preflight_v1.py",
+      "expected": "sha256:ea6edae26b4c9d4b350ca481535f5a69db75cce78955c6627d73a7c83fa7854d",
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json"
+    },
+    {
+      "path": "tests/unit/test_reaka_intraday_k1_preflight_v1.py",
+      "expected": "sha256:0f4edc1cfbd1d7028eb486e2b672539a216037b0683cb03c03a0cd923fb5dcd2",
+      "manifest": "docs/ops/reaka_intraday_K1_preflight@1.0.json"
+    },
+    {
+      "path": "tests/unit/test_reaka_intraday_k1_fit_prefix_successor_v1.py",
+      "expected": "sha256:926dac537449c54fc631c4577ea0da5b93ee8cfc1df2dc07ec0312bcf679ec79",
+      "manifest": "docs/ops/reaka_intraday_K1_fit_prefix_successor@1.0.json"
+    }
+  ],
+  "unrecovered_account_sources": [
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py",
+      "expected": "sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1",
+      "detail": "file digest mismatch: src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py: sha256:cce2c26db12aaba5a7feb212215fbc71b802b8377fd8ec8472fb88cdeb95b139 != sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1"
+    },
+    {
+      "path": "src/factor_lab/portfolio/account_research_bundle.py",
+      "expected": "sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97",
+      "detail": "file digest mismatch: src/factor_lab/portfolio/account_research_bundle.py: sha256:8228972eeff82b6489a4eb6db40919f76d4abdef42bfc334925d8ec3255cca2f != sha256:7480480ad82d94f2ac4df361c084fe16a1d2f77405ee8989d83a1848ccaa5a97"
+    }
+  ],
+  "unrecovered_account_source_policy": "Preserve as an acknowledged historical reproducibility limitation. Do not fabricate bytes or reseal old receipts. Reuse or successor replay is adjudicated at R4 after R2, with independently verified account invariants.",
+  "whole_datahub_lake_required": false,
+  "new_fit_or_K2_or_DDPM_requested": false,
+  "fresh_oos": false,
+  "production_authority": false,
+  "additional_transitive_source_dependencies": [
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_target_fill_v1.py",
+      "required_by": "reaka_current_generation_aggregate_blackbox_v1.py import; PR merge test collection",
+      "role": "P6.1 target/fill source",
+      "digest": "not_recovered_from_delivered_declarations; recover original source binding with P6.1 contract"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_clock_attribution_v1.py",
+      "required_by": "reaka_intraday_k1_fit_prefix_successor_v1.py import diagnose_cell",
+      "role": "historical fit diagnostic source closure",
+      "digest": "not_recovered_from_delivered_declarations; follow original fit diagnostic receipt"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_intraday_orthogonal_ot_v1.py",
+      "required_by": "reaka_current_generation_aggregate_blackbox_v1.py import and SOURCE_FILES",
+      "role": "P6.2 financial residual and factor state/exposure source",
+      "digest": "not_recovered_from_delivered_declarations; follow original OT contract"
+    }
+  ]
+}

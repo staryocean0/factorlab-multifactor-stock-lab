@@ -1,0 +1,61 @@
+{
+  "schema_id": "factorlab.r3_transfer_target_anchor_checks@1.1",
+  "clock": "1445",
+  "selection_rule": "five_equal_index_quantiles_of_structurally_mature_2018_2020_old_D5_blind_to_target_values",
+  "anchors_checked": 5,
+  "support_mismatches": 0,
+  "max_abs_error": 0.0,
+  "passed": true,
+  "anchors": [
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 2559,
+      "max_abs_error": 0.0,
+      "above_tolerance": 0,
+      "passed": true,
+      "day_position": 2680,
+      "date": "2018-01-08",
+      "structurally_mature": true
+    },
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 2949,
+      "max_abs_error": 0.0,
+      "above_tolerance": 0,
+      "passed": true,
+      "day_position": 2855,
+      "date": "2018-09-25",
+      "structurally_mature": true
+    },
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 3321,
+      "max_abs_error": 0.0,
+      "above_tolerance": 0,
+      "passed": true,
+      "day_position": 3030,
+      "date": "2019-06-20",
+      "structurally_mature": true
+    },
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 3445,
+      "max_abs_error": 0.0,
+      "above_tolerance": 0,
+      "passed": true,
+      "day_position": 3205,
+      "date": "2020-03-10",
+      "structurally_mature": true
+    },
+    {
+      "support_mismatches": 0,
+      "finite_cells_compared": 3630,
+      "max_abs_error": 0.0,
+      "above_tolerance": 0,
+      "passed": true,
+      "day_position": 3385,
+      "date": "2020-12-03",
+      "structurally_mature": true
+    }
+  ]
+}

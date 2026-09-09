@@ -1,0 +1,158 @@
+{
+  "schema_id": "factorlab.r3_x_fine_cloud_checks@1.0",
+  "task_id": "LCL-R3-XFINE-20260907-01",
+  "local_result_commit": "b8a2c30af3ac2384823fa641bfd537cffb9d20e2",
+  "execution_base_commit": "32b449b5603e034d5dad660cd7fdfdc3117481be",
+  "accepted": true,
+  "scope": "consumed_2018_2020_preregistered_nested_ordered_contrasts",
+  "cloud_small_evidence_checks": {
+    "passed": 47,
+    "failed": 0,
+    "includes": [
+      "result commit is one commit ahead of frozen execution base and does not modify numerical runner code",
+      "49-test local receipt has zero failures/errors/skips",
+      "zero-fit preflight identity/support fields",
+      "formal 18-fit execution receipt and reference refit counts",
+      "primary and secondary three-level arithmetic closure",
+      "per-seed sign-pattern checks",
+      "combined moving-block interval classification",
+      "state-availability and reliability year/phase sign consistency"
+    ],
+    "not_included": [
+      "retraining the 18 models in cloud",
+      "rehashing local large checkpoint tensors or scores.npz",
+      "recomputing stock-level daily RankIC from raw local arrays"
+    ]
+  },
+  "tests": {
+    "local_targeted_tests": 49,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "cloud_rerun": false
+  },
+  "preflight": {
+    "status": "passed_read_only_reference_preflight",
+    "reference_seed_pairs_checked": 6,
+    "paired_days_1430": 142,
+    "paired_days_1445": 142,
+    "xcoarse_reconstruction_verified_both_clocks": true,
+    "new_fits": 0,
+    "new_inference": 0,
+    "future_result_peeking": false
+  },
+  "formal_execution": {
+    "status": "completed_consumed_historical_only",
+    "exit_code": 0,
+    "new_arms": ["STATE_VALUE_PLUS_E", "BETA_ONLY", "BETA_RELIABILITY"],
+    "new_fits": 18,
+    "reference_F_refits": 0,
+    "reference_E_refits": 0,
+    "reference_H_refits": 0,
+    "max_cycles_per_fit": 3,
+    "max_total_cycles": 54,
+    "fit_receipts_present": 18,
+    "checkpoint_manifests_present": 18,
+    "reload_specs_present": 18,
+    "F_plus_M_executed": false,
+    "result_driven_rerun_detected": false
+  },
+  "runtime_identity": {
+    "factorlab_commit": "b39bb12f43a46b165d18db93191a669234077444",
+    "timeiso_runner_sha256": "sha256:ee7036f1925ab61ed88cc96e79a0ee06af9bb2a75812a1a58f4aa2d4a61c3708",
+    "condition_views_sha256": "sha256:7d76a03785e2d03623342c63c360ddf7680835433294f5f511163d09fba2f921",
+    "x_decomposition_git_blob": "040182c3f8571083a83d8df3cd852f82dc1f4e48",
+    "x_coarse_runner_git_blob": "5adcfc81dff0a637e0ae21987db02d1c94ba5b9b",
+    "fine_runner_git_blob": "c6d6cfc940734c3363dc2b81fda80c2518394e80",
+    "fine_preflight_git_blob": "5c85b72ddd85162f46a2d7da38002fdd151759ed",
+    "device": "cpu",
+    "cuda_available": false,
+    "stable_environment_match": true
+  },
+  "combined_primary": {
+    "STATE_VALUE_PLUS_E_minus_E": {
+      "mean": 0.000863300155161836,
+      "median": -0.0009710071280000501,
+      "win_days": 67,
+      "loss_days": 75,
+      "block8": [-0.007361658091011675, 0.009204745445995602],
+      "adjudication": "weak_mixed_not_stable"
+    },
+    "F_minus_STATE_VALUE_PLUS_E": {
+      "mean": 0.01039550242582941,
+      "median": 0.0098382076692804,
+      "win_days": 95,
+      "loss_days": 47,
+      "block4": [0.004691980960732418, 0.016940404828343896],
+      "block8": [0.004807915919115406, 0.01729753150712058],
+      "block12": [0.004629251513549953, 0.01644439861559049],
+      "adjudication": "positive_more_stable_on_consumed_support"
+    },
+    "BETA_ONLY_minus_H": {
+      "mean": 0.005507342317600292,
+      "median": 0.002301158921786575,
+      "win_days": 78,
+      "loss_days": 64,
+      "block8": [-0.00868934390248756, 0.01963128423654393],
+      "adjudication": "positive_point_estimate_not_stable"
+    },
+    "BETA_RELIABILITY_minus_BETA_ONLY": {
+      "mean": 0.00563429629042826,
+      "median": 0.004355834315412475,
+      "win_days": 87,
+      "loss_days": 55,
+      "block4": [0.0007990554639460411, 0.01078797961360499],
+      "block8": [0.00045334995015429, 0.01112439594113505],
+      "block12": [0.000597839587729899, 0.011458915759248239],
+      "adjudication": "positive_more_stable_on_consumed_support"
+    },
+    "E_minus_BETA_RELIABILITY": {
+      "mean": -0.0018636167681325918,
+      "median": -0.0024103565342671997,
+      "win_days": 58,
+      "loss_days": 84,
+      "block8": [-0.004845891503178258, 0.0005199603612191761],
+      "adjudication": "no_positive_primary_increment_established_point_estimate_negative"
+    }
+  },
+  "coarse_reconstruction": {
+    "F_minus_E": 0.011258802580991234,
+    "E_minus_H": 0.009278021839895956,
+    "F_minus_H": 0.020536824420887195,
+    "rankic_state_closure_error": 1.214306433183765e-17,
+    "rankic_exposure_closure_error": 3.469446951953614e-18,
+    "rankic_total_closure_error": -6.938893903907228e-18,
+    "secondary_closure_max_abs_error": 1.1275702593849246e-17
+  },
+  "per_seed_signs": {
+    "state_values": {"positive": 3, "negative": 3},
+    "state_availability": {"positive": 6, "negative": 0},
+    "beta_only": {"positive": 5, "negative": 1},
+    "reliability": {"positive": 4, "negative": 2},
+    "exposure_availability": {"positive": 2, "negative": 4}
+  },
+  "year_phase_consistency": {
+    "state_availability_all_2clocks_x_3years_positive": true,
+    "state_availability_all_2clocks_x_4phases_positive": true,
+    "reliability_all_2clocks_x_3years_positive": true,
+    "reliability_all_2clocks_x_4phases_positive": true,
+    "exposure_availability_all_2clocks_x_4phases_negative": true,
+    "exposure_availability_2020_both_clocks_positive": true
+  },
+  "secondary_rule": {
+    "secondary_metrics": ["H20_financial_residual_decile_spread", "H20_financial_residual_top30_minus_universe"],
+    "secondary_does_not_rescue_failed_primary": true,
+    "example_exposure_availability_primary_mean": -0.0018636167681325918,
+    "example_exposure_availability_top30_mean": 0.002384733883055626
+  },
+  "monthly_cloudridge": {
+    "formula_identity_not_found": true,
+    "F_plus_M_authorized": false
+  },
+  "actions_runs_on_local_result_commit": 0,
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "unique_causal_attribution": false,
+  "production_authority": false
+}

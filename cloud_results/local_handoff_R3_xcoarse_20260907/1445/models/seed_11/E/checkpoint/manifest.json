@@ -1,0 +1,183 @@
+{
+  "schema_id": "factorlab.reaka_intraday_K1_checkpoint@1.0",
+  "state_digest": "sha256:442b3717e3c98d70c9316c33e3979ff068b76f27f3b1a039f711c27f3c598ba4",
+  "tensor_count": 29,
+  "tensors": [
+    {
+      "position": 0,
+      "name": "decoder.0.bias",
+      "filename": "tensor_000.npy",
+      "digest": "sha256:f79b9c935e81e7828920db4269a36a7650818f40527fb4ccb4a0b5f89a9094f9"
+    },
+    {
+      "position": 1,
+      "name": "decoder.0.weight",
+      "filename": "tensor_001.npy",
+      "digest": "sha256:76b2309c6a28fcd133645534a9f59911bab6879b11b60138bf64343802e4e46f"
+    },
+    {
+      "position": 2,
+      "name": "decoder.2.bias",
+      "filename": "tensor_002.npy",
+      "digest": "sha256:2b5cf2068af1eee027c08d75efe9170a30305c9d221688c578c72d38f819fddd"
+    },
+    {
+      "position": 3,
+      "name": "decoder.2.weight",
+      "filename": "tensor_003.npy",
+      "digest": "sha256:23d2d1b9be24bb594665ec5bcf3bf65c445390434a9871d661f5f0ff9b994bae"
+    },
+    {
+      "position": 4,
+      "name": "diffusion_alpha",
+      "filename": "tensor_004.npy",
+      "digest": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68"
+    },
+    {
+      "position": 5,
+      "name": "diffusion_alpha_bar",
+      "filename": "tensor_005.npy",
+      "digest": "sha256:053392f8a623cbc0f7738cb4710aa8804a7c6679221b678d44b1ef3b8687de68"
+    },
+    {
+      "position": 6,
+      "name": "diffusion_beta",
+      "filename": "tensor_006.npy",
+      "digest": "sha256:c6f1801eff28af84c06e6d4c5e86b3223df03170ad2cd593df79e8377c9f6a28"
+    },
+    {
+      "position": 7,
+      "name": "feature_encoder.bias_hh_l0",
+      "filename": "tensor_007.npy",
+      "digest": "sha256:eef7943afde04ad5688adcc09294cfb322865dc84e36496706003f6171db501d"
+    },
+    {
+      "position": 8,
+      "name": "feature_encoder.bias_ih_l0",
+      "filename": "tensor_008.npy",
+      "digest": "sha256:eef7943afde04ad5688adcc09294cfb322865dc84e36496706003f6171db501d"
+    },
+    {
+      "position": 9,
+      "name": "feature_encoder.weight_hh_l0",
+      "filename": "tensor_009.npy",
+      "digest": "sha256:5accd96b54608a8803a9f6871eb14c6810f9bbb4fa4912ef98e4927bdd8d895d"
+    },
+    {
+      "position": 10,
+      "name": "feature_encoder.weight_ih_l0",
+      "filename": "tensor_010.npy",
+      "digest": "sha256:bca0b00d0731fb72c732a2fbb6d7ed1f07e4a3573c03a49b90e7a86223b1f63b"
+    },
+    {
+      "position": 11,
+      "name": "gate_net.0.bias",
+      "filename": "tensor_011.npy",
+      "digest": "sha256:2c8f988b82b9db8a91fc5ef3366422a804f43f757766923b0314abdf38617a10"
+    },
+    {
+      "position": 12,
+      "name": "gate_net.0.weight",
+      "filename": "tensor_012.npy",
+      "digest": "sha256:81f5db8c67af70030015e69d5d49e0a82ae83e742c730d8af6b06c956f2d9d43"
+    },
+    {
+      "position": 13,
+      "name": "gate_net.2.bias",
+      "filename": "tensor_013.npy",
+      "digest": "sha256:fd98abd080c90fcc5f6c45fc0538f9023ed01969281489f09cce41e40d0f5e57"
+    },
+    {
+      "position": 14,
+      "name": "gate_net.2.weight",
+      "filename": "tensor_014.npy",
+      "digest": "sha256:0f256af03cac865b87c23c3cd0cc2f9e9a3156d9fbf030895d59279e41fe993c"
+    },
+    {
+      "position": 15,
+      "name": "operators",
+      "filename": "tensor_015.npy",
+      "digest": "sha256:7a9c02bec5b747ef2b584a27e55f9f6f55c25fa26668af27e569d5a7cdc2a483"
+    },
+    {
+      "position": 16,
+      "name": "residual_denoiser.network.0.bias",
+      "filename": "tensor_016.npy",
+      "digest": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b"
+    },
+    {
+      "position": 17,
+      "name": "residual_denoiser.network.0.weight",
+      "filename": "tensor_017.npy",
+      "digest": "sha256:8c5d68efb6cddc7fdd4763cf05ab5fd96303dae884c9b77e77e80a2cec135902"
+    },
+    {
+      "position": 18,
+      "name": "residual_denoiser.network.2.bias",
+      "filename": "tensor_018.npy",
+      "digest": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b"
+    },
+    {
+      "position": 19,
+      "name": "residual_denoiser.network.2.weight",
+      "filename": "tensor_019.npy",
+      "digest": "sha256:a3335d4021165f974c8fda39c0a1794410b0143804f6ad181382ffd85e844527"
+    },
+    {
+      "position": 20,
+      "name": "residual_denoiser.network.4.bias",
+      "filename": "tensor_020.npy",
+      "digest": "sha256:1d8162890545e6448c2cb5c317e574cf6d3403f98a74ce782cc689ef2007b64b"
+    },
+    {
+      "position": 21,
+      "name": "residual_denoiser.network.4.weight",
+      "filename": "tensor_021.npy",
+      "digest": "sha256:7fdbbacf245adeab27f3d17c939e32cc68fe5c4349da6ba1e4d16164f18cf038"
+    },
+    {
+      "position": 22,
+      "name": "residual_denoiser.time_embedding.weight",
+      "filename": "tensor_022.npy",
+      "digest": "sha256:503852c55c829b1b61eb063c491843d28e99c09471800c9b956ed0041f1a3fb1"
+    },
+    {
+      "position": 23,
+      "name": "return_encoder.bias_hh_l0",
+      "filename": "tensor_023.npy",
+      "digest": "sha256:f6ba4cd0afebf254a14f7b5eaa147e1b4dac4eb9a4bd1f414b3c03186b6a85db"
+    },
+    {
+      "position": 24,
+      "name": "return_encoder.bias_ih_l0",
+      "filename": "tensor_024.npy",
+      "digest": "sha256:f6ba4cd0afebf254a14f7b5eaa147e1b4dac4eb9a4bd1f414b3c03186b6a85db"
+    },
+    {
+      "position": 25,
+      "name": "return_encoder.weight_hh_l0",
+      "filename": "tensor_025.npy",
+      "digest": "sha256:fa0c10df89637115a4a960cc6c939979b0efe8cc869ba6fecaa85381631f3ef2"
+    },
+    {
+      "position": 26,
+      "name": "return_encoder.weight_ih_l0",
+      "filename": "tensor_026.npy",
+      "digest": "sha256:5de694ddaed69d3e51c008f0a3a81965e67ac93cb292908965c7bec3bff6c05c"
+    },
+    {
+      "position": 27,
+      "name": "selector.bias",
+      "filename": "tensor_027.npy",
+      "digest": "sha256:95b1fc3071e0e314a086f3cd8f2ff82c9ea41cf690921dfdb2b9e73c8901e01f"
+    },
+    {
+      "position": 28,
+      "name": "selector.weight",
+      "filename": "tensor_028.npy",
+      "digest": "sha256:5bac9503fd856d290845c306c0f3d9bde8a6cec19e5c3fd10e1b0ea0320f0ad5"
+    }
+  ],
+  "production_authority": false,
+  "canonical_digest": "sha256:770d101141e4a698684ae01a0b69ab271c49baf3c7cef2f72d39caf140068d25"
+}

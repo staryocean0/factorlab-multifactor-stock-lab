@@ -1,0 +1,38 @@
+{
+  "schema_id": "factorlab.r3_nofit_cloud_acceptance@1.0",
+  "task": "LCL-R3-NOFIT-20260906-01",
+  "reviewed_local_commit": "d340f249f01d3e413d876cf9096d789114fc6070",
+  "frozen_script_commit": "d6804cdb2b321f7b5ae74eb98fc8dcc5f59613d6",
+  "verdict": "completed_with_limits",
+  "r3_status": "nofit_baseline_comparison_reviewed_consumed_only",
+  "tests": {"executed_by": "current_cloud_session", "tests": 13, "failures": 0, "errors": 0, "skipped": 0, "exit_code": 0},
+  "test_command": "python -m pytest -q tests/unit/test_reaka_r3_frozen_compare.py --junitxml=cloud_tests.xml",
+  "test_execution_note": "Executed from original delivered package; script and test bytes rehashed to current GitHub blobs. Not a full repository checkout or full suite.",
+  "source_identity": [
+    {"path": "scripts/reaka_r3_frozen_compare.py", "git_blob": "2bb0f6dd326091d8aa35cc7ce9b73b5244e70f01", "sha256": "188d9a54746d95e079770cef701837d827880c61bc542dd2ad6f9a4729367e9f", "current_github_blob_match": true},
+    {"path": "tests/unit/test_reaka_r3_frozen_compare.py", "git_blob": "314bdbf0f9c05975aede8b22f020a716f593b471", "sha256": "4b806ddceb659667f9b54d1136e8e655b45b9b7198da8366677ec7ac5222e43e", "current_github_blob_match": true}
+  ],
+  "connector_source_blobs": {"comparison.json": "3be56c5483229b9cced7813b2e671384b112dddc", "paired_daily.csv": "9e2cfe3fb3711e35d872d2f08c875ef88f0ffcd8", "local_feedback.md": "89f14030e921af4af8da0902c1eb871961fba9a4"},
+  "paired_aggregation_checks": {"executed_by": "current_cloud_session", "passed": 57, "failed": 0, "projection_pairs": 98, "individual_predictor_records_projected": 196, "original_csv_records": 490, "scope": "Connector-retrieved selected columns on all dates/clocks, transcribed into a 98-row paired projection. This is not a byte copy or cloud rehash of the original 490-row CSV. Other three baseline summaries were arithmetically checked, not numerically re-aggregated from all daily rows."},
+  "numeric_results": {
+    "1430": {"support_days": 49, "support_rows": 82321, "min_stocks": 1447, "max_stocks": 1894, "k1_mean_rankic": 0.15992587044817144, "reversal_mean10_rankic": 0.13322081415939865, "paired_rankic_mean": 0.026705056288772767, "paired_rankic_median": 0.019127840099607274, "paired_rankic_positive_days": 36, "paired_rankic_negative_days": 13, "paired_rankic_phase_means": {"0": 0.023365692767411544, "1": 0.032680557055143444, "2": 0.03202343803545132, "3": 0.01830733881819489}, "phase_day_counts": {"0": 12, "1": 12, "2": 13, "3": 12}, "paired_decile_spread_mean": 0.013074233306916035, "paired_decile_positive_days": 38, "paired_top30_mean": 0.006228615238232661, "paired_top30_positive_days": 26, "quarter_rankic_delta_descriptive_only": {"1": 0.0559566870547992, "2": -0.008956564032977064, "3": 0.04729514454464372, "4": 0.010809116900635973}},
+    "1445": {"support_days": 49, "support_rows": 82321, "min_stocks": 1447, "max_stocks": 1894, "k1_mean_rankic": 0.16152574720082447, "reversal_mean10_rankic": 0.13439309893986953, "paired_rankic_mean": 0.02713264826095494, "paired_rankic_median": 0.02326995785520066, "paired_rankic_positive_days": 33, "paired_rankic_negative_days": 16, "paired_rankic_phase_means": {"0": 0.02641789654427561, "1": 0.030146642522431082, "2": 0.03196887472620066, "3": 0.019594160378808567}, "phase_day_counts": {"0": 12, "1": 12, "2": 13, "3": 12}, "paired_decile_spread_mean": 0.01389164223567398, "paired_decile_positive_days": 39, "paired_top30_mean": 0.004710429130648904, "paired_top30_positive_days": 25, "quarter_rankic_delta_descriptive_only": {"1": 0.056447300321800585, "2": -0.0013296451403966014, "3": 0.04088288453924495, "4": 0.011384200299979969}}
+  },
+  "cross_clock_paired_delta_correlation_descriptive_only": 0.9788636762151399,
+  "environment": {"python": "3.13.5", "numpy": "2.3.5", "scipy": "1.17.0", "pytest": "9.0.2", "platform": "Linux-6.18.35-x86_64-with-glibc2.41"},
+  "files_sha256": {"paired_projection.csv": "8db9e9332583a472938cc966f1bd649c8daa7e010876138b55fc4db0ca55b304", "reported_reference.json": "7f5501ee16692b36b67c03635e6e192b45ef41bcf8dcbf6031f3a8f3db813255", "review_projection.py": "c9b50f75c100aca3365a1f803bf3b3bc4691e212ef0af1f3e01e3d35a44c4e64", "projection_checks.json": "4a209ba1bfc700cfcf2d513896bde603663170674649f7af3eb68e654b44f57f", "cloud_tests.xml": "4c777bd225d45feb37f9f1904508ff79e00b8c925e314f725da1241b9f910f88", "cloud_tests.log": "a0584ab9a9bf51d0dc9910e73f866b592027fd98b58d4fa09a10f6372b51b252"},
+  "full_checklist_and_junit": "Original files included in the user-delivered evidence bundle. Aggregation checklist can also be regenerated from this directory's script and projection; this compact JSON is not their raw-byte replacement.",
+  "source_original_csv_rehashed_in_cloud": false,
+  "real_equity_scores_or_labels_recomputed": false,
+  "new_local_task_required": false,
+  "training_executed": false,
+  "frozen_inference_executed": false,
+  "account_replay": false,
+  "actions_executed": false,
+  "full_repository_tests_run": false,
+  "condition_feature_increment_identified": false,
+  "inferential_acceptance": false,
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "production_authority": false
+}

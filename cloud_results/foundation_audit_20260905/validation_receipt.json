@@ -1,0 +1,33 @@
+{
+  "schema_id": "factorlab.reaka_foundation_validation_receipt@1.0",
+  "base_commit": "3f67b9fd0a20da8d0f2f33276f4870bba2cbf04e",
+  "tested_head_commit": "15a85cb887c76536847eb2156b0f13dfcaf9c935",
+  "tested_pr_merge_commit": "8cb7eb0926e9983fdd1336ad249bc1ecc2d9d9bd",
+  "workflow_run": 33981438446,
+  "artifact_id": 9973881165,
+  "artifact_digest": "sha256:0c7c59cbe70782ccd0d8e79c74615d4e550c4fe73c73bd5597e956fcbbb88f5b",
+  "test_scope": "all_tests_unit_real_cpu_torch",
+  "tests": 127,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "foundation_ready": false,
+  "audit_hard_errors": 1,
+  "audit_evidence_gaps": 35,
+  "market_data_changed": false,
+  "training_executed": false,
+  "financial_receipt_signed": false,
+  "production_authority": false,
+  "artifact_files": {
+    "audit.json": "sha256:2a116d0b1c848cba2b07d647c490956d5bb55cc609ea725289374ebdc21dcbb1",
+    "first_tests.xml": "sha256:9368c3e7434093828aa65ed66b866896dbe84f6f2cec6dbdb839da5b87d7276a",
+    "final_tests.xml": "sha256:1a1ea27fa9a90d27fe9932183b6a75ba05955a2e97a23e91b4c35cd10aa832c9"
+  },
+  "tested_implementation_files": {
+    "src/factor_lab/factor_rotation/__init__.py": "sha256:bd157c7d0497c05b7c2426a622f33f3f25a486f37c586fb4852aed666ad51288",
+    "src/factor_lab/factor_rotation/reaka_stage6_daily_engine.py": "sha256:94319684df2508cec8d8ec7b048516ceb059016ce357244ef2704996ef784509",
+    "src/factor_lab/governance/reaka_foundation_audit.py": "sha256:7e696bfba473c93550035ecbf19bc43fb5e910a0ec59b29e552450bd365903a3",
+    "src/factor_lab/governance/reaka_residual_certificate.py": "sha256:903d839efa86b6406d0033a5026d60215771a8ae3bf91aee0185d757481cb621",
+    "scripts/audit_reaka_foundation.py": "sha256:2de158b5111e461969787b1d81bfbff8cbc7c97147e0e612ed23d01e08aca09d"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "store_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/store",
+  "checkpoint_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/experiment/models/seed_11/F/checkpoint",
+  "normalizer_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/experiment/normalizer.json",
+  "candidate_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/experiment/candidate.json",
+  "seed": 11,
+  "arm": "F",
+  "indices_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/experiment/prediction_indices.npy",
+  "output_path": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/experiment/models/seed_11/F/scores.npz",
+  "device_name": "cpu"
+}

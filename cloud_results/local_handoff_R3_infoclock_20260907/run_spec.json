@@ -1,0 +1,31 @@
+{
+  "schema_id": "factorlab.r3_information_clock_audit@1.0",
+  "output_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-INFOCLOCK-20260907-01/run01",
+  "stores": {
+    "1430": {
+      "root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/store",
+      "expected_hashes": {
+        "calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+        "inference_rows.npy": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+        "state_values.npy": "sha256:dacc1fd57f8fb80ab40a505e9cb953507a211ba64dac7125f2de8682fd258dc6",
+        "state_available.npy": "sha256:054fa59a5fbedb7e6811921511b1029d245978fe36a62d5b30fc39d94c18475d",
+        "exposure_decision_positions.npy": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+        "exposure_reliability.npy": "sha256:56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e",
+        "exposure_available.npy": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97"
+      }
+    },
+    "1445": {
+      "root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1445/prepared/store",
+      "expected_hashes": {
+        "calendar.npy": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+        "inference_rows.npy": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+        "state_values.npy": "sha256:780fc63a318ffa10bb09cbd1f7cceb1e8f58c4683f74b21a8cea01419263f325",
+        "state_available.npy": "sha256:054fa59a5fbedb7e6811921511b1029d245978fe36a62d5b30fc39d94c18475d",
+        "exposure_decision_positions.npy": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+        "exposure_reliability.npy": "sha256:603bf38ebe0562b829001ddd9b3009313a2914a65b4e8e61525501e20f956b0c",
+        "exposure_available.npy": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97"
+      }
+    }
+  },
+  "time_evidence": []
+}

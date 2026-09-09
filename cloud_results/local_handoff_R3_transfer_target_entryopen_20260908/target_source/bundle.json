@@ -1,0 +1,30 @@
+{
+  "schema_id": "factorlab.r3_transfer_entry_open_target_source@1.0",
+  "task_id": "LCL-R3-TRANSFER-TARGET-ENTRYOPEN-20260908-01",
+  "status": "bounded_entry_open_targets_prepared",
+  "target_definition": "entry_open_t_plus_20_div_entry_open_t_minus_1",
+  "horizon_trading_positions": 20,
+  "historical_prefix_origin": "reused_accepted_P6_arrays",
+  "tail_origin": "bounded_DataHub_1m_entry_open_rule",
+  "calendar_end": "2025-12-31",
+  "contains_2026_target": false,
+  "anchor_checks_passed": true,
+  "new_model_fits": 0,
+  "model_scores": 0,
+  "checkpoint_reload": 0,
+  "artifact_digests": {
+    "calendar.npy": "sha256:c5d64bccb2ffc2dc545345caba167c10effbd080c5fe9db0199e086495997e3c",
+    "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+    "anchor_checks.json": "sha256:eeedf3fbd51ebbe6324a3bb66c5f0c5a6d675447114f71979388dd9743712d4a",
+    "source_receipt.json": "sha256:427d7ab00b3bdfe55d092346bc6fade3093c35c42262be8f82861703475af50e",
+    "entry_open_1430.npy": "sha256:da9a73a4212bcee76f28055b7987f6eeed837d5c5f5d68053ed6144ce75a38ab",
+    "entry_minute_1430.npy": "sha256:b7e88a9674f2cd54c358b41b1e496f56e95d833382ebef8ce72bacb9fd091cd6",
+    "future_h20_raw_1430.npy": "sha256:d775fbc20adf489f939d530d373f1018541771a03312544b957dd529375fe49e",
+    "entry_open_1445.npy": "sha256:07a3d663fcaee1cc3244416e2666d949e614881b2211ce5e5913cbe428fe3179",
+    "entry_minute_1445.npy": "sha256:29a65c865038cfaebb0c82c1939c6ba87389c80d52542e1dca7e84d6f4b7f82e",
+    "future_h20_raw_1445.npy": "sha256:bcd233928095d82e232a44070763afa2fe06e5d72bd88f99be9a434f582fe66c"
+  },
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false
+}

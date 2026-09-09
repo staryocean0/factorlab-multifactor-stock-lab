@@ -1,0 +1,65 @@
+{
+  "schema_id": "factorlab.r3_source_observations@1.0",
+  "extraction_kind": "selected_fields_transcribed_from_GitHub_fetched_receipts_not_full_raw_file_copies",
+  "current_branch_base": "bfe0f0ae0949154aa6c4019144bac5cdc283e9bc",
+  "read_main_ref": "3f67b9fd0a20da8d0f2f33276f4870bba2cbf04e",
+  "historical_fit_receipt_ref": "2575f9e4d12289fa3916d14f27cb637908614fd9",
+  "metric_source": "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/{clock}/formal.json:diagnostic.ensemble_review_metrics",
+  "clocks": {
+    "1430": {
+      "source_git_blob": "57a1ab18761e39cb66001090ac1782bd8eda2d8d",
+      "day_count": 49,
+      "mean_daily_rankic": 0.15992587044817141,
+      "daily_rankic_std": 0.10271856401825889,
+      "daily_rankic_se": 0.014674080574036985,
+      "mean_top_bottom_decile_spread": 0.06350312729058125,
+      "phase_mean_rankic": {"0": 0.15289298542868382, "1": 0.17148502630362125, "2": 0.16532160035529203, "3": 0.14955422554616188},
+      "positive_phase_count": 4,
+      "ensemble_member_score_spearman": 0.9987173392357378,
+      "ensemble_input_score_spearman": 0.9997030702363633
+    },
+    "1445": {
+      "source_git_blob": "ab75bd55f2a990dffc2036fa2f03a6295e88ec64",
+      "day_count": 49,
+      "mean_daily_rankic": 0.16152574720082447,
+      "daily_rankic_std": 0.09782219339633619,
+      "daily_rankic_se": 0.013974599056619455,
+      "mean_top_bottom_decile_spread": 0.06499432299494441,
+      "phase_mean_rankic": {"0": 0.1566622285727581, "1": 0.16970746348271573, "2": 0.16715745620237976, "3": 0.1521065314619813},
+      "positive_phase_count": 4,
+      "ensemble_member_score_spearman": 0.9990515258234958,
+      "ensemble_input_score_spearman": 0.9997202590993559
+    }
+  },
+  "metric_semantics_source": {
+    "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_training_v1.py",
+    "ref": "2575f9e4d12289fa3916d14f27cb637908614fd9",
+    "git_blob": "94f6fb1eafb2d02cdad4a3cc2883884ef9356852",
+    "functions": ["split_indices", "score_rows", "daily_metrics"],
+    "train": "year<=2016; fit on historical sequences, not future review targets",
+    "review": "2017 & labelled",
+    "target": "store.epsilon_future",
+    "se_formula": "sample_std_daily_rankic/sqrt(valid_date_count)",
+    "spread": "mean epsilon_future top score decile minus bottom score decile, not total return or account pnl"
+  },
+  "ensemble_source": {
+    "path": "src/factor_lab/factor_rotation/reaka_intraday_k1_clock_attribution_v1.py",
+    "ref": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
+    "git_blob": "970a5188954ecea7501b22662717f9916cf167c8",
+    "functions": ["_rankz_by_day", "diagnose_cell"],
+    "aggregation": "per-date per-seed rank-z using population std, then mean seeds 11/29/47",
+    "member_test": "drop symbol%10==0 from DMD moments and replace operator while retaining model",
+    "input_test": "0.01 normalized Gaussian noise to return and value feature channels; not no-context ablation"
+  },
+  "account_2017_selected_h20": {
+    "source": "output/factor-rotation/reaka_current_k1_account_ledgers_v1_2011_2026/formal/selection_opportunity_annual.csv",
+    "ref": "bfe0f0ae0949154aa6c4019144bac5cdc283e9bc",
+    "git_blob": "e19a0b43ec0af93742f56b1bc5ff228bff1ce77e",
+    "1430": -0.0097370579894307148,
+    "1445": -0.0087888448429566408,
+    "note": "Different target/support from residual-decile metric; do not subtract as an incremental performance estimate. This legacy CSV also returned existing 2026 aggregate rows in the tool response; those were not analyzed or copied into this derived input, and no new 2026 market data was loaded."
+  },
+  "new_market_data_loaded": false,
+  "frozen_model_inference_run": false,
+  "fresh_oos": false
+}

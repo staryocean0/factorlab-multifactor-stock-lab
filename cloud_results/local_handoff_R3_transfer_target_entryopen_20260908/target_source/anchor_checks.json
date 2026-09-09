@@ -1,0 +1,315 @@
+{
+  "schema_id": "factorlab.r3_transfer_entry_open_anchor_checks@1.0",
+  "selection_rule": "five_equal_index_quantiles_of_structurally_mature_2018_2020_old_D5",
+  "anchors": [
+    {
+      "day_position": 2680,
+      "date": "2018-01-08"
+    },
+    {
+      "day_position": 2855,
+      "date": "2018-09-25"
+    },
+    {
+      "day_position": 3030,
+      "date": "2019-06-20"
+    },
+    {
+      "day_position": 3205,
+      "date": "2020-03-10"
+    },
+    {
+      "day_position": 3385,
+      "date": "2020-12-03"
+    }
+  ],
+  "clocks": {
+    "1430": {
+      "entry_open_rows": [
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3072,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2680,
+          "date": "2018-01-08"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3006,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2700,
+          "date": "2018-02-05"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3262,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2855,
+          "date": "2018-09-25"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3282,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2875,
+          "date": "2018-10-30"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3394,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3030,
+          "date": "2019-06-20"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3411,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3050,
+          "date": "2019-07-18"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3578,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3205,
+          "date": "2020-03-10"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3588,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3225,
+          "date": "2020-04-08"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3919,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3385,
+          "date": "2020-12-03"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3972,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3405,
+          "date": "2020-12-31"
+        }
+      ],
+      "entry_minute_mismatches": 0,
+      "future_h20_rows": [
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 2946,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 2680,
+          "date": "2018-01-08"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3242,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 2855,
+          "date": "2018-09-25"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3390,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 3030,
+          "date": "2019-06-20"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3568,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 3205,
+          "date": "2020-03-10"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3913,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 3385,
+          "date": "2020-12-03"
+        }
+      ],
+      "passed": true
+    },
+    "1445": {
+      "entry_open_rows": [
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3072,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2680,
+          "date": "2018-01-08"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3006,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2700,
+          "date": "2018-02-05"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3262,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2855,
+          "date": "2018-09-25"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3282,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 2875,
+          "date": "2018-10-30"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3394,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3030,
+          "date": "2019-06-20"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3411,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3050,
+          "date": "2019-07-18"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3578,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3205,
+          "date": "2020-03-10"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3588,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3225,
+          "date": "2020-04-08"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3919,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3385,
+          "date": "2020-12-03"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3972,
+          "max_abs_error": 0.0,
+          "violations": 0,
+          "passed": true,
+          "day_position": 3405,
+          "date": "2020-12-31"
+        }
+      ],
+      "entry_minute_mismatches": 0,
+      "future_h20_rows": [
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 2946,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 2680,
+          "date": "2018-01-08"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3242,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 2855,
+          "date": "2018-09-25"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3390,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 3030,
+          "date": "2019-06-20"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3568,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 3205,
+          "date": "2020-03-10"
+        },
+        {
+          "support_mismatches": 0,
+          "finite_cells_compared": 3913,
+          "max_abs_error": 0.0,
+          "above_tolerance": 0,
+          "passed": true,
+          "day_position": 3385,
+          "date": "2020-12-03"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "passed": true
+}

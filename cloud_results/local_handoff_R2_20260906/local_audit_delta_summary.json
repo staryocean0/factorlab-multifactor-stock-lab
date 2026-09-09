@@ -1,0 +1,376 @@
+{
+  "schema_id": "factorlab.reaka_r2_local_audit_delta_summary@1.1",
+  "task": "LCL-R2-20260906-01",
+  "started_at": "2026-09-06T07:49:32.398244+00:00",
+  "finished_at": "2026-09-06T07:50:03.316174+00:00",
+  "full_pit_certified": false,
+  "automatic_retraining_required": false,
+  "statuses": {
+    "A_identity": "passed",
+    "A_rejudge": "passed",
+    "B_1430": "passed",
+    "B_1445": "passed",
+    "C_timestamp": "label_proxy_reproducible_event_availability_unverified"
+  },
+  "A_identity": {
+    "rows": 81,
+    "successor_byte_match": 81,
+    "successor_mismatch_or_other": 0
+  },
+  "selection": [
+    {
+      "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot2/selected_family_tools.json",
+      "current_raw_sha256": "sha256:cd5d7ed8ad65938b89652a1cb66d272463b4067f35f8467d6be2d9bbd3b08c00",
+      "cloud_published_raw_sha256": "sha256:cd5d7ed8ad65938b89652a1cb66d272463b4067f35f8467d6be2d9bbd3b08c00",
+      "recomputed_canonical_digest": "sha256:eec20a28752536b9047842becaca304aee8eaa1bf967f28339438fa4d83c5af3",
+      "raw_matches_cloud_published": true,
+      "recomputed_matches_original_expected": true,
+      "successor_status": "byte_match"
+    },
+    {
+      "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot2/selected_family_tools.json",
+      "current_raw_sha256": "sha256:fffcd456bd204df28b38abc6b5f809257a8f7c20271bfb36775327d68d0ee345",
+      "cloud_published_raw_sha256": "sha256:fffcd456bd204df28b38abc6b5f809257a8f7c20271bfb36775327d68d0ee345",
+      "recomputed_canonical_digest": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6",
+      "raw_matches_cloud_published": true,
+      "recomputed_matches_original_expected": true,
+      "successor_status": "byte_match"
+    }
+  ],
+  "A_rejudge": {
+    "rescanned_price_or_residual_arrays": false,
+    "B": true,
+    "C": {
+      "C_1430": true,
+      "C_1445": true
+    },
+    "D_full_reference_only": {
+      "D_1430": true,
+      "D_1445": true
+    }
+  },
+  "B": {
+    "B_1430": {
+      "status": "passed",
+      "store_identity_passed": true,
+      "store_identity": {
+        "state_values": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "state_available": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "stock_factor_exposures": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_reliability": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_available": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        }
+      },
+      "prefix_passed": true,
+      "prefix_combinations_checked": 70,
+      "uncovered": [],
+      "ot3_enters_k1_features": false,
+      "assemble_inputs_variant_index": "symbol_position % 5 + 1",
+      "fresh_oos_claimed": false,
+      "assemble_spots": [
+        {
+          "date": "2015-01-06",
+          "symbol": "000001",
+          "symbol_position": 0,
+          "variant_index": 1,
+          "variant_id": "crossfit_fold_0",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000002",
+          "symbol_position": 1,
+          "variant_index": 2,
+          "variant_id": "crossfit_fold_1",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000020",
+          "symbol_position": 14,
+          "variant_index": 5,
+          "variant_id": "crossfit_fold_4",
+          "inference_row_present": false,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": false
+        },
+        {
+          "date": "2020-12-31",
+          "symbol": "000004",
+          "symbol_position": 2,
+          "variant_index": 3,
+          "variant_id": "crossfit_fold_2",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        }
+      ]
+    },
+    "B_1445": {
+      "status": "passed",
+      "store_identity_passed": true,
+      "store_identity": {
+        "state_values": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "state_available": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "stock_factor_exposures": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_reliability": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_available": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "violations": 0
+        }
+      },
+      "prefix_passed": true,
+      "prefix_combinations_checked": 70,
+      "uncovered": [],
+      "ot3_enters_k1_features": false,
+      "assemble_inputs_variant_index": "symbol_position % 5 + 1",
+      "fresh_oos_claimed": false,
+      "assemble_spots": [
+        {
+          "date": "2015-01-06",
+          "symbol": "000001",
+          "symbol_position": 0,
+          "variant_index": 1,
+          "variant_id": "crossfit_fold_0",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000002",
+          "symbol_position": 1,
+          "variant_index": 2,
+          "variant_id": "crossfit_fold_1",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000020",
+          "symbol_position": 14,
+          "variant_index": 5,
+          "variant_id": "crossfit_fold_4",
+          "inference_row_present": false,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": false
+        },
+        {
+          "date": "2020-12-31",
+          "symbol": "000004",
+          "symbol_position": 2,
+          "variant_index": 3,
+          "variant_id": "crossfit_fold_2",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        }
+      ]
+    }
+  },
+  "C": {
+    "status": "label_proxy_reproducible_event_availability_unverified",
+    "example": {
+      "status": "example_extracted",
+      "symbol": "000001",
+      "trading_day": "2009-01-07",
+      "raw_timestamp": "2009-01-07T14:30:00Z",
+      "suffix": "Z",
+      "p61_slice": "14:30",
+      "interpreted_as": "Asia/Shanghai session wall-clock spelling, Z is a suffix not a UTC conversion",
+      "decision_use_if_14_30": "select_clock_coordinates keeps close when time<=14:30; this 14:30 label is the decision close proxy",
+      "entry_open_is_later_bar": "first time>14:30 same day",
+      "available_at": "2026-05-04T15:28:00.747316+00:00",
+      "available_at_equals_timestamp": false
+    },
+    "event_availability": "not_verified",
+    "tradeability": "not_verified",
+    "lineage": {
+      "decision_price": "last_raw_trade_close_between_1300_and_decision_clock_same_day",
+      "entry_fill": "first_raw_1m_bar_open_after_decision_clock_same_day",
+      "future_target_literal": "entry_open_t_plus_20_div_entry_open_t_minus_1",
+      "future_target_resolved_meaning": "(entry_open[t+20] / entry_open[t]) - 1"
+    }
+  }
+}

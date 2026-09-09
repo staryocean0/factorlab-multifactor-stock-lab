@@ -1,0 +1,1938 @@
+[
+  {
+    "date": "2021-01-08",
+    "day_position": 3410,
+    "universe": 3982,
+    "included": 3386,
+    "history_missing": 596,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-01-15",
+    "day_position": 3415,
+    "universe": 3982,
+    "included": 3399,
+    "history_missing": 583,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-01-22",
+    "day_position": 3420,
+    "universe": 3982,
+    "included": 3395,
+    "history_missing": 587,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-01-29",
+    "day_position": 3425,
+    "universe": 3982,
+    "included": 3415,
+    "history_missing": 567,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-02-05",
+    "day_position": 3430,
+    "universe": 3982,
+    "included": 3427,
+    "history_missing": 555,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-02-19",
+    "day_position": 3435,
+    "universe": 3982,
+    "included": 3431,
+    "history_missing": 551,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-02-26",
+    "day_position": 3440,
+    "universe": 3982,
+    "included": 3424,
+    "history_missing": 558,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-03-05",
+    "day_position": 3445,
+    "universe": 3982,
+    "included": 3448,
+    "history_missing": 534,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-03-12",
+    "day_position": 3450,
+    "universe": 3982,
+    "included": 3455,
+    "history_missing": 527,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-03-19",
+    "day_position": 3455,
+    "universe": 3982,
+    "included": 3455,
+    "history_missing": 527,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-03-26",
+    "day_position": 3460,
+    "universe": 3982,
+    "included": 3461,
+    "history_missing": 521,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-04-02",
+    "day_position": 3465,
+    "universe": 3982,
+    "included": 3467,
+    "history_missing": 515,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-04-12",
+    "day_position": 3470,
+    "universe": 3982,
+    "included": 3475,
+    "history_missing": 507,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-04-19",
+    "day_position": 3475,
+    "universe": 3982,
+    "included": 3477,
+    "history_missing": 505,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-04-26",
+    "day_position": 3480,
+    "universe": 3982,
+    "included": 3489,
+    "history_missing": 493,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-05-06",
+    "day_position": 3485,
+    "universe": 3982,
+    "included": 3493,
+    "history_missing": 489,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-05-13",
+    "day_position": 3490,
+    "universe": 3982,
+    "included": 3501,
+    "history_missing": 481,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-05-20",
+    "day_position": 3495,
+    "universe": 3982,
+    "included": 3501,
+    "history_missing": 481,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-05-27",
+    "day_position": 3500,
+    "universe": 3982,
+    "included": 3509,
+    "history_missing": 473,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-06-03",
+    "day_position": 3505,
+    "universe": 3982,
+    "included": 3510,
+    "history_missing": 472,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-06-10",
+    "day_position": 3510,
+    "universe": 3982,
+    "included": 3517,
+    "history_missing": 465,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-06-18",
+    "day_position": 3515,
+    "universe": 3982,
+    "included": 3511,
+    "history_missing": 471,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-06-25",
+    "day_position": 3520,
+    "universe": 3982,
+    "included": 3521,
+    "history_missing": 461,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-07-02",
+    "day_position": 3525,
+    "universe": 3982,
+    "included": 3524,
+    "history_missing": 458,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-07-09",
+    "day_position": 3530,
+    "universe": 3982,
+    "included": 3538,
+    "history_missing": 444,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-07-16",
+    "day_position": 3535,
+    "universe": 3982,
+    "included": 3534,
+    "history_missing": 448,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-07-23",
+    "day_position": 3540,
+    "universe": 3982,
+    "included": 3547,
+    "history_missing": 435,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-07-30",
+    "day_position": 3545,
+    "universe": 3982,
+    "included": 3550,
+    "history_missing": 432,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-08-06",
+    "day_position": 3550,
+    "universe": 3982,
+    "included": 3571,
+    "history_missing": 411,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-08-13",
+    "day_position": 3555,
+    "universe": 3982,
+    "included": 3566,
+    "history_missing": 416,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-08-20",
+    "day_position": 3560,
+    "universe": 3982,
+    "included": 3575,
+    "history_missing": 407,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-08-27",
+    "day_position": 3565,
+    "universe": 3982,
+    "included": 3581,
+    "history_missing": 401,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-09-03",
+    "day_position": 3570,
+    "universe": 3982,
+    "included": 3594,
+    "history_missing": 388,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-09-10",
+    "day_position": 3575,
+    "universe": 3982,
+    "included": 3594,
+    "history_missing": 388,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-09-17",
+    "day_position": 3580,
+    "universe": 3982,
+    "included": 3605,
+    "history_missing": 377,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-09-28",
+    "day_position": 3585,
+    "universe": 3982,
+    "included": 3606,
+    "history_missing": 376,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-10-12",
+    "day_position": 3590,
+    "universe": 3982,
+    "included": 3629,
+    "history_missing": 353,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-10-19",
+    "day_position": 3595,
+    "universe": 3982,
+    "included": 3665,
+    "history_missing": 317,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-10-26",
+    "day_position": 3600,
+    "universe": 3982,
+    "included": 3674,
+    "history_missing": 308,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-11-02",
+    "day_position": 3605,
+    "universe": 3982,
+    "included": 3683,
+    "history_missing": 299,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-11-09",
+    "day_position": 3610,
+    "universe": 3982,
+    "included": 3708,
+    "history_missing": 274,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-11-16",
+    "day_position": 3615,
+    "universe": 3982,
+    "included": 3726,
+    "history_missing": 256,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-11-23",
+    "day_position": 3620,
+    "universe": 3982,
+    "included": 3743,
+    "history_missing": 239,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-11-30",
+    "day_position": 3625,
+    "universe": 3982,
+    "included": 3747,
+    "history_missing": 235,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-12-07",
+    "day_position": 3630,
+    "universe": 3982,
+    "included": 3766,
+    "history_missing": 216,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-12-14",
+    "day_position": 3635,
+    "universe": 3982,
+    "included": 3784,
+    "history_missing": 198,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-12-21",
+    "day_position": 3640,
+    "universe": 3982,
+    "included": 3802,
+    "history_missing": 180,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2021-12-28",
+    "day_position": 3645,
+    "universe": 3982,
+    "included": 3798,
+    "history_missing": 184,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-01-05",
+    "day_position": 3650,
+    "universe": 3982,
+    "included": 3818,
+    "history_missing": 164,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-01-12",
+    "day_position": 3655,
+    "universe": 3982,
+    "included": 3825,
+    "history_missing": 157,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-01-19",
+    "day_position": 3660,
+    "universe": 3982,
+    "included": 3828,
+    "history_missing": 154,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-01-26",
+    "day_position": 3665,
+    "universe": 3982,
+    "included": 3830,
+    "history_missing": 152,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-02-09",
+    "day_position": 3670,
+    "universe": 3982,
+    "included": 3849,
+    "history_missing": 133,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-02-16",
+    "day_position": 3675,
+    "universe": 3982,
+    "included": 3856,
+    "history_missing": 126,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-02-23",
+    "day_position": 3680,
+    "universe": 3982,
+    "included": 3857,
+    "history_missing": 125,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-03-02",
+    "day_position": 3685,
+    "universe": 3982,
+    "included": 3861,
+    "history_missing": 121,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-03-09",
+    "day_position": 3690,
+    "universe": 3982,
+    "included": 3882,
+    "history_missing": 100,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-03-16",
+    "day_position": 3695,
+    "universe": 3982,
+    "included": 3899,
+    "history_missing": 83,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-03-23",
+    "day_position": 3700,
+    "universe": 3982,
+    "included": 3915,
+    "history_missing": 67,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-03-30",
+    "day_position": 3705,
+    "universe": 3982,
+    "included": 3911,
+    "history_missing": 71,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-04-08",
+    "day_position": 3710,
+    "universe": 3982,
+    "included": 3913,
+    "history_missing": 69,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-04-15",
+    "day_position": 3715,
+    "universe": 3982,
+    "included": 3916,
+    "history_missing": 66,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-04-22",
+    "day_position": 3720,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-04-29",
+    "day_position": 3725,
+    "universe": 3982,
+    "included": 3898,
+    "history_missing": 84,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-05-11",
+    "day_position": 3730,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-05-18",
+    "day_position": 3735,
+    "universe": 3982,
+    "included": 3918,
+    "history_missing": 64,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-05-25",
+    "day_position": 3740,
+    "universe": 3982,
+    "included": 3908,
+    "history_missing": 74,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-06-01",
+    "day_position": 3745,
+    "universe": 3982,
+    "included": 3897,
+    "history_missing": 85,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-06-09",
+    "day_position": 3750,
+    "universe": 3982,
+    "included": 3910,
+    "history_missing": 72,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-06-16",
+    "day_position": 3755,
+    "universe": 3982,
+    "included": 3920,
+    "history_missing": 62,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-06-23",
+    "day_position": 3760,
+    "universe": 3982,
+    "included": 3911,
+    "history_missing": 71,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-06-30",
+    "day_position": 3765,
+    "universe": 3982,
+    "included": 3897,
+    "history_missing": 85,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-07-07",
+    "day_position": 3770,
+    "universe": 3982,
+    "included": 3909,
+    "history_missing": 73,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-07-14",
+    "day_position": 3775,
+    "universe": 3982,
+    "included": 3918,
+    "history_missing": 64,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-07-21",
+    "day_position": 3780,
+    "universe": 3982,
+    "included": 3909,
+    "history_missing": 73,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-07-28",
+    "day_position": 3785,
+    "universe": 3982,
+    "included": 3896,
+    "history_missing": 86,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-08-04",
+    "day_position": 3790,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-08-11",
+    "day_position": 3795,
+    "universe": 3982,
+    "included": 3915,
+    "history_missing": 67,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-08-18",
+    "day_position": 3800,
+    "universe": 3982,
+    "included": 3910,
+    "history_missing": 72,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-08-25",
+    "day_position": 3805,
+    "universe": 3982,
+    "included": 3904,
+    "history_missing": 78,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-09-01",
+    "day_position": 3810,
+    "universe": 3982,
+    "included": 3913,
+    "history_missing": 69,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-09-08",
+    "day_position": 3815,
+    "universe": 3982,
+    "included": 3917,
+    "history_missing": 65,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-09-16",
+    "day_position": 3820,
+    "universe": 3982,
+    "included": 3913,
+    "history_missing": 69,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-09-23",
+    "day_position": 3825,
+    "universe": 3982,
+    "included": 3903,
+    "history_missing": 79,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-09-30",
+    "day_position": 3830,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-10-14",
+    "day_position": 3835,
+    "universe": 3982,
+    "included": 3919,
+    "history_missing": 63,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-10-21",
+    "day_position": 3840,
+    "universe": 3982,
+    "included": 3911,
+    "history_missing": 71,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-10-28",
+    "day_position": 3845,
+    "universe": 3982,
+    "included": 3905,
+    "history_missing": 77,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-11-04",
+    "day_position": 3850,
+    "universe": 3982,
+    "included": 3913,
+    "history_missing": 69,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-11-11",
+    "day_position": 3855,
+    "universe": 3982,
+    "included": 3923,
+    "history_missing": 59,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-11-18",
+    "day_position": 3860,
+    "universe": 3982,
+    "included": 3914,
+    "history_missing": 68,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-11-25",
+    "day_position": 3865,
+    "universe": 3982,
+    "included": 3911,
+    "history_missing": 71,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-12-02",
+    "day_position": 3870,
+    "universe": 3982,
+    "included": 3920,
+    "history_missing": 62,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-12-09",
+    "day_position": 3875,
+    "universe": 3982,
+    "included": 3921,
+    "history_missing": 61,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-12-16",
+    "day_position": 3880,
+    "universe": 3982,
+    "included": 3916,
+    "history_missing": 66,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-12-23",
+    "day_position": 3885,
+    "universe": 3982,
+    "included": 3915,
+    "history_missing": 67,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2022-12-30",
+    "day_position": 3890,
+    "universe": 3982,
+    "included": 3920,
+    "history_missing": 62,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-01-09",
+    "day_position": 3895,
+    "universe": 3982,
+    "included": 3918,
+    "history_missing": 64,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-01-16",
+    "day_position": 3900,
+    "universe": 3982,
+    "included": 3918,
+    "history_missing": 64,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-01-30",
+    "day_position": 3905,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-02-06",
+    "day_position": 3910,
+    "universe": 3982,
+    "included": 3921,
+    "history_missing": 61,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-02-13",
+    "day_position": 3915,
+    "universe": 3982,
+    "included": 3917,
+    "history_missing": 65,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-02-20",
+    "day_position": 3920,
+    "universe": 3982,
+    "included": 3918,
+    "history_missing": 64,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-02-27",
+    "day_position": 3925,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-03-06",
+    "day_position": 3930,
+    "universe": 3982,
+    "included": 3929,
+    "history_missing": 53,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-03-13",
+    "day_position": 3935,
+    "universe": 3982,
+    "included": 3925,
+    "history_missing": 57,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-03-20",
+    "day_position": 3940,
+    "universe": 3982,
+    "included": 3924,
+    "history_missing": 58,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-03-27",
+    "day_position": 3945,
+    "universe": 3982,
+    "included": 3926,
+    "history_missing": 56,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-04-03",
+    "day_position": 3950,
+    "universe": 3982,
+    "included": 3934,
+    "history_missing": 48,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-04-11",
+    "day_position": 3955,
+    "universe": 3982,
+    "included": 3932,
+    "history_missing": 50,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-04-18",
+    "day_position": 3960,
+    "universe": 3982,
+    "included": 3934,
+    "history_missing": 48,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-04-25",
+    "day_position": 3965,
+    "universe": 3982,
+    "included": 3929,
+    "history_missing": 53,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-05-05",
+    "day_position": 3970,
+    "universe": 3982,
+    "included": 3930,
+    "history_missing": 52,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-05-12",
+    "day_position": 3975,
+    "universe": 3982,
+    "included": 3927,
+    "history_missing": 55,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-05-19",
+    "day_position": 3980,
+    "universe": 3982,
+    "included": 3934,
+    "history_missing": 48,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-05-26",
+    "day_position": 3985,
+    "universe": 3982,
+    "included": 3930,
+    "history_missing": 52,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-06-02",
+    "day_position": 3990,
+    "universe": 3982,
+    "included": 3929,
+    "history_missing": 53,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-06-09",
+    "day_position": 3995,
+    "universe": 3982,
+    "included": 3926,
+    "history_missing": 56,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-06-16",
+    "day_position": 4000,
+    "universe": 3982,
+    "included": 3928,
+    "history_missing": 54,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-06-27",
+    "day_position": 4005,
+    "universe": 3982,
+    "included": 3927,
+    "history_missing": 55,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-07-04",
+    "day_position": 4010,
+    "universe": 3982,
+    "included": 3925,
+    "history_missing": 57,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-07-11",
+    "day_position": 4015,
+    "universe": 3982,
+    "included": 3925,
+    "history_missing": 57,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-07-18",
+    "day_position": 4020,
+    "universe": 3982,
+    "included": 3929,
+    "history_missing": 53,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-07-25",
+    "day_position": 4025,
+    "universe": 3982,
+    "included": 3932,
+    "history_missing": 50,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-08-01",
+    "day_position": 4030,
+    "universe": 3982,
+    "included": 3926,
+    "history_missing": 56,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-08-08",
+    "day_position": 4035,
+    "universe": 3982,
+    "included": 3926,
+    "history_missing": 56,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-08-15",
+    "day_position": 4040,
+    "universe": 3982,
+    "included": 3934,
+    "history_missing": 48,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-08-22",
+    "day_position": 4045,
+    "universe": 3982,
+    "included": 3933,
+    "history_missing": 49,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-08-29",
+    "day_position": 4050,
+    "universe": 3982,
+    "included": 3932,
+    "history_missing": 50,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-09-05",
+    "day_position": 4055,
+    "universe": 3982,
+    "included": 3931,
+    "history_missing": 51,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-09-12",
+    "day_position": 4060,
+    "universe": 3982,
+    "included": 3938,
+    "history_missing": 44,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-09-19",
+    "day_position": 4065,
+    "universe": 3982,
+    "included": 3937,
+    "history_missing": 45,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-09-26",
+    "day_position": 4070,
+    "universe": 3982,
+    "included": 3937,
+    "history_missing": 45,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-10-11",
+    "day_position": 4075,
+    "universe": 3982,
+    "included": 3933,
+    "history_missing": 49,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-10-18",
+    "day_position": 4080,
+    "universe": 3982,
+    "included": 3945,
+    "history_missing": 37,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-10-25",
+    "day_position": 4085,
+    "universe": 3982,
+    "included": 3940,
+    "history_missing": 42,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-11-01",
+    "day_position": 4090,
+    "universe": 3982,
+    "included": 3940,
+    "history_missing": 42,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-11-08",
+    "day_position": 4095,
+    "universe": 3982,
+    "included": 3938,
+    "history_missing": 44,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-11-15",
+    "day_position": 4100,
+    "universe": 3982,
+    "included": 3946,
+    "history_missing": 36,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-11-22",
+    "day_position": 4105,
+    "universe": 3982,
+    "included": 3945,
+    "history_missing": 37,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-11-29",
+    "day_position": 4110,
+    "universe": 3982,
+    "included": 3948,
+    "history_missing": 34,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-12-06",
+    "day_position": 4115,
+    "universe": 3982,
+    "included": 3944,
+    "history_missing": 38,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-12-13",
+    "day_position": 4120,
+    "universe": 3982,
+    "included": 3948,
+    "history_missing": 34,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-12-20",
+    "day_position": 4125,
+    "universe": 3982,
+    "included": 3947,
+    "history_missing": 35,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2023-12-27",
+    "day_position": 4130,
+    "universe": 3982,
+    "included": 3951,
+    "history_missing": 31,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-01-04",
+    "day_position": 4135,
+    "universe": 3982,
+    "included": 3945,
+    "history_missing": 37,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-01-11",
+    "day_position": 4140,
+    "universe": 3982,
+    "included": 3945,
+    "history_missing": 37,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-01-18",
+    "day_position": 4145,
+    "universe": 3982,
+    "included": 3949,
+    "history_missing": 33,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-01-25",
+    "day_position": 4150,
+    "universe": 3982,
+    "included": 3953,
+    "history_missing": 29,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-02-01",
+    "day_position": 4155,
+    "universe": 3982,
+    "included": 3945,
+    "history_missing": 37,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-02-08",
+    "day_position": 4160,
+    "universe": 3982,
+    "included": 3950,
+    "history_missing": 32,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-02-23",
+    "day_position": 4165,
+    "universe": 3982,
+    "included": 3949,
+    "history_missing": 33,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-03-01",
+    "day_position": 4170,
+    "universe": 3982,
+    "included": 3953,
+    "history_missing": 29,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-03-08",
+    "day_position": 4175,
+    "universe": 3982,
+    "included": 3946,
+    "history_missing": 36,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-03-15",
+    "day_position": 4180,
+    "universe": 3982,
+    "included": 3950,
+    "history_missing": 32,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-03-22",
+    "day_position": 4185,
+    "universe": 3982,
+    "included": 3951,
+    "history_missing": 31,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-03-29",
+    "day_position": 4190,
+    "universe": 3982,
+    "included": 3956,
+    "history_missing": 26,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-04-09",
+    "day_position": 4195,
+    "universe": 3982,
+    "included": 3952,
+    "history_missing": 30,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-04-16",
+    "day_position": 4200,
+    "universe": 3982,
+    "included": 3950,
+    "history_missing": 32,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-04-23",
+    "day_position": 4205,
+    "universe": 3982,
+    "included": 3948,
+    "history_missing": 34,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-04-30",
+    "day_position": 4210,
+    "universe": 3982,
+    "included": 3936,
+    "history_missing": 46,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-05-10",
+    "day_position": 4215,
+    "universe": 3982,
+    "included": 3954,
+    "history_missing": 28,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-05-17",
+    "day_position": 4220,
+    "universe": 3982,
+    "included": 3958,
+    "history_missing": 24,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-05-24",
+    "day_position": 4225,
+    "universe": 3982,
+    "included": 3955,
+    "history_missing": 27,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-05-31",
+    "day_position": 4230,
+    "universe": 3982,
+    "included": 3937,
+    "history_missing": 45,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-06-07",
+    "day_position": 4235,
+    "universe": 3982,
+    "included": 3953,
+    "history_missing": 29,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-06-17",
+    "day_position": 4240,
+    "universe": 3982,
+    "included": 3959,
+    "history_missing": 23,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-06-24",
+    "day_position": 4245,
+    "universe": 3982,
+    "included": 3956,
+    "history_missing": 26,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-07-01",
+    "day_position": 4250,
+    "universe": 3982,
+    "included": 3937,
+    "history_missing": 45,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-07-08",
+    "day_position": 4255,
+    "universe": 3982,
+    "included": 3950,
+    "history_missing": 32,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-07-15",
+    "day_position": 4260,
+    "universe": 3982,
+    "included": 3960,
+    "history_missing": 22,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-07-22",
+    "day_position": 4265,
+    "universe": 3982,
+    "included": 3956,
+    "history_missing": 26,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-07-29",
+    "day_position": 4270,
+    "universe": 3982,
+    "included": 3936,
+    "history_missing": 46,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-08-05",
+    "day_position": 4275,
+    "universe": 3982,
+    "included": 3948,
+    "history_missing": 34,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-08-12",
+    "day_position": 4280,
+    "universe": 3982,
+    "included": 3960,
+    "history_missing": 22,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-08-19",
+    "day_position": 4285,
+    "universe": 3982,
+    "included": 3956,
+    "history_missing": 26,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-08-26",
+    "day_position": 4290,
+    "universe": 3982,
+    "included": 3936,
+    "history_missing": 46,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-09-02",
+    "day_position": 4295,
+    "universe": 3982,
+    "included": 3946,
+    "history_missing": 36,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-09-09",
+    "day_position": 4300,
+    "universe": 3982,
+    "included": 3958,
+    "history_missing": 24,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-09-18",
+    "day_position": 4305,
+    "universe": 3982,
+    "included": 3953,
+    "history_missing": 29,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-09-25",
+    "day_position": 4310,
+    "universe": 3982,
+    "included": 3938,
+    "history_missing": 44,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-10-09",
+    "day_position": 4315,
+    "universe": 3982,
+    "included": 3943,
+    "history_missing": 39,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-10-16",
+    "day_position": 4320,
+    "universe": 3982,
+    "included": 3961,
+    "history_missing": 21,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-10-23",
+    "day_position": 4325,
+    "universe": 3982,
+    "included": 3948,
+    "history_missing": 34,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-10-30",
+    "day_position": 4330,
+    "universe": 3982,
+    "included": 3926,
+    "history_missing": 56,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-11-06",
+    "day_position": 4335,
+    "universe": 3982,
+    "included": 3938,
+    "history_missing": 44,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-11-13",
+    "day_position": 4340,
+    "universe": 3982,
+    "included": 3953,
+    "history_missing": 29,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-11-20",
+    "day_position": 4345,
+    "universe": 3982,
+    "included": 3944,
+    "history_missing": 38,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-11-27",
+    "day_position": 4350,
+    "universe": 3982,
+    "included": 3920,
+    "history_missing": 62,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-12-04",
+    "day_position": 4355,
+    "universe": 3982,
+    "included": 3930,
+    "history_missing": 52,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-12-11",
+    "day_position": 4360,
+    "universe": 3982,
+    "included": 3950,
+    "history_missing": 32,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-12-18",
+    "day_position": 4365,
+    "universe": 3982,
+    "included": 3941,
+    "history_missing": 41,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2024-12-25",
+    "day_position": 4370,
+    "universe": 3982,
+    "included": 3911,
+    "history_missing": 71,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-01-02",
+    "day_position": 4375,
+    "universe": 3982,
+    "included": 3919,
+    "history_missing": 63,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-01-09",
+    "day_position": 4380,
+    "universe": 3982,
+    "included": 3943,
+    "history_missing": 39,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-01-16",
+    "day_position": 4385,
+    "universe": 3982,
+    "included": 3936,
+    "history_missing": 46,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-01-23",
+    "day_position": 4390,
+    "universe": 3982,
+    "included": 3911,
+    "history_missing": 71,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-02-07",
+    "day_position": 4395,
+    "universe": 3982,
+    "included": 3917,
+    "history_missing": 65,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-02-14",
+    "day_position": 4400,
+    "universe": 3982,
+    "included": 3939,
+    "history_missing": 43,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-02-21",
+    "day_position": 4405,
+    "universe": 3982,
+    "included": 3936,
+    "history_missing": 46,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-02-28",
+    "day_position": 4410,
+    "universe": 3982,
+    "included": 3907,
+    "history_missing": 75,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-03-07",
+    "day_position": 4415,
+    "universe": 3982,
+    "included": 3910,
+    "history_missing": 72,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-03-14",
+    "day_position": 4420,
+    "universe": 3982,
+    "included": 3935,
+    "history_missing": 47,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-03-21",
+    "day_position": 4425,
+    "universe": 3982,
+    "included": 3931,
+    "history_missing": 51,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-03-28",
+    "day_position": 4430,
+    "universe": 3982,
+    "included": 3924,
+    "history_missing": 58,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-04-07",
+    "day_position": 4435,
+    "universe": 3982,
+    "included": 3908,
+    "history_missing": 74,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-04-14",
+    "day_position": 4440,
+    "universe": 3982,
+    "included": 3930,
+    "history_missing": 52,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-04-21",
+    "day_position": 4445,
+    "universe": 3982,
+    "included": 3926,
+    "history_missing": 56,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-04-28",
+    "day_position": 4450,
+    "universe": 3982,
+    "included": 3915,
+    "history_missing": 67,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-05-08",
+    "day_position": 4455,
+    "universe": 3982,
+    "included": 3908,
+    "history_missing": 74,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-05-15",
+    "day_position": 4460,
+    "universe": 3982,
+    "included": 3925,
+    "history_missing": 57,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-05-22",
+    "day_position": 4465,
+    "universe": 3982,
+    "included": 3914,
+    "history_missing": 68,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-05-29",
+    "day_position": 4470,
+    "universe": 3982,
+    "included": 3906,
+    "history_missing": 76,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-06-06",
+    "day_position": 4475,
+    "universe": 3982,
+    "included": 3904,
+    "history_missing": 78,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-06-13",
+    "day_position": 4480,
+    "universe": 3982,
+    "included": 3916,
+    "history_missing": 66,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-06-20",
+    "day_position": 4485,
+    "universe": 3982,
+    "included": 3913,
+    "history_missing": 69,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-06-27",
+    "day_position": 4490,
+    "universe": 3982,
+    "included": 3902,
+    "history_missing": 80,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-07-04",
+    "day_position": 4495,
+    "universe": 3982,
+    "included": 3901,
+    "history_missing": 81,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-07-11",
+    "day_position": 4500,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-07-18",
+    "day_position": 4505,
+    "universe": 3982,
+    "included": 3906,
+    "history_missing": 76,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-07-25",
+    "day_position": 4510,
+    "universe": 3982,
+    "included": 3897,
+    "history_missing": 85,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-08-01",
+    "day_position": 4515,
+    "universe": 3982,
+    "included": 3900,
+    "history_missing": 82,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-08-08",
+    "day_position": 4520,
+    "universe": 3982,
+    "included": 3911,
+    "history_missing": 71,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-08-15",
+    "day_position": 4525,
+    "universe": 3982,
+    "included": 3906,
+    "history_missing": 76,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-08-22",
+    "day_position": 4530,
+    "universe": 3982,
+    "included": 3892,
+    "history_missing": 90,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-08-29",
+    "day_position": 4535,
+    "universe": 3982,
+    "included": 3904,
+    "history_missing": 78,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-09-05",
+    "day_position": 4540,
+    "universe": 3982,
+    "included": 3909,
+    "history_missing": 73,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-09-12",
+    "day_position": 4545,
+    "universe": 3982,
+    "included": 3912,
+    "history_missing": 70,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-09-19",
+    "day_position": 4550,
+    "universe": 3982,
+    "included": 3899,
+    "history_missing": 83,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-09-26",
+    "day_position": 4555,
+    "universe": 3982,
+    "included": 3907,
+    "history_missing": 75,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-10-13",
+    "day_position": 4560,
+    "universe": 3982,
+    "included": 3907,
+    "history_missing": 75,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-10-20",
+    "day_position": 4565,
+    "universe": 3982,
+    "included": 3913,
+    "history_missing": 69,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-10-27",
+    "day_position": 4570,
+    "universe": 3982,
+    "included": 3896,
+    "history_missing": 86,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-11-03",
+    "day_position": 4575,
+    "universe": 3982,
+    "included": 3905,
+    "history_missing": 77,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-11-10",
+    "day_position": 4580,
+    "universe": 3982,
+    "included": 3908,
+    "history_missing": 74,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-11-17",
+    "day_position": 4585,
+    "universe": 3982,
+    "included": 3914,
+    "history_missing": 68,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-11-24",
+    "day_position": 4590,
+    "universe": 3982,
+    "included": 3900,
+    "history_missing": 82,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-12-01",
+    "day_position": 4595,
+    "universe": 3982,
+    "included": 3905,
+    "history_missing": 77,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-12-08",
+    "day_position": 4600,
+    "universe": 3982,
+    "included": 3905,
+    "history_missing": 77,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-12-15",
+    "day_position": 4605,
+    "universe": 3982,
+    "included": 3905,
+    "history_missing": 77,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-12-22",
+    "day_position": 4610,
+    "universe": 3982,
+    "included": 3889,
+    "history_missing": 93,
+    "current_exposure_missing": 0
+  },
+  {
+    "date": "2025-12-29",
+    "day_position": 4615,
+    "universe": 3982,
+    "included": 3901,
+    "history_missing": 81,
+    "current_exposure_missing": 0
+  }
+]

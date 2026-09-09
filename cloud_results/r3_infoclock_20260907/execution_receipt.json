@@ -1,0 +1,73 @@
+{
+  "schema_id": "factorlab.r3_infoclock_cloud_execution@1.0",
+  "source_base_commit": "270db9bc3ce6b8bcba03a66dfdd7fca8f2931cf2",
+  "source_review": {
+    "K1_input_builder": "6942fb2dc20d24307578bc7dda45368afaf3d1f5",
+    "daily_OT1_reference_not_automatically_intraday": "bf63cfe9d2018d3b9f20095919ce6cfd743493da",
+    "intraday_OT_module_direct_path": "404_not_available_in_current_topic_repo",
+    "research_state_before_edit_verified_git_blob": "f7ce7d6eb03e219f7647130b51dd167d0b99dba8"
+  },
+  "command": "python -m pytest -q tests/unit/test_reaka_r3_information_clock_audit.py --junitxml=cloud_results/r3_infoclock_20260907/targeted_tests.junit.xml",
+  "tests": 35,
+  "passed": 35,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "fresh_process_synthetic_cli_test": true,
+  "py_compile": "passed",
+  "whole_repository_tests_executed": false,
+  "real_model_forward_executed": false,
+  "real_arrays_read": false,
+  "real_training": 0,
+  "real_inference": 0,
+  "checkpoint_reload": 0,
+  "actions_executed": false,
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "scope": "New target-free audit script and synthetic fixtures only. No market/PIT/generalization acceptance.",
+  "files": {
+    "scripts/reaka_r3_information_clock_audit.py": {
+      "sha256": "44ad4c73c649719b7d8aaab89e14caa6a158e78e316aac5a36573a63f614b91d",
+      "git_blob": "6e615bce1d81589fc38e1137038207c5ba27863e",
+      "bytes": 15859
+    },
+    "tests/unit/test_reaka_r3_information_clock_audit.py": {
+      "sha256": "f3495e121c02f6801f99d71895bafd3f9f9665e3abcaeeeb9b8a1e8fd947f41b",
+      "git_blob": "2171e561bf84e0325a7dd583d990c0bd875dbad5",
+      "bytes": 9592
+    },
+    "docs/ops/r3_information_clock_and_transfer_20260907.md": {
+      "sha256": "3f8cf4b23184a711bf45057a402de0128532b90476b915881b2fea21858424e9",
+      "git_blob": "cbd5d7db46fe530530d52efec479fa17fd204e49",
+      "bytes": 7504
+    },
+    "docs/ops/cloud_local_communication_R3_infoclock_20260907.md": {
+      "sha256": "2743ed6662c65bfbce6223941ab5f588347ba65c42fded1ff45476fb3460c6be",
+      "git_blob": "ab540774a587a702121197dcb26ab4359a0d6d4c",
+      "bytes": 4854
+    },
+    "docs/ops/r3_information_clock_transfer_plan_20260907.json": {
+      "sha256": "3b88c7beef7fa5c85a40039f2567ca558f3dea0162cc2ae0700739e9ca4a5678",
+      "git_blob": "abc8b4fb15dbe62acb6b754446aff57cfecfa48b",
+      "bytes": 1900
+    },
+    "docs/ops/research_state.json": {
+      "sha256": "fd113f7292a16b6099858045a1120572f8fe67515373d1c4f01736ee8b7f43ea",
+      "git_blob": "75ae55f3c3201e2059a45fe9b49b8a0970f43e6a",
+      "bytes": 23078
+    },
+    "cloud_results/r3_infoclock_20260907/targeted_tests.txt": {
+      "sha256": "d0700ef52b337d07054a3195ecf66e7688dc8f12332119cc156f2cc79d889ffb",
+      "git_blob": "2f0963cfdae76c158f62e4b924ec791dff7ec8d4",
+      "bytes": 99
+    },
+    "cloud_results/r3_infoclock_20260907/targeted_tests.junit.xml": {
+      "sha256": "f24a7ae560e971a4bd225f688406ccc9bbd882acbc688b089bb4ba584f6819e8",
+      "git_blob": "12c2456a655dca23f172388a1e84cf8e6adeba76",
+      "bytes": 5420
+    }
+  }
+}

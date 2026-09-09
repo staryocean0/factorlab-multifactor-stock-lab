@@ -1,0 +1,47 @@
+{
+  "fit": {
+    "seed": 47,
+    "cycles": [
+      {
+        "cycle": 1,
+        "mean_train_loss": 1.1430402802460036,
+        "canonical_train_loss": 0.813037633895874
+      },
+      {
+        "cycle": 2,
+        "mean_train_loss": 0.9642228974265098,
+        "canonical_train_loss": 0.8108828663825989
+      },
+      {
+        "cycle": 3,
+        "mean_train_loss": 0.9578620833603582,
+        "canonical_train_loss": 0.8116159439086914
+      }
+    ],
+    "selected_cycle": 2,
+    "selected_canonical_loss": 0.8108828663825989,
+    "DMD_initialization": {
+      "ridge": 0.8187074162072566,
+      "pre_projection_spectral_radius": 0.9906357038577168,
+      "projected_spectral_radius": 0.9906357038577168,
+      "condition_number": 2.030961996448613,
+      "raw_transition_count": 361628,
+      "operator_digest": "5fc36a31cbef8f4e0e227ed1849965a43631974bf239d250ffd46e35d095082e"
+    },
+    "fit_rows": 361628,
+    "future_target_values_read": 0
+  },
+  "identity": {
+    "arm": "BETA_ONLY",
+    "seed": 47,
+    "clock": "1430",
+    "recipe_digest": "sha256:a14675bd4384ffc50c4493cb24d58a68c7640818e476071bbccadfb22d878a6c",
+    "selection_digest": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+    "normalizer_digest": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+    "train_rows_digest": "sha256:0d1b332053cd985966aaa85326069a728f143e438b65a035a686e1002dbf57ae",
+    "prediction_rows_digest": "sha256:2dcc148efa79c020dbc468b2d08606a07f6ddec94f67a61b661d5ca455849b2e",
+    "pre_dmd_state_digest": "sha256:31095efc85ec4743772c45a5aac2f20486479444abb424c0b90d9e4b1096c6ff",
+    "batch_order_digest": "sha256:d99c8b9c8f7ae170cd8a2474f30d39dc5f71a0690eb750c2c1ba3cf9788a4b46"
+  },
+  "checkpoint_state_digest": "sha256:c758939f243636a1f62234bec6cf61dc6a1f444e178c6752dfa3a35842f9f72d"
+}

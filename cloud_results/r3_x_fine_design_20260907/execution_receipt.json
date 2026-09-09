@@ -1,0 +1,64 @@
+{
+  "schema_id": "factorlab.r3_x_fine_cloud_receipt@1.0",
+  "design_id": "R3-X-FINE-DESIGN-20260907-01",
+  "status": "cloud_development_complete_real_local_execution_pending",
+  "source_parent": "f7ca59f881c2b7dfe9e6fdca0fd94154b9ee0618",
+  "implemented": [
+    "src/factor_lab/factor_rotation/reaka_r3_x_fine_runner.py",
+    "scripts/reaka_r3_x_fine_compare.py",
+    "tests/unit/test_reaka_r3_x_fine_runner.py",
+    "docs/ops/r3_x_fine_design_20260907.json",
+    "docs/ops/cloud_local_communication_R3_xfine_20260907.md"
+  ],
+  "guards_added": [
+    "accepted E receipt frozen identity",
+    "accepted E checkpoint manifest digest",
+    "accepted E CPU reload spec",
+    "accepted E exact 3-cycle minimum with earliest-tie rule",
+    "new fine fit seed/fit-row/future-target/cycle-selection checks",
+    "accepted XCOARSE daily F-E/E-H/F-H reconstruction",
+    "x_decomposition and x_coarse_runner Git blob identity",
+    "same F/E/H/fine score coordinates",
+    "fresh-process scoring for each new arm",
+    "state/exposure arithmetic closure"
+  ],
+  "metrics_preregistered_before_real_fine_results": {
+    "primary": "daily cross-sectional H20 financial residual RankIC",
+    "secondary": [
+      "H20 financial residual decile spread",
+      "H20 financial residual top30 minus same-universe mean"
+    ],
+    "secondary_metrics_do_not_rescue_failed_primary": true,
+    "moving_block_lengths_for_primary": [4, 8, 12]
+  },
+  "cloud_execution": {
+    "exact_repo_pytest_run": false,
+    "reason": "cloud terminal could not resolve GitHub raw host and does not contain the local FactorLab checkout",
+    "isolated_numeric_guard_checks": 22,
+    "isolated_numeric_guard_failures": 0,
+    "check_scope": [
+      "rankic/decile/top30 nested arithmetic closure",
+      "frozen decile/top30 definitions on synthetic support",
+      "minimum-cycle and earliest-tie selection",
+      "accepted-E frozen identity rejection",
+      "future-target rejection",
+      "checkpoint manifest mismatch rejection",
+      "CPU reload identity rejection"
+    ]
+  },
+  "local_gate": {
+    "task_id": "LCL-R3-XFINE-20260907-01",
+    "targeted_repo_tests_required_before_fit": true,
+    "new_fits_if_tests_pass": 18,
+    "max_total_cycles": 54,
+    "reference_refits": {"F": 0, "E": 0, "H": 0}
+  },
+  "monthly_F_plus_M_authorized": false,
+  "monthly_formula_identity": "not_recovered",
+  "real_arrays_read_in_cloud": false,
+  "real_fits_in_cloud": 0,
+  "actions_executed": false,
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "production_authority": false
+}

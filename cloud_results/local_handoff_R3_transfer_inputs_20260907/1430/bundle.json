@@ -1,0 +1,31 @@
+{
+  "schema_id": "factorlab.r3_transfer_source_bundle@1.0",
+  "clock": "1430",
+  "calendar_end": "2025-12-31",
+  "reference_manifest_sha256": "sha256:265c1d7b6e319eca87401812a6b696473c44c838734897774c066da8184154ba",
+  "frozen_selection_sha256": "sha256:e70ed01518ab4f206be110cb07ab589b955d5e44bb98cebe5f8cd32f810d897a",
+  "frozen_normalizer_sha256": "sha256:e766372db83b591edbbe162281fbf9e553cc21a9c46089d6225862c35f92b547",
+  "selection_freeze_end": "2016-12-31",
+  "carrier_universe_policy": "incumbent_cohort_before_crossfit",
+  "fold_policy": "explicit_incumbent_symbol_position_mod5",
+  "historical_prefix_origin": "reused_accepted_arrays",
+  "new_model_fits": 0,
+  "selection_refit": false,
+  "normalizer_refit": false,
+  "labels_used_for_features": false,
+  "artifact_digests": {
+    "calendar.npy": "sha256:c5d64bccb2ffc2dc545345caba167c10effbd080c5fe9db0199e086495997e3c",
+    "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+    "factor_ids.json": "sha256:d94615e54ef6ed2805ffd10b4cbf92b35282f03ac31dba786545cff5bee6bd79",
+    "variant_ids.json": "sha256:2b3586bc184f116438c3157ee309721bbb3097581f5cfaa13bccc9f8a07fb857",
+    "exposure_decision_positions.npy": "sha256:abbebe6f1d6546e7602afbec05ced0bb8b2c9e9a6deb4fdf4749e7efe13daab3",
+    "epsilon_history.npy": "sha256:f228df8184ea03fe497e0e43804fa2dd2e6c6b000a1bb12bcb95eafac0636430",
+    "state_values.npy": "sha256:9c3a4482557a7e2f8bd6f5f276ba7e4d39a8ff1f9dbaee549fab8cc2891108ae",
+    "stock_factor_exposures.npy": "sha256:f75a381088088afc08e42618355b52b4ce71bccf8687aeb7d357a3b5ad9fdea2",
+    "exposure_reliability.npy": "sha256:036898f2b7904f3be9bcda9ceef9273556a85fd0c56321967f89e724c941869e",
+    "state_available.npy": "sha256:60a1d4a01ec63cf86f7fc12d6849a4081507ee7d122e1987e696ee594742b620",
+    "exposure_available.npy": "sha256:7f596c6b752d9204404584ab32805d6bc6b1ed6d4d083548fe1f33aec328273f",
+    "symbol_fold_ids.npy": "sha256:80e1c44a3cdb7fe3e9ab60d268b65d6e0a3b39c7aff603cec50c3db122e3155e",
+    "producer_sources.json": "sha256:db752922b4ad78a302df47b8dc08b946e5f17541dbb3b17695d21cfc8ef902cb"
+  }
+}

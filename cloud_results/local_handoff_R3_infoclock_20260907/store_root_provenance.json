@@ -1,0 +1,21 @@
+{
+  "timeiso_reload_spec_store_roots": {
+    "1430": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/store",
+    "1445": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1445/prepared/store"
+  },
+  "xfine_reload_spec_store_roots_are_accepted_view_symlinks_to_same_timeiso_prepared": true,
+  "expected_hashes_source": "TIMEISO store manifest.json artifact_digests; not newly computed hashes relabeled as historical bindings",
+  "accepted_view_not_modified": true,
+  "clock_meta": {
+    "1430": {
+      "calendar_end": "2020-12-31",
+      "inference_year_max": 2020,
+      "source_receipt": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/store/manifest.json"
+    },
+    "1445": {
+      "calendar_end": "2020-12-31",
+      "inference_year_max": 2020,
+      "source_receipt": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1445/prepared/store/manifest.json"
+    }
+  }
+}

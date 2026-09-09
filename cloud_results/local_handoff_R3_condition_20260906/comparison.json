@@ -1,0 +1,285 @@
+{
+  "task": "LCL-R3-COND-20260906-01",
+  "status": "completed",
+  "exit_code": 0,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.2.4",
+  "torch": "2.6.0+debian",
+  "platform": "Linux-7.1.8+deb13-amd64-x86_64-with-glibc2.41",
+  "script_sha256": "sha256:4c3d38267cd14bdde866d352efa94c6c862af3997cd37816942785a2b43fa687",
+  "n_h_fits": 6,
+  "f_reused": true,
+  "optional_E_executed": false,
+  "checks": [
+    {
+      "clock": "1430",
+      "status": "completed_consumed_diagnostic",
+      "support_rows": 82321,
+      "support_days": 49,
+      "consumed_files": [
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/review_scores_seed_11.npy",
+          "sha256": "sha256:c6c2be58c83bef2d99b58274891c71f3b72c0dd54f3f1be45fe2321ac4a2112b"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/review_scores_seed_29.npy",
+          "sha256": "sha256:9ad86c4f3fdbf99f2540c4047b6cc048f261e251d50597951d111cd2d0d0a47c"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1430/review_scores_seed_47.npy",
+          "sha256": "sha256:a29ca795b66b80f0ef626076b0e4fbcce49ae6ccc48c5b3d877a53bdbf12e5fa"
+        }
+      ],
+      "results": {
+        "H": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.1440533686347263,
+          "mean_K1_minus_baseline_rankic": 0.015872501813445145,
+          "mean_decile_spread": 0.059671928485482965,
+          "mean_top30_minus_universe": 0.040698304281670476,
+          "paired_delta_by_phase": {
+            "0": 0.016646296462670667,
+            "1": 0.017554766903547372,
+            "2": 0.012026330761258095,
+            "3": 0.017583127380653363
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "K1": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.15992587044817144,
+          "mean_K1_minus_baseline_rankic": 0.0,
+          "mean_decile_spread": 0.06350312729058125,
+          "mean_top30_minus_universe": 0.04499727770739396,
+          "paired_delta_by_phase": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "last_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.05019425811118617,
+          "mean_K1_minus_baseline_rankic": 0.10973161233698528,
+          "mean_decile_spread": 0.01664841877289071,
+          "mean_top30_minus_universe": -0.019497361901335317,
+          "paired_delta_by_phase": {
+            "0": 0.0854372113554082,
+            "1": 0.11144164896453738,
+            "2": 0.14820178641221587,
+            "3": 0.09063995477617703
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "mean10_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": -0.1332208232482858,
+          "mean_K1_minus_baseline_rankic": 0.29314669369645724,
+          "mean_decile_spread": -0.050428893983665214,
+          "mean_top30_minus_universe": -0.0410407329848154,
+          "paired_delta_by_phase": {
+            "0": 0.28242031520291183,
+            "1": 0.3102894955520991,
+            "2": 0.2986197626751327,
+            "3": 0.28080111227412896
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "negative_last_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": -0.05019425811118617,
+          "mean_K1_minus_baseline_rankic": 0.2101201285593576,
+          "mean_decile_spread": -0.01664841877289071,
+          "mean_top30_minus_universe": -0.04588575120968549,
+          "paired_delta_by_phase": {
+            "0": 0.22034875950195942,
+            "1": 0.2315284036427052,
+            "2": 0.18244141429836816,
+            "3": 0.20846849631614675
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "negative_mean10_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.1332208232482858,
+          "mean_K1_minus_baseline_rankic": 0.026705047199885642,
+          "mean_decile_spread": 0.050428893983665214,
+          "mean_top30_minus_universe": 0.03876866246916129,
+          "paired_delta_by_phase": {
+            "0": 0.02336565565445578,
+            "1": 0.03268055705514344,
+            "2": 0.03202343803545132,
+            "3": 0.018307338818194886
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "F": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.15992587044817144,
+          "mean_K1_minus_baseline_rankic": 0.0,
+          "mean_decile_spread": 0.06350312729058125,
+          "mean_top30_minus_universe": 0.04499727770739396,
+          "paired_delta_by_phase": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          },
+          "iid_standard_error_or_pvalue": null
+        }
+      },
+      "fresh_oos": false,
+      "production_authority": false
+    },
+    {
+      "clock": "1445",
+      "status": "completed_consumed_diagnostic",
+      "support_rows": 82321,
+      "support_days": 49,
+      "consumed_files": [
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/review_scores_seed_11.npy",
+          "sha256": "sha256:2b4c899594f054768c0d1d9614109a80edb2a76d8e3d8540bcbdb928554ab041"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/review_scores_seed_29.npy",
+          "sha256": "sha256:bf11a7ecb86e5bf23f26c85fb050582a8e7767b9e9a2356ad3823bc2d142d0b7"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017/formal/1445/review_scores_seed_47.npy",
+          "sha256": "sha256:f01ed2a4b05a0e7bf62bae42c7c88ad681eff6c731b544f9377c4029ca1cf06b"
+        }
+      ],
+      "results": {
+        "H": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.14052618619419457,
+          "mean_K1_minus_baseline_rankic": 0.020999561006629863,
+          "mean_decile_spread": 0.05765077935888124,
+          "mean_top30_minus_universe": 0.03906738723094976,
+          "paired_delta_by_phase": {
+            "0": 0.024388129472294903,
+            "1": 0.020127229085541428,
+            "2": 0.01633568401117371,
+            "3": 0.02353585787379743
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "K1": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.16152574720082447,
+          "mean_K1_minus_baseline_rankic": 0.0,
+          "mean_decile_spread": 0.06499432299494441,
+          "mean_top30_minus_universe": 0.042899832573497255,
+          "paired_delta_by_phase": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "last_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.049097523583691884,
+          "mean_K1_minus_baseline_rankic": 0.11242822361713257,
+          "mean_decile_spread": 0.015551930672024991,
+          "mean_top30_minus_universe": -0.020445739453555534,
+          "paired_delta_by_phase": {
+            "0": 0.0881072468437698,
+            "1": 0.10985852989110206,
+            "2": 0.15143499115769707,
+            "3": 0.09706156261424766
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "mean10_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": -0.13439309893986956,
+          "mean_K1_minus_baseline_rankic": 0.295918846140694,
+          "mean_decile_spread": -0.051102680759270436,
+          "mean_top30_minus_universe": -0.04164650077887752,
+          "paired_delta_by_phase": {
+            "0": 0.28690656060124065,
+            "1": 0.3092682844430004,
+            "2": 0.3023460376785589,
+            "3": 0.284618902545154
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "negative_last_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": -0.049097523583691884,
+          "mean_K1_minus_baseline_rankic": 0.21062327078451634,
+          "mean_decile_spread": -0.015551930672024991,
+          "mean_top30_minus_universe": -0.0466179775575054,
+          "paired_delta_by_phase": {
+            "0": 0.22521721030174646,
+            "1": 0.22955639707432943,
+            "2": 0.18287992124706245,
+            "3": 0.20715150030971496
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "negative_mean10_epsilon": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.13439309893986956,
+          "mean_K1_minus_baseline_rankic": 0.02713264826095494,
+          "mean_decile_spread": 0.051102680759270436,
+          "mean_top30_minus_universe": 0.038189403442848345,
+          "paired_delta_by_phase": {
+            "0": 0.02641789654427561,
+            "1": 0.030146642522431082,
+            "2": 0.03196887472620067,
+            "3": 0.019594160378808567
+          },
+          "iid_standard_error_or_pvalue": null
+        },
+        "F": {
+          "days": 49,
+          "valid_paired_rankic_days": 49,
+          "mean_rankic": 0.16152574720082447,
+          "mean_K1_minus_baseline_rankic": 0.0,
+          "mean_decile_spread": 0.06499432299494441,
+          "mean_top30_minus_universe": 0.042899832573497255,
+          "paired_delta_by_phase": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          },
+          "iid_standard_error_or_pvalue": null
+        }
+      },
+      "fresh_oos": false,
+      "production_authority": false
+    }
+  ],
+  "sample_role": "already_consumed_2017_review",
+  "fresh_oos": false,
+  "account_replay": false,
+  "condition_feature_increment_causal": false,
+  "full_pit_certified": false,
+  "production_authority": false,
+  "limitations": [
+    "H trained on CPU; original F scores were produced on cuda:0.",
+    "F-H is a same-recipe input ablation on consumed 2017 support, not a causal feature effect.",
+    "No iid p-values; overlapping H20 windows.",
+    "Optional E arm was not run."
+  ]
+}

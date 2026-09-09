@@ -1,0 +1,62 @@
+{
+  "schema_id": "factorlab.r3_transfer_inputs_cloud_review@1.0",
+  "task_id": "LCL-R3-TRANSFER-INPUT-20260907-01",
+  "reviewed_commit": "1c9f78f7f31282473f715ce7302be867d1aea440",
+  "decision": "build_received_boundary_delta_pending",
+  "original_targeted_tests": {
+    "tests": 93,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "successor_targeted_tests": {
+    "tests": 106,
+    "new_contract_tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "small_evidence_checks": {
+    "passed": 47,
+    "failed": 0
+  },
+  "small_file_identity": "Git-blob matched result and both manifests; SHA256-bound both bundles, source snapshot and both identical daily_support tables",
+  "scope": "local original arrays not read; complete uploaded daily support and small receipts recomputed; exact original bridge synthetic findings; successor guards tested",
+  "real_training": 0,
+  "real_inference": 0,
+  "checkpoint_reload": 0,
+  "original_arrays_overwritten": false,
+  "full_FactorLab_test": false,
+  "PIT_certified": false,
+  "fresh_oos": false,
+  "source_boundary_accepted": false,
+  "actions_executed": false,
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "files": {
+    "reaka_r3_transfer_source_bridge.py": {
+      "sha256": "3ca1cce35a68b23d62632e6921333fcfef4f9df3aa1aa79d6c3fad69d0729c0f",
+      "git_blob": "65470dfb783026bfa70faac1cd53609a4b866f12",
+      "bytes": 21116
+    },
+    "test_reaka_r3_transfer_bridge_contracts.py": {
+      "sha256": "fa7626df4bfa56f0fc3b6c6330de1631f8f2a6b7cda4e046ca647fa6347cb477",
+      "git_blob": "80c463e6ae59b149905099e348d25f9cdcd1cfb6",
+      "bytes": 3890
+    },
+    "verify_small_evidence.py": {
+      "sha256": "c5b4ca492f86fef705cd682d65bb86827c02b2be9f35a4a2377f6045e4d36702",
+      "git_blob": "d07d77d90d7a4b4780b68cbbe38e7f0d2a2aec0e",
+      "bytes": 5976
+    },
+    "cloud_review.md": {
+      "sha256": "6f64769e73f46dd809963ed32a5f8863845f49425ae0756bea8d2e5b0135788f",
+      "git_blob": "521e6663264495777fedee8f6595efe02a4dfe1c",
+      "bytes": 9377
+    }
+  }
+}

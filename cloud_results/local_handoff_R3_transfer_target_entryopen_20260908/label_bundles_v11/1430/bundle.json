@@ -1,0 +1,25 @@
+{
+  "schema_id": "factorlab.r3_transfer_label_bundle@1.1",
+  "clock": "1430",
+  "calendar_end": "2025-12-31",
+  "contains_2026": false,
+  "target_definition": "H20_financial_residual_epsilon_future_K1_v1",
+  "raw_future_definition": "entry_open_t_plus_20_div_entry_open_t_minus_1",
+  "target_source_bundle_sha256": "sha256:e434f1592d9d161aab2af57b0bde82b031014cdbaaa9521f3e680bf6c84d4644",
+  "target_source_task": "LCL-R3-TRANSFER-TARGET-ENTRYOPEN-20260908-01",
+  "horizon_trading_positions": 20,
+  "fold_policy": "explicit_incumbent_symbol_position_mod5",
+  "labels_used_for_features": false,
+  "historical_prefix_origin": "reused_accepted_arrays",
+  "tail_producer": "bounded_current_intraday_OT_with_P6_entry_open_future_raw",
+  "new_model_fits": 0,
+  "artifact_digests": {
+    "calendar.npy": "sha256:c5d64bccb2ffc2dc545345caba167c10effbd080c5fe9db0199e086495997e3c",
+    "symbols.npy": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+    "factor_ids.json": "sha256:d94615e54ef6ed2805ffd10b4cbf92b35282f03ac31dba786545cff5bee6bd79",
+    "symbol_fold_ids.npy": "sha256:80e1c44a3cdb7fe3e9ab60d268b65d6e0a3b39c7aff603cec50c3db122e3155e",
+    "epsilon_future.npy": "sha256:ed5f070e2f3aaf6bb61cdddd19cb92481de80faaeba8fd9ce9bac3950559974e",
+    "producer_sources.json": "sha256:850f78c495c2d59b642b5929816d17ed0b36ae061d0ea524ae9c92c49ae713c9",
+    "target_anchor_checks.json": "sha256:97f9c20e2358a1be9d469085228b1df278075ad92835701501863851f2bd7f71"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "source_commit": "360eae62df47583d185df00c2955dfe0723facb9",
+  "per_seed_csv_git_blob": "eb6827f65dbac91486b03cb22cca07e6cf4c0379",
+  "per_seed_csv_path": "cloud_results/local_handoff_R3_condition_20260906/per_seed_daily.csv",
+  "selected_original_lines_inclusive": [
+    [
+      198,
+      295
+    ],
+    [
+      492,
+      589
+    ]
+  ],
+  "raw_csv_downloaded": false,
+  "description": "F/H RankIC values transcribed from connector text for seed47 both clocks; metadata joined from prior accepted 49-day support and checked against displayed rows. This is 98 paired rows / 196 original predictor rows, not all 588 rows or stock-level scores. No random-sample or all-seed daily reaggregation claim."
+}

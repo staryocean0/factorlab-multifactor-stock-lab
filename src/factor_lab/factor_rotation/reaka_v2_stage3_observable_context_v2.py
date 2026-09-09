@@ -16,6 +16,8 @@ from factor_lab.governance.reaka_multifactor_infrastructure_v1 import (
     validate_stage_payload,
     write_json,
 )
+from factor_lab.governance.reaka_foundation_contract import require_research_action
+
 
 ROOT: Final = Path(__file__).resolve().parents[3]
 CONTRACT: Final = ROOT / "docs/ops/reaka_v2_stage3_observable_context@2.0.json"
@@ -155,6 +157,7 @@ def build_certificate(
 
 
 def execute_tree(*, tree: str) -> dict[str, object]:
+    require_research_action(Path(__file__).resolve().parents[3], "stage3_execute")
     if tree not in {"formal", "isolated"}:
         raise ValueError("reaka_v2_stage3_v2_tree_invalid")
     contract = load_contract()

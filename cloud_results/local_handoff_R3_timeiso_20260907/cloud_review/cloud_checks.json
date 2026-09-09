@@ -1,0 +1,62 @@
+{
+  "schema_id": "factorlab.r3_timeiso_cloud_review@1.0",
+  "reviewed_commit": "84ef80f14e18ba8da7f7dd183e4d4bb4ab6388c1",
+  "runtime_source_commit": "60f2c9ffb850b11f4858b914078177b1ab6f55eb",
+  "status": "core_accepted_reporting_delta_pending",
+  "cloud_reaggregation": {
+    "clock_1430": {"rows": 142, "mean": 0.019232554083375146, "median": 0.01650026083485295, "win_days": 115},
+    "clock_1445": {"rows": 142, "mean": 0.021841094758399248, "median": 0.02045023369739675, "win_days": 110},
+    "coordinates_equal": true,
+    "primary": {
+      "days": 142,
+      "mean_primary_delta_rankic": 0.020536824420887195,
+      "median_primary_delta_rankic": 0.01854030021598827,
+      "win_days": 112,
+      "clock_delta_correlation": 0.985834736660759,
+      "both_clocks_positive_days": 110,
+      "both_clocks_nonpositive_days": 27,
+      "clock_sign_disagreement_days": 5,
+      "phase_mean_primary_delta": {"0": 0.015762262767563574, "1": 0.021123067934387826, "2": 0.024737883138064413, "3": 0.020657064461051814},
+      "bootstrap": {
+        "4": {"mean": 0.020536824420887195, "lower": 0.009204953136998408, "upper": 0.03142368143324111, "block_length": 4, "draws": 5000, "seed": 61207},
+        "8": {"mean": 0.020536824420887195, "lower": 0.008334688697785642, "upper": 0.03317719554298435, "block_length": 8, "draws": 5000, "seed": 61207},
+        "12": {"mean": 0.020536824420887195, "lower": 0.007359014942556427, "upper": 0.032470487689488056, "block_length": 12, "draws": 5000, "seed": 61207}
+      }
+    }
+  },
+  "local_run": {
+    "fits": 12,
+    "arms": ["F", "H"],
+    "clocks": ["1430", "1445"],
+    "seeds": [11, 29, 47],
+    "device": "cpu",
+    "fit_rows": 361628,
+    "prediction_rows": 408446,
+    "labelled_rows": 393431,
+    "paired_days": 142,
+    "selection_years": [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+    "selection_rows_per_clock": 171,
+    "includes_2017_selection": false
+  },
+  "receipt_review": {
+    "fh_pairs_checked": 6,
+    "pair_identity_mismatches": 0,
+    "selected_cycle_not_minimum": 0,
+    "future_target_values_read_nonzero": 0,
+    "checkpoint_manifests_present": 12,
+    "reload_specs_present": 12,
+    "score_arrays_uploaded": false
+  },
+  "pending_reporting": {
+    "training_required": false,
+    "inference_required": false,
+    "per_seed_market_metrics": true,
+    "per_year_metrics": true,
+    "decile_top30": true,
+    "four_fixed_baselines": true
+  },
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "production_authority": false,
+  "actions_executed": false
+}

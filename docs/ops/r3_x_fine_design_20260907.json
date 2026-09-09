@@ -1,0 +1,68 @@
+{
+  "schema_id": "factorlab.r3_x_fine_design@1.0",
+  "design_id": "R3-X-FINE-DESIGN-20260907-01",
+  "preregistered_parent": "R3-X-DECOMP-MONTHLY-DESIGN-20260907-01",
+  "authorization_reason": {
+    "xcoarse_accepted": true,
+    "F_minus_E_mean": 0.011258802580991234,
+    "F_minus_E_block8": [0.00593851254102115, 0.017342186931933002],
+    "E_minus_H_mean": 0.009278021839895956,
+    "E_minus_H_block8": [-0.0010621365125196335, 0.019458336697201546],
+    "arms_were_preregistered_before_xcoarse_result": true
+  },
+  "new_arms": [
+    "STATE_VALUE_PLUS_E",
+    "BETA_ONLY",
+    "BETA_RELIABILITY"
+  ],
+  "reference_arms": ["F", "E", "H"],
+  "contrasts": {
+    "STATE_VALUE_PLUS_E_minus_E": "state values conditional on accepted E",
+    "F_minus_STATE_VALUE_PLUS_E": "state availability conditional on state values plus E",
+    "BETA_ONLY_minus_H": "exposure values conditional on history-only",
+    "BETA_RELIABILITY_minus_BETA_ONLY": "reliability conditional on exposure values",
+    "E_minus_BETA_RELIABILITY": "exposure availability conditional on exposure values plus reliability"
+  },
+  "budget": {
+    "clocks": ["1430", "1445"],
+    "seeds": [11, 29, 47],
+    "new_fits": 18,
+    "max_cycles_per_fit": 3,
+    "max_total_cycles": 54,
+    "F_refits": 0,
+    "E_refits": 0,
+    "H_refits": 0
+  },
+  "primary_metric": "daily_cross_sectional_H20_financial_residual_rankic",
+  "secondary_metrics": [
+    "H20_financial_residual_decile_spread",
+    "H20_financial_residual_top30_minus_same_universe_mean"
+  ],
+  "secondary_metrics_do_not_rescue_failed_primary": true,
+  "evaluation": {
+    "support": "exact accepted TIMEISO/XCOARSE consumed 2018-2020 paired support",
+    "clock_combination": "equal-date equal-clock mean",
+    "moving_block_lengths": [4, 8, 12],
+    "report_each_seed": true,
+    "report_each_year": true,
+    "report_each_phase": true
+  },
+  "guards": {
+    "accepted_E_receipt_identity": true,
+    "accepted_E_selected_cycle_minimum_with_earliest_tie": true,
+    "accepted_E_checkpoint_manifest": true,
+    "accepted_E_reload_cpu": true,
+    "xcoarse_daily_reconstruction": true,
+    "new_arm_selected_cycle_minimum_with_earliest_tie": true,
+    "new_arm_future_target_values_read_zero": true,
+    "fresh_process_reload": true,
+    "source_blob_guard_x_decomposition": "040182c3f8571083a83d8df3cd852f82dc1f4e48",
+    "source_blob_guard_x_coarse_runner": "5adcfc81dff0a637e0ae21987db02d1c94ba5b9b"
+  },
+  "monthly_F_plus_M_authorized": false,
+  "monthly_formula_identity": "not_recovered",
+  "unique_additive_causal_attribution": false,
+  "fresh_oos": false,
+  "full_pit_certified": false,
+  "production_authority": false
+}

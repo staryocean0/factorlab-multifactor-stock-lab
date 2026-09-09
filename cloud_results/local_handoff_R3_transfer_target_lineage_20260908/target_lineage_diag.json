@@ -1,0 +1,1369 @@
+{
+  "schema_id": "factorlab.r3_transfer_target_lineage_diag@1.0",
+  "task_id": "LCL-R3-TRANSFER-TARGET-LINEAGE-20260908-01",
+  "status": "target_lineage_diagnosed_no_scores",
+  "clocks": {
+    "1430": {
+      "clock": "1430",
+      "anchors": [
+        {
+          "day_position": 2680,
+          "date": "2018-01-08",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 2855,
+          "date": "2018-09-25",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 3030,
+          "date": "2019-06-20",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 3205,
+          "date": "2020-03-10",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 3385,
+          "date": "2020-12-03",
+          "structurally_mature": true
+        }
+      ],
+      "identity": {
+        "timeiso_store_manifest": "sha256:265c1d7b6e319eca87401812a6b696473c44c838734897774c066da8184154ba",
+        "old_stock_residual_surfaces": "sha256:7c8854e81288712f0a51e7e50c912d3bf0d63f23c33719fe05c7aaa528dda723",
+        "old_factor_basis_history": "sha256:03d13768aa6ab5ede74f93a30b52de8e655b8b318221345fca3d48b71f3f3f87",
+        "old_factor_basis_future": "sha256:223a53a4c0cfab7d3b00849f669a3f146ca009b2ad548cb0cd197c86580bdbba",
+        "p6_decision_close": "sha256:a771f2b603ede42d1e85a6ab31cb3d396222b1e3f49d70ff0d049c290ff8e68f",
+        "p6_history_h20_raw": "sha256:7a3b830cc5e342fd0d53ecc3f3240d700dfbab814ed9f4f967efb335e24e1a8c",
+        "p6_future_h20_raw": "sha256:1df07ea203a6a14fe51a20db838a34a503a17ff7afa5dcfd723b9e8e0f42fa50",
+        "current_intraday_ot_source": "sha256:4a8ff5fc74adfa474e12a2f0e9c6b770eb7afdb713fe6d676baa423fe5b23c86",
+        "current_bridge_source": "sha256:3ca1cce35a68b23d62632e6921333fcfef4f9df3aa1aa79d6c3fad69d0729c0f"
+      },
+      "old_OT_residual_to_TIMEISO_store": {
+        "history": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2643,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2956,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3318,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3454,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3629,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        },
+        "future": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2559,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2949,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3321,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3445,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3630,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        }
+      },
+      "raw_future_H20_P6_vs_extended_close_formula": {
+        "passed": false,
+        "max_abs_error": 0.01707613468170166,
+        "support_mismatches": 0,
+        "above_tolerance": 11603,
+        "anchors": [
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 2946,
+            "max_abs_error": 0.01707613468170166,
+            "above_tolerance": 2047,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2680,
+            "date": "2018-01-08"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3242,
+            "max_abs_error": 0.009626328945159912,
+            "above_tolerance": 2111,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2855,
+            "date": "2018-09-25"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3390,
+            "max_abs_error": 0.012485265731811523,
+            "above_tolerance": 2278,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3030,
+            "date": "2019-06-20"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3568,
+            "max_abs_error": 0.012802302837371826,
+            "above_tolerance": 2465,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3205,
+            "date": "2020-03-10"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3913,
+            "max_abs_error": 0.012825608253479004,
+            "above_tolerance": 2702,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3385,
+            "date": "2020-12-03"
+          }
+        ]
+      },
+      "factor_basis_history_old_vs_rebuilt": {
+        "passed": true,
+        "max_abs_error": 3.0531133177191805e-16,
+        "support_mismatches": 0,
+        "above_tolerance": 0,
+        "anchors": [
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 3.0531133177191805e-16,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 2680,
+            "date": "2018-01-08"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 4.163336342344337e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 2855,
+            "date": "2018-09-25"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 4.163336342344337e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 3030,
+            "date": "2019-06-20"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 8.326672684688674e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 3205,
+            "date": "2020-03-10"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 9.020562075079397e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 3385,
+            "date": "2020-12-03"
+          }
+        ]
+      },
+      "factor_basis_future_old_vs_rebuilt": {
+        "passed": false,
+        "max_abs_error": 0.000985466968297169,
+        "support_mismatches": 0,
+        "above_tolerance": 420,
+        "anchors": [
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.0008896251780253633,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2680,
+            "date": "2018-01-08"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.0004068998053919637,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2855,
+            "date": "2018-09-25"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.0005221287470425773,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3030,
+            "date": "2019-06-20"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.000985466968297169,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3205,
+            "date": "2020-03-10"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.00044363841569433626,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3385,
+            "date": "2020-12-03"
+          }
+        ]
+      },
+      "historical_artifact_replay_with_current_OT_code": {
+        "exposure": {
+          "beta": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "reliability": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "available": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          }
+        },
+        "epsilon_history": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2643,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2956,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3318,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3454,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3629,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        },
+        "epsilon_future": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2559,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2949,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3321,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3445,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3630,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        }
+      },
+      "rebuilt_extended_path_at_same_old_anchors": {
+        "exposure": {
+          "beta": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "reliability": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "available": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          }
+        },
+        "epsilon_history": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2643,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2956,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3318,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3454,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3629,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        },
+        "epsilon_future": {
+          "passed": false,
+          "max_abs_error": 0.01710730418562889,
+          "support_mismatches": 0,
+          "above_tolerance": 15902,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2559,
+              "max_abs_error": 0.01710730418562889,
+              "above_tolerance": 2559,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2949,
+              "max_abs_error": 0.009630247950553894,
+              "above_tolerance": 2949,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3321,
+              "max_abs_error": 0.012830495834350586,
+              "above_tolerance": 3321,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3445,
+              "max_abs_error": 0.012539949850179255,
+              "above_tolerance": 3445,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3630,
+              "max_abs_error": 0.010524623095989227,
+              "above_tolerance": 3628,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        }
+      },
+      "diagnosis": "raw_future_H20_path_diverges",
+      "new_model_fits": 0,
+      "model_scores": 0,
+      "sidecars_built": 0,
+      "contains_2026_target": false
+    },
+    "1445": {
+      "clock": "1445",
+      "anchors": [
+        {
+          "day_position": 2680,
+          "date": "2018-01-08",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 2855,
+          "date": "2018-09-25",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 3030,
+          "date": "2019-06-20",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 3205,
+          "date": "2020-03-10",
+          "structurally_mature": true
+        },
+        {
+          "day_position": 3385,
+          "date": "2020-12-03",
+          "structurally_mature": true
+        }
+      ],
+      "identity": {
+        "timeiso_store_manifest": "sha256:c02cc002793f3200bed3ff47a339138b8e2bf6ca99eea3d93c41306b341416cb",
+        "old_stock_residual_surfaces": "sha256:e7d97cef72000218becd7b34c6b653718b889f52716f16307d1ea667eab5cfbf",
+        "old_factor_basis_history": "sha256:74eb9c15a41458892d22781a3ee5a0182223ae9d98a4233ca794fb2601cc3226",
+        "old_factor_basis_future": "sha256:188e0123491850edf197ebe832adf01052f4b97ce9d7f2f694e8cd3a54c201a1",
+        "p6_decision_close": "sha256:fd495e4a7d2979271937445b72e8c18e5c0782bc0d6dd990fe14fc503e348240",
+        "p6_history_h20_raw": "sha256:1d15d5dd572b5e7218ed5e4febdbbc1af7720142cbfe1e1b8d02cad588d2eff7",
+        "p6_future_h20_raw": "sha256:b3769ce087b07325c02e08700c668a50ec709c3b2949458635f213a7e6636039",
+        "current_intraday_ot_source": "sha256:4a8ff5fc74adfa474e12a2f0e9c6b770eb7afdb713fe6d676baa423fe5b23c86",
+        "current_bridge_source": "sha256:3ca1cce35a68b23d62632e6921333fcfef4f9df3aa1aa79d6c3fad69d0729c0f"
+      },
+      "old_OT_residual_to_TIMEISO_store": {
+        "history": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2643,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2956,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3318,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3454,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3629,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        },
+        "future": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2559,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2949,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3321,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3445,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3630,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        }
+      },
+      "raw_future_H20_P6_vs_extended_close_formula": {
+        "passed": false,
+        "max_abs_error": 0.0203666090965271,
+        "support_mismatches": 0,
+        "above_tolerance": 11702,
+        "anchors": [
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 2946,
+            "max_abs_error": 0.012882471084594727,
+            "above_tolerance": 2030,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2680,
+            "date": "2018-01-08"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3242,
+            "max_abs_error": 0.0203666090965271,
+            "above_tolerance": 2171,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2855,
+            "date": "2018-09-25"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3390,
+            "max_abs_error": 0.012694001197814941,
+            "above_tolerance": 2336,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3030,
+            "date": "2019-06-20"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3568,
+            "max_abs_error": 0.01336205005645752,
+            "above_tolerance": 2410,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3205,
+            "date": "2020-03-10"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 3913,
+            "max_abs_error": 0.012453138828277588,
+            "above_tolerance": 2755,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3385,
+            "date": "2020-12-03"
+          }
+        ]
+      },
+      "factor_basis_history_old_vs_rebuilt": {
+        "passed": true,
+        "max_abs_error": 9.71445146547012e-17,
+        "support_mismatches": 0,
+        "above_tolerance": 0,
+        "anchors": [
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 9.71445146547012e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 2680,
+            "date": "2018-01-08"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 4.163336342344337e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 2855,
+            "date": "2018-09-25"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 2.7755575615628914e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 3030,
+            "date": "2019-06-20"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 5.551115123125783e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 3205,
+            "date": "2020-03-10"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 8.326672684688674e-17,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true,
+            "day_position": 3385,
+            "date": "2020-12-03"
+          }
+        ]
+      },
+      "factor_basis_future_old_vs_rebuilt": {
+        "passed": false,
+        "max_abs_error": 0.0006508525944975002,
+        "support_mismatches": 0,
+        "above_tolerance": 420,
+        "anchors": [
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.0006314160875206115,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2680,
+            "date": "2018-01-08"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.00040698322238506834,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 2855,
+            "date": "2018-09-25"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.00027450396731448085,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3030,
+            "date": "2019-06-20"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.00036734440781194255,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3205,
+            "date": "2020-03-10"
+          },
+          {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 84,
+            "max_abs_error": 0.0006508525944975002,
+            "above_tolerance": 84,
+            "tolerance": 1e-07,
+            "passed": false,
+            "day_position": 3385,
+            "date": "2020-12-03"
+          }
+        ]
+      },
+      "historical_artifact_replay_with_current_OT_code": {
+        "exposure": {
+          "beta": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "reliability": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "available": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          }
+        },
+        "epsilon_history": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2643,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2956,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3318,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3454,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3629,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        },
+        "epsilon_future": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2559,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2949,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3321,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3445,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3630,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        }
+      },
+      "rebuilt_extended_path_at_same_old_anchors": {
+        "exposure": {
+          "beta": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "reliability": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          },
+          "available": {
+            "shape_match": true,
+            "support_mismatches": 0,
+            "finite_cells_compared": 278740,
+            "max_abs_error": 0.0,
+            "above_tolerance": 0,
+            "tolerance": 1e-07,
+            "passed": true
+          }
+        },
+        "epsilon_history": {
+          "passed": true,
+          "max_abs_error": 0.0,
+          "support_mismatches": 0,
+          "above_tolerance": 0,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2643,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2956,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3318,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3454,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3629,
+              "max_abs_error": 0.0,
+              "above_tolerance": 0,
+              "tolerance": 1e-07,
+              "passed": true,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        },
+        "epsilon_future": {
+          "passed": false,
+          "max_abs_error": 0.020398533786647022,
+          "support_mismatches": 0,
+          "above_tolerance": 15893,
+          "anchors": [
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2559,
+              "max_abs_error": 0.01303863525390625,
+              "above_tolerance": 2557,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 2680,
+              "date": "2018-01-08"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 2949,
+              "max_abs_error": 0.020398533786647022,
+              "above_tolerance": 2948,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 2855,
+              "date": "2018-09-25"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3321,
+              "max_abs_error": 0.012700766324996948,
+              "above_tolerance": 3313,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 3030,
+              "date": "2019-06-20"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3445,
+              "max_abs_error": 0.013294940814375877,
+              "above_tolerance": 3445,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 3205,
+              "date": "2020-03-10"
+            },
+            {
+              "shape_match": true,
+              "support_mismatches": 0,
+              "finite_cells_compared": 3630,
+              "max_abs_error": 0.012539170682430267,
+              "above_tolerance": 3630,
+              "tolerance": 1e-07,
+              "passed": false,
+              "day_position": 3385,
+              "date": "2020-12-03"
+            }
+          ]
+        }
+      },
+      "diagnosis": "raw_future_H20_path_diverges",
+      "new_model_fits": 0,
+      "model_scores": 0,
+      "sidecars_built": 0,
+      "contains_2026_target": false
+    }
+  },
+  "new_model_fits": 0,
+  "checkpoint_reloads": 0,
+  "model_scores": 0,
+  "label_sidecars": 0,
+  "contains_2026_target": false,
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false
+}

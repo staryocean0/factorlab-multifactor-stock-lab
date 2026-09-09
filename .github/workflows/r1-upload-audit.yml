@@ -1,0 +1,66 @@
+name: R1 uploaded bytes and source readiness
+
+on:
+  push:
+    branches: [codex/reaka-foundation-audit-20260905]
+    paths:
+      - src/factor_lab/governance/reaka_r1_upload_audit.py
+      - scripts/audit_reaka_r1_uploads.py
+      - tests/unit/test_reaka_r1_upload_audit.py
+      - .github/workflows/r1-upload-audit.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: work
+          sparse-checkout: |
+            src
+            scripts
+            tests
+            docs
+            cloud_results
+            .github
+      - uses: actions/checkout@v4
+        with:
+          ref: 2575f9e4d12289fa3916d14f27cb637908614fd9
+          path: inputs
+          sparse-checkout: |
+            docs
+            src
+            scripts
+            tests
+            data/manifest.json
+            data/development/cn_a_qfq_daily/year=2023
+            data/development/cn_a_qfq_daily/year=2024
+            output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020
+            output/factor-rotation/reaka_intraday_K1_fit_prefix_successor_v1_2011_2017
+            output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install numpy pandas pyarrow pytest
+      - name: Upload corruption and provenance counterexamples
+        working-directory: work
+        run: PYTHONPATH=src pytest -q tests/unit/test_reaka_r1_upload_audit.py --junitxml=../audit-results/tests.xml
+      - name: Verify exact original bytes and stop at the first missing source layer
+        run: |
+          python work/scripts/audit_reaka_r1_uploads.py \
+            --input-root inputs \
+            --input-commit 2575f9e4d12289fa3916d14f27cb637908614fd9 \
+            --tree work/cloud_results/first_round_rework_20260906/github_tree_snapshot.json \
+            --restored-root restored-originals \
+            --output audit-results/upload_audit.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r1-upload-audit-${{ github.sha }}
+          path: audit-results/
+          retention-days: 30

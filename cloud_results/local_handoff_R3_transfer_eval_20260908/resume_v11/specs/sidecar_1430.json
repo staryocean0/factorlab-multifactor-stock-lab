@@ -1,0 +1,8 @@
+{
+  "feature_store": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-INPUT-20260907-01/run01/stores/1430",
+  "label_bundle": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-TARGET-ENTRYOPEN-20260908-01/label_bundles_v11/1430",
+  "reference_label_store": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TIMEISO-20260907-01/run01/1430/prepared/store",
+  "output_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R3-TRANSFER-EVAL-20260908-01/label_sidecars_v11/1430",
+  "label_bundle_sha256": "sha256:72f023efd4073987176290adcedc749ea8051bc54648e7c912a9bc5dbf39e188",
+  "reference_manifest_sha256": "sha256:265c1d7b6e319eca87401812a6b696473c44c838734897774c066da8184154ba"
+}

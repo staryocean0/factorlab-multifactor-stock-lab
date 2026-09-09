@@ -1,0 +1,25 @@
+{
+  "schema_id": "factorlab.reaka_multifactor_current_manifest@1.5",
+  "scope": "repository_infrastructure_and_mission_phase_routing",
+  "supersedes": "docs/ops/reaka_multifactor_current_manifest@1.4.json",
+  "historical_baseline_commit": "3a75376e1f7f871bb72e48f886c275919b3c9671",
+  "mission": "docs/ops/reaka_research_mission.md",
+  "phase_transition": "docs/ops/research_phase_transition_20260908.json",
+  "phase_I_report": "docs/ops/phase1_lab_validation_20260908.md",
+  "phase_II_task": "docs/ops/phase2_old_strategy_redevelopment_20260908.md",
+  "semantics": "docs/ops/reaka_foundation_semantics@1.2.json",
+  "historical_state": "docs/ops/research_state.json",
+  "workflow": "docs/user/reaka_multifactor_current_workflow_v1_4.md",
+  "whitepaper": "docs/ops/reaka_foundation_whitepaper_v1_4.md",
+  "audit": "docs/ops/infrastructure_audit_20260906.md",
+  "reading_routes": {
+    "takeover": ["docs/ops/reaka_research_mission.md", "docs/ops/research_phase_transition_20260908.json", "docs/ops/phase2_old_strategy_redevelopment_20260908.md", "AGENTS.md", "docs/user/reaka_multifactor_current_workflow_v1_4.md", "docs/ops/research_state.json"],
+    "phase_I_evidence": ["docs/ops/phase1_lab_validation_20260908.md", "docs/ops/reaka_factor_authority_v3_whitepaper.md", "src/factor_lab/factor_rotation/reaka_financial_residual.py", "src/factor_lab/factor_rotation/factor_specs.py"],
+    "phase_II_redevelopment": ["docs/ops/phase2_old_strategy_redevelopment_20260908.md", "docs/ops/strategy_progressive_development@1.0.json", "docs/ops/strategy_slice_rebuild_whitepaper.md", "docs/user/reaka_strategy_v2_external_ai_handoff_v2.md"]
+  },
+  "state_rule": "research_phase_transition_20260908 controls mission phase and next-task routing; research_state remains the detailed historical R1/R2/R3 evidence ledger until compacted without rewriting historical receipts",
+  "blocker_policy": "mission_phase_I_passed_phase_II_open_dependency_scoped_gates_remain",
+  "fresh_oos": false,
+  "production_authority": false,
+  "local_factorlab_pointer_authority": false
+}

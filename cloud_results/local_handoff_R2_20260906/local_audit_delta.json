@@ -1,0 +1,4977 @@
+{
+  "schema_id": "factorlab.reaka_r2_local_audit@1.1",
+  "task": "LCL-R2-20260906-01",
+  "successor_of": "scripts/reaka_r2_local_audit_v1.py",
+  "started_at": "2026-09-06T07:49:32.398244+00:00",
+  "finished_at": "2026-09-06T07:50:03.316174+00:00",
+  "factorlab_root": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab",
+  "datahub_root": "/home/starryocean/桌面/量化/unified_datahub/.runtime/live/lake/bars/dataset_version=bars_cn_a_1m_raw_canonical_4ceca170a851",
+  "original_report": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/tmp/LCL-R2-20260906-01/local-20260906/r2_local_audit.json",
+  "tolerance": {
+    "rule": "abs(a-b) <= atol + rtol*abs(reference)",
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "full_pit_certified": false,
+  "automatic_retraining_required": false,
+  "checks": {
+    "A_identity": {
+      "check_id": "A_strict_identity_export_and_selection_canonical",
+      "status": "passed",
+      "counts": {
+        "rows": 81,
+        "successor_byte_match": 81,
+        "successor_mismatch_or_other": 0
+      },
+      "rows": [
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/manifest.json",
+          "original_expected": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:82f57a1aba896c1e31a0030dcc6677bc0b74eb45eefa478ed5d4321d306aab0f",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 3982,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/calendar.npy",
+          "original_expected": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27376,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/symbols.npy",
+          "original_expected": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 191264,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/decision_positions.npy",
+          "original_expected": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 4800,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/decision_close_1430.npy",
+          "original_expected": "sha256:a771f2b603ede42d1e85a6ab31cb3d396222b1e3f49d70ff0d049c290ff8e68f",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:a771f2b603ede42d1e85a6ab31cb3d396222b1e3f49d70ff0d049c290ff8e68f",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/decision_minute_1430.npy",
+          "original_expected": "sha256:45256b019f47719dac27670442c09ce8b267fcc706176bdb6bc84c6cdcc815d1",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:45256b019f47719dac27670442c09ce8b267fcc706176bdb6bc84c6cdcc815d1",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27125512,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/entry_open_1430.npy",
+          "original_expected": "sha256:9cbd8adab2936148cb8ef8528c9ee8cfd480d87b3d4a8cc352a712caf1a60482",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:9cbd8adab2936148cb8ef8528c9ee8cfd480d87b3d4a8cc352a712caf1a60482",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/entry_minute_1430.npy",
+          "original_expected": "sha256:9cc0395b0da5391461fa4863707ff492e56ac376d5b2b33ecdb31c2ea1e8ad16",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:9cc0395b0da5391461fa4863707ff492e56ac376d5b2b33ecdb31c2ea1e8ad16",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27125512,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/history_h20_raw_1430.npy",
+          "original_expected": "sha256:7a3b830cc5e342fd0d53ecc3f3240d700dfbab814ed9f4f967efb335e24e1a8c",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:7a3b830cc5e342fd0d53ecc3f3240d700dfbab814ed9f4f967efb335e24e1a8c",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/future_h20_raw_1430.npy",
+          "original_expected": "sha256:1df07ea203a6a14fe51a20db838a34a503a17ff7afa5dcfd723b9e8e0f42fa50",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:1df07ea203a6a14fe51a20db838a34a503a17ff7afa5dcfd723b9e8e0f42fa50",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/inference_rows_1430.npy",
+          "original_expected": "sha256:973aff4a49b9b34dbfa84406930c1cc6e7d7a5d5b498644ce927924b8905e942",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:973aff4a49b9b34dbfa84406930c1cc6e7d7a5d5b498644ce927924b8905e942",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27048192,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/evaluation_row_indices_1430.npy",
+          "original_expected": "sha256:2af7ff5f47b2b8e43c5447cc9398c164edd14ea0f9cb8f0bf8a9dcd2d4a9be75",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:2af7ff5f47b2b8e43c5447cc9398c164edd14ea0f9cb8f0bf8a9dcd2d4a9be75",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 6558864,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/decision_close_1445.npy",
+          "original_expected": "sha256:fd495e4a7d2979271937445b72e8c18e5c0782bc0d6dd990fe14fc503e348240",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:fd495e4a7d2979271937445b72e8c18e5c0782bc0d6dd990fe14fc503e348240",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/decision_minute_1445.npy",
+          "original_expected": "sha256:2c43fd430279c09895c645c7e7f3a77a6a8a0cd23eb89cbdd71dc6fe7d56a79b",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:2c43fd430279c09895c645c7e7f3a77a6a8a0cd23eb89cbdd71dc6fe7d56a79b",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27125512,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/entry_open_1445.npy",
+          "original_expected": "sha256:ac2867f0cba5ee8747b7d36bc578a4076efb7acfa642f4cfc76b43dfc6f12b82",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:ac2867f0cba5ee8747b7d36bc578a4076efb7acfa642f4cfc76b43dfc6f12b82",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/entry_minute_1445.npy",
+          "original_expected": "sha256:ddf63fcda4f2886d4dde82d5157fb6ee0c0765e17409d3e952c1a1c48fadd46c",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:ddf63fcda4f2886d4dde82d5157fb6ee0c0765e17409d3e952c1a1c48fadd46c",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27125512,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/history_h20_raw_1445.npy",
+          "original_expected": "sha256:1d15d5dd572b5e7218ed5e4febdbbc1af7720142cbfe1e1b8d02cad588d2eff7",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:1d15d5dd572b5e7218ed5e4febdbbc1af7720142cbfe1e1b8d02cad588d2eff7",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/future_h20_raw_1445.npy",
+          "original_expected": "sha256:b3769ce087b07325c02e08700c668a50ec709c3b2949458635f213a7e6636039",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:b3769ce087b07325c02e08700c668a50ec709c3b2949458635f213a7e6636039",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/inference_rows_1445.npy",
+          "original_expected": "sha256:973aff4a49b9b34dbfa84406930c1cc6e7d7a5d5b498644ce927924b8905e942",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:973aff4a49b9b34dbfa84406930c1cc6e7d7a5d5b498644ce927924b8905e942",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27048192,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/evaluation_row_indices_1445.npy",
+          "original_expected": "sha256:2af7ff5f47b2b8e43c5447cc9398c164edd14ea0f9cb8f0bf8a9dcd2d4a9be75",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:2af7ff5f47b2b8e43c5447cc9398c164edd14ea0f9cb8f0bf8a9dcd2d4a9be75",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 6558864,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_target_fill_v1_2007_2020/formal/lineage.json",
+          "original_expected": "sha256:0386b0d6e2b7f03859b36c9f85b64d87ce3193753aae567d601ad7503d0a0f31",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:0386b0d6e2b7f03859b36c9f85b64d87ce3193753aae567d601ad7503d0a0f31",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 925,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/manifest.json",
+          "original_expected": "sha256:e564d6dc818de9891eb7a8d83cd1fe62bb1490995857b5cb31518d6067970558",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:e564d6dc818de9891eb7a8d83cd1fe62bb1490995857b5cb31518d6067970558",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 1643,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/factor_basis_history.parquet",
+          "original_expected": "sha256:03d13768aa6ab5ede74f93a30b52de8e655b8b318221345fca3d48b71f3f3f87",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:03d13768aa6ab5ede74f93a30b52de8e655b8b318221345fca3d48b71f3f3f87",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 3370601,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/factor_basis_future.parquet",
+          "original_expected": "sha256:223a53a4c0cfab7d3b00849f669a3f146ca009b2ad548cb0cd197c86580bdbba",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:223a53a4c0cfab7d3b00849f669a3f146ca009b2ad548cb0cd197c86580bdbba",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 3350711,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/basis_projection_receipts.parquet",
+          "original_expected": "sha256:72050704e1a696cfcc2470ec4890818e422966f0230e3e4d1b1eb5a74cc43254",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:72050704e1a696cfcc2470ec4890818e422966f0230e3e4d1b1eb5a74cc43254",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 6863747,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/d5_stock_exposures.parquet",
+          "original_expected": "sha256:01fc36ffc480ac9d6a317074c0d35962e4feca36c10e27595f646f38ac4ff30d",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:01fc36ffc480ac9d6a317074c0d35962e4feca36c10e27595f646f38ac4ff30d",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 63379086,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/d5_stock_industry_exposures.parquet",
+          "original_expected": "sha256:20e1d764482c5fe4b33be16b1e9d79c11e67d561afe00857c5f1a0ccb9812b64",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:20e1d764482c5fe4b33be16b1e9d79c11e67d561afe00857c5f1a0ccb9812b64",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 10479772,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/exposure_decision_summary.parquet",
+          "original_expected": "sha256:21a7743a2a7b8680c2017dfc897c93ff4dd8b6b791aa6ba61c08c43a1eb70463",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:21a7743a2a7b8680c2017dfc897c93ff4dd8b6b791aa6ba61c08c43a1eb70463",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 23214,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot1/stock_residual_surfaces.npz",
+          "original_expected": "sha256:7c8854e81288712f0a51e7e50c912d3bf0d63f23c33719fe05c7aaa528dda723",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:7c8854e81288712f0a51e7e50c912d3bf0d63f23c33719fe05c7aaa528dda723",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 44794004,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/manifest.json",
+          "original_expected": "sha256:abcdaca494be21418798caef71d6b50a02e77fdf361f49b0210224e96b5855c2",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:abcdaca494be21418798caef71d6b50a02e77fdf361f49b0210224e96b5855c2",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 1643,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/factor_basis_history.parquet",
+          "original_expected": "sha256:74eb9c15a41458892d22781a3ee5a0182223ae9d98a4233ca794fb2601cc3226",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:74eb9c15a41458892d22781a3ee5a0182223ae9d98a4233ca794fb2601cc3226",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 3370557,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/factor_basis_future.parquet",
+          "original_expected": "sha256:188e0123491850edf197ebe832adf01052f4b97ce9d7f2f694e8cd3a54c201a1",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:188e0123491850edf197ebe832adf01052f4b97ce9d7f2f694e8cd3a54c201a1",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 3350928,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/basis_projection_receipts.parquet",
+          "original_expected": "sha256:e457bcb3aeb725c5f2ad5a65db44dd479fc739bdf3e055a43427b8ecb42adb63",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:e457bcb3aeb725c5f2ad5a65db44dd479fc739bdf3e055a43427b8ecb42adb63",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 6867883,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/d5_stock_exposures.parquet",
+          "original_expected": "sha256:61760a55362d8993d113fbff9e377768655126c7d86fe7bef4e347e95b87c216",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:61760a55362d8993d113fbff9e377768655126c7d86fe7bef4e347e95b87c216",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 63367680,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/d5_stock_industry_exposures.parquet",
+          "original_expected": "sha256:28c5946ec4afd43f618428f63924b1224cbd9cb2d24b74c81832aeea9e6f9225",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:28c5946ec4afd43f618428f63924b1224cbd9cb2d24b74c81832aeea9e6f9225",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 10478018,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/exposure_decision_summary.parquet",
+          "original_expected": "sha256:e32d8e9aae7e023195330da94818652589f7e55d88735dc4d86961edd109ddaf",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:e32d8e9aae7e023195330da94818652589f7e55d88735dc4d86961edd109ddaf",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 23219,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot1/stock_residual_surfaces.npz",
+          "original_expected": "sha256:e7d97cef72000218becd7b34c6b653718b889f52716f16307d1ea667eab5cfbf",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:e7d97cef72000218becd7b34c6b653718b889f52716f16307d1ea667eab5cfbf",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 44795019,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot2/manifest.json",
+          "original_expected": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:25308d2a42b03583c14dc49fadc9854940dbef77ad61f7996a1a830f6201fd8a",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 528,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot2/selected_factor_states.parquet",
+          "original_expected": "sha256:850740d6250f27c15f8b760e46f1a0748219c06f4e35d602b6fdbcbef97ce806",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:850740d6250f27c15f8b760e46f1a0748219c06f4e35d602b6fdbcbef97ce806",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 104958,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot2/annual_candidate_metrics.parquet",
+          "original_expected": "sha256:1a189be4cffe7e509c6f9ddfa32136e78f67015311ff5c07ccd3bef5bc542693",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:1a189be4cffe7e509c6f9ddfa32136e78f67015311ff5c07ccd3bef5bc542693",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 16043,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot2/selected_family_tools.json",
+          "original_expected": "sha256:eec20a28752536b9047842becaca304aee8eaa1bf967f28339438fa4d83c5af3",
+          "original_declared_convention": "canonical_digest",
+          "original_raw_sha256": "sha256:cd5d7ed8ad65938b89652a1cb66d272463b4067f35f8467d6be2d9bbd3b08c00",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": "sha256:eec20a28752536b9047842becaca304aee8eaa1bf967f28339438fa4d83c5af3",
+          "size_bytes": 2999,
+          "identity_reused_from_original_raw": false,
+          "successor_convention": "canonical_digest",
+          "recomputed_canonical_digest": "sha256:eec20a28752536b9047842becaca304aee8eaa1bf967f28339438fa4d83c5af3",
+          "embedded_canonical_digest": "sha256:eec20a28752536b9047842becaca304aee8eaa1bf967f28339438fa4d83c5af3",
+          "current_raw_sha256": "sha256:cd5d7ed8ad65938b89652a1cb66d272463b4067f35f8467d6be2d9bbd3b08c00",
+          "cloud_published_raw_sha256": "sha256:cd5d7ed8ad65938b89652a1cb66d272463b4067f35f8467d6be2d9bbd3b08c00",
+          "raw_matches_cloud_published": true,
+          "raw_matches_original_recorded": true,
+          "recomputed_matches_embedded": true,
+          "recomputed_matches_original_expected": true,
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot2/manifest.json",
+          "original_expected": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:203ede4d3a82ef6f1d80c823b2b93b83e18ffad57554b5d25d45464b78be416b",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 528,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot2/selected_factor_states.parquet",
+          "original_expected": "sha256:d4e20ada19a837bcb7616b91c25556e179645c91071def783c34f01c51696e0e",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:d4e20ada19a837bcb7616b91c25556e179645c91071def783c34f01c51696e0e",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 104589,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot2/annual_candidate_metrics.parquet",
+          "original_expected": "sha256:e3b3d62edb0b594af614906fbd2a309527a73a4b431beed9d3d1cd473858ad22",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:e3b3d62edb0b594af614906fbd2a309527a73a4b431beed9d3d1cd473858ad22",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 16032,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot2/selected_family_tools.json",
+          "original_expected": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6",
+          "original_declared_convention": "canonical_digest",
+          "original_raw_sha256": "sha256:fffcd456bd204df28b38abc6b5f809257a8f7c20271bfb36775327d68d0ee345",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6",
+          "size_bytes": 2996,
+          "identity_reused_from_original_raw": false,
+          "successor_convention": "canonical_digest",
+          "recomputed_canonical_digest": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6",
+          "embedded_canonical_digest": "sha256:cd28262b59c972873e64168d0a46ec18d30936a5eb54addb161f4f036156bae6",
+          "current_raw_sha256": "sha256:fffcd456bd204df28b38abc6b5f809257a8f7c20271bfb36775327d68d0ee345",
+          "cloud_published_raw_sha256": "sha256:fffcd456bd204df28b38abc6b5f809257a8f7c20271bfb36775327d68d0ee345",
+          "raw_matches_cloud_published": true,
+          "raw_matches_original_recorded": true,
+          "recomputed_matches_embedded": true,
+          "recomputed_matches_original_expected": true,
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot3/manifest.json",
+          "original_expected": "sha256:86d40e3cb1fd306800f27b81c1a2a24654dd8efa52672183fa6e366e936a83fa",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:86d40e3cb1fd306800f27b81c1a2a24654dd8efa52672183fa6e366e936a83fa",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 504,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1430/ot3/d5_stock_timing_transport.parquet",
+          "original_expected": "sha256:c8242b5e1bf4cdce2ec029ffe46ff7f9846f40e88e2c26a3f8b2924278410603",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:c8242b5e1bf4cdce2ec029ffe46ff7f9846f40e88e2c26a3f8b2924278410603",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 80205136,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot3/manifest.json",
+          "original_expected": "sha256:7f6324a337a78440d8d2a21aba8cc41a442e2c45bf4bac955eff8cdc3c77d348",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:7f6324a337a78440d8d2a21aba8cc41a442e2c45bf4bac955eff8cdc3c77d348",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 504,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_orthogonal_OT_v1_2007_2020/formal/1445/ot3/d5_stock_timing_transport.parquet",
+          "original_expected": "sha256:dce64da3dc5139e273b29a1fa72b13996e790efabfbb4f83b4122b1e9aee39f7",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:dce64da3dc5139e273b29a1fa72b13996e790efabfbb4f83b4122b1e9aee39f7",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 80190746,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/manifest.json",
+          "original_expected": "sha256:7b8050270c72894ff2e6c67f1fb4a5a5513ca46e8cc0b8c02ed7e0ce3523dfd3",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:7b8050270c72894ff2e6c67f1fb4a5a5513ca46e8cc0b8c02ed7e0ce3523dfd3",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 2851,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/calendar.npy",
+          "original_expected": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27376,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/symbols.npy",
+          "original_expected": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 191264,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_history.npy",
+          "original_expected": "sha256:a84ce2e177915542857ce8842bffb3ebc60ef937430fbc6dad90960b083b8a19",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:a84ce2e177915542857ce8842bffb3ebc60ef937430fbc6dad90960b083b8a19",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/epsilon_future.npy",
+          "original_expected": "sha256:83018e8b0bdf61a37d61ef5a43dac0a25cd26833af53da62590e39d4b1344953",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:83018e8b0bdf61a37d61ef5a43dac0a25cd26833af53da62590e39d4b1344953",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/state_values.npy",
+          "original_expected": "sha256:520602b31e9a7fad7041e943156e865a51857fcf84066efa87cf6ba0476ab64b",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:520602b31e9a7fad7041e943156e865a51857fcf84066efa87cf6ba0476ab64b",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 1144544,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/state_available.npy",
+          "original_expected": "sha256:50fa5e7f152496e20d04807cf62ce0ec856afc7dc40e934f13027330feb813eb",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:50fa5e7f152496e20d04807cf62ce0ec856afc7dc40e934f13027330feb813eb",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 286232,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_decision_positions.npy",
+          "original_expected": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 4800,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/stock_factor_exposures.npy",
+          "original_expected": "sha256:28c3a6f5ef0304e18ec6db4f43b2a2baa7cedf5781a00a9541ea0ff6febba4b6",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:28c3a6f5ef0304e18ec6db4f43b2a2baa7cedf5781a00a9541ea0ff6febba4b6",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 130227456,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_reliability.npy",
+          "original_expected": "sha256:56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:56c60dfd940bcb7de3f93b27619b623c751977bee3eff6c3acf2496b90ba7a1e",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 130227456,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/exposure_available.npy",
+          "original_expected": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 32556960,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/inference_rows.npy",
+          "original_expected": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27319552,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/labelled_row_indices.npy",
+          "original_expected": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 6622152,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/factor_ids.json",
+          "original_expected": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 709,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/variant_ids.json",
+          "original_expected": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 260,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/feature_registry.json",
+          "original_expected": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 9796,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/manifest.json",
+          "original_expected": "sha256:e979fce98e3a6e67f6e5b2bef2701f100d2b174fcdef4539e417ba3aa0c9a7e7",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:e979fce98e3a6e67f6e5b2bef2701f100d2b174fcdef4539e417ba3aa0c9a7e7",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 2851,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/calendar.npy",
+          "original_expected": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:a84ba0a17c8c27d2876c5ea83647137cb2102bc8a4471a268c06d70cd86bb03f",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27376,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/symbols.npy",
+          "original_expected": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 191264,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_history.npy",
+          "original_expected": "sha256:da866ef0e967d8289f08872b797d16473081488f6352fc213848e2b3ff235bac",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:da866ef0e967d8289f08872b797d16473081488f6352fc213848e2b3ff235bac",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/epsilon_future.npy",
+          "original_expected": "sha256:109e39090aaee744679ed12e176e48ec534583b99269ac2f1a24d8f3d9edc90a",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:109e39090aaee744679ed12e176e48ec534583b99269ac2f1a24d8f3d9edc90a",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 54250896,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/state_values.npy",
+          "original_expected": "sha256:b1f21b95d41c9b401fecd0cdbd36d60d279be42672d0118db048704f6294cdf3",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:b1f21b95d41c9b401fecd0cdbd36d60d279be42672d0118db048704f6294cdf3",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 1144544,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/state_available.npy",
+          "original_expected": "sha256:50fa5e7f152496e20d04807cf62ce0ec856afc7dc40e934f13027330feb813eb",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:50fa5e7f152496e20d04807cf62ce0ec856afc7dc40e934f13027330feb813eb",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 286232,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_decision_positions.npy",
+          "original_expected": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:83af70b3d70f5306c00c44787160d59167180e988df18861784a08bee9d3a8ee",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 4800,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/stock_factor_exposures.npy",
+          "original_expected": "sha256:d4bf3d17869a7564231f76ab55fd8687d5d7e6c89c57cc9a6492d07da745b38c",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:d4bf3d17869a7564231f76ab55fd8687d5d7e6c89c57cc9a6492d07da745b38c",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 130227456,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_reliability.npy",
+          "original_expected": "sha256:603bf38ebe0562b829001ddd9b3009313a2914a65b4e8e61525501e20f956b0c",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:603bf38ebe0562b829001ddd9b3009313a2914a65b4e8e61525501e20f956b0c",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 130227456,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/exposure_available.npy",
+          "original_expected": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:8d7976a1666cd7b45b9f8513a853aa29ff33daf5380987802ae466af3c8b4a97",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 32556960,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/inference_rows.npy",
+          "original_expected": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:72d612311666f0094e46911af5461d56cd137f9f0b6327a8020365692b11b7e6",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 27319552,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/labelled_row_indices.npy",
+          "original_expected": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:95f25fe28f7c05db1ca22f3c2b174bdc4ccd819d80fd6b693a17f87718beadd3",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 6622152,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/factor_ids.json",
+          "original_expected": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:d4a6716dbb7890913a223c9e1f67f25a4d4e9d0a5be24adc3070a7335f4640d1",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 709,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/variant_ids.json",
+          "original_expected": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:6b120d96b637489a3ca919726fd377f2f6823794604f619756826f9a1f181986",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 260,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        },
+        {
+          "relative_path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/feature_registry.json",
+          "original_expected": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e",
+          "original_declared_convention": "raw_sha256",
+          "original_raw_sha256": "sha256:2422f2cd3ea9159a5585e1b018666f7fe74874f4b2d7427a92542345b0753c2e",
+          "original_status": "byte_match",
+          "original_embedded_canonical_digest": null,
+          "size_bytes": 9796,
+          "identity_reused_from_original_raw": true,
+          "successor_convention": "raw_sha256",
+          "successor_status": "byte_match"
+        }
+      ]
+    },
+    "A_rejudge": {
+      "check_id": "A_B_C_D_rejudge_existing_statistics",
+      "status": "passed",
+      "rescanned_price_or_residual_arrays": false,
+      "B": {
+        "passed": true,
+        "original_status": "passed",
+        "datahub_sample_status": "passed",
+        "datahub_required_exact_passed": true,
+        "clocks": {
+          "14:30": {
+            "history_ok": true,
+            "future_ok": true,
+            "evaluation_ok": true,
+            "labelled_inference_rows": 819842,
+            "evaluation_rows": 819842,
+            "clock_order_passed": true,
+            "passed": true
+          },
+          "14:45": {
+            "history_ok": true,
+            "future_ok": true,
+            "evaluation_ok": true,
+            "labelled_inference_rows": 819842,
+            "evaluation_rows": 819842,
+            "clock_order_passed": true,
+            "passed": true
+          }
+        }
+      },
+      "C": {
+        "C_1430": {
+          "history_ok": true,
+          "future_ok": true,
+          "passed": true,
+          "original_status": "passed"
+        },
+        "C_1445": {
+          "history_ok": true,
+          "future_ok": true,
+          "passed": true,
+          "original_status": "passed"
+        }
+      },
+      "D_full_reference_only": {
+        "D_1430": {
+          "passed": true,
+          "original_status": "passed",
+          "prefix": [
+            {
+              "family": "industry",
+              "prefix_stable": true,
+              "stored_ok": true,
+              "passed": true
+            },
+            {
+              "family": "market",
+              "prefix_stable": true,
+              "stored_ok": true,
+              "passed": true
+            },
+            {
+              "family": "size",
+              "prefix_stable": true,
+              "stored_ok": true,
+              "passed": true
+            }
+          ]
+        },
+        "D_1445": {
+          "passed": true,
+          "original_status": "passed",
+          "prefix": [
+            {
+              "family": "industry",
+              "prefix_stable": true,
+              "stored_ok": true,
+              "passed": true
+            },
+            {
+              "family": "market",
+              "prefix_stable": true,
+              "stored_ok": true,
+              "passed": true
+            },
+            {
+              "family": "size",
+              "prefix_stable": true,
+              "stored_ok": true,
+              "passed": true
+            }
+          ]
+        }
+      },
+      "note": "Rejudged published v1 statistics with G2–G5 parent gates. D here remains the original full_reference prefix, not the K1 consumed folds."
+    },
+    "B_1430": {
+      "check_id": "B_k1_consumed_1430",
+      "clock": "14:30",
+      "status": "passed",
+      "tolerance": {
+        "atol": 1e-06,
+        "rtol": 1e-05
+      },
+      "coverage": {
+        "consumed_variants": [
+          "crossfit_fold_0",
+          "crossfit_fold_1",
+          "crossfit_fold_2",
+          "crossfit_fold_3",
+          "crossfit_fold_4"
+        ],
+        "factor_ids": [
+          "orthogonal_market_cloudridge_v1",
+          "orthogonal_size_small_minus_large_v1",
+          "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "L1_FACTOR_CORE:l1_efc230548b31f923"
+        ],
+        "prefix_combinations_checked": 70,
+        "uncovered": [],
+        "selection_years_consumed": [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020
+        ],
+        "fresh_oos_claimed": false,
+        "state_value_check_separated_from_tool_selection_clock": true
+      },
+      "mapping": {
+        "assemble_inputs_variant_index": "symbol_position % 5 + 1",
+        "variant_ids": [
+          "full_reference",
+          "crossfit_fold_0",
+          "crossfit_fold_1",
+          "crossfit_fold_2",
+          "crossfit_fold_3",
+          "crossfit_fold_4"
+        ],
+        "full_reference_index": 0,
+        "consumed_variant_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "consumed_variant_ids": [
+          "crossfit_fold_0",
+          "crossfit_fold_1",
+          "crossfit_fold_2",
+          "crossfit_fold_3",
+          "crossfit_fold_4"
+        ],
+        "full_reference_consumed_by_k1": false,
+        "ot3_enters_k1_features": false,
+        "ot3_role": "P6.1 lineage lists strictly_prior_OT3_feature_support as a P6.1 inference filter. K1 materialize_store reads OT1 residuals/exposures and OT2 selected states only; OT3 transport is a bypass for this K1."
+      },
+      "store_identity_vs_ot_rebuild": {
+        "state_values": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "state_available": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "stock_factor_exposures": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_reliability": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_available": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        }
+      },
+      "store_identity_passed": true,
+      "consumed_variant_prefix": [
+        {
+          "variant": "crossfit_fold_0",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        }
+      ],
+      "consumed_variant_prefix_passed": true,
+      "assemble_spots": [
+        {
+          "date": "2015-01-06",
+          "symbol": "000001",
+          "symbol_position": 0,
+          "variant_index": 1,
+          "variant_id": "crossfit_fold_0",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000002",
+          "symbol_position": 1,
+          "variant_index": 2,
+          "variant_id": "crossfit_fold_1",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000020",
+          "symbol_position": 14,
+          "variant_index": 5,
+          "variant_id": "crossfit_fold_4",
+          "inference_row_present": false,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": false
+        },
+        {
+          "date": "2020-12-31",
+          "symbol": "000004",
+          "symbol_position": 2,
+          "variant_index": 3,
+          "variant_id": "crossfit_fold_2",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        }
+      ],
+      "authority": "selection_is_consumed_development_material_not_fresh_oos"
+    },
+    "B_1445": {
+      "check_id": "B_k1_consumed_1445",
+      "clock": "14:45",
+      "status": "passed",
+      "tolerance": {
+        "atol": 1e-06,
+        "rtol": 1e-05
+      },
+      "coverage": {
+        "consumed_variants": [
+          "crossfit_fold_0",
+          "crossfit_fold_1",
+          "crossfit_fold_2",
+          "crossfit_fold_3",
+          "crossfit_fold_4"
+        ],
+        "factor_ids": [
+          "orthogonal_market_cloudridge_v1",
+          "orthogonal_size_small_minus_large_v1",
+          "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "L1_FACTOR_CORE:l1_efc230548b31f923"
+        ],
+        "prefix_combinations_checked": 70,
+        "uncovered": [],
+        "selection_years_consumed": [
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020
+        ],
+        "fresh_oos_claimed": false,
+        "state_value_check_separated_from_tool_selection_clock": true
+      },
+      "mapping": {
+        "assemble_inputs_variant_index": "symbol_position % 5 + 1",
+        "variant_ids": [
+          "full_reference",
+          "crossfit_fold_0",
+          "crossfit_fold_1",
+          "crossfit_fold_2",
+          "crossfit_fold_3",
+          "crossfit_fold_4"
+        ],
+        "full_reference_index": 0,
+        "consumed_variant_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "consumed_variant_ids": [
+          "crossfit_fold_0",
+          "crossfit_fold_1",
+          "crossfit_fold_2",
+          "crossfit_fold_3",
+          "crossfit_fold_4"
+        ],
+        "full_reference_consumed_by_k1": false,
+        "ot3_enters_k1_features": false,
+        "ot3_role": "P6.1 lineage lists strictly_prior_OT3_feature_support as a P6.1 inference filter. K1 materialize_store reads OT1 residuals/exposures and OT2 selected states only; OT3 transport is a bypass for this K1."
+      },
+      "store_identity_vs_ot_rebuild": {
+        "state_values": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "state_available": {
+          "compared": 286104,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "stock_factor_exposures": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_reliability": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        },
+        "exposure_available": {
+          "compared": 32556832,
+          "only_left_finite": 0,
+          "only_right_finite": 0,
+          "max_abs": 0.0,
+          "p99_abs": 0.0,
+          "violations": 0
+        }
+      },
+      "store_identity_passed": true,
+      "consumed_variant_prefix": [
+        {
+          "variant": "crossfit_fold_0",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_0",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_1",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_2",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_3",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "market",
+          "tool": "naked_residual_level_follow_control_v1",
+          "factor": "orthogonal_market_cloudridge_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 2168,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 3142,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "size",
+          "tool": "laplace_iir_mixed_bandpass",
+          "factor": "orthogonal_size_small_minus_large_v1",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1535,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2509,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_408d0d6311af6040",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_671d1224f30429fc",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        },
+        {
+          "variant": "crossfit_fold_4",
+          "family": "industry",
+          "tool": "causal_haar_wavelet_bandpass",
+          "factor": "L1_FACTOR_CORE:l1_efc230548b31f923",
+          "prefix_cutoff": "2016-12-31",
+          "prefix_vs_full": {
+            "compared": 1431,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "recomputed_vs_stored": {
+            "compared": 2405,
+            "only_left_finite": 0,
+            "only_right_finite": 0,
+            "max_abs": 0.0,
+            "p99_abs": 0.0,
+            "violations": 0
+          },
+          "passed": true
+        }
+      ],
+      "consumed_variant_prefix_passed": true,
+      "assemble_spots": [
+        {
+          "date": "2015-01-06",
+          "symbol": "000001",
+          "symbol_position": 0,
+          "variant_index": 1,
+          "variant_id": "crossfit_fold_0",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000002",
+          "symbol_position": 1,
+          "variant_index": 2,
+          "variant_id": "crossfit_fold_1",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        },
+        {
+          "date": "2018-01-08",
+          "symbol": "000020",
+          "symbol_position": 14,
+          "variant_index": 5,
+          "variant_id": "crossfit_fold_4",
+          "inference_row_present": false,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": false
+        },
+        {
+          "date": "2020-12-31",
+          "symbol": "000004",
+          "symbol_position": 2,
+          "variant_index": 3,
+          "variant_id": "crossfit_fold_2",
+          "inference_row_present": true,
+          "state_available": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "exposure_available_any": true
+        }
+      ],
+      "authority": "selection_is_consumed_development_material_not_fresh_oos"
+    },
+    "C_timestamp": {
+      "check_id": "C_timestamp_contract_evidence",
+      "status": "label_proxy_reproducible_event_availability_unverified",
+      "source_code": {
+        "p61": "/home/starryocean/桌面/量化/baylum terminal 0.4.1/factor_lab/src/factor_lab/factor_rotation/reaka_intraday_target_fill_v1.py",
+        "uses_timestamp_slice_11_16": true,
+        "afternoon_window": "13:00-15:00 inclusive",
+        "decision_rule": "time <= clock and finite positive close",
+        "entry_rule": "time > clock and time <= 15:00 and finite positive open"
+      },
+      "datahub_contract_ids_present_in_docs": [
+        "cn_a_session_end_label_no_noon_partial_v2",
+        "session_end_label_v2"
+      ],
+      "lineage_price_words": {
+        "decision_price": "last_raw_trade_close_between_1300_and_decision_clock_same_day",
+        "entry_fill": "first_raw_1m_bar_open_after_decision_clock_same_day",
+        "future_target_literal": "entry_open_t_plus_20_div_entry_open_t_minus_1",
+        "future_target_resolved_meaning": "(entry_open[t+20] / entry_open[t]) - 1"
+      },
+      "example": {
+        "status": "example_extracted",
+        "symbol": "000001",
+        "trading_day": "2009-01-07",
+        "raw_timestamp": "2009-01-07T14:30:00Z",
+        "suffix": "Z",
+        "p61_slice": "14:30",
+        "interpreted_as": "Asia/Shanghai session wall-clock spelling, Z is a suffix not a UTC conversion",
+        "decision_use_if_14_30": "select_clock_coordinates keeps close when time<=14:30; this 14:30 label is the decision close proxy",
+        "entry_open_is_later_bar": "first time>14:30 same day",
+        "available_at": "2026-05-04T15:28:00.747316+00:00",
+        "available_at_equals_timestamp": false
+      },
+      "distinctions": {
+        "bar_label": "end-label proxy inferred from 09:30-15:00, missing 13:00, present 13:01/15:00",
+        "close_first_readable": "not independently evidenced; no vendor publish/latency ledger",
+        "entry_open_event": "open of the first later labelled minute; not proven executable or later than order-send",
+        "available_at": "ingest/materialization time, not 2009-2020 knowledge time"
+      },
+      "event_availability": "not_verified",
+      "tradeability": "not_verified",
+      "timezone_proof_limit": "Existing 1m strings carry a Z suffix while HH:MM values fall on the CN-A session. P6.1 and the local auditor consume [11:16] as session wall clock. This is a conversion convention in current code, not a UTC-to-Shanghai transform receipt."
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schema_id": "factorlab.reaka_first_round_validation_receipt@1.0",
+  "data_commit": "2575f9e4d12289fa3916d14f27cb637908614fd9",
+  "audit_code_commit": "d6736155ba98d64b56c5f3a049d80110fd219e3f",
+  "final_code_commit": "149a6ce2d97a16c71056be41789008e51b37b673",
+  "upload_audit": {
+    "run_id": 34009032502,
+    "job_id": 101421446277,
+    "job_conclusion": "failure",
+    "exit_code": 2,
+    "meaning": "delivered original bytes passed; R2 blocked by missing upstream sources",
+    "artifact_id": 9981889698,
+    "artifact_zip_digest": "sha256:aa9b8a9a65770d7085154198a4198edef07283cacb75fb6747b930373fea6189",
+    "synthetic_tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "final_head_CI": {
+    "run_id": 34009445599,
+    "job_id": 101422563505,
+    "conclusion": "success",
+    "infrastructure_sources": 146,
+    "tests": 291,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "artifact_id": 9982006969,
+    "artifact_zip_digest": "sha256:f8b7557b5feb13841412375d1d3889e7b4eab8ca17d491eee8d5c12910bbcda7"
+  },
+  "final_merge_CI": {
+    "run_id": 34009447904,
+    "job_id": 101422569410,
+    "merge_snapshot": "c4856c22055ebbc1335219a3e263e994011176e8",
+    "conclusion": "failure",
+    "foundation_source_validation": "passed_146_files",
+    "tests_executed": false,
+    "collection_errors": 1,
+    "missing_module": "src/factor_lab/factor_rotation/reaka_intraday_target_fill_v1.py",
+    "artifact_id": 9982018726,
+    "artifact_zip_digest": "sha256:f9641b54bbac3732864df04657ab1d307c270033ae2f6a07c8ec1fa805c73bd0"
+  },
+  "intermediate_incidents": [
+    {
+      "commit": "d6736155ba98d64b56c5f3a049d80110fd219e3f",
+      "run_id": 34009034462,
+      "merge_snapshot": "aac61230eb32b9c393ffed9c578850df52d466fb",
+      "collection_errors": 3,
+      "cause": "repository scripts namespace missing in pytest path",
+      "resolved_by": "tests/conftest.py; repository-only test import path"
+    },
+    {
+      "commit": "f13f6e22fa32455cde02d68e10408562cb8797b6",
+      "run_ids": [
+        34009262870,
+        34009260926
+      ],
+      "cause": "attempted packaging import-path repair changed frozen pyproject bytes; strict V1.3 gate refused it",
+      "resolved_by": "restore exact original pyproject bytes; no old manifest resealing"
+    }
+  ],
+  "data_integrity_scope": "R1 original inputs/model physical bytes and 24 daily partitions, not all products in data/manifest.json",
+  "no_skipped_tests_hidden_as_acceptance": true,
+  "fresh_oos": false,
+  "scientific_acceptance": "not_established",
+  "financial_receipt_signed": false,
+  "PR_merged": false,
+  "files": {
+    "final_head/contract.json": "sha256:f7f072dd24b02be2eea718aef0a937a4672c531f73b9816f7a3706730657b924",
+    "final_head/tests.xml": "sha256:7a56f18bdae214b8d53925c77df34b711efe75443865079533e5b603cd707ad4",
+    "final_merge/contract.json": "sha256:f7f072dd24b02be2eea718aef0a937a4672c531f73b9816f7a3706730657b924",
+    "final_merge/tests.xml": "sha256:b5f68a1d3a24dacc5c6e243d5fa721d4f11d5f5604767ac2cf594650c6c992ca",
+    "foundation_head/contract.json": "sha256:f7f072dd24b02be2eea718aef0a937a4672c531f73b9816f7a3706730657b924",
+    "foundation_head/tests.xml": "sha256:d28d1114cf303d4fbf9a91dc74510626526e721cb71add62d903271254fc4e96",
+    "github_tree_snapshot.json": "sha256:e1144afd7eaacb4a3a8fdace293305b8823f692bcda01dddf94170b585e2f0fc",
+    "initial_merge_import_failure/contract.json": "sha256:f7f072dd24b02be2eea718aef0a937a4672c531f73b9816f7a3706730657b924",
+    "initial_merge_import_failure/tests.xml": "sha256:ff16db49f736b424a83310fd7f6be828099d77bd07b8383748cb8e8c589771a0",
+    "recovery_request.json": "sha256:2611b4377791dbdd7ccc070552687a7c72a5cc420faf45fa666127e8032adfcb",
+    "rework.md": "sha256:65638ca5551ff8aa5c7359406e27ea1deaa470fa5130d2ed04a825ad413b39ed",
+    "rework_result.json": "sha256:4aef290ffed031041be6fe6ef539dad10514899f1fc2deae44ba244cbb5f78c9",
+    "scope.md": "sha256:624c7b3e19316c99bf638d34ce7c1ea6d6c321c5ccb5daf6dc339dcc7b4a42cc",
+    "tests.xml": "sha256:450a8f3813b4b32956a7d7d168da7846625d01b125d5306c9d10a504cf8a7c41",
+    "upload_audit.json": "sha256:c33430af1e8c3934b5da7ec979a02e53f6d7ecbe699ee4834e712a74307c65ba"
+  }
+}

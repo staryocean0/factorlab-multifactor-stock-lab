@@ -1,0 +1,14 @@
+{
+  "train_batch_rows": 8,
+  "max_train_year": 2016,
+  "f_wrap_loss_gap": 0.0,
+  "f_wrap_latent_gap": 0.0,
+  "h_x_loss_gap": 0.0,
+  "h_x_latent_gap": 0.0,
+  "h_x_forecast_gap": 0.0,
+  "f_forecast_finite": true,
+  "passed": true,
+  "2017_metrics_read": false,
+  "clock": "1430",
+  "normalizer_digest": "sha256:0bbf62be5f9a8c25d3ba493d17acefe45cb6929c5092f42f2af02dcf29c04589"
+}

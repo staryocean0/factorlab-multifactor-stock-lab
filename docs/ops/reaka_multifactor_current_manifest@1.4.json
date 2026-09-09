@@ -1,0 +1,35 @@
+{
+  "schema_id": "factorlab.reaka_multifactor_current_manifest@1.4",
+  "scope": "repository_infrastructure_and_task_scoped_guidance",
+  "supersedes": "docs/ops/reaka_multifactor_current_manifest@1.3.json",
+  "historical_baseline_commit": "3a75376e1f7f871bb72e48f886c275919b3c9671",
+  "mission": "docs/ops/reaka_research_mission.md",
+  "semantics": "docs/ops/reaka_foundation_semantics@1.2.json",
+  "state": "docs/ops/research_state.json",
+  "workflow": "docs/user/reaka_multifactor_current_workflow_v1_4.md",
+  "whitepaper": "docs/ops/reaka_foundation_whitepaper_v1_4.md",
+  "audit": "docs/ops/infrastructure_audit_20260906.md",
+  "entrypoints": ["README.md", "AGENTS.md", "ai-readme.md", "docs/INDEX.md", "docs/user/cloud_execution_prompt.md", ".codex/skills/strategy-slice-rebuild/SKILL.md"],
+  "agent_interfaces": [".codex/skills/strategy-slice-rebuild/agents/openai.yaml", ".codex/skills/strategy-slice-rebuild/references/project-contract.md", ".codex/skills/strategy-slice-rebuild/references/post-training-account-audit.md"],
+  "reading_routes": {
+    "takeover": ["docs/ops/reaka_research_mission.md", "AGENTS.md", "docs/user/reaka_multifactor_current_workflow_v1_4.md", "docs/ops/research_state.json"],
+    "mathematical_change": ["docs/ops/reaka_research_mission.md", "docs/ops/reaka_foundation_whitepaper_v1_4.md", "docs/ops/reaka_foundation_semantics@1.2.json"],
+    "historical_reproduction": ["docs/ops/reaka_research_mission.md", "cloud_results/first_round_rework_20260906/rework.md", "cloud_results/first_round_rework_20260906/recovery_request.json"]
+  },
+  "implementation": ["src/factor_lab/governance/reaka_infrastructure_v1_4.py", "src/factor_lab/governance/reaka_historical_snapshot.py", "scripts/validate_reaka_foundation.py", "scripts/run_infrastructure_tests.py", "scripts/validate_theme_package.py"],
+  "tests": ["tests/unit/test_reaka_infrastructure_v1_4.py", "tests/unit/test_reaka_foundation_contract.py", "tests/test_theme_boundaries.py"],
+  "ci": [".github/workflows/ci.yml", ".github/workflows/foundation-audit.yml"],
+  "components": {
+    "financial_residual": ["src/factor_lab/factor_rotation/reaka_financial_residual.py", "tests/unit/test_reaka_financial_residual.py"],
+    "paper_model": ["src/factor_lab/factor_rotation/reaka_paper_v1.py", "tests/unit/test_reaka_paper_math_contract.py"],
+    "residual_evidence": ["src/factor_lab/governance/reaka_residual_certificate.py", "tests/unit/test_reaka_residual_certificate.py", "tests/unit/test_reaka_stage6_health_estimand.py"],
+    "stage4_attribution": ["src/factor_lab/factor_rotation/reaka_v2_stage4_observable_factor_pairing_v1.py", "tests/unit/test_reaka_v2_stage4_observable_factor_pairing_v1.py"],
+    "r1_byte_audit": ["src/factor_lab/governance/reaka_r1_upload_audit.py", "scripts/audit_reaka_r1_uploads.py", "tests/unit/test_reaka_r1_upload_audit.py"],
+    "bounded_local_source_inventory": ["scripts/reaka_local_source_receipt.py", "tests/unit/test_reaka_local_source_receipt.py"]
+  },
+  "change_identity": "git_commit_for_live_sources_and_input_source_digests_for_empirical_run_receipts",
+  "blocker_policy": "dependency_scoped_not_global_stage_order_except_mission_phase_I_before_phase_II",
+  "historical_package_flags": "Old package_scope permissions describe the delivered snapshot, not a blanket research ban; data use and redistribution constraints remain relevant.",
+  "production_authority": false,
+  "local_factorlab_pointer_authority": false
+}

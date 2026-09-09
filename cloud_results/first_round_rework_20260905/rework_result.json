@@ -1,0 +1,225 @@
+{
+  "schema_id": "factorlab.reaka_first_round_necessary_rework@1.0",
+  "status": "blocked_at_original_input_and_model_lineage",
+  "authorization": "user_requested_necessary_first_round_rework_and_stop_at_data_blocker",
+  "replay_scope": "frozen_remote_metadata_and_existing_current_foundation",
+  "repository_snapshot_commit": "bff98222398d87391b405e03fcca9dbbfdc2894f",
+  "repository_snapshot_tree": "20d3f18ec2b3ef406817176ca515e9c42cdccec0",
+  "foundation_code_head": "3c8c3658a842b327a76523039f30b64240793ba3",
+  "foundation_consistency": {
+    "schema_id": "factorlab.reaka_foundation_validation@1.0",
+    "current_manifest": "docs/ops/reaka_multifactor_current_manifest@1.3.json",
+    "infrastructure_consistency": "passed",
+    "checked_source_files": 146,
+    "errors": [],
+    "data_readiness": "not_evaluated",
+    "historical_evidence_readiness": "blocked",
+    "scientific_acceptance": "not_established",
+    "research_execution_allowed": false,
+    "production_authority": false
+  },
+  "incumbent": {
+    "strategy_id": "REAKA_D5_H20_R5_CURRENT_GENERATION_V1",
+    "model_identity": "d8-h8-K1-r0_fit_prefix_successor_incumbent",
+    "account_policy_id": "N30_equal_backfill_unconstrained",
+    "decision_clocks": [
+      "14:30",
+      "14:45"
+    ],
+    "identity_evidence": "mutually_bound_historical_metadata_not_loaded_checkpoint",
+    "latent_residual_mode": "r0_no_latent_residual_correction_network",
+    "financial_residual_input": "shipped_K1_assembler_reads_epsilon_history_and_targets_epsilon_future",
+    "actual_checkpoint_input_binding_verified": false
+  },
+  "completed_documentary_rework": [
+    "preserve_financial_product_and_three_factor_candidate_identities_without_claiming_revalidated_effectiveness",
+    "separate_financial_epsilon_prediction_from_latent_residual_correction_r0",
+    "do_not_force_incumbent_retraining_because_unrelated_MLP_or_DDPM_evidence_failed",
+    "do_not_substitute_old_d8_K2_material_for_current_d8_h8_K1_r0",
+    "realized_attribution_or_positive_selected_return_does_not_establish_incremental_prediction",
+    "round2_CloudRidge_context_pairing_is_not_a_mandatory_first_round_retraining_step"
+  ],
+  "step_ledger": [
+    {
+      "step": "R0_financial_and_incumbent_semantics",
+      "status": "documentary_rework_completed"
+    },
+    {
+      "step": "R1_original_inputs_contract_and_checkpoint_binding",
+      "status": "blocked_at_original_input_and_model_lineage",
+      "resume_here": true,
+      "earlier_years_only_does_not_resolve_missing_intraday_inputs": true
+    },
+    {
+      "step": "R2_PIT_horizon_factor_effectiveness_reverification",
+      "status": "not_executed_dependency_R1",
+      "rerun_rule": "only_inputs_or_evidence_affected_by_verified_identity_timing_or_estimand_defect"
+    },
+    {
+      "step": "R3_capacity_and_residual_admission",
+      "status": "not_executed_dependency_R1_R2",
+      "rerun_rule": "readjudicate_affected_evidence_first_retrain_only_if_necessary_no_guaranteed_K2_or_residual"
+    },
+    {
+      "step": "R4_scores_accounts_and_attribution",
+      "status": "not_executed_dependency_upstream",
+      "rerun_rule": "reuse_same_identity_scores_and_snapshots_if_verified_new_aggregation_only_when_sufficient"
+    }
+  ],
+  "required_initial_input_inventory": [
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1430/manifest.json",
+      "expected_file_digest": "sha256:7b8050270c72894ff2e6c67f1fb4a5a5513ca46e8cc0b8c02ed7e0ce3523dfd3",
+      "present_in_snapshot": false
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_K1_input_v1_2009_2020/formal/1445/manifest.json",
+      "expected_file_digest": "sha256:e979fce98e3a6e67f6e5b2bef2701f100d2b174fcdef4539e417ba3aa0c9a7e7",
+      "present_in_snapshot": false
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1430.parquet",
+      "expected_file_digest": "sha256:7ad9472f307b560d1a4474b18926c09fb23f9cd5645178dcc2b5ce1f315d883d",
+      "present_in_snapshot": false
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/bounded_score_panel_1445.parquet",
+      "expected_file_digest": "sha256:29c64330a3f65ef35430ac6ab23634f12896e7d8aecbb5f8c1c581b0b837e864",
+      "present_in_snapshot": false
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1430.parquet",
+      "expected_file_digest": "sha256:6652efb41bb9a0748c6c5b20b23f6f0a674ac21ed3ccc42a92ee6971cbec138c",
+      "present_in_snapshot": false
+    },
+    {
+      "path": "output/factor-rotation/reaka_intraday_portfolio_mapping_inputs_v2_2011_2020/formal/daily_market_panel_1445.parquet",
+      "expected_file_digest": "sha256:25f7f5e812d6e3e17e05e281b905f4ab219bca2cb06b9b4eb4711cd073bc96d2",
+      "present_in_snapshot": false
+    }
+  ],
+  "missing_initial_input_count": 6,
+  "required_ledger_contract": {
+    "path": "docs/ops/reaka_current_k1_account_ledgers@1.5.json",
+    "expected_canonical_digest": "sha256:b2a7b1509fc64303ee7c72aac90db2b4f1e3a386b70b27f18c5a42e681c227b7",
+    "present_in_snapshot": false
+  },
+  "missing_recorded_source_closure": [
+    {
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.0.json",
+      "expected_file_digest": "sha256:3fadcd7f701c23b6a9f3897014b3419b8b86585bf9a1c88ff1c7ab65f2740e9c"
+    },
+    {
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.1.json",
+      "expected_file_digest": "sha256:061140a5c7f9aa463ff31a991f487094cd15479b7d83bf2bc9a734bdf9a8fc4c"
+    },
+    {
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.2.json",
+      "expected_file_digest": "sha256:dbe7675fea9a6dbf7617b4055b879fc9888e4ba42f3d7f1a60bbf8434aabdb5c"
+    },
+    {
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.3.json",
+      "expected_file_digest": "sha256:d661a764872cb4bd9cceab52e30f1185c53d1f42a978b23c23c07026cc2e1204"
+    },
+    {
+      "path": "docs/ops/reaka_current_k1_account_ledgers@1.4.json",
+      "expected_file_digest": "sha256:91a8e60d99ba2cf74bdfe640ee71e8c5cd1c0d7cce8913be418d9fa689b2cb67"
+    },
+    {
+      "path": "docs/ops/reaka_current_k1_account_ledgers_whitepaper.md",
+      "expected_file_digest": "sha256:54fd7921ab6bc1a5052a91d2016af58afc954a91d52ca79a9a71b899b82b1f84"
+    },
+    {
+      "path": "docs/user/reaka_current_k1_account_ledgers_workflow.md",
+      "expected_file_digest": "sha256:cbc268a99d9bfcece5a8c64aac3aafded6b14acef316be69c594354666875aa2"
+    },
+    {
+      "path": "scripts/factor_rotation/finalize_reaka_current_k1_account_ledgers_v1.py",
+      "expected_file_digest": "sha256:5cdc40bb63b31345564ebafaadd7e44857e9c312f8c38688325fc85a406e0738"
+    },
+    {
+      "path": "scripts/factor_rotation/run_reaka_current_k1_account_ledgers_v1.py",
+      "expected_file_digest": "sha256:2e7c7702114546cd37b3fd04a47d7869527b093af7dea772a5648f2de7344d5b"
+    },
+    {
+      "path": "scripts/factor_rotation/validate_reaka_current_k1_account_ledgers_v1.py",
+      "expected_file_digest": "sha256:8421bc2cda388bb3cbdca620c7eb1878c1235bd9a8b496583e5baf1878485581"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_gpu_v2.py",
+      "expected_file_digest": "sha256:03d96028d7781eaa8be1532e2b53f20186bbf27a18637e54fbbe09513ec9a77b"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_generation_aggregate_blackbox_v1.py",
+      "expected_file_digest": "sha256:80850973f75d2fda015f29dfb8b3e2e1f4c709eea4766c9db4f615963f7e5f73"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_account_ledgers_v1.py",
+      "expected_file_digest": "sha256:bf97a470c28d52379a2bce9abbdb25b058c9727c38ee748813e2afe0dd9373c1"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v1.py",
+      "expected_file_digest": "sha256:ae4da76b15ebdf5748091520190fbb41aabcf21a05414130fbfcc8402c7e97ea"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_factor_attribution_v2.py",
+      "expected_file_digest": "sha256:7b1189a0b1a5d4da46e3620f7fb2463f6f22e34920bb76e295c0e89e57064802"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_post2020_annual_four_group_blackbox_v1.py",
+      "expected_file_digest": "sha256:500bbed57eb90c5315b646d37131406e0b7b4bd7151dc42a3dbb96392e7335e3"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_current_k1_transaction_pnl_attribution_v1.py",
+      "expected_file_digest": "sha256:35db453e7163e852b75b63f5bd89a1e91c04e808ac40c881e5a0c96b9b9e3c78"
+    },
+    {
+      "path": "tests/unit/test_reaka_current_k1_account_ledgers_v1.py",
+      "expected_file_digest": "sha256:bf7c00f363cd3b6086f51d1e5983f73fd9f274755462fda9f4956166c2296a60"
+    }
+  ],
+  "checkpoint_recovery": "No checkpoint path is established by the shipped current receipt; recover original input/fit manifests and their linked checkpoint, frozen configuration and training receipts. A model name or score digest alone is insufficient.",
+  "pending_daily_upload_files": [
+    "data/development/cn_a_qfq_daily/year=2023/09.parquet",
+    "data/development/cn_a_qfq_daily/year=2023/10.parquet",
+    "data/development/cn_a_qfq_daily/year=2023/11.parquet",
+    "data/development/cn_a_qfq_daily/year=2023/12.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/01.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/02.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/03.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/04.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/05.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/06.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/07.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/08.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/09.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/10.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/11.parquet",
+    "data/development/cn_a_qfq_daily/year=2024/12.parquet"
+  ],
+  "daily_presence_is_not_content_or_PIT_verification": true,
+  "daily_completion_alone_resolves_current_blocker": false,
+  "recovery_inventory_is_initial_not_guaranteed_complete": true,
+  "restoration_rule": "verify_expected_bytes_or_register_a_new_causal_rebuild_preserve_original_receipts_do_not_proxy_intraday_with_daily_close",
+  "source_file_digests": {
+    "docs/ops/evidence/reaka_current_k1_account_ledgers_v1_20260902/current.json": "sha256:c476030ae7a006f74adc7c64b7dd9c71355d82ea44c62882a2eac640d3ab03f8",
+    "output/factor-rotation/reaka_current_k1_account_ledgers_v1_2011_2026/formal/execution_receipt.json": "sha256:2b7ed0ed985dbd5b672347b60500ac7e238d3a9ed9d31e8322c808792e37cce5",
+    "output/factor-rotation/reaka_current_k1_account_ledgers_v1_2011_2026/formal/result.json": "sha256:420ca48d4e5a2052832ae500699773d7378461b63422ffea20e112442e858faf",
+    "src/factor_lab/factor_rotation/reaka_intraday_k1_preflight_v1.py": "sha256:e81fa60ccc6b381595df6f982ad4ad7856426b3ceed8df31e67871108b307948",
+    "docs/ops/reaka_foundation_semantics@1.1.json": "sha256:a600264be9389a9ad24877d7314418eb147fb826aef609c2dc0f5056dc295da0",
+    "docs/ops/reaka_multifactor_current_manifest@1.3.json": "sha256:9607d3df4db7d48509cc2715e4b2bf04b9582c0f3bbee65d2167bd4d4894472d"
+  },
+  "snapshot_file_digest": "sha256:126e662cd3b395fa709f8f4d6ae6acdd0efa2dc6876ca0ac4c3a45309c09cf13",
+  "replay_script_digest": "sha256:476361a2b52556290d19e8b854cb58f6dddeb11d8288f140a4aaf29c46626406",
+  "market_rows_read": 0,
+  "model_fits": 0,
+  "capacity_candidates_tested": 0,
+  "accounts_replayed": 0,
+  "old_results_rewritten": false,
+  "new_economic_results": false,
+  "data_boundary": "2007_2008_warmup_2009_2025_declared_roles_no_2026_rows",
+  "fresh_oos": false,
+  "scientific_acceptance": "not_established",
+  "production_authority": false,
+  "canonical_digest": "sha256:1e3a191fd0e43ccaf69a9046073faaf2894e473e3260edd00bc948b1603899e3"
+}

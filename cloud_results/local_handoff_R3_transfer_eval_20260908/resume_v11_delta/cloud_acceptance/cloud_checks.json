@@ -1,0 +1,79 @@
+{
+  "schema_id": "factorlab.r3_transfer_eval_cloud_acceptance@1.0",
+  "task_id": "LCL-R3-TRANSFER-EVAL-20260908-01",
+  "review_date": "2026-09-08",
+  "local_result_commit": "a1ee98a986b372c7181d5f0013ed9b4a139d4ede",
+  "local_execution_base": "ec714cfda9ced07ca36582e7138b5ed4c1a851c4",
+  "decision": "completed_with_limits",
+  "targeted_tests": {
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "preflight": {
+    "schema_id": "factorlab.r3_transfer_score_preflight@1.1",
+    "pairs_checked": 24,
+    "comparison_rows_per_pair": 64,
+    "archived_batch_geometry_preserved": true,
+    "batch_size": 4096,
+    "historical_batches_per_pair": 64,
+    "context_rows_per_pair": 260990,
+    "max_abs_error_all_pairs": 0.0,
+    "atol": 1e-7,
+    "new_period_score_jobs": 0,
+    "outcome_values_read": 0
+  },
+  "formal_run": {
+    "status": "completed_consumed_historical_transfer",
+    "score_jobs": 24,
+    "score_receipts_observed_in_commit_diff": 24,
+    "score_rows_per_job": 931677,
+    "target_values_read_per_worker": 0,
+    "label_path_received_by_worker": false,
+    "new_model_fits": 0,
+    "checkpoint_selection": 0,
+    "labels_opened_after_all_score_jobs": true,
+    "evaluation_rows_per_clock": 914934,
+    "evaluation_days": 238
+  },
+  "primary": {
+    "F_minus_STATE_VALUE_PLUS_E": {
+      "mean": 0.005307745671817133,
+      "median": 0.00697726150060805,
+      "win_days": 149,
+      "loss_days": 89,
+      "block4": [-0.0033328471883997653, 0.013810389776097208],
+      "block8": [-0.0039554627402847405, 0.015222010038309216],
+      "block12": [-0.004920318959656801, 0.015309921071389768],
+      "interpretation": "positive_point_estimate_but_not_block_stable_algorithm_path_only"
+    },
+    "BETA_RELIABILITY_minus_BETA_ONLY": {
+      "mean": 0.0064301572928477015,
+      "median": 0.005815130231243775,
+      "win_days": 153,
+      "loss_days": 85,
+      "block4": [0.0032613852170230427, 0.009573838710406095],
+      "block8": [0.0031994016133545613, 0.010220078930576313],
+      "block12": [0.003296001762473256, 0.010692347191676463],
+      "all_combined_year_means_positive": true,
+      "interpretation": "stable_positive_ordered_algorithm_increment_in_consumed_historical_transfer"
+    }
+  },
+  "secondary": {
+    "decile_F_minus_STATE_VALUE_PLUS_E": 0.00100237777016946,
+    "decile_BETA_RELIABILITY_minus_BETA_ONLY": 0.001296646672001811,
+    "top30_F_minus_STATE_VALUE_PLUS_E": 0.006872755719981927,
+    "top30_BETA_RELIABILITY_minus_BETA_ONLY": 0.0045928576274018576
+  },
+  "new_training": 0,
+  "normalizer_refit": 0,
+  "DMD_reinit": 0,
+  "contains_2026_target": false,
+  "actions_invoked": false,
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false,
+  "cloud_full_score_arrays_recomputed": false,
+  "scope": "Local real-model execution plus cloud review of source identities, preflight receipt, 24 score receipts presence, run logs, and published aggregate statistics."
+}

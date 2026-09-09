@@ -1,0 +1,2 @@
+tests/unit/test_reaka_r3_transfer_sidecar_v1_1.py + evaluation + score_preflight
+summary: tests=23 failures=0 errors=0 skipped=0 exit=0

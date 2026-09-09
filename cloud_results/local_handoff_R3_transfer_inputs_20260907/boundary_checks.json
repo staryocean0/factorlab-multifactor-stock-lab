@@ -1,0 +1,236 @@
+{
+  "schema_id": "factorlab.r3_transfer_boundary_delta@1.0",
+  "task_id": "LCL-R3-TRANSFER-INPUT-20260907-01",
+  "status": "boundary_delta_complete_no_array_rewrite",
+  "original_source_bundles_untouched": true,
+  "original_run01_untouched": true,
+  "new_model_fits": 0,
+  "new_inference": 0,
+  "checkpoint_reload": 0,
+  "full_bridge_rerun": false,
+  "B2_membership": {
+    "original_code_read_full_files_then_cutoff": true,
+    "did_not_slice_5894_residual_product": true,
+    "did_not_reread_2026_membership_as_a_new_scientific_pass": true,
+    "cloudridge": {
+      "source_name": "append_only_cloudridge_2008_2026.csv",
+      "rows_after_full_file_read": 2168383,
+      "rows_asof_before_2026": 2024789,
+      "rows_discarded_because_asof_ge_2026": 143594,
+      "rows_mapped_to_incumbent_3982": 1790492,
+      "missing_dates": 0,
+      "effective_le_asof_violations": 0,
+      "used_asof_min": "2008-01-04 00:00:00",
+      "used_asof_max": "2025-12-31 00:00:00",
+      "used_effective_min": "2008-01-07 00:00:00",
+      "used_effective_max": "2026-01-05 00:00:00",
+      "forward_effective_ok": true
+    },
+    "core": {
+      "source_name": "condensation_extended_weekly_membership.parquet",
+      "rows_after_full_file_read": 1308602,
+      "rows_asof_before_2026": 1256522,
+      "rows_discarded_because_asof_ge_2026": 52080,
+      "rows_mapped_to_incumbent_3982": 1217859,
+      "missing_dates": 0,
+      "effective_le_asof_violations": 0,
+      "used_asof_min": "2009-10-21 00:00:00",
+      "used_asof_max": "2025-12-29 00:00:00",
+      "used_effective_min": "2009-10-22 00:00:00",
+      "used_effective_max": "2025-12-30 00:00:00",
+      "forward_effective_ok": true
+    },
+    "core_target_filter": [
+      "L1_FACTOR_CORE:l1_00f8ac0c9ce5e459",
+      "L1_FACTOR_CORE:l1_07f2a0dc7dbde80d",
+      "L1_FACTOR_CORE:l1_408d0d6311af6040",
+      "L1_FACTOR_CORE:l1_4ac3c9b73baec63e",
+      "L1_FACTOR_CORE:l1_671d1224f30429fc",
+      "L1_FACTOR_CORE:l1_792b96c3abe50a27",
+      "L1_FACTOR_CORE:l1_8984213af3aad2b9",
+      "L1_FACTOR_CORE:l1_a516c6bc2d3979ea",
+      "L1_FACTOR_CORE:l1_bb44b83305bab23e",
+      "L1_FACTOR_CORE:l1_c585e6a9618ffc2d",
+      "L1_FACTOR_CORE:l1_da4f5eec4bc36484",
+      "L1_FACTOR_CORE:l1_efc230548b31f923",
+      "SIZE_FACTOR_CORE:LARGE",
+      "SIZE_FACTOR_CORE:SMALL"
+    ],
+    "PIT_certified": false,
+    "any_timing_violation_on_used_snapshot": false
+  },
+  "clocks": {
+    "1430": {
+      "B1_state_tail": {
+        "tail_cells": 101808,
+        "tail_finite": 101808,
+        "tail_nonfinite": 0,
+        "nonfinite_by_factor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nonfinite_by_variant": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "all_tail_finite": true,
+        "day_position_reset_does_not_change_trading_day_sort": true,
+        "state_rebuild_required": false,
+        "helper_note": "family_tool_state already NaNs missing log_level/returns; extra NaN calendar rows would change IIR/rolling support only if present. build_selected_states sorts trading_day, not day_position."
+      },
+      "B3_seam": {
+        "last_old_d5_index": 3405,
+        "last_old_d5_date": "2020-12-31",
+        "copied_prefix_not_used_as_independent_replay": true,
+        "recomputed_support": "prefix_calendar_only_plus_single_D5_OLS_window_day-120_to_day",
+        "factor_basis_at_last_d5": {
+          "shape_match": true,
+          "cells": 84,
+          "both_finite": 84,
+          "support_equal": true,
+          "max_abs_diff_finite": 6.938893903907228e-17,
+          "exact": false
+        },
+        "beta": {
+          "shape_match": true,
+          "cells": 55748,
+          "both_finite": 55748,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "reliability": {
+          "shape_match": true,
+          "cells": 55748,
+          "both_finite": 55748,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "available": {
+          "shape_match": true,
+          "cells": 55748,
+          "both_finite": 55748,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "epsilon_at_last_d5": {
+          "shape_match": true,
+          "cells": 3982,
+          "both_finite": 3662,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "ols_decision_points_this_check": 1,
+        "basis_projection_days_this_check": 4498
+      }
+    },
+    "1445": {
+      "B1_state_tail": {
+        "tail_cells": 101808,
+        "tail_finite": 101808,
+        "tail_nonfinite": 0,
+        "nonfinite_by_factor": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nonfinite_by_variant": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "all_tail_finite": true,
+        "day_position_reset_does_not_change_trading_day_sort": true,
+        "state_rebuild_required": false,
+        "helper_note": "family_tool_state already NaNs missing log_level/returns; extra NaN calendar rows would change IIR/rolling support only if present. build_selected_states sorts trading_day, not day_position."
+      },
+      "B3_seam": {
+        "last_old_d5_index": 3405,
+        "last_old_d5_date": "2020-12-31",
+        "copied_prefix_not_used_as_independent_replay": true,
+        "recomputed_support": "prefix_calendar_only_plus_single_D5_OLS_window_day-120_to_day",
+        "factor_basis_at_last_d5": {
+          "shape_match": true,
+          "cells": 84,
+          "both_finite": 84,
+          "support_equal": true,
+          "max_abs_diff_finite": 9.020562075079397e-17,
+          "exact": false
+        },
+        "beta": {
+          "shape_match": true,
+          "cells": 55748,
+          "both_finite": 55748,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "reliability": {
+          "shape_match": true,
+          "cells": 55748,
+          "both_finite": 55748,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "available": {
+          "shape_match": true,
+          "cells": 55748,
+          "both_finite": 55748,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "epsilon_at_last_d5": {
+          "shape_match": true,
+          "cells": 3982,
+          "both_finite": 3662,
+          "support_equal": true,
+          "max_abs_diff_finite": 0.0,
+          "exact": true
+        },
+        "ols_decision_points_this_check": 1,
+        "basis_projection_days_this_check": 4498
+      }
+    }
+  },
+  "state_rebuild_required": false,
+  "seam_all_exact": false,
+  "basis_projection_scope_note": "Original bridge already ran build_causal_basis_pair over the full 4618-day extended calendar per clock; this delta recomputed that projection only as an inspection cache, plus 1 D5 OLS per clock. The previously reported 486 counts only stock-exposure refresh points.",
+  "PIT_certified": false,
+  "fresh_oos": false,
+  "production_authority": false
+}

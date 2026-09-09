@@ -1,0 +1,71 @@
+{
+  "schema_id": "factorlab.r3_transfer_inputs_cloud_final_checks@1.0",
+  "task_id": "LCL-R3-TRANSFER-INPUT-20260907-01",
+  "reviewed_delta_commit": "3ea55e503296761233f992b97ca4ae7decbaf349",
+  "accepted": true,
+  "status": "completed_with_limits",
+  "execution": {
+    "delta_tests": 71,
+    "delta_test_failures": 0,
+    "new_model_fits": 0,
+    "new_inference": 0,
+    "checkpoint_reload": 0,
+    "full_bridge_rerun": false,
+    "original_source_bundles_untouched": true,
+    "original_run01_untouched": true,
+    "actions_runs_on_delta_commit": 0
+  },
+  "B1": {
+    "tail_cells_per_clock": 101808,
+    "tail_nonfinite_per_clock": 0,
+    "all_tail_finite": true,
+    "original_build_selected_states_uses_trading_day_not_day_position": true,
+    "state_rebuild_required": false
+  },
+  "B2": {
+    "cloudridge_rows_read": 2168383,
+    "cloudridge_rows_asof_before_2026": 2024789,
+    "cloudridge_rows_discarded_asof_ge_2026": 143594,
+    "cloudridge_rows_mapped_to_3982": 1790492,
+    "cloudridge_effective_le_asof_violations": 0,
+    "core_rows_read_after_target_filter": 1308602,
+    "core_rows_asof_before_2026": 1256522,
+    "core_rows_discarded_asof_ge_2026": 52080,
+    "core_rows_mapped_to_3982": 1217859,
+    "core_effective_le_asof_violations": 0,
+    "physical_read_touched_files_containing_2026_rows": true,
+    "used_snapshot_forward_effective_ok": true,
+    "historical_arrival_time_certified": false
+  },
+  "B3": {
+    "last_old_d5_index": 3405,
+    "last_old_d5_date": "2020-12-31",
+    "basis_cells_per_clock": 84,
+    "basis_support_equal": true,
+    "basis_max_abs_diff_1430": 6.938893903907228e-17,
+    "basis_max_abs_diff_1445": 9.020562075079397e-17,
+    "beta_cells_per_clock": 55748,
+    "beta_exact": true,
+    "reliability_exact": true,
+    "available_exact": true,
+    "epsilon_finite_cells_per_clock": 3662,
+    "epsilon_support_equal": true,
+    "epsilon_exact": true,
+    "array_rewrite_required": false
+  },
+  "transfer_input": {
+    "calendar_end": "2025-12-31",
+    "symbol_count": 3982,
+    "factor_count": 14,
+    "feature_dim": 71,
+    "new_d5_days": 242,
+    "prediction_rows": 931677,
+    "maturity_eligible_rows": 916077,
+    "historical_prefix_origin": "reused_accepted_arrays",
+    "same_definition_tail_accepted_with_limits": true,
+    "model_scoring_may_proceed_after_label_sidecar_and_fresh_reload_wiring": true
+  },
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "production_authority": false
+}

@@ -1,0 +1,187 @@
+{
+  "schema_id": "factorlab.old_strategy_identity_manifest@0.1",
+  "task_id": "P2-OLDSTRAT-ID-CLOUD-RECOVERY-20260909-01",
+  "repository": "staryocean0/factorlab-multifactor-stock-lab",
+  "branch": "codex/reaka-foundation-audit-20260905",
+  "evidence_head": "6dcc482f01e9c5173ce8b734c39033c6c248f4ca",
+  "status": "partial_cloud_recovery_canonical_executable_identity_unresolved",
+  "scope": "cloud_repository_artifact_registry_history_extraction_only",
+  "authority_boundary": {
+    "canonical_old_policy_uniquely_resolved": false,
+    "fresh_oos": false,
+    "production_authority": false,
+    "training_runs": 0,
+    "new_inference_runs": 0,
+    "new_strategy_backtests": 0,
+    "selection_from_consumed_results": false
+  },
+  "canonical_policy": {
+    "policy_id": null,
+    "version": null,
+    "name": null,
+    "status": "unresolved_in_cloud_repo",
+    "authority_evidence_status": "missing_user_or_local_pointer_source_config_manifest_identity",
+    "forbidden_inference": "do_not_choose_V5_or_any_other_candidate_from_historical_performance"
+  },
+  "lineage": {
+    "common_root": {
+      "name": "V4",
+      "relationship_status": "confirmed_common_root",
+      "exact_implementation_path": null,
+      "exact_version": null,
+      "sha256": null,
+      "identity_status": "exact_executable_root_unresolved"
+    },
+    "branches": {
+      "V5": "parallel_branch_from_V4_not_parent_of_V6_or_old_V7",
+      "V6": "parallel_branch_from_V4_historical_negative_evidence",
+      "old_V7": "parallel_branch_from_V4_but_contaminated_by_reselecting_V5_behavior",
+      "parallel_annual_clean_room_a12": "clean_parallel_replacement_branch_final_2020_rebuild_selected_common_root_no_incremental_successor"
+    },
+    "v6_repeat_audit": {
+      "account_relation": "account_equivalent_to_V2",
+      "relative_to_V5": "below_V5",
+      "evidence_role": "consumed_repeat_audit_only_not_canonical_policy_authority"
+    }
+  },
+  "financial_target": {
+    "phase2_semantic_baseline_objective": "fully_invested_active_long_A_share_cross_sectional_selection",
+    "phase2_redevelopment_ranking_object": "stock_level_future_total_or_tradable_return_cross_sectional_ranking",
+    "phase2_redevelopment_horizon": "H20",
+    "old_policy_exact_prediction_object": null,
+    "old_policy_exact_label_horizon": null,
+    "status": "phase2_semantics_confirmed_old_policy_exact_target_unresolved"
+  },
+  "universe": {
+    "old_policy_exact_universe": null,
+    "old_policy_exact_eligibility_filters": null,
+    "status": "unresolved",
+    "new_REAKA_interface_reference_only": "full_A_effective_dated_PIT_tradable"
+  },
+  "score": {
+    "old_policy_exact_formula": null,
+    "old_policy_direction": null,
+    "normalization": null,
+    "zscore_rank_clip": null,
+    "status": "unresolved_do_not_reconstruct_from_returns"
+  },
+  "portfolio": {
+    "old_policy_topn_or_selection_rule": null,
+    "old_policy_weight_rule": null,
+    "old_policy_rebalance_cadence": null,
+    "old_policy_blocked_buy_backfill_or_cash_rule": null,
+    "old_policy_sell_hold_rule": null,
+    "old_policy_initial_account_value": null,
+    "status": "unresolved",
+    "new_REAKA_interface_reference_only": {
+      "execution": "next_trading_day_open",
+      "between_decisions": "carry_shares",
+      "weighting": "equal_weight_target_subject_to_forced_carry_and_buyability_backfill"
+    }
+  },
+  "execution": {
+    "old_policy_exact_decision_clock": null,
+    "old_policy_exact_fill_clock": null,
+    "old_policy_exact_fill_price": null,
+    "old_policy_exact_cost_model": null,
+    "old_policy_exact_benchmark": null,
+    "old_policy_exact_T_plus_1_binding": null,
+    "status": "policy_specific_values_unresolved",
+    "historical_project_contract_constraints": {
+      "intraday_fill_rule": "next_tradable_after_bar_close",
+      "signal_view_may_be": "qfq_canonical",
+      "fill_view_must_be": "raw_or_PIT",
+      "T_plus_1_and_costs_required_for_whole_policy_repricing": true,
+      "decision_session": "menu_based_not_unique_project_default"
+    }
+  },
+  "factor_roles": {
+    "market_or_index_in_canonical_policy": "unresolved",
+    "size_in_canonical_policy": "unresolved",
+    "industry_in_canonical_policy": "unresolved",
+    "stock_cross_sectional_paper_core_in_canonical_policy": "unresolved",
+    "financial_epsilon_in_canonical_policy": "unresolved",
+    "other_observable_context_in_canonical_policy": "unresolved",
+    "historical_V2_second_round_design_only": {
+      "adds_new_factors": false,
+      "CloudRidge_previous_completed_calendar_month_1sigma_S_obs_paired_with": [
+        "index",
+        "industry"
+      ],
+      "not_paired_with": [
+        "size"
+      ],
+      "canonical_policy_membership_proven": false
+    }
+  },
+  "s_obs": {
+    "canonical_policy_dependency": "unresolved",
+    "formula_identity": "not_found",
+    "exact_input_sequence": null,
+    "one_sigma_window_definition": null,
+    "statistical_object": null,
+    "trend_or_sign_encoding": null,
+    "continuous_or_discrete": null,
+    "missing_rule": null,
+    "previous_completed_calendar_month_boundary": null,
+    "source_path": null,
+    "sha256": null,
+    "rule": "do_not_guess_formula"
+  },
+  "recovered_contract_level_facts": [
+    "V5_V6_oldV7_are_parallel_branches_from_V4_not_an_inheritance_chain",
+    "oldV7_is_invalid_as_clean_isolated_branch_evidence_due_to_V5_reselection_contamination",
+    "V6_repeat_audit_is_account_equivalent_to_V2_and_below_V5_but_does_not_make_V5_canonical",
+    "old_project_execution_contract_requires_causal_fill_and_raw_or_PIT_fill_view",
+    "old_project_whole_policy_repricing_requires_T_plus_1_and_costs",
+    "CloudRidge_S_obs_exact_formula_identity_is_not_recovered_and_must_not_be_guessed"
+  ],
+  "missing_dependencies": [
+    "user_or_local_canonical_strategy_pointer_or_equivalent_authority",
+    "exact_V4_common_root_implementation_version_and_digest",
+    "exact_old_score_formula_normalization_and_direction",
+    "exact_old_stock_universe_and_eligibility_filters",
+    "exact_old_TopN_weight_rebalance_blocked_buy_sell_hold_rules",
+    "exact_old_decision_fill_T_plus_1_cost_and_benchmark_binding",
+    "canonical_market_index_size_industry_epsilon_context_membership",
+    "exact_CloudRidge_S_obs_formula_source_and_digest"
+  ],
+  "source_evidence": [
+    {
+      "path": "docs/ops/phase2_state_20260908.json",
+      "git_blob_sha": "246ef279a9c88b1921aa76188a60837b79c7fde0",
+      "role": "current_phase_and_unresolved_canonical_identity_authority"
+    },
+    {
+      "path": "docs/ops/cloud_local_communication_P2_old_strategy_identity_20260908.md",
+      "git_blob_sha": "c97b2b06f11fbac157fca8970b15ba5363c70e43",
+      "role": "required_identity_fields_and_no_guess_boundary"
+    },
+    {
+      "path": "docs/ops/phase1_lab_validation_20260908.md",
+      "git_blob_sha": "a8622f9d654f1a4874b5158d1bf29d99e0f2e5ae",
+      "role": "phase2_open_and_redevelopment_financial_semantics"
+    },
+    {
+      "path": "docs/user/reaka_strategy_v2_external_ai_handoff_v2.md",
+      "git_blob_sha": "f77cb0c9e16486ca146c74032154602b52653aca",
+      "role": "historical_V2_S_obs_pairing_design_only"
+    },
+    {
+      "path": "docs/reference/strategy_slice_rebuild_before_v1_4/references/project-contract.md",
+      "git_blob_sha": "377056b63031c018af3039e42c5d85ef2726f09e",
+      "role": "historical_branch_lineage_and_generic_execution_contract"
+    },
+    {
+      "path": "docs/reference/strategy_slice_rebuild_before_v1_4/SKILL.md",
+      "git_blob_sha": "19dce040ccf7e7d3af0a2ba496b2103877dd8981",
+      "role": "historical_rebuild_T_plus_1_cost_branch_isolation_contract"
+    },
+    {
+      "path": "src/factor_lab/factor_rotation/reaka_stage5_parameter_compiler.py",
+      "git_blob_sha": "82fadbdce24f6f2543c8c68ebfb305c75bb7f55c",
+      "role": "new_REAKA_portfolio_interface_reference_not_old_policy_authority"
+    }
+  ],
+  "next_resolution_condition": "merge_or_review_local_old_policy_identity_receipt_only_after_actual_pointer_source_config_manifest_and_hash_evidence_are_available"
+}

@@ -1,0 +1,38 @@
+{
+  "schema_id": "factorlab.r3_transfer_label_sidecar@1.0",
+  "status": "prepared_postscore_labels_not_model_input",
+  "clock": "1430",
+  "calendar_end": "2025-12-31",
+  "target_definition": "H20_financial_residual_epsilon_future_K1_v1",
+  "horizon_trading_positions": 20,
+  "prediction_rows_scored_later": 931677,
+  "maturity_candidates": 916077,
+  "finite_evaluation_rows": 914934,
+  "evaluation_days": 238,
+  "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "prefix_check": {
+    "passed": true,
+    "finite_cells_compared": 5501746,
+    "support_mismatches": 0,
+    "above_tolerance": 0,
+    "atol": 1e-07,
+    "max_abs_error": 0.0,
+    "independent_producer_replay": false
+  },
+  "labels_used_for_feature_support": false,
+  "labels_available_to_score_worker": false,
+  "uses_2026_to_complete_2025": false,
+  "fresh_oos": false,
+  "PIT_certified": false,
+  "artifact_digests": {
+    "evaluation_indices.npy": "sha256:c848c99dc6b54ba8ffd0345eca1535a8fcac3e48dffa8cc82bd0ce012e7773dc",
+    "rows.npy": "sha256:ff8bdb1828ee88384a506acc242f5d086b73ad45b4d8812065f9aa5b33dd74b5",
+    "targets.npy": "sha256:cafedb823fa889acb84a835e82880a3f929e2eb878b93631cdddb9ddc3c4a0ac"
+  }
+}
