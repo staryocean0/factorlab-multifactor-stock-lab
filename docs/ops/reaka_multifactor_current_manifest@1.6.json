@@ -1,0 +1,61 @@
+{
+  "schema_id": "factorlab.reaka_multifactor_current_manifest@1.6",
+  "scope": "repository_infrastructure_mission_phase_routing_and_local_development_handoff",
+  "supersedes": "docs/ops/reaka_multifactor_current_manifest@1.5.json",
+  "historical_baseline_commit": "3a75376e1f7f871bb72e48f886c275919b3c9671",
+  "mission": "docs/ops/reaka_research_mission.md",
+  "phase_transition": "docs/ops/research_phase_transition_20260908.json",
+  "phase_I_report": "docs/ops/phase1_lab_validation_20260908.md",
+  "phase_II_task": "docs/ops/phase2_old_strategy_redevelopment_20260908.md",
+  "phase_II_state": "docs/ops/phase2_state_20260909.json",
+  "phase_II_baseline_spec": "docs/ops/phase2_baseline_spec_20260908.md",
+  "local_development_handoff": "docs/user/reaka_local_development_handoff_20260909.md",
+  "old_strategy_identity_manifest": "docs/ops/old_strategy_identity_manifest@0.1.json",
+  "core_spatial_h20_lineage_manifest": "docs/ops/core_spatial_h20_lineage_manifest@0.1.json",
+  "semantics": "docs/ops/reaka_foundation_semantics@1.2.json",
+  "historical_state": "docs/ops/research_state.json",
+  "workflow": "docs/user/reaka_multifactor_current_workflow_v1_4.md",
+  "whitepaper": "docs/ops/reaka_foundation_whitepaper_v1_4.md",
+  "audit": "docs/ops/infrastructure_audit_20260906.md",
+  "reading_routes": {
+    "takeover_local_primary": [
+      "docs/user/reaka_local_development_handoff_20260909.md",
+      "docs/ops/phase2_state_20260909.json",
+      "docs/ops/old_strategy_identity_manifest@0.1.json",
+      "docs/ops/core_spatial_h20_lineage_manifest@0.1.json",
+      "docs/ops/phase2_baseline_spec_20260908.md",
+      "docs/ops/phase2_old_strategy_redevelopment_20260908.md",
+      "docs/ops/reaka_research_mission.md",
+      "docs/user/reaka_multifactor_current_workflow_v1_4.md"
+    ],
+    "phase_I_evidence": [
+      "docs/ops/phase1_lab_validation_20260908.md",
+      "docs/ops/reaka_factor_authority_v3_whitepaper.md",
+      "src/factor_lab/factor_rotation/reaka_financial_residual.py",
+      "src/factor_lab/factor_rotation/factor_specs.py"
+    ],
+    "phase_II_redevelopment": [
+      "docs/ops/phase2_old_strategy_redevelopment_20260908.md",
+      "docs/ops/phase2_baseline_spec_20260908.md",
+      "docs/ops/old_strategy_identity_manifest@0.1.json",
+      "docs/ops/core_spatial_h20_lineage_manifest@0.1.json",
+      "docs/ops/strategy_progressive_development@1.0.json",
+      "docs/ops/strategy_slice_rebuild_whitepaper.md"
+    ]
+  },
+  "state_rule": "phase2_state_20260909 controls current Phase II execution routing; research_state remains the detailed historical R1/R2/R3 evidence ledger and historical receipts remain immutable",
+  "execution_environment_rule": "primary Phase II identity recovery and subsequent authorized redevelopment execute in local FactorLab; cloud repository is the versioned research material and evidence index until local receipts are returned",
+  "blocker_policy": "canonical_old_policy_executable_identity_must_close_before_new_training_tuning_candidate_selection_or_account_promotion",
+  "migration_update_audit": {
+    "top_level_navigation": "updated",
+    "phase2_state_and_research_material": "updated",
+    "whitepaper": "unchanged_no_math_or_financial_semantics_change",
+    "code": "unchanged_no_algorithm_behavior_change",
+    "tests": "unchanged_no_code_behavior_change",
+    "generic_workflow": "unchanged_existing_local_execution_receipt_route_is_sufficient",
+    "historical_receipts": "unchanged_immutable"
+  },
+  "fresh_oos": false,
+  "production_authority": false,
+  "local_factorlab_pointer_authority": false
+}
