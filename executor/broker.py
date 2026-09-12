@@ -360,6 +360,8 @@ def require_private_api():
     token = os.environ.get("FACTORLAB_PRIVATE_TOKEN")
     if not token:
         raise GateError("missing_FACTORLAB_PRIVATE_TOKEN_no_private_data_requested")
+    if not token.startswith("github_pat_"):
+        raise GateError("requires_fine_grained_private_repo_token_not_local_oauth")
     api = GitHub(token)
     api.private_identity()
     return api

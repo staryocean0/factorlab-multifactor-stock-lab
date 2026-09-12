@@ -178,6 +178,14 @@ class ExecutorTests(unittest.TestCase):
         ):
             broker.compute()
 
+    def test_broad_oauth_is_rejected_before_private_request(self):
+        with (
+            mock.patch.dict(os.environ, {"FACTORLAB_PRIVATE_TOKEN": "gho_synthetic_not_real"}),
+            mock.patch.object(broker, "GitHub", side_effect=AssertionError("no network")),
+            self.assertRaises(broker.GateError),
+        ):
+            broker.require_private_api()
+
     def test_no_success_receipt_before_result_upload_verified(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

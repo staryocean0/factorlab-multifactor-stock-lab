@@ -15,7 +15,11 @@
 
 直接将token保存到本公库Settings → Environments → `private-research` → Environment secrets，名称`FACTORLAB_PRIVATE_TOKEN`。不是仓库级Actions secrets：环境仅允许`cloud-workspace-v1`分支，防止其他分支的工作流取得凭据。勿提交源码、贴聊天或复用本机广权限OAuth令牌。没有该secret，基线profile明确失败且不访问私有数据，不能据此称云端ready。
 
-该凭据只进入可信取数/回存broker；不进入计算容器，不挂载凭据文件或Docker socket。跨主机HTTP重定向清除Authorization。公共日志只显示通用状态；完整计算日志/快照写私库新分支和私有Release，不写公开Actions artifact/summary。
+取数、计算、清理、回存为独立steps，只有取数和回存映射该凭据。计算step及Docker客户端都没有私库token；不挂载凭据文件或Docker socket。清理step确认容器停止后才允许回存。跨主机HTTP重定向清除Authorization，忽略环境代理；上传只到uploads.github.com。公共日志只显示通用状态；完整计算日志/快照写私库新分支和私有Release，不写公开Actions artifact/summary。
+
+每个基线命令上限180秒，计算容器总上限14分钟，独立只读验证器再限1分钟；各step预算合计不超过45分钟总预算。超时回收本任务容器，失败尽力回存；平台硬终止/网络不可用时可能无法回存，缺回执不得视为通过。
+
+受控验证器在私有计算容器停止后另开只读容器，对四套账户的daily/holdings/trades/events及收益、回撤、费用逐项核对黄金结果，不信任私有子进程的自报PASS。拒绝结果符号链接/非正规文件/越界及超额输出；先验收结果归档上传，之后才写最终回执。
 
 ## 调度与结果
 
