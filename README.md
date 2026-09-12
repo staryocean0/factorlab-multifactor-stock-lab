@@ -1,10 +1,13 @@
-# Public research launcher
+# Chat 模式研究入口
 
-This branch intentionally contains no private research data or results. Existing main/history are preserved separately.
+本分支服务于 **ChatGPT网页版Chat模式**，不要求使用Work或Codex云端。公库只提供入口说明；私有研究代码、数据和结果都留在私库。
 
-1. Configure authentication limited to `staryocean0/factorlab-multifactor-research-private` in your cloud environment's secret store. Do not paste a token into chat or repository files.
-2. Run `python bootstrap.py --destination ../factorlab-private-work`.
-3. Change to the private checkout. Read its AGENTS.md and CLOUD_CURRENT.json.
-4. Work and commit only in that private checkout. Download exact private data packages as needed.
+在Chat中使用已经连接的GitHub插件，读取：
 
-This does not enable GitHub Actions, grant production authority, or create a blind-test boundary. Missing private access requires operator setup, not a workaround through public files.
+`staryocean0/factorlab-multifactor-research-private` 中的 `AGENTS.md`、`CHAT_START.md`、`CLOUD_CURRENT.json`。
+
+项目所有者已确认其Chat可以访问公私库及修改文件；不重复要求证明这两项。若某个具体文件读取失败，报告具体失败，不改用公开副本泄露内容。
+
+按私库说明准备有界数据、使用实际计算工具、把成果写回私库。不要将4GiB数据塞入聊天上下文，也不从文件修改能力推导计算规模。
+
+`bootstrap.py`仅保留为旧终端执行器参考，不是Chat的启动方式。旧main与PR历史未清理，本分支不继承旧数据/模型的当前权威。禁止向本公库提交私有数据、patch、日志、模型或结果。

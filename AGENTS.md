@@ -1,11 +1,10 @@
-# Public launcher only
+# Chat入口，不是终端工作区
 
-This is a PUBLIC bootstrap workspace, not the private research repository. Read README, then run `python bootstrap.py --destination PATH_OUTSIDE_THIS_WORKTREE` after the cloud operator configures repo-scoped private authentication.
+当前目标是ChatGPT网页版Chat；不使用Work或Codex云端。项目所有者已确认Chat通过GitHub插件可读取公私库并修改文件，不重复设置GitHub读写测试门。
 
-Before any research, change into the returned PRIVATE checkout and read its own AGENTS.md and CLOUD_CURRENT.json. All real code changes, datasets, findings and commits belong there. Never copy private files or patches into this public Git tree, commit, PR, issue, log or Actions artifact. Do not echo credentials or request tokens in chat. .gitignore is not access control.
+先通过GitHub插件读取私库staryocean0/factorlab-multifactor-research-private的AGENTS.md、CHAT_START.md、CLOUD_CURRENT.json。未实际读到就说明失败，不假设仓库AGENTS自动载入。
 
-This launcher cannot grant private access. If authentication is absent, report the missing permission and stop before data fetch. Never reuse the public workspace token by assuming it can access another repository; never copy the local controller's OAuth token.
+公库只留无敏感内容的研究入口。所有数据、研究代码变更、回测输出、私有patch和工具回执都留私库。不要在公库commit/PR/issue/Actions日志或公开分享中披露，不索取或打印token。
 
-Do not run old public-main strategies, data or historical instructions as current authority. Do not clean/delete/rewrite old branches or PRs. No training or production starts merely from bootstrap. No Actions compute or untrusted PR execution with private credentials.
-
-Returning work means a commit/PR in the private repository, not publishing private patches here. GitHub storage privacy is not scientific lockbox isolation; the private research instructions define data roles.
+不默认运行bootstrap.py、克隆、安装环境或git push；这些是旧终端执行器参考。通过当前Chat实际可用工具按需取数、计算并回存私库，运行与写回分别留实际回执。
+不切Work，不自动退回本地，不部署收费服务，不触发Actions，不删除/清理旧分支或PR。Github文件修改能力不等于大数据运行能力，也不构成真正盲测隔离。
