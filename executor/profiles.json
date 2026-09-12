@@ -1,0 +1,20 @@
+{
+  "schema_id": "factorlab.public_executor_profiles@1.0",
+  "profiles": {
+    "baseline-replay-v1": {
+      "private_ref": "47a100002b5ef1617c5f3c8deaa4d2d3fdc8d050",
+      "catalog_sha256": "ca38a477554fcfbeb58e88b4097a4479ddc2f44bde8f2777fbcc19846b78078d",
+      "packages": ["baseline-replay"],
+      "commands": [
+        ["tools/cloud_replay.py", "--period", "repair", "--clock", "1430"],
+        ["tools/cloud_replay.py", "--period", "repair", "--clock", "1445"],
+        ["tools/cloud_replay.py", "--period", "validation", "--clock", "1430"],
+        ["tools/cloud_replay.py", "--period", "validation", "--clock", "1445"]
+      ],
+      "output_mount": "runtime/output/factor-rotation/reaka_frozen_validation_2021_2022_v1_20260912/accounts_v2",
+      "command_timeout_seconds": 600,
+      "new_training": false,
+      "production_authority": false
+    }
+  }
+}

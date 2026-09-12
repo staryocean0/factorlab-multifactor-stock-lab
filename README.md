@@ -1,13 +1,14 @@
-# Chat 模式研究入口
+# 公库计算，私库存储
 
-本分支服务于 **ChatGPT网页版Chat模式**，不要求使用Work或Codex云端。公库只提供入口说明；私有研究代码、数据和结果都留在私库。
+ChatGPT网页版使用Chat模式进行研究设计、改代码和调度。实际策略计算运行在本公库的**标准免费GitHub-hosted runner**；私库存数据、模型、代码版本和结果，私库Actions关闭。
 
-在Chat中使用已经连接的GitHub插件，读取：
+当前执行指南：[docs/public_execution.md](docs/public_execution.md)。Actions工作流为Public standard-runner research executor，仅手动触发：
 
-`staryocean0/factorlab-multifactor-research-private` 中的 `AGENTS.md`、`CHAT_START.md`、`CLOUD_CURRENT.json`。
+- runtime-smoke：无私库数据/凭据，验证运行环境及容器隔离。
+- baseline-replay-v1：通过环境secret取固定私库数据，在断网容器重放基线，完整结果仅回存私库。
 
-项目所有者已确认其Chat可以访问公私库及修改文件；不重复要求证明这两项。若某个具体文件读取失败，报告具体失败，不改用公开副本泄露内容。
+需要的受限授权为private-research环境中的FACTORLAB_PRIVATE_TOKEN；仅授新私库Contents读写，不向聊天提交token。环境限制为cloud-workspace-v1分支。
 
-按私库说明准备有界数据、使用实际计算工具、把成果写回私库。不要将4GiB数据塞入聊天上下文，也不从文件修改能力推导计算规模。
+私库研究入口：staryocean0/factorlab-multifactor-research-private中的AGENTS.md、CLOUD_CURRENT.json和CHAT_START.md。公库只保存通用执行器，不放私有数据、策略补丁或结果。
 
-`bootstrap.py`仅保留为旧终端执行器参考，不是Chat的启动方式。旧main与PR历史未清理，本分支不继承旧数据/模型的当前权威。禁止向本公库提交私有数据、patch、日志、模型或结果。
+旧main和PR保持可查；bootstrap.py作为历史终端参考保留。标准免费不等于无限资源；不得改用付费runner或把本公库用于无关工作。

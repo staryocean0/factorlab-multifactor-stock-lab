@@ -1,0 +1,53 @@
+name: Public standard-runner research executor
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: Reviewed execution profile
+        type: choice
+        options:
+          - runtime-smoke
+          - baseline-replay-v1
+        default: runtime-smoke
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-standard-research-executor
+  cancel-in-progress: false
+
+jobs:
+  execute:
+    if: >-
+      github.repository == 'staryocean0/factorlab-multifactor-stock-lab' &&
+      github.event.repository.private == false &&
+      github.ref == 'refs/heads/cloud-workspace-v1' &&
+      github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    environment: private-research
+    timeout-minutes: 45
+    steps:
+      - name: Checkout reviewed public executor only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            executor
+            tests
+            .github/workflows
+          sparse-checkout-cone-mode: true
+      - name: Synthetic executor tests
+        run: python3 -m unittest discover -s tests -p 'test_executor.py' -v
+      - name: Build public runtime before private credentials or data
+        run: docker build --tag factorlab-runtime:local executor
+      - name: Prove isolated runtime (no private data)
+        run: python3 executor/broker.py runtime-smoke
+      - name: Fixed private-input task and private-only return
+        if: inputs.profile != 'runtime-smoke'
+        env:
+          JOB_PROFILE: ${{ inputs.profile }}
+          FACTORLAB_PRIVATE_TOKEN: ${{ secrets.FACTORLAB_PRIVATE_TOKEN }}
+        run: python3 executor/broker.py "$JOB_PROFILE"
