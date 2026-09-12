@@ -1,11 +1,15 @@
 import importlib.util
 import io
 import json
+import os
+import re
+import subprocess
 import tarfile
 import tempfile
 import unittest
 import urllib.request
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("broker", ROOT / "executor/broker.py")
@@ -125,6 +129,83 @@ class ExecutorTests(unittest.TestCase):
         ]:
             self.assertNotIn(forbidden, text)
         self.assertIn("persist-credentials: false", text)
+
+    def test_unknown_profile_field_rejected(self):
+        p = json.loads((ROOT / "executor/profiles.json").read_text())["profiles"]["baseline-replay-v1"]
+        with self.assertRaises(broker.GateError):
+            broker.validate_profile({**p, "extra_docker": "--privileged"})
+
+    def test_compute_step_has_no_private_secret_and_budget_fits(self):
+        text = (ROOT / ".github/workflows/public-compute.yml").read_text()
+        compute = text.split("- name: Compute without")[1].split("- name: Stop owned")[0]
+        cleanup = text.split("- name: Stop owned")[1].split("- name: Return verified")[0]
+        self.assertNotIn("secrets.", compute + cleanup)
+        self.assertEqual(text.count("secrets.FACTORLAB_PRIVATE_TOKEN"), 2)
+        values = [int(v) for v in re.findall(r"timeout-minutes: (\d+)", text)]
+        self.assertLessEqual(sum(values[1:]), values[0])
+
+    def test_result_symlink_never_read(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            outside = root / "outside.json"
+            outside.write_text('{"synthetic_secret":"not-real"}')
+            results = root / "results"
+            results.mkdir()
+            (results / "compute_receipt.json").symlink_to(outside)
+            with mock.patch.object(broker, "sha", side_effect=AssertionError("must not dereference")), self.assertRaises(broker.GateError):
+                broker.collect_result_files(results)
+
+    def test_timeout_cleans_only_owned_container_and_scrubs_environment(self):
+        process = mock.Mock()
+        process.wait.side_effect = [subprocess.TimeoutExpired("docker", 1), 0]
+        process.poll.return_value = None
+        cleanup = subprocess.CompletedProcess([], 0, "", "")
+        with (
+            mock.patch.dict(os.environ, {"FACTORLAB_PRIVATE_TOKEN": "synthetic"}),
+            mock.patch.object(broker.subprocess, "Popen", return_value=process) as popen,
+            mock.patch.object(broker.subprocess, "run", return_value=cleanup) as removed,
+        ):
+            self.assertEqual(broker.run_container(["docker", "run"], None, 1), 124)
+            self.assertEqual(set(popen.call_args.kwargs["env"]), {"PATH", "LANG"})
+            self.assertEqual(removed.call_args.args[0], ["docker", "rm", "--force", "factorlab-compute"])
+            process.kill.assert_called_once()
+
+    def test_compute_refuses_token_before_loading_inputs(self):
+        with (
+            mock.patch.dict(os.environ, {"FACTORLAB_PRIVATE_TOKEN": "synthetic"}),
+            mock.patch.object(broker, "load_state", side_effect=AssertionError("no input reads")),
+            self.assertRaises(broker.GateError),
+        ):
+            broker.compute()
+
+    def test_no_success_receipt_before_result_upload_verified(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            results = root / "results"
+            results.mkdir()
+            (results / "compute.log").write_text("synthetic")
+            api = mock.Mock()
+            api.request.return_value = {"id": 123}
+            state = {"cleanup_complete": True, "run_id": "123-1", "branch": "runs/test", "compute_success": True}
+            with (
+                mock.patch.object(broker, "load_state", return_value=(state, root)),
+                mock.patch.object(broker, "require_private_api", return_value=api),
+                mock.patch.object(broker, "upload_result", side_effect=broker.GateError("synthetic_upload_failure")),
+                self.assertRaises(broker.GateError),
+            ):
+                broker.publish({"private_ref": "a" * 40})
+            self.assertEqual(api.request.call_count, 1)
+            self.assertTrue(api.request.call_args.args[1]["draft"])
+
+    def test_validator_mount_is_readonly_and_has_no_output_override(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            profile = root / "profile.json"
+            profile.write_text(json.dumps({"output_mount": broker.OUTPUT_MOUNT}))
+            command = broker.docker_command(root / "work", root / "results", profile, validator=True)
+            self.assertIn(f"type=bind,src={root / 'results'},dst=/results,readonly", command)
+            self.assertNotIn(f"dst=/work/{broker.OUTPUT_MOUNT}", " ".join(command))
+            self.assertEqual(command[-1], "validate-baseline")
 
 
 if __name__ == "__main__":

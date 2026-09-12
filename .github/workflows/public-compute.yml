@@ -31,6 +31,7 @@ jobs:
     timeout-minutes: 45
     steps:
       - name: Checkout reviewed public executor only
+        timeout-minutes: 3
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
@@ -40,14 +41,34 @@ jobs:
             .github/workflows
           sparse-checkout-cone-mode: true
       - name: Synthetic executor tests
+        timeout-minutes: 2
         run: python3 -m unittest discover -s tests -p 'test_executor.py' -v
       - name: Build public runtime before private credentials or data
+        timeout-minutes: 8
         run: docker build --tag factorlab-runtime:local executor
       - name: Prove isolated runtime (no private data)
+        timeout-minutes: 2
         run: python3 executor/broker.py runtime-smoke
-      - name: Fixed private-input task and private-only return
+      - name: Prepare fixed inputs and prove private write authority
+        id: prepare
         if: inputs.profile != 'runtime-smoke'
+        timeout-minutes: 6
         env:
           JOB_PROFILE: ${{ inputs.profile }}
           FACTORLAB_PRIVATE_TOKEN: ${{ secrets.FACTORLAB_PRIVATE_TOKEN }}
-        run: python3 executor/broker.py "$JOB_PROFILE"
+        run: python3 executor/broker.py prepare "$JOB_PROFILE"
+      - name: Compute without private credential in step or container
+        if: inputs.profile != 'runtime-smoke'
+        timeout-minutes: 16
+        run: python3 executor/broker.py compute
+      - name: Stop owned container before credentials return
+        id: cleanup
+        if: always() && steps.prepare.outcome == 'success'
+        timeout-minutes: 1
+        run: python3 executor/broker.py cleanup
+      - name: Return verified results or failure evidence privately
+        if: always() && steps.prepare.outcome == 'success' && steps.cleanup.outcome == 'success'
+        timeout-minutes: 6
+        env:
+          FACTORLAB_PRIVATE_TOKEN: ${{ secrets.FACTORLAB_PRIVATE_TOKEN }}
+        run: python3 executor/broker.py publish

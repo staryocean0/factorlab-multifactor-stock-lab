@@ -5,4 +5,5 @@ COPY requirements.txt /runtime-requirements.txt
 RUN pip install --no-cache-dir -r /runtime-requirements.txt
 COPY run_in_container.py /run_in_container.py
 WORKDIR /work
+USER 1001:1001
 ENTRYPOINT ["python", "/run_in_container.py"]

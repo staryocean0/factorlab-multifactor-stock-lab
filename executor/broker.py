@@ -5,10 +5,12 @@ from __future__ import annotations
 import argparse
 import base64
 import hashlib
+import http.client
 import json
 import os
 import re
 import shutil
+import stat
 import subprocess
 import sys
 import tarfile
@@ -40,7 +42,13 @@ class GateError(Exception):
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         parsed = urllib.parse.urlsplit(newurl)
-        if parsed.scheme != "https" or parsed.hostname not in DOWNLOAD_HOSTS:
+        if (
+            parsed.scheme != "https"
+            or parsed.hostname not in DOWNLOAD_HOSTS
+            or parsed.username
+            or parsed.password
+            or parsed.port not in (None, 443)
+        ):
             raise GateError("unapproved_download_destination")
         redirected = super().redirect_request(req, fp, code, msg, headers, newurl)
         if parsed.netloc != urllib.parse.urlsplit(req.full_url).netloc:
@@ -109,13 +117,24 @@ def require_context(env):
 
 
 def validate_profile(value):
+    if set(value) != {
+        "private_ref",
+        "catalog_sha256",
+        "packages",
+        "commands",
+        "output_mount",
+        "command_timeout_seconds",
+        "new_training",
+        "production_authority",
+    }:
+        raise GateError("unknown_profile_field")
     if not re.fullmatch(r"[0-9a-f]{40}", value.get("private_ref", "")) or not re.fullmatch(
         r"[0-9a-f]{64}", value.get("catalog_sha256", "")
     ):
         raise GateError("profile_not_immutable")
     if value.get("new_training") is not False or value.get("production_authority") is not False:
         raise GateError("scope_not_authorized")
-    if value.get("packages") != ["baseline-replay"] or not 1 <= value.get("command_timeout_seconds", 0) <= 600:
+    if value.get("packages") != ["baseline-replay"] or not 1 <= value.get("command_timeout_seconds", 0) <= 180:
         raise GateError("profile_scope_changed")
     if len(value.get("commands", [])) != 4:
         raise GateError("incomplete_baseline_family")
@@ -139,9 +158,9 @@ def validate_profile(value):
 class GitHub:
     def __init__(self, token):
         self.token = token
-        self.opener = urllib.request.build_opener(SafeRedirect())
+        self.opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), SafeRedirect())
 
-    def request(self, path, data=None, method=None, binary_path=None):
+    def request(self, path, data=None, method=None, binary_path=None, max_bytes=64 * 1024 * 1024):
         url = "https://api.github.com/" + path
         headers = {
             "Authorization": "Bearer " + self.token,
@@ -158,7 +177,12 @@ class GitHub:
             with self.opener.open(request, timeout=120) as response:
                 if binary_path is not None:
                     with binary_path.open("xb") as stream:
-                        shutil.copyfileobj(response, stream)
+                        total = 0
+                        while block := response.read(1024 * 1024):
+                            total += len(block)
+                            if total > max_bytes:
+                                raise GateError("download_byte_budget_exceeded")
+                            stream.write(block)
                     return None
                 return json.load(response)
         except urllib.error.HTTPError as error:
@@ -172,11 +196,17 @@ class GitHub:
             raise GateError("private_identity_failed")
 
 
-def docker_command(work=None, results=None, profile_path=None):
+def clean_env():
+    return {"PATH": os.environ["PATH"], "LANG": "C.UTF-8"}
+
+
+def docker_command(work=None, results=None, profile_path=None, validator=False):
     args = [
         "docker",
         "run",
         "--rm",
+        "--name",
+        "factorlab-compute",
         "--network",
         "none",
         "--read-only",
@@ -185,6 +215,8 @@ def docker_command(work=None, results=None, profile_path=None):
         "--user",
         f"{os.getuid()}:{os.getgid()}",
         "--memory",
+        "12g",
+        "--memory-swap",
         "12g",
         "--cpus",
         "4",
@@ -202,24 +234,65 @@ def docker_command(work=None, results=None, profile_path=None):
     if work is None:
         return args + [IMAGE, "runtime-smoke"]
     profile = json.loads(profile_path.read_text())
-    target = safe_path(work, profile["output_mount"])
-    target.mkdir(parents=True, exist_ok=True)
-    (results / "accounts").mkdir()
     args += [
         "--mount",
         f"type=bind,src={work},dst=/work,readonly",
         "--mount",
+        f"type=bind,src={profile_path},dst=/execution/profile.json,readonly",
+    ]
+    if validator:
+        args += ["--mount", f"type=bind,src={results},dst=/results,readonly"]
+        return args + [IMAGE, "validate-baseline"]
+    target = safe_path(work, profile["output_mount"])
+    target.mkdir(parents=True, exist_ok=True)
+    (results / "accounts").mkdir(exist_ok=True)
+    args += [
+        "--mount",
         f"type=bind,src={results},dst=/results",
         "--mount",
         f"type=bind,src={results / 'accounts'},dst=/work/{profile['output_mount']}",
-        "--mount",
-        f"type=bind,src={profile_path},dst=/execution/profile.json,readonly",
     ]
     return args + [IMAGE, "private-task"]
 
 
+def run_container(command, output, timeout, error_output=subprocess.STDOUT):
+    process = subprocess.Popen(command, stdout=output, stderr=error_output, env=clean_env())
+    try:
+        code = process.wait(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        code = 124
+    if code:
+        cleanup = subprocess.run(
+            ["docker", "rm", "--force", "factorlab-compute"], env=clean_env(), capture_output=True, text=True, timeout=30
+        )
+        if cleanup.returncode and "No such container" not in cleanup.stderr:
+            process.kill()
+            process.wait()
+            raise GateError("container_cleanup_failed_no_result_collection")
+        if process.poll() is None:
+            process.kill()
+            process.wait()
+    return code
+
+
+def collect_result_files(results):
+    files, total = {}, 0
+    for p in sorted(results.rglob("*")):
+        info = p.lstat()
+        if stat.S_ISLNK(info.st_mode) or not p.resolve().is_relative_to(results.resolve()):
+            raise GateError("result_link_or_escape")
+        if stat.S_ISDIR(info.st_mode):
+            continue
+        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
+            raise GateError("result_not_regular_single_link")
+        total += info.st_size
+        if total > 512 * 1024 * 1024 or len(files) >= 2000:
+            raise GateError("result_budget_exceeded")
+        files[str(p.relative_to(results))] = {"bytes": info.st_size, "sha256": sha(p)}
+    return files
+
+
 def prepare_inputs(api, root, profile):
-    api.private_identity()
     archive = root / "source.tar.gz"
     api.request(f"repos/{PRIVATE_REPO}/tarball/{profile['private_ref']}", binary_path=archive)
     work = root / "work"
@@ -247,124 +320,242 @@ def prepare_inputs(api, root, profile):
                 if asset["state"] != "uploaded" or asset["size"] != part["bytes"] or asset.get("digest") != "sha256:" + part["sha256"]:
                     raise GateError("remote_asset_identity_failed")
                 path = root / f"part-{index}.bin"
-                api.request(f"repos/{PRIVATE_REPO}/releases/assets/{asset['id']}", binary_path=path)
+                api.request(f"repos/{PRIVATE_REPO}/releases/assets/{asset['id']}", binary_path=path, max_bytes=part["bytes"])
                 if path.stat().st_size != part["bytes"] or sha(path) != part["sha256"]:
                     raise GateError("downloaded_part_digest_failed")
                 with path.open("rb") as source:
                     shutil.copyfileobj(source, stream)
-                path.unlink()  # validated temporary download; immutable remote/local originals are retained
+                path.unlink()  # this validated temporary download only; immutable originals remain
         unpack(combined, work / "runtime", expected=package["files"])
     return work
 
 
-def save_private_result(api, results, profile, run_id, success):
+def state_path():
+    return Path(os.environ["RUNNER_TEMP"]) / "factorlab-executor-state.json"
+
+
+def write_state(state):
+    path = state_path()
+    if path.is_symlink():
+        raise GateError("state_path_is_link")
+    temporary = path.with_suffix(".pending")
+    with temporary.open("w") as stream:
+        json.dump(state, stream, indent=2)
+    temporary.replace(path)
+
+
+def load_state():
+    state = json.loads(state_path().read_text())
+    root = Path(state["root"]).resolve()
+    if not root.is_relative_to(Path(os.environ["RUNNER_TEMP"]).resolve()) or not root.name.startswith("fl-private-"):
+        raise GateError("invalid_state_root")
+    if state["run_id"] != os.environ["GITHUB_RUN_ID"] + "-" + os.environ["GITHUB_RUN_ATTEMPT"]:
+        raise GateError("state_run_identity_mismatch")
+    if state["profiles_sha256"] != sha(HERE / "profiles.json"):
+        raise GateError("profile_changed_between_phases")
+    return state, root
+
+
+def require_private_api():
+    token = os.environ.get("FACTORLAB_PRIVATE_TOKEN")
+    if not token:
+        raise GateError("missing_FACTORLAB_PRIVATE_TOKEN_no_private_data_requested")
+    api = GitHub(token)
     api.private_identity()
+    return api
+
+
+def prepare(profile_name, profile):
+    api = require_private_api()
+    if state_path().exists():
+        raise GateError("existing_run_state")
+    run_id = os.environ["GITHUB_RUN_ID"] + "-" + os.environ["GITHUB_RUN_ATTEMPT"]
     branch = "runs/public-baseline/" + run_id
+    # Prove the exact private write authority before data or compute work.
     api.request(f"repos/{PRIVATE_REPO}/git/refs", {"ref": "refs/heads/" + branch, "sha": profile["private_ref"]}, method="POST")
-    files = {str(p.relative_to(results)): {"bytes": p.stat().st_size, "sha256": sha(p)} for p in sorted(results.rglob("*")) if p.is_file()}
-    receipt = {
-        "schema_id": "factorlab.public_runner_receipt@1.0",
-        "status": "passed" if success else "failed",
-        "public_run_id": run_id,
-        "public_repository": PUBLIC_REPO,
-        "private_source_ref": profile["private_ref"],
-        "execution": "public_standard_runner_network_isolated_container",
-        "catalog_sha256": profile["catalog_sha256"],
-        "files": files,
-        "new_training": False,
-        "production_authority": False,
-    }
-    compute = results / "compute_receipt.json"
-    if compute.exists():
-        receipt["compute"] = json.loads(compute.read_text())
-    payload = (json.dumps(receipt, indent=2) + "\n").encode()
-    api.request(
-        f"repos/{PRIVATE_REPO}/contents/research/public-runs/{run_id}.json",
-        {"message": "Record public runner result [skip ci]", "branch": branch, "content": base64.b64encode(payload).decode()},
-        method="PUT",
+    root = Path(tempfile.mkdtemp(prefix="fl-private-", dir=os.environ["RUNNER_TEMP"]))
+    (root / "results").mkdir()
+    prepare_inputs(api, root, profile)
+    (root / "profile.json").write_text(json.dumps(profile))
+    write_state(
+        {
+            "run_id": run_id,
+            "root": str(root),
+            "branch": branch,
+            "profile_name": profile_name,
+            "profiles_sha256": sha(HERE / "profiles.json"),
+            "prepare_ready": True,
+            "compute_success": False,
+        }
     )
-    # Complete logs/snapshots stay private and off Actions artifacts/cache.
-    archive = results.parent / "results.tar.gz"
+    print("Fixed private inputs verified; prepare step complete.")
+
+
+def compute():
+    if os.environ.get("FACTORLAB_PRIVATE_TOKEN"):
+        raise GateError("private_token_must_not_reach_compute_step")
+    state, root = load_state()
+    results = root / "results"
+    with (results / "container.log").open("xb") as stream:
+        code = run_container(docker_command(root / "work", results, root / "profile.json"), stream, 840)
+    collect_result_files(results)
+    # A fresh trusted validator sees the stopped compute outputs read-only.
+    # It never imports or executes private source code.
+    with (root / "validation.json").open("xb") as output, (root / "validation.log").open("xb") as errors:
+        validation_code = run_container(docker_command(root / "work", results, root / "profile.json", validator=True), output, 60, errors)
+    shutil.copyfile(root / "validation.json", results / "controller_validation.json")
+    shutil.copyfile(root / "validation.log", results / "controller_validation.log")
+    validated = json.loads((root / "validation.json").read_text()) if validation_code == 0 else {}
+    success = code == 0 and validation_code == 0 and validated.get("status") == "passed" and validated.get("cases_verified") == 4
+    state.update(compute_success=success, compute_exit_code=code, validation_exit_code=validation_code)
+    write_state(state)
+    if not success:
+        raise GateError("compute_failed_private_publish_step_will_report")
+    print("Fixed compute and trusted output comparison finished; results remain private.")
+
+
+def upload_result(api, release_id, archive):
+    connection = http.client.HTTPSConnection("uploads.github.com", timeout=120)
+    route = f"/repos/{PRIVATE_REPO}/releases/{release_id}/assets?name=" + urllib.parse.quote(archive.name, safe="")
+    try:
+        connection.putrequest("POST", route)
+        for name, value in {
+            "Authorization": "Bearer " + api.token,
+            "Content-Type": "application/gzip",
+            "Content-Length": str(archive.stat().st_size),
+            "User-Agent": "factorlab-private-broker",
+        }.items():
+            connection.putheader(name, value)
+        connection.endheaders()
+        with archive.open("rb") as stream:
+            while block := stream.read(1024 * 1024):
+                connection.send(block)
+        response = connection.getresponse()
+        if response.status != 201:
+            raise GateError("private_result_upload_http_" + str(response.status))
+        # No redirect handling and no response-body printing on this authenticated upload.
+        body = response.read(1024 * 1024)
+        return json.loads(body)
+    finally:
+        connection.close()
+
+
+def publish(profile):
+    state, root = load_state()
+    if not state.get("cleanup_complete"):
+        raise GateError("cleanup_must_complete_before_private_publish")
+    api = require_private_api()
+    results = root / "results"
+    try:
+        files = collect_result_files(results)
+    except GateError:
+        # Never dereference or archive an unsafe compute output.
+        results = root / "safe-failure"
+        results.mkdir()
+        (results / "failure.json").write_text('{"status":"failed","reason":"unsafe_compute_output"}\n')
+        files = collect_result_files(results)
+        state["compute_success"] = False
+    archive = root / "results.tar.gz"
     with tarfile.open(archive, "w:gz") as tar:
         for name in files:
             tar.add(results / name, arcname=name, recursive=False)
     if archive.stat().st_size > 512 * 1024 * 1024:
         raise GateError("private_result_archive_too_large")
-    # gh handles streamed release upload; its output is suppressed and token is
-    # passed only to this trusted transport subprocess, never to compute.
-    env = {"PATH": os.environ["PATH"], "GH_TOKEN": api.token}
-    tag = "public-run-" + run_id
-    subprocess.run(
-        [
-            "gh",
-            "release",
-            "create",
-            tag,
-            "--repo",
-            PRIVATE_REPO,
-            "--target",
-            profile["private_ref"],
-            "--prerelease",
-            "--title",
-            "Public runner result " + run_id,
-            "--notes",
-            "Private result; no production authority.",
-        ],
-        env=env,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-        check=True,
-        timeout=120,
+    tag = "public-run-" + state["run_id"]
+    release = api.request(
+        f"repos/{PRIVATE_REPO}/releases",
+        {
+            "tag_name": tag,
+            "target_commitish": profile["private_ref"],
+            "draft": True,
+            "prerelease": True,
+            "name": "Public runner result " + state["run_id"],
+            "body": "Pending verified result upload.",
+        },
+        method="POST",
     )
-    subprocess.run(
-        ["gh", "release", "upload", tag, "--repo", PRIVATE_REPO, str(archive)],
-        env=env,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-        check=True,
-        timeout=600,
-    )
-    release = api.request(f"repos/{PRIVATE_REPO}/releases/tags/{tag}")
-    if not any(a["name"] == archive.name and a.get("digest") == "sha256:" + sha(archive) for a in release["assets"]):
+    uploaded = upload_result(api, release["id"], archive)
+    expected_digest = "sha256:" + sha(archive)
+    release = api.request(f"repos/{PRIVATE_REPO}/releases/{release['id']}")
+    if (
+        len(release["assets"]) != 1
+        or uploaded.get("digest") != expected_digest
+        or release["assets"][0]["size"] != archive.stat().st_size
+        or release["assets"][0].get("digest") != expected_digest
+        or release["assets"][0]["state"] != "uploaded"
+    ):
         raise GateError("private_writeback_digest_failed")
-    returned = api.request(f"repos/{PRIVATE_REPO}/contents/research/public-runs/{run_id}.json?ref=" + urllib.parse.quote(branch, safe=""))
+    api.request(f"repos/{PRIVATE_REPO}/releases/{release['id']}", {"draft": False}, method="PATCH")
+    success = state.get("compute_success", False)
+    receipt = {
+        "schema_id": "factorlab.public_runner_receipt@1.1",
+        "status": "passed" if success else "failed",
+        "delivery_status": "archive_uploaded_and_verified",
+        "public_run_id": state["run_id"],
+        "public_repository": PUBLIC_REPO,
+        "public_source_sha": os.environ["GITHUB_SHA"],
+        "private_source_ref": profile["private_ref"],
+        "execution": "public_standard_runner_network_isolated_container",
+        "catalog_sha256": profile["catalog_sha256"],
+        "files": files,
+        "archive": {"release_id": release["id"], "tag": tag, "sha256": sha(archive), "bytes": archive.stat().st_size},
+        "new_training": False,
+        "production_authority": False,
+    }
+    payload = (json.dumps(receipt, indent=2) + "\n").encode()
+    target = f"repos/{PRIVATE_REPO}/contents/research/public-runs/{state['run_id']}.json"
+    api.request(
+        target,
+        {
+            "message": "Record verified public runner result [skip ci]",
+            "branch": state["branch"],
+            "content": base64.b64encode(payload).decode(),
+        },
+        method="PUT",
+    )
+    returned = api.request(target + "?ref=" + urllib.parse.quote(state["branch"], safe=""))
     if base64.b64decode(returned["content"]) != payload:
         raise GateError("private_receipt_readback_failed")
+    print("Private result archive and receipt verified for public run " + state["run_id"] + ".")
+    if not success:
+        raise GateError("compute_failed_consult_private_receipt")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("profile", choices=["runtime-smoke", "baseline-replay-v1"])
+    parser.add_argument("phase", choices=["runtime-smoke", "prepare", "compute", "cleanup", "publish"])
+    parser.add_argument("profile", nargs="?", choices=["baseline-replay-v1"], default="baseline-replay-v1")
     args = parser.parse_args()
     require_context(os.environ)
-    if args.profile == "runtime-smoke":
-        subprocess.run(docker_command(), check=True, timeout=120)
+    os.umask(0o077)
+    if args.phase == "runtime-smoke":
+        if run_container(docker_command(), None, 90):
+            raise GateError("runtime_smoke_failed")
+        timeout_probe = docker_command()
+        timeout_probe[-1] = "timeout-probe"
+        if run_container(timeout_probe, subprocess.DEVNULL, 2) != 124:
+            raise GateError("timeout_cleanup_canary_failed")
         print("Public standard-runner isolated runtime verified; no private inputs used.")
         return
-    token = os.environ.get("FACTORLAB_PRIVATE_TOKEN")
-    if not token:
-        raise GateError("missing_FACTORLAB_PRIVATE_TOKEN_no_private_data_requested")
     profile = validate_profile(json.loads((HERE / "profiles.json").read_text())["profiles"][args.profile])
-    run_id = os.environ["GITHUB_RUN_ID"] + "-" + os.environ["GITHUB_RUN_ATTEMPT"]
-    root = Path(tempfile.mkdtemp(prefix="private-research-", dir=os.environ["RUNNER_TEMP"]))
-    results = root / "results"
-    results.mkdir()
-    api = GitHub(token)
-    work = prepare_inputs(api, root, profile)
-    profile_path = root / "profile.json"
-    profile_path.write_text(json.dumps(profile))
-    with (results / "container.log").open("xb") as stream:
-        result = subprocess.run(docker_command(work, results, profile_path), stdout=stream, stderr=subprocess.STDOUT, timeout=2700)
-    compute_path = results / "compute_receipt.json"
-    computed = json.loads(compute_path.read_text()) if compute_path.is_file() else {}
-    cases = computed.get("commands", [])
-    success = (
-        result.returncode == 0 and computed.get("status") == "passed" and len(cases) == 4 and all(c.get("exit_code") == 0 for c in cases)
-    )
-    save_private_result(api, results, profile, run_id, success)
-    print("Private result and full logs saved and verified for public run " + run_id + ".")
-    if not success:
-        raise GateError("compute_failed_consult_private_receipt")
+    if args.phase == "prepare":
+        prepare(args.profile, profile)
+    elif args.phase == "compute":
+        compute()
+    elif args.phase == "cleanup":
+        if os.environ.get("FACTORLAB_PRIVATE_TOKEN"):
+            raise GateError("cleanup_step_must_not_have_private_token")
+        removed = subprocess.run(
+            ["docker", "rm", "--force", "factorlab-compute"], env=clean_env(), capture_output=True, text=True, timeout=30
+        )
+        if removed.returncode and "No such container" not in removed.stderr:
+            raise GateError("container_cleanup_not_verified")
+        state, _ = load_state()
+        state["cleanup_complete"] = True
+        write_state(state)
+        print("Owned compute container is stopped; cleanup complete.")
+    else:
+        publish(profile)
 
 
 if __name__ == "__main__":
@@ -374,6 +565,5 @@ if __name__ == "__main__":
         print("Execution stopped: " + str(error), file=sys.stderr)
         sys.exit(1)
     except Exception:
-        # Never emit private paths, remote bodies, dataframes, credentials, or URLs.
         print("Execution failed; no private diagnostic content was published.", file=sys.stderr)
         sys.exit(1)
