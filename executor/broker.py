@@ -168,7 +168,9 @@ class GitHub:
             "User-Agent": "factorlab-private-broker",
         }
         payload = None if data is None else json.dumps(data).encode()
-        if binary_path is not None:
+        # Repository archive endpoints negotiate the GitHub API media type;
+        # only Release asset downloads use octet-stream. Both save binary bytes.
+        if binary_path is not None and "/releases/assets/" in path:
             headers["Accept"] = "application/octet-stream"
         if payload is not None:
             headers["Content-Type"] = "application/json"

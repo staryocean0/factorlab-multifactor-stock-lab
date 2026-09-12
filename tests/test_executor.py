@@ -18,6 +18,20 @@ spec.loader.exec_module(broker)
 
 
 class ExecutorTests(unittest.TestCase):
+    def test_binary_archive_and_release_asset_use_distinct_accept_headers(self):
+        api = broker.GitHub("synthetic-not-a-token")
+        for route, accept in [
+            ("repos/example/project/tarball/" + "a" * 40, "application/vnd.github+json"),
+            ("repos/example/project/releases/assets/123", "application/octet-stream"),
+        ]:
+            with self.subTest(route=route), tempfile.TemporaryDirectory() as temp:
+                response = io.BytesIO(b"synthetic binary")
+                with mock.patch.object(api.opener, "open", return_value=response) as opened:
+                    dest = Path(temp) / "download.bin"
+                    api.request(route, binary_path=dest)
+                    self.assertEqual(opened.call_args.args[0].get_header("Accept"), accept)
+                    self.assertEqual(dest.read_bytes(), b"synthetic binary")
+
     def test_context_rejects_fork_push_private_and_other_branch(self):
         good = {
             "GITHUB_ACTIONS": "true",
