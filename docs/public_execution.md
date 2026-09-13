@@ -2,6 +2,8 @@
 
 2026-09-13追加：用户已授权独立`liq01-attribution-v1`，来源/数据/命令均冻结在`executor/research_profiles.json`，运行路径为`executor/research_broker.py`。只取列明的五个私库源文件和一个数据包，不拉整个私库，也不带论文。先计算后在另一只读容器用单独冻结的验证器核验，再回存私库。原两个profile及其代码保持原字节。该配置不声称真实研究已经运行或获科学晋升；状态从私库RESEARCH_CURRENT.json和具体run回执读取。
 
+执行回执更新：公库运行34739057048已完成独立LIQ执行与私库回存，控制器随后回读私库归档验签。研究结论及所有数值只存私库。这里的执行成功不等于科学晋升。旧main/audit研究分支当前树已按用户授权退休，历史未改写；当前执行器及冻结baseline profile不受影响。
+
 用户已明确授权：Chat负责研究交互和GitHub调度，策略数值工作在本公库的标准GitHub-hosted runner运行。私库只存代码/数据/模型/结果，其Actions继续关闭。不使用付费larger runner/GPU，不使用Actions缓存和公开artifact，不把本公库当无关通用算力服务。
 
 ## 当前两个固定profile
