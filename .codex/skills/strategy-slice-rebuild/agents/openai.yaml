@@ -1,4 +1,0 @@
-interface:
-  display_name: "策略研究任务导航"
-  short_description: "按 CURRENT.json 与实际任务依赖接手，不自动套用旧年度流程"
-  default_prompt: "Use CURRENT.json to read the current task workflow and research state. Treat the archived strategy-slice-rebuild protocol as historical reference, not a mandatory sequence."

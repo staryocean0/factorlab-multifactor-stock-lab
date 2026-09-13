@@ -1,0 +1,11 @@
+{
+  "schema_id": "factorlab.retired_public_branch@1.0",
+  "former_branch_tip": "b3b3a195923e691920763ff8057373b2317c51c1",
+  "retired_branch": "codex/reaka-foundation-audit-20260905",
+  "current_executor_branch": "cloud-workspace-v1",
+  "legacy_git_history_preserved": true,
+  "frozen_baseline_commits_unchanged": true,
+  "private_archival_and_byte_verification_completed": true,
+  "private_research_data_or_results_in_this_tree": false,
+  "date": "2026-09-13"
+}

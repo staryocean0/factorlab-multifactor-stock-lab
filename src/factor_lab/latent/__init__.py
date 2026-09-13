@@ -1,1 +1,0 @@
-"""Latent factor domain package."""
