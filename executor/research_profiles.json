@@ -1,4 +1,96 @@
 {
   "schema_id": "factorlab.public_research_profiles@1.0",
-  "profiles": {}
+  "profiles": {
+    "liq01-attribution-v1": {
+      "private_ref": "6168bc9386dfd3feb716ef7e31b2ace7278742c7",
+      "source_files": {
+        "research/systematic-factor-expansion-20260913/liq01/liquidity_v1.py": {
+          "bytes": 10457,
+          "sha256": "5f92ab0f373cbefcf7c51c2b27bc039f85080cc54d023596ebc60d83fd14ec8f"
+        },
+        "research/systematic-factor-expansion-20260913/liq01/run_study.py": {
+          "bytes": 12752,
+          "sha256": "a307b92711ebfefa5b44a06ffc1c24a11321cfff273585ffbaebd50ac5c2f9f5"
+        },
+        "research/systematic-factor-expansion-20260913/liq01/verify_study.py": {
+          "bytes": 12099,
+          "sha256": "68a3a7c0068119945d87bd6f8fd9d836ea738c36184118edc69053323e633f58"
+        },
+        "research/systematic-factor-expansion-20260913/liq01/RUN_CONTRACT.json": {
+          "bytes": 6056,
+          "sha256": "db7f566e4289002e511ca76f8b15de3aa5a0bc9bf888822a06d9c1ec04e2b654"
+        },
+        "research/systematic-factor-expansion-20260913/liq01/INPUT_MANIFEST.json": {
+          "bytes": 8332,
+          "sha256": "bf8da4d71267c1d74f6d8912556270377fbd34ddb0872888c308b81f0565dcf4"
+        }
+      },
+      "manifest_path": "research/systematic-factor-expansion-20260913/liq01/INPUT_MANIFEST.json",
+      "manifest_sha256": "bf8da4d71267c1d74f6d8912556270377fbd34ddb0872888c308b81f0565dcf4",
+      "data_release_tag": "liq01-input-v1-20260913",
+      "data_asset_name": "liq01-input.tar.gz",
+      "data_asset_sha256": "a7cb8fbbd531cf84be74e4221a34ef52e525d9956be28ccfc740d729d3bb6c41",
+      "data_asset_bytes": 234974793,
+      "input_files": {
+        "beta_1430.npy": {
+          "bytes": 151857680,
+          "sha256": "f8ea3a6f36dff637aaf129a9e2bf67faf94712172b9728621188a9d27260ec76"
+        },
+        "beta_1445.npy": {
+          "bytes": 151857680,
+          "sha256": "18cc759c4a369241277829e928adc1b251cc1e7e912819b173e06be569989689"
+        },
+        "calendar.npy": {
+          "bytes": 31256,
+          "sha256": "ae93ce285892a49c5c116c7b4b952cd7b38c45692e60d8ce2fc2956f642adfa5"
+        },
+        "daily.parquet": {
+          "bytes": 127713576,
+          "sha256": "a5c8f57f6f787fc502b73c24dabc0d5cefbefa42836a35df884e0cfdcbe224f3"
+        },
+        "decisions.npy": {
+          "bytes": 5576,
+          "sha256": "d36fd149006ba840807ac7ad25abe6e2e3bfeac533f657dc8f9c33702da236ae"
+        },
+        "mask_1430.npy": {
+          "bytes": 37964516,
+          "sha256": "0765f0e37ab44afb05f70e5b7e6f2fbb59c5cbf76595f1437f3a3bf4c99d811d"
+        },
+        "mask_1445.npy": {
+          "bytes": 37964516,
+          "sha256": "1d09f4f26bb72a0504a4b31d6208c3926365ee9b2729036bce4624c035f956a2"
+        },
+        "returns_h20_1430.npy": {
+          "bytes": 61975976,
+          "sha256": "5be503417e55aba2b7ad4866150b92c03da6f190db4869a73179775908df5525"
+        },
+        "returns_h20_1445.npy": {
+          "bytes": 61975976,
+          "sha256": "1d88fc65336f18c9d03b8b0b81b629101ee65e203e8312f2227b898105de9173"
+        },
+        "symbols.npy": {
+          "bytes": 191264,
+          "sha256": "c68ab8cb18563a367860b468a4431cde741105fb90e5035f9d8898061bc8b460"
+        }
+      },
+      "command": [
+        "research/systematic-factor-expansion-20260913/liq01/run_study.py",
+        "--inputs",
+        "/work/inputs",
+        "--out",
+        "/results/study"
+      ],
+      "verify_command": [
+        "research/systematic-factor-expansion-20260913/liq01/verify_study.py",
+        "--inputs",
+        "/work/inputs",
+        "--results",
+        "/results/study"
+      ],
+      "command_timeout_seconds": 600,
+      "verification_timeout_seconds": 180,
+      "new_training": false,
+      "production_authority": false
+    }
+  }
 }
