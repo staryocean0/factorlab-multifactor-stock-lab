@@ -102,11 +102,13 @@ def urllib_unquote(value):
 
 class ResearchExecutorTests(unittest.TestCase):
     def test_incomplete_catalog_is_not_dispatched(self):
-        catalog = json.loads((ROOT / "executor/research_profiles.json").read_text())
-        self.assertEqual(catalog["schema_id"], "factorlab.public_research_profiles@1.0")
-        self.assertEqual(catalog["profiles"], {})
-        with self.assertRaises(GateError) as error:
-            research_broker.load_profile("liq01-attribution-v1")
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            (directory / "research_profiles.json").write_text(
+                json.dumps({"schema_id": "factorlab.public_research_profiles@1.0", "profiles": {}})
+            )
+            with mock.patch.object(research_broker, "HERE", directory), self.assertRaises(GateError) as error:
+                research_broker.load_profile("liq01-attribution-v1")
         self.assertEqual(str(error.exception), "incomplete_profile")
 
     def test_profile_allowlist_is_strict_and_commands_are_fixed(self):
