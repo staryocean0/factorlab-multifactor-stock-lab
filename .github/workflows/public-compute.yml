@@ -9,6 +9,7 @@ on:
         options:
           - runtime-smoke
           - baseline-replay-v1
+          - liq01-attribution-v1
         default: runtime-smoke
         required: true
 
@@ -42,7 +43,9 @@ jobs:
           sparse-checkout-cone-mode: true
       - name: Synthetic executor tests
         timeout-minutes: 2
-        run: python3 -m unittest discover -s tests -p 'test_executor.py' -v
+        run: |
+          python3 -m unittest discover -s tests -p 'test_executor.py' -v
+          python3 -m unittest discover -s tests -p 'test_research_executor.py' -v
       - name: Build public runtime before private credentials or data
         timeout-minutes: 8
         run: docker build --tag factorlab-runtime:local executor
@@ -56,19 +59,72 @@ jobs:
         env:
           JOB_PROFILE: ${{ inputs.profile }}
           FACTORLAB_PRIVATE_TOKEN: ${{ secrets.FACTORLAB_PRIVATE_TOKEN }}
-        run: python3 executor/broker.py prepare "$JOB_PROFILE"
+        run: |
+          case "$JOB_PROFILE" in
+            baseline-replay-v1)
+              python3 executor/broker.py prepare "$JOB_PROFILE"
+              ;;
+            liq01-attribution-v1)
+              python3 executor/research_broker.py prepare "$JOB_PROFILE"
+              ;;
+            *)
+              echo "Execution stopped: unknown_profile" >&2
+              exit 1
+              ;;
+          esac
       - name: Compute without private credential in step or container
         if: inputs.profile != 'runtime-smoke'
         timeout-minutes: 16
-        run: python3 executor/broker.py compute
+        env:
+          JOB_PROFILE: ${{ inputs.profile }}
+        run: |
+          case "$JOB_PROFILE" in
+            baseline-replay-v1)
+              python3 executor/broker.py compute
+              ;;
+            liq01-attribution-v1)
+              python3 executor/research_broker.py compute
+              ;;
+            *)
+              echo "Execution stopped: unknown_profile" >&2
+              exit 1
+              ;;
+          esac
       - name: Stop owned container before credentials return
         id: cleanup
         if: always() && steps.prepare.outcome == 'success'
         timeout-minutes: 1
-        run: python3 executor/broker.py cleanup
+        env:
+          JOB_PROFILE: ${{ inputs.profile }}
+        run: |
+          case "$JOB_PROFILE" in
+            baseline-replay-v1)
+              python3 executor/broker.py cleanup
+              ;;
+            liq01-attribution-v1)
+              python3 executor/research_broker.py cleanup
+              ;;
+            *)
+              echo "Execution stopped: unknown_profile" >&2
+              exit 1
+              ;;
+          esac
       - name: Return verified results or failure evidence privately
         if: always() && steps.prepare.outcome == 'success' && steps.cleanup.outcome == 'success'
         timeout-minutes: 6
         env:
+          JOB_PROFILE: ${{ inputs.profile }}
           FACTORLAB_PRIVATE_TOKEN: ${{ secrets.FACTORLAB_PRIVATE_TOKEN }}
-        run: python3 executor/broker.py publish
+        run: |
+          case "$JOB_PROFILE" in
+            baseline-replay-v1)
+              python3 executor/broker.py publish
+              ;;
+            liq01-attribution-v1)
+              python3 executor/research_broker.py publish "$JOB_PROFILE"
+              ;;
+            *)
+              echo "Execution stopped: unknown_profile" >&2
+              exit 1
+              ;;
+          esac
