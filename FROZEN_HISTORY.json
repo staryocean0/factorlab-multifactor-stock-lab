@@ -1,0 +1,11 @@
+{
+  "schema_id": "factorlab.retired_public_branch@1.0",
+  "former_branch_tip": "af2e478aaff5c8ef7f753424b57fd2d19019f248",
+  "retired_branch": "main",
+  "current_executor_branch": "cloud-workspace-v1",
+  "legacy_git_history_preserved": true,
+  "frozen_baseline_commits_unchanged": true,
+  "private_archival_and_byte_verification_completed": true,
+  "private_research_data_or_results_in_this_tree": false,
+  "date": "2026-09-13"
+}

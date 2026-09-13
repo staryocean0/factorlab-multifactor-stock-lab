@@ -1,2 +1,0 @@
-"""Factor Lab package root."""
-
