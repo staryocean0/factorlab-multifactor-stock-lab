@@ -1,10 +1,10 @@
 # 公库：标准免费计算执行器
 
-2026-09-13用户授权新增独立LIQ-01研究profile：`liq01-attribution-v1`，沿research_broker.py和research_profiles.json，仅取固定私库提交的五个源/清单文件与一个有界输入包；论文及其他私库文件不进入容器。原baseline broker、容器入口与profile原字节保留。下文“两profile”是基线验收时范围，现按这一显式追加读取。真实LIQ结果仍须公库执行、私库回存和独立核验，不能把配置/合成测试当金融增量。
+2026-09-14当前诊断profile为`liq01-support-v1`：它只解释已冻结LIQ-01的成熟H20收益支持缺失，固定私库源码、原LIQ-01输入包和12个允许源文件。它必须在读取真实数据前用runner的原生PyArrow通过35项集成测试和7项严格JSON/JSONL测试，且不得训练、调参、填补未来收益或改写原LIQ-01结论。`liq01-attribution-v1`及原baseline broker、容器入口和profile保持原身份。真实结果仍须公库执行、私库回存和独立核验，不能把配置或合成测试当成金融证据。
 
 用户明确采用ChatGPT网页版Chat作为研究交互入口，GitHub插件具备公私库读写。实际策略数值计算由本公库标准GitHub-hosted runner执行；私库只存数据、代码版本、模型与结果，私库Actions保持关闭。不使用Work、付费larger runner/GPU或额外云服务。
 
-先读docs/public_execution.md。当前允许public-compute.yml的手动runtime-smoke、baseline-replay-v1与独立liq01-attribution-v1，各自仅具固定范围。不得添加push、pull_request或pull_request_target执行私密任务；不得输入任意代码版本/命令/runner。新研究在私库冻结目标与数据边界，经审查注册新profile，不能借基线迁移自动开启额外训练或因子搜索。
+先读docs/public_execution.md。当前允许public-compute.yml手动调度的固定profile仅为`runtime-smoke`、`baseline-replay-v1`、`liq01-attribution-v1`和`liq01-support-v1`，各自仅具冻结范围。不得添加push、pull_request或pull_request_target执行私密任务；不得输入任意代码版本/命令/runner。新研究在私库冻结目标与数据边界，经审查注册新profile，不能借基线迁移自动开启额外训练或因子搜索。
 
 FACTORLAB_PRIVATE_TOKEN仅存于private-research环境；该环境只允许cloud-workspace-v1分支。不得放仓库级Secrets，不在聊天/代码/日志打印token，不复用本机广权限OAuth。broker持凭据取数回存；断网只读计算容器没有凭据，不挂载Docker socket或宿主敏感目录。
 

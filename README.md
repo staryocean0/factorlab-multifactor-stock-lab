@@ -6,6 +6,8 @@ ChatGPT网页版使用Chat模式进行研究设计、改代码和调度。实际
 
 - runtime-smoke：无私库数据/凭据，验证运行环境及容器隔离。
 - baseline-replay-v1：通过环境secret取固定私库数据，在断网容器重放基线，完整结果仅回存私库。
+- liq01-attribution-v1：在固定LIQ-01输入上执行已审查的归因研究，结果仅回存私库。
+- liq01-support-v1：仅诊断原LIQ-01的成熟收益支持缺失；先在runner上通过42项原生预检，不训练、调参或改写原结论。
 
 需要的受限授权为private-research环境中的FACTORLAB_PRIVATE_TOKEN；仅授新私库Contents读写，不向聊天提交token。环境限制为cloud-workspace-v1分支。
 

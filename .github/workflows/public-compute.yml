@@ -30,7 +30,7 @@ jobs:
       github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     environment: private-research
-    timeout-minutes: 45
+    timeout-minutes: 50
     steps:
       - name: Checkout reviewed public executor only
         timeout-minutes: 3

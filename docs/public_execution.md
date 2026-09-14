@@ -4,14 +4,18 @@
 
 执行回执更新：公库运行34739057048已完成独立LIQ执行与私库回存，控制器随后回读私库归档验签。研究结论及所有数值只存私库。这里的执行成功不等于科学晋升。旧main/audit研究分支当前树已按用户授权退休，历史未改写；当前执行器及冻结baseline profile不受影响。
 
+2026-09-14追加固定`liq01-support-v1`：它复用原LIQ-01输入包，只诊断5720个有效formation folds为何仅有14个可评分。真实数据之前必须用原生PyArrow运行35项集成测试和7项严格JSON/JSONL测试；它不允许训练、调参、改变H20/五折/股票轴、填补缺失未来收益或改写原LIQ-01结论。真实运行状态仍只从私库`RESEARCH_CURRENT.json`和具体run回执读取。
+
 用户已明确授权：Chat负责研究交互和GitHub调度，策略数值工作在本公库的标准GitHub-hosted runner运行。私库只存代码/数据/模型/结果，其Actions继续关闭。不使用付费larger runner/GPU，不使用Actions缓存和公开artifact，不把本公库当无关通用算力服务。
 
-## 当前两个固定profile
+## 当前固定profile
 
 - `runtime-smoke`：不使用私库凭据或数据，构建依赖环境，验证计算容器断网、没有凭据环境变量，仅报告公共依赖版本及合成算式。
 - `baseline-replay-v1`：只取固定私库提交与已验收baseline-replay包，复现既有2018—2020及2021—2022两钟完整账户。模型/参数不变，不训练；本轮不是新因子研究。
+- `liq01-attribution-v1`：只运行固定LIQ-01归因研究，使用单独broker和独立只读验证器。
+- `liq01-support-v1`：只运行LIQ-01成熟收益支持诊断，在真实输入前强制原生42项预检。
 
-工作流仅允许本仓库`cloud-workspace-v1`分支上的`workflow_dispatch`。没有push/PR/fork自动执行。`concurrency`串行、45分钟任务上限、标准`ubuntu-24.04`、计算容器4CPU/12GB/无网络/只读输入。任务调用参数不能任意指定命令、私库版本、runner或数据包。
+工作流仅允许本仓库`cloud-workspace-v1`分支上的`workflow_dispatch`。没有push/PR/fork自动执行。`concurrency`串行、50分钟任务上限、标准`ubuntu-24.04`、计算容器4CPU/12GB/无网络/只读输入。任务调用参数不能任意指定命令、私库版本、runner或数据包。
 
 ## 私库授权：一次设置，不在聊天传token
 
@@ -21,7 +25,7 @@
 
 取数、计算、清理、回存为独立steps，只有取数和回存映射该凭据。计算step及Docker客户端都没有私库token；不挂载凭据文件或Docker socket。清理step确认容器停止后才允许回存。跨主机HTTP重定向清除Authorization，忽略环境代理；上传只到uploads.github.com。公共日志只显示通用状态；完整计算日志/快照写私库新分支和私有Release，不写公开Actions artifact/summary。
 
-每个基线命令上限180秒，计算容器总上限14分钟，独立只读验证器再限1分钟；各step预算合计不超过45分钟总预算。超时回收本任务容器，失败尽力回存；平台硬终止/网络不可用时可能无法回存，缺回执不得视为通过。
+基线profile保留每个命令180秒、计算容器总上限14分钟和独立只读验证器1分钟的原边界；LIQ支持诊断的compute step上限18分钟。工作流各step预算合计46分钟，不超过50分钟job总预算。超时回收本任务容器，失败尽力回存；平台硬终止/网络不可用时可能无法回存，缺回执不得视为通过。
 
 受控验证器在私有计算容器停止后另开只读容器，对四套账户的daily/holdings/trades/events及收益、回撤、费用逐项核对黄金结果，不信任私有子进程的自报PASS。拒绝结果符号链接/非正规文件/越界及超额输出；先验收结果归档上传，之后才写最终回执。
 
