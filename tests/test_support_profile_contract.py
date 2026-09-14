@@ -51,5 +51,14 @@ class ProfileTests(unittest.TestCase):
     def test_archive_digest(self): self.bad(lambda x: x.update(data_asset_sha256='not-a-digest'))
     def test_extra_file_record_field(self): self.bad(lambda x: x['source_files'][p.MANIFEST_PATH].update(other=1))
     def test_wrong_release(self): self.bad(lambda x: x.update(data_release_tag='another-release'))
+    def test_checked_entry_required(self):
+        self.assertEqual(p.COMMAND[0], p.SUPPORT + '/run_support_checked.py')
+    def test_missing_native_check_entry(self):
+        self.bad(lambda x: x['source_files'].pop(p.SUPPORT + '/run_support_checked.py'))
+    def test_missing_integration_suite(self):
+        self.bad(lambda x: x['source_files'].pop(p.SUPPORT + '/test_support_integration.py'))
+    def test_direct_producer_not_execution_entry(self):
+        command = list(p.COMMAND); command[0] = p.SUPPORT + '/run_support_study.py'
+        self.bad(lambda x: x.update(command=command))
 
 if __name__ == '__main__': unittest.main(verbosity=2)
