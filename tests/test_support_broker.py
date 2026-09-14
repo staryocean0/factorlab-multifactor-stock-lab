@@ -13,7 +13,7 @@ SPEC.loader.exec_module(support_broker)
 class SupportBrokerTests(unittest.TestCase):
     def test_registered_profile_is_fixed_and_passes_both_validators(self):
         profile = support_broker.base.load_profile("liq01-support-v1")
-        self.assertEqual(profile["private_ref"], "99966aee28c3881497c099e98b90db5c704dc682")
+        self.assertEqual(profile["private_ref"], "9d7a08e917bb59d7a209e494848c7649b70424c7")
         self.assertEqual(set(profile["source_files"]), set(support_broker.SOURCE_PATHS))
         self.assertEqual(profile["command"], support_broker.COMMAND)
         self.assertEqual(profile["verify_command"], support_broker.VERIFY_COMMAND)
@@ -42,8 +42,9 @@ class SupportBrokerTests(unittest.TestCase):
         self.assertFalse(profile["new_training"])
         self.assertFalse(profile["production_authority"])
         self.assertNotIn("pdf", " ".join(profile["source_files"]).lower())
-        self.assertIn("run_support_checked.py", profile["source_files"])
-        self.assertIn("test_support_integration.py", profile["source_files"])
+        self.assertIn("run_support_checked.py", " ".join(profile["source_files"]))
+        self.assertIn("test_support_integration.py", " ".join(profile["source_files"]))
+        self.assertIn("test_support_strict_json.py", " ".join(profile["source_files"]))
 
     def test_compute_rejects_private_token_before_state_or_docker(self):
         with (
