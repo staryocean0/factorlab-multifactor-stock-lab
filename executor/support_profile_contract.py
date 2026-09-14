@@ -22,13 +22,16 @@ SOURCE_PATHS = frozenset((
     SUPPORT + '/run_support_study.py',
     SUPPORT + '/verify_support_study.py',
     SUPPORT + '/SUPPORT_RUN_CONTRACT.json',
+    SUPPORT + '/run_support_checked.py',
+    SUPPORT + '/test_support_integration.py',
 ))
 INPUT_FILES = frozenset((
     'daily.parquet', 'calendar.npy', 'symbols.npy', 'decisions.npy',
     'beta_1430.npy', 'mask_1430.npy', 'returns_h20_1430.npy',
     'beta_1445.npy', 'mask_1445.npy', 'returns_h20_1445.npy',
 ))
-COMMAND = (SUPPORT + '/run_support_study.py', '--inputs', '/work/inputs', '--out', '/results/study')
+# This entry requires native Parquet synthetic tests before loading real inputs.
+COMMAND = (SUPPORT + '/run_support_checked.py', '--inputs', '/work/inputs', '--out', '/results/study')
 VERIFY_COMMAND = (SUPPORT + '/verify_support_study.py', '--inputs', '/work/inputs', '--results', '/results/study')
 KEYS = frozenset((
     'private_ref', 'source_files', 'manifest_path', 'manifest_sha256',
