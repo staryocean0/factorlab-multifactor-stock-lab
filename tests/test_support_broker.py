@@ -13,7 +13,7 @@ SPEC.loader.exec_module(support_broker)
 class SupportBrokerTests(unittest.TestCase):
     def test_registered_profile_is_fixed_and_passes_both_validators(self):
         profile = support_broker.base.load_profile("liq01-support-v1")
-        self.assertEqual(profile["private_ref"], "9d7a08e917bb59d7a209e494848c7649b70424c7")
+        self.assertEqual(profile["private_ref"], "94c0107228e5b3e8d858b54b6a278a7c0b1dad17")
         self.assertEqual(set(profile["source_files"]), set(support_broker.SOURCE_PATHS))
         self.assertEqual(profile["command"], support_broker.COMMAND)
         self.assertEqual(profile["verify_command"], support_broker.VERIFY_COMMAND)
