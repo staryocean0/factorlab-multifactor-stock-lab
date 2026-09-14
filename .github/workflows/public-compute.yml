@@ -80,7 +80,7 @@ jobs:
           esac
       - name: Compute without private credential in step or container
         if: inputs.profile != 'runtime-smoke'
-        timeout-minutes: 16
+        timeout-minutes: 18
         env:
           JOB_PROFILE: ${{ inputs.profile }}
         run: |
