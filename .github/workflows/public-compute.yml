@@ -10,6 +10,7 @@ on:
           - runtime-smoke
           - baseline-replay-v1
           - liq01-attribution-v1
+          - liq01-support-v1
         default: runtime-smoke
         required: true
 
@@ -46,6 +47,8 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_executor.py' -v
           python3 -m unittest discover -s tests -p 'test_research_executor.py' -v
+          python3 -m unittest discover -s tests -p 'test_support_profile_contract.py' -v
+          python3 -m unittest discover -s tests -p 'test_support_broker.py' -v
       - name: Build public runtime before private credentials or data
         timeout-minutes: 8
         run: docker build --tag factorlab-runtime:local executor
@@ -67,6 +70,9 @@ jobs:
             liq01-attribution-v1)
               python3 executor/research_broker.py prepare "$JOB_PROFILE"
               ;;
+            liq01-support-v1)
+              python3 executor/support_broker.py prepare "$JOB_PROFILE"
+              ;;
             *)
               echo "Execution stopped: unknown_profile" >&2
               exit 1
@@ -84,6 +90,9 @@ jobs:
               ;;
             liq01-attribution-v1)
               python3 executor/research_broker.py compute
+              ;;
+            liq01-support-v1)
+              python3 executor/support_broker.py compute
               ;;
             *)
               echo "Execution stopped: unknown_profile" >&2
@@ -104,6 +113,9 @@ jobs:
             liq01-attribution-v1)
               python3 executor/research_broker.py cleanup
               ;;
+            liq01-support-v1)
+              python3 executor/support_broker.py cleanup
+              ;;
             *)
               echo "Execution stopped: unknown_profile" >&2
               exit 1
@@ -122,6 +134,9 @@ jobs:
               ;;
             liq01-attribution-v1)
               python3 executor/research_broker.py publish "$JOB_PROFILE"
+              ;;
+            liq01-support-v1)
+              python3 executor/support_broker.py publish "$JOB_PROFILE"
               ;;
             *)
               echo "Execution stopped: unknown_profile" >&2
